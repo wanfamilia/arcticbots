@@ -1,0 +1,22 @@
+version: '3'
+services:
+  wilbot:
+    image: ruby:2.5
+    container_name: wilbot
+    command: bash -c "gem install discordrb && ./runwil.sh"
+    working_dir: /usr/app/
+    stdin_open: true
+    tty: true
+    volumes:
+      - ../../data/sandbox/bundle:/usr/local/bundle  
+      - .:/usr/app/
+  spec:
+    image: ruby:2.5
+    command: bash -c "gem install rspec && rspec"
+    working_dir: /usr/app/
+    stdin_open: true
+    tty: true
+    volumes:
+      - ../../data/sandbox/bundle:/usr/local/bundle
+      - .:/usr/app/
+    

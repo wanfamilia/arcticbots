@@ -1,0 +1,1673 @@
+#sub {a miner's badge} {a miner's badge (NORENT 100c *19)}
+#sub {swordfish's sword} {swordfish's sword (4d4 disarm4 dex-1 w16 bls *19)}
+#sub {pair of silver spurred boots} {pair of silver spurred boots (sneak-20 mv15 bls nodk *19)}
+#sub {heavy solamnic kite} {heavy solamnic kite (bash1 mag/bls w25 *19)}
+#sub {pair of shiny iron gauntlets} {pair of shiny iron gauntlets (hit5 mag *19)}
+#sub {purple robe with silver runes} {purple robe with silver runes (500c NOLORE *19)}
+#sub {pair of bearskin boots} {pair of bearskin boots (resacid3 mv8 *19)}
+#sub {heavy mithril dagger} {heavy mithril dagger (3d5 hr2 dr1 mag w15 nomag *19)}
+#sub {kender hide shield} {kender hide shield (glow antiG mag w25 *19)}
+#sub {a rusty iron mace} {a rusty iron mace (3d4 w18 *19)}
+#sub {massive mining pick} {massive mining pick (3d8 dr3 w42 *19)}
+#sub {a warlock's cloak} {a warlock's cloak (ac-4 flying antiG bls *19)}
+#sub {black chainmail coif} {black chainmail coif (ac-5 *19)}
+#sub {small draconian ring} {small draconian ring (hit8 cl1 mag *19)}
+#sub {silver solamnic bracelet} {silver solamnic bracelet (bandage10 healt8 regen5% mag *19)}
+#sub {black onyx ring} {black onyx ring (save_para-1 cl1 det_mag mag *19)}
+#sub {engraved ivory staff} {engraved ivory staff (1d1 int/wis1 w16 *19)}
+#sub {weathered, rune-stitched grey headband} {weathered, rune-stitched grey headband (+2@5 gl/mag *19)}
+#sub {white-trimmed purple robe} {white-trimmed purple robe (hit15 ss2 cl2 mag/bls *19)}
+#sub {holy symbol of Chislev} {holy symbol of Chislev (nolore 100c *19)}
+#sub {metallic dragon helm} {metallic dragon helm (res_gas/acid20 mag *19)}
+#sub {pair of rugged coral boots} {pair of rugged coral boots ( mv10 mvregen5 mag *19)}
+#sub {dusted red bow} {dusted red bow (spd14 pwr12 acc11 rdr3 imm_p w10 *19)}
+#sub {dark tourmaline pendant} {dark tourmaline pendant (hr2 *19)}
+#sub {sturdy copper wristguard} {sturdy copper wristguard (str2 ss-2 imm_neg m/h *19)}
+#sub {honed dwarven battleaxe} {honed dwarven battleaxe (3d6 2/2 mag w19 *19)}
+#sub {pair of spiked sterling gauntlets} {pair of spiked sterling gauntlets (hr/dr mag *19)}
+#sub {dark dwarven sword} {dark dwarven sword (2d5 2/2 mag w13 *19)}
+#sub {dark dwarven buckler} {dark dwarven buckler (aply7 100c *19)}
+#sub {a dwarven warhammer} {a dwarven warhammer (1d15 w13 *19)}
+#sub {pair of spun mithril sleeves} {pair of spun mithril sleeves (hr2 dex1 mag/bls *set* *19)}
+#sub {ancient suit of golden dwarven armor} {ancient suit of golden dwarven armor (dr1 hit8 det_mag mag *19)}
+#sub {moldy green lab coat} {moldy green lab coat (wis2 regen10% cha-2 mag *19)}
+#sub {pair of black leather pants} {pair of black leather pants (mv10 mag *19)}
+#sub {suit of ornamental full plate} {suit of ornamental full plate (CON *19)}
+#sub {helm of Grallen} {helm of Grallen (wis/cha2 dangersns8 assault8 det_inv NOCHARM NORENT*19)}
+#sub {wispy black veil} {wispy black veil (SHAMAN CHARM *19)}
+#sub {braided lock of werewolf hair} {braided lock of werewolf hair (4th +1 cleric only *19*)}
+#sub {pair of blue gloves} {pair of blue gloves (int1 str-2 cl2 mag *19)}
+#sub {long, well-balanced spear} {long, well-balanced spear (2d6 1/1 w15 mag *19)}
+#sub {intricately crafted silver locket} {intricately crafted silver locket (quest? 100c *19)}
+#sub {dark brown ceremonial robes} {dark brown ceremonial robes (ac-8 det_G EVIL *19)}
+#sub {pair of hunting gloves} {pair of hunting gloves (HR track5 *19)}
+#sub {sparkling golden necklace} {sparkling golden necklace (CHA taunt5 NOCHARM *19)}
+#sub {rodent skull ring} {rodent skull ring (regen2% mag *19)}
+#sub {a gutting knife} {a gutting knife (4d4 hr2 w12 mag *19)}
+#sub {solamnic training plate} {solamnic training plate (ac-10 nocle/bar/sha *19)}
+#sub {ethereal breast plate} {ethereal breast plate (dex1 res_cold25 glow apply-2 *19)}
+#sub {some boots of the plainsmen} {some boots of the plainsmen (dance5 *19)}
+#sub {thick padded sleeves} {thick padded sleeves (apply4 *19)}
+#sub {silver daergar chainmail hood} {silver daergar chainmail hood (*set* *19)}
+#sub {ergothian battle gauntlets} {ergothian battle gauntlets (STR *19)}
+#sub {grey, runed stone} {grey, runed stone (m/b NORENT *19)}
+#sub {some coarsely ground fire ants} {some coarsely ground fire ants (COMP ABJ *19)}
+#sub {purple clamshell brassiere} {purple clamshell brassiere (cha2 imm_cold/heat m *19)}
+#sub {shirt of coral chainmail} {shirt of coral chainmail (ac-8 HR WB m/b *19)}
+#sub {a black stone} {a black stone (DR m/b *19)}
+#sub {hammer of Garnet} {hammer of Garnet (3d4 DR antiE m/h w12 *19)}
+#sub {black sword of the Grimguard} {black sword of the Grimguard (3d3 hr imp5 g/m/antiG w8 *19)}
+#sub {stout copper figurine} {stout copper figurine (rub belly for ghost master! *19)}
+#sub {seal of the Silver Circle Guard} {seal of the Silver Circle Guard (age3 INFRA *19)}
+#sub {large iron belt buckle} {large iron belt buckle (hit4 m *19)}
+#sub {pair of supple leather boots} {pair of supple leather boots (mv20 *19)}
+#sub {macabre pair of human bone gauntlets} {macabre pair of human bone gauntlets (NORENT mag *set* *19)}
+#sub {patchwork cloak of green naga scales} {patchwork cloak of green naga scales (hit12 hide/nosum antiG m/b *19)}
+#sub {pair of knight's spurs} {pair of knight's spurs (march5 antiE mag *19)}
+#sub {chipped machete} {chipped machete (4d3 hr -4ac *19)}
+#sub {thin rod of stone} {thin rod of stone (3d2 NORENT *19)}
+#sub {pair of oaken wood gauntlets} {pair of oaken wood gauntlets (hit6 int *19)}
+#sub {dirty cook's apron} {dirty cook's apron (apply4 *19)}
+#sub {pair of bright yellow pants} {pair of bright yellow pants (100c *19)}
+#sub {white necklace of large beads} {white necklace of large beads (res_elec3 imm_elec *19)}
+#sub {sickly yellow robes} {sickly yellow robes (cl3 res_neg10 save_poi-2 antiG mag *19)}
+#sub {winged solamnic helm} {winged solamnic helm (caln_fly nomag/dru/cle/dk *19)}
+#sub {suit of gold chainmail} {suit of gold chainmail (NPP glow/mag *19)}
+#sub {pair of battle gauntlets} {pair of battle gauntlets (DR res_acid mag/bls *19)}
+#sub {twisted merchant's staff} {twisted merchant's staff (2d5 1/1 cl2 EVIL mag w11 *19)}
+#sub {pair of ancient steel shin plates} {pair of ancient steel shin plates (kick5 ac-10 mag *19)}
+#sub {elegant crystal apatite dagger} {elegant crystal apatite dagger (2d8 dex2 mag/bls imm_elec w8 Thief *19)}
+#sub {sturdy staff of vallenwood} {sturdy staff of vallenwood (4d4 3/3 glow w16 Caster *19)}
+#sub {heavy bandolier of studded leather} {heavy bandolier of studded leather (STR score_crit1% mag *19)}
+#sub {tangled heap of rats tails} {tangled heap of rats tails (CHA heal_recieve2% imm_disease *19)}
+#sub {fragile coral amulet} {fragile coral amulet (INFRA bls *19)}
+#sub {crystalline armour} {crystalline armour (res_cold antiE bls *19)}
+#sub {pair of scorched steel gauntlets} {pair of scorched steel gauntlets (DR mag *set* *19)}
+#sub {lovely golden locket} {lovely golden locket (nolore quest? 800c *19)}
+#sub {a bright red hood} {a bright red hood (wis-2 learn-20 sense_Life/Infra/Nocharm/Mindshield *19)}
+#sub {scorched steel helm} {scorched steel helm (wis infra mag *set* *19)}
+#sub {scorched steel rerebraces} {scorched steel rerebraces (str save_breath-1 mag imm_heat *set* *19)}
+#sub {sacrificial observer's robe} {sacrificial observer's robe (wis brew5*19)}
+#sub {feathered wooden staff} {feathered wooden staff (wis1 antiE mag *19)}
+#sub {cutlass of fine dwarven steel} {cutlass of fine dwarven steel (3d5 hr mag w13 *19)}
+#sub {beautiful branch of violet coral} {beautiful branch of violet coral (int/wis mem_factor5 NORENT *19)}
+#sub {singed gossamer gloves} {singed gossamer gloves (NOLORE *19)}
+#sub {suit of sterling platemail} {suit of sterling platemail (hr regen10% res_crit1% *19)}
+#sub {shining silver sword} {shining silver sword (3d6 mag w15 *19)}
+#sub {shield of the Black Lily} {shield of the Black Lily (bash4 antiG Evil w25 mag/bls *19)}
+#sub {twisted bone necklace} {twisted bone necklace (res_ele/heat/cold2 wis1 *19)}
+#sub {wicked double edged broadsword} {wicked double edged broadsword (4d7 hr2 xtra_attack50% w40 Evil *19)}
+#sub {charred adamantite rune} {charred adamantite rune (NOLORE 330c *19)}
+#sub {set of light blue prayer beads} {set of light blue prayer beads (wis medi5 bls *19)}
+#sub {polar bear pelt} {polar bear pelt (res_cold15 bls *19)}
+#sub {gazelle skin vest} {gazelle skin vest (carve9 hide6 *19)}
+#sub {pair of leather combat gloves} {pair of leather combat gloves (HR *19)}
+#sub {red metallic javelin} {red metallic javelin (2d8 2/2 mag imm_heat/mag w15 *19)}
+#sub {medallion of the earth} {medallion of the earth (Bless *19)}
+#sub {pair of blue suede dancing shoes} {pair of blue suede dancing shoes (dex mv10 *19)}
+#sub {silver slicer} {silver slicer (6d2 dr3 hr2 mag w8*19)}
+#sub {axe with a vallenwood handle} {axe with a vallenwood handle (4d3 HR axes3 mag w3 *19)}
+#sub {a silver suit of armor} {a silver suit of armor (HR ac-4 glow *19)}
+#sub {embroidered purple scarf} {embroidered purple scarf (det_inv *19)}
+#sub {some woodsman armor} {some woodsman armor (*set* *19)}
+#sub {thin walking stick} {thin walking stick (mv5 *19)}
+#sub {crossbow of Medusa} {crossbow of Medusa (3d4 hr2 w7 *19)}
+#sub {a diamond shield} {a diamond shield (ac-4 w18 *19)}
+#sub {dwarven mithril pole axe} {dwarven mithril pole axe (3d7 DR mag/bls w24 *19)}
+#sub {a golden collar} {a golden collar (HR glow/mag/hum *19)}
+#sub {a golden dagger} {a golden dagger (3d5 dr2 hr3 NORENT w20 *19)}
+#sub {set of bronze dragonscale sleeves} {set of bronze dragonscale sleeves (ac-4 STR antiE mag *19)}
+#sub {a beaded leather necklace} {a beaded leather necklace (+1@4/6 antiE mag/bls/glow Druid *19)}
+#sub {a brightly colored robe} {a brightly colored robe (ac-5 wis cl3 det_mag imm_ac *19)}
+#sub {crimson sphere medallion of Lunitari} {crimson sphere medallion of Lunitari (NOLORE 4000c *19)}
+#sub {thin walking stick} {thin walking stick (mv5 *19)}
+#sub {thorn hilted dagger} {thorn hilted dagger (4d3 hr1 w8 *19)}
+#sub {finely honed training mace} {finely honed training mace (2d6 w8 *19)}
+#sub {a Solamnic tunic} {a Solamnic tunic (ac-5 *19)}
+#sub {hooded cloak of murky grey} {hooded cloak of murky grey (int2 hide8 *19)}
+#sub {a Solamnic tunic} {a Solamnic tunic (ac-5 *19)}
+#sub {suit of blue steel} {suit of blue steel (STR res_elec10 *19)}
+#sub {suit of blue scalemail armor} {suit of blue scalemail armor (STR res_elec10 *19)}
+#sub {fine mithril crossbow} {fine mithril crossbow (3d5 2/2 w15 *19)}
+#sub {heavy wool cape} {heavy wool cape (+1@1 ac-5 tanks *19)}
+#sub {silver daergar chainmail leggings} {silver daergar chainmail leggings (*set* *19)}
+#sub {necklace of lizard tails} {necklace of lizard tails (cha1 +1@3 heal 1% *19)}
+#sub {grey scalemail sleeves} {grey scalemail sleeves (HR *19)}
+#sub {a puffy shirt} {a puffy shirt (mv5 *19)}
+#sub {translucent mask} {translucent mask (cl2 det_inv/E/G mag *19)}
+#sub {pair of shiny black boots} {pair of shiny black boots (mv7 mag *19)}
+#sub {shiny black belt} {shiny black belt (ac-5 *19)}
+#sub {mithril partisan} {mithril partisan (3d6 hr2 strike4 glow/mag w18 *19)}
+#sub {set of massive blue dragon wings} {set of massive blue dragon wings (res_elec/breath15 can_fly immcold/elec *19)}
+#sub {transparent fish skin robe} {transparent fish skin robe (invis/WB res_elec16 *19)}
+#sub {blood red captain's sash} {blood red captain's sash (dex mag/bls *19)}
+#sub {large golden shield} {large golden shield (bash5 ac-5 w25 *19)}
+#sub {belt of woven oak branches} {belt of woven oak branches (wis/DR mag Druid *19)}
+#sub {dragon tooth necklace} {dragon tooth necklace (health10 hr2 imm_ac/heat/cold *19)}
+#sub {bristly sea dragon whisker} {bristly sea dragon whisker (2d8 det_inv/mag +1@7 w10)}
+#sub {three headed silk braided whip} {three headed silk braided whip (2d5 w9 *19)}
+#sub {blue denim overalls} {blue denim overalls (hit5 *19)}
+#sub {silver dragonscale choker} {silver dragonscale choker (wis save_breath-1 res_cold8 immcold/heat *19)}
+#sub {timberwolf pelt} {timberwolf pelt (ac-6 track3 *19)}
+#sub {a mithril spear} {a mithril spear (3d6 hr-1 dr mag w20 *19)}
+#sub {scarlet leather gloves} {scarlet leather gloves (dex/hr *19)}
+#sub {slime scraper} {slime scraper (2s3 *19)}
+#sub {thick dwarven bracelet} {thick dwarven bracelet (HR *19)}
+#sub {solid silver platemail} {solid silver platemail (DR *19)}
+#sub {charred platemail legplates} {charred platemail legplates (STR hit5 ac-5 *19)}
+#sub {rat skull ring} {rat skull ring (ac-4 *19)}
+#sub {spiked leather brassiere} {spiked leather brassiere (DR hit5 Girl_Only *19)}
+#sub {fishbone necklace} {fishbone necklace (ac-3 NOSUM Bls *19)}
+#sub {hardened leather boots} {hardened leather boots (dex mv5 *19)}
+#sub {crystal crimson armbands} {crystal crimson armbands (STR ss-1 imm_Pois Druid *19)}
+#sub {cloak of crimson robes} {cloak of crimson robes (cl3 res_heat15 INFRA imm_heat *19)}
+#sub {cerulean chain skirt} {cerulean chain skirt (STR crit1% imm_acid war/pal/dk*19)}
+#sub {shadowy pair of boots} {shadowy pair of boots (sneak2 magic *19)}
+#sub {a golden cap} {a golden cap (apply4 *19)}
+#sub {some red dragonarmy chainmail} {some red dragonarmy chainmail (apply6 *19)}
+#sub {tangle of fine silver thread} {tangle of fine silver thread (NORENT *19)}
+#sub {ironwood baton} {ironwood baton (6d2 1/1 w11 smite *19)}
+#sub {shirt of black scalemail} {shirt of black scalemail (res_ac5 bls nobarb/sham *19)}
+#sub {red-handled mace} {red-handled mace (2d5 2/2 mag w10 *19)}
+#sub {hefty tower shield} {hefty tower shield (WIS hum/mag w30 *19)}
+#sub {red thorn stiletto} {red thorn stiletto (2d7 DR env4 w12 no_offy *19)}
+#sub {sword of slumber} {sword of slumber (3d6 hr2 glow/mag w4)}
+#sub {a red longsword} {a red longsword (2d4 HR w8 *19)}
+#sub {a granite dagger} {a granite dagger (3d4 DR antiG bls w5 *19)}
+#sub {an ergothian long sword} {an ergothian long sword (3d5 w11 *19)}
+#sub {pair of dirty grey pants} {pair of dirty grey pants (ac-4 *19)}
+#sub {mystic gold medallion} {mystic gold medallion (invis/det_inv/SL *19)}
+#sub {gleaming silver cutlass} {gleaming silver cutlass (4d4 dr2 hr1 w14 mag *19)}
+#sub {crystalline dagger} {crystalline dagger (3d4 dr w5 antiE *19)}
+#sub {compact repeating crossbow} {compact repeating crossbow (3d5 2/2 w8 *set* *19)}
+#sub {a black wooden staff} {a black wooden staff (2d6 cl3 fly antiG w5 *19)}
+#sub {smoke tarnished gauntlets} {smoke tarnished gauntlets (STR nocle/sham *19)}
+#sub {dazzling white potion} {dazzling white potion (SS+Hero+Res_Heat *19)}
+#sub {red draconian bracelet} {red draconian bracelet (hit5 *19)}
+#sub {curved red dragon claws} {curved red dragon claws (DR res_heat5 NORENT mag/bls *19)}
+#sub {crown of tides} {crown of tides (NOLORE 2kcoins *19)}
+#sub {a leather strap} {a leather strap (str-3 dex mag/bls *19)}
+#sub {a dwarven copper mace} {a dwarven copper mace (3d3 dr2 res_ele-16 w9 *19)}
+#sub {engraved silver chalice} {engraved silver chalice (drinkcon 50/50 w40 *19)}
+#sub {leather hand drum} {leather hand drum (frenzy10 *19)}
+#sub {a chain belt} {a chain belt (move/ac -10 *19)}
+#sub {a leather head wrap} {a leather head wrap (cha hit4 INFRA mag *19)}
+#sub {pair of dusty leather moccasins} {pair of dusty leather moccasins (mv10 recup12*19)}
+#sub {a dwarven chain mail vest} {a dwarven chain mail vest (res_neg8 ac-3 nobar/sha *19)}
+#sub {a small ruby ring} {a small ruby ring (+2@2 AntiG NORENT *19)}
+#sub {pair of golden dwarven gauntlets} {pair of golden dwarven gauntlets (DR mag/bless *19)}
+#sub {bloodstained steel battleaxe} {bloodstained steel battleaxe (2d7 hr2 w10 *19)}
+#sub {platinum gilt leg plates} {platinum gilt leg plates (apply8 *19)}
+#sub {dolphin bone ring} {dolphin bone ring (ac-4 *19)}
+#sub {weaponsmith's hammer} {weaponsmith's hammer (3d5 1/1 mag w18 *19)}
+#sub {ruby inlaid scabbard} {ruby inlaid scabbard (dex mag/bls *19)}
+#sub {suit of gold runed armor} {suit of gold runed armor (invis mag *19)}
+#sub {spiked minotaur gauntlets} {spiked minotaur gauntlets (DR *19)}
+#sub {jet-embedded dagger} {jet-embedded dagger (3d4 dr dex w5 mag *19)}
+#sub {bone and rock necklace} {bone and rock necklace (cha mag *19)}
+#sub {mask of mangled flesh} {mask of mangled flesh (cha/wis1 spook/gaze5 *19)}
+#sub {shimmering copper Set'ahki warbow} {shimmering copper Set'ahki warbow (ranged_dr/hr2 s/p/a 12/15/13 w6 *19)}
+#sub {a granite hand} {a granite hand (+1@7 druid *19)}
+#sub {crafty bandit's gloves} {crafty bandit's gloves (pick/disable3 ac-3 *19)}
+#sub {captain's cutlass} {captain's cutlass (3d4 hr2 dr w11 *19)}
+#sub {blood red helmet} {blood red helmet (infra antiG mag *19)}
+#sub {a glass sabre} {a glass sabre (1d20 dex/wis hr2 w7 *19)}
+#sub {wide-bladed steel scimitar} {wide-bladed steel scimitar (3d5 w16 *19)}
+#sub {black silk robe of slinking} {black silk robe of slinking (con-1 hide *19)}
+#sub {crown of violets} {crown of violets (int wis-1 *19)}
+#sub {manor guard's shield} {manor guard's shield (w25 *19)}
+#sub {splintered hand crossbow} {splintered hand crossbow (3d5 w12 *19)}
+#sub {small golden amulet} {small golden amulet (hit4 cl1 antiE *19)}
+#sub {rat hide bracelet} {rat hide bracelet (callspirit3 fieldmed2 *19)}
+#sub {flaming dagger} {flaming dagger (2d4 w1 glow/bls/hot *19)}
+#sub {swamp dragontooth medallion} {swamp dragontooth medallion (WIS WB *19)}
+#sub {a lucky rabbit foot} {a lucky rabbit foot (regen1% *19)}
+#sub {dragonarmy crossbow} {dragonarmy crossbow (3d4 3/3 w15 *19)}
+#sub {white dragon eye} {white dragon eye (infra *19)}
+#sub {bloodstained club} {bloodstained club (2d3 w5 *19)}
+#sub {black ice visor} {black ice visor (ac-5 glow *19)}
+#sub {grey leather mask} {grey leather mask (ac-3 SL mag *19)}
+#sub {grey long sword} {grey long sword (2d7 lbade5 w7 *19)}
+#sub {a gold ring} {a gold ring (det_ev *19)}
+#sub {fur-lined vest} {fur-lined vest (res_cold12 det_inv mag *19)}
+#sub {a sturdy halberd} {a sturdy halberd (*19)}
+#sub {platinum gilt gorget} {platinum gilt gorget (apply5 *19)}
+#sub {fine velvet pirate coat} {fine velvet pirate coat (INT cl2 *19)}
+#sub {a black gaff} {a black gaff (3d5 dr2 w13 *19)}
+#sub {a darkened long sword} {a darkened long sword (3d5 CON imm_mag w13 *19)}
+#sub {square-toed boots} {square-toed boots (mv10 ac-3 *19)}
+#sub {small black hat} {small black hat (int/wis2 det_inv NORENT mag *19)}
+#sub {bright moonstone} {bright moonstone (hit-5 cl2 *19)}
+#sub {jewelled black belt} {jewelled black belt (con mag *19)}
+#sub {acid-etched steel shield} {acid-etched steel shield (bash3 w20 mag *19)}
+#sub {a scorpion's stinger} {a scorpion's stinger (4d4 hr dr2 w16 mag *19)}
+#sub {an ivy necklace} {an ivy necklace (wis det_evil *19)}
+#sub {the midnight staff} {the midnight staff (2d7 hr2 dr1 cl3 w10 mag *19)}
+#sub {a heavy copper staff} {a heavy copper staff (4d3 wardance3 w20 *19)}
+#sub {amulet of radiant fire corals} {amulet of radiant fire corals (wis res_cold8 regen5% imm_c/h *19)}
+#sub {ceremonial scabbard} {ceremonial scabbard (hr piercer5 mag *19)}
+#sub {a long steel staff} {a long steel staff (6d5 w24 mag *19)}
+#sub {a large copper pickaxe} {a large copper pickaxe (2d10 w16 *19)}
+#sub {pair of chitinous vambraces} {pair of chitinous vambraces (res_ac4 mag *19)}
+#sub {pair of worn leather moccasins} {pair of worn leather moccasins (mv10 *19)}
+#sub {blood stained black dagger} {blood stained black dagger (2d5 hr w5 mag*19)}
+#sub {a fine silver dagger} {a fine silver dagger (2d5 cl2  w2 mag *19)}
+#sub {pair of magi pants} {pair of magi pants (hit6 *set* *19)}
+#sub {powerful looking bastard sword} {powerful looking bastard sword (3d5 1/1 det_ev w17 *19)}
+#sub {a battered shield} {a battered shield (w16 apply4 *19)}
+#sub {blue topaz ring} {blue topaz ring (dr NORENT mag/bls *19)}
+#sub {a butcher's knife} {a butcher's knife (3d5 w12 *19)}
+#sub {Hammer of Kzzaz} {Hammer of Kzzaz (2d7 1/1 w9 no_offy *19)}
+#sub {an ivory bracelet} {an ivory bracelet (con-2 wis glow/mag/bls *19)}
+#sub {a grass blade} {a grass blade (4d3 hr-1 dr1 mag w8 *19)}
+#sub {black bear's fang} {black bear's fang (2d6 hr2 w6 *19)}
+#sub {a dwarven shield} {a dwarven shield (apply6 *19)}
+#sub {gold embroidered emerald maniple} {gold embroidered emerald maniple (INT magic *19)}
+#sub {silver dwarven talisman} {silver dwarven talisman (HR mv10 imm_acid *19)}
+#sub {well-honed wooden spear} {well-honed wooden spear (2d7 w13 *19)}
+#sub {polished plate of mithril} {polished plate of mithril (DEX/STR ac-4 glow/antiE *19)}
+#sub {embroidered desert sleeves} {embroidered desert sleeves (*set* *19)}
+#sub {embroidered desert leggings} {embroidered desert leggings (*set* *19)}
+#sub {embroidered desert cap} {embroidered desert cap (*set* *19)}
+#sub {pair of coral greaves} {pair of coral greaves (res_elec8 *19)}
+#sub {a mound of silver ore} {a mound of silver ore (NORENT 500c *19)}
+#sub {a white robe} {a white robe (just a white robe ac-3 *19)}
+#sub {a finely woven quilt} {a finely woven quilt (res_cold5 *19)}
+#sub {handful of burdock roots} {handful of burdock roots (NORENT mag/bls *19)}
+#sub {stark white wrist guard} {stark white wrist guard (con hr-2 *19)}
+#sub {a light silver dagger} {a light silver dagger (2d6 1/1 w2 *19)}
+#sub {a dirty length of rope} {a dirty length of rope (1d6 w2 *19)}
+#sub {sturdy steel pickaxe} {sturdy steel pickaxe (1d6 w5 NORENT *19)}
+#sub {a thick woolen coat} {a thick woolen coat (apply6 *19)}
+#sub {scabbard encrusted with jewels} {scabbard encrusted with jewels (container *19)}
+#sub {some gray and blue checkered pants} {some gray and blue checkered pants (str/dex det_m druid *19)}
+#sub {long black judges robes} {long black judges robes (wis cl3 det_ev antiE *19)}
+#sub {official looking magistrate chain} {official looking magistrate chain (int-2 *19)}
+#sub {finely crafted handbow} {finely crafted handbow (3d4 w10 *19)}
+#sub {heavily padded emerald green cassock} {heavily padded emerald green cassock (HR ac-8 *19)}
+#sub {pair of platinum gilt arm plates} {pair of platinum gilt arm plates (apply8 *19)}
+#sub {an emerald ring} {an emerald ring (NOLORE *19)}
+#sub {slime covered caul} {slime covered caul (cl2 *19)}
+#sub {sharp filleting knife} {sharp filleting knife (3d3 2/2 w6 *19)}
+#sub {sable leather shirt} {sable leather shirt (dex ac-4 *19)}
+#sub {a hooded shadow cloak} {a hooded shadow cloak (hide *19)}
+#sub {a heavy spiked shield} {a heavy spiked shield (DR nosham *19)}
+#sub {belt of cumulus clouds} {belt of cumulus clouds (wis conc5 mv15 clan_fly druid*19)}
+#sub {pair of shark skin gloves} {pair of shark skin gloves (hr res_negative8 *19)}
+#sub {a wyvern's eye} {a wyvern's eye (+1@lv5 health-8 cl2 det_inv *19)}
+#sub {pearl and onyx breastplate} {pearl and onyx breastplate (DEX ac-5 *19)}
+#sub {an ancient iron mace} {an ancient iron mace ( *19)}
+#sub {a dull black sword} {a dull black sword (3d4 dr-1 antiG glow/mag *19)}
+#sub {a double edged battle axe} {a double edged battle axe (2d8 3/3 antiG w20*19)}
+#sub {demon skin cloak} {demon skin cloak (save_para-1 *19)}
+#sub {dark purple bracer} {dark purple bracer (dex-1 invis/SL *19)}
+#sub {a flask of clear liquid} {a flask of clear liquid (lv20 cu crit, cu crit *19)}
+#sub {pearl and onyx medallion} {pearl and onyx medallion (CHA *19)}
+#sub {a gold wedding band} {a gold wedding band (ac-5 *19)}
+#sub {black adamantite bardiche} {black adamantite bardiche (3d6 1/1 w21 mag/bls *19)}
+#sub {some leather boots} {some leather boots (ac-5 regen5% mv10 *19)}
+#sub {thick padded leggings} {thick padded leggings (apply6 *19)}
+#sub {windseed hauberk} {windseed hauberk (con nodru/mag/sham *19)}
+#sub {an iron short sword} {an iron short sword (1d8 w5 *19)}
+#sub {silver silk sash} {silver silk sash (wis *19)}
+#sub {short-hafted javelin} {short-hafted javelin (2d6 dr2 bs5 w10 *19)}
+#sub {a pair of iron greaves} {a pair of iron greaves (apply5 mag/bls *19)}
+#sub {a ring of lore} {a ring of lore (cast bless = 2wis NORENT *19)}
+#sub {a silver ring of lore} {a silver ring of lore (2wis NORENT *19)}
+#sub {black and crooked staff} {black and crooked staff (3d4 -2hr can_fly w4 *19)}
+#sub {a dwarven crossbow} {a dwarven crossbow (3d4 HR w11 *19)}
+#sub {gleaming bronze sword} {gleaming bronze sword (1d9 w12 *19)}
+#sub {lavish silk tunic} {lavish silk tunic (hit8 cl1 +1@lv6 *19)}
+#sub {a thin leather bracer} {a thin leather bracer (det_inv NORENT *19)}
+#sub {a salty potion} {a salty potion (lv30 Stoneskin NORENT *19)}
+#sub {a crown of leaves} {a crown of leaves (res_ac/cold SL AntiE *19)}
+#sub {bright blue bracer} {bright blue bracer (NOCHARM Glow *19)}
+#sub {a long, slender knife} {a long, slender knife (3d3 1/1 M Nocler w9 *19)}
+#sub {insidious chain and dagger} {insidious chain and dagger (3d4 2/2 -3ac w8 *19)}
+#sub {green horned helmet} {green horned helmet (target/bash +4 AntiG *19)}
+#sub {gooey flap of octopus skin} {gooey flap of octopus skin (Imm_Pois NPP AntiG NORENT *19)}
+#sub {blue dragonmask} {blue dragonmask (Con det_inv infra *set* *19)}
+#sub {suit of segmented coral armor} {suit of segmented coral armor (Con score_crit1% WB *19)}
+#sub {ancient azurite medallion} {ancient azurite medallion (HR WB NOCHARM *19)}
+#sub {enormous steel falchion} {enormous steel falchion (10d3 hr2 dr1 w34 *19)}
+#sub {small vial of crystal blue water} {small vial of crystal blue water (WB potion *19)}
+#sub {black confessional whip} {black confessional whip (2d5 hr antiG w8 *19)}
+#sub {a simple platinum ring} {a simple platinum ring (health12 HR *19)}
+#sub {sunburst engraved longsword} {sunburst engraved longsword (2d7 dr1/hr3 w5 MAGIC*19)}
+#sub {a dark ring of shadows} {a dark ring of shadows (HIDE *19)}
+#sub {plain-looking spear} {plain-looking spear (1d4 w9 *19)}
+#sub {fine dueling rapier} {fine dueling rapier (2d8 3/3 w15 *19)}
+#sub {wickedly barbed short sword} {wickedly barbed short sword (3d5 dr3 env+8 antiG w15*19)}
+#sub {suit of charred black battle armor} {suit of charred black battle armor (DR antiG*19)}
+#sub {bone-handled long black whip} {bone-handled long black whip (4d3 3/3 w11 antiG*19)}
+#sub {shark tooth necklace} {shark tooth necklace (WB MV10 *19)}
+#sub {thick hide apron} {thick hide apron (res_heat10 HR *19)}
+#sub {archaic scroll of probing} {lv30 read magic norent HOT(*19)}
+#sub {decorative tribal shield} {decorative tribal shield (w8 charge5 ac-10 *19)}
+#sub {black dragonhide cloak} {black dragonhide cloak (imm_ac *19)}
+#sub {an onyx ring} {an onyx ring (steal10 *19)}
+#sub {the hammer of Kharas} {the hammer of Kharas (5d3 -2/-2 ss-2 det_Ev imm_fear *19)}
+#sub {pair of flexible red dragon scale gloves} {pair of flexible red dragon scale gloves (dex ac-6 res_heat8 *set* *19)}
+#sub {an alchemist's cloak} {an alchemist's cloak (ac-3 res_ac12 antiE *19)}
+#sub {cloak of distortion} {cloak of distortion (ac-10 cl3 hide glow/mag immac/elec/heat *19)}
+#sub {finely polished blade with a silver hilt} {finely polished blade with a silver hilt (3d5 dr det_ev w18 *19)}
+#sub {suit of adamantite mesh} {suit of adamantite mesh (BS_mod10 sneak/hide item is invis *19)}
+#sub {gem of black dragons} {gem of black dragons (NORENT *cynus set item* *19)}
+#sub {pair of silver dragon scale leggings} {pair of silver dragon scale leggings (regen35% rescold22 canfly immac/cold *19)}
+#sub {thick-bladed short sword} {thick-bladed short sword (4d3 parry10 dr mag/bless *19)}
+#sub {plate of fused silver scales} {plate of fused silver scales (ac-10 res_cold8 antiG imm_ac/elec/heat *19)}
+#sub {an emerald shafted javelin} {an emerald shafted javelin (2d8 dr2 hr1 w15 *19)}
+#sub {copper dwarven bracelet} {copper dwarven bracelet (hr *19)}
+#sub {a witch's ring} {a witch's ring (con-2 ss1 invis *19)}
+#sub {ivory-colored leather backpack} {ivory-colored leather backpack (w119 lrg_contain glow/invis*19)}
+#sub {hard ruby staff} {hard ruby staff (3d6 cha2 hr w17 *19)}
+#sub {a ghastly voodoo mask} {a ghastly voodoo mask (cha3 spook/gase+10 det_astral NORENT *19)}
+#sub {a dwarven smasher} {a dwarven smasher (2d7 hr1 dr2 mag/bless w18 *19)}
+#sub {a skull flail} {a skull flail (3d5 hr3 dr2 antiG w12 mag/bless imm_elec *19)}
+#sub {set of silver arm plates} {set of silver arm plates (str hr-1 *19)}
+#sub {sword of polished quartz} {sword of polished quartz (3d5 hr3 w15 *19)}
+#sub {a translucent mask} {a translucent mask (cl2 det_evil/good/inv *19)}
+#sub {woolly rhinoceros horn} {woolly rhinoceros horn (2d7 w12 magic *19)}
+#sub {rhinoceros beetle's carapace} {rhinoceros beetle's carapace (dr hit10 det_mag imm_ac/el/heat w20*19)}
+#sub {striated green marble staff} {striated green marble staff (3d7 2/2 cl w40 nothi/pal*19)}
+#sub {pair of high soft leather boots} {pair of high soft leather boots (is_flying *19)}
+#sub {a translucent shroud} {a translucent shroud (ss-2 sneak15 invis/hide imm_cold/elec*19)}
+#sub {suit of royal silver armour} {suit of royal silver armour (ac-8 25hit *19)}
+#sub {thick black torch} {thick black torch (sense_life glow imm_ac/heat*19)}
+#sub {a black pronged trident} {a black pronged trident (2d9 dr2 w17 *19)}
+#sub {blighted jade talisman} {blighted jade talisman (Int Cha2 det/imm poison NORENT *19)}
+#sub {a braided leather belt} {a braided leather belt (Str *19)}
+#sub {an ergothian battle bracer} {an ergothian battle bracer (hr *19)}
+#sub {dark mithril wrist dagger} {dark mithril wrist dagger (2d6 1/1 w2 Magic *19)}
+#sub {a silver barbed ring} {a silver barbed ring (dr1 health-5 nopal/war/sham *19)}
+#sub {plainsman's war hatchet} {plainsman's war hatchet (2d6 1/1 w8 *19)}
+#sub {a bronze gas mask} {a bronze gas mask (imm_gas *19)}
+#sub {bronze band inlaid with ivory} {bronze band inlaid with ivory (con 2HR lots of detects *19)}
+#sub {deadly serrated battle axe} {deadly serrated battle axe (5d6 dr dex-1 w48 *19)}
+#sub {black adamantite shortsword} {black adamantite shortsword (3d4 1/1 w5 nomag*19)}
+#sub {small sheath shaped like a viper} {small sheath shaped like a viper (+env RELORE *19)}
+#sub {electrum and emerald necklace} {electrum and emerald necklace (-5ac det magic ams *19)}
+#sub {small indigo vial} {small indigo vial (rem poison cure blind *19)}
+#sub {vicious mithril facemask} {vicious mithril facemask (imm_gas/pois/disease NORENT*19)}
+#sub {pair of coral vambraces} {pair of coral vambraces (res_heat nodru/mag/thi/sham *19)}
+#sub {iron eyepatch inlaid with emeralds} {iron eyepatch inlaid with emeralds (con *19)}
+#sub {obsidian-tipped ironwood spear} {obsidian-tipped ironwood spear (6d4 hr NORENT w34 nothi *19)}
+#sub {sandy grey quiver} {sandy grey quiver (dex hide5 *19)}
+#sub {flask of powerfully distilled potatoes} {flask of powerfully distilled potatoes (drinkcon 9/9 w8*19)}
+#sub {fine looking gold ring} {fine looking gold ring (hr det_inv *19)}
+#sub {a blood red cape} {a blood red cape (hit8 resHeat6 Glow*19)}
+#sub {cunningly wrought mithril hauberk} {cunningly wrought mithril hauberk (rescue4 nobarb/sham*19)}
+#sub {gleaming mithril necklace inlaid with diamonds} {gleaming mithril necklace inlaid with diamonds (det_inv senselife ac-3*19)}
+#sub {jade and turquoise necklace} {jade and turquoise necklace (sense_life *19)}
+#sub {necklace of shrunken bones} {necklace of shrunken bones (age5 res_mag3 cl *19)}
+#sub {grandiose shield of black steel} {grandiose shield of black steel (ss-2 para-1 war/dk*19)}
+#sub {black crystal hilted dagger} {black crystal hilted dagger (2d3 w4 nocle/sham*19)}
+#sub {enchanted spiked collar} {enchanted spiked collar (assail5 *19)}
+#sub {foremans belt with a large buckle} {foremans belt with a large buckle (str health5 *19)}
+#sub {gem of true seeing} {gem of true seeing (health-50 cl2 NV/TrueSeeing NORENT*19)}
+#sub {pink diamond ring} {pink diamond ring (+1@2 mv-10 imm_acid/cold *19)}
+#sub {suit of polished platinum platemail} {suit of polished platinum platemail (str/hr *19)}
+#sub {suit of silver finished plate mail} {suit of silver finished plate mail (regen6% ac-4 nobarb/sha *19)}
+#sub {suit of steel platemail inlaid with ebony} {suit of steel platemail inlaid with ebony (dex/con nobar/sha *19)}
+#sub {odd long sword} {odd long sword (2d6 hr2 w6 offy *19)}
+#sub {tamarack staff} {tamarack staff (3d4 hr1 +1@2 cl@ AntiG w4 *19)}
+#sub {weathered steel neckchain} {weathered steel neckchain (hit3 age5 imm_disin/gas *19)}
+#sub {skeletal breastplate} {skeletal breastplate (res_heat8 *19)}
+#sub {Cargath Darnyr} {Cargath Darnyr (5d3 3/3 w22 *19)}
+#sub {goblin skin vest} {goblin skin vest (str save_pois1 *19)}
+#sub {a hide quiver} {a hide quiver (fade2 mv10 *19)}
+#sub {nephaline crown inlaid with fire opals} {nephaline crown inlaid with fire opals (cha2 det_inv/mag nomag*19)}
+#sub {tooth of a wicked dragon} {tooth of a wicked dragon (2d7 2/2 w10 nomag/pal/cl/sc/sha*19)}
+#sub {an ebony shield} {an ebony shield (bash6 w22 app7 *19)}
+#sub {a black longsword} {a black longsword (3d5 dr2 w12 Magic *19)}
+#sub {a huge spider's fang} {a huge spider's fang (2d6 imm_acid w11 *19)}
+#sub {a leather breastplate} {a leather breastplate (ac-7 regen15% *19)}
+#sub {cloak of meditation} {cloak of meditation (meditate2*19)}
+#sub {dark elven piwafi} {dark elven piwafi (hide10 imm/res_heat3 *19)}
+#sub {a feathered tribal mask} {a feathered tribal mask (CHA det_inv/undead no_charm*19)}
+#sub {a platinum rapier} {a platinum rapier (3d6 1/1 AntiE w20*19)}
+#sub {steel blade demascened with gold} {steel blade demascened with gold (3d4 1/1 w9 Magic*19)}
+#sub {spiked steel hat} {spiked steel hat (WB Im_elec NORENT*19)}
+#sub {brightly hafted axe} {brightly hafted axe (3d4 1/1 Offy*19)}
+#sub {dragon necklace of Takhisis} {dragon necklace of Takhisis (1wis 1int evil/cleric*19)}
+#sub {pair of enchanted elven battle gauntlets} {pair of enchanted elven battle gauntlets(dr2 Scout*19)}
+#sub {wicked double bladed dagger} {wicked double bladed dagger (4d4 2/2 w22 *19)}
+#sub {the executioner's axe} {the executioner's axe (*19)}
+#sub {an ivory miter} {an ivory miter (int hit5 antiE Glow*19)}
+#sub {a small black cudgel} {a small black cudgel (2d5 w8 *19)}
+#sub {stubby pistol crossbow} {stubby pistol crossbow (2d6 2/2 w8 *set* *19)}
+#sub {rabbit skinner} {rabbit skinner (2d6 w3 *19)}
+#sub {peaked canvas cap} {peaked canvas cap (int cl2 ac-5 *19)}
+#sub {pair of segmented black adamantite shin guards} {pair of segmented black adamantite shin guards (canfly nobarb/sha immacid*19)}
+#sub {black, chain mesh hauberk} {black, chain mesh hauberk (hit9 det_inv tank *19)}
+#sub {some quartz-encrusted gauntlets} {some quartz-encrusted gauntlets (hr2 *19)}
+#sub {a death shield} {a death shield (ss-1 *19)}
+#sub {staff of the abyss} {staff of the abyss (3d5 cl3 age6 senseL antiG/N w10*19)}
+#sub {a rat-tail whip} {a rat-tail whip (3d3 hr2 w2 *19)}
+#sub {green hilted machete} {green hilted machete (3d5 1/1 w8*19)}
+#sub {suit of ergothian battle armor} {suit of ergothian battle armor (con nobarb/sham*19)}
+#sub {silvery sleeves of stalking} {silvery sleeves of stalking (dex2 snk AntiE*19)}
+#sub {ancient silver medallion} {ancient silver medallion (nolore *19)}
+#sub {pair of steel-backed gauntlets} {pair of steel-backed gauntlets (hr/dr1 charge5 *19)}
+#sub {a puma skull} {a puma skull (charg5 ac-4 det_inv/infra imm_disint/ht *19)}
+#sub {stylish pair of white alligator skin boots} {a stylish pair of white alligator skin boots (dex1 cha1 mvregen25 style1 *19)}
+#sub {bloodstained brathnoc skin cloak} {bloodstained brathnoc skin cloak (hit5 ward/frenz5 immH/C *19)}
+#sub {a heavy golden chain} {a heavy golden chain (ss-1 *19)}
+#sub {heavy bronze cleaver} {heavy bronze cleaver (5d3 hr w14 *19)}
+#sub {regal merlion head pauldrons} {regal merlion head pauldrons (ac-6 con/cha sense_life *19)}
+#sub {oozing lump of black flesh} {oozing lump of black flesh (drinkcon 18cap)}
+#sub {a fleshy blue sac} {a fleshy blue sac (drinkcon w10 cap18 *19)}
+#sub {flat bronze blade} {flat bronze blade (2d4 dr3 w2 *19)}
+#sub {twisted narwhal tusk rapier} {twisted narwhal tusk rapier (2d8 2/2 NORENT w9 *18)}
+#sub {swirling grey potion} {swirling grey potion (lv20 ancestral shroud *18)}
+#sub {viscous amber-colored potion} {viscous amber-colored potion (lv20 fortify *18)}
+#sub {pair of turquoise-trimmed, buckskin boots} {pair of turquoise-trimmed, buckskin boots (kick2 *18)}
+#sub {some metal cleats} {some metal cleats (kick10 dex1 glow *18)}
+#sub {suit of platinum etched solamnic platemail} {suit of platinum etched solamnic platemail (con dr2 *18)}
+#sub {vermillion dragonscale shield} {vermillion dragonscale shield (int2 cl2 res_heat15 *18)}
+#sub {ergothian smock laced with gold thread} {ergothian smock laced with gold thread (int age10 regen5% cl3 antiE *18)}
+#sub {You see a fine lance sitting here forged of dragonsilver} {You see a fine lance sitting here forged of dragonsilver (DRAGONLANCE!)}
+#sub {some black legplates of the Skull} {some black legplates of the Skull (50c *18)}
+#sub {an emerald hilted dagger} {an emerald hilted dagger (4d4 hr1 dr2 magic w10 *18)}
+#sub {mithril battleaxe with an ironwood handle} {mithril battleaxe with an ironwood handle (2d11 w30 barblore)}
+#sub {badly beaten bronze sword} {badly beaten bronze sword (2d3 w6 *18)}
+#sub {runed ceramic bracer} {runed ceramic bracer (str/int +1@4 NORENT Druid *18)}
+#sub {silver-inlaid onyx ring} {silver-inlaid onyx ring (invis *18)}
+#sub {a pair of black steel boots} {a pair of black steel boots (hit10 *18)}
+#sub {massive spruce spear} {massive spruce spear (3d5 w19 *18)}
+#sub {some oaken leaf armor} {some oaken leaf armor (wis +1@4 *18)}
+#sub {bands of sapling leaves} {bands of sapling leaves (inv det_inv *18)}
+#sub {silver-inlaid onyx ring} {silver-inlaid onyx ring (wis invis antiG *18)}
+#sub {green nephaline ring} {green nephaline ring (regen3% *18)}
+#sub {charred rosewood staff} {charred rosewood staff (3d5 cl3 inv/det_inv immac/ht *18)}
+#sub {pair of stitched dueling gloves} {pair of stitched dueling gloves (hr2 parry5 basher *18)}
+#sub {razor sharp longsword, inscribed with runes} {razor sharp longsword, inscribed with runes (3d5 1/1 imm_everything *18)}
+#sub {spherical diamond pendant} {spherical diamond pendant (save_spell/para -1 *18)}
+#sub {suit of sturdy black platemail} {suit of sturdy black platemail (dex/str nobarb/sham immacid Glow *18)}
+#sub {golden tinged broadsword} {golden tinged broadsword (2d9 3/3 w24 *18)}
+#sub {set of black rerebrace} {set of black rerebrace (hit7 *18)}
+#sub {glowing adamantite bracelet} {glowing adamantite bracelet (hit10 dex-1 glow *18)}
+#sub {bracelet of twined yew} {bracelet of twined yew (parry4 nopal/dk *18)}
+#sub {a crystalline sword} {a crystalline sword (3d6 dr1 w12 mag/bless antiE *18)}
+#sub {shortened marlin bill rapier} {shortened marlin bill rapier (3d4 w11 *18)}
+#sub {a small black ring} {a small black ring (cl)}
+#sub {collection of heavy bronze hooks} {collection of heavy bronze hooks (NORENT 1800c *18)}
+#sub {some black and silver sleeves} {some black and silver sleeves (dex hit3 anti_N/G *18)}
+#sub {blue lobster shell bracer} {blue lobster shell bracer (hr/rangehr det_invis *18)}
+#sub {pair of black satin boots} {pair of black satin boots (age8 mv12 cl2 *18)}
+#sub {petrified cannabis clavariaceae} {petrified cannabis clavariaceae (3d6 2/2 w22 imm_disint/heat *18)}
+#sub {pair of delicate crystal glasses} {pair of delicate crystal glasses (learn5 cl3 det_inv/mag *18)}
+#sub {alligator skin vest} {alligator skin vest (WB nomag/thi/cle *18)}
+#sub {simple iridium ring} {simple iridium ring (+1@5 1cl immac/hea/elec *18)}
+#sub {a slick blade} {a slick blade (3d5 age5 w8 tank only *18)}
+#sub {some silver embossed armor} {some silver embossed armor (dex health15 hr res/immHeat *18)}
+#sub {a silver blade} {a silver blade (2d8 w18 *18)}
+#sub {suit of ebony plate mail} {suit of ebony plate mail (con *18)}
+#sub {ring of thieves} {ring of thieves (dex steal3 *18)}
+#sub {shield encrusted with malachites} {shield encrusted with malachites (w16 det_invis *18)}
+#sub {ivy etched silver blade} {ivy etched silver blade (2d5 hr1 parry2  w10 *18)}
+#sub {serrated two-handed sword} {serrated two-handed sword (5d4 w20 *18)}
+#sub {gleaming ivory chainmail} {gleaming ivory chainmail (cha ac-6 *set* *18)}
+#sub {pair of ivory legplates} {pair of ivory legplates (ac-1 mv12 *set* *18)}
+#sub {pair of ebony legplates} {pair of ebony legplates (kick6)}
+#sub {copper and wood blunderbuss} {copper and wood blunderbuss (6d4 2/2 w14 *18)}
+#sub {pair of scuffed green leather boots} {pair of scuffed green leather boots (crap *18)}
+#sub {green breastplate of hardened leather} {green breastplate of hardened leather (apply7)}
+#sub {a hooded red chasuble} {a hooded red chasuble (cleric 1@6 antiE 18*)}
+#sub {copper dragonscale shirt} {copper dragonscale shirt (cleric 1@6 antiE *set* 18*)}
+#sub {a black ice blade} {a black ice blade (3d5 3/3 w15 *18)}
+#sub {short curved blade} {short curved blade (2d6 hr2 parry5 w9 *18)}
+#sub {unusual wicker hoopak} {unusual wicker hoopak (3d3 dr1 hr2 w11 *18)}
+#sub {regal red cape} {regal red cape (hit7 *18)}
+#sub {scaly blue-green cape} {scaly blue-green cape (det_inv/mag res_acid9 breath-1 *18)}
+#sub {shirt of green chainmail} {shirt of green chainmail (res_gas5 *18)}
+#sub {red coral ring} {red coral ring (hr ac-5)}
+#sub {supple leather gloves} {supple leather gloves (hr1 *18)}
+#sub {white rawhide buckler} {white rawhide buckler (ac-3 *18)}
+#sub {silver and ruby ring} {silver and ruby ring (NPP E only *18)}
+#sub {mace of destruction} {mace of destruction (4d5 2/2 antigood w21 *18)}
+#sub {doeskin gloves} {doeskin gloves (hide3 *18)}
+#sub {monstrous looking mace} {monstrous looking mace (3d5 dr1 hr2 w18 *18)}
+#sub {red and green striped minotaur's cloak} {red and green striped minotaur's cloak (hot10 *18)}
+#sub {armor of blending} {armor of blending (con *18)}
+#sub {wyvern skin quiver} {wyvern skin quiver (sneak10 *18)}
+#sub {chitinous bracer} {chitinous bracer (ac-5 para-1 *18)}
+#sub {chartreuse mushroom cap} {chartreuse mushroom cap (hit8 *18)}
+#sub {triple crescent moon talisman} {triple crescent moon talisman (glow/hum QUEST? *18)}
+#sub {massive grey two handed sword} {massive grey two handed sword (8d3 3/3 w52 *18)}
+#sub {gigantic whale bone spear} {gigantic whale bone spear (5d6 2/2 can_sharpen)}
+#sub {savage two-handed axe} {savage two-handed axe (2d12 3/3 w25 *19)}
+#sub {amulet of Itarik} {amulet of Itarik (str1 dex1)}
+#sub {black fang of a shadow beast} {black fang of a shadow beast (3d5 3/3 NV enchantable)}
+#sub {ring of molten steel} {ring of molten steel (resheat65 NORENT)}
+#sub {stretchy white hide of dragonscale} {stretchy white hide of dragonscale (hit15 hpregen25 rescold15 NOCHARM)}
+#sub {broad bladed two-handed sword} {broad bladed two-handed sword (9d3 2/2 w30 blooddrinker *18)}
+#sub {some gnomish body armor} {some gnomish body armor (hr2 res all5)}
+#sub {girdle with a human skull buckle} {girdle with a human skull buckle (str2 dex antiG)}
+#sub {studded black leather scabbard} {studded black leather scabbard (ac-6 immheat)}
+#sub {small feathered talisman} {small feathered talisman (FLYING health5)}
+#sub {suit of dark blue armor} {suit of dark blue armor (ac-20 hp10)}
+#sub {adamantite axe} {adamantite axe (8d3 dr3 hr1 w29*18)}
+#sub {ring of the panther} {ring of the panther (hit5 ss1)}
+#sub {pair of flexible red dragon scale leggings} {pair of flexible red dragon scale leggings (ac-6 dex resHeat8 *set* *18)}
+#sub {blue azurite sceptre} {blue azurite sceptre (int hit10)}
+#sub {ghastly necklace of tiny skulls} {ghastly necklace of tiny skulls (petri-1 resneg6)}
+#sub {neck ring of crystal and stone} {neck ring of crystal and stone (+1@6 detMag sham/dru/cle)}
+#sub {breastplate of ancient elven make} {breastplate of ancient elven make (+1@6 ss-1 healRecieve2%)}
+#sub {pair of giant crab shell leg plates} {pair of giant crab shell leg plates (ac-10)}
+#sub {blue dragon scale skirt} {blue dragon scale skirt (resElec8 dex *set*)}
+#sub {pair of blue dragon scale sleeves} {pair of blue dragon scale sleeves (resElec8 str *set*)}
+#sub {shimmering blue dragon scale cloak} {shimmering blue dragon scale cloak (resElec8 canfly *set*)}
+#sub {blood-grooved short sword} {blood-grooved short sword (4d3 3/3 w16 M)}
+#sub {soot-covered leather apron} {soot-covered leather apron (resHeat80 norent)}
+#sub {a gargoyle ring} {a gargoyle ring (str antiG)}
+#sub {ring of cruelty} {ring of cruelty (1cl hit -4 CURSED)}
+#sub {plume of luminous blue fringe} {plume of luminous blue fringe (-2ss rescold30 10health wb/light *18)}
+#sub {wolf tooth bracelet} {wolf tooth bracelet (str hr)}
+#sub {a long golden cloak} {a long golden cloak (str1 hit6)}
+#sub {a sterling cuff} {a sterling cuff (str1)}
+#sub {black neckguard of the Lily} {black neckguard of the Lily (hr1 ac-8)}
+#sub {a silver skull ring} {a silver skull ring (npp)}
+#sub {vial of green elixir} {vial of green elixir (lv30 poison)}
+#sub {pair of wicked black boots} {pair of wicked black boots (2hr)}
+#sub {pair of dark blue satin boots} {pair of dark blue satin boots (10hp 1cl)}
+#sub {light ergothian battle shield} {light ergothian battle shield (SBlock5 w15)}
+#sub {small circlet of platinum} {small circlet of platinum (2wis det_int}
+#sub {clay cup filled with holy water} {clay cup filled with holy water (kw empty cup healmist 24ticks)}
+#sub {sword of sacred fires} {sword of sacred fires <3d13 hr3 norent tank only w28>}
+#sub {sinister black sabatons} {sinister black sabatons <mv20 *set*>}
+#sub {sinister black dragon helm} {sinister black dragon helm <wis2 detinv/senseL/infra Evil*set*>}
+#sub {macabre human bone leggings} {macabre human bone leggings <con1 *set*>}
+#sub {macabre human bone breastplate} {macabre human bone breastplate <con1 *set*>}
+#sub {macabre human bone boots} {macabre human bone boots <mv20 *set*>}
+#sub {green gem necklace} {green gem necklace <ToT key>}
+#sub {carved ivory ring} {carved ivory ring <int1>}
+#sub {white moonstone ring} {white moonstone ring <wis1 antiE cleric only>}
+#sub {spider shaped braces} {spider shaped braces <10hp immpois>}
+#sub {mirrored shield} {mirrored shield <w30 savepara-1 petro-2>}
+#sub {heavy flaming battle axe} {heavy flaming battle axe (5d6 3/3 antiG w26 CC_SPEC *18)}
+#sub {thin bronze bracelet} {thin bronze bracelet <hit5>}
+#sub {golden dwarven talisman} {golden dwarven talisman <int/wis1 immacid>}
+#sub {golden tinged shield} {golden tinged shield <bash5 resheat/cold15>}
+#sub {bloody axe shaped medallion} {bloody axe shaped medallion <ss-1 resacid8 detinv antiG>}
+#sub {sky blue robe etched with golden runes} {sky blue robe etched with golden runes <wis1 ac-3 immac/cold>}
+#sub {coral spear} {coral spear <2d7 w11>}
+#sub {elongated squid head quiver} {elongated squid head quiver <waterbreath>}
+#sub {black shield of dragon bone} {black shield of dragon bone <w6 hit4 str1 nocharm druid only>}
+#sub {great bone hook} {great bone hook <3d5 dr1 reselec12 magic claw w14>}
+#sub {sword of carved emerald} {sword of carved emerald (4d6 2/2 w30 glow tank only)}
+#sub {kagonesti dance shield} {kagonesti dance shield (ss-1 int1 w 9 cle/dru)}
+#sub {copper band inscribed with wasps} {copper band inscribed with wasps <con1 antiG cursed>}
+#sub {pair of eel-skin gloves } {pair of eel-skin gloves  <ac-4 str1 infra>}
+#sub {sparkling sword of black crystal} {sparkling sword of black crystal <4d7 hr3 w42>}
+#sub {red and gold hilted longsword} {red and gold hilted longsword <3d5 w9>}
+#sub {pair of red oakleaf gauntlets} {pair of red oakleaf gauntlets <str1 hr1 nobarb/sham>}
+#sub {runed black leather armor} {runed black leather armor <con1 ac-5>}
+#sub {rodent spine circlet} {rodent spine circlet (healing1%)}
+#sub {red and gold hilted longsword} {red and gold hilted longsword <3d5 w9>}
+#sub {some throwing darts} {some throwing darts (quest item?)}
+#sub {a plumed purple cap} {a plumed purple cap (int/wis1 hit10 magic)}
+#sub {seeker's robe} {seeker's robe (ac-5 det_mag)}
+#sub {thick padded jerkin} {thick padded jerkin (ap 5)}
+#sub {pair of silk laced boots} {a pair of silk laced boots (mv 20, sneak, imm ac/elec/heat)}
+#sub {wristband made from tiny bones and skulls} {a wristband made from tiny bones and skulls (cha 1, heal 5% Anti G/E)}
+#sub {black thieving plate} {a black thieving plate (dex 2 Sneak/Hide}
+#sub {black seal of the Skull} {a black seal of the Skull (nolore Value 500)}
+#sub {dragontail whip} {a dragontail whip (4d4 3/3 nomag/dru/blk/red/white/sham w5)}
+#sub {bone spiked bullwhip} {a bone spiked bullwhip (3d5 nomag/dru/cle/mage/sham w18)}
+#sub {silver-streaked black hood} {a silver-streaked black hood (mem_fact 4 cl2 imm_ac/elec/heat)}
+#sub {coiled jade serpent bracelet} {a coiled jade serpent bracelet (SS -1, cl1, imm_pois)}
+#sub {wolf's head helm} {a wolf's head helm (det_evil, Infra, Anti_Evil)}
+#sub {sharp steel kitchen knife} {a sharp steel kitchen knife (3d3 2/2 w4)}
+#sub {whip of braided kelp and shark teeth} {whip of braided kelp and shark teeth (1d13 3/3 magic, w9)}
+#sub {rogue's dirk} {a rogue's dirk (2d6 dr1, BS 5, magic, anti_good, Theif only)}
+#sub {sterling bracer} {a sterling bracer (hr1 norent)}
+#sub {solamnic glaive} {a solamnic glaive (Fast Decay hr3, dr2, anti-evil, no_mage/thi/pal/dru/cle/scout/dk)}
+#sub {long copper knife} {a long copper knife (3d4 bless w10)}
+#sub {enormous sahuagin trident} {an enormous sahuagin trident (3d9 Bless w45 no_mag/thi/dru/cle/mage)}
+#sub {a serrated sahuagin spear} {a serrated sahuagin spear (2d7 hr1 Bless w13)}
+#sub {barbed sahuagin trident} {a barbed sahuagin trident (3d5 hr1 w13 Bless)}
+#sub {curved sahuagin short sword} {a curved sahuagin short sword (2d7 Class: Main_Gauche Bless w13)}
+#sub {jagged sahuagin dagger} {a jagged sahuagin dagger (3d4 hr1 Bless w6)}
+#sub {massive pig iron battleaxe} {a massive pig iron battleaxe (4d9 hr1 Bless w30)}
+#sub {Suntz, the curmudgeonly yeti} {Suntz, the curmudgeonly yeti (Hit 7, res crit 1%, res cold 20, cl1, senselife, infra, magic, bless)}
+#sub {tight fitting sneaky black robe} {a tight fitting sneaky black robe (Sneak/Hide Norent, AntiGood NoTank)}
+#sub {black plumed great helm} {a black plumed great helm (2wis 2cha gaze inspire NV detinv)}
+#sub {black gown of gossamer} {a black gown of gossamer (ac-10 -1ss autohide autoinv)}
+#sub {pair of spiked leather bracers} {a pair of spiked leather bracers (parry 12, res_heat 6, nomage/dru/cle/sham)}
+#sub {silver and platinum etched bracer} {a silver and platinum etched bracer (hr1, dex -1, Magic/Bless)}
+#sub {shard of bone} {a shard of bone (5d3 nomage/dru/cle/sham w12)}
+#sub {adamantite diadem} {an adamantite diadem (wis2, det_inv/mag/good)}
+#sub {a spiral horn} {a spiral horn (3d5 hr1, dr3, main_gauche, mag/bless w20)}
+#sub {three-headed whip} {a three-headed whip (4d3 2/2 hum/mag/bless w6)}
+#sub {scroll about Lunitari} {a scroll about Lunitari (lv 27 AMS, IMM_HEAT)}
+#sub {mossy green wrist guard} {a mossy green wrist guard (dex1 wis-1, sense life)}
+#sub {blood red adamantite shield} {a blood red adamantite shield (w25 age4 hr1 magic nomag/dru/sham apply 10)}
+#sub {ring of carved nephrite} {a ring of carved nephrite (Hit3 Glow/Mag nomag/dru/sham)}
+#sub {cruel-looking forked dagger} {a cruel-looking forked dagger (3d4 1/1 w9)}
+#sub {white dragon scale shield} {a white dragon scale shield (w20 res_cold 12, magic, apply9)}
+#sub {gem encrusted bastard sword} {a gem encrusted bastard sword (4d5 hr3 w20 Glow Anti_Evil)}
+#sub {splendidly sharp red longsword} {a splendidly sharp red longsword (4d4 1/1 w18)}
+#sub {beautiful bronze trident} {a beautiful bronze trident (5d3 3/3 w15 Magic nomag/cle/dru/sham SetItem)}
+#sub {emerald green hunter's cloak} {an emerald green hunter's cloak (Hit7 AC-5 nomag/dru/cle/sham)}
+#sub {Helm of Grallen} {the Helm of Grallen (wis2 cha2 dangersense8 assault8 detinvis/nocharm/norent immcold)}
+#sub {large bloodstained battleaxe} {a large bloodstained battleaxe (3d8 2/2 Magic w38)}
+#sub {sapphire circlet} {a sapphire circlet (wis1 con1 nomag/thi/dru/scout/barb/sham)}
+#sub {some white Solamnic leather armor} {some white Solamnic leather armor (con1 Bless Anti_Evil nomag/thi/dk)}
+#sub {glowing crystal belt} {a glowing crystal belt (learn5 dex1 glow/selfdestruct/magic)}
+#sub {severed satyr horn} {a severed satyr horn (learn5 SS1 Glow/Hum/Magic nodruid/cle/sham imm_mag)}
+#sub {stained brown robe} {a stained brown robe (save_pois -1 cl1 Magic)}
+#sub {some stately golden robes} {some stately golden robes (int1 hit10 cl3 det_mag/good glow/magic no_thi/pal/scout/war/dk/barb)}
+#sub {vine belt} {a vine belt (wis1 Bless nothief)}
+#sub {iridescent ebony carapace} {an iridescent ebony carapace (Hit8 res_ac 10 Glow/Magic nomag/pal/war/dk/)}
+#sub {thin wolfskin belt} {a thin wolfskin belt (save_pois -1 mv10)}
+#sub {orb of black flames} {an orb of black flames (Hit15 cl2 Evil/Magic AntiGood nothi/pal/dru/cle/scout/dk/barb/sha imm_neg_en)}
+#sub {some dark grey, leather leggings} {some dark grey, leather leggings (Hit-3 mv-8 autoinv anti_good)}
+#sub {ashen stone ring} {an ashen stone ring (dr1 glow magic)}
+#sub {ruby axe} {a ruby axe (3d5 dr3 w14 OFFY hum/magic/anti_ev nomag/thi/cle/dru/sham)}
+#sub {slender dragonlance} {slender dragonlance (6d4 3/3 cha2 nocharm/imm_fear anti_ev/neut nomag/thi/dru/cle/dk w20)}
+#sub {anklets of woven palladium} {anklets of woven palladium (dex1 ac-5 clan_fly)}
+#sub {Sekolah's Bite} {Sekolah's Bite (4d5 2/2 norent w26 magic)}
+#sub {dark ceramic jug} {a dark ceramic jug (capacity 40 w10)}
+#sub {black lily pendant} {a black lily pendant (ac-5 Hit15)}
+#sub {black three taloned claw and chain} {a black three taloned claw and chain (2d9 1/1 w10 nomag/pal/cle/sham Magic)}
+#sub {huge two-handed sword} {a huge two-handed sword (3d8 hr1 dr2 w40)}
+#sub {ivory-hilted bastard sword} {an ivory-hilted bastard sword (3d6 hr1 w20 Bless)}
+#sub {some bright, crimson stained legplates} {some bright, crimson stained legplates (apply6)}
+#sub {bright, crimson stained breastplate} {a bright, crimson stained breastplate (apply6)}
+#sub {bright red martingale} {a bright red martingale (mv5 SS1 nomag/thi/pal/dru/cle)}
+#sub {obsidian hammer} {an obsidian hammer (3d5 1/1 w18 crit2.5% Magic/Bless)}
+#sub {thin black sword} {a thin black sword (2d7 dr3 w12 magic nopal/dru/cle/sham)}
+#sub {runed crimson skull staff} {a runed crimson skull staff (ac8 Is_Flying Magic)}
+#sub {crimson steel lance} {a crimson steel lance (3d5 w22)}
+#sub {dwarven claymore} {a dwarven claymore (3d12 2/2 w23 nopal)}
+#sub {black ice blade windslayer} {a black ice blade windslayer (*lore this*3d10 2/2 w18 imm_heat nomag/thi/dru/cle/ anti_evil glow/magic)}
+#sub {crimson stained dagger} {a crimson stained dagger (3d3 w17)}
+#sub {runed sickle} {a runed sickle (3d6 2/2 w7 hum/magic nomag/thi/pal/scout/dk/sham)}
+#sub {black short sword} {a black short sword (5d3 2/2 magic nothief w20)}
+#sub {rhodochrosite bracelet} {a rhodochrosite bracelet (save_poison -2 Glow, Magic)}
+#sub {shining white warhammer} {a shining white warhammer (4d4 3/3 w13 nothief/pal/scout/war/dk/barb)}
+#sub {black short sword} {a black short sword (5d3 2/2 w20 Magic nothief)}
+#sub {thick padded jerkin} {a thick padded jerkin (app 15)}
+#sub {thin-soled black boots} {thin-soled black boots (Dex 1 app 2)}
+#sub {pair of silk laced boots} {a pair of silk laced boots (move 20, sneak/magic imm_acid/elec/heat)}
+#sub {wristband made from tiny bones and skulls} {a wristband made from tiny bones and skulls (Cha1, heal done 5% Magic/Anti_good/evil Nothief/pal/dru/dk/war/bar)}
+#sub {suit of padded red leather armor} {suit of padded red leather armor (hr1)}
+#sub {ragged leather band} {ragged leather band (ac+5 det_invis)}
+#sub {hammer of the Rose} {hammer of the Rose (5d3 hr2 w13 glow/mag/bless)}
+#sub {a small plain ring} {a small plain ring (con1)}
+#sub {battle-scarred adamantite breastplate} {battle-scarred adamantite breastplate (str1 *set*)}
+#sub {pair of red oakleaf crested gauntlets} {pair of red oakleaf crested gauntlets (str1 hr1 nobar/sha)}
+#sub {black crystal staff} {black crystal staff (3d6 hr-2 wis2 w9 notank)}
+#sub { black robe trimmed with silver} {a black robe trimmed with silver (save_pet/spell -1 cl2 Bless)}
+#sub {engraved red ring} {an engraved red ring (nolore 400c)}
+#sub {pair of fire coral slippers} {a pair of fire coral slippers (res_mag 10, regen 5% Glow/magic/hot nothi)}
+#sub {some delicate gloves of enchanted gossamer} {some delicate gloves of enchanted gossamer (cl1 Magic set)}
+#sub {scorched black banner} {a scorched black banner (wis2 healing done 10% nocharm nomage/th/sc/war/sha)}
+#sub {short black blade} {a short black blade (2d7 2/2 w6 magic/anitgood nomag/pal/dru/cle/scout/war/dk/sham)}
+#sub {obsidian amulet} {an obsidian amulet (magic 250c)}
+#sub {silver hatchet with a chain-wrapped handle} {a silver hatchet with a chain-wrapped handle (4d2  w4 hr3 fence/riposte/parry +5 magic/bless nomag/dru/cle/sharm)}
+#sub {red tinged staff wrapped in leather} {a red tinged staff wrapped in leather (3d6 w21 magic/bless nomag/thi/pal/dru/scout/dk/sham)}
+#sub {blackened steel shortsword} {a blackened steel shortsword (2d6 hr1 dr-1 w8)}
+#sub {some rose-engraved solamnic legplates} {some rose-engraved solamnic legplates (hr 2 health-10 magic)}
+#sub {carved marble mask} {a carved marble mask (dex1 cl1 det_invis/magic glow/mag/bless nothi/pal/cle/scout/dk/sham)}
+#sub {pair of blue flexible leather gauntlets} {a pair of blue flexible leather gauntlets (dr1)}
+#sub {spider shaped shield} {a spider shaped shield (dex1 bash+5 evil/mag/anti_good)}
+#sub {black plate embossed with coiled dragons} {a black plate embossed with coiled dragons (con1 res_mag5 nocharm/mag/anti_good nothi/dru/mag/sham)}
+#sub {some silver runed black sleeves} {some silver runed black sleeves (int1 cl1 imm_ac/elec/heat)}
+#sub {bloody snake tooth} {a bloody snake tooth (3d5 1/1 w15 evil/mag/anti_good pick)}
+#sub {pair of shadow sleeves} {a pair of shadow sleeves (ac-3 score crit .5% nomag/pal/dru/cle/scout/war/barb/sham)}
+#sub {pair of shadow trousers} {a pair of shadow trousers (ac-4 mv18 nomag/pal/dru/cle/scout/war/barb/sham)}
+#sub {wings of the silver serpent} {the wings of the silver serpent (regen -5%)}
+#sub {shadow hood} {a shadow hood (sense_life/infra nomag/pal/dru/cle/scout/war/barb/sham)}
+#sub {twin-bladed red scimitar} {a twin-bladed red scimitar (2d10  w16dr1 disarm5 mag/norent nomag/thi/cle/sham)}
+#sub {silver kingfisher medallion} {a silver kingfisher medallion (hr1 mag/anti_evil)}
+#sub {red snakeskin cape} {a red snakeskin cape (res_heat5 ac-6 nomag/pal/cle/war/dk/ imm_heat)}
+#sub {double bladed steel gladius} {a double bladed steel gladius (3d6 1/1 w22 hit10 nomag/thi/dru/cle/barb/sham)}
+#sub {dark iridium bracer} {a dark iridium bracer (ranged dr1)}
+#sub {small coral ring} {a small coral ring (ac-6 magic)}
+#sub {ruby inlaid stone band} {a ruby inlaid stone band (int1)}
+#sub {rotted, gnarled staff} {a rotted, gnarled staff (4d4 dr1 w15 cha1 nothi/pal/scout/war/dk/barb)}
+#sub {silver inlaid helm} {a silver inlaid helm (det_mag/infra magic)}
+#sub {embossed dragonarmy cuirass} {an embossed dragonarmy cuirass (age-3 ac-4 magic)}
+#sub {flaming white whip} {a flaming white whip (3d4 w4 targetres8% slot3 +2 imm_cold/elec/heat dru/scout)}
+#sub {light glassteel saber} {a light glassteel saber (2d8 w7 magic/bless nomag/thi/dru/cle/sham)}
+#sub {winged partisan} {winged partisan (3d5 dr2 hr1 w20 nomag/dru/cle/sham)}
+#sub {savage red war maul} {a savage red war maul (3d9 hr3 dr2 magic w30 *18)}
+#sub {extra silvery potion} {an extra silvery potion (lv30 harm)}
+#sub {spear of the hunter} {a spear of the hunter (5d5 w40 hr3 dr2 imm_heat nomag/thi/pal/dru/cle/scout/dk/sham)}
+#sub {heavy black robe with silver embroidery} {a heavy black robe with silver embroidery (int1 str-1 cl2 det_invs mag/anti_good)}
+#sub {black robe of the Thorn} {a black robe of the Thorn (age-4 int1 cl3 is_flying/magic/anti_good nopal/cle/scout/dk/sham)}
+#sub {Iceblade} {the Iceblade (2d7 hr2 w22)}
+#sub {frosted tin shield} {a frosted tin shield (w18 conc15 flee_chance-10 slot8+1 res_heat8 mag/bless nomag/thi/pal/dru/scout/war/dk/sham)}
+#sub {leather twined bone breastplate} {a leather twined bone breastplate (slot6+1 mag/bless/ant_evil/neut nomag/thi/pal/dru/scout/war/dk/)}
+#sub {red and gold hilted longsword} {a red and gold hilted longsword (3d5 w9 mag/bless nomag/thi/dru/cle/sham)}
+#sub {blue elven hair ribbon} {a blue elven hair ribbon (ac-5 cl1 det_invis/infra magic imm_ac/heat)}
+#sub {deep red robe} {a deep red robe (cl2 is_flying mag/anti_good/evil nothi/pal/scout/war/dk/barb/)}
+#sub {runed adamantite sword} {a runed adamantite sword (3d6 w15 hum/mag/bless nomag/thi/dru/cle/war/sham)}
+#sub {some smokey spirit armor} {some smokey spirit armor (invis det_invis magic)}
+#sub {massive blue coral crossbow} {a massive blue coral crossbow (4d7 hr3 dr2 w32 nomag/pal/cle/dk)}
+#sub {elfin sword-belt} {an elfin sword-belt (mv8)}
+#sub {blue scalemail sleeves} {some blue scalemail sleeves (hr1 res_elec5)}
+#sub {set of battle-scarred adamantite shin plates} {a set of battle-scarred adamantite shin plates (str1 magic *set*)}
+#sub {blue dragonarmy breastplate} {a blue dragonarmy breastplate (ac-5 nobarb/sham)}
+#sub {twisted dagger} {a twisted dagger (1d7 w6)}
+#sub {large golden hammer} {a large golden hammer (3d3 w12 glow)}
+#sub {bone spiked whip} {a bone spiked whip (3d5 w18 nomag/dru/cle/sham)}
+#sub {ritualistic charcoal gray robe} {a ritualistic charcoal gray robe (Bless nomag/thi/pal/dru/scout/war/dk/sham)}
+#sub {brassiere of seashells and kelp} {a brassiere of seashells and kelp (det_invis/glow)}
+#sub {cap made from sea dragon scales} {a cap made from sea dragon scales (res_elec20 con1 res_acid-10 cl3 mag/anti_good nopal/scout/war/dk/barb)}
+#sub {small apatite-inlaid dagger} {a small apatite-inlaid dagger (2d5 w7 nocle/sham)}
+#sub {pair of sable leather sleeves} {a pair of sable leather sleeves (ac-4 dex1)}
+#sub {some white robes with gold trim} {some white robes with gold trim (det_mag/magic/bless nomag/thi/dru/dk/sham imm_heat)}
+#sub {emerald green leather vest} {an emerald green leather vest (str1)}
+#sub {rotting wooden staff} {a rotting wooden staff (4d4 2/2 cl1 glow/mag/bless/anti_evil nothi/pal/cle/war/dk w5)}
+#sub {pinch of purple spores} {a pinch of purple spores (wand nolore)}
+#sub {rusty iron rod} {a rusty iron rod (lv20 rot hum/mag/norent nothi/dk/barb)}
+#sub {dark blue robe} {a dark blue robe (imm fire/cold nolore)}
+#sub {pair of loose silk sleeves} {a pair of loose silk sleeves (ac-2)}
+#sub {tarnished silver ring} {a tarnished silver ring (det_magic)}
+#sub {ceremonial whalebone scepter} {a ceremonial whalebone scepter (3d4 1/1 w12 nomag/thi/dru/war/dk/barb/sham)}
+#sub {tattered purple cloak} {a tattered purple cloak (ac-10 res_cold36 imm_neg/cold glow/hum/bless)}
+#sub {emerald green fiddleback chasuble} {an emerald green fiddleback chasuble (int/wis 1 magic)}
+#sub {alb adorned with gold trim} {an alb adorned with gold trim (wis1 hit8 magic)}
+#sub {a gleaming mithril claymore} {a gleaming mithril claymore (4d5 w28 3/3 glow/hum/mag/bless/anti_evil nomag/thi/dru/cle/)}
+#sub {withered husk of a heart} {the withered husk of a heart (imm_poison det_undead norent nomag/thi/pal/dru/scout/war/dk/sham)}
+#sub {tail of a rodent of unusual size} {tail of a rodent of unusual size (2d9 w10 dam_done5% score_crit1% sham *set*)}
+#sub {staff of a sahuagin high priestess} {the staff of a sahuagin high priestess (3d3 hr2 control5 shamonly w12)}
+#sub {shirt of light black chainmail} {a shirt of light black chainmail (save_pois/para -1 magic nobarb/sham)}
+#sub {suit of black leather armor} {a suit of black leather armor (res_cold10 save_breath-1 infra)}
+#sub {black silk sash} {a black silk sash (ac-5 det_invis magic)}
+#sub {pair of black sleeves} {a pair of black sleeves (dex1 mag/bless)}
+#sub {marble ring} {marble ring (con1 invis)}
+#sub {jeweled long sword} {jeweled long sword (2d6 2/2 w9 hum/magic nomag/thi/dru/cle/sham)}
+#sub {silver sphere} {silver sphere (key glow)}
+#sub {blackened gold necklace} {blackened gold necklace (norent 300c)}
+#sub {sharpened elven longsword} {sharpened elven longsword (2d7 w12)}
+#sub {ancient sword with a carved ivory hilt} {ancient sword with a carved ivory hilt (3d6 hr3 dr2 w17 strike5 mag/bless nomag/dru/cle/dk/sham)}
+#sub {hearthguard's axe} {hearthguard's axe (2d8 hr1 w9 offy)}
+#sub {ruby encrusted belt} {ruby encrusted belt (hit8 mag/bless)}
+#sub {pale blue stone} {pale blue stone (?)}
+#sub {pair of radiant alabaster boots} {pair of radiant alabaster boots (mv20 magic *set*)}
+#sub {pair of radiant alabaster armplates} {pair of radiant alabaster armplates (con1 magic *set*)}
+#sub {ring of the wolf} {ring of the wolf (ac-3 hit5)}
+#sub {giant mithril two-handed sword} {giant mithril two-handed sword (5d6 2/2 2hand5 bless/anti_evil nomag/thi/cle/dk/sham w50)}
+#sub {emerald hilted blade} {emerald hilted blade (2d6 1/1 w9 magic nomag/pal/dru/cle/scout/war/dk)}
+#sub {sword of carved marble} {sword of carved marble (3d6 w18 magic nomag imm_heat)}
+#sub {thin marble bracer} {thin marble bracer (imm_elec/heat)}
+#sub {lapis lazuli encrusted silver bracelet} {lapis lazuli encrusted silver bracelet (dex1 hit5 det_good nomag/pal/dru/cle/scout/war/dk/sha,)}
+#sub {steel kausin stained with blood} {steel kausin stained with blood (2d8 2/2 w22 mag/bless nothi/pal/dk/sham)}
+#sub {crude black crystal blade} {crude black crystal blade (4d5 hr-3 dr3 w22 hum/mag/bless/anti_good/norent/hot imm_cold/elec/heat)}
+#sub {shining white coral sword} {shining white coral sword (3d7 1/1 w22 det_evil/WB glow/mag/bless/anti_evil/norent nomag/thi/dru/cle/dk/sham)}
+#sub {pair of flaming phaethon wings} {pair of flaming phaethon wings (light/can_fly/glow/hot/magic)}
+#sub {sterling claymore} {sterling claymore (3d6 4/4 w20 no_off/rent nomag/thi/dru/cle/dk)}
+#sub {crimson cloak inlaid with threads of marble} {crimson cloak inlaid with threads of marble (slot5+1 sneak res_mag)}
+#sub {large bone battleaxe} {large bone battleaxe (3d5 1/1 magic w18)}
+#sub {dark red dagger} {dark red dagger (3d4 w8 nocle)}
+#sub {crimson cape} {crimson cape (hr1 ac-4, w/ gold mv15 resheat)}
+#sub {thin golden wristband} {thin golden wristband (lv25 shieldx10 SS-1 glow/mag)}
+#sub {suit of forest green plate} {suit of forest green plate (nobarb/sham apply10 Bless)}
+#sub {pair of forest green greaves} {pair of forest green greaves (Bless nobarb/sham Apply8)}
+#sub {pair of forest green vambraces} {pair of forest green vambraces (hr1 mag/bless nobarb/sham)}
+#sub {forest green helm and visor} {forest green helm and visor (sense_life/infra apply7)}
+#sub {pair of midnight blue bracers} {pair of midnight blue bracers (str1 parry8 magic nomag/thi/dru/cle/barb/sham)}
+#sub {granite spear} {granite spear (3d5 w15 bless/anti_good nothief)}
+#sub {double-bladed Solamnic axe} {double-bladed Solamnic axe (4d5 hr-1 dr3 glow/bless w38)}
+#sub {robe of pure darkness} {robe of pure darkness (int1 res_mag9 cl2 evil/anti_good nothi/pal/dru/cle/scout/war/dk/barb/sham)}
+#sub {large stone axe} {large stone axe (3d3 1/1 nomag/dru/cle/)}
+#sub {deep-green robe of Zeboim} {deep-green robe of Zeboim (meditate6 learn4 anti_good nomag/thi/pal/dru/scout/war/dk/barb/sham imm_ac/heat)}
+#sub {smokey red satchel} {smokey red satchel (mag/bless imm_gas)}
+#sub {steel shortsword} {steel shortsword (1d7 w6)}
+#sub {set of platinum leg plates} {set of platinum leg plates (ac-10 nobarb/sham)}
+#sub {officer's cap} {officer's cap (det_evil)}
+#sub {brightly colored, beaded necklace} {brightly colored, beaded necklace (int1 bless nomag/thi/pal/war/dk)}
+#sub {jeweled sceptre} {jeweled sceptre (cl1 det_invis)}
+#sub {heavy steel broadsword} {heavy steel broadsword (4d4 1/1 w22 nothi/dru/sham)}
+#sub {suit of green plate mail} {suit of green plate mail (res_gas8 save_breath-1 imm_poison/acid/elec/heat nomag/thi/nbarb/sham)}
+#sub {carved stone seal} {carved stone seal (det_invis sense_life glow)}
+#sub {crystalline shield} {crystalline shield (w25 bash+7 bless/anti_evil)}
+#sub {hammer of the rose} {hammer of the rose (5d3 hr2 w13 glow/magic/bless)}
+#sub {pair of solamnic greaves} {pair of solamnic greaves ( apply6 nobarb/sham)}
+#sub {kingfisher-inscribed cape} {kingfisher-inscribed cape (dex1 con-1 glow/magic nothi/dk)}
+#sub {some white Solamnic leather armor} {some white Solamnic leather armor (con1 bless/anti_evil nomag/thi/dk)}
+#sub {shattered crystal sword} {shattered crystal sword (2d6 hr1 w13)}
+#sub {golden bracer encrusted with pearls} {golden bracer encrusted with pearls (+str hum/magic/anti_evil)}
+#sub {granite sword} {granite sword (3d6 dr1 w10 mag/bless/anti_good imm_heat)}
+#sub {some fiery red gloves} {some fiery red gloves (res_heat9 glow/hot imm_heat)}
+#sub {wings of an eagle} {wings of an eagle (move-10 is_flying hum/magic)}
+#sub {earthen mace} {earthen mace (2d6 dr1 hit5 magic w6)}
+#sub {ancient, golden ring inset with an emerald} {ancient, golden ring inset with an emerald (hit8 str1 glow/magic nomag/war/dk/)}
+#sub {pair of ebony engraved bracers} {pair of ebony engraved bracers (str1 mag/bless/anti_good imm_ac/heat)}
+#sub {shirt of dragon scales} {shirt of dragon scales (res_heat7)}
+#sub {vial of deep blue liquid} {vial of deep blue liquid (lv24 restore/sac ward/bless)}
+#sub {oak-handled hatchet} {oak-handled hatchet (4d3 hr1 w8 glow nomag/thi/dru/cle/sham)}
+#sub {glowing silver longsword} {glowing silver longsword (2d5 2/2 w8 glow/anti_good)}
+#sub {cloudy gray potion} {cloudy gray potion (lv30 npp/sanc)}
+#sub {tessto} {tessto (5d5 hr3 dr1 magic w40)}
+#sub {pair of goblin skin leggings} {pair of goblin skin leggings (dex2 res_gas16)}
+#sub {thick malachite inlaid blade} {thick malachite inlaid blade (4d5 2dam w23 imm_poison)}
+#sub {pair of ruby spectacles} {pair of ruby spectacles (wis1 learn10 cl2 sense_life/infra/NV/true_seeing NORENT}
+#sub {pair of black strapped gloves} {pair of black strapped gloves (str1 hr2 mag/bless notank imm_ac/heat)}
+#sub {jade belt} {jade belt (save_pois-3 ss-1 cl1 glow/mag/bless)}
+#sub {venom dagger} {venom dagger (2d6 dr2 w9 imm_pois/glow/mag/bless nopal/dru/cle/scout/barb/sham)}
+#sub {transparent bone spear} {transparent bone spear (2d6 dr2 sneak7 magic w14 *18)}
+#sub {giant two-handed sword} {giant two-handed sword (3d5 dr3 hr2 w27 nomag/thi/dru/cle/sham)}
+#sub {vest of silver dragonscale} {vest of silver dragonscale (str/wis1 hit5 ac-4 imm_cold/heat)}
+#sub {elaborate dragon sash} {elaborate dragon sash (ss-1 ac-6 magic)}
+#sub {elaborate dragon robe} {elaborate dragon robe (int1 cl1 magic)}
+#sub {fiery-red sunburst engraved ring} {fiery-red sunburst engraved ring (wis1 nomag/thi/pal/scout/war/dk/barb)}
+#sub {blue steel sabre} {blue steel sabre (3d5 hr2 w9 magic nomag/thi/pal/cle/scout/war/dk/barb)}
+#sub {lucid whip} {lucid whip (3d3 2/2 magic w6)}
+#sub {Bloodstorm} {Bloodstorm (2d10 dr3 w16 disarm10 glow/mag/anti_good nomag/thi/pal/cle/sham NORENT)}
+#sub {nasty looking dented shield} {nasty looking dented shield (w60 dr1 nomag/thi/pal/dru/cle/scout/dk/sham NORENT)}
+#sub {heavy black cloak} {heavy black cloak (ac-2 is_flying)}
+#sub {shimmering green cloak} {shimmering green cloak (ss-1 save_para-2 glow/bless/anti_good/evil)}
+#sub {suit of silent leather armor} {suit of silent leather armor (hide nomag/pal/dru/cle/war/dk/sham)}
+#sub {clear stone} {clear stone (conj elem? 120c)}
+#sub {amber necklace} {amber necklace (invis/det_invis glow/mag nomag/thi/pal/cle/war/dk/)}
+#sub {black dragonscale band} {black dragonscale band (dex1 det_invis mag/anti_good nomag/pal/scout/war/dk/barb/sham)}
+#sub {pair of green dragonscale leggings} {pair of green dragonscale leggings (ac-4 hit8 *set*)}
+#sub {green dragonscale helm} {green dragonscale helm (ac-4 save_breath-3 det_inv/infra *set*)}
+#sub {pair of bright green dragonscale leggings} {pair of bright green dragonscale leggings (ac-4 hit8 *set*)}
+#sub {green dragonscale wrist band} {green dragonscale wrist band (ac-4 hit7 magic *set*)}
+#sub {engraved suit of platinum chainmail} {engraved suit of platinum chainmail (ac-7 hit6 sense_life)}
+#sub {pure white potion} {pure white potion (lv25 cure crit/cure ser/cure light)}
+#sub {soot-covered leather apron} {soot-covered leather apron (res_heat80 bless/norent imm_ac/heat)}
+#sub {russet hued throwing blade} {russet hued throwing blade (4d4 1/1 w8 magic imm_heat)}
+#sub {heavy shield of the lilly} {heavy shield of the lilly (w40 ac-8 magic apply10)}
+#sub {pair of red oakleaf crested boots} {pair of red oakleaf crested boots (kick7 magic nomag/thi/dru/cle/barb/sham)}
+#sub {pair of red oakleaf crested bracer} {pair of red oakleaf crested bracer (ranged_dr1 health-10 magic)}
+#sub {sparkling two-handed sword of black crystal} {sparkling two-handed sword of black crystal (4d7 hr3 w42)}
+#sub {pair of silver dragon scale boots} {pair of silver dragon scale boots (save_breath-2 move15)}
+#sub {crystalline bracer} {crystalline bracer (hr1 bless/anti_evil)}
+#sub {small diamond shield} {small diamond shield (w18 ss-1 res_mag5 glow/bless)}
+#sub {black quiver} {black quiver (fence+8)}
+#sub {bone handled knife} {bone handled knife (2d8 hr3 w15 regen5% imm_ac/elec/heat)}
+#sub {blackened steel pike} {blackened steel pike (4d6 w17)}
+#sub {blackened shortsword} {blackened shortsword (2d6 dr-1 hr1 w8)}
+#sub {loop of darkness} {loop of darkness (glow/invis/magic/anti_good)}
+#sub {jagged copper longsword} {jagged copper longsword (2d7 w11 hum/magic)}
+#sub {wedding ring} {wedding ring (nocharm/imm_sleep magic)}
+#sub {gleaming bronze wristguard} {gleaming bronze wristguard (hr1 magic)}
+#sub {pair of plain leather boots} {pair of plain leather boots (apply5)}
+#sub {feathered satin cap} {feathered satin cap (apply4)}
+#sub {pair of ivory anklets} {pair of ivory anklets (res_mag2 magic)}
+#sub {weathered sheepskin gloves} {weathered sheepskin gloves (apply4)}
+#sub {amulet of elder fires} {amulet of elder fires (age-15)}
+#sub {flask of fluorescent green liquid} {flask of fluorescent green liquid (HEAL)}
+#sub {shimmering white scroll} {shimmering white scroll (glow/imm_disintegration/heat lv30 iceshield/str)}
+#sub {pathfinder lantern} {pathfinder lantern (light track20 self_dest/magic)}
+#sub {long black whip with four heads} {long black whip with four heads (3d5 hr3 w6 nothi/pal/scout/dk/barb)}
+#sub {stone rose} {stone rose (2dex held)}
+#sub {white dragonarmy breastplate} {white dragonarmy breastplate (move3)}
+#sub {sleeveless black robe} {sleeveless black robe (slot2+1 nocharm nomag/thi/pal/scout/war/dk/sham)}
+#sub {thin granite sash} {thin granite sash (con1 magic/anti_good nothi/pal/dru/cle/scout/sham)}
+#sub {thin granite shard} {thin granite shard (2d7 dr1 w10 magic nopal/dk/barb)}
+#sub {red dragonmask} {red dragonmask (con2 mag/bless nomag/thi/dru/cle)}
+#sub {ancient sword of carved ivory} {ancient sword of carved ivory (4d3 dr2 w12 glow/mag nomag/thi/dru/cle/sham)}
+#sub {white wolfskin vest} {white wolfskin vest (res_cold16 det_invis nomag/thi/pal/war/dk)}
+#sub {cloak of white plumage} {cloak of white plumage (ch1 move-5 magic)}
+#sub {emerald vial} {emerald vial (lv20 cure crit)}
+#sub {symbol of lightning} {symbol of lightning (imm_elec magic NORENT)}
+#sub {cloak of minor distortion} {cloak of minor distortion (cl1 invis glow/magic/invis)}#sub {} { ()}
+#sub {carved mahogany breastplate} {carved mahogany breastplate (con1 *set*)}
+#sub {shadow vest} {shadow vest (ac-6 dex1 thief/scout only)}
+#sub {blood red short sword} {blood red short sword (3d5 hr2 w10)}
+#sub {ornate midnight blue leather breastplate} {ornate midnight blue leather breastplate (con1 magic *set*)}
+#sub {ornate midnight blue leather greaves} {ornate midnight blue leather greaves (str1 magic *set*)}
+#sub {ornate midnight blue leather bracers} {ornate midnight blue leather bracers (str1 magic *set*)}
+#sub {slimy pitch black pants} {slimy pitch black pants (ac-6 WB nopal/scout/war/dk/barb)}
+#sub {iridescent ebony carapace} {iridescent ebony carapace (hit8 res_ac10 glow/mag nomag/pal/war/dk)}
+#sub {ancient, tattered chasuble} {ancient, tattered chasuble (dr1 magic)}
+#sub {belt of seashells} {belt of seashells (save_spell/para-1 antiE nothi/pal/scout/war/dk/barb)}
+#sub {small grey ring} {small grey ring (ac-2)}
+#sub {inky black dagger} {inky black dagger (2d5 hr3 dr2 nomag/dru/cle/sham w4 OFFY)}
+#sub {dragon hilted claymore} {dragon hilted claymore (2d8 3/3 w18 glow/magic nobarb/sham)}
+#sub {flat black vlevet cap} {flat black vlevet cap (sneak3 hide5 infra)}
+#sub {walnut staff} {walnut staff (lv12 flamestrike x2)}
+#sub {shimmering green potion} {shimmering green potion (lv8 cure light)}
+#sub {pair of flesh colored gloves} {pair of flesh colored gloves (hide2 mag/bless)}
+#sub {demonic bone staff} {demonic bone staff (3d5 hr2 w16 clan_fly glow/hum/evil/invis/anti_good)}
+#sub {pair of spectacular hematite armbands} {pair of spectacular hematite armbands (str1 int-2 )}
+#sub {dark red pointy hat} {dark red pointy hat (hr1 cl1 det_mag/nocharm)}
+#sub {dark red linen robe} {dark red linen robe (apply5)}
+#sub {a green stone} {a green stone (imm_gas conjure?)}
+#sub {furry white cloak} {furry white cloak (wis1 ac-5 cl1)}
+#sub {pair of enchanted gossamer slippers} {pair of enchanted gossamer slippers (move20 cl1 *set*)}
+#sub {heavy black cloak with silvery runes} {heavy black cloak with silvery runes (res_heat/elec25 cl3 invis/senselife/nocharm)}
+#sub {grey witch's robe} {grey witch's robe (hide/bless)}
+#sub {pair of gargoyle wings} {pair of gargoyle wings (is_flying evil/bless/antigood)}
+#sub {some sleek black leather sleeves} {some sleek black leather sleeves (sneak invis/magic)}
+#sub {black crystal pendant} {black crystal pendant (dex1 res_acid8 invis/magic/anti_good imm_acid)}
+#sub {shirt of light black chainmil} {shirt of light black chainmil (save_poi/para-1)}
+#sub {pair of black strapped gloves} {pair of black strapped gloves (str1 hr2 mag/bless imm_acid/heat)}
+#sub {rune-painted dune freak skull} {rune-painted dune freak skull (cha1 magic)}
+#sub {plain brass longsword} {plain brass longsword (3d6 w11)}
+#sub {jagged black dagger} {jagged black dagger (3d5 dr w16 *18)}
+#sub {green runed bracer} {green runed bracer (int1 glow/mag/anti_evil)}
+#sub {pair of silver embossed gauntlets} {pair of silver embossed gauntlets (2dex 2hr)}
+#sub {robe of eyes} {robe of eyes (+10 learn 2cl)}
+#sub {robe of stars} {robe of stars (3cl int2 ss-1)}
+#sub {pair of silver reading glasses} {pair of silver reading glasses (scribe6 learn2 1cl magic)}
+#sub {circlet of glowing amber shards} {circlet of glowing amber shards (sense_life glow/bless imm_acid/heat)}
+#sub {gaseous hammer} {gaseous hammer (3d5 hr2 w5 magic/bless)}
+#sub {a shadow blade} {a shadow blade (2d6 hr3 w8 magic)}
+#sub {bladeless sword} {bladeless sword (2d9 2/2 imm_disarm glow.magic w10)}
+#sub {a bone bracelet} {a bone bracelet (hit6 mag/anti_good)}
+#sub {animal skull bracelet} {animal skull bracelet (det_good? nolore)}
+#sub {arm of a sea golem} {arm of a sea golem (3d5 dr1 w21 waterbreath imm_cold)}
+#sub {carved tribal mask adorned with feathers} {carved tribal mask adorned with feathers (control5 cha1 det_invis)}
+#sub {flexible red dragon scale bracer} {flexible red dragon scale bracer (ac-6 sae_para-1 imm_heat *set*)}
+#sub {billowing pitch black pouch} {billowing pitch black pouch (ac-3 open pouch fly/blur)}
+#sub {shaggy werewolf skin cloak} {shaggy werewolf skin cloak (hit10 int-1 nomag/pal)}
+#sub {tiny bone ring} {tiny bone ring (health-5 res_neg15)}
+#sub {shark skin hood} {shark skin hood (int1 instinct5 magic)}
+#sub {shark skin belt} {shark skin belt (save_para-1 magic)}
+#sub {shark skin leggings} {shark skin leggings (res_acid8)}
+#sub {shark skin shirt} {shark skin shirt (res_cold8 waterbreath)}
+#sub {scorched steel breastplate} {scorched steel breastplate (con1 ss-1 hum/magic *set*)}
+#sub {pair of scorched steel boots} {pair of scorched steel boots (hit6 move12 magic imm_heat *set*)}
+#sub {set of pitch black cambraces} {set of pitch black cambraces (dex2 ss-2 magic)}
+#sub {helm of the black wolf} {helm of the black wolf (ac-5 det_inv/infra anti_good)}
+#sub {large suit of sea green chainmail} {large suit of sea green chainmail (hr1 dex2 res_cold15 WB imm_c/el/heat *18)}
+#sub {vicious mithril shield} {vicious mithril shield (res_mag20 w40 imm_magic_missle evil)}
+#sub {ruby inlaid silver ring} {ruby inlaid silver ring (1cl magic)}
+#sub {great war axe} {great war axe (3d6 hr2 hum w19)}
+#sub {pair of doeskin gloves} {pair of doeskin gloves (hide3)}
+#sub {ring of black dragon scales} {ring of black dragon scales (hr1 int-1 sense_life anti_good)}
+#sub {squid tentacle whip} {squid tentacle whip (2d8 w6)}
+#sub {dark electrum medallion} {dark electrum medallion (cha1 save_breath1 anti_good)}
+#sub {thin string of sea dragon scales} {thin string of sea dragon scales (waterbreath/free_water_action norent)}
+#sub {long black dagger} {long black dagger (6d2 hr2 dr1 magic)}
+#sub {gnarled oak staff} {gnarled oak staff (3d3 w7)}
+#sub {some dragon scale armor} {some dragon scale armor (res_elec25)}
+#sub {silver-plated scroll} {silver-plated scroll (lv30 mirror image)}
+#sub {smokey glass charm} {smokey glass charm (ss-1)}
+#sub {a steel flail} {a steel flail (2d9 1/1 bless w20)}
+#sub {a black granite shield} {a black granite shield (w25 save_para-2 hr2)}
+#sub {fine huntsman's longbow} {fine huntsman's longbow (ranged_hr/dr1 magic/bless spd9 pwr11 acc12)}
+#sub {sandy elven cloak} {sandy elven cloak (ac-3 save_breath-1 bless)}
+#sub {pair of black, steel-plated boots} {pair of black, steel-plated boots (move15 kick7 magic)}
+#sub {spiked gnomish armor} {spiked gnomish armor (str1)}
+#sub {iron skinning knife} {iron skinning knife (3d3 w5 carve5)}
+#sub {olivine ring} {olivine ring (breath-1 nocle/sha)}
+#sub {some charred black gloves} {some charred black gloves (heat25 age4 imm_heat)}
+#sub {elegant elven dagger} {elegant elven dagger (2d6 2/2 w8 magic)}
+#sub {erudite's sword} {erudite's sword (3d4 hr2 w8 magic)}
+#sub {robes of the ritual} {robes of the ritual (cl3 hit10)}
+#sub {a suit of shiny coin armor} {a suit of shiny coin armor (crap)}
+#sub {large quartz hammer} {large quartz hammer (1d20 hr-1 dr1 nothi)}
+#sub {small silver medallion} {small silver medallion (det_inv nomage)}
+#sub {black witch's robe} {black witch's robe (cl3 sneak antiG)}
+#sub {pair of clawed owlbear paws} {pair of clawed owlbear paws (wis1 commune5)}
+#sub {diamond tipped spear} {diamond tipped spear (3d6)}
+#sub {a blackened broadsword} {a blackened broadsword (2d8 -1-1 evil)}
+#sub {lei of orchid flowers} {lei of orchid flowers (wis1 detmagic)}
+#sub {ogre commander's flag} {ogre commander's flag (march4 age-5)}
+#sub {a black spider medallion} {a black spider medallion (health-10% dam_done-10% norent/evil/hum)}
+#sub {thin gold necklace with an ornate charm} {thin gold necklace with an ornate charm (lv30 gate)}
+#sub {vile black potion} {vile black potion (lv30 heal/silence norent)}
+#sub {small circlet of bronze} {small circlet of bronze (det_inv/good/evil)}
+#sub {wiry steel longsword} {wiry steel longsword (4d3 2/2 w10)}
+#sub {ancient emperor's mummification} {ancient emperor's mummification (regen50% magic/cursed)}
+#sub {sharp longsword of tempered steel} {sharp longsword of tempered steel (2d6 imm_heat w8)}
+#sub {copper hilted cutlass} {copper hilted cutlass (3d4 w8)}
+#sub {sunbleached red jerkin} {sunbleached red jerkin (apply4)}
+#sub {axe of the dwarven lords} {axe of the dwarven lords (1d20 3/3 antE w28)}
+#sub {hammer of khras} {hammer of khras (4d4 3/3)}
+#sub {taut leather armband} {taut leather armband (relore)}
+#sub {some midnight leather sleeves} {some midnight leather sleeves (hr1 bless/magic)}
+#sub {gem-studded leather wristband} {gem-studded leather wristband (ss-1 nothief)}
+#sub {deep black wrist guard} {deep black wrist guard (wis1 str-1 1cl mag/bless)}
+#sub {ebony hilted gleaming longsword} {ebony hilted gleaming longsword (4d4 w10 offy)}
+#sub {pair of spiked gloves} {pair of spiked gloves (dr1 dex-1)}
+#sub {shirt of brass dragon scales} {shirt of brass dragon scales (ac-10 con1 anti_evil imm_heat *set*)}
+#sub {bright brass dragonscale shield} {bright brass dragonscale shield (ac-10 con shldblk5 immheat w30 *set*)}
+#sub {brass dragonscale helm} {brass dragonscale helm (ac-10 wis1 det_ev/inv/infra imm_heat *set*)}
+#sub {brass dragonscale leggings} {brass dragonscale leggings (ac-10 str1 imm_heat *set*)}
+#sub {some brass dragonscale sleeves} {some brass dragonscale sleeves (ac-7 str1 shieldblk5 imm_acid/elec/heat)}
+#sub {slender runed spear} {slender runed spear (2d8 w20)}
+#sub {bloodstained steel spear} {bloodstained steel spear (3d11 2/2 hit10 w38)}
+#sub {pitch black bracelet} {pitch black bracelet (hr1 infra)}
+#sub {a runed hammer} {a runed hammer (2d8 ss-1 hr2 w10)}
+#sub {ring of lightning} {ring of lightning (wis1 anti_evil)}
+#sub {blue phoenix feather} {blue phoenix feather (wis1 dex-1 is_flying evil/hot/glow)}
+#sub {assassin's cloak} {assassin's cloak (sneak20 autohide)}
+#sub {thin golden dragonscale armplates} {thin golden dragonscale armplates (con1 ac-5)}
+#sub {the scythe of autumn} {the scythe of autumn (2d10 3/3 mag/bless/hum)}
+#sub {mystic silver medallion} {mystic silver medallion (wis1 lev20 cause crit x10)}
+#sub {tattered old scroll} {tattered old scroll (lv15 recall)}
+#sub {delicate black opal necklace} {delicate black opal necklace (det_magic)}
+#sub {pair of hardened leather greaves} {pair of hardened leather greaves (trash)}
+#sub {guard's longsword} {guard's longsword (3d4 1/1 w11 magic)}
+#sub {crown of heliconia flowers} {crown of heliconia flowers (2nd +2 druid)}
+#sub {flamberge bastard sword} {flamberge bastard sword (3d7 1/1 w45)}
+#sub {sterling handled forging hammer} {sterling handled forging hammer (2d9 dr1 hr3 nomag/thi)}
+#sub {sparkling jewel of the mists} {sparkling jewel of the mists (ac-6 cha1 cl3 flying)}
+#sub {scratched dolphin bone breastplate} {scratched dolphin bone breastplate (conc5 healing5% ss-1)}
+#sub {ceremonial crystal mace} {ceremonial crystal mace (3d5 3/3 w10)}
+#sub {giant silver scimitar} {giant silver scimitar (3d5 hr1 w22)}
+#sub {dwarven rock hammer} {dwarven rock hammer (4d2 w3)}
+#sub {heavy cuprite axe} {heavy cuprite axe (3d7 2/2 tank/scout)}
+#sub {pewter necklace} {pewter necklace (hr1 nosumm/charm)}
+#sub {elder shaman's skull} {elder shaman's skull (cha1 healreceiv10% healdone5% NORENT)}
+#sub {fine mahogany ring} {fine mahogany ring (dr1 hr-1)}
+#sub {long, black ranseur} {long, black ranseur (3d5 dr1 w21)}
+#sub {leather woven headband} {leather woven headband (regen14% det_inv)}
+#sub {earthen brown robe} {earthen brown robe (3rd+1 str-1 cl2)}
+#sub {druidic staff} {druidic staff (3d5 2/2 mag/bless w13)}
+#sub {gem studded mithril bracer} {gem studded mithril bracer (3rd+1 hr1 1cl nothi/ran/war/barb)}
+#sub {rune etched mithril ring} {rune etched mithril ring (1cl immP)}
+#sub {pair of black soldier boots} {pair of black soldier boots (para-2)}
+#sub {sterling ornate orb} {sterling ornate orb (hit5 cl3 savebreath-3 hum notank)}
+#sub {ceremonial blue phoenix gauntlets} {ceremonial blue phoenix gauntlets (hr/dr1 *set*)}
+#sub {ceremonial blue phoenix greaves} {ceremonial blue phoenix greaves (con1 nobarb *set*)}
+#sub {ceremonial plate of the blue phoenix} {ceremonial plate of the blue phoenix (con1 ss-1 nobarb *set*)}
+#sub {ceremonial blue phoenix armplates} {ceremonial blue phoenix armplates (dex1 nobarb *set*)}
+#sub {ceremonial blue phoenix sollerets} {ceremonial blue phoenix sollerets (move15 *set*)}
+#sub {battered old wand} {battered old wand (lv10 lboltx3 norent)}
+#sub {necklace made of finger bones} {necklace made of finger bones (cha1)}
+#sub {giant's hammer} {giant's hammer (2d10 w28 2/2 magic)}
+#sub {lucern hammer} {lucern hammer (4d4 w16 nobarb/sham)}
+#sub {a quartz hammer} {a quartz hammer (1d20 w14 hr-1 dr1 hum/magic)}
+#sub {dented black shield of the skull} {dented black shield of the skull (w40 breath/spell-1 detinv/immpois/npp evil waronly)}
+#sub {some runed elven armbands} {some runed elven armbands (str1)}
+#sub {black bracelet of the lily} {black bracelet of the lily (con1 antigood)}
+#sub {pair of blue velvet sleeves} {pair of blue velvet sleeves (1th+1 druid/cleric)}
+#sub {shimmering suit of silver plate} {shimmering suit of silver plate (ac-2 health-10 immpois antigood)}
+#sub {dark blue satin robe} {dark blue satin robe (det_mag)}
+#sub {bounty hunter's shield} {bounty hunter's shield (dr1 dex-1 health-10 nocharm w35)}
+#sub {black battle armour with red trim} {black battle armour with red trim (str1 nobarb)}
+#sub {braided black waistband} {braided black waistband (4th slot1 turn5 autoinvis cant turn with it)}
+#sub {a runed bracelet} {a runed bracelet (dr-1 nosum anti_good)}
+#sub {a thin metal dagger} {a thin metal dagger (4d3 2/2 anti_evil w6)}
+#sub {an emerald crest} {an emerald crest (int/wis2 cl3)}
+#sub {ring of winter} {ring of winter (det_mag norent immcold)}
+#sub {palace sword of Lemuria} {palace sword of Lemuria (4d6 hr1 w29 antigood/neut)}
+#sub {hazy potion} {hazy potion (lv30 str/blur/barkskin)}
+#sub {a black sledgehammer} {a black sledgehammer (5d6 dr2 w26)}
+#sub {spiked golden bracelet} {spiked golden bracelet (hit3 dr1 nomag/thi/dru/cle/ran/war/sham)}
+#sub {heavy double bladed axe} {heavy double bladed axe (5d6 hr1 dr3 cursed w32)}
+#sub {ancient leather greaves} {ancient leather greaves (age10 wis2 nomag/thi/war/dk/bar immelec/heat)}
+#sub {tree bark armor} {tree bark armor (rescold35 immcold nomag/thi/pal/war/dk)}
+#sub {sun blade} {sun blade (5d3 1/1 w10 glow/mag/hot nothi/dru/cle/sham)}
+#sub {silver bracelet inlaid with onyx} {silver bracelet inlaid with onyx (imm_magic shield norent)}
+#sub {rolled bromeliad leaf} {rolled bromeliad leaf (save_spell/breath -1)}
+#sub {scorched platinum medallion} {scorched platinum medallion (hit10 wis2 prot_ev/undead norent)}
+#sub {golden nail} {golden nail (pick5 hit5 imm_magic)}
+#sub {crimson shield of the wyrmgaard} {crimson shield of the wyrmgaard (bash7 det_inv w30)}
+#sub {small silver thimble} {small silver thimble (dex1 savepois-2 nopal/ran/war/dk/bar/sha)}
+#sub {slender steel dirk} {slender steel dirk (3d4 dr1 w4 bless)}
+#sub {oakenwood gloves} {oakenwood gloves (dex/wis1 rhr1 antievil)}
+#sub {nine sectional staff} {nine sectional staff (4d4 w7)}
+#sub {small flintlock pistol} {small flintlock pistol (nolore)}
+#sub {orange leather tricorne} {orange leather tricorne (con1 rescold10)}
+#sub {composite metal bow} {composite metal bow (rhr/dr1 spd12 pwe12 acc10)}
+#sub {towering shield} {towering shield (w25 regen20% glow/magic)}
+#sub {huge sterling axe} {huge sterling axe (4d8 dr3 w20)}
+#sub {bloodstained battle axe} {bloodstained battle axe (2d9 1/1 hum w22)}
+#sub {large bead necklace} {large bead necklace (cha1)}
+#sub {luck blade} {luck blade (nolore)}
+#sub {basket hilted long sword} {basket hilted long sword (3d5 1/1 w10 magic)}
+#sub {glass rod filled with multi-colored gas} {glass rod filled with multi-colored gas (lv30 prismatic sprayx1 norent nothi/pal/dru/cle/ran/war/dk/bar/sha)}
+#sub {a dragontooth necklace} {a dragontooth necklace (ac-5 hr1 invis/detinvis *set*)}
+#sub {blue leather weapon harness} {blue leather weapon harness (dex1 ac-10 nomag/dru/cle/sha)}
+#sub {axe of Trachyte} {axe of Trachyte (4d8 2/2 noma/thi/dru/cle w45)}
+#sub {Khalkhist Heartstone} {Khalkhist Heartstone (wis2 ss-2 cl2 antievil)}
+#sub {platinum gilt breast plate} {platinum gilt breast plate (bless nobar/sha)}
+#sub {staff of meditation} {staff of meditation (5d3 w8 med5 int2 bless/mag)}
+#sub {hawk faced mask} {hawk faced mask (health12 sense_life/awareness nolore)}
+#sub {bracelet of polished sodalite} {bracelet of polished sodalite (hit10 savebreath-1 1cl)}
+#sub {rune embroidered scroll case} {rune embroidered scroll case (1cl imm_ac/cold/elec/heat)}
+#sub {heavy flintlock blunderbuss} {heavy flintlock blunderbuss (nolore 630c)}
+#sub {battle-scarred adamantite great helm} {battle-scarred adamantite great helm (con2 detinv/senselife/infra *set*)}
+#sub {pair of grey leather boots} {pair of grey leather boots (ac-3)}
+#sub {green leather plate} {green leather plate (resgas4)}
+#sub {puma skin vest} {puma skin vest (dex1 ac-10 immelec/heat)}
+#sub {finely cured leather vest} {finely cured leather vest (apply6)}
+#sub {light throwing spear} {light throwing spear (4d3 hr3 w8 bless immheat)}
+#sub {a glowing bracer} {a glowing bracer (ac-5 light)}
+#sub {copper hilted cutlass} {copper hilted cutlass (3d4 w8)}
+#sub {embroidered black wool cloak} {embroidered black wool cloak (resgas -5 immgas)}
+#sub {an adamantine bracelet} {an adamantine bracelet (ac-10 immpoi/npp)}
+#sub {jagged bleeding dagger} {jagged bleeding dagger (5d3 2/2 bs5 env10 magic w17)}
+#sub {earthen potion} {earthen potion (enlarge)}
+#sub {foul smelling ring} {foul smelling ring (savepoi-2 dex1 glow/mag/bless)}
+#sub {ancient, golden ring inset with an emerald} {ancient, golden ring inset with an emerald (hit8 st1 nomag/war/dk)}
+#sub {rough leather flask} {rough leather flask (unlim dranks, nodecay)}
+#sub {pair of fiery dragonscale gloves} {pair of fiery dragonscale gloves (hr/dr1 nomag/thi/pal/cle/ran/dk/war/sham *set*)}
+#sub {fiery red dragonscale shirt} {fiery red dragonscale shirt (str1 *set*)}
+#sub {fiery red dragonscale face mask} {fiery red dragonscale face mask (con2 detinvis/senselife/infra *set*)}
+#sub {fiery red dragonscale armbands} {fiery red dragonscale armbands (str1 *set*)}
+#sub {pair of fiery red boots} {fiery red boots (hit10 resheat15 nomag/dru/cle/sham imnmheat*set*)}
+#sub {flowing skirt of fiery red dragonscale} {flowing skirt of fiery red dragonscale (dex1 *set*)}
+#sub {giant's maul} {giant's maul (4d6 hr-3 w27 relore)}
+#sub {ironclaw longbow} {ironclaw longbow (w36 rdr2 rhr3 spr12 pwr15 acc12)}
+#sub {huge black mace} {huge black mace (3d6 3/3 antigood w20 glow/mag)}
+#sub {emerald green pathfinders belt} {emerald green pathfinders belt (ac-3 con1 ss-1 senselife)}
+#sub {cloak of a chimera} {cloak of a chimera (str1 savepara-3 detgood immheat)}
+#sub {three-strap leather bracer} {three-strap leather bracer (str2)}
+#sub {glowing skirt of lichens} {glowing skirt of lichens (light)}
+#sub {flowing cape of deepest crimson} {flowing cape of deepest crimson (rescold1- ac-5 hr1 immcold)}
+#sub {pair of black dragonhide gauntlets} {pair of black dragonhide gauntlets (hr2 dex1 resacid8 immacid*set*)}
+#sub {pair of white Solamnic gauntlets} {pair of white Solamnic gauntlets (str1 hr1)}
+#sub {granite theiwar gauntlets} {granite theiwar gauntlets (con1 antigood nomag/thi/dru/cle/sham)}
+#sub {golden dwarven ring} {golden dwarven ring (con1 dex-1)}
+#sub {pair of beer goggles} {pair of beer goggles (confusion)}
+#sub {pair of worn snakeskin pants} {pair of worn snakeskin pants (int1 nomag/thi/pal/war/dk/)}
+#sub {Gargoyle ring} {Gargoyle ring (str1 antigood)}
+#sub {shimmering silver cape} {shimmering silver cape (dex1)}
+#sub {snakeskin cape} {snakeskin cape (con1)}
+#sub {symbol engraved sword} {symbol engraved sword (5d5 w34 glow hr1)}
+#sub {ceremonial solamnic sash} {ceremonial solamnic sash (con-1 str1 npp)}
+#sub {wispy bracelet of spiritual horse hairs} {wispy bracelet of spiritual horse hairs (str1)}
+#sub {silver bracelet inlaid with onyx} {silver bracelet inlaid with onyx (imm_magic shield norent)}
+#sub {a black mask} {a black mask (sense_life)}
+#sub {earthen plate} {earthen plate (wis1 para-1)}
+#sub {small ruby band} {small ruby band (dr-1 hr-2 1cl invis)}
+#sub {pair of purple silk pants} {pair of purple silk pants (move4)}
+#sub {pair of sleek leather boots} {pair of sleek leather boots (move10)}
+#sub {grey hooded cloak} {grey hooded cloak (health5)}
+#sub {ring of accuracy} {ring of accuracy (hr1)}
+#sub {hermit's ring} {hermit's ring (con CONFUSION)}
+#sub {some black legplates of the Lily} {some black legplates of the Lily (apply7)}
+#sub {the chieftain's headdress} {the chieftain's headdress (str2 sha/ran/pal/bar/war)}
+#sub {black gauntlets of the Lily} {black gauntlets of the Lily (con1 antiG nobar/sha)}
+#sub {translucent kelp robes} {translucent kelp robes (ac-8 cl2 invis)}
+#sub {black staff of shadows} {black staff of shadows (4d4 dr2 cl3 w3 imm_cold/npp)}
+#sub {Sceptre of Sirrion} { Sceptre of Sirrion (Light res_heat/cold8 cl2 immac/heat/cold)}
+#sub {shield of woven mistletoe} {shield of woven mistletoe (1spell4thlevel comm +5)}
+#sub {suit of tanned leather armor} {suit of tanned leather armor (sneak10 ac-10)}
+#sub {white dragon skull} {white dragon skull (norent)}
+#sub {suit of white plate mail} {suit of white plate mail (str1 nocharm)}
+#sub {pair of green boots} {pair of green boots (move30 resgas+8)}
+#sub {lucky bone charm} {lucky bone charm (nosummon glow)}
+#sub {pair of ornate midnight blue leather boots} {pair of ornate midnight blue leather boots (sneak move20 *set*)}
+#sub {pair of shadow boots} {pair of shadow boots (ac-4 sneak10)}
+#sub {gaudy veil of dangling gemstones} {gaudy veil of dangling gemstones (dr1 det_mag sham only)}
+#sub {frozen crown of iron} {frozen crown of iron (int2 resheat-15 learn-3 cl2)}
+#sub {diamond studded dog collar} {diamond studded dog collar (rangedDR1)}
+#sub {club embedded with claws} {club embedded with claws (2d7 hr3 w10 offy NORENT *18)}
+#sub {thin pair of gloves} {thin pair of gloves (hr1 steal10)}
+#sub {red hilted longsword} {red hilted longsword (2d7 w11)}
+#sub {yellowed and stained skullcap} {yellowed and stained skullcap (2nd+1 cl2)}
+#sub {a steel warhammer} {a steel warhammer (3d4 wis2 heal10% w16)}
+#sub {crytic stone plate} {crytic stone plate (res_acid6)}
+#sub {pair of black leather boots} {pair of black leather boots (sneak10)}
+#sub {shimmering purple ring} {shimmering purple ring (ss-1 glow)}
+#sub {shimmering purple necklace} {shimmering purple necklace (wis1 con-2 det_inv)}
+#sub {heavy brass bastard sword} {heavy brass bastard sword (3d6 dr1 w24)}
+#sub {metallic visor} {metallic visor (det_mag)}
+#sub {pair of steel plated boots} {pair of steel plated boots (kick2)}
+#sub {sinister plate of black steel} {sinister plate of black steel (con1 *set*)}
+#sub {steel voulge} {steel voulge (4d4 3/3 w20 nobar/sha)}
+#sub {thin wooden wand} {thin wooden wand (2d3 cl3 w3)}
+#sub {wicked steel hammer} {wicked steel hammer (2d7 1/1 int2 w18 magic)}
+#sub {black cloth headband} {black cloth headband (learn5 hr1 sense_life Theief)}
+#sub {a dragonscale helm} {a dragonscale helm (infra)}
+#sub {robe of office} {robe of office (det_invis)}
+#sub {apatite encrusted bracelet} {apatite encrusted bracelet (4th+1 det_inv infra)}
+#sub {robe covered in eyes} {robe covered in eyes (learn10 cl3 det_ev/inv/mag/good infra/sense)}
+#sub {sword of dancing} {sword of dancing (4d4 w17 *18)}
+#sub {brass dwarven wristplate} {brass dwarven wristplate (apply7)}
+#sub {sleek black leather bracer} {sleek black leather bracer (1cl invis antiG nopal/cle/ran/bar/sha)}
+#sub {rod of terror} {rod of terror (3d5 w8 spec?)}
+#sub {black ice bracer} {black ice bracer (learn10 silence anti_evil norent)}
+#sub {crushed sapphire chestguard} {crushed sapphire chestguard (reselec/gas/acid 16 hide antievil)}
+#sub {pair of scuffed leather boots} {pair of scuffed leather boots (dex1 move10)}
+#sub {black pass} {black pass (norent)}
+#sub {sphere of brilliantly white marble} {sphere of brilliantly white marble (con1 invis)}
+#sub {armor of the renegade mage} {armor of the renegade mage (5th +1 hit15 cl3 det_invis immacid/elec/heat)}
+#sub {A blue dragonmask} {A blue dragonmask (con1 detmag)}
+#sub {glass eyepiece} {glass eyepiece (int1 con-1 cl3 detinvis senselife)}
+#sub {black cowl} {black cowl (learn10 cl3)}
+#sub {pair of shining silver gauntlets} {pair of shining silver gauntlets (hr/dr1 nothi/bar/sha)}
+#sub {green swordsman gloves} {green swordsman gloves (hr/dr1)}
+#sub {regal green dragonscale helm} {regal green dragonscale helm (ac-4 int1 )}
+#sub {red ring of the Dragon Highlord} {red ring of the Dragon Highlord (con1)}
+#sub {jade bracelet} {jade bracelet (resacid6 savepoi-2)}
+#sub {a silver bracer} {a silver bracer (1dam)}
+#sub {black hunting gloves} {black hunting gloves (savepara -1)}
+#sub {axe of hurling} {axe of hurling (3d7 2/2 w30 )}
+#sub {macabre human bone armlets} {macabre human bone armlets (int1 *set*)}
+#sub {charred long sword} {charred long sword (2d7 w9 immheat)}
+#sub {ivory belt} {ivory belt (wis1 str-2 cleric only)}
+#sub {pair of delicate apatite earrings} {pair of delicate apatite earrings (4th+1 det_inv/infra imm_acid)}
+#sub {some mithril armor} {some mithril armor (hit5 ac-10 war/pal/ran)}
+#sub {bronze sahuagin gorget} {bronze sahuagin gorget (health4 ac-4)}
+#sub {a worn machete} {a worn machete (3d2 hr2 w6 magic)}
+#sub {runed-etched mithril hammer} {runed-etched mithril hammer (2d8 norent w5)}
+#sub {sparkling bejeweled miter} {sparkling bejeweled miter (wis2 det_inv cleric only)}
+#sub {bright orange jerkin} {bright orange jerkin (container)}
+#sub {a coral quarterstaff} {a coral quarterstaff (5d4 hr1 w14)}
+#sub {a heavy crossbow} {a heavy crossbow (3d5 dr1 w30)}
+#sub {a spiked war axe} {a spiked war axe (2d8 w22)}
+#sub {set of flowing satin robes} {set of flowing satin robes (int2 ss-1)}
+#sub {tempered steel sword engraved with lilies} {tempered steel sword engraved with lilies (2d8 hr3 ac-15 EVIL *18)}
+#sub {a thin gold necklace} {a thin gold necklace (det_E/G infra)}
+#sub {small fishbone amulet} {small fishbone amulet (hr1 det_G Evil)}
+#sub {shining silver plate} {shining silver plate (str1 ac-5)}
+#sub {preserved eye of a revenant} {preserved eye of a revenant (det_mag/dead)}
+#sub {tawny leather sleeves} {tawny leather sleeves (hr1 hide5 immheat)}
+#sub {a huge iron shield} {a huge iron shield (dex2 w35 nocaster)}
+#sub {bronze shield decorated with fish bones} {bronze shield decorated with fish bones (res_mag6 nomag/thi/dru)}
+#sub {shield of holy light} {shield of holy light (bash10 w35 *18)}
+#sub {an ancient book} {an ancient book (norent)}
+#sub {supple leather gloves} {supple leather gloves (hr1)}
+#sub {pair of ceremonial legplates} {pair of ceremonial legplates (hit3 nosbarb/sham)}
+#sub {pair of ceremonial armplates} {pair of ceremonial armplates (hr1 nomag/dru/sha/barb)}
+#sub {pair of cord sandals} {pair of cord sandals (move10)}
+#sub {dwarven copper axe} {dwarven copper axe (4d3 3/3 w14 bless)}
+#sub {fiery red dragonscale boots} {fiery red dragonscale boots (move20 *set*)}
+#sub {pair of clear crystal gauntlets} {pair of clear crystal gauntlets (int/wis1 *set*)}
+#sub {staff of champions} {staff of champions (glow/mag/norent)}
+#sub {clear crystal ring} {clear crystal ring (wis1 *set*)}
+#sub {dark long sword} {dark long sword (2d6 w10)}
+#sub {a dark shield} {a dark shield (ac-7 w22)}
+#sub {a dark short sword} {a dark short sword (2d6 hr1 w10 antiE/magic)}
+#sub {dark leather sleeves} {dark leather sleeves (save_petri-1)}
+#sub {ruby and diamond necklace} {ruby and diamond necklace (int1 cleric/druid antiE)}
+#sub {pair of green leather sleeves} {pair of green leather sleeves (*Set*)}
+#sub {clear crystal sceptre} {clear crystal sceptre (is_flying *set*)}
+#sub {pair of green leather boots} {pair of green leather boots (*set*)}
+#sub {purple chiffon cloak} {purple chiffon cloak (1st+1 cleric only)}
+#sub {pair of tall hiking shoes} {pair of tall hiking shoes (move5)}
+#sub {pure white bracer} {pure white bracer (wis1)}
+#sub {pure white breastplate} {pure white breastplate (breath-2 antiE)}
+#sub {molded red leather breastplate} {molded red leather breastplate (hp/moveregen20 res_heat20)}
+#sub {ceremonial breast plate} {ceremonial breast plate (apply6)}
+#sub {black runed ring} {black runed ring (wis1 hit-3)}
+#sub {Palanthian signet ring} {Palanthian signet ring (learn7)}
+#sub {gold trimmed burgundy cape} {gold trimmed burgundy cape (ss/petr-1 detinv)}
+#sub {red oakleaf crested bracer} {red oakleaf crested bracer (rangeDR1 health-10)}
+#sub {a silver amulet} {a silver amulet (res_elec10)}
+#sub {shining white broadsword} {shining white broadsword (4d4 2/2 w18)}
+#sub {oakleaf etched cerise plate} {oakleaf etched cerise plate (str1 dex2 antiE)}
+#sub {crooked crown of the gully dwarves} {crooked crown of the gully dwarves (hit5 wis-1)}
+#sub {black iron hammer} {black iron hammer (1d10)}
+#sub {sharp silver dagger} {sharp silver dagger (3d4 hr2 backstab5 w5)}
+#sub {gold and black laced sickle} {gold and black laced sickle (3d5 2dr 1hr w10 magic)}
+#sub {black platinum circlet} {black platinum circlet (regen5% tankonly)}
+#sub {a bone vest} {a bone vest (sense_life)}
+#sub {bright, crimson stained helmet} {bright, crimson stained helmet (apply6)}
+#sub {a black priest's robe} {a black priest's robe (ac-3 Evil)}
+#sub {silver long sword} {silver long sword (2d6 hr1 w11)}
+#sub {sea elven headband} {sea elven headband (det_good/ev/inv waterbreath)}
+#sub {thin white shirt} {thin white shirt (int1 cl2 anti_evil)}
+#sub {a heavy glaive} {a heavy glaive (4d6 str1 hr2 det_ev)}
+#sub {bright, crimson stained boots} {bright, crimson stained boots (apply6)}
+#sub {silver-tinged blade} {silver-tinged blade (4d4 hr3 dr2 magic w20 nomag/cle)}
+#sub {pair of huge white wings} {pair of huge white wings (can_fly anti_ev)}
+#sub {a dark steel cutlass} {a dark steel cutlass (3d5 w12)}
+#sub {a garnet necklace} {a garnet necklace (para-1 age-4 anti_ev)}
+#sub {ruby shield} {ruby shield (w25 glow/bless)}
+#sub {thick belt layered with quartz} {thick belt layered with quartz (hit6 -5 tanks)}
+#sub {some red dragon scale sleeves} {some red dragon scale sleeves (resheat8)}
+#sub {dwarven helm and visor} {dwarven helm and visor (infra)}
+#sub {shiny bronze horn} {shiny bronze horn (resmagic16 norent)}
+#sub {grey leather cape} {grey leather cape (wis1 con-2 )}
+#sub {silver and red necklace} {silver and red necklace (regen1%)}
+#sub {necklace of carved ivory} {necklace of carved ivory (hit4)}
+#sub {pair of pitch black gloves} {pair of pitch black gloves (resmag8 int1 cl2 antiG)}
+#sub {an ornate headdress} {an ornate headdress (int1 cl2 det_inv)}
+#sub {a warped staff} {a warped staff (4d4 3hr resmagic12 w10)}
+#sub {thick cowl of woodland foliage} {thick cowl of woodland foliage (dex2 det_inv/life/infra *set*)}
+#sub {dinosaur tooth necklace} {dinosaur tooth necklace (ac-4 ss-1)}
+#sub {tiger ring} {tiger ring (move6 barb/dru/scout)}
+#sub {suit of marble plate} {suit of marble plate (ss-2 para-1 nomag/dru)}
+#sub {arm of the marble golem} {arm of the marble golem (3d11 w25 ac-6 imm_mag)}
+#sub {a runed scimitar} {a runed scimitar (3d5 3/3 w11)}
+#sub {golden ergothian ring} {golden ergothian ring (ss-1)}
+#sub {charcoal black boots} {charcoal black boots (sneak)}
+#sub {spun silver ring} {spun silver ring (cha1 hit2 1cl)}
+#sub {shimmering chartreuse robe} {shimmering chartreuse robe (ss-1 antiE)}
+#sub {headband adorned with eagle's feathers} {headband adorned with eagle's feathers (det_invis)}
+#sub {royal crown of Lemuria} {royal crown of Lemuria (wis2 cha1 cl3)}
+#sub {ruby inlaid dagger} {ruby inlaid dagger (4d4 2/2 antiG)}
+#sub {ragged suit of leather armor} {ragged suit of leather armor (hit3 ac-4 cl2)}
+#sub {ragged pair of leather braies} {ragged pair of leather braies (move7 ac-2)}
+#sub {ragged leather surcote} {ragged leather surcote (dodge3 ac-3)}
+#sub {ragged leather mantle} {ragged leather mantle (hr1 ac-3)}
+#sub {ragged leather caul} {ragged leather caul (hr1 ac-2 sense_life/infra)}
+#sub {ragged leather belt} {ragged leather belt (int-1)}
+#sub {ragged leather wrist guard} {ragged leather wrist guard (2nd+1 ac+5)}
+#sub {ragged pair of leather boots} {ragged pair of leather boots (move5 ac-2)}
+#sub {prestigious cooks award hat} {prestigious cooks award hat (3rd+1 poison-1)}
+#sub {ring of protection} {ring of protection (ac-10)}
+#sub {small signet ring} {small signet ring (ac-2 immac/cold/gas/heat)}
+#sub {dark purple burial shroud} {dark purple burial shroud (hide cleric only)}
+#sub {protective leather apron} {protective leather apron (res_heat8 immheat)}
+#sub {pair of succubus wings} {pair of succubus wings (cl3 nocharm/npp/isflying)}
+#sub {pair of grey jouster's chaps} {pair of grey jouster's chaps (move10 mv_regen2 finding BF100%)}
+#sub {breastplate of the Rose} {breastplate of the Rose (wis1 nocharm antiE nocle/bar/sha)}
+#sub {awl pike} {awl pike (2d6 w15)}
+#sub {black leather choker} {black leather choker (dex1 hide10)}
+#sub {pair of lion skin pants} {pair of lion skin pants (ac-6 sneak8 flying antiE)}
+#sub {pair of mithril leg braces} {pair of mithril leg braces (hit7)}
+#sub {heavy bronze sahuagin spear} {heavy bronze sahuagin spear (3d5 hr1 dr2 w18)}
+#sub {set of demon wings} {set of demon wings (isflying Evil)}
+#sub {newly forged silver dagger} {newly forged silver dagger (2d6 hr2 w2 norent)}
+#sub {a barbed whip} {a barbed whip (3d3 dr1 w5)}
+#sub {red, runed stone} {red, runed stone (norent conjure?)}
+#sub {metallic belt} {metallic belt (ss-1 antiE nobar/sha)}
+#sub {long ash bow} {long ash bow (dr2 hr3 spd9 pwr11 acc9)}
+#sub {flat black velvet cap} {flat black velvet cap (sneak3 hide5 infra)}
+#sub {small metal necklace} {small metal necklace (int-1 infra)}
+#sub {pair of assassin's boots} {pair of assassin's boots (sneak antiG)}
+#sub {pair of bone boots} {pair of bone boots (res_elec5)}
+#sub {ergothian battle helmet} {ergothian battle helmet (con1 detinv/infra)}
+#sub {rainbow cloak} {rainbow cloak (ac-7 hide7)}
+#sub {priestly diadem} {priestly diadem (wis1)}
+#sub {worn leather boots} {worn leather boots (move10)}
+#sub {pair of metal leggings} {pair of metal leggings (move-6)}
+#sub {shield of Tirabot} {shield of Tirabot (w22 res_elec8 imm_elec)}
+#sub {white feathered armbands} {white feathered armbands (wis1 notank)}
+#sub {mask of writhing vines} {mask of writhing vines (int/wis1 druid)}
+#sub {gryphon warrior's headdress} {gryphon warrior's headdress (dex1 sneak5 nohief)}
+#sub {large emerald ring} {large emerald ring (sense_life/infra)}
+#sub {gold and diamond wedding band} {gold and diamond wedding band (ac-2 regen1%)}
+#sub {dark silver dagger} {dark silver dagger (2d4 nomag/dru/cle)}
+#sub {blue scalemail leggings} {blue scalemail leggings (ac-5 res_elec5)}
+#sub {wicked long sword} {wicked long sword (3d5 w12)}
+#sub {opal shield} {opal shield (w25 glow/bless)}
+#sub {gnoll druid's staff} {gnoll druid's staff (3d3 can_fly hr-2 dr1)}
+#sub {metal-tipped war club} {metal-tipped war club (2d6 hr1 w11)}
+#sub {rough, fingerless gloves} {rough, fingerless gloves (hr1 pick-7)}
+#sub {pair of soft black gloves} {pair of soft black gloves (steal5)}
+#sub {shirt of autumn leaves} {shirt of autumn leaves (wis1 detinvis druid only)}
+#sub {petrified Brog eye} {petrified Brog eye (det_inv/senselife/detect_astral)}
+#sub {slender spiked war axe} {slender spiked war axe (2d9 hr1 w15)}
+#sub {small bard's harp} {small bard's harp (strum harp mass bless)}
+#sub {glowing yellow stone} {glowing yellow stone (res_elec20)}
+#sub {blue dragon scale gauntlets} {blue dragon scale gauntlets (str1 res_elec9 imm_elec)}
+#sub {sharp steel dagger} {sharp steel dagger (2d7 hr1 w9 carve12)}
+#sub {blue priest's gown} {blue priest's gown (ac-5)}
+#sub {elemental ring} {elemental ring (shatter ring for charmie)}
+#sub {stone-bladed hatchet} {stone-bladed hatchet (2d6 1/1 w10)}
+#sub {white priest's gown} {white priest's gown (ac-5)}
+#sub {large pole axe} {large pole axe (3d5 w15)}
+#sub {a sapphire dagger} {a sapphire dagger (3d4 dr2 w5)}
+#sub {brass dwarven shield} {brass dwarven shield (w18)}
+#sub {a sapphire shield} {a sapphire shield (w25 bless/glow)}
+#sub {some spiked leather body armor} {some spiked leather body armor (rangeDR1)}
+#sub {pair of black leather sleeves} {pair of black leather sleeves (dex1)}
+#sub {pair of silver dwarven gauntlets} {pair of silver dwarven gauntlets (dr1 nocaster)}
+#sub {a purple silk robe} {a purple silk robe (ss-1 ac-10 cl2)}
+#sub {pair of black leather sleeves} {pair of black leather sleeves (dex1)}
+#sub {blood stained robe} {blood stained robe (str-1 ss-1 antiG)}
+#sub {pair of leather moccasins} {pair of leather moccasins (ac-4 mv3)}
+#sub {pair of elfin gauntlets} {pair of elfin gauntlets (dex1)}
+#sub {an ivory tusk} {an ivory tusk (3d5 hr2 dr1 w15 magic)}
+#sub {shield of bone and flesh} {shield of bone and flesh (w10 res_elec12 antiG)}
+#sub {barbed harpoon head} {barbed harpoon head (1d15 dr1 w14)}
+#sub {a dwarven shatang} {a dwarven shatang (2d9 1/1 magic w10)}
+#sub {a medallion of Paladine} {a medallion of Paladine (det_invis antiE)}
+#sub {eye of an umber hulk} {eye of an umber hulk (ss-1 cl2 det_invis/senseL/detE)}
+#sub {patterned leather cloak} {patterned leather cloak (hide)}
+#sub {boots of the elven magi} {boots of the elven magi (dex1 hit8 cl2)}
+#sub {necklace of draconian teeth} {necklace of draconian teeth (int1)}
+#sub {vest of bone shards} {vest of bone shards (wis1 hit-5)}
+#sub {a small black orb} {a small black orb (dex1 con-1 canfly)}
+#sub {pair of sterling boots} {pair of sterling boots (str1)}
+#sub {tablet of unending wisdom} {tablet of unending wisdom (wis1)}
+#sub {opalescent blue jewel} {opalescent blue jewel (1/2 slot +1 dru/cle/sha)}
+#sub {blue nephaline ring} {blue nephaline ring (age-3 para-1)}
+#sub {falconer's gauntlet} {falconer's gauntlet (parry3 ac-4 sco/war)}
+#sub {hand crafted leather jerkin} {hand crafted leather jerkin (ac-4 dex1 hide sco/thi)}
+#sub {heavy bearskin cloak} {heavy bearskin cloak (rescold8)}
+#sub {shimmering green robe} {shimmering green robe (ac-4 ss-1 cl3 infra antiG)}
+#sub {plainsman scimitar} {plainsman scimitar (2d5 w11)}
+#sub {mortar and pestle} {mortar and pestle (quest?)}
+#sub {a machete} {a machete (3d4 w16)}
+#sub {sharp black blade} {sharp black blade (2d8 1/1 evil w15)}
+#sub {massive black iron claymore} {massive black iron claymore (4d5 1/1 w40)}
+#sub {black leather buckler} {black leather buckler (ac-5 invis nomag/thi/pal/dk)}
+#sub {tough, scaled, komodo hide} {tough, scaled, komodo hide (ac-10 resgas8)}
+#sub {crescent moon medallion} {crescent moon medallion (regen10% slot2+1 cl1)}
+#sub {pair of darkened boots} {pair of darkened boots (sneak Evil thief)}
+#sub {pair of woodsman's boots} {pair of woodsman's boots (apply6 *set*)}
+#sub {pair of woodsman's gloves} {pair of woodsman's gloves (apply *set*)}
+#sub {woodsman's bracer} {woodsman's bracer (apply4 *set*)}
+#sub {a woodsman's vest} {a woodsman's vest (appy6 *set*)}
+#sub {a woodsman's shirt} {a woodsman's shirt (apply6 *set*)}
+#sub {etched suit of armor} {etched suit of armor (apply5 nobarb/sham)}
+#sub {an adamantite javelin} {an adamantite javelin (2d6 hr1 Evil magic w6)}
+#sub {an eagle feather} {an eagle feather (is_flying)}
+#sub {bronze mask of a sahuagin prince} {bronze mask of a sahuagin prince (hr2 cha2 det_inv/magic/good norent)}
+#sub {a military fork} {a military fork (4d3 dr1 hr2 w18)}
+#sub {cap of white feathers} {cap of white feathers (cha1)}
+#sub {thin golden dragonscale boots} {thin golden dragonscale boots (ac-5 mv10 infra)}
+#sub {pointy straw hat} {pointy straw hat (res_heat2 SL)}
+#sub {filthy leather wrist guard} {filthy leather wrist guard (hr1)}
+#sub {bronze bracelet set with clear stones} {bronze bracelet set with clear stones (detE blessx15)}
+#sub {luxurious fur robe} {luxurious fur robe (sv_breath-1)}
+#sub {sinew-wrapped bear claw fetish} {sinew-wrapped bear claw fetish (cha1)}
+#sub {bullywug medallion} {bullywug medallion (dex1 int-1)}
+#sub {thin golden dragonscale cloak} {thin golden dragonscale cloak (hr1)}
+#sub {pretty pink satin gown} {pretty pink satin gown (nocharm)}
+#sub {ivory hilted dagger} {ivory hilted dagger (2d6 hr4 magic)}
+#sub {large, pulsating venom sac} {large, pulsating venom sac (env12 imm_pois)}
+#sub {suit of fine steel chainmail} {suit of fine steel chainmail (ac-5 hr1 nowar/bar/sha)}
+#sub {goblin skin cloak} {goblin skin cloak (res_acid12)}
+#sub {barbed shatang} {barbed shatang (5d2 hr3 dr1 magic w15)}
+#sub {necklace of nephaline fragments} {necklace of nephaline fragments (sv_pois-1 det_mag)}
+#sub {fine mithril hand axe} {fine mithril hand axe (4d4 dex1 w12)}
+#sub {oaken-leaf helm} {oaken-leaf helm (learn5 druid only)}
+#sub {serpent-shaped ring} {serpent-shaped ring (hr2 bludg5)}
+#sub {some thick metal boots} {some thick metal boots (apply6)}
+#sub {wreath of silver leaves} {wreath of silver leaves (110c int1, 77c -5ac)}
+#sub {white stone ring} {white stone ring (detinv hit-8)}
+#sub {pair of sable leather pants} {pair of sable leather pants (ac-4 dex1)}
+#sub {a pair of ebony greaves} {a pair of ebony greaves (apply7)}
+#sub {a mystic bow} {a mystic bow (w10 rhr3 spd15 pwr/acc13)}
+#sub {long swordmaster's rapier} {long swordmaster's rapier (3d5 hr1 dr2 w16)}
+#sub {jewel encrusted light crossbow} {jewel encrusted light crossbow (3d3 3/3 antiE w8)}
+#sub {a floppy hat} {a floppy hat (cl3 3rd+1)}
+#sub {a bone sword} {a bone sword (3d5 dr1 hr2 w12)}
+#sub {a malachite ring} {a malachite ring (ac-5 hr1)}
+#sub {crown of weeds} {crown of weeds (cl2 det_m/wb glow)}
+#sub {a black steel bracer} {a black steel bracer (ac-5 antiG)}
+#sub {ornate carving knife} {ornate carving knife (3d4 w4)}
+#sub {woodsman's hood} {woodsman's hood (senselife/infra *set*)}
+#sub {a woodsman's cloak} {a woodsman's cloak (*set*)}
+#sub {pair of woodsman's leggings} {pair of woodsman's leggings (*set*)}
+#sub {ancient steel broadsword} {ancient steel broadsword (3d6 5/5 w36 SpeedStrike)}
+#sub {woodsman's ring} {woodsman's ring (ss-1 nomage)}
+#sub {a slimy tentacle} {a slimy tentacle (5d2 hr-3 dr2 w12)}
+#sub {pair of smooth amethyst anklets} {pair of smooth amethyst anklets (mv_regen20 can_fly)}
+#sub {moss covered stone armbands} {moss covered stone armbands (ac-10 healdone5%)}
+#sub {ivory inlaid mithril staff} {ivory inlaid mithril staff (4d4 1/1 cl3 is_fly w10)}
+#sub {elegant amber scepter} {elegant amber scepter (3d4 3/3 +2@lv5 w5)}
+#sub {elaborately engraved golden staff} {elaborately engraved golden staff (4d6 norent w8)}
+#sub {massive, bloodstained club} {massive, bloodstained club (5d6 w40)}
+#sub {holy symbol of Mishakal} {holy symbol of Mishakal (slot1@1 antiE)}
+#sub {some leather greaves} {some leather greaves (ac-5 regen5%)}
+#sub {a woodsman's sash} {a woodsman's sash (*set*)}
+#sub {silver-edged hand-axe} {silver-edged hand-axe (2d5 w6)}
+#sub {long steel elven pike} {long steel elven pike (2d9 1/1 w22)}
+#sub {thick green leather boots} {thick green leather boots (sneak5 ac-5)}
+#sub {plate of vallenwood} {plate of vallenwood (apply6)}
+#sub {polished stone necklace} {polished stone necklace (slot1@6 int-1 wis1 antiE)}
+#sub {wolf-emblazoned cloak} {wolf-emblazoned cloak (hr1 infra)}
+#sub {thick, white gloves} {thick, white gloves (lay+8)}
+#sub {black edged katana} {black edged katana (2d6 hr1 w 10 nomag/sha)}
+#sub {some chainmail armor} {some chainmail armor (apply4)}
+#sub {a sharp sabre} {a sharp sabre (2d4 w8 magic)}
+#sub {a shiny shield} {a shiny shield (w18)}
+#sub {worn bear pelt loincloth} {worn bear pelt loincloth (hit3 bar/ran/war)}
+#sub {spun silver sleeves} {spun silver sleeves (dex1 ac-9 antiE)}
+#sub {spun silver leggings} {spun silver leggings (ac-12 mv12 bless)}
+#sub {giant silver shield} {giant silver shield (rescold15)}
+#sub {a green leather jerkin} {a green leather jerkin (apply5 *set*)}
+#sub {a green leather cap} {a green leather cap (apply4 *set*)}
+#sub {rugged bandit's boots} {rugged bandit's boots (mv12)}
+#sub {hoopak of office} {hoopak of office (2d6 hr2 w8)}
+#sub {thick green leather armbands} {thick green leather armbands (parry5)}
+#sub {carved rosewood ring} {carved rosewood ring (cha1 ss1)}
+#sub {a yeti pelt} {a yeti pelt (rescold16)}
+#sub {cloak of mangled feathers} {cloak of mangled feathers (cha1 ac-2 can_fly)}
+#sub {acid-etched steel battleaxe} {acid-etched steel battleaxe (2d13 hr2 dr1 w30)}
+#sub {ruby studded dagger} {ruby studded dagger (3d5 2/2 w5 senseL thiefOnly Norent)}
+#sub {flowing golden cape} {flowing golden cape (can_fly)}
+#sub {green hag's ring} {green hag's ring (str1 hit-9 cl1)}
+#sub {an ancient green sword} {an ancient green sword (2d16 3/3 w27)}
+#sub {chef's spoon} {chef's spoon (1d19 w15)}
+#sub {a grey leather bracer} {a grey leather bracer (det_inv)}
+#sub {a small copper ring} {a small copper ring (ac-2)}
+#sub {a black ice sphere} {a black ice sphere (imm_cold)}
+#sub {a thick leather belt} {a thick leather belt (ac-4)}
+#sub {an ice bear pelt} {an ice bear pelt (res_cold16)}
+#sub {green metal ring} {green metal ring (mv20 ac-5)}
+#sub {black guardian robe} {black guardian robe (str1)}
+#sub {an Aurinite ring} {an Aurinite ring (con1 antiE)}
+#sub {robe of the Aurinite Order} {robe of the Aurinite Order (int1 antiE)}
+#sub {staff of the Aurinite priests} {staff of the Aurinite priests (heal norent antiE)}
+#sub {boots of holiness} {boots of holiness (mv10 antiE)}
+#sub {tablet of blackened wood} {tablet of blackened wood (wis1 det_inv)}
+#sub {a granite shield} {a granite shield (bash7 antiG)}
+#sub {gloves of righteousness} {gloves of righteousness (hit2 antiE)}
+#sub {ancient holy avenger} {ancient holy avenger (3d6 antiE)}
+#sub {thick woolen kilt} {thick woolen kilt (ac-4)}
+#sub {a black velvet cloak} {a black velvet cloak (ss-1)}
+#sub {turtle shell shield} {turtle shell shield (ac-3 w17 imm_ac/disint/elec)}
+#sub {a black wood staff} {a black wood staff (2d6 int-1 wis2 w6)}
+#sub {pair of black ice arm guards} {pair of black ice arm guards (rescold4 immcold)}
+#sub {a black ice shield} {a black ice shield (rescold16 glow immcold)}
+#sub {a black ice ring} {a black ice ring (cl2)}
+#sub {black glass bracelet} {black glass bracelet (ac-4 int1 1cl)}
+#sub {shirt of blue splint mail} {shirt of blue splint mail (reselec5)}
+#sub {berserker shield} {berserker shield (bash5 w25)}
+#sub {black ice breast plate} {black ice breast plate (apply7 or rescold12)}
+#sub {a barbed sting} {a barbed sting (2d9 w9 stiletto)}
+#sub {helm of the white ram} {helm of the white ram (ac-5 detinv/infra)}
+#sub {bronze sun medallion} {bronze sun medallion (beath-1 infra)}
+#sub {rotted academic tome} {rotted academic tome (int1 age1)}
+#sub {ragged pair of leather arm bands} {ragged pair of leather arm bands (hr1 ac-3)}
+#sub {ragged leather cassock} {ragged leather cassock (learn5 ac-3)}
+#sub {a clear cube} {a clear cube (rescold16 light)}
+#sub {rotted academic tome} {rotted academic tome (int1 age1)}
+#sub {ragged pair of leather arm bands} {ragged pair of leather arm bands (hr1 ac-3)}
+#sub {ragged leather cassock} {ragged leather cassock (learn5 ac-3)}
+#sub {a clear cube} {a clear cube (rescold16 light)}
+#sub {jet black leather coat} {jet black leather coat (steal5 sneak antiG)}
+#sub {an obsidian dagger} {an obsidian dagger (3d5 1/1 w5)}
+#sub {grinning ebony mask} {grinning ebony mask (para-2 det_inv/mag/pois senseL/infra)}
+#sub {acid-etched steel dagger} {acid-etched steel dagger (2d7 hr2 dr1 w3 magic)}
+#sub {some leather dragonarmy gauntlets} {some leather dragonarmy gauntlets (bless)}
+#sub {bracelet of broken lich horns} {bracelet of broken lich horns (hit6 resmag6 ss-1 detinv/senseL)}
+#sub {pair of magi gloves} {pair of magi gloves (int1 hit6 *set*)}
+#sub {leather leggings covered with bark chips} {leather leggings covered with bark chips (ac-5 wis1)}
+#sub {ancient ivory ring} {ancient ivory ring (cha1 *set*)}
+#sub {gray wool shirt} {gray wool shirt (rescold2)}
+#sub {dark blue bandana} {dark blue bandana (ac-1 regen2%)}
+#sub {potion of bat's blood} {potion of bat's blood (lv15 detinvis/infra)}
+#sub {a snake staff} {a snake staff (2xlv10 flamestrike antiG)}
+#sub {a feathered hoopak} {a feathered hoopak (3d3 w6)}
+#sub {a loose loincloth} {a loose loincloth (ac-2)}
+#sub {pair of ergothian battle armor greaves} {pair of ergothian battle armor greaves (str1 nobar/sha)}
+#sub {golden holy shield} {golden holy shield (w16 antiE)}
+#sub {golden ring of lore} {golden ring of lore (all slots+1@5 norent)}
+#sub {nobleman's signet ring} {nobleman's signet ring (nolore)}
+#sub {a black robe} {a black robe (mage hide)}
+#sub {ragged pair of leather gloves} {ragged pair of leather gloves (regen5% ac-20)}
+#sub {black pants of the magi} {black pants of the magi (hit6 str cl2)}
+#sub {staff inscribed with runes} {staff inscribed with runes (hr2 isflying norent)}
+#sub {staff topped with a lich's claw} {staff topped with a lich's claw (3d4 int healt-10 cl3 notank w8)}
+#sub {glistening steel rod} {glistening steel rod (3d4 hr2 dr1 magic w9)}
+#sub {black, nasty looking shortsword} {black, nasty looking shortsword (4d3 hr1 w8)}
+#sub {wolf-emblazoned flag} {wolf-emblazoned flag (hit10 norent)}
+#sub {massive black stone sledgehammer} {massive black stone sledgehammer (5d5 w30)}
+#sub {a light black robe} {a light black robe (int slot+1@4 resneg10)}
+#sub {a black wrist band} {a black wrist band (hr1 detG)}
+#sub {magical dwarven stein} {magical dwarven stein (imm_ac/cold/heat cap50)}
+#sub {woven woodland foliage leggings} {woven woodland foliage leggings (str1 *set*)}
+#sub {a snakeskin belt} {a snakeskin belt (dex)}
+#sub {pair of brown leather pants} {pair of brown leather pants (apply5)}
+#sub {sharp stone tomahawk} {sharp stone tomahawk (2d7 hr1 w11 mag/bless)}
+#sub {ruby studded block of limestone} {ruby studded block of limestone (*Tablet*)}
+#sub {a protective facemask} {a protective facemask (ac-2)}
+#sub {polished long sword} {polished long sword (2d5 hr1 w10 mag)}
+#sub {dented, heavy bastard sword} {dented, heavy bastard sword (2d8 hr-2 dr1 w23)}
+#sub {crossed leather straps, adorned with spikes} {crossed leather straps, adorned with spikes (rescold10)}
+#sub {a transparent eyepatch} {a transparent eyepatch (hr-1 det_mag)}
+#sub {wooden training longsword} {wooden training longsword (1d10 w7 norent)}
+#sub {a rawhide vest} {a rawhide vest (apply4)}
+#sub {a suit of dwarven scalemail} {a suit of dwarven scalemail (apply7)}
+#sub {a suit of coral armor} {a suit of coral armor (rescold8 WB)}
+#sub {hardened steel maul} {hardened steel maul (3d4 str1 dr3 w18)}
+#sub {a coral helmet} {a coral helmet (resgas8 SL/infra)}
+#sub {a snake's tooth} {a snake's tooth (2d7 1/1 env7 w10)}
+#sub {a pair of mithril sleeves} {a pair of mithril sleeves (hr1 det_ev)}
+#sub {a pair of mithril sleeves} {a pair of mithril sleeves (hr1 det_ev)}
+#sub {pair of woodsman's sleeves} {pair of woodsman's sleeves (apply6 *set*)}
+#sub {a suit of black plate mail} {a suit of black plate mail (con1 svbreath-1 immac/elec)}
+#sub {radiant alabaster legplates} {radiant alabaster legplates (wis1 *set*)}
+#sub {a silver hilted dagger} {a silver hilted dagger (2d4 dr1 hr-1 w8 magic antiG)}
+#sub {regal green dragonscale sleeves} {regal green dragonscale sleeves (ac-4 wis med5)}
+#sub {lightweight sahuagin javelin} {lightweight sahuagin javelin (3d4 hr2 dr1 norent w6 magic)}
+#sub {jade snake amulet} {jade snake amulet (poison-1 ac2 nocharm antiG)}
+#sub {a white cape} {a white cape (ac-2 rescold5)}
+#sub {a shard of red quartz} {a shard of red quartz (2d7 hr1 w8 magic)}
+#sub {fisherman's amulet} {fisherman's amulet (mvreg5 WB NORENT)}
+#sub {blue kelp bandana} {blue kelp bandana (learn10 dk/pal NORENT)}
+#sub {cloak of Ixitxachitl skin} {cloak of Ixitxachitl skin (ac-5 resneg15 det_undead)}
+#sub {pointy mage's hat} {pointy mage's hat (spell+1@4/4 cl3)}
+#sub {chain shirt of darkness} {chain shirt of darkness (str hide antiG nomag/th/pa/dr/sh)}
+#sub {carved jade sphere} {carved jade sphere (wis2 infra resgas8)}
+#sub {a sahuagin spear} {a sahuagin spear (2d4 w8)}
+#sub {a sahuagin short sword} {a sahuagin short sword (1d6 w5)}
+#sub {a ceremonial elven mace} {a ceremonial elven mace (4d4 3/3 w12 antiG)}
+#sub {steel armplates inlaid with ebony} {steel armplates inlaid with ebony (str ac-5)}
+#sub {suit of treated steel platemail} {suit of treated steel platemail (str hit10 health10 nocharm *set*)}
+#sub {ergothian hunting armor} {ergothian hunting armor (str2 ac-8 scout only)}
+#sub {rapier of treated steel} {rapier of treated steel (2d9 3/3 antiG w18 *set*)}
+#sub {long black stole, lined with red} {long black stole, lined with red (int resmagic5 cl1 WB)}
+#sub {russet stained gloves} {russet stained gloves (hr2 evn6 antiG)}
+#sub {ergothian hunting pants} {ergothian hunting pants (dex1 ac-10)}
+#sub {blood red cowl inscribed with black runes} {blood red cowl inscribed with black runes (wis2 nopal/ran/bar)}
+#sub {steel legplates inlaid with ebony} {steel legplates inlaid with ebony (ac-5 dex)}
+#sub {ornate midnight blue leather gloves} {ornate midnight blue leather gloves (1/1 *set*)}
+#sub {pitch black band} {pitch black band (ac-10 infra NORENT)}
+#sub {stylish black leather vest} {stylish black leather vest (style+10)}
+#sub {white gold ring} {white gold ring (rescold3 det_mag)}
+#sub {sea giant skull gourd} {sea giant skull gourd (spell1@7 mental10 xtra_atk10% heal5% senseL antiG)}
+#sub {runed knife of crimson adamantite} {runed knife of crimson adamantite (3d6 hr1 env4 mag/bless/antiG/hot)}
+#sub {pair of ancient dwarven greaves} {pair of ancient dwarven greaves (spell 1@3/5 resmagic5 nomage)}
+#sub {mithril-capped rod} {mithril-capped rod (3d6 2/2 w7 magic nomage)}
+#sub {dagger of fused silver scales} {dagger of fused silver scales (2d8 hr3 dr2 detG EVIL w22)}
+#sub {red pirate sash} {red pirate sash (mv4)}
+#sub {bone cabalist shield} {bone cabalist shield (cha2 spell1@6/8 heal5% nocharm w10)}
+#sub {a great steel helm} {a great steel helm (ac-10m dam10% regen100% SILENCE norang)}
+#sub {crook of gnarled oak} {crook of gnarled oak (3d6 spell+1@7/8 w15 druid)}
+#sub {crown of shadows} {crown of shadows (cha2 hit-10 spell+1@7 detinv/sensel/infra/nosum antiG)}
+#sub {crimson dragon's spine javelin} {crimson dragon's spine javelin (3d6 2/2 w20 immdisint/heat)}
+#sub {blood stained leather whip} {blood stained leather whip (3d6 w6 magic)}
+#sub {onyx inlaid ebony gavel} {onyx inlaid ebony gavel (3d5 1/1 cl2 int w4)}
+#sub {small quartz ring} {small quartz ring (hit6)}
+#sub {amulet of darkness} {amulet of darkness (dr1 antiG)}
+#sub {ruby-hilted knife} {ruby-hilted knife (3d5 dr1 evn5 magic w6)}
+#sub {pitch black obsidian ring} {pitch black obsidian ring (1cl invis/detinv)}
+#sub {pair of the weaponsmaster's gloves} {pair of the weaponsmaster's gloves (hr/dr 1/1)}
+#sub {fairy skull ring} {fairy skull ring (learn2 det_mag)}
+#sub {a beautiful violet rose} {a beautiful violet rose (det_inv/sense/flying)}
+#sub {pair of dragonrider's gloves} {pair of dragonrider's gloves (hr/dr 2/2)}
+#sub {frosted tin ring} {frosted tin ring (dr1 resheat12)}
+#sub {obliviax pelt} {obliviax pelt (int spell+1@2 cl)}
+#sub {branch of a treant} {branch of a treant (2d8 2/2 cl2 w16)}
+#sub {shirt of white ringmail} {shirt of white ringmail (rescold5)}
+#sub {ring of carved bone} {ring of carved bone (wis str-1)}
+#sub {flexible red dragon scale sleeves} {flexible red dragon scale sleeves (ac-6 rheat8 immheat)}
+#sub {girdle with an ahuizotl skull buckle} {girdle with an ahuizotl skull buckle (str1 dex2 para-1 nocharm)}
+#sub {pair of lion skin boots} {pair of lion skin boots (str2)}
+#sub {ring of twisted ice} {ring of twisted ice (spell+1@6 rcold5 heal7%)}
+#sub {spiked diamond bracer} {spiked diamond bracer (dr1)}
+#sub {pair of birch bark gloves} {pair of birch bark gloves (spell+1@6 *set*)}
+#sub {vallenwood sapling boots} {vallenwood sapling boots (mv20 *set*)}
+#sub {a pair of pine bark leggings} {a pair of pine bark leggings (wis *set*)}
+#sub {polished rosewood facemask} {polished rosewood facemask (int/wis det_inv/sense/infra *set*)}
+#sub {dense slab of volcanic rock} {dense slab of volcanic rock (ss-2 health10 bash10 hot)}
+#sub {ring of the White Dragonarmy} {ring of the White Dragonarmy (det_inv)}
+#sub {thin golden dragonscale plate} {thin golden dragonscale plate (ac-5 str det_inv)}
+#sub {polished titanium bangle} {polished titanium bangle (hit7 breath-2 cl1 nosum/charm)}
+#sub {red-edged steel longsword} {red-edged steel longsword (2d8 2/2)}
+

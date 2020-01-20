@@ -1,0 +1,4948 @@
+#read passwords.txt
+#ACTION {$pktarg {.*}is {standing|sitting|resting|sleeping|lying}{.+}{\.|\)}$}
+{
+	dopk
+}
+{5}
+
+#ACTION {^%w {puts away|closes} {his|her} {tablets|spellbook|prayerbook|charms}}
+{
+	calibrate $ticklen;
+}
+{5}
+
+#alias bstep {bot autostepthis}
+#alias autostepthis {
+  #var leader $groupmembers[1];
+  #action {^$leader tells your group '{(rohane|tank )?}{n|s|w|e|u|d|north|south|west|east|up|down}'} {
+  onleader %%3;  
+ } {1};
+}
+
+#alias bst {bash %1; st; }
+#alias rtm {retrieve 1; wear medal}
+#alias dohctvault {pull down; pull right; pull right; pull up; pull left; pull down; pull down ; pull handle}
+#alias onleader {#delay 1 %1}
+#alias gtca {gt someone small: crank catapult, kill mob, loot, wear helmet, all west, get bag, east north east, then stack commands: drop bag, light bag in room}
+#alias waitroc {#action {bird} {#bell}; e3 look}
+#action {^The death cry of the shade of Jar} {get all.!component}
+#action {^Harmonium is dead} {gac; get all.!component druid}
+#action {^The night golem is dead} {ll get bladeless night.golem}
+#action {^The stone giant shaman is dead} {get all giant.shaman}
+#action {^A succubus is dead! R.I.P.} {get wings succubus}
+#action {^A demonic minion is dead} {oegc ombra} 
+#action {^A spirit rises} {gts}
+#alias gts {gt spirit}
+#ACTION {^%w {smiles as} {he|she} finishes {his|her} meditation}
+{
+	calibrate $ticklen;
+}
+{5}
+
+#PATHDIR {down} {up} {32}
+#PATHDIR {east} {west} {2}
+#PATHDIR {north} {south} {1}
+#PATHDIR {south} {north} {4}
+#PATHDIR {up} {down} {16}
+#PATHDIR {west} {east} {8}
+
+#alias kw {ll oe %1 %2; gt %1 %2; #all {%1 %2}}
+#alias brst {brsc stre}
+#alias oegc {oe get all.corpse; get all.corpse; oe give all.corpse %1}
+#alias otl {m1 ota}
+#alias eject {gt eject; rr}
+#var inpat {^You feel up to using {\w+} again}
+#alias pbrst {#action {^You feel ready to brew again} {brst}}
+#action {^Lubs Ginello focuses harshly on $tank and utters the words 'oculowaiyucandus'} {sean; tc}
+#action {^{\w+} tells your clan '{\w+} tells your clan '$myshaman rit me''}{dotroll %1 %2}{1}
+#alias dotroll {#show ct %1, did you mean: ct $myshaman rit %2}
+#alias inon {#action {$inpat} {st; %%1}}
+#alias inoff {#unaction {$inpat}}
+#alias mre {dism; rest}
+#alias mst  {st; mount}
+#alias efr {get flask belt; empty flask; o efreeti c '%1' %2; bottle efreeti; put flask belt}
+#action {^Constantine appears before you} {hl constantine}
+#alias yas {#sky ass; ota Talinia}
+#ACTION {^%w {tell|shout|yell|say|clanmate}{.?\s}}
+{
+	#line log messages.txt
+}
+{2}
+#var myshaman velm
+#action {^{\w+} tells your {clan} '$myshaman rit {\w+}'} {othervoy %1 %3} {1}
+#alias ptab {pta barbarian}
+#alias oes {oe smile $myshaman; oe st}
+#alias ctv {ct when ready, ct $myshaman rit me}
+#alias oeb {oe bop}
+#alias drn {js drain %1 in inventory}
+#alias bols {sky bolster}
+#alias bser {bot {cancel; oe c 'cu se' %1; oe st; ser %1}}
+#alias tbs {tan bser}
+
+#alias frensponge {
+  #action {^A red mist blurs} {oe rescue $myshaman};
+  #action {^Your rage builds} {fren};
+  #alias karr {n; ki sponge; glance spirit; fren};
+  #action {but fails miserably} {#delay 3 {oe rescue $myshaman}};
+  #var pet spirit;
+  #action {comes to your rescue} {s; sk}
+}
+
+#alias othervoy {#var nothing {%1:%2}}
+#alias {othervoyimpl}
+{
+ #format cnow {%T};
+  #if {$cnow > $fightoff} 
+  {
+    #if {"$resting"=="1"}
+    {
+      ct %1, $myshaman is resting. please state the nature of your mudical emergency.
+    }
+    {
+      #if {"%2"=="me"}{voy %1}{voy %2}
+    };
+  }
+  {ct %1, $myshaman is busy fighting the borg, please wait for your voyager to return to the alpha quadrant}
+}
+
+
+#alias ghob {mai {jd gho be; eat berry; drop all.berry}}
+#alias gbt {jd gho be; #3 {taste berry}; drop all.berry}
+
+#variable castpat {^{\s}{\w+}{\s+\[.+}{Cleric|White Robe|Red Robe|Shaman|Druid|Black Robe|Magic User}{$}}
+
+#alias gsk {js ghostskin}
+
+#alias ssk {js steelskin}
+
+#alias fos {js for}
+
+#alias setcas {
+  #var casters {};
+  #action $castpat {addc %%2};
+  clan who;
+  dolater5 endcastpat;
+}
+
+#alias endcastpat {#unaction $castpat}
+
+#ACTION {^A pile of steel coins}
+{
+	get all.coins
+}
+{5}
+
+#action {^Someone has called you} {wake; st; fly; look}
+#action {^{\w+} has summoned you} {beensum %1}
+
+#alias beensum {
+  #if {"%1"=="Someone"} {wake;st;fly;look} {rr} 
+}
+#ACTION {^The %w seems to be closed}
+{
+	open %1
+}
+{5}
+
+#ACTION {^There were %d coins}
+{
+	mac split %1
+}
+{5}
+
+#ACTION {^You do a really poor job}
+{
+	drop meat
+}
+{5}
+
+#ACTION {^You have been playing for {\d+} day}
+{
+	#line gag
+}
+{5}
+
+#ACTION {^You {receive|lost} %d}
+{
+	dolater5 doloot
+}
+{5}
+
+#ACTION {^Your wounds stop healing} { gt REGEN OFF } {5}
+
+#ACTION {^{$linebegin}{A|An|The}{.*\s}{\w+} {arrives|flies in}}
+{
+	setarrive %5
+}
+{5}
+
+#ACTION {^{$linebegin}{Your meditation finished|Your studies complete}}
+{
+	#variable firstspell 1;
+	calibrate $ticklen;
+	healcounton;
+	dost;
+}
+{5}
+
+#alias dostmain {st; #var resting 0}
+#alias dost dostmain;
+#alias restick {
+  #var onestand %1;
+  rest; #delay 30 rest;
+  #alias dost {
+    #alias dost dostmain;
+    dostmain;
+    $onestand;
+  } 
+}
+
+#var resting 0
+#action {^You sigh and hastily abandon your studies} {#variable firstspell 1}
+
+#action {^{$linebegin}$tank pretends to bleed on you} {dolater7 tan hl}
+#action {^{$linebegin}Through your wizard's eye: {\w+} has left through the {\w+}} 
+{eye leave %2 %3 %4}
+#alias asit {
+  #action {^{$linebegin}{\w+} heroically} {mota %%3}
+}
+#alias mota {classif ota %1}
+#alias impoi {rem plain.ring; wear mithril.ring}
+#alias imbli {rem mithril.ring; wear plain.ring}
+#action {^{$linebegin}Through your wizard's eye: {\w+} has arrived from the {\w+}} 
+{eye arrive %2 %3 %4}
+#action {^{$linebegin}Through your wizard's eye: {\w+} teleports {\w+}} 
+{eye teleport %2 %3 %4}
+
+#alias eye {#showme %1:%2:%3;
+  addeyekeyif %1 %3;
+  #var eyevar[%1-%3][%2] {1};
+  #delay 1 showeye;
+}
+
+#alias addeyekey
+{
+  #list eyekeys add {%1-%2}
+}
+
+#alias addeyekeyif
+{
+  #if {"$eyevar[%1-%2]"==""}{addeyekey %1 %2}
+}
+
+#alias reseteye {
+  #var eyevar {};
+  #var eyekeys {};
+}
+
+reseteye;
+
+#alias showeye
+{
+  #var numeyekeys 0;
+  #list eyekeys size numeyekeys;
+  #if {$numeyekeys > 0}
+  {
+    #loop 1 $numeyekeys eyeind {wtell $eyekeys[$eyeind]: $eyevar[$eyekeys[$eyeind]][]};
+	reseteye;
+  }
+}
+
+#alias mir {js mirror}
+#alias wtell {gtell %0; ctell %0}
+#alias onwhitebuff {
+  #alias goway {goto wilma};
+  needbuff white rune;
+  needbuff juke;
+  needbuff fireshield;
+  needbuff boon;
+  js fold;
+}
+
+#alias jfold {mag js fold}
+#alias bufwhi {mag buf white}
+#alias onredbuff {
+  needbuff repose;
+  needbuff improved invisibility;
+  needbuff antimagic shell;
+  needbuff lightning shield;
+}
+#alias adg {ass; dgo}
+#alias previ {#action {^Primal energy returns to your chest} {revi; lrn}}
+#alias kalrec {n; e; n; w; n; w; s; bre; wield %1; call}
+#alias domith {say Grant me your blessings for the battles to come}
+#alias stmo {store all.mote}
+
+#sub {loaf of bread} {fried chicken thigh}
+#sub {silver jeweled bracelet} {silver jeweled bracelet(imm_poi)}
+#sub {an iron ration} {a juicy steak}
+#sub {translucent shroud} {translucent shroud(-2ss 15sneak)}
+#sub {Aurinite ring} {Aurinite ring(1con)}
+#sub {necklace with a small ruby condor} {ruby condor necklace(slot6)}
+#sub {bone cabalist shield} {bone cabalist shield(+68slot nocharm, 5hedo, cha2)}
+#sub {ancient jade ring} {ancient jade ring(+slot8)}
+#sub {shroud of slimy ectoplasm} {shroud of slimy ectoplasm(12 hedo, invis, rbre 8)}
+#sub {adamantine bracelet} {adamantine bracelet(npp, -10ac)}
+#sub {feathered blowgun} {feathered blowgun(4d5 1/2 imm_disarm 10hedo)}
+#sub {rune etched mithril ring} {rune etched mithril ring(immpoi 1cl)}
+#sub {amber necklace} {amber necklace(invis deti)}
+#sub {ancient lemurian warhammer} {ancient lemurian warhammer(4d8 3/3 deteg)}
+#sub {{\d\d\dX} } {kX }
+#sub {giant clamshell encrusted with corals} {giant coral clamshell(++slot5, 10hedo, sb-2, wb)}
+#sub {black fang of a shadow beast} {shadow beast fang(3d5 nv)}
+#sub {desert wraith's tattered robes} {desert wraith robes(-2ss hardbash)}
+#sub {malachite encrusted bracelet} {malachite bracelete(+slot6)}
+#sub {plume of luminous blue fringe} {luminous blue plume(-2ss resco 30 wb)}
+#sub {wretched medallion}{wretched medallion(+slot6)}
+#sub {tattered purple cloak} {tattered purple cloak(ac -10, reco 36, npp)}
+#sub {pitch black bracer} {pitch black bracer(-1ss 2hr)}
+#sub {belt of cured hylar skin}{cured hylar skin belt(++slot6 rema6)}
+#sub {sparkling black bracelet}{sparkling black bracelet(npp)}
+#sub {rat ration} {bacon cheeseburger}
+#sub {grey stone bracelet}{grey stone bracelet(2con)}
+#sub {ring of sea elven bones} {ring of sea elven bones(+345slot 1cl 6hit)}
+#sub {chrysoberyl inset band} {chrysoberyl inset band(inv deti 2cl 15hit)}
+#sub {cape of severed mermaid tails} {cape of severed mermaid tails(+8slot 10 hedo)}
+#sub {shard of trapped souls} {shard of trapped souls(+allSlot 10hedo 5fmed)}
+
+#sub {shark jaw bone crossbow}{shark jaw bone crossbow(6d4 2/3)}
+#sub {giant crab shell shield}{giant crab shell shield(-1ss 8conc)}
+#sub {a shadow orb}{the Shadow Orb(+slot -25% damtaken)}
+#sub {ring of finest silver}{finest silver ring(+slot8 -1ss)}
+#sub {grey band of residual ghostly energy}{residual ghostly energy(+slot5 npp)}
+#sub {pair of baggy black pants} {black baggy pants(fly cl container)}
+#sub {pair of succubus wings}{succubus wings pair(cl3 nocharm npp fly)}
+#sub {a blue dragon skull}{Flare dragon bone skull(+slot68 deti sense)}
+#sub {a blackened and pulsating heart} {a pulsating black heart(+slot8 +cha)}
+#sub {silver fauld} {silver fauld (2con)}
+#sub {dark elven bracelet} {dark elven bracelet(+slot6)}
+#sub {nightmare's twisted tendril} {nightmare tendril(imm_fear)}
+#sub {Sharg tells your clan 'Namahs sucks'} {Sharg: Battle Cryer Online}
+#sub {Namahs tells your clan 'Fuck you sharg'}{Namahs: Ritual Voyage good to go, sir}
+
+#sub {idol carved of green malachite} {green malachite idol(imm_poi imm_curse regas 16)}
+#sub {golden band coated with red dust} {red gold band(mindshield imm_sleep 2cl)}
+#sub {pantry door drenched in ectoplasm} {ectoplasm pantry door(ss -1, rema 10)}
+#sub {a sturdy staff of rosewood} {the Sturdy Rosewood Staff(2d5 3/3specs)}
+#sub {bloody whale heart amulet}{bloody whale heart amulet(+1slot6 8reg)}
+#sub {silver girdle} {silver girdle (2con 2hr)}
+#sub {golden bracelet inlaid with emeralds} {golden emerald bracelet(+slot6)}
+#sub {colossal black iron war flail} {colossal black iron war flail(3d10 0/3, w48)}
+#sub {small silver medallion} {small silver medallion(light det invis neck)}
+#sub {spider shaped braces} {spider shaped braces(imm poison)}
+#sub {fiery red wrist guard} {fiery red wrist guard(nocharm imm neg)}
+#sub {clear crystal ring} {clear crystal ring(1wis)}
+#sub {ruby and diamond necklace} {ruby and diamond necklace(1int)}
+#sub {diamond-studded jaguar collar} {diamond-studded jaguar collar(1con)}
+#sub {tunic of leviathan scales}{ tunic of leviathan scales(2str, water, spell-2, here 8, sense life)}
+#sub {ancient leviathan scale leggings} {ancient leviathan scale leggins(2dex,para-2,fade5, wild5)}
+#sub {gauntlets of black hydrascale} {gauntlets of black hydrascale(2str, here5, gas10)}
+#sub {cloak of black hydrascale} {cloak of black hydrascale(health15, hit20, canfly, nosummon, nocham, imm poi)}
+#sub {human bone gauntlets} {gauntlets(1str, 10hedo)}
+#sub {mask of human bone} {mask(2cha, deti)}
+#sub {human bone boots} {boots(20vi)}
+#sub {human bone armlets} {armlets(1int)}
+#sub {human bone leggings} {leggings(1con)}
+#sub {human bone breastplate} {breastplate(1con)}
+#alias bpu {buy 3*putrid}
+#alias cts {sleep; ct sleeping...}
+#alias ctw {ct woke up; wake; st; fly}
+
+#action {^{$linebegin}{\w+(\s\w+)?}: this spell isn't on your mem} {for '$circle1'}
+
+#alias presi {
+  #action {^{$linebegin}The area seems ripe with} {st; resi};
+}
+#var linebegin {(\d.+>\s)?}
+#alias gmar {gift; magi; arcane}
+#ACTION {^{(\d.+>\s)?}{\s+Member\s+Hits}}
+{
+	groupcapture
+}
+{5}
+#alias ctl {ct i can lead celestial temple, lemuria, bog, forgotten temple, cloud kingdom, drac tower, dko, bluff, theiwar, some largus, storms, shayds, nytes, spire, dargaard keep, glymmer, bmobs, mystic queen, cervos, celestial valley}
+
+#ACTION {^{You are now sober|You throw away your bloody bandages|The rising sun|The clouds block|The cloud-veiled sky|The darkness marks the end of another day|The sun slowly sinks in the|The sun begins its ascent|Some meat decays in your hands|You are ready to|You feel more vigorous}}
+{
+	calibrate $ticklen;
+}
+{5}
+
+#ACTION {^{\w+} comes to your rescue! You're thankful, but a bit dazed}
+{
+	tan watch; mota %1;
+}
+{5}
+
+#alias gate {
+  #if {"%1"!=""} {#var pet %1};
+  js gate $pet;
+}
+#alias g2 {m2 %1; m1 %1}
+#alias goodpick {gate aspasia}
+#alias ref2 {g2 flap}
+#ACTION {^{(<\w+>\s)?}{\S+ \S+}{.+}green aura)}
+{
+	#showme <030>POISONED: %3;
+	#line log messages.txt
+}
+{5}
+
+#ACTION {^{\w.+}{[A-Z]\w+}{$tanksuffix}}
+{
+	gothit %2;
+}
+{5}
+
+#action {{$tankprefix} {[A-Z]\w+}} {gothit %2}
+#var autoassv 0
+
+#alias bost {js bone staff; wield staff}
+#alias bocl {js bone club; give club}
+#alias voyback {
+  #action {^{\w+} disappears suddenly} {
+    voybackoff;
+    voy %%1;
+    gt *****  %%1 getting summoned;
+    #delay 5 {voyback}
+  }
+}
+
+#alias voybackoff {
+  #unaction {^{\w+} disappears suddenly}
+}
+
+#alias rban {rest; ban me}
+
+#alias autoass 
+{
+  #var autoassv 1;
+  #action {^{[A-Z]\w+} {.+}{$tanksuffix}} {doas %%1} {8};
+} {6}
+
+#alias autoassoff {
+  #var autoassv 0;
+  #unaction {^{[A-Z]\w+} {.+}{$tanksuffix}} 
+}
+
+#alias rfe {jd re fe}
+#alias repet {release $pet; conjure $pet}
+#var skyscout Talinia
+
+#alias donothing {#var nothing nothing:%1}
+
+#alias gothitimpl {
+  doas %1;
+  onfight;
+  #if {"$classes[%1]" != ""  && "%1" != "$tank"} 
+  {
+    #if {"%1"=="$skyscout" || "$classes[%1]"=="CL" || "$classes[%1]"=="DR" || "$classes[%1]"=="SH" || "$classes[%1]"=="WH" || "$classes[%1]"=="BL" || "$classes[%1]"=="RE"}
+    {setcasres %1}{trs %1};
+  }
+}
+#alias gothit gothitimpl
+
+#alias skymelee {
+ modemelee;
+ #alias trs donothing;
+ casres;
+ #alias rs dorescue;
+}
+#alias trs {
+  #if {"$classes[%1]"=="TH" || "$classes[%1]" == "SC"} {thiefhit %1};
+  #if {"$classes[%1]"=="WA" || "$classes[%1]" == "DA"} {warhit %1};
+  #if {"$classes[%1]"=="BA" || "$classes[%1]" == "PA"} {tankhit %1};
+}
+
+#alias tankhit setresc
+#alias thiefhit setresc
+#alias warhit setresc
+#alias abg {ass; batt; gore; st}
+#alias classif {
+  #if {"$classes[%2]" != ""} {%1 %2 %3};
+}
+
+#var vmasters {{CL}{cleric}{DA}{dark}{WA}{warrior}{BA}{barbarian}{DR}{druid}{PA}{paladin}{SH}{shaman}{SC}{scout}{TH}{thief}{WH}{white}{RE}{red}{BL}{black}}
+#alias ghostfor {
+  nospam 9 gma $vmasters[$classes[%1]]
+}
+#alias lckith {lc sponge; lc ethereal.cube; lc foot}
+#alias saym {say when ready, type (dont say): moc}
+#alias gtm {gt to make a master, type: mak}
+#alias lcshad {lc bladeless; lcb; lc shadow.mask; lc shadow.plate; rest}
+#alias lcreef {lc candle; lc knuckle; lc twig; lc head}
+#alias lcrav {lc skull; lc lion; lc globe; lc tablet}
+#alias lctab {lc tablet; lc slab; lc ruby.block; lcb; rest }
+#alias lcshayd {lctab}
+#alias lcck {lc ectoplasm; lc dreamcatcher; lc flame; lc brains}
+#alias lcshado {lc wretched; lc shadow; lc gossamer; lc bladeless}
+#alias rlcred {gobal; sph; runto s4e9n4w3sw2s2wnw7nw; lcf; lcf; lc spiked.sterling; lc braided}
+#alias rlcck {gobal; runto s4e9n4w3sw4sdw2s2ws5w; lcck}
+#alias rlckith {gosol; runto e2sd10se4sw5se4sw3s6wd2s; lckith}
+#alias rlcspi {gosol; runto e2sd8n3e5n4e3n9e5s6es2ese; climb ladder; ee; lckith}
+#alias enfothis {enter arch; follo %1}
+#alias enfo {ll enfothis}
+#alias trigcure {
+  #var {vcure} %1;
+  #action {^{\w+} pretends to bleed} {classif $vcure %%1};
+  #action {^{\w+} bleeds silently on {[A-Z]\w+}} {classif onbleed %%1 %%2};
+}
+
+#alias solghost {
+  south; %1; open door; east; %1; open door; west; south; %1; east; %1;
+  west; north; north; %1; ef; sk;
+}
+#alias k4 {ke %1; #4 $engvar}
+#alias ksgw {skillbell; #%1 solghost kgw}
+#alias kgw {k4 wraith; k4 ghost; get all.coins}
+#alias gebe {get berry; eat berry}
+#action {^{\w+} drops an ethereal ghost} {nospam 1 gebe}
+#alias onbleed {$vcure %2 }
+#alias airm {nbf repose; nbf fly}
+
+#alias trigfly {
+  #action {^{\w+} jumps up in the air and flaps} {classif air %%1};
+}
+
+#action {^{\w+} {sits down and rests|begins resting}} {classif onerest %1};
+#action {^{\w+} stands up} {classif onestand %1};
+
+#alias onestand {
+  #if {$resting==0} {doonly stand %1} {}
+}
+#alias onerest {#show RESTING: }
+
+#alias {doonly} {
+  #if {$autoassv == 1} {%1}
+}
+#alias okd {otk %2; %1 %2; }
+#alias oeku {okd stup %1}
+#alias oekup {oeku priestess}
+#alias sgl {nbf spectral glow}
+#alias sneakon {rem all.!staff; wear belt; put all chest}
+#alias sneakoff {get all chest; wear all}
+#alias pp {punch %1; ota}
+
+#var clans {nothing};
+#alias captureclans
+{
+  #var clans {};
+  #action {^<{\w+}>{\s+}{\S+}{(\s+(\w+))?}} {#line gag; inclantitle %%1 %%2 %%3 %%4};
+  #action {^{\s+}{\w+}{(\s+(\w+))?}} {#line gag; untagged %%2 %%3;};
+}
+
+#alias untagged
+{
+  #if {"$evils[%1]"=="1" || "$evils[%2]"=="1"}{inclantitle evil %1 %2;};
+}
+
+#action {^Total visible people} {
+  #unaction {^<{\w+}>{\s+}{\S+}{(\s+(\w+))?}};
+  #unaction {^Mortals$} {captureclans};
+  #unaction {^{\s+}{\w+}{(\s+(\w+))?}};
+  showclans;
+}
+
+#var pretitles {
+  {Baronness}{1}{Baron}{1}{King}{1}{Queen}{1}{Miss}{1}{Master}{1}
+  {Mister}{1}{Sir}{1}{Lady}{1}{Lord}{1}{Captain}{1}{Dr.}{1}{General}{1}
+  {Archmagus}{1}
+}
+
+
+#alias showclans {
+  showclan RISE;
+  showclan NeP;
+  showclan evil;
+}
+
+#var oldclans {}
+
+#alias showclan 
+{
+  #list clans[%1] size {newsize};
+  #list oldclans[%1] size {oldsize};
+  #if {$oldsize!=$newsize}
+  {
+    #var oldclans[%1] {$clans[%1]};
+    ctell %1:$newsize $clans[%1][];
+  } {#showme %1:$newsize $clans[%1][]};
+}
+
+#alias repclan {ctell %1:$clans[%1][];}
+
+#alias inclan {
+  #var clans[%1][%2] 1
+}
+
+#var evils {{Bo}{1}{Malice}{1}{Nguyen}{1}{Bespee}{1}{Mousasi}{1}{Abom}{1}{Tenten}{1}{Qwiz}{1}{Sano}{1}{Zor}{1}{Seagal}{1}
+  {Dutch}{1}{Trautman}{1}{Fueling}{1}{Pacific}{1}
+}
+
+#alias eachmin {#ticker e60 {%0} 63}
+
+#alias inclantitle {
+  #if {"$pretitles[%2]"=="1"}
+  {inclan %1 %3}
+  {inclan %1 %2};
+}
+
+#alias tc {tan cc}
+#alias palski {bot {beseech paladin; reck ;divine}}
+#alias doas 
+{
+  #if {$fighting == 0 && "$classes[%1]" != "" && $autoassv==1} 
+  {#var fighting 1; vass %1; }
+}
+#alias oepb {oe punch; oe bash; oe st}
+#alias dosek {get thin crate; worship sekolah; d; wear thin; move statue; scan}
+#alias oefs {oe fly stop}
+#alias kai {kill %1; ota; imp}
+#alias renthun {#action {^You are hungry}{rent;0}}
+#alias otkk {otk %1; ki %1; oe st}
+#alias okv {otk %1; gt volley}
+#alias otks {otk %1; stup %1; oe st}
+
+#alias pracsean {#action {^The faintest connection to the undead} {sean}}
+#alias jba {js bone arrow; give arrows %1}
+#alias jbab {jba brakus}
+#alias jbas {jba talinia}
+#alias vass {vass1}
+#alias vass3 {#delay 3 {nospam 2 palass %1}}
+#alias vass1 {nospam 6 ota }
+#alias vass2 {nospam 1 asst}
+#alias otai {ota; imp}
+#alias asst {ass %1; st}
+#alias bpa {bot palassthis}
+#alias palass bpa
+#alias haze {bot jd men ha}
+#alias palassthis {ass %1; ota; rally; strike; av leg; strike}
+#alias kdr {st; drain}
+
+#ACTION {{he begins to drool|is stunned!}}
+{
+	#line log messages.txt
+}
+{5}
+
+#alias gkc {get key corpse}
+
+#ALIAS {ach}
+{
+	assist $charmie
+}
+#alias buac {#10 {buy 10*acorn; put all.acorn pouch}}
+#alias busl {#3 {buy 12*sliver; put all.sliver pouch}}
+#alias swingbakali {
+  crawl trunk; swing branch;
+  #action {^You swing to a northern apex, becoming horizontal} {jump};
+}
+#alias refly {dispel 'fly'; air me;}
+#alias vv {quaff vial}
+#alias vsap {quaff sap}
+#alias bcr {bani creature}
+#alias mesh {for 'end' 'a b' 're cu'; mem '%1 %2' '%1 %2' '%1 %2'}
+#alias fosh {for '%1 %2' '%1 %2' '%1 %2'; mem 'end' 'a b' 're cu'}
+#alias kds {c 'harm' sivak}
+#alias kbs {c 'bli' sivak}
+#alias chg {ch %1; gore %1;}
+#alias kb2 {c 'bli' 2.baaz}
+#alias kdb {c 'harm' baaz}
+#alias dofaul {get staff corpse; n; n; n; get blue.crystal belt; attach blue.crystal staff; place blue.staff statue; ef bread; sit; rem all; study disks;}
+
+#alias kifaul {s; s; s; c 'harm' baaz; st; flee; flee; flee;flee; flee; n; n;}
+#alias kigoth {n; n; n; c 'harm' baaz; st; flee; flee; flee; flee; s; s;}
+#alias sopr {jd so pr; 
+  #delay 125 {#show ---> RECASTING SOUL; sean; jd so pr};
+  #delay 250 {#show ---> soul 2; jd so pr};
+  #delay 375 {#show ---> soul 3; jd so pr};
+}
+#alias bnfaul {quaff grey.flask; wear eyes; s; s; s; c 'bli' 2.baaz; st; flee; flee; flee; flee; n; n;}
+#alias ejo {caress sapphire}
+#alias bl6 {#6 {blr me; lrn}; rest; sk}
+#alias rtw {retreat; tw}
+#alias sat {js sat}
+#alias baa {batt; assail}
+
+#alias bch {batt; charge}
+
+#ALIAS {addheal}
+{
+	#if {$countheals}
+	{
+		#math healtemp {$healtemp + %1}
+	}
+}
+
+#alias sein {settle; into; modebarb}
+
+#alias bii {batt; into; into}
+
+#alias bsii {batt; sii}
+
+#alias sii {sett; into; into;}
+
+#ALIAS {addheal2}
+{
+	#if {$countheals}
+	{
+		#math {healtemp} {$healtemp + %1 + %2}
+	}
+}
+
+#ALIAS {addheal3}
+{
+	#if {$countheals}
+	{
+		#math {healtemp} {$healtemp + %1 + %2 + %3}
+	}
+}
+
+
+#alias koi {
+  aim %1; 
+  shoot auto; 
+  #variable myaim {%1}
+}
+
+#ALIAS {agg}
+{
+	#variable aggro {%0};
+	#showme {--> $aggro $pktarg}
+}
+
+#alias agg2 {
+  #variable aggro {%1; %2};
+}
+
+#ALIAS {ahfull}
+{
+	#variable autoheal 2
+}
+#alias {autosum} {
+  #action {^A {.+} stops following you} {jd su mo; rest};
+  #action {^You lost your concentration} {jd su mo; rest};
+  #action {remember how to cast that spell} {#delay 20 {jd su mo; rest}}
+}
+#alias lrn {learn all; sk}
+#alias pullvault {pull down;pull down;pull up;pull down;pull right;pull left;pull left;pull down;pull up;pull left;pull up;pull up;pull handle}
+#alias pracred {
+  st; magi; gift; arcane; brsc stre; #6 {sr me}; #3 {air me}; lrn; sk; exam pouch; rest;
+}
+
+#alias pacorn {st; #6 {c 'stre' me}; #3 {c 'fly' me}; rest}
+
+#alias pracpal {
+  #action {^You can focus again on your prayers} {divine};
+  #action {^Through the darkness, you find a connection} {right};
+}
+
+#alias praclay {
+  #action {^Your hands tingle} {rem braces; wear braces; st; lay me};
+}
+
+#ALIAS {ahoff}
+{
+	#variable autoheal 0
+}
+
+#ALIAS {ahon}
+{
+	#variable autoheal 1;
+	group
+}
+
+#alias dohalve {#config speedwalk on; st;ne9n;open gate;2n7e;open door; n;ki halve; cc me; open door; #4 doflee; rg me; sat; s7ws; open gate; 10sws}
+
+#alias wnn {w; n; n;}
+#alias bungbluff {#config speedwalk on; st; wn4e3n9e5s6e5n; #config speedwalk off; lcs; lcs;}
+
+#alias kalreef {
+  #config speedwalk on;
+  d8ne; fsf; esee3n; open gate; 2n3edn3e3neneen;
+  lcm; lcm;
+  #config speedwalk off;
+}
+#alias lcs {lc fine.silver.ring}
+#alias dotemp {
+  #config speedwalk on; rary; st; dnn10e; open gate; 
+  4e; kmm green; temp; #4 flee; gokal; gmar; rest; deep;
+}
+#alias doflee {flee; st; flee}
+#alias goqueen {en portal; ll rem spider.medallion; call; ott; hew}
+#alias hulkspin {
+  #config speedwalk on;
+  eneswneswneswneswnesw;
+}
+#alias ptemp {#action {^A path to the future} {dotemp}}
+#alias iia {into; into; st; assail; batt; modebarb}
+
+#alias ii {into; into}
+
+#alias aba {assail; batt}
+#alias rary {js mne}
+#alias basa {bash %1; assault %1}
+#alias bafo {bash %1; st; fort}
+#alias asab {assault %1; bash %1}
+#alias mgoc {mgo ctcent}
+#alias rd {st; dispel '%1'; js %1 me}
+#alias fsh {mag rd fires}
+#ALIAS {air}
+{
+	js fly
+}
+
+#ALIAS {and}
+{
+	#if {"%1"!=""}
+	{
+		jd animate dead %1
+	}
+	{
+		jd animate dead corpse
+	}
+}
+
+#alias aggone {
+  #if {"%2"!=""} {#var aggrovar %2};
+  %1 $aggrovar;
+}
+
+#alias aggtwo {
+  #if {"%3"!=""} {#var aggrovar %3};
+  %1 %2 $aggrovar;
+}
+
+#alias aggthree {
+  #if {"%4"!=""} {#var aggrovar %4};
+  #if {"$aggrovar"=="k"} {%1 %2 %3} {%1 %2 %3 $aggrovar};
+}
+
+#var aggrovar k
+#alias jsa {aggtwo js %1 %2}
+#alias jda {aggthree jd %1 %2 %3}
+#alias aggtwo {
+  #if {"%3"!=""} {#var aggrovar %3};
+  %1 %2 $aggrovar;  
+}
+
+#alias ko {sky kothis}
+#alias kothis {
+  modebow;
+  #if {"%1"==""} {reshoot }{koi %1};
+  #alias kfoli {kd foliage};
+}
+#alias rsp  {release %1.spirit}
+#alias lunion  {#action {^The local foliage}{kfoli}}
+#alias reshoot {st; koi $myaim; #if {"%1"==""}{tan watch}{watch %1}}
+#alias lunioff {#unaction {^The local foliage}}
+#alias lunionsh {#action {^The local foliage}{otkk foliage}}
+#alias kfoli {ki foliage}
+
+#ALIAS {ansp}
+{
+	jd an sp
+}
+
+#ALIAS {asi}
+{
+	assail;
+	into;
+	into;
+	settle
+}
+
+#ALIAS {aura}
+{
+	js aura
+}
+
+#ALIAS {autobash}
+{
+	#action {^{(\d.+>\s)?}You stand up} {bt};
+	#action {^{(\d.+>\s)?}{A|An|The} {.+} stands up} {bt};
+	#action {especially skillful} {sysplay smb3_1-up.wav}
+}
+
+
+#alias oed {order all.spirit stand; order kender.druid}
+#alias oedr {oed retreat}
+#alias oel {oe get all corpse}
+#alias enmyst {
+  #action {^A Small Guest Room} {ll enter} 
+}
+
+#alias kendru {flick eye; csp; #delay 1 {drumem}}
+#alias drumem {
+  oed for 'cu cr' 'pr fu' 'pr fu' 'iceskin' 'iceskin' 'iceskin' 'iceskin' 'iceskin';
+  oed for 're po' 're po' 're po' 'w b' 'w b' 'w b' 'ref' 'ref' 'ref' ;
+  oed mem 'ice s' 'ice s' 'ice s' 'ice s' 'ice s' 'cul' 'cul' 'cul' 'cul' 'cul' 'cul';
+}
+#alias kenthi {flick finger; csp}
+#alias kencle {flick ear; csp}
+#alias oecs {oed c '%1' %2}
+#alias oice {oed c 'ice storm'}
+#alias bice {oice; boa}
+#alias otor {oed c 'tor'}
+#alias ocul {oed c 'cul'}
+#alias oref {oed c 'ref'}
+
+#ALIAS {autodropoff}
+{
+	#unaction $patautodrop
+}
+
+#ALIAS {autoeng}
+{
+  eng %1;
+	#action {^{(\d.+>\s)?}You fail the parry attempt} {mac $engvar};
+  #action {^You fail to disarm} {mac $engvar};
+  skillbell;
+  #action {^You strike a} {mac $engvar};
+  #action {^A cityguard wields} {mac $engvar};
+  #ticker e20 {$engvar; sk} 20;
+  #action {^You go back on the offen} {mac $engvar};
+}
+
+#alias innk {inn; mgo kalinn}
+#ALIAS {autoparryoff}
+{
+	#unaction {^{(\d.+>\s)?}You fail the parry attempt}
+}
+
+#ALIAS {banp}
+{
+	rest;
+	rem %1;
+	wear %1;
+	ban me
+}
+
+#alias dwii {dwi; into}
+#alias dgo {dan gho}
+#alias ktu {js thun}
+#alias gokal {goto zardonna}
+
+#alias gopal {goto anatole}
+#alias gobal {goto petrin}
+#alias gobal {goto petrin}
+#alias gotar {goto darvinus}
+#alias govin {goto torenth}
+#alias gotan {goto itanus}
+#alias goway {goto ferris}
+#alias gofer {goto ferris}
+#alias gosol {goto theobald}
+#alias gohav {goto canstin}
+#alias goner {goto snaggle}
+#alias goto {puf %1; #map goto %1}
+#alias gocae {goto mirus}
+#alias gophy {gocae; mirphy}
+#alias mirphy {w; w; s; s; w; w; w; open gate; w; w; n; n; climb cliff; d; n; w; w; w; lcb; lcb}
+#alias goan {puf anchor}
+#alias gobung {gosol; e; s; s; d; fsf; n;n;n;n;n;n;n;n;e;e;e;n;n;n;n;e;rest}
+#alias gorbu {gosol; gorec bung}
+#alias gobu {gorec bung}
+#alias chief {%0 constantine}
+#alias oei {oe c 'i'}
+#alias oeim {oe c 'i' me}
+#alias pbrl {push 2.button; reach ledge; st; e; jump guild}
+#action {^{\d[^\[]+}>} {#var fighting 0; groupcaptureoff}
+#action {^{\d.+Pos:standing[^\[]+}>} {#var fighting 0; groupcaptureoff}
+#action {^{\d.+Me:}} {#var fighting 1; groupcaptureoff}
+#var pets {Fuffy|Nektar|Tanky|Fredery|Brutto|Durge|Fereous|Merci}
+#action {{$pets} the {\w+\s?\w+}{$tanksuffix}} {pethit %1}
+
+#alias pethit {
+  #var petresc %1;
+  #show Pet: %1;
+}
+#alias ccp {cc $petresc}
+
+#alias golubs {
+  push button;
+  #action {^Gaining speed, the lift accelerates down the dark mountain shaf} {#delay 1 pbrl};
+}
+#var fighting {0}
+#alias nospam {
+  #format nnow {%T};
+  #if {$nnow > $navailable} {
+    #math navailable {$nnow + %1};
+    mac %2 %3;
+  };
+}
+
+#action {^You sense another fortress in your} {nospam 1 fortress}
+#action {^You feel the need, the need to assault} {nospam 1 assault}
+#alias asfo {assault %1; fortress}
+#alias asfok {asfo %1; kick %1}
+#alias asfob {asfo %1; bash %1}
+#alias tg {bot target}
+#alias kea {ke %1; assist}
+#alias ket {ke %1; taunt %1}
+#alias groupc {
+  #format nnow {%T};
+  #if {$nnow > $gavailable} {
+    #math gavailable {$nnow + 1};
+    mac group ;
+  };
+}
+#var gavailable 0
+#alias nothing {#var varnothing 0}
+
+#alias {cwho} 
+{
+  #ticker {spamwho}{whoen}{23};
+}
+
+#alias whoen
+{
+    #action {^Mortals$} {captureclans};
+	who;;
+}
+
+#alias rentskill {#action {^You feel especially skillful} {rent; 0}}
+
+#alias {pgift} {#action {^The lunar glimmer fades} {st; gift; magi an; arcane; conj lead; release Plumbic}}
+#alias {kalrn} {ent space; lrn; ent space}
+
+#alias thim {thr %1; imp}
+
+#ALIAS {banprac}
+{
+	rem guard;
+	wear guard;
+	ban me
+}
+
+#ALIAS {bashoff}
+{
+	#unaction {^{(\d.+>\s)?}You stand up};
+	#unaction {^{(\d.+>\s)?}{A|An|The} {.+} stands up};
+	#unaction {especially skillful}
+}
+
+#alias iv {js imp}
+
+#ALIAS {bd}
+{
+	give 3*$clerfood %1
+}
+
+#ALIAS {be}
+{
+	enven $weapon;
+	aggone back %1;
+}
+
+#alias bk {aggone back}
+#alias bedir {
+  thi #3 {aggone be %2; fade %1; sneak; st; $reverses[%1]};
+}
+
+#alias bfn {bedir n}
+#alias bfs {bedir s}
+#alias bfe {bedir e}
+#alias bfw {bedir w}
+#alias bfu {bedir u}
+#alias bfd {bedir d}
+#ALIAS {bh}
+{
+	bash %1;
+	st
+}
+
+#ALIAS {bigrest}
+{
+	rest;
+	#var resting 1;
+	tan watch;
+	fastmem;
+	taste $food;
+	sip water;
+	exam water
+}
+#alias conmer
+{
+  #var pet Merci;
+  conj mercury;
+  oe for all;
+  oe mem 'ma mi' 'ma mi' 'ma mi' 'ma mi' 'ma mi' 'ma bo' 'ma bo' 'ma bo' 'ma bl' 'i i' 'ma bl'
+}
+#alias conbo {#var pet Boanes; conj bone}
+#alias conir {#var pet Fereous; conj iron}
+#alias conlea {#var pet Plumbic; conj lead}
+#alias conca {#var pet Fuffy; conj cat}
+#alias conow {#var pet Nektar; conj owl;
+  oe for 'di ma' 'blur' 'shield' 'inv';
+  oe mem 'li bo' 'ma mi' 'ma mi' 's g';
+}
+
+#alias dosei {say Seinihs Enim; e; fol %1}
+#alias kld {mag okd klb}
+#alias ofm {okd kfm}
+#alias vo {sky volley}
+#alias fastmem {ban me};
+#alias kcg {okd kch}
+#alias brn {buy !glowing.recall; put recall belt}
+#alias ht {hex theiwar}
+#alias ksot {kso theiwar}
+#alias bbo {
+	#if {"%1"!=""}
+	{
+		#variable booze %1
+	};
+    buy 6*$booze
+}
+
+#alias modebarb {
+  #alias fastmem {ban me};
+  #var engvar chg;
+  nutr meat;
+}
+
+#ALIAS {blr}
+{
+	js blur
+}
+
+#ALIAS {bls}
+{
+	js bless
+}
+
+#ALIAS {blur}
+{
+	js blur
+}
+
+#ALIAS {blurm}
+{
+	get mandolin $belt;
+	strum mandolin;
+	put mandolin $belt
+}
+
+#ALIAS {bn}
+{
+	js bli
+}
+
+#ALIAS {bre}
+{
+	dimo;
+	buy glowing.recall;
+	put recall $belt
+}
+
+#ALIAS {brk}
+{
+	js bark
+}
+
+#alias boi {js boil}
+
+#ALIAS {brsc}
+{
+  rest;
+	get empty chest;
+	get blank chest;
+	mac brew empty '%0';
+	mac scribe blank '%0';
+	put all.empty chest;
+	put all.blank chest;
+	drop brewed;
+	drop scribed;
+	st; learn all;
+}
+
+#alias buch {buy 12*%1; put all.%1 chest}
+
+#alias brsh
+{
+  rest;  get empty chest; get acorn pouch;
+  brew 'sat'; drop brewed;
+  put all.empty chest; put all.acorn pouch; 
+}
+
+#alias trigbrsh {
+  #action {^You feel ready to brew again} {readybrew}
+}
+#alias trigbrcl {
+  #action {^You feel ready to} {nospam 3 brsc aid}
+}
+#alias trigbrma {
+ #action {^You feel ready to} {nospam 3 brsc stren}
+}
+
+#alias taracorn {w; s; e;e;e;e; fsf; n;n;n;n;n;n; w;n;n;w; n;n;n;w;w; n;n;n;n;n; e;n;n;n;n;n;n;n;w;s;e}
+#alias recler {rewin; modecleric}
+#alias readybrew brewonly
+#alias brewonly {brsh; ghob; gmal}
+#alias medibar {st; ki barbarian; js clot me; #9 flee; w; s; rest; ban me; rg me; ghob; gmal; rest}
+#alias medicorn {st; n; ki unicorn; js clot me; #9 flee; sk; rg me; ghob}
+#alias medibrew {cancel; brsh; medibar; }
+#alias cornbrew {medicorn; brsh; gmal}
+
+#alias ue3 {#unticker e3}
+#alias brcl
+{
+  rest; brew 'cu li'; st
+}
+
+#ALIAS {bt}
+{
+	bot {punch %1; bash %1}
+}
+
+#ALIAS {bufw}
+{
+	#buffer write logs/%1.txt;
+	#log append logs/%1.txt
+}
+
+#ALIAS {bws}
+{
+	breathe;
+	wake;
+	stand
+}
+
+
+#alias end {nbf endurance}
+#alias jde {js devo}
+#ALIAS {cab}
+{
+	ch %1;
+	bat; assa;
+}
+
+#ALIAS {calibrate}
+{
+	#format now {%T};
+	#math sincetick {$now - $lasttick};
+	#showme <060>:TICK            $sincetick          TICK;
+	#format lasttick {%T};
+	#variable {ticklen} {%1}
+}
+
+#ALIAS {cand}
+{
+	#variable candidate %0
+}
+
+#ALIAS {cbl}
+{
+	jd cu bl
+}
+
+#ALIAS {cc}
+{
+	#variable casters {};
+	acn %1
+}
+
+#alias acn {addc $groupmembers[%1]}
+
+#ALIAS {ccn}
+{
+	autodropoff;
+	#action $patautodrop {mac drop %%4};
+	get all %1.corpse;
+	carve %1.corpse;
+	dolater9 autodropoff
+}
+
+#ALIAS {cco}
+{
+	autodropoff;
+        get all.coins corpse;
+	#action $patautodrop {mac drop !large.%%4};
+	get all corpse;
+	carve corpse;
+	dolater9 autodropoff
+}
+
+#alias gac {get all.!component corpse; get all.necromantic corpse}
+
+#ALIAS {chd}
+{
+	cha %1; batt;
+	dobooze;
+	st;
+	war;
+	heal;
+	wild; assail
+}
+
+#alias dobooze {sip $booze; modebarb}
+#alias sibo {#3 {sip $booze}; modebarb}
+#alias prago {#action {^Gore}{st; gore}}
+#ALIAS {chh}
+{
+	cha %1;
+	dobooze;
+	st;
+	heal; wild
+}
+
+#alias relec {js resi elec}
+#alias racid {js resi acid}
+#alias rheat {js resi heat}
+#alias rcold {js resi cold}
+#alias rmag {jd su re magic}
+#alias rneg {jd su re nega}
+#alias rgas {jd su re gas}
+#alias rbre {jd su re breath}
+
+
+
+
+#ALIAS {chwa}
+{
+	cha %1;
+	dobooze;
+	st;
+	war
+}
+
+#ALIAS {chwi}
+{
+	cha %1;
+	dobooze;
+	st;
+	wil
+}
+
+
+#ALIAS {cleartop}
+{
+	cleartoplin
+}
+
+#ALIAS {cleartoplin}
+{
+	#loop {%1 -$gsize} {#showme {.}{&0}}
+}
+
+#alias mloa {
+  #config charset utf-8;
+  #map read krynn.txt;
+  #map goto 1;
+  mapon;
+}
+
+#alias maft {#map exit %1 command {%1; %2 %3 %4 %5}}
+#alias mbef {#map exit %1 command {%2 %3 %4; %1}}
+#alias mapon {
+  #alias cleartop donothing;
+  #split 16 2;
+  #map flag asciigraphics on;
+  #map flag static off;
+  #map flag vtmap on;
+  #action {^Alas, you cannot go that way} {#map undo};
+}
+
+#var runspeed 0.23
+#alias tr {#map travel %1 $runspeed}
+#alias mapsmall {
+  #map flag asciigraphics off;
+  #map flag static on;
+  #split 9 2;
+  #map flag vtmap on;
+}
+#alias mrun {st; #map run {%1} $runspeed}
+#alias mstop {#undelay PATH %d}
+#alias mrun2 {st; #map run {%1 %2} $runspeed}
+#alias mvoid {#map insert %1 void}
+#alias dopen {mdig %2; mopen %1 %2}
+#alias mlink {#map link %1 %2 both }
+#alias mlist {#map list {{.+}}}
+#alias mec {#map exit %1 command {%2 %3 %4; %4}}
+#alias mecm {mec %3 %1 %2 %3}
+#alias savenames {
+  mlist {variable} {vnums};
+  clearfile roomnames;
+  #foreach {$vnums} {vnum} {
+    #if {$vnum > 0 && "$vnums[$vnum]" != ""} {
+      #map get {roomname} {vroom} $vnum;
+      #line log shared/roomnames.txt {$vroom};
+    }
+  };
+}
+
+#alias clearfile
+{
+  #sys rm shared/%1.txt;
+}
+#alias mhide {
+  #map insert %1 hide;
+  #map move %1;
+  #map roomflag void;
+  %1;
+}
+
+#alias markrec {
+  #map set roomname {recuperate %1};
+  #map set roomsymbol [R];
+}
+
+#alias listrec {#map list recuperate}
+#alias gorec {mrun2 recuperate %1}
+
+#alias mopen {
+  #map exit %2 command {open %1 %2; %2};
+}
+
+#alias muo {
+  #map exit %2 command {uo %1 %2; %2}
+}
+#alias mgmy {#map goto mythsh}
+#alias mapmy {mapload; mgmy}
+#alias mlea {#map leave}
+#alias mgo {#map goto}
+#alias mret {#map return;
+  #if {"%1" != ""}{#map move %1};
+}
+#alias newzone {
+  mdig %1;
+  #map insert %1 hide;
+  #map move %1;
+  #map roomflag void;
+  %1;
+  #map set roomname %2;  
+}
+
+#action {^A sultry voice says 'an angry black vulture} {#delay 1 {say a great cormorant}}
+
+#alias sacor {say a great cormorant}
+#alias newroom {
+  #map goto zardonna;
+  #map dig up; #map move up;
+  #map unlink down both;
+}
+#alias newroom2 {
+  #map goto zardonna;
+  #map dig up; #map move up;
+  #map dig up; #map move up;
+  mname %1;
+  #map goto zardonna;
+  #map delete up;
+  #map goto %1;
+}
+#alias mapoff {
+  #map leave;
+  #alias cleartop cleartopwin;
+  #map flag static on;
+  #map flag vtmap off;
+  #split $gsizep 2;
+}
+#alias mdig {#map dig {%1} new; mapautosave;}
+#alias mname {
+ #map set roomname %0; #map write map-auotsave.txt;
+}
+
+#alias malo {%1 alone; #map move %1}
+#alias mundo {#map undo}
+#alias mget {#map get}
+#alias mleave {#map leave}
+#alias minfo {#map info}
+#alias mapkal {
+  mapon;
+  gokal;
+}
+#alias mapsave {
+  #map write krynn.txt;
+  savenames;
+}
+
+#alias mapautosave {
+  #map write map-autosave.txt;
+}
+#alias mrr {rr; mgmy; hold heart; down; south; west; bre}
+#ALIAS {cleartopwin}
+{
+  #if {%1 >= -$gsize} {#loop %1 -$gsize clearloop {#showme {.}{$clearloop}}}
+}
+
+#ALIAS {cli}
+{
+	jd cu li
+}
+
+#ALIAS {coli}
+{
+	js cont
+}
+
+#ALIAS {cref}
+{
+	use silver.charm
+}
+
+#alias tfa {js twisted}
+#alias csp {mai cspthis}
+#ALIAS {cspthis}
+{
+	st;
+	control spirit;
+	#variable pet all.spirit;
+	agg ott;
+}
+#alias bsp {bind spirit %1}
+#alias autobind {#alias gts {csp; tan bsp}}
+#alias autocontrol {#alias gts csp}
+#alias abs {absorb %1.spirit}
+#alias abl {js absolu}
+
+#alias abf {abs 1}
+#alias chs {channel %1.spirit %2}
+#alias chf {chs 1 %1}
+#alias fsd {fly stop; down}
+
+#action {^Your victim's tracks lead {\w+}} {ll #show track: %1}
+
+#alias cpn
+{
+	st;
+	control %1.spirit;
+	#variable pet all.spirit
+}
+
+#alias bsn {bind %1.spirit $tank}
+#alias hs9 {#9 {hex 2.guard; hex 3.guard; hex 4.guard; sk}}
+
+#ALIAS {cw}
+{
+	drink water;
+	jd cr wa %1;
+}
+
+#ALIAS {dan}
+{
+	dobooze; st;%1
+}
+
+#ALIAS {ddo}
+{
+	js dimension
+}
+
+#ALIAS {ddp}
+{
+	detect %1;
+	disable %1;
+	pick %1
+}
+
+#ALIAS {deer}
+{
+	dism;
+	e;
+	e;
+	rest
+}
+
+#ALIAS {detm}
+{
+	jd det %1 me
+}
+
+#ALIAS {dimo}
+{
+	dispel 'mo ma'
+}
+
+#ALIAS {dimp}
+{
+	dispel 'improved';
+	dispel 'invisi'
+}
+
+#ALIAS {dkl}
+{
+	ocl ki lord;
+	rem sceptre
+}
+
+#ALIAS {dm}
+{
+	jd di ma
+}
+
+#ALIAS {doban}
+{
+	wear %1; rem %1; rest; ban me; st
+}
+
+#ALIAS {dofood}
+{
+	eat $food; drink water;
+        cw skin;
+	jd c f;
+	put 8*$food belt;
+	drop all.$food;
+	get all.$food belt;
+  eat $food; drink water;
+}
+
+#alias cws {drink water; cw skin; drink water}
+#alias otka {otk %1; ass}
+
+#ALIAS {dolater}
+{
+	#variable nextaction %0;
+	#action {^{(\d.+>\s)?}{You knock yourself}}{mac $nextaction;#line gag;#unACTION {^{(\d.+>\s)?}{You knock yourself}}};
+	bonk me
+}
+
+#alias {gall} {#loop $groupindex 1 ii {%1 $groupmembers[$ii]}}
+#alias flapgroup {gall flap}
+#alias tbs {tbot $groupindex}
+#alias dograte {w;w;w;w;w;open grate s; s; open grate s; s; open wall; w; open wall; w}
+#ALIAS {dolater11}
+{
+	cand %0;
+	subcand 11
+}
+
+#ALIAS {dolater13}
+{
+	cand %0;
+	subcand 13
+}
+
+#ALIAS {dolater15}
+{
+	cand %0;
+	subcand 15
+}
+
+#ALIAS {dolater3}
+{
+	cand %0;
+	subcand 3
+}
+
+#ALIAS {dolater5}
+{
+	cand %0;
+	subcand 5
+}
+
+#ALIAS {dolater7}
+{
+	cand %0;
+	subcand 7
+}
+
+#ALIAS {dolater9}
+{
+	cand %0;
+	subcand 9
+}
+
+#ALIAS {dolight}
+{
+	rem ball;
+	drop ball;
+	get ball chest;
+	hold ball;
+	js light;
+	put ball chest
+}
+
+#ALIAS {doloot}
+{
+	get coins corpse;
+	tw;
+	exam corpse;
+	get coins;
+}
+
+#alias yi {sky ki %1; ota Talinia}
+
+#alias lootcomp {
+  get all.component corpse;
+  put all.component pouch;
+}
+#alias otta {ott; ass}
+
+#alias otaf {otta; #3 fren}
+
+#alias otaa {ota %1; ass}
+
+#alias asf {assist; #3 fren}
+
+#ALIAS {dopk}
+{
+	mac $aggro $pktarg
+}
+
+#alias sum {js sum}
+
+#alias rsr {jd re st}
+
+#alias gtw {gt who wants a word?}
+
+#ALIAS {dopoint}
+{
+	open gate;
+	e;
+	e;
+	e;
+	n;
+	open door;
+	n;
+	get all table;
+	s;
+	s;
+	w;
+	w;
+	n;
+	n;
+	open door;
+	e;
+	shake cup;
+	uog wall;
+	w;
+	s;
+	s;
+	open doors;
+	s;
+	uog case;
+	uog portrait; drop all.key
+}
+
+#ALIAS {doref}
+{
+	get silver.charm $belt;
+	rem necklace;
+	wear silver.charm;
+	use charm %1;
+	rem silver.charm;
+	put silver.charm $belt;
+	wear necklace
+}
+
+#ALIAS {dorep}
+{
+	rem %1;
+	repair %1;
+	wear %1;
+  gw;
+  fly;
+}
+
+#ALIAS {dosel2}
+{
+	say Selur Ihdob; e; fol %1;
+}
+#alias dosel {say Seinihs Enim; e; fol %1}
+#ALIAS {dosip}
+{
+	#if {"%1"!=""}
+	{
+		#variable booze %1
+	};
+	#3 dobooze;
+}
+
+#alias teth {js teth}
+#alias teba {teth bannon}
+#ALIAS {dotsu2}
+{
+	uo door w;
+	w;
+	close door;
+	tan hl
+}
+
+#alias fgw {force gates; west; close gates}
+#alias clerstabclose {uo %1 %2; %2; close %1; tan hl}
+#alias stabclose {clerstabclose}
+#alias shamstabclose {tan rg; uo %1 %2; %2; close %1; tc}
+#alias dotsu {stabclose door west; otk tsu}
+#alias dorogen {stabclose boxes west; otk rogeneye}
+#alias doxill {stabclose door west; otk xill}
+#alias dorhun {stabclose doors north; otk rhun}
+#alias refade {wingsweep; fade; reshoot}
+#ALIAS {dowater}
+{
+	wat bottle
+}
+
+#ALIAS {dp}
+{
+	dart;
+	peck
+}
+
+#ALIAS {dpa}
+{
+	disarm;
+	parry
+}
+
+#alias pdithis {punch %1; disarm}
+#alias pdi {bot pdithis}
+#ALIAS {drk}
+{
+	js dark
+}
+
+#ALIAS {dwa}
+{
+	dan war
+}
+
+#ALIAS {dwi}
+{
+	dan wil
+}
+
+#alias dwib {batt; dwi}
+#alias dwab {batt; dwa}
+#alias dheb {batt; dhe}
+
+#alias ssh {stup %1; hex %1; spook %1; hex %1; spook %1; lrn} 
+#action {^{\w+} has called you} {cancel; wake; st; fly}
+
+
+#alias sagr {bot {jd sa gr}}
+#alias bufe {#buffer find  %1 enlightened}
+#alias bufi {#buffer find %1 {%2 %3 %4}}
+#alias palkith {san me; palsham; #delay 2 {rescoff}}
+#alias oaf {ott; asf}
+
+#alias palshamold 
+{ 
+  mai voy rohane;
+  mai {hb rohane; ghob; group form};
+  #delay 1 {bfg $myshaman; bufpal; sumo; suel; palski};
+  mai;
+}
+
+#alias palsham {mai voy rohane; #delay 1 {mai bfg $myshaman; buftwo}; }
+#alias vogr {mai; voy %1; #delay 1 {bfg $myshaman}; ghob; group form; hb %1}
+#alias buftwo
+{
+  mai {hb rohane; ghob};
+  bufpal; sumo; suel; palski;
+  mai;
+}
+
+#alias pssh {fol %1; mssh %1; #ticker e4 {cancel; mssh %1} 240}
+#alias ue4 {cancel; #unticker e4}
+#alias dogem {bow elf; #9 {n;s}}
+#alias saygem {say you have my word}
+#alias mssh {ghob; sean; gmal; #20 {ssh %1}; }
+#alias age4 {st; #4 {age %1}; rest}
+#alias msshg {cancel; mssh 4.cityguard}
+#ALIAS {ef}
+{
+	#if {"%1"!=""}
+	{
+		#variable food %1
+	};
+	mac eat $food;
+        nutr $food;
+	eat $food;
+	drink water;
+	drink water;
+	exam water
+}
+
+#ALIAS {eng}
+{
+	#variable engvar %1
+}
+
+#ALIAS {fac}
+{
+	js free
+}
+
+#ALIAS {fo4}
+{
+	for '%1 %2' '%1 %2' '%1 %2' '%1 %2'
+}
+
+#ALIAS {formshowgroup}
+{
+	formshowgrouplin
+}
+
+#ALIAS {formshowgrouplin}
+{
+	#format {tempshowgroup} {m%-2s %-2s: %-20s %-9s q%-2s} {{$groupindex}{%2}{%1}{$tempcondition}{$groupindex}}
+}
+
+#ALIAS {formshowgroupwin}
+{
+	#format {tempshowgroup} {m%-2s %-2s: %-20s %-9s m%-2s} {$groupindex}{%2}{%1}{$tempcondition}{$groupindex}
+}
+
+#ALIAS {fromshowgroup}
+{
+	formshowgrouplin
+}
+
+#ALIAS {fsf}
+{
+	fill all.skin fountain
+}
+
+#alias fcf {fill all.canteen fountain}
+
+#alias fkw {fill keg well}
+#alias fkf {fill keg fountain}
+
+#ALIAS {fsw}
+{
+	fill all.skin well
+}
+
+#ALIAS {gd}
+{
+	give dagger %1;
+	o %1 hold dagger
+}
+
+#ALIAS {gh}
+{
+	#variable healsleft -1;
+	healcounton
+}
+
+#ALIAS {git}
+{
+	give all.identify temoke
+}
+
+#ALIAS {gobash}
+{
+	#if {"%1"!=""}
+	{
+		mac rem %1;
+		#variable held %1;
+	}
+	{
+		mac rem $held;
+	};
+	hold $light;
+	wear shield;
+	agg bt
+}
+
+#ALIAS {godual}
+{
+	rem $light;
+	rem shield;
+	agg kl;
+	#if {"%1"!=""}
+	{
+		mac hold %1;
+		#variable held %1
+	}
+	{
+		mac hold $held
+	}
+}
+
+#ALIAS {goirda} {n;n;w;n;e;n;n;e;n;n;w;w;w;w;s;s;e;n;n;e;#show EAST}
+#alias {prepsand} 
+{
+  for 're st' 'sp si' 're po' 're po' ; 
+  mem 'vi sp' 'vi sp' 'vi sp' 'vi sp' ;
+}
+#alias {donesand} {
+  fo4 vi sp; 
+  mem 're st' 'sp si' 're po' 're po'; 
+}
+#ALIAS {gow}
+{
+	js gust;
+	look;
+	score
+}
+
+#ALIAS {greentree}
+{
+	climb tree;
+	wake;
+	st;
+	e;
+	d;
+	stand circle; fly;
+	gt climb tree, wake, stand, e, d, stand circle
+}
+
+#ALIAS {groupappend}
+{
+	groupappendlin
+}
+
+#ALIAS {groupappendlin}
+{
+	#variable groupmembers {$groupmembers %1}
+}
+
+#alias addc addclin
+
+#ALIAS {addclin}
+{
+	#variable casters {$casters %1};
+	#showme $casters;
+}
+
+#alias addcwin
+{
+	#list casters add %1;
+	#showme $casters;
+}
+
+#ALIAS {groupappendwin}
+{
+	#list groupmembers add %1
+}
+
+#ALIAS {groupcapture}
+{
+	#variable groupline -1;
+	#variable groupmembers {};
+	#action {{^\s+}{\S+}{\s+}{\S+}{\s+}{\S+}{\s+\S+\s+\S+\s+\S+\s+\S+\s+\S+\s+\S+\s+}{\S+}} {showgroup %%4 %%6 %%8 %%2};
+        #alias cleartop cleartopwin;
+	#action {^{\d}} {groupcaptureoff};
+}
+
+#var grouppat {{^\s+}{\S+}{\s+}{\S+}{\s+}{\S+}{\s+\S+\s+\S+\s+\S+\s+\S+\s+\S+\s+\S+\s+}{\S+}}
+#ALIAS {groupcaptureoff}
+{
+	#unaction {{^\s+}{\S+}{\s+}{\S+}{\s+}{\S+}{\s+\S+\s+\S+\s+\S+\s+\S+\s+\S+\s+\S+\s+}{\S+}};
+	#unaction {^{\d}};
+	cleartop $groupline;
+        #alias cleartop donothing;
+}
+
+#ALIAS {gw}
+{
+	#if {"%1"!=""}
+	{
+		mac get %1;
+		wield %1;
+		#variable weapon %1
+	}
+	{
+		mac get $weapon;
+		wield $weapon
+	}
+}
+
+#ALIAS {h1}
+{
+	m1 hl
+}
+
+#ALIAS {h10}
+{
+	m10 hl
+}
+
+#ALIAS {h2}
+{
+	m2 hl
+}
+
+#ALIAS {h3}
+{
+	m3 hl
+}
+
+#ALIAS {h4}
+{
+	m4 hl
+}
+
+#ALIAS {h5}
+{
+	m5 hl
+}
+
+#ALIAS {h6}
+{
+	m6 hl
+}
+
+#ALIAS {h7}
+{
+	m7 hl
+}
+
+#ALIAS {h8}
+{
+	m8 hl
+}
+
+#ALIAS {h9}
+{
+	m9 hl
+}
+
+#ALIAS {hamme}
+{
+	js spir;
+	wield hammer
+}
+
+#ALIAS {handlelater}
+{
+	#variable candlevel 0;
+	#unaction {$laterpat};
+	mac $nextaction;
+	#line gag
+}
+
+#var noshout {Deveraux|Qanonb}
+#action {^{$noshout} shouts} {#line gag} {1}
+
+#ALIAS {hb}
+{
+	jd heal boost
+}
+
+#ALIAS {dhe}{dan heal}
+
+#ALIAS {headerlin}
+{
+	#format header {heals left:%+2s  till tick: %+2s   resc: %-12s  arrive: %s}{{$healsleft}{$tilltick}{$resctar}{$arrival}}
+}
+
+#ALIAS {headerwin}
+{
+	#format header {heals left:%+2s  till tick: %+2s   resc: %-12s  arrive: %s} {$healsleft}{$tilltick}{$resctar}{$arrival}
+}
+
+#ALIAS {healcountoff}
+{
+	#variable countheals 0;
+	#unaction {^{\s|6}%D%d\]{$slot6}%D%d\]{$slot6}%D%d\]{$slot6}{\s*}$};
+	#unaction {^{\s|6}%D%d\]{$slot6}%D%d\]{$slot6}{\s*}$};
+	#unaction {^{\s|6}%D%d\]{$slot6}{\s*}$};
+	#unaction {^Spells being};
+	#unaction {^Spells left};
+	#unaction {^{1:|2:|3:|4:|7:|8:|5:|\s+\[|You estimate your studies|Spells currently|\s*$}}
+}
+
+#ALIAS {healcounton}
+{
+	#variable healtemp 0;
+	#variable countheals 1;
+	#action {^{\s|6}%D%d\]{$slot6}%D%d\]{$slot6}%D%d\]{$slot6}{\s*}$} {addheal3 %%3 %%6 %%9} {3};
+	#action {^{\s|6}%D%d\]{$slot6}%D%d\]{$slot6}{\s*}$} {addheal2 %%3 %%6} {3};
+	#action {^{\s|6}%D%d\]{$slot6}{\s*}$} {addheal %%3} {3};
+	#action {^Spells being}{#variable countheals 0};
+	#action {^Spells left}{#variable countheals 0;showheal $healtemp;healcountoff;#line gag;};
+	#action {^{1:|2:|3:|4:|7:|8:|5:|\s+\[|You estimate your studies|Spells currently|\s*$}} {#line gag};
+	mem
+}
+
+#alias hl {mai hlthis}
+#ALIAS {hlthis}
+{
+	js heal %1;
+	healcounton;
+	dolater3 group
+}
+
+#ALIAS {hm}
+{
+	jd ho mo
+}
+
+#ALIAS {hoar}
+{
+	jd ho ar
+}
+
+#ALIAS {hola}
+{
+	jd holy arms
+}
+
+#ALIAS {hp}
+{
+	jd ho pe
+}
+
+#ALIAS {hr}
+{
+	js hero %1;
+	modecleric
+}
+
+#ALIAS {hte}
+{
+	hl temoke
+}
+
+#ALIAS {inn}
+{
+	#if {"%1"!=""}
+	{
+		js word %1
+	}
+	{
+		js word me
+	}
+}
+
+#alias ink {inn; mgo kalinn}
+#alias etp {jd eth pa}
+
+#ALIAS {jch}
+{
+	js charm %1;
+	#variable charmie %1
+}
+
+#ALIAS {jd}
+{
+	#if {$firstspell==1}
+	{
+		mem '$circle1'
+	};
+	dost;
+	mac cast '%1 %2' %3;
+	#if {$firstspell==1}
+	{
+		m s '$circle1';
+		#variable firstspell 0
+	}
+}
+
+#var {circle1} {bone}
+
+#ALIAS {jd2}
+{
+	#if {@firstspell}
+	{
+		mem '@slot1'
+	};
+	st;
+	cast '%1 %2' %3;
+	#if {@firstspell}
+	{
+		m s '@slot1';
+		firstspell=0
+	}
+}
+
+#ALIAS {jj}
+{
+	score
+}
+
+#ALIAS {js}
+{
+	#if {$firstspell==1}
+	{
+		mem '$circle1'
+	};
+	dost;
+	mac cast '%1' %2;
+	#if {$firstspell==1}
+	{
+		m s '$circle1';
+		#variable firstspell 0
+	}
+}
+
+#ALIAS {js2}
+{
+	#if {@firstspell}
+	{
+		mem '@slot1'
+	};
+	st;
+	cast '%1' %2;
+	#if {@firstspell}
+	{
+		m s '@slot1';
+		firstspell=0
+	}
+}
+
+#ALIAS {ka}
+{
+	kill %1;
+	oha
+}
+
+#ALIAS {kab}
+{
+	jda ac bl
+}
+
+#ALIAS {karr}
+{
+	st;
+	mac ke $arrival
+}
+
+#alias ke {punch %1; $engvar %1}
+#ALIAS {kas}
+{
+	mag jda ar sp
+}
+#alias kal {mag jda ar la}
+#alias ksub {js subl}
+#ALIAS {kbl}
+{
+	jd ma bl
+}
+#alias kig {mag {jsa ignite %1; ota}}
+#alias krot {jsa rot}
+#alias ksb {jda s b}
+#alias frn {st; fren}
+#ALIAS {kbn}
+{
+	ki %1;
+	obn %1;
+}
+
+#ALIAS {kbo}
+{
+	jd ma bo
+}
+
+#ALIAS {kbust}
+{
+	#math kwordindex {$kwordindex+1};
+	mac $kwords[$kwordindex] %1
+}
+
+#ALIAS {kco}
+{
+	js cone
+}
+
+#alias csn {mag jd co sn}
+#alias cso {csn; mag ota; mai ott}
+#ALIAS {kcr}
+{
+	jd ca cr %1;
+	group
+}
+
+#ALIAS {kdg}
+{
+	jd di g %1;
+}
+
+#ALIAS {kdv}
+{
+	jd di e %1;
+}
+
+#ALIAS {kel}
+{
+	jd el fi
+}
+
+#ALIAS {kfo}
+{
+	js force
+}
+
+#alias kfm {jdm fo mi}
+
+#alias ide {js iden}
+
+#alias anb {jd anc bl; fly; wield bow; }
+#alias ome {js omen}
+#alias ansh {jd anc shr}
+
+#alias gma {mai js ghostmaster}
+
+#alias gdark {gma dark}
+#alias gthie {gma thie}
+#alias gbarb {gma barb}
+#alias gwarr {gma warr}
+#alias gpala {gma pala}
+#alias gscou {gma scou}
+
+#alias gcler {gma cler}
+#alias gdrui {gma drui}
+
+#alias gmal {gma; lrn}
+
+#ALIAS {kfs}
+{
+	js flame
+}
+
+#alias kh bot khthis
+#ALIAS {khthis}
+{
+	punch %1;
+	mac kick %1 high;
+	st;
+}
+
+#alias kk {
+  bot {punch %1; mac kick %1}
+}
+
+#alias btm {bt %1; mai ki %1}
+#alias kkm {kk %1; mai ki %1}
+#alias kos {kst %1; ko %1}
+#alias slh {bot slam %1; ko %1}
+#ALIAS {kha}
+{
+	js harm
+}
+
+#ALIAS {kist}
+{
+	jd ice storm
+}
+
+#action {^The spirit of {.+} fades into} {spiritfade}
+#action {^No spirits heed} {cancel}
+#alias spiritfade donothing
+#alias cancelcall {cancel; #alias spiritfade donothing;}
+#alias cal {#alias spiritfade cancelcall; call; call; call}
+#alias kl {mac bot klthis}
+#ALIAS {klthis}
+{
+	punch %1;
+	mac kick %1 low;
+	st;
+}
+
+#alias klow {mac kick %1 low}
+
+#ALIAS {klb}
+{
+	jdm li bo
+}
+
+#alias jdm {mag jda}
+#alias klbn {jd li bo}
+#ALIAS {klc}
+{
+	mac kloot corpse
+}
+
+#ALIAS {kli}
+{
+	jd ca li
+}
+
+#ALIAS {kloot}
+{
+	get all %1;
+	put all chest;
+	get sheaf;
+	get sphere;
+	get all %1;
+	put all chest;
+	get glowing.recall chest
+}
+
+#alias dosheaf {w alone; get sheaf pants; present sheaf; #4 flee}
+#alias sph {js sphere}
+#ALIAS {kma}
+{
+	js magic
+}
+
+#ALIAS {kmm}
+{
+	mag jda ma mi
+}
+
+#ALIAS {kp}
+{
+	st;
+	mac kick %1;
+	st;
+	punch
+}
+
+#ALIAS {ks}
+{
+	mac kick %1;
+	st
+}
+
+#ALIAS {kser}
+{
+	jd cau ser
+}
+
+#ALIAS {ksg}
+{
+	jdm sh gr
+}
+
+#ALIAS {ksil}
+{
+	jsa sil
+}
+
+#ALIAS {kso}
+{
+	jda soul leech
+}
+
+#ALIAS {ksun}
+{
+	c 'sunbolt' %1; st
+}
+
+#alias mbn {js sunray}
+
+#ALIAS {ksw}
+{
+	js insect
+}
+
+#ALIAS {kth}
+{
+	js thorn
+}
+
+#ALIAS {lc}
+{
+	js locate
+}
+
+#alias alc {jd as lo}
+#alias alcm {alc macabre}
+#alias alcb {alc book}
+#ALIAS {lcb}
+{
+	js locate book
+}
+#alias lcm {lc macabre}
+#ALIAS {log}
+{
+	#if {"%0" == "on"}
+	{
+		#if {"$logging" != "on"}
+		{
+			#format {time} {%T};
+			#format {logfile} {logs/%d.txt} {$time};
+			#log append $logfile;
+			#variable logging on
+		}
+		{
+			#showme You are already logging.
+		}
+	};
+	#if {"%0" == "off"}
+	{
+		#if {"$logging" == "on"}
+		{
+			#log;
+			#variable logging off
+		}
+		{
+			#showme You are not logging.
+		}
+	};
+	#if {"%0" != "off" && "%0" != "on"}
+	{
+		#showme Turn log on or off?
+	}
+}
+
+#ALIAS {login}
+{
+	#split $gsizep 2;
+	#session arc mud.arctic.org 2700;
+	reload;
+	platformlin
+}
+
+#var gsize 8 
+#var gsizep 9 
+#ALIAS {logip}
+{
+	#split $gsizep 2;
+	#session arc 72.14.183.147 2700
+}
+
+#ALIAS {logwin}
+{
+	#session arc mud.arctic.org 2700;
+	#split $gsizep 2;
+	reload;
+	platformwin
+}
+
+
+#ALIAS {logbot} {newses bot}
+#alias newses
+{
+        #session %1 mud.arctic.org 2700;
+        #split $gsizep 2;
+        reload;
+        #delay 1 {#ses};
+        platformwin;
+}
+
+#alias kstthis {strike %1; bpa}
+#alias kst {bot aggone kstthis} 
+#alias ksta {kst %1; mai ott}
+#alias brs {bot {cancel; rescue %1}}
+#ALIAS {logwip}
+{
+	#session arc 52.43.146.225 2700;
+	#split $gsizep 2;
+	reload;
+	platformwin
+}
+
+
+#ALIAS {loopautoheal}
+{
+	group;
+	#temp {Hug Whom} {#gag;#wait 1;countheals};
+	hug
+}
+
+#ALIAS {lootoff}
+{
+	#alias doloot {tw; exam corpse}
+}
+
+#ALIAS {looton}
+{
+	#alias doloot {
+	  get coins corpse;
+	  tw;
+	  exam corpse;
+	  get coins;
+	}
+}
+
+#ALIAS {lp}
+{
+	lock door e;
+	pick door e;
+	lock door w;
+	pick door w
+}
+
+#ALIAS {m1}
+{
+	%0 $groupmembers[1]
+}
+
+#ALIAS {m10}
+{
+	%0 $groupmembers[10]
+}
+
+#ALIAS {m2}
+{
+	%0 $groupmembers[2]
+}
+
+#ALIAS {m3}
+{
+	%0 $groupmembers[3]
+}
+
+#ALIAS {m4}
+{
+	%0 $groupmembers[4]
+}
+
+#ALIAS {m5}
+{
+	%0 $groupmembers[5]
+}
+
+#ALIAS {m6}
+{
+	%0 $groupmembers[6]
+}
+
+#ALIAS {m7}
+{
+	%0 $groupmembers[7]
+}
+
+#ALIAS {m8}
+{
+	%0 $groupmembers[8]
+}
+
+#ALIAS {m9}
+{
+	%0 $groupmembers[9]
+}
+
+#ALIAS {mac}
+{
+	#showme :%0;
+	%0
+}
+
+#alias shesh {%0 Suliantongzhi}
+#alias bran {%0 Stakceibotar}
+#alias tbran {tell Stakceibotar}
+
+#ALIAS {makebar} {makechar %1 n; 7;6;5;9; finchar}
+
+#alias enci {enc %1; ide %1}
+
+#alias makechar
+{
+	start;	%1;	y;
+	mypw;	mypw;
+	%2;	f;	
+}
+
+#alias nutr {
+  #var food %1;
+  #ticker feedme {taste %1; sip water} {99};
+}
+
+#alias mclerdeath {
+  mem 'bles' 'know' 'aid' 'ai' 'c f' 'c w' 're st' 're st' 'sil' 'sil' 'sil' 'cu bli' 'cu bl' 'cu bl' 'bli' 'bli' 'bli' 're cu' 're po' 're po' 're po' 'gust' 'gust' 'gust' 'cloak' 'san' 'f a' 'f a' 'f a' 'di ma' 'di ma' 'di ma' 'for' 'cu cr' 'cu cr' 'cur cr' 'cu cr' 'cu se' 'sum' 'sum' 'sum' 'sum';
+  mem 'so le' 'so le' 'so le' 'gate' 'steel' 'he mi';
+}
+#alias mnap {m s; mem 'sat' 'nap' 'da so' 'sp gl' 'sp si'; rest}
+#alias mdeath
+{
+  sgl; rg me; jd sp si; sat;
+  mem 'a b' 'bo sh' 'an sh' 'an sh' 'bli' 'cu bl' 're cu' 'cu bl' 'cu bl' 're st' 'vi sp' 're po' 're po' 're po' 'vi sp' 'am sp' 'su re' 'su re' 'su re' 'gh be' 'so le' 'te h' 'e p' 'sanctu' 'gho ri' 'cu cr' 'cu cr' 'cu cr' 'cu cr';
+  mem 'ri vo' 'ri vo' 'ri vo' 'ri vo' 'da so' 'ri vo' 'ghosts' 'e a' 'ghosts' 'twi fa' 'so pr' 'he wa' 'he wa' 'he wa' 'he wa' 'sa co' 'bo sh' 'so le';
+  js nap;
+}
+#alias finchar {y;
+richard_wan@hotmail.com;	1;	1;	1;	1;
+	option brief;
+	prompt condition
+}
+
+#alias dt {drain %1; thrust %1; gaim}
+
+#ALIAS {makecler}
+{
+	start;
+	%1;
+	y;
+	noo3bee;
+	noo3bee;
+	m;
+	2;
+	6;
+	9;
+	rfwan~@shaw.ca;
+	1;
+	1;
+	1;
+	1;
+	option ansi;
+	option brief;
+	prompt condition
+}
+
+#ALIAS {mal}
+{
+	bot jd cu mal
+}
+
+
+#alias rcur {jd re cu}
+#alias know  {js know}
+
+#ALIAS {manassist}
+{
+	#t- autoassist
+}
+
+#ALIAS {mb}
+{
+	mem '$circle1';
+	mac %0;
+	m s '$circle1'
+}
+
+#ALIAS {mbad}
+{
+	#variable healMainAtBad 1
+}
+
+#ALIAS {mbadoff}
+{
+	#variable healMainAtBad 0
+}
+
+#ALIAS {mbl}
+{
+	jd ma bl
+}
+
+#ALIAS {mbm}
+{
+	mb mem '%1 %2'
+}
+
+#ALIAS {mco}
+{
+	meta carve corpse
+}
+
+#ALIAS {mcr}
+{
+	fo4 di e;
+	me4 cu cr
+}
+
+#ALIAS {mdv}
+{
+	fo4 cu cr;
+	me4 di e;
+}
+
+#alias hy {js para}
+
+#alias mpar {fo4 flame; me4 para}
+#alias mfla {fo4 para; me4 flame}
+#alias voy4 {m s; me4 ri vo}
+#alias ha4 {m s; me4 harm}
+#alias hlr {js heal %1; rest}
+#ALIAS {me4}
+{
+  mb mem '%1 %2' '%1 %2' '%1 %2' '%1 %2';
+  bigrest;
+}
+
+#alias dokith {place gem indentation; n; n; n; w; w; exam kith; e}
+#ALIAS {meta}
+{
+	%1 1.%2;
+	%1 2.%2;
+	%1 3.%2;
+	%1 4.%2;
+	%1 5.%2;
+        %1 6.%2;
+}
+
+#alias dech {detect %1.chest in room}
+#alias dech4 {#loop 1 4 loop {dech $loop}}
+#ALIAS {mfo}
+{
+	fo4 loca;
+	me4 force
+}
+
+#ALIAS {mha}
+{
+	mbm harm
+}
+
+#ALIAS {mhe}
+{
+	m s;
+        me4 heal;
+}
+
+#alias d9 {#9 dep 99}
+#alias d50 {#50 dep 99}
+#ALIAS {mho}
+{
+	fo4 tel;
+	me4 ho pe
+}
+
+#alias md {mem '%1 %2'}
+#alias fd {for '%1 %2'}
+
+#ALIAS {mig}
+{
+	jd unholy might
+}
+
+#ALIAS {min3}
+{
+	#ticker {min3} {%1 %2}{180}
+}
+
+#ALIAS {mlo}
+{
+	fo4 force;
+	me4 loca
+}
+
+#ALIAS {mm}
+{
+	dism;
+	march;
+	march;
+	mount
+}
+
+#ALIAS {modecleric}
+{
+	#variable food $clerfood;
+ #var circle1 bless;
+ agg turn;
+ #alias ke {kst %%1; oes; otk %%1};
+
+ vch corpse;
+ guston;
+	#alias fastmem {med; }
+}
+
+#alias twopets {
+  #alias oe {o $pet %%0; ocl %%0}
+}
+
+#alias oej {give jaw corpse; oe get jaw; oe wield jaw}
+#alias guston {#alias oncloud {cancel; c 'gust'}}
+#alias gustoff {#alias oncloud {gt -->    GUST please}}
+#alias gfl {sky gflap}
+#alias wilf {sky wildfire}
+#alias zom {js zom}
+#alias gtan {gt tank %1; tan rg}
+#alias baf {asf; bpa}
+#alias bsm {bot slam %1; asm}
+
+#alias inri {inspect gleaming.medal}
+#alias pn {punch %1; ota}
+#alias pnh {pn %1; hex}
+#alias drlicr {drop crate; light crate}
+#alias rga {ota %1; rg %1}
+#alias rgab {brs %1; rga %1}
+#alias modeshaman {
+  #alias bigrest {rest; tan watch; #var resting 1};
+  #alias othervoy othervoyimpl;
+  #alias ke {kst %%1; otk %%1};
+  #alias cleancomp cleancomp1;
+  #var {circle1} {clot};
+  #unticker feedme;
+  #alias stabclose shamstabclose;
+  #alias rs rga;
+  #var pet all.spirit;
+  #VARIABLE {slot6} {regenerate|heal boost|zombify|ritual voyage|darkened soul};
+  #alias hl {rgc};
+  #action {^{\w+} makes preparations for} {classif ghostfor %%1};
+  #ALIAS {someheals}
+	{
+		mac gt ---> %%1 regens remaining <---
+	};
+
+	#ALIAS {oneheal}
+	{
+		mac gt ---> ONE REGEN REMAINING! <---
+	};
+
+	#ALIAS {noheals}
+	{
+		mac gt ---> !! OUT OF REGENERATION !! <---;
+		gt ---> !! OUT OF REGENERATION !! <---
+	};
+}
+
+
+#alias skillbell {#action {^You feel enligh} {gotenligh}}
+#alias fssh {fol %1; skillbell; #9 {mssh %1}}
+#alias gotenligh {#bell}
+#alias sst {stup %1; #4 {spook %1}; sk}
+#alias fsst {fol %1; skillbell; sat; #99 {sst %1}}
+
+#ALIAS {mp}
+{
+	jd ho au;
+	modecleric
+}
+
+#ALIAS {ms}
+{
+	mem stop '%1 %2'
+}
+
+#ALIAS {msh}
+{
+	m s 'har'
+}
+
+#ALIAS {mtel}
+{
+	fo4 ho pe;
+	me4 tel
+}
+
+#ALIAS {nig}
+{
+	js night
+}
+
+#ALIAS {npp}
+{
+	jd neg pl
+}
+
+#alias doha {fsd; w; say harmonious; n; w; w; en opening; fly}
+
+#alias pbani
+{
+  #action {^A{n?} {\w+}{(\s\w+)?} now follows} {cancel; lrn; sk; #15 bani %%2; };
+  #action {^{\w+} {the bronze dragon} now follows} {cancel; lrn; sean; ghob; #15 bani %%1;}
+}
+
+#alias autosum {
+  #action {$pet the bronze dragon stops following you} {sumo; rest};
+  #action {You can't remember how to cast that spell} {#delay 60 {sumo; rest}};
+  rescoff;
+}
+#alias rescoff {#alias rs donothing}
+#alias rescon {#alias rs {st; rescue %%1 }}
+#action {^You utter the words, 'regenerate'} {#delay 24 {showgen}}
+
+#alias showgen {#showme ----> REGEN back up}
+#ALIAS {obi}
+{
+	ocl ki %1;
+	bn %1
+}
+
+#ALIAS {obn}
+{
+	ocl ca 'blin'
+}
+
+#ALIAS {oct}
+{
+	ocl assist $tank
+}
+#alias oaa {ota; oca}
+#alias oat {ott; oct}
+#alias oakk {otk %1; ocl ki %1; ki %1}
+
+#alias oca {ocl ass}
+
+#alias octa {oct; ass}
+
+#ALIAS {ocf}
+{
+	ocl for '%1 %2' '%1 %2' '%1 %2' '%1 %2'
+}
+
+#ALIAS {oci}
+{
+	ocl c 'ice'
+}
+
+#ALIAS {ock}
+{
+	ocl ki %1;
+	klb %1;
+	ass $charmie
+}
+
+#ALIAS {ocl}
+{
+	order all.$charmie %0;
+	#if {"$charmie2" != ""}
+	{
+		order all.$charmie2 %0
+	}
+}
+
+#ALIAS {ocm}
+{
+	ocl mem '%1 %2' '%1 %2' '%1 %2' '%1 %2'
+}
+
+#ALIAS {ofor2}
+{
+	ocl for 're cu';
+	ocl for 'cu bl';
+	ocl for 're cu';
+	ocl for 'cu bl'
+}
+
+#ALIAS {ofor3}
+{
+	ocl for 'ca ser';
+	ocl for 'sil';
+	ocl for 'ca li';
+	ocl for 'curse';
+	ocl for 'fear';
+	ocl for 'bless';
+	ocl for 'know';
+	ocl for 'poi'
+}
+
+#ALIAS {oh}
+{
+	order @mount
+}
+
+#ALIAS {oha}
+{
+	order @mount assist;
+	av leg;
+	rally
+}
+
+#ALIAS {ohk}
+{
+	or @mount ki %1;
+	rescue @mount
+}
+
+#ALIAS {oki}
+{
+	ocl ki %1;
+	assist
+}
+
+#ALIAS {okr}
+{
+	ocl ki %1;
+	#3 rescue $charmie;
+}
+
+#ALIAS {oli}
+{
+	ocl ca 'cu li' %1;
+	#delay {4} {ocl ca 'cu li' %1};
+	#delay {8} {ocl ca 'cu li' %1};
+	#delay {12} {ocl ca 'cu li' %1}
+}
+
+#ALIAS {omchaun}
+{
+	ocf for;
+	ocf cu bl;
+	ocm ca cr;
+	ocm bli;
+	ocl for 'cloak' 'prayer' 'san' 'p f e' 're po';
+	ocf sacred;
+	ocm ho pe;
+	omcler
+}
+
+#ALIAS {omcler}
+{
+	ocl for 're po' 're po' 'pro fr ev' 'pro fr ev' 're cu' 're cu' 'cu bl' 'cu bl' 're cu' 'cu bl' 'cu bl' 'ca li' 'ca li' 'ca li';
+	ocl mem 'cu ser' 'cu ser' 'cu ser' 'cu ser' 'bli' 'bli' 'bli' 'bli' 'bli' 'bli' 'bli' 'cu li' 'cu li' 'cu li' 'cu li'
+}
+
+#ALIAS {omdru}
+{
+	ocf cu ser;
+	ocm ice;
+	ocf bark;
+	ocf bark;
+	ocm thorn;
+	ocm thorn
+}
+
+#ALIAS {omem}
+{
+	ocm 'cu li';
+	ocm 'bli';
+	ocm 'cu ser'
+}
+
+#ALIAS {ommage}
+{
+	ocl for 'anti' 'boo' 'sphe' 'mino' 'mirro' 'blur' 'blur' 'blur' 'shield' 'shield' 'shi';
+	ocf blur;
+	ocf det;
+	ocf shield;
+	ocf det;
+	ocm force;
+	ocm magi;
+	ocm shock;
+	ocm force;
+	ocm magi;
+	ocm shock
+}
+
+#ALIAS {oo}
+{
+	o all.corpse %0;
+	o chi %0
+}
+
+#ALIAS {oprep}
+{
+	ofor1;
+	#delay {2} {omem};
+	#delay {4} {ofor2};
+	#delay {6} {omem};
+	#delay {8} {ofor2};
+	#delay {10} {omem}
+}
+
+#ALIAS {oser}
+{
+	ocl ca 'cu ser' %1;
+	#delay {4} {ocl ca 'cu ser' %1}
+}
+
+#ALIAS {osl}
+{
+	#delay {7} {o pufv stand}
+}
+
+#ALIAS {opet}
+{
+	oe
+}
+
+#alias oe {o $pet %0}
+
+#var pet {Boanes}
+
+#alias otk {aggtwo opet ki %1}
+
+#alias ota  {vota}
+#ALIAS {vota}
+{
+  onfight;
+	opet assist %1;
+	oe st;
+}
+
+#alias w9 {#9 with 99}
+
+#alias ott {onfight; tan watch; opet assist $tank; opet st}
+
+#alias opr {opet rest}
+#alias ops {opet stand}
+
+#ALIAS {otb}
+{
+	o pufv swoop %1;
+	osl
+}
+
+#ALIAS {othl}
+{
+	opet hold lantern
+}
+
+#ALIAS {otr}
+{
+	opet ki %1;
+	rdr
+}
+
+#ALIAS {otrl}
+{
+	opet rem lantern
+}
+
+#ALIAS {pb}
+{
+	#ticker {pbrsc}{brsc %1}{153}
+}
+
+#alias pbsh {#action {^You feel e}{gmal}; e3 brsh}
+#alias buym {buy 12*%1; put all.%1 chest}
+#alias pboff {#unticker pbrsc}
+
+#alias iid {#3 into; dwi}
+
+#alias enc {js ench}
+
+#alias decan {get decanter belt; fill skin decanter; put decanter belt}
+
+#ALIAS {pbr}
+{
+	get empty chest;
+        rest;
+	mac brew empty '%1';
+	put all.empty chest;
+	drop brewed;
+}
+
+#alias pta {otk %1; taunt %1; flee; flee}
+
+#alias practaunt
+{
+  #var vtaunt %1;
+  #action {^{\w+} comes to your rescue} {cancel; skill; group; st; taunt $vtaunt};
+  #action {^You laugh and jeer {.+} ignores you} {st; taunt $vtaunt};
+  #ticker e4 {cancel; gmal; ghob; st; taunt $vtaunt} 240;
+}
+
+
+#ALIAS {pcs}
+{
+	plant %1 %2;
+	case %2;
+	steal %1 %2
+}
+
+#alias asr {assist; tan rg;}
+
+#alias kkvi  {otk %1; js vile %1}
+#alias kvi {js vile}
+#ALIAS {pf}
+{
+	jd protect from
+}
+
+#ALIAS {pk}
+{
+	#if {"%1"!=""}
+	{
+		#variable pktarg %1;
+		#action {^{(\d.+>\s)?}$pktarg {stands up|arrives|flies in|appears before}} {dopk};
+		#action {$pktarg{,?} {.*}is {standing|sitting|resting|sleeping|lying}{.+}{\.|\)}$} {dopk};
+		#action {^%w is dead} {klc};
+		#highlight {$pktarg}                    {light yellow}                   {5}
+	}
+	{
+		#unaction {^{(\d.+>\s)?}$pktarg {stands up|arrives|flies in|appears before}};
+		#unaction {$pktarg{,?} {.*}is {standing|sitting|resting|sleeping|lying}{.+}{\.|\)}$};
+		#unaction {^%w is dead};
+		#unhighlight {$pktarg}
+	}
+}
+
+#ALIAS {platformlin}
+{
+	#alias setheader headerlin;
+	#alias groupappend groupappendlin;
+	#alias formshowgroup formshowgrouplin;
+	#alias cleartop cleartoplin;
+	#alias addc addclin;
+}
+
+#ALIAS {platformwin}
+{
+	#alias setheader headerwin;
+	#alias groupappend groupappendwin;
+	#alias formshowgroup formshowgroupwin;
+	#alias cleartop cleartopwin;
+	#alias addc addcwin;
+	#message variables off;
+	#message actions off
+}
+
+#ALIAS {pot}
+{
+	get %1.potion $belt;
+	quaff %1.potion
+}
+
+#alias ksd {jdm shards of}
+#alias gostunt {
+  w; s; open gate; w; w; w; s; w; s; s; s; w; s;
+}
+#alias stuntbush {
+  w;w;w;w;u;n;d;w;n;n;n;d;n;d;n;n;e;e;e;e;s;s; 
+  ent tent; get knife blanket; open flap; e; pluck bush;
+  s; e; e; u; w; u; s; u; e; show leaf;  
+}
+#alias stunttar {stuntbush; gotar}
+#alias mystmirror {
+  #action {^A Small Guest Room} {enter; n; n;}
+}
+#alias gc {st; gore %1; ch %1}
+#alias stuntshore {stuntbush; w;d;n;d;e;d;n;e;e;n;e;e;}
+#alias jread {get saffron belt; put saffron pouch; js read}
+#alias jmoc {sysplay smb3_coin; js moment}
+#alias cubread {get metal.cube belt; say praise the gods; put metal.cube belt; put 6*food belt; drop all.food; get all.food belt}
+#alias bushcrop {s; s; e; e;}
+#alias agc {assail; gore; charge; st}
+#alias otag {ott; ass; ga}
+#alias snagsan {open door; w; s; w; s; s; open gate; w;s;s;e;s;s;s;e;s;s;d;d;w;w;w;d;s;w;w;s;s;w;d;s;s;e;u;n;u;e;}
+#alias locer {goner; snagsan; lctab}
+#alias nerse {s;s;s;s;s;e;e;s;e;s;e;e;e;e;e;}
+#alias nerwn {w;w;w;w;w;n;w;n;w;w;n;n;n;n;n;}
+#alias delrent {#delay %1 {rent; 0}}
+#alias mageoff {gokal;  mrun kalinn; #delay 9 {restick rentout}}
+#alias rentout {st; rent quiet; 0}
+#ALIAS {prac}
+{
+	bt %1;
+	kick;
+	punch
+}
+
+#ALIAS {ptar}
+{
+    ki %1;
+	#3 {st; target %2; target %1};
+	sk;
+}
+
+#alias pracin {quell %1; inst %1; inst %1; inst %1; lrn}
+
+#alias pracbar
+{
+  #action {^You are ready to mend} {mend hammer; exam hammer};
+  #action {^You are ready to sharpen} {shd};
+  #action {^The wooden surface of the warhammer is in perfect condition.} {drop hammer; get hammer chest};
+}
+#alias pracamr {
+  #action {^The gods smile upon you} {amel; lrn};
+  #action {^You sense the call of the gods} {raptur; lrn};
+  amel; rapt; lrn;
+}
+#alias amr {amel; rapt}
+#alias pracban
+{
+  #action {^You throw away} {prba %1} {4};
+  prba %1;
+}
+#alias mendag
+{
+  #action {^You are ready to mend} {mend dagger; exam dagger; st; lrn};
+  #action {^The dagger's metallic surface is bright and shiny} {drop dagger; get dagger chest};
+}
+#alias kdu {jd de un}
+#alias prbabar {
+  rest; rem %1; wear %1; recup; ban me; st; lrn; lore %1;
+}
+
+
+
+#alias kduc {kdu creature}
+#alias aii {assail; into; into; sett}
+#alias shd {modebarb; sharp dagger; sharp 2.dagger; sharp 3.dagger; sharp 4.dagger; sharp 5.dagger; sharp 6.dagger; sharp 7.dagger; sharp 8.dagger}
+#alias asb {assist; batt; assail}
+#alias ttr {track %2.%1}
+#alias gtk {gt gank %1; kill %1}
+#alias gtdd {gt disengage d}
+#alias gtdu {gt disengage u}
+#alias gtdn {gt disengage n}
+#alias gtds {gt disengage s}
+#alias gtdw {gt disengage w}
+#alias gtde {gt disengage e}
+#alias dg {disengage}
+
+#alias banbar {rem %1; wear %1; rest; ban me; st; lore %1; lrn}
+#alias age {js haste %1; dm %1}
+#alias remb {remove %1; put %1 $belt}
+
+#alias wieb {get %1 belt; wield %1}
+
+#alias msym {#map set roomsymbol [%1]}
+#alias wearb {get %1 $belt; wear %1}
+#action {^You feel up to using {gather|scavenge|dart}} {%1}
+#action {^You feel up to using volley} {upvolley}
+#alias upvolley amaze
+#alias skyfoodthis {skyscav; skygath}
+#alias skyfood {sky skyfoodthis}
+#alias skyscav {quell owl; inst crow; inst crow; scav}
+#alias tal {%1 Talinia}
+#alias skygath {quell crow; inst owl; inst owl; gather}
+#alias rh {rem bow; hold bow}
+#alias kin {ki %1; dart; quell crow; inst crow; sk}
+#variable capsham {GnuaDisableThis}
+#alias modesky {
+  #action {^{\w+} issues the order '{ki|kill|kil|hit} {[^\s;]+}'} {classif oag %%1 %%3};
+  #action {^{$capsham} tells your group '{ki|lift|leap|dive|hold|wear|rem|open|gflap|wield|target|say|flap|fade|gank|disengage|stand|enter|push|open|crawl|swim|climb|leave|follow|squeeze} {\w+}'} {st; mac %%2 %%3; group} {1};
+  #action {^{$capsham} beckons you to follow} {follow %%1};
+  #action {^{$capsham} tells your group '{st|lrn|eject|gflap|refade|skyfood|fade|stand|wildfire|rescue|volley|wingsweep|bolster}'} {st; %%2} {1};
+  #alias othervoy {#show %1:%2};
+  #unticker feedme;
+  #action {^You have been blinded} {sysplay smb3_thwomp; #all #show --> SKY BLIND};
+  #action {^{\w+} pants heavily} {classif flap %%1};
+  #alias gank ko;
+  fastdam;
+  #alias kd kdsky;
+  #alias prba {banp %%1; st; lrn};
+  #action {^Scout's Training Room} {lrn; smile};
+  #action {^Elrax the master scout is here,} {lrn; smile};
+  #delay 30 {group};
+  fly;
+}
+
+#action {^{\w+} steps near you and moves into a protective posture} {praise %1}
+#alias bdis {bot {ass; av prim}}
+#alias vom {voy mipsy; rg mipsy; mai rest}
+#alias ctt {ct tick in $tilltick}
+#alias blay {bot {cancel; st; lay %1}}
+#alias bfree {bot invoke reorx}
+#alias nyno {enter hole; n; n; s}
+#alias nyso {n; s; enter hatch; s}
+#alias prba {banp %1; st; lrn};
+#alias arch4 {hover; archery s 4 p 4 a 4}
+#alias resham {rewin; modeshaman}
+#alias ptran {#action {^The time for giving} {js imp; rpm; transfer %1}}
+#alias fastdam {hover; #alias upvolley volley; pburst; archery s 5 p 5 a 2; legarr}
+#alias bbn {bot kk %1; bn %1}
+#alias legarr {inst owl; inst owl; gather; #delay 900 {quell owl}}
+#alias kwe {kw eject}
+#alias kdsham {otk %1; ko %1}
+#alias kda {kd %1; ass}
+#alias kd kdsham
+#alias ksh {ki %1; ko %1}
+#alias kdsky {aggone kos}
+#alias ksv {kvo}
+#alias amsitem {say May I walk with the clouds}
+#alias ptpw {ptar paladin warrior}
+#alias ptms {ptar mage scout}
+#alias skyin {inst crow; inst swan; fly; inst mock; inst harrier; inst roc}
+#alias kvo {vo; ko %1}
+#alias resky {rewin; modesky; #unticker e20s}
+#alias campfood {cancel; st; camp; scav}
+#alias pburst {burst; 
+  #action {^Your muscles tense like they are ready} {burst};
+  #action {^Deep breath, easy, calm down} {burst};
+  #ticker e60 {burst} 60;
+}
+#alias gflap {gall flap}
+#alias bt2 {bot {punch %1; bash %2; st}}
+#alias bsoth {bot bt2 banshee soth}
+#var reverses {{n}{s}{e}{w}{s}{n}{w}{e}{u}{d}{d}{u}}
+#alias disengage {st; hover; fade %1; $reverses[%1]; reshoot}
+#alias ripo {riposte %1; #action {dazzled by your dexterity} {nospam 1 riposte %1}}
+
+#alias retrain {cancel; camp; w;w;w;n;n;n;e; open door; e; s; lrn; n;w;open door;w;s;s;s;e;e;e}
+#alias pscout2 { #%2 {scout %1; %1; st; $reverses[%1]}; }
+#alias psct {pscout2 %1 9}
+#alias psneak {w; sneak; sneak; sneak; e; 
+  #action {pokes you in the ribs} {cancel; psneak};
+  #action {^You feel enligh} {cancel; sk; #bell}
+}
+#alias dosneak {#%1 {w; n; s; e;}}
+#action {^The ghost of a long-dead {.+} materializes} {lrn}
+#alias pokethem {#action {^%1 flies in} {poke %1}}
+#alias phide {
+  #action {^You feel enligh} {squarescout};
+  #ticker e20s {hide; hide} 20;
+  #alias burst donothing;
+  #alias unhide {#unticker e20s};
+  #alias gt10  {#show tickin10}
+}
+#alias squarescout {u; s; u; e; camp; lrn; w; d; n; d; hide; hide}
+#alias pscout3 {scav; camp; n; w; open door; w; s; s; s; e; e; e;}
+#alias pscout4 {w;w;w;n;n;n;e; open door; e; s; lrn}
+#alias pscout {pscout3; pscout2 e 9; pscout4}
+#alias assd {ass %1; dart; st}
+#alias pwil {wildfire; #action {^A tingle in your fingertips} {wildfire}}
+#alias fastpow {archery s 5 a 1 p 3; modebow}
+#alias fastacc {archery s 5 a 3 p 1; modebow}
+
+#alias mabu {mapload; mgo recuperate bung}
+#alias modemelee {#alias asst assd; 
+  #alias refade donothing;
+  #alias vass vass2; #alias ota assd; #alias oag {mac ki %%2};
+  #alias rs dorescue;
+}
+
+#alias prepstone {
+ bot {guard stop; tk Talinia};
+ modemelee;
+}
+#alias hua {#sky {hunt %1; huntmode agg}}
+#alias hud {#sky huntmode dis}
+#alias modebow {
+  #alias vass reshoot; 
+  #alias ota reshoot;
+  #alias oag {mac ko %%2};
+  #alias refade {fade; reshoot};
+  #alias rs donothing;
+  #action {^You {barely hit|hit}} {nospam 3 refade};
+  #action {^You {miss|bruise} {.+with your hit.$}} {nospam 3 refade};
+}
+#alias drbu {quell owl; drop all.bundle.!blunt}
+#alias givelearn {rem all.book; rem all.fairy; get all.fairy belt; get all.book belt; get monocle belt; give all.book %1; give all.fairy %1; give monocle %1}
+#alias casres {#alias setcasres nrs}
+#alias slowshot {archery s 1 a 5 p 3; modebow}
+#alias suci {jd su ci}
+
+#ALIAS prepkyst
+{
+	#action {^Kyst}{close door;#unaction {^Kyst}};
+	say ready for kyst
+}
+
+#ALIAS {prepochre16}
+{
+	say tyhin ror fybkes safe
+}
+
+#alias {doochre17} {say aemyn lis rinzik vopl}
+#alias {doochre} {say rinzik potu fus verai}
+#ALIAS {ps}
+{
+	st;
+	mac punch %1
+}
+
+#alias msw {fo4 %2; me4 %1}
+#alias mknock {msw knock locate}
+#alias klba {mag klb %1; mag ota; otta} 
+#alias puf {mag pufthis}
+#ALIAS {pufthis}
+{
+	#if {"%1"!=""}
+	{
+		js relo %1
+	}
+	{
+		js relo zardonna
+	}
+}
+#alias dofrosty {say it is time for ice to turn to tin once again}
+#ALIAS {qp}
+{
+	quaff putrid.potion
+}
+
+#ALIAS {rco}
+{
+	get colorful.scroll $belt;
+	recite colorful.scroll
+}
+
+#ALIAS {rdr}
+{
+	rs $pet;
+	rs $pet;
+	oe ass;
+}
+
+#ALIAS {ref}
+{
+	js ref
+}
+
+#ALIAS {reload}
+{
+	#kill action;
+	readarc $lasttick;
+}
+
+#alias readarc {
+	#read arc;
+	#var lasttick %1;
+}
+
+#alias rewin {reload; platformwin;}
+
+#ALIAS {resave}
+{
+	#write arc;
+	#showme :saved
+}
+
+#ALIAS {rf}
+{
+	jd rem fe
+}
+
+#ALIAS {rgo}
+{
+	js regen %1;
+	group;
+}
+
+#alias rg {mai rgc}
+#alias ksa {bot strike %1; mai ass}
+#alias swapto {swap me %1; oth}
+#alias bfg {bot {follow %1; guard %1; rescon}; #delay 1 {group form}}
+#alias rescon {#alias rs rss}
+#alias rescoff {#alias rs donothing}
+#alias rss {cancel; st; rescue %1; }
+#ALIAS {rgc}
+{
+	js reg %1;
+	healcounton;
+	dolater3 group
+}
+
+#alias voyc
+{
+	jd rit voy %1;
+	healcounton;
+	dolater3 group
+}
+
+#alias voy {mai {jd rit voy %1}}
+
+#alias rit {#show ->    use cc; cc}
+#ALIAS {cc}
+{
+	mai {jd cu cr %1; group}
+}
+
+#ALIAS {rp}
+{
+	jd rem poi
+}
+
+#alias sgl {jd sp gl}
+
+#ALIAS {rps}
+{
+	js repo %1;
+}
+#alias rpm {fly; rps me; }
+
+#ALIAS {rr}
+{
+	cancel; rec recall %1;
+	get recall $belt
+}
+
+#alias cln {mag js cleanse}
+#alias pokein {
+  #action {^{%1} flies in} {poke %1};
+}
+#alias rgr {rg %1; rest}
+#alias cleancomp1 {
+  get all.!necromantic pouch;
+  put all.protection pouch;
+}
+#alias cleancomp2 {get all.component pouch}
+#alias cleancomp cleancomp2
+#alias dropcomp {cleancomp; dropallcomp}
+#alias sellcomp {cleancomp; sell20}
+#alias dropallcomp {drop all.component}
+#alias sell20 {put all.web belt; #20 {sell component}}
+#alias lch {jd la ch}
+#alias bura {ki me; buy 8*ration}
+#alias rs {mac bot dorescue}
+#ALIAS {dorescue}
+{
+cancel;
+	st;
+	rescue %1;
+	st
+}
+#alias nrs {nospam 3 rs}
+#alias dnrs {#delay %1 {nrs %2}}
+#action {^A yellowish-{\w+} cloud} {oncloud}
+#alias oncloud {gt -->    GUST please}
+#alias tmpa {%1 %2; ota; temp}
+#alias ksbt {tmpa ksb}
+#alias logred {#alias mag {#red} ; newses red; wilbon; mypw; 1; 1; fly; modemage; modered;} 
+#alias logwhi {newses white; mipsy; mypw; #var food food; 1; 1; fly; modemage; modewhite}
+#alias mag {#white}
+#alias modered {
+  #alias mag {#red};
+  #var pet Fereous;
+  #alias conrel {conir; release Fereous; magi};
+  #alias remage {rewin; modemage; modered};
+  #var food ration;
+}
+#alias modewhite {
+  #alias goway {goto wilma};
+  #alias ide {rec identify};
+  #alias remage {rewin; modemage; modewhite};
+  #alias mlo {msw locate knock};
+  #action {^{\w+} makes a mockery out of everyone} {nospam 30 jmoc %%1};
+}
+
+#alias mspin {#map undo; #map set roomsymbol [S]}
+#alias sysv {#system ~/bin/velm.rb }
+#alias gitpush {
+  sysv push;
+  #system ssh docker@155.138.220.71 git -C repos/sandbox pull;
+  dtell :reload;
+}
+#alias lopuf {mag {tp %1; ddo %1}}
+#alias logcler {logwin; guna; mypw; 1;1;modecleric; fly; guston;}
+
+#alias logclero {newses hea; guna; mypw; 1;1;modecleric; fly; guston;}
+#alias logimm {logwin; gnua; mypw; 1;1; modeimm; }
+
+#alias delzap {#delay 7200 #zap}
+#alias modeimm {
+  #kill alias;
+  #kill action;
+  #kill ticker;
+  #alias rentimm {quit; 0};
+  who needs_title;
+  #ticker e60 {who needs_title};
+}
+#action {^Mustakrakish, the ancient death troll glows a bright lunar white} {gt -->    TROLL CLEANSED  !!}
+#alias logsham {logwin; velm; mypw; 1;1;modeshaman; fly}
+#alias lcvoy {lc meteorite; lc veil; lc clove; lc effigy}
+#alias plpd {present letter; present pendant}
+#alias logsky {newses sky; talinia; mypw; 1; 1; modesky}
+#alias logpal {logbot; rohane; mypw; 1; 1; odepala; fly; d; d; n; e; jd r i}
+#alias logwar {logbot; kyrik; mypw; 1; 1; modepala; modewar; fly}
+#alias logdar {logbot; iyler; mypw; 1; 1; modepala; modedar; fly}
+#alias logwaro {
+  newses war;
+  kyrik; mypw; 1; 1; modepala; modewar; fly;
+  #alias bot {#war};
+}
+#alias logthi {newses thi; vontrapp; mypw; 1; 1; fly; modethief}
+#alias modethief {
+  #alias boa {ass; bpa};
+  #action {^The master assassin looks at you from behind} {lrn; smile};
+  #action {^Aldur A'Kul the master thief sits} {lrn; smile};
+  #alias rethi {rewin; modethief};
+  #var weapon spear;
+  #alias vass vass2;
+  #alias boa {assist; bpa};
+  #alias ke {aggone ki %%1; kst %%1};
+}
+#alias thi {#thi}
+#alias thuc {throat; unbalance; coup}
+#alias disablekal {4e2s2wd2n;det;det plate;disable plate;!;ene;det;det chest in r;det 2.chest in r;det 3.chest in r;disable chest in r;!;disable 2.chest in r;!;disable 3.chest in r;!;pick chest in r;pick 2.chest in r;pick 3.chest in r;wsww3n;learn all;3sessu2enn4w}
+#alias kalth {7w;open gate; 4w5n2w4n2ws3ws8w2sw}
+#alias disablevin {sneak;3n6w5n;open door east;2e;open trapdoor;d;det;det chest in r;det 2.chest in r;det 3.chest in r;det 4.chest in r;disable chest in r;!;disable 2.chest in r;!;disable 3.chest in r;!;disable 4.chest in r;!;pick chest in r;pick 2.chest in r;pick 3.chest in r;pick 4.chest in r;op chest in r;op 2.chest in r;open 3.chest in r;open 4.chest in r;get all chest in r;get all 2.chest in r;get all 3.chest in r;get all 4.chest in r;learn all;open hatch; uw;open door w;w;sneak;5s6e3s;}
+#alias thgrate {4w2n2wd2wuw2n2e3n2w6n8w4n4wne}
+#alias disablepalanthas {open grate;sneak;d;det pile;disable pile;disable pile;disable pile;e;det pile;disable pile;disable pile;disable pile;sneak;eeee;det pile;disable pile;disable pile;disable pile;een;det pile;disable pile;disable pile;disable pile;swwwwwwwss;det pile;disable pile;disable pile;disable pile;nnwn;det pile;disable pile;disable pile;disable pile;nnneen;det pile;disable pile;disable pile;disable pile;n;det pile;disable pile;disable pile;disable pile;sswwssssesswws;learn all;neenn;open grate;u}
+#alias disable3 {
+  kalinit;
+  disablekal; kalth; rest;
+  #delay 180 {st; disablevin; thgrate; disablepalanthas; rest; sk};
+}
+#alias disablefull {
+  logthi; disable3;
+  #delay 420 {thiefout};
+}
+#alias deldisable {
+  #delay 1800 disablefull;
+  #delay 3600 disablefull;
+  #delay 5400 disablefull;
+  #delay 7200 disablefull;
+}
+#alias thiefout {get recall belt; rec recall me; hold dagger; rentout}
+#alias kalinit {
+  clan who; skill;
+  runto ne2n2en; with 200;
+  s4ws; bre; nn; ki me; buy 3*ration; eat ration; eat ration; ss;
+  nw6ne; drink fountain; drink fountain; es2e4s;
+}
+
+#alias mek {#map exit %1 command {%2 %3 %4}}
+#alias deir {detect %1 in room; disable %1 in room; disable %1 in room}
+#alias bot {#bot}
+#alias bason {bot autoass}
+#alias basoff {bot autoassoff}
+#alias sky {#sky}
+
+#alias modewar {
+  #alias kstthis {punch %%1; $engvar %%1};
+  #alias palassthis {assist %%1; kstthis};
+  #alias bigrest {rest; ban me};
+  ef ration;
+  #alias rewar {repala; modewar};
+  #action {^The Hall of Bravery and Combat} {lrn; smile};
+  eng kick;
+  #action {^A blue light elemental stands up} {bble};
+  #action {^The void beast calls a blue light elemental into} {bble};
+  #action {^The tortured ghost of a theiwar cleric now follows} {cbt theiwar.cleric};
+  #action {^The tortured ghost of a theiwar cleric stands up} {cbt theiwar.cleric};
+}
+#alias modedar {
+  modewar;
+  #var circle1 curse;
+  #alias kstthis $engvar;
+  #alias redar {repala; modedar};
+  eng dt;
+}
+
+#alias {kalbelt} {runto ne2n7w; open gate; 4w5n2w2s; lc hylar; lc honor; lc hylar; lcb }
+#alias ll {#all}
+#alias kta {kst %1; otta}
+#alias bble {cbt blue.light.elemental};
+#alias oth {#session -}
+#alias cbt {cancel; bt}
+#ALIAS {san}
+{
+	js sanctuary
+}
+
+#ALIAS {sdg}
+{
+	scrape stone;
+	dig tomb;
+	get pile
+}
+
+#ALIAS {ser}
+{
+	jd cu ser
+}
+
+#ALIAS {setarrive}
+{
+	#if {"%1"!="griffon" && "%1" != "warhorse" && "%1" != "pegasus" && "%1" != "dragon" && "%1" != "sylph" && "%1" != "pech" && "%1" != "stalker" && "%1"!="champion" && "%1" != "gargoyle"}
+	{
+		#showme <030>ARRIVES: %1;
+		#variable arrival %1
+	}
+}
+
+#ALIAS {setcasres}
+{
+	#showme <030>CASTER: %1;
+	#variable casres %1
+}
+
+#ALIAS {setheader}
+{
+	headerlin
+}
+
+#ALIAS {setheal}
+{
+	#if {$countheals}
+	{
+		#variable healtemp %1
+	}
+}
+
+#ALIAS {setheal2}
+{
+	#if {$countheals}
+	{
+		#math {healtemp} {%1 + %2}
+	}
+}
+
+#ALIAS {setheal3}
+{
+	#if {$countheals}
+	{
+		#math {healtemp} {%1 + %2 + %3}
+	}
+}
+
+#ALIAS {setresc}
+{
+	#showme <030>TANKING: %1;
+	#variable {resctar} {%1}
+}
+
+#ALIAS {shamstaff}
+{
+	jd an bl;
+	js wood staff;
+	wield staff;
+	comm;
+	#variable food ration
+}
+
+#alias ams {js anti}
+#alias lish {jd li sh}
+#alias hs {js sleep}
+#alias kch {jdm chain lig}
+
+#ALIAS {showgroup}
+{
+	#math groupindex {0-$groupline};
+	groupappend %1;
+	#if {"%3"=="Y"}
+	{
+		#variable tempcondition %2;
+		#if {$autoheal && "%1"=="$tank" && ("%2"=="v.bad"||"%2"=="awful"||"%2"=="dying")}
+		{
+			dolater13 hl %1
+		};
+		#if {$autoheal && ("%2"=="v.bad"||"%2"=="awful"||"%2"=="dying")}
+		{
+			dolater11 hl %1
+		};
+		#if {$autoheal && "%2"=="fair" && "%1"!="$tank"}
+		{
+			dolater7 onfair %1
+		};
+		#if {$autoheal && "%2"=="bad" && "%1"!="$tank"}
+		{
+			dolater9 hl %1
+		};
+		#if {$autoheal && "%2"=="bad" && "%1"=="$tank" && $healMainAtBad}
+		{
+			dolater13 hl %1
+		}
+	}
+	{
+		#variable tempcondition missing
+	};
+	#var classes[%1] %4;
+	formshowgroup %1 %4;
+	#showme {$tempshowgroup} {$groupline};
+	#math groupline {$groupline - 1}
+}
+
+#alias onfair {#show atfair: }
+#alias buffcapture {
+  #var buffs {none};
+  #action {^{\s+}{.+}$} captureaffect %%2;
+  affect;
+  dolater7 onbuffcapture;
+}
+
+#alias onbuffcapture
+{
+  #unaction {^{\s+}{.+}$};
+  dost;
+  afterbuffcapture;
+}
+
+#alias afterbuffcapture nothing
+
+#alias needbuff {
+  #if {"$buffs[%0]" == "1"}
+  {nothing}
+  {cast '%0' me};
+}
+
+#alias hewold {
+  #alias afterbuffcapture {needbuff healing wave};
+  buffcapture;
+}
+
+#alias nbf {
+  #var vafterbuff {%0};
+  #alias afterbuffcapture {needbuff $vafterbuff};
+  buffcapture;
+}
+
+#alias hem {jd he mi}
+#alias scanshout {
+  #action {for sale} {#bell; #line log messages.txt} {1}
+}
+#alias solknow {prune bush; present beaker; quaff green.potion}
+#alias hew {nbf healing wave}
+#alias nri {bot nbf righteous indignation}
+#alias brig {bot right}
+#alias kop {ko %1; bpa}
+#alias shew {sean; hew}
+#alias nsan {nbf sanctuary}
+#alias {eth} {nbf ethereal armor}
+#alias nhb {nbf heal boost}
+#alias rgm {nbf regenerate}
+#alias namp {nbf amplify spirits}
+#alias nmon {nbf monstrous mantle}
+#alias nble {nbf bless}
+#alias nrep {nbf repose}
+#alias nclo {nbf cloak of bravery}
+#alias ivan {nbf improved invisibility}
+#alias ninv {nbf invisibility}
+#alias nblr {nbf blur}
+#alias nstr {nbf strength}
+#alias nboi {nbf boiling blood}
+#alias ngho {nbf ghostskin}
+#alias spgu {nbf spiritual guidance}
+
+
+#alias shambuff
+{
+  #alias afterbuffcapture onshambuff;
+  buffcapture;
+}
+
+#alias buf
+{
+  #alias afterbuffcapture {mb on%1buff};
+  buffcapture;
+}
+
+#alias oninvbuff
+{
+  needbuff repose;
+  needbuff improved invisibility;
+}
+
+#alias modemage {
+  nutr $food;
+  #alias fastmem {ban me; deep};
+  #action {disarms your weapon} {cancel; gw};
+  guston;
+  #var {circle1} {infrav};
+}
+#alias pfu {pf me}
+#alias pfn {punch %1; ota; frn}
+#alias e3 {#ticker e3 {%0; lrn} 183; %0}
+#alias parc {#action {^The energy in the air coal}{st; arcane}}
+#alias magebuff
+{
+  #alias afterbuffcapture onmagebuff;
+  buffcapture;
+}
+
+#alias td {#delay 3 {bot %1}}
+#alias sarune {
+  get all chest;
+  quaff yellow.potion;  
+  say Senthalliel kISu's'DorRz ENPRUHM puun-pe-uel;
+  quaff dazzling;
+  rg me;
+  #action {The dark tendrils squeeze and crush your soul} {caress sapphire};
+}
+
+#alias novoy {donothing %1; ct omen quest}
+#alias startomen {
+  #alias othervoy novoy;
+  nod; rem jaw; gw staff; wear purple.hide;
+}
+
+#alias mishbuff
+{
+  #alias afterbuffcapture onmishbuff;
+  buffcapture;
+}
+
+#alias onmishbuff
+{
+  needbuff aid;
+  needbuff sanctuary;
+  needbuff protection from evil;
+  needbuff bless;
+}
+
+#alias clerbuff
+{
+  modecleric;
+  #alias afterbuffcapture onclerbuff;
+  buffcapture;
+}
+
+#alias onclerbuff
+{
+  needbuff fortify self;
+  needbuff heroism;
+  needbuff sanctuary;
+}
+#alias onmagebuff
+{
+  needbuff invisibility;
+  needbuff repose;
+  needbuff improved invisibility;
+  needbuff blur;
+  needbuff strength;
+  needbuff potency;
+}
+
+#alias onendbuff
+{
+  needbuff ancestral blessing;
+  needbuff endurance;
+}
+
+#alias rentlater {#delay 180 {st; rent; 0}}
+
+#alias onrepbuff
+{
+  needbuff repose;
+}
+
+#alias onringbuff
+{
+  needbuff detect invisibility;
+  needbuff continual light;
+  needbuff repose;
+}
+
+#alias onpalbuff
+{
+  needbuff holy arms;
+  needbuff aura of glory;
+  needbuff bless;
+  needbuff high prayer;
+  needbuff holy vision;
+  needbuff crusade;
+  bes paladine;
+}
+
+#alias boa {palass; mai ott}
+#alias boas {boa; oct}
+#alias moa {mag otaa; mai ott}
+#action {^{\d.+:sitting.+Me:}} {#var fighting 1; groupcaptureoff; nospam 1 stand} {4}
+#alias asm {bot {assist; slam; rally}; mai ott}
+#alias asma {asm; mai ass}
+#alias treein {ride cart; %1; ride ferry; %1}
+#alias treeout {%1; ride ferry; %1; ride cart}
+#alias nyteforge {search forge; get scoop; uog panel; shove forge}
+#alias tepa {d; s; s; tear parchment}
+#alias aog {bot c 'a o g'}
+#action {^{\d.+}:sitting} {nospam 1 stand}
+#alias mai {#arc}
+#alias knoc {mag c 'knock'}
+#alias subl {mag js sublimation}
+#alias modepala
+{
+  #alias bigrest {dism; rest; sip elixir};
+  #var pet Fredery;
+  #action {^Warriors' Training Room} {lrn; smile};
+  #action {disarms your weapon} {cancel; gw};
+  #var circle1 bless;
+  #action {^You are ready to slam again} {slam};
+  #action {^You are now the new leader} {march};
+  #action {^A gleaming silver medal warms up} {ll #show -->    Medal};
+  #ticker feedme {sip elixir} 160;
+  #action {^Paladins' Training Room} {lrn; smile};
+  #action {^You have been blinded} {sysplay smb3_thwomp; #all #show --> BOT BLIND};
+  #alias lootcomp donothing;
+  casres;
+  gw hammer;
+  #alias warhit {dnrs 2 %1};
+  #action {^Your sense of indignation weakens and fades} {#all #show -->  RI gone};
+  #alias thiefhit {dnrs 1 %1};
+  #alias pethit {dnrs 1 %1};
+
+#action {^The protective presence around you fades} {
+  gt ---> HEAL BOOST GONE <---;
+  ll #show -->   LOST BOOST;
+  sysplay smb3_powerdown;
+};
+  #alias vass vass3;
+  agg strike;
+  eng strike;
+}
+
+#var {vmock} {A beautiful mockingbird whistles derisive notes at passersby}
+#alias modewarr {
+ #action {disarms your weapon} {gw};
+ #alias thiefhit {dnrs 1 %1};
+ casres;
+  #alias pethit {dnrs 1 %1};
+}
+
+#alias sumothis {release $pet; jd su mo; oe st; oe fly; oe for 'bles'; oe mem 'cu se' }
+#alias buamthis {buy amulet; give amulet $pet; oe wear amulet}
+#alias sumo {bot sumothis}
+#alias buam {bot buamthis}
+#alias repala {rewin; modepala}
+#alias cob {js cloak}
+#alias koe {ki %1; ota}
+#alias onfshambuff
+{
+  onshambuff;
+  onsham2buff;
+  onsham3buff;
+}
+
+#alias ondkbuff
+{
+  needbuff unholy might;
+  needbuff cloak of shadows;
+  needbuff bless;
+  needbuff protection from good;
+  #var circle1 know;
+  #var pet Pufv;
+  #alias bigrest {rest; ban me; taste bread; sip water};
+  nutr bread;
+}
+
+#alias onsham3buff
+{
+  needbuff soul protection;
+  needbuff delay death;
+  needbuff monstrous mantle;
+}
+
+#alias ksanv {s; u; kvi sandmason; flee; flee; n}
+#alias ksans {s; u; kso sandmason; flee; flee; n}
+
+#alias onshdbuff
+{
+  onshabuff;
+  needbuff ghostskin;
+  needbuff ethereal armor;
+}
+#alias onshobuff
+{
+  needbuff boiling blood;
+  needbuff darkened soul;
+}
+#alias pks {otk %1; kvi %1}
+
+#alias onshambuff
+{
+  fly; 
+  needbuff ancestral blessing;
+  needbuff ancestral shroud;
+  needbuff monstrous mantle;
+  needbuff heal boost;
+  needbuff amplify spirits;
+  needbuff tenacious heart;
+}
+
+#alias onshabuff {
+  needbuff tenacious heart;
+  needbuff ancestral shroud;
+  needbuff amplify spirits;
+  needbuff heal boost;
+}
+#alias ongshambuff
+{
+  fly;
+  needbuff ancestral blessing;
+  needbuff heal boost;
+  needbuff monstrous mantle;
+}
+
+#alias captureaffect {
+  #var buffs[%0] 1;
+}
+
+
+#alias mons {js mons}
+#ALIAS {showheal}
+{
+	#if {$healsleft != %1}
+	{
+		#variable healsleft {%1};
+		#if {%1==0}
+		{
+			noheals
+		}
+		{
+			#if {%1==1}
+			{
+				oneheal
+			}
+			{
+				someheals %1
+			}
+		};
+	}
+}
+
+#ALIAS {showtowin}
+{
+	{{^--> TICK}} NOW TRIGGERS {calibrate 30}#format temp {%w} {{%0}};
+	#variable window {$window $temp};
+	#loop {6 @windowsize{}}{#list window del 1};
+	#loop {1 5}{#showme {$window[&0]} {-&0}}
+}
+
+#ALIAS {someheals}
+{
+	mac gt ---> %1 heals remaining <---
+}
+
+#ALIAS {oneheal}
+{
+	mac gt ---> ONE HEAL REMAINING! <---
+}
+
+#ALIAS {noheals}
+{
+	mac gt ---> !! OUT OF HEALS !! <---;
+	gt ---> !! OUT OF HEALS !! <---
+}
+
+#ALIAS {sr}
+{
+	js str
+}
+
+#ALIAS {subcand}
+{
+	#if {%1 > $candlevel}
+	{
+		#showme :nextaction %1: $candidate;
+		#variable candlevel %1;
+		#variable nextaction $candidate;
+		#action $laterpat handlelater;
+		bonk me
+	}
+}
+
+#ALIAS {sudr}
+{
+	jd su dr;
+	#var classes[Pufv] PET;
+}
+
+#alias bufpal {bot buf pal}
+#alias suel {bot suelthis}
+#ALIAS {suelthis}
+{
+	jd su el;
+	drink elixir;
+	fill canteen elixir;
+}
+
+#alias bfl {bot {cancel; #3 {st; flee}}}
+
+#alias pfl {bot {punch %1; #3 {flee; st}}}
+#ALIAS {sumheal}
+{
+	sumhealtemp=0;
+	#add sumhealtemp %1;
+	#add sumhealtemp %2;
+	#add sumhealtemp %3;
+	say @sumhealtemp
+}
+
+#ALIAS {sus}
+{
+	st;
+	c 'sus'
+}
+
+
+#alias sysplay {
+  #system afplay smb3/%1.wav 2> smb3/out.txt &;
+}
+
+#alias dtell {
+  escapequote %0;
+  #system curl -H "Content-Type: application/json" -X POST -d '{"content": "$vescape"}' $webhook;
+}
+
+#alias escapequote {
+  #var vescape {%0};
+  #replace vescape {"} {};
+  #replace vescape {'} {};
+}
+#action {^{The book of the dead|A sparkling black bracelet equipped|A discolored helmet equipped by Rahnkagi|A shimmering prayerbook with silver pages|A pair of spiked sterling gauntlets equipped by Bors|A black metal pike in|The mithril plate of shadows|A ruby studded block of limestone|An iridescent hematite tablet|A stunning pearl-inlaid tablet|A golden twined oak longbow equipped|A gold inlaid bone bracer|A holy talisman|The cape of shadows in a|A bladeless sword equipped|A suit of flexible red dragon scale armor|An ancient holy avenger equipped|Gauntlets of ogre power equipped|A dwarven face shield|A sky blue prayerbook with sapphire runes|A dragonrider's talisman|A moist piece of sea sponge|A gangrenous foot|A shimmering cube|A small piece of meteorite|A satiny layer of ectoplasm|A lone, gray flame|A feathered dreamcatcher|A golden battle-honor equipped|A book with frosted glass covers|A globe of sparkling liquid in a steel|A green dragonhide spellbook|A wretched medallion|An ivory spined spellbook|A translucent jade|A charred black ring|The mottled robes of the Archmagus|A golden bracelet inlaid with emeralds in|A tightly bound tome of magic|A floppy hat|A tiny jade effigy|A timeworn book bound with chains|A belt of cured hylar skin equipped|A wispy black veil|A prayerbook with gleaming pearl covers|An ivy-covered slab of rock|A silver and ruby ring|A ring of finest silver|A dark elven bracelet in a} {.+}}
+{
+ ct %1: %2;
+ dtell %1: %2;
+}
+
+#alias goba {gorec kenba}
+#alias goth {mrun tollhouse}
+#alias kib {aggtwo ll ki}
+#alias las {ll ass}
+#alias rrk {rr; mgo kalinn}
+#alias kr {bot {punch %1; parry}}
+#sub {hungry. feed me!} {warrior needs food, badly}
+#alias tban {bot rest; st; tan ban; #delay 1 {bot st}}
+#alias dlcbluff {gobung; lc fine.silver.ring; lc face; lc holy; lc golden.bracelet; rest }
+#alias dlcshayd {runshayd; restick lcshayd}
+#alias dlcner {goner; lctab; restick lcsan}
+#alias dlclem {gobal; runlem; lcvoy; restick lclem2}
+#alias dlccae {gocae; lcb; lc ivory.book; restick dlcner}
+#alias dlckal {gokal; runto dnn10e; lc discolored; lc silver.ring; 14w; open gate; 4w5nww; restick lcdar }
+#alias dlcbog {
+  gosol; runto essd10se4sw6se4sw3s; 
+  6wdss; lckith; lc talisman; nnu6e;
+  sesss3e; lc dark.elven; restick lcb; 
+}
+
+#alias lcf {lc flexible.red}
+#alias lclem2 {lc black.pike; lc bone.bracer; lc wretched; lc shadow.cape; restick lcshad}
+#alias dlcold {
+  rps me; cubread; ef bread;
+  dlcbluff; #delay 30 {restick dlcschedule};
+}
+#alias dlcschedule {
+  dlcshayd;
+  #delay 189 {dlccae};
+  #delay 429 {dlclem};
+  #delay 609 {dlcbog};
+  #delay 729 {dlckal};
+  #delay 849 {runsh; };
+}
+
+#alias deltwo {%1; #delay 30 {restick %2}}
+#alias dlcall {
+  rps me; cubread; ef bread; deltwo dlcbluff rlcshayd; 
+}
+
+#alias rlcshayd {deltwo runshayd rlcshayd2}
+#alias rlcshayd2 {deltwo lcshayd rlccae}
+#alias rlccae {gocae; lc ivory.book; deltwo lcb rlcner}
+#alias rlcner {goner; deltwo lctab rlcsan}
+#alias rlcsan {deltwo lcsan rlclem1}
+#alias rlclem1 {gobal; runlem; deltwo lcvoy rlclem2}
+#alias rlclem2 {lc black.pike; lc bone.bracer; lc wretched; lc shadow.cape; restick rlcshadow}
+#alias rlcshadow {deltwo lcshad rlcbog}
+#alias lcdar {lc hylar; lc charred.ring; lcb; lc honor; rest} 
+#alias runto {#config speedwalk on; %1}
+#alias runshayd {
+  #config speedwalk on; w3n8ws6w4n7ws6w4n4e; lc floppy; lc sparkling; lc mottled; lc golden.bow ;
+  2esee3seeseses;
+}
+#alias runsh {runto 5nennu}
+#alias runlem {#config speedwalk on; sww3swwseeseseenn3w}
+#alias rlcbog {
+  gosol; runto essd10se4sw6se4sw3s;
+  6wdss; lckith; lc talisman; nnu6e;
+  sesss3e; restick rlcbog2 ;
+}
+
+#alias rlcbog2 {lc dark.bracelet; lcb; rlckal}
+#alias rlckal {gokal; runto dnn10e; lc discolored; lc silver.ring; 14w; open gate; 4w5nww;  restick rlcdar}
+#alias rlcqk {runto 4nwwsww4nwnnwn; lctab}
+#alias rlcdar {deltwo lcdar rlcqk }
+
+#alias lcsan {lc power; lc mace.destruction; lc blue.dragon; rest}
+
+#ALIAS {sysplay2}
+{
+	#system play smb3/%1 2> smb3/out.txt &
+}
+
+#ALIAS {t1}
+{
+	m1 tk
+}
+
+#ALIAS {t10}
+{
+	m10 tk
+}
+
+#ALIAS {t2}
+{
+	m2 tk
+}
+
+#ALIAS {t3}
+{
+	m3 tk
+}
+
+#ALIAS {t4}
+{
+	m4 tk
+}
+
+#ALIAS {t5}
+{
+	m5 tk
+}
+
+#ALIAS {t6}
+{
+	m6 tk
+}
+
+#ALIAS {t7}
+{
+	m7 tk
+}
+
+#ALIAS {t8}
+{
+	m8 tk
+}
+
+#ALIAS {t9}
+{
+	m9 tk
+}
+
+#ALIAS {tan}
+{
+	%0 $tank
+}
+
+#alias tbot {swap me %1; swap me $tank}
+
+#ALIAS {tk}
+{
+	#variable tank %1;
+	tan watch
+}
+
+#ALIAS {tp}
+{
+	js teleport %1;
+}
+
+#ALIAS {ts}
+{
+	mai tan ser
+}
+
+#alias tc {mai tan cc}
+#ALIAS {tw}
+{
+	tan watch; #var fighting 0;
+}
+
+#ALIAS {uo}
+{
+	unlock %1 %2;
+	open %1 %2
+}
+
+#ALIAS {uog}
+{
+	unlock %1;
+	open %1;
+	get all %1
+}
+
+#alias pmedic {
+  #ticker emin {n; ki sponge; %1 %2; #5 {flee}; end} 65;
+  #ticker e10 {#3 {flee}; sat; gmal} 600
+}
+
+#alias clt {js clot}
+
+#ALIAS {updateheader}
+{
+	#format now {%T};
+	#math tilltick {$ticklen - (($now - $lasttick) % $ticklen)};
+	setheader;
+	#if {$tilltick==10}
+	{
+	  nospam 2 gt10
+	};
+	#showme {$header} {1};
+	#if {$autoheal==2}
+	{
+		dolater3 group
+	}
+}
+#alias gt10 {gt tick in 10}
+#alias onfight
+{
+  #format fnow {%T};
+  groupc;
+  #math fightoff {$fnow + 5};
+}
+#alias checkfight
+{
+  #format cnow {%T};
+  #if {$cnow > $fightoff} {#show fightoff} {#show fighton}
+}
+
+#ALIAS {van}
+{
+	js inv
+}
+
+#alias gaim {$dkgaim}
+
+#var dkgaim gaze
+
+#action {^Your eyes tingle} {setgaze}
+#action {^You weakly gaze}{imp; setimp}
+#action {^You gaze at {.+} you can muster.$} {setimp}
+#action {^Your connection to the spirit world is restored} {gt  --> Ghostmaster Available}
+
+#alias setgaze {#var dkgaim gaze}
+#alias setimp {#var dkgaim imp}
+#var classes {none}
+
+#ALIAS {vc2}
+{
+	#variable charmie2
+}
+
+#ALIAS {vch}
+{
+	#variable charmie %1;
+	setresc %1
+}
+
+#ALIAS {wagi}
+{
+	jd mass inv %1
+}
+
+#alias {mtkal} {jd ma tel zardonna}
+#ALIAS {wb}
+{
+	jd water breath
+}
+
+#alias saco {jd sa co}
+#alias sari {js sap ring.shadows}
+#ALIAS {yp}
+{
+	pot yellow
+}
+
+#CONFIG           {AUTO TAB}              {5000}
+#CONFIG           {BUFFER SIZE}           {20000}
+#CONFIG           {CONNECT RETRY}         {15}
+#CONFIG           {CONVERT META}          {OFF}
+#CONFIG           {COMMAND COLOR}         {<078>}
+#CONFIG           {COMMAND ECHO}          {ON}
+#CONFIG           {HISTORY SIZE}          {2500}
+#CONFIG           {LOG}                   {PLAIN}
+#CONFIG           {PACKET PATCH}          {0}
+#CONFIG           {REPEAT ENTER}          {OFF}
+#CONFIG           {REPEAT CHAR}           {!}
+#CONFIG           {SCROLL LOCK}           {ON}
+#CONFIG           {SPEEDWALK}             {OFF}
+#CONFIG           {TINTIN CHAR}           {#}
+#CONFIG           {VERBATIM}              {OFF}
+#CONFIG           {VERBATIM CHAR}         {\}
+#CONFIG           {VERBOSE}               {OFF}
+#CONFIG           {WORDWRAP}              {ON}
+#FUNCTION {windowsize}
+{
+	#list window len result
+}
+
+#HIGHLIGHT        {disarms your weapon}   {red}                        {4}
+#HIGHLIGHT        {$tank}                 {magenta}                    {5}
+#HIGHLIGHT        {cloud kill}                {light yellow}               {5}
+#highlight {soul has returned} {light yellow}
+#HIGHLIGHT        {stops tingling}                {light yellow}               {5}
+#HIGHLIGHT        {RISE}                {light yellow}               {5}
+#highlight {A large ogre stands here barking orders} {light yellow}
+#HIGHLIGHT        {Samus clenches his fist and growls}  {light yellow}               {5}
+#highligh {spectral creature now follows} {light yellow}
+#highlight {The tortured ghost of a theiwar cleric} {yellow}
+#highligh {gleaming silver medal warms up briefly} {green}
+#highlight {tattooed goblin skins} {green}
+#highlight {feeling and colour return} {light yellow}
+#highlight {squeezes your finger with incredible} {light yellow}
+#highligh  {volley again} {green}
+#HIGHLIGHT        {You fall down, your ears ringing}  {red}                        {5}
+#highlight {You feel vulnerable again as the protective cloak about you fades} {5}
+#highlight {ghostly hue vanishes} {light yellow}
+#highlight {soul has returned} {light yellow}
+#HIGHLIGHT        {You feel your mind slip away}  {red}                        {5}
+#HIGHLIGHT        {You stand up.}         {green}                      {5}
+#HIGHLIGHT        {Your muscles swell}         {green}                      {5}
+#HIGHLIGHT        {The ground lurches and a fragment of floating rock you are on falls into the ab}         {green}                      {5}
+#HIGHLIGHT        {Your fingers prickle}         {green}                      {5}
+#HIGHLIGHT        {The spirit of a kender druid puts away his tablets}         {green}                      {5}
+#high {Your punch hand is ready} {green}
+#HIGHLIGHT        {macabre}         {green}                      {5}
+#HIGHLIGHT        {A large creature paws at the ground}         {green}                      {5}
+#HIGHLIGHT        {hulking beast}         {green}                      {5}
+#HIGHLIGHT        {regal kingfisher puffs}         {green}                      {5}
+#HIGHLIGHT        {horrible looking vulture}         {green}                      {5}
+#highlight {brown swallow bobs and weaves} {green}
+#HIGHLIGHT        {wispy strands of twined hair}         {green}                      {5}
+#HIGHLIGHT        {blue phoenix}         {green}                      {5}
+#HIGHLIGHT        {feathered dreamcatcher}         {green}                      {5}
+#HIGHLIGHT        {satiny layer of ectoplasm}         {green}                      {5}
+#HIGHLIGHT        {rotting brains}         {green}                      {5}
+#HIGHLIGHT        {lone, gray flame}         {green}                      {5}
+#HIGHLIGHT        {A warm, evil sensation}         {green}                      {5}
+#HIGHLIGHT        {dolphin bone staff}         {green}                      {5}
+#HIGHLIGHT        {A darkness falls over your vision}         {green}                      {5}
+#highlight {timeworn book} {green}
+#highlight {You stub your big toe on a roc}{green}
+#highlight {ivory spined} {green}
+#highlight {gleaming pearl covers} {green}
+#highlight {frumpy dwarf} {green}
+#highlight {ruby studded block} {green}
+#highlight {hematite tablet} {green}
+#highlight {diamond encrusted jackal skull} {green}
+#highlight {pearl tablet} {green}
+#highlight {inlaid tablet} {green}
+#highlight {jade tablet} {green}
+#highlight {ivy-covered slab} {green}
+#highlight {ashen spellbook} {green}
+#highlight {delicate prayerbook} {green}
+#highlight {radiant white prayerbook} {green}
+#HIGHLIGHT        {moist piece of sea sponge}         {green}                      {5}
+#highligh {flexible red dragon scale armor} {green}
+#highlight {barely see a small stick} {green}
+#highlight {A squishy, yellowish blob} {green}
+#HIGHLIGHT        {small piece of meteorite}         {green}                      {5}
+#HIGHLIGHT        {peculiar looking rock is lying on the ground here}         {green}                      {5}
+#HIGHLIGHT        {wispy black veil}         {green}                      {5}
+#HIGHLIGHT        {gangrenous foot}         {green}                      {5}
+#highlight {A man with bright red skin glistens with sweat} {green}
+#HIGHLIGHT        {ethereal energy}         {green}                      {5}
+#HIGHLIGHT        {ancient tome}         {green}                      {5}
+#HIGHLIGHT        {binding you dissolve}  {green}                      {5}
+#HIGHLIGHT        {clears up}             {green}                      {5}
+#HIGHLIGHT        {cloud permeates the air}  {light yellow}               {5}
+#HIGHLIGHT        {with your hit}                {light yellow}               {5}
+#HIGHLIGHT        {decays}                {light yellow}               {5}
+#HIGHLIGHT        {disarms}               {light yellow}               {5}
+#HIGHLIGHT        {eyes tingle}           {green}                      {5}
+#HIGHLIGHT        {freeze in place, unable to move}  {red}                        {5}
+#HIGHLIGHT        {freezes in place}      {light yellow}               {5}
+#HIGHLIGHT        {green aura}            {light yellow}               {5}
+#highlight {twists to your advantage} {cyan} {5}
+#HIGHLIGHT        {he begins to drool}    {light yellow}               {5}
+#HIGHLIGHT        {heal}                  {green}                      {5}
+#HIGHLIGHT        {is destroyed}          {light yellow}               {5}
+#HIGHLIGHT        {is disrupted}          {light yellow}               {5}
+#HIGHLIGHT        {is lodged within}      {light yellow}               {5}
+#HIGHLIGHT        {is paralyzed}          {light yellow}               {5}
+#HIGHLIGHT        {is stunned!}           {light yellow}               {5}
+#HIGHLIGHT        {looks distracted and fails}        {light yellow}               {5}
+#HIGHLIGHT        {is suddenly dislodged}  {light yellow}               {5}
+#HIGHLIGHT        {lose all feeling of your}  {red}                        {5}
+#HIGHLIGHT        {regain control}        {green}                      {5}
+#HIGHLIGHT        {sent sprawling}        {red}                        {5}
+#HIGHLIGHT        {shatter}               {green}                      {5}
+#HIGHLIGHT        {smarter}               {green}                      {5}
+#HIGHLIGHT        {feel enlightened}               {green}                      {5}
+#HIGHLIGHT        {spirit rises}          {green}                      {5}
+#HIGHLIGHT        {stands up.}            {green}                      {5}
+#HIGHLIGHT        {suddenly becomes very quiet}  {light yellow}               {5}
+#HIGHLIGHT        {tentacles constrict you}  {light yellow}               {5}
+#HIGHLIGHT        {webbing all over you}  {red}                        {5}
+#HIGHLIGHT        {you weaken and drop away}  {green}                      {5}
+#MACRO {\cl}
+{
+	#read arc;
+	#showme :loaded
+}
+#macro {\eOS} {karr}
+#MACRO {\co}
+{
+	resave
+}
+
+#macro {\eOm} {cancel}
+#MACRO {\eOl}
+{
+	ready
+}
+
+#MACRO {\eOp}
+{
+	mac scan
+}
+
+#MACRO {\eOr}
+{
+	mac south
+}
+
+#MACRO {\eOs}
+{
+	mac down
+}
+
+#MACRO {\eOt}
+{
+	mac west
+}
+
+#MACRO {\eOu}
+{
+	mac look
+}
+
+#MACRO {\eOv}
+{
+	mac east
+}
+
+#MACRO {\eOw}
+{
+	mac flee;
+	st
+}
+
+#MACRO {\eOx}
+{
+	mac north
+}
+
+#MACRO {\eOy}
+{
+	mac up
+}
+
+#MACRO {\e[13~}
+{
+	gw
+}
+
+#MACRO {\e[14~}
+{
+	karr
+}
+
+#MACRO {\e[15~}
+{
+	mac group;
+	#unaction {^{\s+}{.+}$};
+}
+
+#MACRO {\e[17~}
+{
+	mac bigrest
+}
+
+#MACRO {\e[18~}
+{
+	tan hl; tan watch;
+}
+
+#MACRO {\e[19~}
+{
+	mac dost
+}
+
+#MACRO {\e[20~}
+{
+	st;
+	assist
+}
+
+#MACRO {\e[21~}
+{
+	rs $resctar
+}
+
+#MACRO {\e[23~}
+{
+	rs $casres
+}
+
+#MACRO {\e[24~}
+{
+	st;
+	mac $aggro
+}
+
+#PATHDIR          {n}                     {s}                          {1}
+#PATHDIR          {e}                     {w}                          {2}
+#PATHDIR          {ne}                    {sw}                         {3}
+#PATHDIR          {s}                     {n}                          {4}
+#PATHDIR          {se}                    {nw}                         {6}
+#PATHDIR          {w}                     {e}                          {8}
+#PATHDIR          {nw}                    {se}                         {9}
+#PATHDIR          {sw}                    {ne}                         {12}
+#PATHDIR          {u}                     {d}                          {16}
+#PATHDIR          {d}                     {u}                          {32}
+#TICKER           {eachsec}               {updateheader}               {1}
+#VARIABLE         {aggro}                 {bt}
+#VARIABLE         {arrival}               {Balifor}
+#VARIABLE         {autoclean}             {0}
+#VARIABLE         {autoheal}              {0}
+#VARIABLE         {belt}                  {belt}
+#VARIABLE         {booze}                 {brown.bottle}
+#VARIABLE         {candidate}             {autodropoff}
+#VARIABLE         {candlevel}             {0}
+#VARIABLE         {casres}                {Fleur}
+#VARIABLE         {casters}               {}
+#VARIABLE         {charmie}               {chaldrun}
+#VARIABLE         {charmie2}              {}
+#VARIABLE         {clerfood}              {food}
+#VARIABLE         {countheals}            {0}
+#VARIABLE         {engvar}                {kk}
+#VARIABLE         {firstspell}            {0}
+#VARIABLE         {food}                  {food}
+#VARIABLE         {groupindex}            {9}
+#VARIABLE         {groupline}             {-10}
+#VARIABLE         {groupmembers}          {}
+#VARIABLE         {header}                {heals left: 0  till tick: 42   resc: Co            arrive: Balifor}
+#VARIABLE         {healMainAtBad}         {1}
+#VARIABLE         {healsleft}             {0}
+#VARIABLE         {healtemp}              {0}
+#VARIABLE         {held}                  {cudgel}
+#VARIABLE         {kwordindex}            {0}
+#VARIABLE         {kwords}                {{push}{rotate}{slide}{shift}{open}{shatter}{break}{smash}{crack}{lift}{kneel}{worship}{pray}{lick}{quaff}{consume}{brush}{mop}{climb}{press}{surmount}{repel}{break}{dig}{puncture}{rip}{tear}{withdraw}{cease}{change}{cut}{depart}{drown}{befall}{break}{become}{fix}{arrive}{appear}{abate}{advance}{emerge}{enter}{design}{miscarry}{land}{improve}{happen}{hang}{grow}{go}{get}{recover}{rummage}{revolt}{ride}{tug}{run}{raise}{rise}{set}{settle}{sink}{speed}{spread}{stumble}{bend}{bite}{bind}{blow}{beat}{burst}{broadcast}{cling}{cut}{dream}{drive}{do}{explore}{feed}{forbid}{forcast}{fortell}{fling}{feel}{grind}{hang}{hear}{hide}{hurt}{keep}{kneel}{listen}{knit}{lead}{lean}{leap}{learn}{leave}{lend}{let}{lie}{light}{lose}{make}{mean}{meet}{mislay}{move}{mistake}{overtake}{prove}{pull}{put}{read}{ring}{rise}{run}{rid}{saw}{seek}{set}{sew}{shake}{shear}{shine}{shoot}{show}{shrink}{shut}{squeeze}{sing}{sink}{brush}{yank}{slay}{slit}{smell}{speak}{spoil}{stick}{sting}{stink}{strew}{spring}{spread}{strike}{strive}{swear}{sweep}{swell}{swim}{swing}{shove}{take}{teach}{throw}{thrust}{touch}{undergo}{understand}{undertake}{wake}{wear}{weave}{weep}{wet}{win}{wind}{wring}{write}{clear}}
+#VARIABLE         {lasttick}              {1294726325}
+#VARIABLE         {laterpat}              {^{(\d.+>\s)?}{You knock yourself}}
+#VARIABLE         {light}                 {clear.sphere}
+#VARIABLE         {nextaction}            {autodropoff}
+#VARIABLE         {now}                   {1295158763}
+#VARIABLE         {patautodrop}           {^{(\d.+>\s)?}You get {a|an|some} {\S+}}
+#VARIABLE         {pktarg}                {nobody}
+#VARIABLE         {resctar}               {Co}
+#VARIABLE         {slot6}                 {heal|harm|animate dead|darkness|summon|restoration|ritual voyage}
+#VARIABLE         {tank}                  {Rohane}
+#VARIABLE         {tanksuffix}            {(\swith|\svery hard|akes aim at|\sstaggers and|\sextremely hard|\slaughs and jeers at.+red in the face|\shard|, but he|, but she|\ssteps aside|\sinstead|\sgives h|\splaces h|\sin a thun|\sa solid punch|'s face|'s flesh shield, sending|\sstaggers and|\scompletely missing|\sblocks)}
+#var {tankprefix} {piece of flesh circling|falls while trying to bash}
+#VARIABLE         {tempcondition}         {v.good}
+#VARIABLE         {tempshowgroup}         {m9 : Dian                 v.good    m9 }
+#VARIABLE         {ticklen}               {60}
+#VARIABLE         {tilltick}              {42}
+#VARIABLE         {vc2}                   {}
+#VARIABLE         {weapon}                {sword}
+#VARIABLE         {window}                {{ } { } { } { } { }}

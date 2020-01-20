@@ -1,0 +1,31 @@
+#alias path {
+  #map goto %1;
+  #map find %2;
+  #path save forward vpath;
+  compress $vpath;
+  #system rm tmp/pathout.txt;
+  #line log tmp/pathout.txt $speedpath;
+}
+
+#alias compress {
+  #path new;
+  #foreach {%0} {longdir} {
+    #path ins $briefdir[$longdir];
+  };
+  #path end;
+  #path zip;
+  #path save forward speedpath;
+}
+
+#alias showjunk {#show junk {%0}}
+
+#var briefdir {{north}{n}{south}{s}{east}{e}{west}{w}{up}{u}{down}{d}}
+#PATHDIR {down} {up} {32}
+#PATHDIR {east} {west} {2}
+#PATHDIR {north} {south} {1}
+#PATHDIR {south} {north} {4}
+#PATHDIR {up} {down} {16}
+#PATHDIR {west} {east} {8}
+#var samplelong {north;east;east;west;south}
+#map read krynn.txt
+#map static flag on

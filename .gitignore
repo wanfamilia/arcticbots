@@ -1,0 +1,5 @@
+.idea/*
+secret.yml
+.idea
+*.swp
+tmp/*
