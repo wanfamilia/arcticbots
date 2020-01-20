@@ -42,10 +42,6 @@ alias berc='source .powenv && bundle exec rails c'
 alias bedm='bera db:migrate'
 alias bert='RAILS_ENV=test bundle exec rake db:reset'
 alias bedr='bera db:rollback'
-alias atbshell='ssh root@199.19.214.216 -i /Users/richardwan/.ssh/server_albatross'
-alias atbshellstage='~/bin/cx ssh -s ATB-SPS 199.19.214.216' 
-alias atbshellprod='ssh root@atb-spp.rnp.io -i ~/.ssh/server_tarantula'
-alias atbshelldemo='ssh root@sps.rnp.io -i ~/.ssh/server_puma'
 function cssh() { ~/bin/cx ssh -s "$*" web; }
 
 
