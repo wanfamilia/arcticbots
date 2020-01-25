@@ -467,7 +467,7 @@ reseteye;
   nospam 9 gma $vmasters[$classes[%1]]
 }
 #alias lckith {lc sponge; lc ethereal.cube; lc foot}
-#alias saym {say when ready, type (dont say): moc}
+#alias saym {say when ready, type (dont say, dont emote, dont tell): moc}
 #alias gtm {gt to make a master, type: mak}
 #alias lcshad {lc bladeless; lcb; lc shadow.mask; lc shadow.plate; rest}
 #alias lcreef {lc candle; lc knuckle; lc twig; lc head}
@@ -2420,8 +2420,11 @@ reseteye;
 	st;
 }
 
+#alias counb {coup; unbalance}
+#alias kico {ki %1; counb}
+#alias klfo {kick low; fortress}
 #alias klow {mac kick %1 low}
-
+#alias ruci {mrun2 citadel}
 #ALIAS {klb}
 {
 	jdm li bo
@@ -3785,12 +3788,15 @@ cancel;
   #action {^The master assassin looks at you from behind} {lrn; smile};
   #action {^Aldur A'Kul the master thief sits} {lrn; smile};
   #alias rethi {rewin; modethief};
+ #alias kstthis {ki %%1; $engvar %%1};
+  #alias palassthis {assist %%1; kstthis};
   #var weapon spear;
   #alias vass vass2;
   #alias boa {assist; bpa};
   #alias ke {aggone ki %%1; kst %%1};
 }
 #alias thi {#thi}
+#alias pc {thi pick}
 #alias thuc {throat; unbalance; coup}
 #alias disablekal {4e2s2wd2n;det;det plate;disable plate;!;ene;det;det chest in r;det 2.chest in r;det 3.chest in r;disable chest in r;!;disable 2.chest in r;!;disable 3.chest in r;!;pick chest in r;pick 2.chest in r;pick 3.chest in r;wsww3n;learn all;3sessu2enn4w}
 #alias kalth {7w;open gate; 4w5n2w4n2ws3ws8w2sw}
@@ -4440,7 +4446,7 @@ cancel;
 
 #alias deltwo {%1; #delay 30 {restick %2}}
 #alias dlcall {
-  rps me; cubread; ef bread; deltwo dlcbluff rlcshayd; 
+  rps me; cubread; ef food; deltwo dlcbluff rlcshayd; 
 }
 
 #alias rlcshayd {deltwo runshayd rlcshayd2}
