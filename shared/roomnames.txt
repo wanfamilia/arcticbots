@@ -64,6 +64,7 @@ kalscout
 westwinds
 locdarg
 tirabot
+kalwest
 startgrak
 luniboat
 startboku
@@ -79,6 +80,7 @@ glade whitestone
 shayd
 deepfish
 irdalagoon
+kalbank
 irdagate
 schaeffa
 southwinds
@@ -109,6 +111,7 @@ daggorath turtle
 zmij
 ixpat
 gleam
+kalbank
 sansouth
 starttoede
 starttael
@@ -144,6 +147,7 @@ startstormhead
 essence fire slarn
 cloud pendant
 cloud priest
+aligngc
 castle gate
 essence air dara
 sageway bugbears
@@ -161,6 +165,7 @@ lemvashka
 sara
 stormloc
 qk
+zardonna
 nytetree
 starttheiwar
 chutebottom
@@ -185,7 +190,6 @@ tesiak
 khalarm
 citadel start
 sloan
-kalinn
 yawto
 citadel window
 vaj
@@ -198,6 +202,7 @@ dkspell irda
 instinct mountain 51
 reefdragon
 bonfair
+kalcler
 rabbitwand
 knifetent
 goodleaf
@@ -289,6 +294,9 @@ beforetroll
 startlyt
 startshadow
 ritquali
+startriver
+harmonium
+kalinn
 unemestar
 garnetslab
 garnetnorth
@@ -302,6 +310,7 @@ alignne
 aligncn
 alignnl
 vinwar
+kalshop
 vindragontrain
 alignng
 palwar
