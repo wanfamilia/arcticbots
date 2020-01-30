@@ -19,6 +19,10 @@ class GitHelp
     # vulture ip
     'ssh docker@155.138.220.71'
   end
+  
+  def fia
+    "git fi -a `git rev-parse --abbrev-ref HEAD`"
+  end
 
   def reflog
     'git reflog --pretty=format:"%an %h %s"'
