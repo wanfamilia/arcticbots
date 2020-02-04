@@ -64,7 +64,6 @@ kalscout
 westwinds
 locdarg
 tirabot
-kalwest
 startgrak
 luniboat
 startboku
@@ -80,13 +79,14 @@ glade whitestone
 shayd
 deepfish
 irdalagoon
-kalbank
 irdagate
 schaeffa
 southwinds
 sondra
 balrank
+kalbank
 balinn
+kalbank
 lemloc
 blackshore
 misty woods
@@ -111,7 +111,6 @@ daggorath turtle
 zmij
 ixpat
 gleam
-kalbank
 sansouth
 starttoede
 starttael
@@ -140,6 +139,7 @@ shalzan
 startcrytic
 essence earth eern
 dargo start
+aligngc
 dargo squid jawbow
 essence water lezi
 pracevade
@@ -147,7 +147,6 @@ startstormhead
 essence fire slarn
 cloud pendant
 cloud priest
-aligngc
 castle gate
 essence air dara
 sageway bugbears
@@ -155,17 +154,18 @@ windfall barbarian
 swamptroll
 solamnic keep
 palanthas library key drawer
+kalcler
 astinus
 palanthas library dorshan
 palshelf
 fishreef
+kalfountain
 lemcase
 lemchest
 lemvashka
 sara
 stormloc
 qk
-zardonna
 nytetree
 starttheiwar
 chutebottom
@@ -185,6 +185,7 @@ stormspin
 noom
 startluni
 instinct sky 52
+kalcler
 ftspin
 tesiak
 khalarm
@@ -202,7 +203,6 @@ dkspell irda
 instinct mountain 51
 reefdragon
 bonfair
-kalcler
 rabbitwand
 knifetent
 goodleaf
@@ -210,6 +210,7 @@ tarsisbase
 tarsishermit
 stoneskin spire
 paxcenter
+kalcomp
 itanus
 tantsouth
 startrayne
@@ -219,6 +220,7 @@ dkspell hct
 startwda
 stoneseal
 luniboulder
+kalcler
 afterboulder
 luniavatar
 mound
@@ -257,6 +259,7 @@ tultuk
 startphysix
 balitrio
 bogmage
+kalsquare
 solwraith
 solundead
 solcler
@@ -281,6 +284,7 @@ startbully
 solwar
 startkruin
 startcitdrac
+kalfountain
 abovecitdrac
 startbluff
 startbandit
@@ -296,7 +300,6 @@ startshadow
 ritquali
 startriver
 harmonium
-kalinn
 unemestar
 garnetslab
 garnetnorth
@@ -310,7 +313,6 @@ alignne
 aligncn
 alignnl
 vinwar
-kalshop
 vindragontrain
 alignng
 palwar

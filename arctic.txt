@@ -1393,11 +1393,16 @@ reseteye;
   #map exit %2 command {open %1 %2; %2};
 }
 
+#alias mwno {mgo northwinds}
+#alias mwea {mgo eastwinds}
+#alias mwwe {mgo westwinds}
+#alias mwso {mgo southwinds}
+#alias rrm {rr; mgmy}
 #alias muo {
   #map exit %2 command {uo %1 %2; %2}
 }
 #alias mgmy {#map goto mythsh}
-#alias mapmy {mapload; mgmy}
+#alias mapmy {mloa; mgmy}
 #alias mlea {#map leave}
 #alias mgo {#map goto}
 #alias mret {#map return;
@@ -4393,7 +4398,8 @@ cancel;
   #system afplay smb3/%1.wav 2> smb3/out.txt &;
 }
 
-#alias dtell {
+#alias dtell dtellthis
+#alias dtellthis {
   escapequote %0;
   #system curl -H "Content-Type: application/json" -X POST -d '{"content": "$vescape"}' $webhook;
 }
