@@ -84,7 +84,9 @@ schaeffa
 southwinds
 sondra
 balrank
+kalbank
 balinn
+kalbank
 lemloc
 blackshore
 misty woods
@@ -137,6 +139,7 @@ shalzan
 startcrytic
 essence earth eern
 dargo start
+aligngc
 dargo squid jawbow
 essence water lezi
 pracevade
@@ -151,10 +154,12 @@ windfall barbarian
 swamptroll
 solamnic keep
 palanthas library key drawer
+kalcler
 astinus
 palanthas library dorshan
 palshelf
 fishreef
+kalfountain
 lemcase
 lemchest
 lemvashka
@@ -180,12 +185,12 @@ stormspin
 noom
 startluni
 instinct sky 52
+kalcler
 ftspin
 tesiak
 khalarm
 citadel start
 sloan
-kalinn
 yawto
 citadel window
 vaj
@@ -205,6 +210,7 @@ tarsisbase
 tarsishermit
 stoneskin spire
 paxcenter
+kalcomp
 itanus
 tantsouth
 startrayne
@@ -214,6 +220,7 @@ dkspell hct
 startwda
 stoneseal
 luniboulder
+kalcler
 afterboulder
 luniavatar
 mound
@@ -252,6 +259,7 @@ tultuk
 startphysix
 balitrio
 bogmage
+kalsquare
 solwraith
 solundead
 solcler
@@ -276,6 +284,7 @@ startbully
 solwar
 startkruin
 startcitdrac
+kalfountain
 abovecitdrac
 startbluff
 startbandit
@@ -289,6 +298,8 @@ beforetroll
 startlyt
 startshadow
 ritquali
+startriver
+harmonium
 unemestar
 garnetslab
 garnetnorth
