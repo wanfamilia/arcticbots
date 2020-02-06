@@ -23,6 +23,10 @@ class GitHelp
   def fia
     "git fi -a `git rev-parse --abbrev-ref HEAD`"
   end
+  
+  def fir
+    "git fi -r `git rev-parse --abbrev-ref HEAD`"
+  end
 
   def reflog
     'git reflog --pretty=format:"%an %h %s"'
