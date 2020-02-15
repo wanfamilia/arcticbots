@@ -21,6 +21,7 @@ snaggle
 nersouth
 fuddlesign
 nereast
+kaldruid
 recuperate kenbard
 recuperate bal
 eastwinds
@@ -32,9 +33,11 @@ dustmerch
 northwinds
 mythsh
 startdk
+kalbank
 tollhouse
 vinguard
 torenth
+kalbank
 starthct
 palsouth
 recuperate pal
@@ -76,6 +79,7 @@ werewolf
 gulfport
 gulfgar
 glade whitestone
+kalfountain
 shayd
 deepfish
 irdalagoon
@@ -84,9 +88,7 @@ schaeffa
 southwinds
 sondra
 balrank
-kalbank
 balinn
-kalbank
 lemloc
 blackshore
 misty woods
@@ -139,7 +141,6 @@ shalzan
 startcrytic
 essence earth eern
 dargo start
-aligngc
 dargo squid jawbow
 essence water lezi
 pracevade
@@ -154,12 +155,10 @@ windfall barbarian
 swamptroll
 solamnic keep
 palanthas library key drawer
-kalcler
 astinus
 palanthas library dorshan
 palshelf
 fishreef
-kalfountain
 lemcase
 lemchest
 lemvashka
@@ -173,6 +172,7 @@ belowsimm
 kern
 startpigmy
 rahnkagi
+aligngc
 rhankagi
 gargath
 teiresias blind glasses
@@ -185,7 +185,6 @@ stormspin
 noom
 startluni
 instinct sky 52
-kalcler
 ftspin
 tesiak
 khalarm
@@ -202,25 +201,26 @@ sky instinct 51
 dkspell irda
 instinct mountain 51
 reefdragon
+aligngc
 bonfair
 rabbitwand
 knifetent
 goodleaf
+kalnorth
 tarsisbase
 tarsishermit
 stoneskin spire
 paxcenter
-kalcomp
 itanus
 tantsouth
 startrayne
+kalwest
 raynegate
 dkspell rayne
 dkspell hct
 startwda
 stoneseal
 luniboulder
-kalcler
 afterboulder
 luniavatar
 mound
@@ -241,6 +241,7 @@ startsilvi
 startxak
 xakoaktree
 startspire
+kalcler
 ritspire
 spireend
 inferno
@@ -250,6 +251,7 @@ ctguards
 ctcent
 streamshayd
 palcrypt
+kalcomp
 palcrypt
 startlargus
 starticen
@@ -259,7 +261,6 @@ tultuk
 startphysix
 balitrio
 bogmage
-kalsquare
 solwraith
 solundead
 solcler
@@ -269,11 +270,17 @@ brogdruid
 havweap
 solscout
 startgian
+kalnorth
 lemnorth
 lemsouth
 startterzak
 terzakcliff
+kaldruid
 startdko
+dkosayskull
+recuperate kal
+dkonightlord
+kalinn
 palscout
 morticliff
 mortivillage
@@ -284,9 +291,9 @@ startbully
 solwar
 startkruin
 startcitdrac
-kalfountain
 abovecitdrac
 startbluff
+kalcler
 startbandit
 startregen
 soldruid
@@ -294,6 +301,7 @@ startmom
 sarson
 startraven
 ritraven
+kalcler
 beforetroll
 startlyt
 startshadow
