@@ -4949,7 +4949,7 @@ cancel;
 #VARIABLE         {resctar}               {Co}
 #VARIABLE         {slot6}                 {heal|harm|animate dead|darkness|summon|restoration|ritual voyage}
 #VARIABLE         {tank}                  {Rohane}
-#VARIABLE         {tanksuffix}            {(\swith|\svery hard|akes aim at|\sstaggers and|\sextremely hard|\slaughs and jeers at.+red in the face|\shard|, but he|, but she|\ssteps aside|\sinstead|\sgives h|\splaces h|\sin a thun|\sa solid punch|'s face|'s flesh shield, sending|\sstaggers and|\scompletely missing|\sblocks)}
+#VARIABLE         {tanksuffix}            {(\swith|\svery hard|\stakes aim at|\sstaggers and|\sextremely hard|\slaughs and jeers at.+red in the face|\shard|, but he|, but she|\ssteps aside|\sinstead|\sgives h|\splaces h|\sin a thun|\sa solid punch|'s face|'s flesh shield, sending|\sstaggers and|\scompletely missing|\sblocks)}
 #var {tankprefix} {piece of flesh circling|falls while trying to bash}
 #VARIABLE         {tempcondition}         {v.good}
 #VARIABLE         {tempshowgroup}         {m9 : Dian                 v.good    m9 }

@@ -16,12 +16,12 @@ kalsouth
 kaleast
 recuperate spring
 togarg
+kalcler
 nernorth
 snaggle
 nersouth
 fuddlesign
 nereast
-kaldruid
 recuperate kenbard
 recuperate bal
 eastwinds
@@ -33,11 +33,9 @@ dustmerch
 northwinds
 mythsh
 startdk
-kalbank
 tollhouse
 vinguard
 torenth
-kalbank
 starthct
 palsouth
 recuperate pal
@@ -47,6 +45,7 @@ recuperate light
 recuperate bung
 solsquare
 theobald
+kalcomp
 recuperate hovel
 whiterage
 bognorth
@@ -58,6 +57,7 @@ darvinus
 torath
 recuperate twen
 midsea
+kalbank
 ritbluff
 startcloud
 canstin
@@ -65,6 +65,7 @@ mirus
 caergoth
 kalscout
 westwinds
+kalbank
 locdarg
 tirabot
 startgrak
@@ -73,13 +74,13 @@ startboku
 darval
 darkeep
 palwest
+kalfountain
 palsquare
 hylosquare
 werewolf
 gulfport
 gulfgar
 glade whitestone
-kalfountain
 shayd
 deepfish
 irdalagoon
@@ -94,9 +95,12 @@ blackshore
 misty woods
 nalan
 dragonpoint
+kaldruid
 recuperate tar
 solinn
+kalcomp
 solrank
+kalcomp
 recuperate sol
 startthorb
 component neraka
@@ -131,6 +135,7 @@ ritgarret
 loccv
 startcv
 celestial valley
+kalfountain
 bors cv
 after arch
 succubus
@@ -172,7 +177,6 @@ belowsimm
 kern
 startpigmy
 rahnkagi
-aligngc
 rhankagi
 gargath
 teiresias blind glasses
@@ -201,20 +205,19 @@ sky instinct 51
 dkspell irda
 instinct mountain 51
 reefdragon
-aligngc
 bonfair
+kaldruid
 rabbitwand
 knifetent
 goodleaf
-kalnorth
 tarsisbase
+kalcler
 tarsishermit
 stoneskin spire
 paxcenter
 itanus
 tantsouth
 startrayne
-kalwest
 raynegate
 dkspell rayne
 dkspell hct
@@ -241,7 +244,6 @@ startsilvi
 startxak
 xakoaktree
 startspire
-kalcler
 ritspire
 spireend
 inferno
@@ -251,7 +253,6 @@ ctguards
 ctcent
 streamshayd
 palcrypt
-kalcomp
 palcrypt
 startlargus
 starticen
@@ -269,40 +270,39 @@ slig2
 brogdruid
 havweap
 solscout
+kalcomp
 startgian
-kalnorth
 lemnorth
 lemsouth
 startterzak
 terzakcliff
-kaldruid
 startdko
 dkosayskull
-recuperate kal
 dkonightlord
-kalinn
 palscout
 morticliff
 mortivillage
 startbda
+kalbank
 startbullywug
 startbully
 startbully
 solwar
+kalcomp
 startkruin
 startcitdrac
 abovecitdrac
 startbluff
-kalcler
 startbandit
 startregen
 soldruid
+kalcomp
 startmom
 sarson
 startraven
 ritraven
-kalcler
 beforetroll
+aligngc
 startlyt
 startshadow
 ritquali
@@ -325,6 +325,7 @@ vindragontrain
 alignng
 palwar
 aligngn
+kalcomp
 aligngl
 tantwest
 startbalcombe
@@ -339,3 +340,6 @@ palgrate
 drogo dk quest
 jibur
 valleyabove
+kalfountain
+unicorn
+kalinn
