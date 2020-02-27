@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 
 require_relative 'poro/git_help'
+require_relative 'poro/docker_help'
 
 class Webpage
   def initialize(url)
@@ -36,6 +37,10 @@ class Velm
 
   def gh
     GitHelp.new
+  end
+  
+  def dh
+    DockerHelp.new
   end
 
   def display
