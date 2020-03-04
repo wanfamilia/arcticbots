@@ -68,7 +68,7 @@
 	#line log messages.txt
 }
 {2}
-#var myshaman velm
+#var myshaman dawner
 #action {^{\w+} tells your {clan} '$myshaman rit {\w+}'} {othervoy %1 %3} {1}
 #alias ptab {pta barbarian}
 #alias oes {oe smile $myshaman; oe st}
@@ -1350,7 +1350,7 @@ reseteye;
   #split 9 2;
   #map flag vtmap on;
 }
-#alias mrun {st; #map run {%1} $runspeed}
+#alias mrun {ll st; #map run {%1} $runspeed}
 #alias mstop {#undelay PATH %d}
 #alias mrun2 {st; #map run {%1 %2} $runspeed}
 #alias mvoid {#map insert %1 void}
@@ -1403,6 +1403,7 @@ reseteye;
 }
 #alias mgmy {#map goto mythsh}
 #alias mapmy {mloa; mgmy}
+#alias mapso {mloa; mgo solinn}
 #alias mlea {#map leave}
 #alias mgo {#map goto}
 #alias mret {#map return;
@@ -2939,7 +2940,7 @@ richard_wan@hotmail.com;	1;	1;	1;	1;
   #alias stabclose shamstabclose;
   #alias rs rga;
   #var pet all.spirit;
-  #VARIABLE {slot6} {regenerate|heal boost|zombify|ritual voyage|darkened soul};
+  #VARIABLE {slot6} {regenerate|heal boost|zombify|ancestral spirit|ritual voyage|darkened soul};
   #alias hl {rgc};
   #action {^{\w+} makes preparations for} {classif ghostfor %%1};
   #ALIAS {someheals}
@@ -3775,12 +3776,12 @@ cancel;
   #ticker e60 {who needs_title};
 }
 #action {^Mustakrakish, the ancient death troll glows a bright lunar white} {gt -->    TROLL CLEANSED  !!}
-#alias logsham {logwin; velm; mypw; 1;1;modeshaman; fly}
+#alias logsham {logwin; $myshaman; mypw; 1;1;modeshaman; fly}
 #alias lcvoy {lc meteorite; lc veil; lc clove; lc effigy}
 #alias plpd {present letter; present pendant}
 #alias logsky {newses sky; talinia; mypw; 1; 1; modesky}
 #alias logpal {logbot; rohane; mypw; 1; 1; odepala; fly; d; d; n; e; jd r i}
-#alias logwar {logbot; kyrik; mypw; 1; 1; modepala; modewar; fly}
+#alias logwar {logbot; dawsen; mypw; 1; 1; modepala; modewar; fly}
 #alias logdar {logbot; iyler; mypw; 1; 1; modepala; modedar; fly}
 #alias logwaro {
   newses war;
@@ -4165,6 +4166,8 @@ cancel;
 }
 
 #alias boa {palass; mai ott}
+#alias boe {boa; ass}
+#alias bos {palass; ass}
 #alias boas {boa; oct}
 #alias moa {mag otaa; mai ott}
 #action {^{\d.+:sitting.+Me:}} {#var fighting 1; groupcaptureoff; nospam 1 stand} {4}
@@ -4420,6 +4423,7 @@ cancel;
 #alias kib {aggtwo ll ki}
 #alias las {ll ass}
 #alias rrk {rr; mgo kalinn}
+#alias rrs {rr; mgo solinn}
 #alias kr {bot {punch %1; parry}}
 #sub {hungry. feed me!} {warrior needs food, badly}
 #alias tban {bot rest; st; tan ban; #delay 1 {bot st}}
@@ -4835,7 +4839,8 @@ cancel;
 #MACRO {\eOw}
 {
 	mac flee;
-	st
+	st; mlea;
+
 }
 
 #MACRO {\eOx}
