@@ -13,10 +13,14 @@ kaldruid
 aligngc
 kalnorth
 kalsouth
+kalwest
 kaleast
 recuperate spring
 togarg
 nernorth
+kalsquare
+nerforge
+kalinn
 snaggle
 nersouth
 fuddlesign
@@ -32,12 +36,12 @@ petrin
 dustmerch
 northwinds
 mythsh
+kalcomp
 startdk
 tollhouse
 vinguard
 torenth
 starthct
-kalcler
 palsouth
 recuperate pal
 anatole
@@ -45,7 +49,6 @@ tocae
 recuperate light
 recuperate bung
 solsquare
-kalbank
 theobald
 recuperate hovel
 whiterage
@@ -81,6 +84,7 @@ werewolf
 gulfport
 gulfgar
 glade whitestone
+kalbank
 shayd
 deepfish
 irdalagoon
@@ -90,9 +94,9 @@ southwinds
 sondra
 balrank
 balinn
-kalwest
 lemloc
 blackshore
+kalcomp
 misty woods
 nalan
 dragonpoint
@@ -119,7 +123,6 @@ sansouth
 starttoede
 starttael
 instinct sky 42
-kalcler
 startquali
 paxgem
 locpax
@@ -127,7 +130,6 @@ kharolis
 citadel hylo
 citadel solace
 citadel thorbardin
-kaldruid
 startdwarfkeep
 citadel dwarfkeep
 citadel rockhorde
@@ -137,7 +139,6 @@ startcv
 celestial valley
 bors cv
 after arch
-kalbank
 succubus
 khane
 velchoir
@@ -168,12 +169,9 @@ palshelf
 fishreef
 lemusouth
 lemcase
-kalsquare
 lemuvoyloc
-kalinn
 lemchest
 lemvashka
-kalshop
 sara
 stormloc
 qk
@@ -181,13 +179,14 @@ nytetree
 starttheiwar
 chutebottom
 belowsimm
+aligngc
 kern
 startpigmy
 rahnkagi
 rhankagi
 gargath
-kalbank
 teiresias blind glasses
+zardonna
 totstatue
 solbank
 grom
@@ -213,6 +212,7 @@ sky instinct 51
 dkspell irda
 instinct mountain 51
 reefdragon
+kalbank
 bonfair
 rabbitwand
 knifetent
@@ -223,7 +223,6 @@ stoneskin spire
 paxcenter
 itanus
 tantsouth
-kalfountain
 startrayne
 raynegate
 dkspell rayne
@@ -245,7 +244,6 @@ bogmire
 bogmire
 nytetunnel
 ritkago
-kalcler
 kagoboulder
 dimdoor
 startsilvi
@@ -255,7 +253,6 @@ startspire
 ritspire
 spireend
 inferno
-kalcler
 startct
 ctcorner
 ctguards
@@ -270,6 +267,7 @@ illyoctrio
 tultuk
 startphysix
 balitrio
+kalcomp
 bogmage
 solwraith
 solundead
@@ -288,7 +286,6 @@ startterzak
 terzakcliff
 startdko
 dkosayskull
-kalnorth
 dkonightlord
 palscout
 morticliff
@@ -299,6 +296,7 @@ startbully
 startbully
 solwar
 startkruin
+kalcomp
 startcitdrac
 abovecitdrac
 startbluff
@@ -337,6 +335,7 @@ tantwest
 startbalcombe
 serra
 lhex
+kaldruid
 balcombe
 gownnocharm
 raynemansakr
