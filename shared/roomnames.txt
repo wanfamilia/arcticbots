@@ -26,7 +26,6 @@ recuperate bal
 eastwinds
 balnorth
 balinorth
-kalshop
 balsquare
 balsham
 petrin
@@ -38,6 +37,7 @@ tollhouse
 vinguard
 torenth
 starthct
+kalcler
 palsouth
 recuperate pal
 anatole
@@ -45,11 +45,11 @@ tocae
 recuperate light
 recuperate bung
 solsquare
+kalbank
 theobald
 recuperate hovel
 whiterage
 toquali
-kalbank
 bognorth
 recuperate cabin
 recuperate thorb
@@ -63,7 +63,6 @@ ritbluff
 startcloud
 canstin
 mirus
-kalcler
 caergoth
 kalscout
 kalwar
@@ -86,13 +85,12 @@ shayd
 deepfish
 irdalagoon
 irdagate
-kaldruid
 schaeffa
 southwinds
 sondra
 balrank
-kalshop
 balinn
+kalwest
 lemloc
 blackshore
 misty woods
@@ -108,7 +106,6 @@ nerinn
 sanction
 citadel kalaman
 pirates
-kalbank
 hctmze
 hct2maze
 ritfrosty
@@ -118,11 +115,11 @@ daggorath turtle
 zmij
 ixpat
 gleam
-kaldruid
 sansouth
 starttoede
 starttael
 instinct sky 42
+kalcler
 startquali
 paxgem
 locpax
@@ -130,6 +127,7 @@ kharolis
 citadel hylo
 citadel solace
 citadel thorbardin
+kaldruid
 startdwarfkeep
 citadel dwarfkeep
 citadel rockhorde
@@ -139,6 +137,7 @@ startcv
 celestial valley
 bors cv
 after arch
+kalbank
 succubus
 khane
 velchoir
@@ -169,14 +168,17 @@ palshelf
 fishreef
 lemusouth
 lemcase
+kalsquare
+lemuvoyloc
+kalinn
 lemchest
 lemvashka
+kalshop
 sara
 stormloc
 qk
 nytetree
 starttheiwar
-aligngc
 chutebottom
 belowsimm
 kern
@@ -184,6 +186,7 @@ startpigmy
 rahnkagi
 rhankagi
 gargath
+kalbank
 teiresias blind glasses
 totstatue
 solbank
@@ -196,7 +199,6 @@ startluni
 instinct sky 52
 ftspin
 tesiak
-kalfountain
 khalarm
 citadel start
 sloan
@@ -220,8 +222,8 @@ tarsishermit
 stoneskin spire
 paxcenter
 itanus
-kalcler
 tantsouth
+kalfountain
 startrayne
 raynegate
 dkspell rayne
@@ -243,8 +245,8 @@ bogmire
 bogmire
 nytetunnel
 ritkago
+kalcler
 kagoboulder
-kalfountain
 dimdoor
 startsilvi
 startxak
@@ -253,13 +255,13 @@ startspire
 ritspire
 spireend
 inferno
+kalcler
 startct
 ctcorner
 ctguards
 ctcent
 streamshayd
 palcrypt
-kalfountain
 palcrypt
 startlargus
 starticen
@@ -267,7 +269,6 @@ startgreenen
 illyoctrio
 tultuk
 startphysix
-kaldruid
 balitrio
 bogmage
 solwraith
@@ -287,6 +288,7 @@ startterzak
 terzakcliff
 startdko
 dkosayskull
+kalnorth
 dkonightlord
 palscout
 morticliff
@@ -301,7 +303,6 @@ startcitdrac
 abovecitdrac
 startbluff
 startbandit
-kalcomp
 startregen
 soldruid
 startmom
