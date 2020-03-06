@@ -3843,12 +3843,14 @@ cancel;
 #alias sky {#sky}
 
 #alias modewar {
-  #alias kstthis {punch %%1; $engvar %%1};
+  #alias kstthis {punch %%1; disarm; $engvar %%1; };
   #alias palassthis {assist %%1; kstthis};
   #alias bigrest {rest; ban me};
   ef ration;
+  #alias warhit donothing;
   #alias rewar {repala; modewar};
   #action {^The Hall of Bravery and Combat} {lrn; smile};
+  gw sword;
   eng kick;
   #action {^A blue light elemental stands up} {bble};
   #action {^The void beast calls a blue light elemental into} {bble};
@@ -4218,7 +4220,7 @@ cancel;
 }
 
 #var {vmock} {A beautiful mockingbird whistles derisive notes at passersby}
-#alias modewarr {
+#alias modewarrold {
  #action {disarms your weapon} {gw};
  gw sword;
  #alias warhit donothing;

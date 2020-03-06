@@ -13,14 +13,11 @@ kaldruid
 aligngc
 kalnorth
 kalsouth
-kalwest
 kaleast
 recuperate spring
 togarg
 nernorth
-kalsquare
 nerforge
-kalinn
 snaggle
 nersouth
 fuddlesign
@@ -31,12 +28,13 @@ eastwinds
 balnorth
 balinorth
 balsquare
+kalvoy
 balsham
 petrin
+kalvoy
 dustmerch
 northwinds
 mythsh
-kalcomp
 startdk
 tollhouse
 vinguard
@@ -51,6 +49,7 @@ recuperate bung
 solsquare
 theobald
 recuperate hovel
+kalcomp
 whiterage
 toquali
 bognorth
@@ -84,20 +83,20 @@ werewolf
 gulfport
 gulfgar
 glade whitestone
-kalbank
 shayd
 deepfish
 irdalagoon
 irdagate
 schaeffa
+kalfountain
 southwinds
 sondra
 balrank
 balinn
 lemloc
 blackshore
-kalcomp
 misty woods
+kalshop
 nalan
 dragonpoint
 recuperate tar
@@ -142,6 +141,7 @@ after arch
 succubus
 khane
 velchoir
+kalbank
 vshrinal
 shalzan
 startcrytic
@@ -164,10 +164,12 @@ swamptroll
 solamnic keep
 palanthas library key drawer
 astinus
+kalfountain
 palanthas library dorshan
 palshelf
 fishreef
 lemusouth
+kalshop
 lemcase
 lemuvoyloc
 lemchest
@@ -179,14 +181,12 @@ nytetree
 starttheiwar
 chutebottom
 belowsimm
-aligngc
 kern
 startpigmy
 rahnkagi
 rhankagi
 gargath
 teiresias blind glasses
-zardonna
 totstatue
 solbank
 grom
@@ -196,6 +196,7 @@ stormspin
 noom
 startluni
 instinct sky 52
+kalbank
 ftspin
 tesiak
 khalarm
@@ -212,18 +213,19 @@ sky instinct 51
 dkspell irda
 instinct mountain 51
 reefdragon
-kalbank
 bonfair
 rabbitwand
 knifetent
 goodleaf
 tarsisbase
 tarsishermit
+kalbank
 stoneskin spire
 paxcenter
 itanus
 tantsouth
 startrayne
+kalfountain
 raynegate
 dkspell rayne
 dkspell hct
@@ -267,7 +269,6 @@ illyoctrio
 tultuk
 startphysix
 balitrio
-kalcomp
 bogmage
 solwraith
 solundead
@@ -296,8 +297,8 @@ startbully
 startbully
 solwar
 startkruin
-kalcomp
 startcitdrac
+aligngc
 abovecitdrac
 startbluff
 startbandit
@@ -305,6 +306,7 @@ startregen
 soldruid
 startmom
 sarson
+kalwest
 startraven
 ritraven
 beforetroll
@@ -331,20 +333,27 @@ alignng
 palwar
 aligngn
 aligngl
+kalfountain
 tantwest
 startbalcombe
 serra
 lhex
-kaldruid
 balcombe
 gownnocharm
 raynemansakr
 rayneselissa
 thcsmith
 palgrate
+kalcler
 drogo dk quest
 jibur
 valleyabove
 unicorn
 palowl
 transmog
+lemucler
+steamgolem
+chutegaard
+jaketh
+brithnea
+sahsponge
