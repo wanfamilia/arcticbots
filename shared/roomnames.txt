@@ -26,6 +26,7 @@ recuperate bal
 eastwinds
 balnorth
 balinorth
+kalshop
 balsquare
 balsham
 petrin
@@ -48,6 +49,7 @@ theobald
 recuperate hovel
 whiterage
 toquali
+kalbank
 bognorth
 recuperate cabin
 recuperate thorb
@@ -61,6 +63,7 @@ ritbluff
 startcloud
 canstin
 mirus
+kalcler
 caergoth
 kalscout
 kalwar
@@ -83,11 +86,12 @@ shayd
 deepfish
 irdalagoon
 irdagate
-kalfountain
+kaldruid
 schaeffa
 southwinds
 sondra
 balrank
+kalshop
 balinn
 lemloc
 blackshore
@@ -104,6 +108,7 @@ nerinn
 sanction
 citadel kalaman
 pirates
+kalbank
 hctmze
 hct2maze
 ritfrosty
@@ -113,7 +118,7 @@ daggorath turtle
 zmij
 ixpat
 gleam
-kalfountain
+kaldruid
 sansouth
 starttoede
 starttael
@@ -162,6 +167,7 @@ astinus
 palanthas library dorshan
 palshelf
 fishreef
+lemusouth
 lemcase
 lemchest
 lemvashka
@@ -170,6 +176,7 @@ stormloc
 qk
 nytetree
 starttheiwar
+aligngc
 chutebottom
 belowsimm
 kern
@@ -189,6 +196,7 @@ startluni
 instinct sky 52
 ftspin
 tesiak
+kalfountain
 khalarm
 citadel start
 sloan
@@ -208,12 +216,11 @@ rabbitwand
 knifetent
 goodleaf
 tarsisbase
-zardonna
 tarsishermit
-kalwest
 stoneskin spire
 paxcenter
 itanus
+kalcler
 tantsouth
 startrayne
 raynegate
@@ -237,6 +244,7 @@ bogmire
 nytetunnel
 ritkago
 kagoboulder
+kalfountain
 dimdoor
 startsilvi
 startxak
@@ -251,6 +259,7 @@ ctguards
 ctcent
 streamshayd
 palcrypt
+kalfountain
 palcrypt
 startlargus
 starticen
@@ -258,10 +267,9 @@ startgreenen
 illyoctrio
 tultuk
 startphysix
-kalfountain
+kaldruid
 balitrio
 bogmage
-kalbank
 solwraith
 solundead
 solcler
@@ -283,7 +291,6 @@ dkonightlord
 palscout
 morticliff
 mortivillage
-kaldruid
 startbda
 startbullywug
 startbully
@@ -294,6 +301,7 @@ startcitdrac
 abovecitdrac
 startbluff
 startbandit
+kalcomp
 startregen
 soldruid
 startmom
@@ -315,7 +323,6 @@ dkquestkeep
 lieutreed
 alignec
 alignen
-kalcomp
 alignne
 aligncn
 alignnl
@@ -341,4 +348,3 @@ valleyabove
 unicorn
 palowl
 transmog
-kalinn

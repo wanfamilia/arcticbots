@@ -603,7 +603,7 @@ reseteye;
 #alias okv {otk %1; gt volley}
 #alias otks {otk %1; stup %1; oe st}
 
-#alias pracsean {#action {^The faintest connection to the undead} {sean}}
+#alias pracsean {sean; #action {^The faintest connection to the undead} {sean}}
 #alias jba {js bone arrow; give arrows %1}
 #alias jbab {jba brakus}
 #alias jbas {jba talinia}
@@ -1352,7 +1352,7 @@ reseteye;
 }
 #alias mrun {ll st; #map run {%1} $runspeed}
 #alias mstop {#undelay PATH %d}
-#alias mrun2 {st; #map run {%1 %2} $runspeed}
+#alias mrun2 {ll st; #map run {%1 %2} $runspeed}
 #alias mvoid {#map insert %1 void}
 #alias dopen {mdig %2; mopen %1 %2}
 #alias mlink {#map link %1 %2 both }
@@ -1404,6 +1404,8 @@ reseteye;
 #alias mgmy {#map goto mythsh}
 #alias mapmy {mloa; mgmy}
 #alias mapso {mloa; mgo solinn}
+#alias mapba {mloa; mgo balinn}
+#alias rrb {rr %1; mgo balinn}
 #alias mlea {#map leave}
 #alias mgo {#map goto}
 #alias mret {#map return;
@@ -3662,7 +3664,7 @@ richard_wan@hotmail.com;	1;	1;	1;	1;
 #alias bfg {bot {follow %1; guard %1; rescon}; #delay 1 {group form}}
 #alias rescon {#alias rs rss}
 #alias rescoff {#alias rs donothing}
-#alias rss {cancel; st; rescue %1; }
+#alias rss {cancel; st; rescue %1; gw}
 #ALIAS {rgc}
 {
 	js reg %1;
@@ -3701,7 +3703,7 @@ richard_wan@hotmail.com;	1;	1;	1;	1;
 #ALIAS {rr}
 {
 	cancel; rec recall %1;
-	get recall $belt
+	get recall $belt; hold sphere;
 }
 
 #alias cln {mag js cleanse}
@@ -3727,9 +3729,10 @@ richard_wan@hotmail.com;	1;	1;	1;	1;
 cancel;
 	st;
 	rescue %1;
-	st
+	st; gw;
 }
 #alias nrs {nospam 3 rs}
+#alias bavash {bt2 toram vashka}
 #alias dnrs {#delay %1 {nrs %2}}
 #action {^A yellowish-{\w+} cloud} {oncloud}
 #alias oncloud {gt -->    GUST please}
@@ -4168,6 +4171,7 @@ cancel;
 #alias boa {palass; mai ott}
 #alias boe {boa; ass}
 #alias bos {palass; ass}
+#alias bou {boa; oe lunge}
 #alias boas {boa; oct}
 #alias moa {mag otaa; mai ott}
 #action {^{\d.+:sitting.+Me:}} {#var fighting 1; groupcaptureoff; nospam 1 stand} {4}
@@ -4216,6 +4220,8 @@ cancel;
 #var {vmock} {A beautiful mockingbird whistles derisive notes at passersby}
 #alias modewarr {
  #action {disarms your weapon} {gw};
+ gw sword;
+ #alias warhit donothing;
  #alias thiefhit {dnrs 1 %1};
  casres;
   #alias pethit {dnrs 1 %1};
@@ -4424,7 +4430,7 @@ cancel;
 #alias las {ll ass}
 #alias rrk {rr; mgo kalinn}
 #alias rrs {rr; mgo solinn}
-#alias kr {bot {punch %1; parry}}
+#alias kpr {bot {punch %1; parry}}
 #sub {hungry. feed me!} {warrior needs food, badly}
 #alias tban {bot rest; st; tan ban; #delay 1 {bot st}}
 #alias dlcbluff {gobung; lc fine.silver.ring; lc face; lc holy; lc golden.bracelet; rest }
