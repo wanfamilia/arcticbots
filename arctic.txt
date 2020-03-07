@@ -317,8 +317,8 @@ reseteye;
 #sub {silver fauld} {silver fauld (2con)}
 #sub {dark elven bracelet} {dark elven bracelet(+slot6)}
 #sub {nightmare's twisted tendril} {nightmare tendril(imm_fear)}
-#sub {Brab tells your clan 'Mahs sucks'} {Brab: Battle Cryer Online}
-#sub {Mahs tells your clan 'Fuck you Mahs'}{Mahs: Ritual Voyage good to go, sir}
+#sub {Brab tells your clan 'Mahs sucks!'} {Brab: Battle Cryer Online}
+#sub {Mahs tells your clan 'Fuck you Mahs!'} {Mahs: Ritual Voyage good to go, sir}
 
 #sub {idol carved of green malachite} {green malachite idol(imm_poi imm_curse regas 16)}
 #sub {golden band coated with red dust} {red gold band(mindshield imm_sleep 2cl)}

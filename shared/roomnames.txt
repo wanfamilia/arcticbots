@@ -1,7 +1,10 @@
 kalinn
+kalbank
 recuperate kal
+kalbank
 kalvoy
 kalsquare
+kalbank
 kalshop
 zardonna
 kalwest
@@ -11,12 +14,10 @@ kalcler
 kalfountain
 kaldruid
 aligngc
-kalcomp
 kalnorth
 kalsouth
 kaleast
 recuperate spring
-zardonna
 togarg
 nernorth
 nerforge
@@ -24,7 +25,6 @@ snaggle
 nersouth
 fuddlesign
 nereast
-kalinn
 recuperate kenbard
 recuperate bal
 eastwinds
@@ -61,12 +61,13 @@ darvinus
 torath
 recuperate twen
 midsea
+kalinn
 ritbluff
+recuperate kal
 startcloud
 canstin
 mirus
 caergoth
-kalbank
 kalscout
 kalwar
 westwinds
@@ -75,7 +76,6 @@ tirabot
 startgrak
 luniboat
 startboku
-kalwest
 darval
 darkeep
 palwest
@@ -102,28 +102,27 @@ nalan
 dragonpoint
 recuperate tar
 solinn
+kalwest
 solrank
+kalwest
 recuperate sol
 startthorb
 component neraka
-kalshop
 nerinn
 sanction
 citadel kalaman
-kalwest
 pirates
-kalcomp
 hctmze
 hct2maze
 ritfrosty
 frostycave
 frostybottom
 daggorath turtle
+kalshop
 zmij
 ixpat
 gleam
 sansouth
-zardonna
 starttoede
 starttael
 instinct sky 42
@@ -139,7 +138,6 @@ citadel dwarfkeep
 citadel rockhorde
 ritgarret
 loccv
-kalshop
 startcv
 celestial valley
 bors cv
@@ -157,7 +155,6 @@ essence water lezi
 pracevade
 startstormhead
 essence fire slarn
-kalbank
 cloud pendant
 cloud priest
 castle gate
@@ -165,7 +162,6 @@ essence air dara
 sageway bugbears
 windfall barbarian
 startswamp
-kalcomp
 b4troll
 swamptroll
 solamnic keep
@@ -194,7 +190,6 @@ gargath
 teiresias blind glasses
 totstatue
 solbank
-kalwest
 grom
 kul
 trade
@@ -205,7 +200,6 @@ instinct sky 52
 ftspin
 tesiak
 khalarm
-kalcomp
 citadel start
 sloan
 yawto
@@ -217,7 +211,6 @@ dv copse
 dv acidic
 sky instinct 51
 dkspell irda
-kalfountain
 instinct mountain 51
 reefdragon
 bonfair
@@ -276,13 +269,11 @@ startphysix
 balitrio
 bogmage
 solwraith
-kalwest
 solundead
 solcler
 startslig
 slig2
 brogdruid
-kalwest
 balibed
 havweap
 solscout
@@ -295,10 +286,10 @@ terzakcliff
 startdko
 dkosayskull
 dkonightlord
-kaldruid
 palscout
 morticliff
 mortivillage
+kalbank
 startbda
 startbullywug
 startbully
@@ -330,7 +321,6 @@ dkquestkeep
 lieutreed
 alignec
 alignen
-zardonna
 alignne
 aligncn
 alignnl
@@ -345,18 +335,16 @@ startbalcombe
 serra
 lhex
 balcombe
-kalfountain
 gownnocharm
-kalwest
 raynemansakr
 rayneselissa
 thcsmith
 palgrate
 drogo dk quest
 jibur
-kalbank
 valleyabove
 unicorn
+kalbank
 palowl
 transmog
 lemucler
@@ -364,5 +352,6 @@ steamgolem
 chutegaard
 jaketh
 brithnea
+kalcler
 sahsponge
 bogfight
