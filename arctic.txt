@@ -317,8 +317,8 @@ reseteye;
 #sub {silver fauld} {silver fauld (2con)}
 #sub {dark elven bracelet} {dark elven bracelet(+slot6)}
 #sub {nightmare's twisted tendril} {nightmare tendril(imm_fear)}
-#sub {Sharg tells your clan 'Namahs sucks'} {Sharg: Battle Cryer Online}
-#sub {Namahs tells your clan 'Fuck you sharg'}{Namahs: Ritual Voyage good to go, sir}
+#sub {Brab tells your clan 'Mahs sucks'} {Brab: Battle Cryer Online}
+#sub {Mahs tells your clan 'Fuck you Mahs'}{Mahs: Ritual Voyage good to go, sir}
 
 #sub {idol carved of green malachite} {green malachite idol(imm_poi imm_curse regas 16)}
 #sub {golden band coated with red dust} {red gold band(mindshield imm_sleep 2cl)}
@@ -3729,7 +3729,7 @@ richard_wan@hotmail.com;	1;	1;	1;	1;
 cancel;
 	st;
 	rescue %1;
-	st; gw;
+	st; 
 }
 #alias nrs {nospam 3 rs}
 #alias bavash {bt2 toram vashka}
@@ -3850,7 +3850,6 @@ cancel;
   #alias warhit donothing;
   #alias rewar {repala; modewar};
   #action {^The Hall of Bravery and Combat} {lrn; smile};
-  gw sword;
   eng kick;
   #action {^A blue light elemental stands up} {bble};
   #action {^The void beast calls a blue light elemental into} {bble};

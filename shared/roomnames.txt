@@ -11,10 +11,12 @@ kalcler
 kalfountain
 kaldruid
 aligngc
+kalcomp
 kalnorth
 kalsouth
 kaleast
 recuperate spring
+zardonna
 togarg
 nernorth
 nerforge
@@ -22,16 +24,15 @@ snaggle
 nersouth
 fuddlesign
 nereast
+kalinn
 recuperate kenbard
 recuperate bal
 eastwinds
 balnorth
 balinorth
 balsquare
-kalvoy
 balsham
 petrin
-kalvoy
 dustmerch
 northwinds
 mythsh
@@ -49,7 +50,6 @@ recuperate bung
 solsquare
 theobald
 recuperate hovel
-kalcomp
 whiterage
 toquali
 bognorth
@@ -66,6 +66,7 @@ startcloud
 canstin
 mirus
 caergoth
+kalbank
 kalscout
 kalwar
 westwinds
@@ -74,12 +75,14 @@ tirabot
 startgrak
 luniboat
 startboku
+kalwest
 darval
 darkeep
 palwest
 palsquare
 hylosquare
 werewolf
+gulfeast
 gulfport
 gulfgar
 glade whitestone
@@ -88,7 +91,6 @@ deepfish
 irdalagoon
 irdagate
 schaeffa
-kalfountain
 southwinds
 sondra
 balrank
@@ -96,7 +98,6 @@ balinn
 lemloc
 blackshore
 misty woods
-kalshop
 nalan
 dragonpoint
 recuperate tar
@@ -105,10 +106,13 @@ solrank
 recuperate sol
 startthorb
 component neraka
+kalshop
 nerinn
 sanction
 citadel kalaman
+kalwest
 pirates
+kalcomp
 hctmze
 hct2maze
 ritfrosty
@@ -119,6 +123,7 @@ zmij
 ixpat
 gleam
 sansouth
+zardonna
 starttoede
 starttael
 instinct sky 42
@@ -134,6 +139,7 @@ citadel dwarfkeep
 citadel rockhorde
 ritgarret
 loccv
+kalshop
 startcv
 celestial valley
 bors cv
@@ -141,7 +147,6 @@ after arch
 succubus
 khane
 velchoir
-kalbank
 vshrinal
 shalzan
 startcrytic
@@ -152,6 +157,7 @@ essence water lezi
 pracevade
 startstormhead
 essence fire slarn
+kalbank
 cloud pendant
 cloud priest
 castle gate
@@ -159,17 +165,16 @@ essence air dara
 sageway bugbears
 windfall barbarian
 startswamp
+kalcomp
 b4troll
 swamptroll
 solamnic keep
 palanthas library key drawer
 astinus
-kalfountain
 palanthas library dorshan
 palshelf
 fishreef
 lemusouth
-kalshop
 lemcase
 lemuvoyloc
 lemchest
@@ -189,6 +194,7 @@ gargath
 teiresias blind glasses
 totstatue
 solbank
+kalwest
 grom
 kul
 trade
@@ -196,10 +202,10 @@ stormspin
 noom
 startluni
 instinct sky 52
-kalbank
 ftspin
 tesiak
 khalarm
+kalcomp
 citadel start
 sloan
 yawto
@@ -211,6 +217,7 @@ dv copse
 dv acidic
 sky instinct 51
 dkspell irda
+kalfountain
 instinct mountain 51
 reefdragon
 bonfair
@@ -219,13 +226,11 @@ knifetent
 goodleaf
 tarsisbase
 tarsishermit
-kalbank
 stoneskin spire
 paxcenter
 itanus
 tantsouth
 startrayne
-kalfountain
 raynegate
 dkspell rayne
 dkspell hct
@@ -271,11 +276,13 @@ startphysix
 balitrio
 bogmage
 solwraith
+kalwest
 solundead
 solcler
 startslig
 slig2
 brogdruid
+kalwest
 balibed
 havweap
 solscout
@@ -288,6 +295,7 @@ terzakcliff
 startdko
 dkosayskull
 dkonightlord
+kaldruid
 palscout
 morticliff
 mortivillage
@@ -298,7 +306,6 @@ startbully
 solwar
 startkruin
 startcitdrac
-aligngc
 abovecitdrac
 startbluff
 startbandit
@@ -306,7 +313,6 @@ startregen
 soldruid
 startmom
 sarson
-kalwest
 startraven
 ritraven
 beforetroll
@@ -324,6 +330,7 @@ dkquestkeep
 lieutreed
 alignec
 alignen
+zardonna
 alignne
 aligncn
 alignnl
@@ -333,20 +340,21 @@ alignng
 palwar
 aligngn
 aligngl
-kalfountain
 tantwest
 startbalcombe
 serra
 lhex
 balcombe
+kalfountain
 gownnocharm
+kalwest
 raynemansakr
 rayneselissa
 thcsmith
 palgrate
-kalcler
 drogo dk quest
 jibur
+kalbank
 valleyabove
 unicorn
 palowl
@@ -357,3 +365,4 @@ chutegaard
 jaketh
 brithnea
 sahsponge
+bogfight
