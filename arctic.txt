@@ -317,8 +317,8 @@ reseteye;
 #sub {silver fauld} {silver fauld (2con)}
 #sub {dark elven bracelet} {dark elven bracelet(+slot6)}
 #sub {nightmare's twisted tendril} {nightmare tendril(imm_fear)}
-#sub {Brab tells your clan 'Mahs sucks!'} {Brab: Battle Cryer Online}
-#sub {Mahs tells your clan 'Fuck you Mahs!'} {Mahs: Ritual Voyage good to go, sir}
+#sub {Brab tells your clan 'Mahs Sucks!'} {Brab: Battle Cryer Online}
+#sub {Mahs tells your clan 'Fuck you Brab!'} {Mahs: Ritual Voyage good to go, sir}
 
 #sub {idol carved of green malachite} {green malachite idol(imm_poi imm_curse regas 16)}
 #sub {golden band coated with red dust} {red gold band(mindshield imm_sleep 2cl)}
@@ -2741,6 +2741,7 @@ richard_wan@hotmail.com;	1;	1;	1;	1;
 	prompt condition
 }
 
+#alias ssi {jd sp si}
 #alias dt {drain %1; thrust %1; gaim}
 
 #ALIAS {makecler}
@@ -4202,7 +4203,6 @@ cancel;
   #action {^You have been blinded} {sysplay smb3_thwomp; #all #show --> BOT BLIND};
   #alias lootcomp donothing;
   casres;
-  gw hammer;
   #alias warhit {dnrs 2 %1};
   #action {^Your sense of indignation weakens and fades} {#all #show -->  RI gone};
   #alias thiefhit {dnrs 1 %1};

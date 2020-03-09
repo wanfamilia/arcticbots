@@ -1,10 +1,7 @@
 kalinn
-kalbank
 recuperate kal
-kalbank
 kalvoy
 kalsquare
-kalbank
 kalshop
 zardonna
 kalwest
@@ -44,10 +41,12 @@ starthct
 palsouth
 recuperate pal
 anatole
+kalfountain
 tocae
 recuperate light
 recuperate bung
 solsquare
+kalbank
 theobald
 recuperate hovel
 whiterage
@@ -61,9 +60,8 @@ darvinus
 torath
 recuperate twen
 midsea
-kalinn
 ritbluff
-recuperate kal
+kalcomp
 startcloud
 canstin
 mirus
@@ -75,11 +73,13 @@ locdarg
 tirabot
 startgrak
 luniboat
+qualm
 startboku
 darval
 darkeep
 palwest
 palsquare
+kalfountain
 hylosquare
 werewolf
 gulfeast
@@ -101,10 +101,9 @@ misty woods
 nalan
 dragonpoint
 recuperate tar
+tarsinn
 solinn
-kalwest
 solrank
-kalwest
 recuperate sol
 startthorb
 component neraka
@@ -118,10 +117,10 @@ ritfrosty
 frostycave
 frostybottom
 daggorath turtle
-kalshop
 zmij
 ixpat
 gleam
+sanport
 sansouth
 starttoede
 starttael
@@ -168,7 +167,9 @@ solamnic keep
 palanthas library key drawer
 astinus
 palanthas library dorshan
+kalfountain
 palshelf
+aligngc
 fishreef
 lemusouth
 lemcase
@@ -213,16 +214,19 @@ sky instinct 51
 dkspell irda
 instinct mountain 51
 reefdragon
+kaldruid
 bonfair
 rabbitwand
 knifetent
 goodleaf
 tarsisbase
 tarsishermit
+zardonna
 stoneskin spire
 paxcenter
 itanus
 tantsouth
+kalfountain
 startrayne
 raynegate
 dkspell rayne
@@ -235,6 +239,7 @@ luniavatar
 mound
 moundcloud
 aspre
+aligngc
 statue
 gopi
 eras
@@ -289,7 +294,6 @@ dkonightlord
 palscout
 morticliff
 mortivillage
-kalbank
 startbda
 startbullywug
 startbully
@@ -305,7 +309,9 @@ soldruid
 startmom
 sarson
 startraven
+kalfountain
 ritraven
+aligngc
 beforetroll
 startlyt
 startshadow
@@ -320,6 +326,8 @@ raynelord
 dkquestkeep
 lieutreed
 alignec
+branchala
+branchguard
 alignen
 alignne
 aligncn
@@ -344,7 +352,6 @@ drogo dk quest
 jibur
 valleyabove
 unicorn
-kalbank
 palowl
 transmog
 lemucler
@@ -352,6 +359,6 @@ steamgolem
 chutegaard
 jaketh
 brithnea
-kalcler
 sahsponge
 bogfight
+kalbank
