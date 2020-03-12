@@ -2,6 +2,7 @@
 
 require_relative 'poro/git_help'
 require_relative 'poro/docker_help'
+require_relative 'poro/swagger'
 
 class Webpage
   def initialize(url)
@@ -46,6 +47,10 @@ class Velm
   def display
     @display = true
     self
+  end
+  
+  def sw
+    Swagger.new
   end
   
   def awsh(ip)
