@@ -2928,15 +2928,16 @@ richard_wan@hotmail.com;	1;	1;	1;	1;
 #alias bsm {bot slam %1; asm}
 
 #alias inri {inspect gleaming.medal}
+#alias kemash {aggone ki %1; klb %1}
 #alias pn {punch %1; ota}
 #alias pnh {pn %1; hex}
 #alias drlicr {drop crate; light crate}
 #alias rga {ota %1; rg %1}
 #alias rgab {brs %1; rga %1}
 #alias modeshaman {
-  #alias bigrest {rest; tan watch; #var resting 1};
+  #alias bigrest {rest; tan watch; ban me; #var resting 1};
   #alias othervoy othervoyimpl;
-  #alias ke {kst %%1; otk %%1};
+  #alias ke {kst %%1; ageng %%1};
   #alias cleancomp cleancomp1;
   #var {circle1} {clot};
   #unticker feedme;
@@ -3219,7 +3220,7 @@ richard_wan@hotmail.com;	1;	1;	1;	1;
 #var pet {Boanes}
 
 #alias otk {aggtwo opet ki %1}
-
+#alias ageng {aggone $engvar}
 #alias ota  {vota}
 #ALIAS {vota}
 {
@@ -3595,16 +3596,20 @@ richard_wan@hotmail.com;	1;	1;	1;	1;
 #alias mknock {msw knock locate}
 #alias klba {mag klb %1; mag ota; otta} 
 #alias puf {mag pufthis}
+
 #ALIAS {pufthis}
 {
 	#if {"%1"!=""}
 	{
-		js relo %1
+		jsrelo %1
 	}
 	{
-		js relo zardonna
+		jsrelo zardonna
 	}
 }
+
+#alias jsrelo {js relo}
+#alias jsport {js tele %1; ddo %1}
 #alias dofrosty {say it is time for ice to turn to tin once again}
 #ALIAS {qp}
 {
@@ -3665,7 +3670,7 @@ richard_wan@hotmail.com;	1;	1;	1;	1;
 #alias bfg {bot {follow %1; guard %1; rescon}; #delay 1 {group form}}
 #alias rescon {#alias rs rss}
 #alias rescoff {#alias rs donothing}
-#alias rss {cancel; st; rescue %1; gw}
+#alias rss {cancel; st; rescue %1; }
 #ALIAS {rgc}
 {
 	js reg %1;
@@ -3740,7 +3745,7 @@ cancel;
 #alias tmpa {%1 %2; ota; temp}
 #alias ksbt {tmpa ksb}
 #alias logred {#alias mag {#red} ; newses red; wilbon; mypw; 1; 1; fly; modemage; modered;} 
-#alias logwhi {newses white; mipsy; mypw; #var food food; 1; 1; fly; modemage; modewhite}
+#alias logwhi {newses white; pryor; mypw; #var food food; 1; 1; fly; modemage; modewhite}
 #alias mag {#white}
 #alias modered {
   #alias mag {#red};
@@ -3753,6 +3758,7 @@ cancel;
   #alias goway {goto wilma};
   #alias ide {rec identify};
   #alias remage {rewin; modemage; modewhite};
+  #alias jsrelo jsport;
   #alias mlo {msw locate knock};
   #action {^{\w+} makes a mockery out of everyone} {nospam 30 jmoc %%1};
 }
@@ -3784,7 +3790,7 @@ cancel;
 #alias lcvoy {lc meteorite; lc veil; lc clove; lc effigy}
 #alias plpd {present letter; present pendant}
 #alias logsky {newses sky; talinia; mypw; 1; 1; modesky}
-#alias logpal {logbot; rohane; mypw; 1; 1; odepala; fly; d; d; n; e; jd r i}
+#alias logpal {logbot; boone; mypw; 1; 1; modepala; fly; d; d; n; e; jd r i}
 #alias logwar {logbot; dawsen; mypw; 1; 1; modepala; modewar; fly}
 #alias logdar {logbot; iyler; mypw; 1; 1; modepala; modedar; fly}
 #alias logwaro {
@@ -4073,6 +4079,7 @@ cancel;
   nutr $food;
   #alias fastmem {ban me; deep};
   #action {disarms your weapon} {cancel; gw};
+  #alias ke {kst %%1; ageng %%1};
   guston;
   #var {circle1} {infrav};
 }

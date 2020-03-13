@@ -41,12 +41,11 @@ starthct
 palsouth
 recuperate pal
 anatole
-kalfountain
+tolemish
 tocae
 recuperate light
 recuperate bung
 solsquare
-kalbank
 theobald
 recuperate hovel
 whiterage
@@ -61,13 +60,14 @@ torath
 recuperate twen
 midsea
 ritbluff
-kalcomp
 startcloud
 canstin
 mirus
 caergoth
 kalscout
+kalcler
 kalwar
+kalcler
 westwinds
 locdarg
 tirabot
@@ -79,7 +79,6 @@ darval
 darkeep
 palwest
 palsquare
-kalfountain
 hylosquare
 werewolf
 gulfeast
@@ -93,6 +92,7 @@ irdagate
 schaeffa
 southwinds
 sondra
+kalfountain
 balrank
 balinn
 lemloc
@@ -155,6 +155,7 @@ pracevade
 startstormhead
 essence fire slarn
 cloud pendant
+kalnorth
 cloud priest
 castle gate
 essence air dara
@@ -167,9 +168,7 @@ solamnic keep
 palanthas library key drawer
 astinus
 palanthas library dorshan
-kalfountain
 palshelf
-aligngc
 fishreef
 lemusouth
 lemcase
@@ -214,21 +213,20 @@ sky instinct 51
 dkspell irda
 instinct mountain 51
 reefdragon
-kaldruid
 bonfair
 rabbitwand
+kalcler
 knifetent
 goodleaf
 tarsisbase
 tarsishermit
-zardonna
 stoneskin spire
 paxcenter
 itanus
 tantsouth
-kalfountain
 startrayne
 raynegate
+kaldruid
 dkspell rayne
 dkspell hct
 startwda
@@ -239,11 +237,13 @@ luniavatar
 mound
 moundcloud
 aspre
-aligngc
 statue
+kalcler
 gopi
+kalcler
 eras
 ochreportal
+kalfountain
 bogkey
 bogmire
 bogmire
@@ -259,6 +259,7 @@ ritspire
 spireend
 inferno
 startct
+aligngc
 ctcorner
 ctguards
 ctcent
@@ -270,6 +271,7 @@ starticen
 startgreenen
 illyoctrio
 tultuk
+kalcomp
 startphysix
 balitrio
 bogmage
@@ -281,6 +283,7 @@ slig2
 brogdruid
 balibed
 havweap
+kalwest
 solscout
 kalsham
 startgian
@@ -304,14 +307,15 @@ startcitdrac
 abovecitdrac
 startbluff
 startbandit
+aligngc
 startregen
+kalfountain
 soldruid
 startmom
+kalfountain
 sarson
 startraven
-kalfountain
 ritraven
-aligngc
 beforetroll
 startlyt
 startshadow
@@ -330,6 +334,7 @@ branchala
 branchguard
 alignen
 alignne
+kalcomp
 aligncn
 alignnl
 vinwar
@@ -341,6 +346,7 @@ aligngl
 tantwest
 startbalcombe
 serra
+aligngc
 lhex
 balcombe
 gownnocharm
@@ -349,16 +355,19 @@ rayneselissa
 thcsmith
 palgrate
 drogo dk quest
+kalcler
 jibur
 valleyabove
 unicorn
 palowl
+blodesign
 transmog
 lemucler
 steamgolem
 chutegaard
+kaldruid
 jaketh
 brithnea
 sahsponge
 bogfight
-kalbank
+newsouth
