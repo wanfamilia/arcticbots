@@ -273,6 +273,7 @@ reseteye;
 #alias domith {say Grant me your blessings for the battles to come}
 #alias stmo {store all.mote}
 
+#alias sasu {sat; suel; ll rest}
 #sub {loaf of bread} {fried chicken thigh}
 #sub {silver jeweled bracelet} {silver jeweled bracelet(imm_poi)}
 #sub {an iron ration} {a juicy steak}

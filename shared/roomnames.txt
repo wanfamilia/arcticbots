@@ -22,6 +22,7 @@ snaggle
 nersouth
 fuddlesign
 nereast
+kalwest
 recuperate kenbard
 recuperate bal
 eastwinds
@@ -53,6 +54,7 @@ toquali
 bognorth
 recuperate cabin
 recuperate thorb
+kalcomp
 acorn
 tarfountain
 darvinus
@@ -65,13 +67,12 @@ canstin
 mirus
 caergoth
 kalscout
-kalcler
 kalwar
-kalcler
 westwinds
 locdarg
 tirabot
 startgrak
+gormskun
 luniboat
 qualm
 startboku
@@ -92,7 +93,6 @@ irdagate
 schaeffa
 southwinds
 sondra
-kalfountain
 balrank
 balinn
 lemloc
@@ -123,6 +123,7 @@ gleam
 sanport
 sansouth
 starttoede
+kalbank
 starttael
 instinct sky 42
 startquali
@@ -155,7 +156,6 @@ pracevade
 startstormhead
 essence fire slarn
 cloud pendant
-kalnorth
 cloud priest
 castle gate
 essence air dara
@@ -196,6 +196,7 @@ trade
 stormspin
 noom
 startluni
+kalbank
 instinct sky 52
 ftspin
 tesiak
@@ -215,10 +216,10 @@ instinct mountain 51
 reefdragon
 bonfair
 rabbitwand
-kalcler
 knifetent
 goodleaf
 tarsisbase
+kalwest
 tarsishermit
 stoneskin spire
 paxcenter
@@ -226,7 +227,6 @@ itanus
 tantsouth
 startrayne
 raynegate
-kaldruid
 dkspell rayne
 dkspell hct
 startwda
@@ -238,12 +238,9 @@ mound
 moundcloud
 aspre
 statue
-kalcler
 gopi
-kalcler
 eras
 ochreportal
-kalfountain
 bogkey
 bogmire
 bogmire
@@ -259,10 +256,11 @@ ritspire
 spireend
 inferno
 startct
-aligngc
 ctcorner
+kalfountain
 ctguards
 ctcent
+aligngc
 streamshayd
 palcrypt
 palcrypt
@@ -270,8 +268,8 @@ startlargus
 starticen
 startgreenen
 illyoctrio
+kalfountain
 tultuk
-kalcomp
 startphysix
 balitrio
 bogmage
@@ -283,7 +281,6 @@ slig2
 brogdruid
 balibed
 havweap
-kalwest
 solscout
 kalsham
 startgian
@@ -292,6 +289,7 @@ lemsouth
 startterzak
 terzakcliff
 startdko
+kalcler
 dkosayskull
 dkonightlord
 palscout
@@ -305,14 +303,12 @@ solwar
 startkruin
 startcitdrac
 abovecitdrac
+kalfountain
 startbluff
 startbandit
-aligngc
 startregen
-kalfountain
 soldruid
 startmom
-kalfountain
 sarson
 startraven
 ritraven
@@ -324,6 +320,7 @@ startriver
 harmonium
 unemestar
 garnetslab
+kalcomp
 garnetnorth
 belowlubs
 raynelord
@@ -334,28 +331,27 @@ branchala
 branchguard
 alignen
 alignne
-kalcomp
 aligncn
 alignnl
 vinwar
 vindragontrain
 alignng
+kalbank
 palwar
 aligngn
 aligngl
 tantwest
 startbalcombe
 serra
-aligngc
 lhex
 balcombe
 gownnocharm
 raynemansakr
 rayneselissa
+kaldruid
 thcsmith
 palgrate
 drogo dk quest
-kalcler
 jibur
 valleyabove
 unicorn
@@ -365,7 +361,6 @@ transmog
 lemucler
 steamgolem
 chutegaard
-kaldruid
 jaketh
 brithnea
 sahsponge
