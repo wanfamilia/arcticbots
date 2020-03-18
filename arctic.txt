@@ -950,7 +950,7 @@ reseteye;
 #action {^{\d[^\[]+}>} {#var fighting 0; groupcaptureoff}
 #action {^{\d.+Pos:standing[^\[]+}>} {#var fighting 0; groupcaptureoff}
 #action {^{\d.+Me:}} {#var fighting 1; groupcaptureoff}
-#var pets {Fuffy|Nektar|Tanky|Fredery|Brutto|Durge|Fereous|Merci}
+#var pets {Ayoade|Burton}
 #action {{$pets} the {\w+\s?\w+}{$tanksuffix}} {pethit %1}
 
 #alias pethit {
@@ -1073,7 +1073,7 @@ reseteye;
 #alias conir {#var pet Fereous; conj iron}
 #alias conlea {#var pet Plumbic; conj lead}
 #alias conca {#var pet Fuffy; conj cat}
-#alias conow {#var pet Nektar; conj owl;
+#alias conow {#var pet Ayoade; conj owl;
   oe for 'di ma' 'blur' 'shield' 'inv';
   oe mem 'li bo' 'ma mi' 'ma mi' 's g';
 }
@@ -2287,7 +2287,8 @@ reseteye;
 	oha
 }
 
-#ALIAS {kab}
+#alias kab {mag okd kacbl}
+#ALIAS {kacbl}
 {
 	jda ac bl
 }
@@ -3231,7 +3232,7 @@ richard_wan@hotmail.com;	1;	1;	1;	1;
 }
 
 #alias w9 {#9 with 99}
-
+#alias w50 {#51 with 99}
 #alias ott {onfight; tan watch; opet assist $tank; opet st}
 
 #alias opr {opet rest}
@@ -3481,7 +3482,7 @@ richard_wan@hotmail.com;	1;	1;	1;	1;
 
 #action {^{\w+} steps near you and moves into a protective posture} {praise %1}
 #alias bdis {bot {ass; av prim}}
-#alias vom {voy mipsy; rg mipsy; mai rest}
+#alias vom {voy pryor; rg pryor; mai rest}
 #alias ctt {ct tick in $tilltick}
 #alias blay {bot {cancel; st; lay %1}}
 #alias bfree {bot invoke reorx}
@@ -4175,6 +4176,7 @@ cancel;
   needbuff high prayer;
   needbuff holy vision;
   needbuff crusade;
+  reck;
   bes paladine;
 }
 
@@ -4182,7 +4184,9 @@ cancel;
 #alias boe {boa; ass}
 #alias bos {palass; ass}
 #alias bou {boa; oe lunge}
+#alias goha {mrun harmonium}
 #alias boas {boa; oct}
+#alias mshgi {cancel; mssh girl}
 #alias moa {mag otaa; mai ott}
 #action {^{\d.+:sitting.+Me:}} {#var fighting 1; groupcaptureoff; nospam 1 stand} {4}
 #alias asm {bot {assist; slam; rally}; mai ott}

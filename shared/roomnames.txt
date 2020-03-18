@@ -22,7 +22,6 @@ snaggle
 nersouth
 fuddlesign
 nereast
-kalwest
 recuperate kenbard
 recuperate bal
 eastwinds
@@ -45,6 +44,7 @@ anatole
 tolemish
 tocae
 recuperate light
+aligngc
 recuperate bung
 solsquare
 theobald
@@ -54,7 +54,6 @@ toquali
 bognorth
 recuperate cabin
 recuperate thorb
-kalcomp
 acorn
 tarfountain
 darvinus
@@ -74,6 +73,7 @@ tirabot
 startgrak
 gormskun
 luniboat
+kaldruid
 qualm
 startboku
 darval
@@ -91,6 +91,7 @@ deepfish
 irdalagoon
 irdagate
 schaeffa
+zardonna
 southwinds
 sondra
 balrank
@@ -100,6 +101,7 @@ blackshore
 misty woods
 nalan
 dragonpoint
+kalnorth
 recuperate tar
 tarsinn
 solinn
@@ -123,7 +125,6 @@ gleam
 sanport
 sansouth
 starttoede
-kalbank
 starttael
 instinct sky 42
 startquali
@@ -165,6 +166,7 @@ startswamp
 b4troll
 swamptroll
 solamnic keep
+kalnorth
 palanthas library key drawer
 astinus
 palanthas library dorshan
@@ -186,6 +188,7 @@ kern
 startpigmy
 rahnkagi
 rhankagi
+kalcler
 gargath
 teiresias blind glasses
 totstatue
@@ -196,7 +199,6 @@ trade
 stormspin
 noom
 startluni
-kalbank
 instinct sky 52
 ftspin
 tesiak
@@ -212,6 +214,7 @@ dv copse
 dv acidic
 sky instinct 51
 dkspell irda
+kalvoy
 instinct mountain 51
 reefdragon
 bonfair
@@ -219,7 +222,6 @@ rabbitwand
 knifetent
 goodleaf
 tarsisbase
-kalwest
 tarsishermit
 stoneskin spire
 paxcenter
@@ -249,18 +251,19 @@ ritkago
 kagoboulder
 dimdoor
 startsilvi
+bogwall
 startxak
+kalnorth
 xakoaktree
 startspire
 ritspire
 spireend
 inferno
+kaldruid
 startct
 ctcorner
-kalfountain
 ctguards
 ctcent
-aligngc
 streamshayd
 palcrypt
 palcrypt
@@ -268,7 +271,6 @@ startlargus
 starticen
 startgreenen
 illyoctrio
-kalfountain
 tultuk
 startphysix
 balitrio
@@ -289,7 +291,6 @@ lemsouth
 startterzak
 terzakcliff
 startdko
-kalcler
 dkosayskull
 dkonightlord
 palscout
@@ -303,7 +304,6 @@ solwar
 startkruin
 startcitdrac
 abovecitdrac
-kalfountain
 startbluff
 startbandit
 startregen
@@ -318,14 +318,17 @@ startshadow
 ritquali
 startriver
 harmonium
+kalcler
 unemestar
+irdacell
+kalinn
 garnetslab
-kalcomp
 garnetnorth
 belowlubs
 raynelord
 dkquestkeep
 lieutreed
+kalcler
 alignec
 branchala
 branchguard
@@ -336,7 +339,6 @@ alignnl
 vinwar
 vindragontrain
 alignng
-kalbank
 palwar
 aligngn
 aligngl
@@ -348,7 +350,6 @@ balcombe
 gownnocharm
 raynemansakr
 rayneselissa
-kaldruid
 thcsmith
 palgrate
 drogo dk quest
@@ -357,10 +358,12 @@ valleyabove
 unicorn
 palowl
 blodesign
+tosilvi
 transmog
 lemucler
 steamgolem
 chutegaard
+kaleast
 jaketh
 brithnea
 sahsponge
