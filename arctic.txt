@@ -953,7 +953,7 @@ reseteye;
 #action {^{\d.+Me:}} {#var fighting 1; groupcaptureoff}
 #var pets {Ayoade|Steamboat}
 #action {{$pets} the {\w+\s?\w+}{$tanksuffix}} {pethit %1}
-#alias ctdi {check #rich-bots channel in discord}
+#alias ctdi {ct check #rich-bots channel in discord}
 #alias gtri {gt kill risol, if you get booted from fight: stand, up}
 #alias pethit {
   #var petresc %1;
@@ -3236,6 +3236,7 @@ richard_wan@hotmail.com;	1;	1;	1;	1;
 
 #alias w9 {#9 with 99}
 #alias w50 {#51 with 99}
+#alias w10k {#101 with 99}
 #alias ott {onfight; tan watch; opet assist $tank; opet st}
 
 #alias opr {opet rest}

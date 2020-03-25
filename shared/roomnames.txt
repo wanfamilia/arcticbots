@@ -16,6 +16,7 @@ kalsouth
 kaleast
 recuperate spring
 togarg
+kalbank
 nernorth
 nerforge
 snaggle
@@ -37,6 +38,7 @@ startdk
 tollhouse
 vinguard
 torenth
+kalcler
 starthct
 palsouth
 recuperate pal
@@ -48,6 +50,7 @@ recuperate bung
 solsquare
 theobald
 recuperate hovel
+kalbank
 whiterage
 toquali
 bognorth
@@ -55,7 +58,6 @@ recuperate cabin
 recuperate thorb
 acorn
 tarfountain
-aligngc
 darvinus
 torath
 recuperate twen
@@ -100,7 +102,6 @@ misty woods
 nalan
 dragonpoint
 recuperate tar
-aligngc
 tarsinn
 solinn
 solrank
@@ -124,12 +125,12 @@ sanport
 sansouth
 starttoede
 starttael
-kalcler
 instinct sky 42
 startquali
 paxgem
 locpax
 kharolis
+kaldruid
 citadel hylo
 citadel solace
 citadel thorbardin
@@ -141,7 +142,6 @@ loccv
 startcv
 celestial valley
 bors cv
-aligngc
 after arch
 succubus
 khane
@@ -164,6 +164,7 @@ sageway bugbears
 windfall barbarian
 startswamp
 b4troll
+kalfountain
 swamptroll
 solamnic keep
 palanthas library key drawer
@@ -172,7 +173,6 @@ palanthas library dorshan
 palshelf
 fishreef
 lemusouth
-kalcler
 lemcase
 lemuvoyloc
 lemchest
@@ -193,10 +193,8 @@ teiresias blind glasses
 totstatue
 solbank
 grom
-kalbank
 kul
 trade
-kalfountain
 stormspin
 noom
 startluni
@@ -251,7 +249,7 @@ bogkey
 bogmire
 bogmire
 nytetunnel
-kalsquare
+kalfountain
 ritkago
 kagoboulder
 dimdoor
@@ -272,7 +270,6 @@ palcrypt
 palcrypt
 startlargus
 starticen
-kalcler
 startgreenen
 illyoctrio
 tultuk
@@ -289,7 +286,6 @@ balibed
 havweap
 solscout
 kalsham
-kalcomp
 startgian
 lemnorth
 lemsouth
@@ -300,8 +296,8 @@ dkosayskull
 dkonightlord
 palscout
 morticliff
+aligngc
 mortivillage
-kaldruid
 startbda
 startbullywug
 startbully
@@ -314,10 +310,10 @@ abovecitdrac
 startbluff
 startbandit
 startregen
-kalcler
 soldruid
 startmom
 sarson
+recuperate kal
 startraven
 ritraven
 beforetroll
@@ -326,18 +322,14 @@ startshadow
 ritquali
 startriver
 harmonium
-kalcomp
 unemestar
 irdacell
 garnetslab
-kalbank
 garnetnorth
 belowlubs
-aligngc
 raynelord
 dkquestkeep
 lieutreed
-kalcomp
 alignec
 branchala
 branchguard
@@ -361,12 +353,11 @@ raynemansakr
 rayneselissa
 thcsmith
 palgrate
-kalbank
 drogo dk quest
 jibur
+kaldruid
 valleyabove
 unicorn
-kaldruid
 palowl
 blodesign
 tosilvi
@@ -376,7 +367,6 @@ steamgolem
 chutegaard
 jaketh
 brithnea
-kalnorth
 sahsponge
 bogfight
 newsouth
@@ -385,4 +375,3 @@ cinder
 crowbar
 t
 eastthon
-kalcler
