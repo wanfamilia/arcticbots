@@ -44,7 +44,6 @@ anatole
 tolemish
 tocae
 recuperate light
-aligngc
 recuperate bung
 solsquare
 theobald
@@ -56,6 +55,7 @@ recuperate cabin
 recuperate thorb
 acorn
 tarfountain
+aligngc
 darvinus
 torath
 recuperate twen
@@ -73,7 +73,6 @@ tirabot
 startgrak
 gormskun
 luniboat
-kaldruid
 qualm
 startboku
 darval
@@ -91,7 +90,6 @@ deepfish
 irdalagoon
 irdagate
 schaeffa
-zardonna
 southwinds
 sondra
 balrank
@@ -101,8 +99,8 @@ blackshore
 misty woods
 nalan
 dragonpoint
-kalnorth
 recuperate tar
+aligngc
 tarsinn
 solinn
 solrank
@@ -126,6 +124,7 @@ sanport
 sansouth
 starttoede
 starttael
+kalcler
 instinct sky 42
 startquali
 paxgem
@@ -142,6 +141,7 @@ loccv
 startcv
 celestial valley
 bors cv
+aligngc
 after arch
 succubus
 khane
@@ -166,13 +166,13 @@ startswamp
 b4troll
 swamptroll
 solamnic keep
-kalnorth
 palanthas library key drawer
 astinus
 palanthas library dorshan
 palshelf
 fishreef
 lemusouth
+kalcler
 lemcase
 lemuvoyloc
 lemchest
@@ -188,14 +188,15 @@ kern
 startpigmy
 rahnkagi
 rhankagi
-kalcler
 gargath
 teiresias blind glasses
 totstatue
 solbank
 grom
+kalbank
 kul
 trade
+kalfountain
 stormspin
 noom
 startluni
@@ -206,15 +207,17 @@ khalarm
 citadel start
 sloan
 yawto
+citadel yun
 citadel window
+jito
 vaj
+citadel drake
 citadel vin
 citadel tenlo
 dv copse
 dv acidic
 sky instinct 51
 dkspell irda
-kalvoy
 instinct mountain 51
 reefdragon
 bonfair
@@ -225,6 +228,7 @@ tarsisbase
 tarsishermit
 stoneskin spire
 paxcenter
+ritglymmer
 itanus
 tantsouth
 startrayne
@@ -247,19 +251,18 @@ bogkey
 bogmire
 bogmire
 nytetunnel
+kalsquare
 ritkago
 kagoboulder
 dimdoor
 startsilvi
 bogwall
 startxak
-kalnorth
 xakoaktree
 startspire
 ritspire
 spireend
 inferno
-kaldruid
 startct
 ctcorner
 ctguards
@@ -269,6 +272,7 @@ palcrypt
 palcrypt
 startlargus
 starticen
+kalcler
 startgreenen
 illyoctrio
 tultuk
@@ -285,6 +289,7 @@ balibed
 havweap
 solscout
 kalsham
+kalcomp
 startgian
 lemnorth
 lemsouth
@@ -296,17 +301,20 @@ dkonightlord
 palscout
 morticliff
 mortivillage
+kaldruid
 startbda
 startbullywug
 startbully
 startbully
 solwar
+tokruins
 startkruin
 startcitdrac
 abovecitdrac
 startbluff
 startbandit
 startregen
+kalcler
 soldruid
 startmom
 sarson
@@ -318,17 +326,18 @@ startshadow
 ritquali
 startriver
 harmonium
-kalcler
+kalcomp
 unemestar
 irdacell
-kalinn
 garnetslab
+kalbank
 garnetnorth
 belowlubs
+aligngc
 raynelord
 dkquestkeep
 lieutreed
-kalcler
+kalcomp
 alignec
 branchala
 branchguard
@@ -352,10 +361,12 @@ raynemansakr
 rayneselissa
 thcsmith
 palgrate
+kalbank
 drogo dk quest
 jibur
 valleyabove
 unicorn
+kaldruid
 palowl
 blodesign
 tosilvi
@@ -363,9 +374,15 @@ transmog
 lemucler
 steamgolem
 chutegaard
-kaleast
 jaketh
 brithnea
+kalnorth
 sahsponge
 bogfight
 newsouth
+tocloud
+cinder
+crowbar
+t
+eastthon
+kalcler

@@ -55,7 +55,7 @@
 #alias pbrst {#action {^You feel ready to brew again} {brst}}
 #action {^Lubs Ginello focuses harshly on $tank and utters the words 'oculowaiyucandus'} {sean; tc}
 #action {^{\w+} tells your clan '{\w+} tells your clan '$myshaman rit me''}{dotroll %1 %2}{1}
-#alias dotroll {#show ct %1, did you mean: ct $myshaman rit %2}
+#alias dotroll {show ct %1, did you mean: ct $myshaman rit %2}
 #alias inon {#action {$inpat} {st; %%1}}
 #alias inoff {#unaction {$inpat}}
 #alias mre {dism; rest}
@@ -63,6 +63,7 @@
 #alias efr {get flask belt; empty flask; o efreeti c '%1' %2; bottle efreeti; put flask belt}
 #action {^Constantine appears before you} {hl constantine}
 #alias yas {#sky ass; ota Talinia}
+#action {^You disappear.} {mlea}
 #ACTION {^%w {tell|shout|yell|say|clanmate}{.?\s}}
 {
 	#line log messages.txt
@@ -935,7 +936,7 @@ reseteye;
 #alias gosol {goto theobald}
 #alias gohav {goto canstin}
 #alias goner {goto snaggle}
-#alias goto {puf %1; #map goto %1}
+#alias goto {jsport %1; #map goto %1}
 #alias gocae {goto mirus}
 #alias gophy {gocae; mirphy}
 #alias mirphy {w; w; s; s; w; w; w; open gate; w; w; n; n; climb cliff; d; n; w; w; w; lcb; lcb}
@@ -950,9 +951,10 @@ reseteye;
 #action {^{\d[^\[]+}>} {#var fighting 0; groupcaptureoff}
 #action {^{\d.+Pos:standing[^\[]+}>} {#var fighting 0; groupcaptureoff}
 #action {^{\d.+Me:}} {#var fighting 1; groupcaptureoff}
-#var pets {Ayoade|Burton}
+#var pets {Ayoade|Steamboat}
 #action {{$pets} the {\w+\s?\w+}{$tanksuffix}} {pethit %1}
-
+#alias ctdi {check #rich-bots channel in discord}
+#alias gtri {gt kill risol, if you get booted from fight: stand, up}
 #alias pethit {
   #var petresc %1;
   #show Pet: %1;
@@ -2929,6 +2931,7 @@ richard_wan@hotmail.com;	1;	1;	1;	1;
 #alias baf {asf; bpa}
 #alias bsm {bot slam %1; asm}
 
+#alias ctb {ct I don't mean to be rude, but keeping the group alive has my full attention right now. There is almost always room in my group and you are most welcome to join, but I'm going to forget I even said this, so please ask again in 5 minutes}
 #alias inri {inspect gleaming.medal}
 #alias kemash {aggone ki %1; klb %1}
 #alias pn {punch %1; ota}
@@ -2937,7 +2940,7 @@ richard_wan@hotmail.com;	1;	1;	1;	1;
 #alias rga {ota %1; rg %1}
 #alias rgab {brs %1; rga %1}
 #alias modeshaman {
-  #alias bigrest {rest; tan watch; ban me; #var resting 1};
+  #alias bigrest {rest; tan watch; #var resting 1};
   #alias othervoy othervoyimpl;
   #alias ke {kst %%1; ageng %%1};
   #alias cleancomp cleancomp1;
@@ -3289,12 +3292,13 @@ richard_wan@hotmail.com;	1;	1;	1;	1;
 #alias practaunt
 {
   #var vtaunt %1;
-  #action {^{\w+} comes to your rescue} {cancel; skill; group; st; taunt $vtaunt};
+  #action {^{\w+} comes to your rescue} {cancel; skill; group; st; dotaunt $vtaunt};
   #action {^You laugh and jeer {.+} ignores you} {st; taunt $vtaunt};
   #ticker e4 {cancel; gmal; ghob; st; taunt $vtaunt} 240;
 }
 
-
+#alias dotaunt taunt
+#alias freta {asf; taunt %1}
 #ALIAS {pcs}
 {
 	plant %1 %2;
@@ -3508,6 +3512,8 @@ richard_wan@hotmail.com;	1;	1;	1;	1;
 #alias skyin {inst crow; inst swan; fly; inst mock; inst harrier; inst roc}
 #alias kvo {vo; ko %1}
 #alias resky {rewin; modesky; #unticker e20s}
+#alias mtran {fd he wa; mb md trans}
+#alias jtran {js tran; ms trans; mb md he wa}
 #alias campfood {cancel; st; camp; scav}
 #alias pburst {burst; 
   #action {^Your muscles tense like they are ready} {burst};
@@ -4088,6 +4094,8 @@ cancel;
 #alias pfu {pf me}
 #alias pfn {punch %1; ota; frn}
 #alias e3 {#ticker e3 {%0; lrn} 183; %0}
+#alias e10 {#ticker e10 {%0; lrn} 600; %0}
+#alias ue10 #unticker e10
 #alias parc {#action {^The energy in the air coal}{st; arcane}}
 #alias magebuff
 {
@@ -4177,12 +4185,14 @@ cancel;
   needbuff holy vision;
   needbuff crusade;
   reck;
+  divine;
   bes paladine;
 }
 
 #alias boa {palass; mai ott}
 #alias boe {boa; ass}
 #alias bos {palass; ass}
+#alias bof {boa; asf}
 #alias bou {boa; oe lunge}
 #alias goha {mrun harmonium}
 #alias boas {boa; oct}
@@ -4203,7 +4213,7 @@ cancel;
 #alias modepala
 {
   #alias bigrest {dism; rest; sip elixir};
-  #var pet Fredery;
+  #var pet Steamboat;
   #action {^Warriors' Training Room} {lrn; smile};
   #action {disarms your weapon} {cancel; gw};
   #var circle1 bless;
@@ -4972,7 +4982,7 @@ cancel;
 #VARIABLE         {pktarg}                {nobody}
 #VARIABLE         {resctar}               {Co}
 #VARIABLE         {slot6}                 {heal|harm|animate dead|darkness|summon|restoration|ritual voyage}
-#VARIABLE         {tank}                  {Rohane}
+#VARIABLE         {tank}                  {Boone}
 #VARIABLE         {tanksuffix}            {(\swith|\svery hard|\stakes aim at|\sstaggers and|\sextremely hard|\slaughs and jeers at.+red in the face|\shard|, but he|, but she|\ssteps aside|\sinstead|\sgives h|\splaces h|\sin a thun|\sa solid punch|'s face|'s flesh shield, sending|\sstaggers and|\scompletely missing|\sblocks)}
 #var {tankprefix} {piece of flesh circling|falls while trying to bash}
 #VARIABLE         {tempcondition}         {v.good}
