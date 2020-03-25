@@ -16,7 +16,6 @@ kalsouth
 kaleast
 recuperate spring
 togarg
-kalbank
 nernorth
 nerforge
 snaggle
@@ -38,7 +37,6 @@ startdk
 tollhouse
 vinguard
 torenth
-kalcler
 starthct
 palsouth
 recuperate pal
@@ -50,7 +48,6 @@ recuperate bung
 solsquare
 theobald
 recuperate hovel
-kalbank
 whiterage
 toquali
 bognorth
@@ -118,9 +115,11 @@ ritfrosty
 frostycave
 frostybottom
 daggorath turtle
+kalbank
 zmij
 ixpat
 gleam
+kaldruid
 sanport
 sansouth
 starttoede
@@ -130,7 +129,6 @@ startquali
 paxgem
 locpax
 kharolis
-kaldruid
 citadel hylo
 citadel solace
 citadel thorbardin
@@ -140,6 +138,7 @@ citadel rockhorde
 ritgarret
 loccv
 startcv
+kalbank
 celestial valley
 bors cv
 after arch
@@ -158,13 +157,13 @@ startstormhead
 essence fire slarn
 cloud pendant
 cloud priest
+kalbank
 castle gate
 essence air dara
 sageway bugbears
 windfall barbarian
 startswamp
 b4troll
-kalfountain
 swamptroll
 solamnic keep
 palanthas library key drawer
@@ -187,6 +186,7 @@ belowsimm
 kern
 startpigmy
 rahnkagi
+kalfountain
 rhankagi
 gargath
 teiresias blind glasses
@@ -201,6 +201,7 @@ startluni
 instinct sky 52
 ftspin
 tesiak
+kalfountain
 khalarm
 citadel start
 sloan
@@ -249,9 +250,9 @@ bogkey
 bogmire
 bogmire
 nytetunnel
-kalfountain
 ritkago
 kagoboulder
+kalfountain
 dimdoor
 startsilvi
 bogwall
@@ -267,6 +268,7 @@ ctguards
 ctcent
 streamshayd
 palcrypt
+kalfountain
 palcrypt
 startlargus
 starticen
@@ -282,6 +284,7 @@ solcler
 startslig
 slig2
 brogdruid
+kalbank
 balibed
 havweap
 solscout
@@ -296,7 +299,6 @@ dkosayskull
 dkonightlord
 palscout
 morticliff
-aligngc
 mortivillage
 startbda
 startbullywug
@@ -313,7 +315,6 @@ startregen
 soldruid
 startmom
 sarson
-recuperate kal
 startraven
 ritraven
 beforetroll
@@ -355,7 +356,6 @@ thcsmith
 palgrate
 drogo dk quest
 jibur
-kaldruid
 valleyabove
 unicorn
 palowl
