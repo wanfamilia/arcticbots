@@ -951,7 +951,7 @@ reseteye;
 #action {^{\d[^\[]+}>} {#var fighting 0; groupcaptureoff}
 #action {^{\d.+Pos:standing[^\[]+}>} {#var fighting 0; groupcaptureoff}
 #action {^{\d.+Me:}} {#var fighting 1; groupcaptureoff}
-#var pets {Ayoade|Steamboat}
+#var pets {Ayoade|Steamboat|Jake}
 #action {{$pets} the {\w+\s?\w+}{$tanksuffix}} {pethit %1}
 #alias ctdi {ct check #rich-bots channel in discord}
 #alias gtri {gt kill risol, if you get booted from fight: stand, up}
@@ -1005,9 +1005,9 @@ reseteye;
 
 #alias rentskill {#action {^You feel especially skillful} {rent; 0}}
 
-#alias {pgift} {#action {^The lunar glimmer fades} {st; gift; magi an; arcane; conj lead; release Plumbic}}
+#alias {pgift} {#action {^The lunar glimmer fades} {st; gift; resi; conow; release ayoade; lrn}}
 #alias {kalrn} {ent space; lrn; ent space}
-
+#alias gocit {mrun2 citadel}
 #alias thim {thr %1; imp}
 
 #ALIAS {banprac}
@@ -1795,6 +1795,8 @@ reseteye;
 }
 
 #alias pdithis {punch %1; disarm}
+#alias oeg oe grapple
+#alias oem oe maul
 #alias pdi {bot pdithis}
 #ALIAS {drk}
 {
@@ -2946,6 +2948,7 @@ richard_wan@hotmail.com;	1;	1;	1;	1;
   #alias cleancomp cleancomp1;
   #var {circle1} {clot};
   #unticker feedme;
+  eng otk;
   #alias stabclose shamstabclose;
   #alias rs rga;
   #var pet all.spirit;
@@ -3402,6 +3405,7 @@ richard_wan@hotmail.com;	1;	1;	1;	1;
 	sk;
 }
 
+#alias clo {ll close}
 #alias pracin {quell %1; inst %1; inst %1; inst %1; lrn}
 
 #alias pracbar
@@ -3476,7 +3480,6 @@ richard_wan@hotmail.com;	1;	1;	1;	1;
   #action {^You have been blinded} {sysplay smb3_thwomp; #all #show --> SKY BLIND};
   #action {^{\w+} pants heavily} {classif flap %%1};
   #alias gank ko;
-  fastdam;
   #alias kd kdsky;
   #alias prba {banp %%1; st; lrn};
   #action {^Scout's Training Room} {lrn; smile};
@@ -3798,7 +3801,7 @@ cancel;
 #alias logsham {logwin; $myshaman; mypw; 1;1;modeshaman; fly}
 #alias lcvoy {lc meteorite; lc veil; lc clove; lc effigy}
 #alias plpd {present letter; present pendant}
-#alias logsky {newses sky; talinia; mypw; 1; 1; modesky}
+#alias logsky {newses sky; graysen; mypw; 1; 1; modesky}
 #alias logpal {logbot; boone; mypw; 1; 1; modepala; fly; d; d; n; e; jd r i}
 #alias logwar {logbot; dawsen; mypw; 1; 1; modepala; modewar; fly}
 #alias logdar {logbot; iyler; mypw; 1; 1; modepala; modedar; fly}
@@ -4868,7 +4871,7 @@ cancel;
 
 #MACRO {\eOw}
 {
-	mac flee;
+	cancel; mac flee;
 	st; mlea;
 
 }
@@ -4985,7 +4988,7 @@ cancel;
 #VARIABLE         {slot6}                 {heal|harm|animate dead|darkness|summon|restoration|ritual voyage}
 #VARIABLE         {tank}                  {Boone}
 #VARIABLE         {tanksuffix}            {(\swith|\svery hard|\stakes aim at|\sstaggers and|\sextremely hard|\slaughs and jeers at.+red in the face|\shard|, but he|, but she|\ssteps aside|\sinstead|\sgives h|\splaces h|\sin a thun|\sa solid punch|'s face|'s flesh shield, sending|\sstaggers and|\scompletely missing|\sblocks)}
-#var {tankprefix} {piece of flesh circling|falls while trying to bash}
+#var {tankprefix} {fold in space, missing|piece of flesh circling|falls while trying to bash}
 #VARIABLE         {tempcondition}         {v.good}
 #VARIABLE         {tempshowgroup}         {m9 : Dian                 v.good    m9 }
 #VARIABLE         {ticklen}               {60}

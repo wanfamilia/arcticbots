@@ -40,6 +40,7 @@ torenth
 starthct
 palsouth
 recuperate pal
+palinn
 anatole
 tolemish
 tocae
@@ -97,6 +98,7 @@ lemloc
 blackshore
 misty woods
 nalan
+towaterspan
 dragonpoint
 recuperate tar
 tarsinn
@@ -115,11 +117,9 @@ ritfrosty
 frostycave
 frostybottom
 daggorath turtle
-kalbank
 zmij
 ixpat
 gleam
-kaldruid
 sanport
 sansouth
 starttoede
@@ -138,7 +138,6 @@ citadel rockhorde
 ritgarret
 loccv
 startcv
-kalbank
 celestial valley
 bors cv
 after arch
@@ -157,7 +156,6 @@ startstormhead
 essence fire slarn
 cloud pendant
 cloud priest
-kalbank
 castle gate
 essence air dara
 sageway bugbears
@@ -186,7 +184,6 @@ belowsimm
 kern
 startpigmy
 rahnkagi
-kalfountain
 rhankagi
 gargath
 teiresias blind glasses
@@ -201,7 +198,6 @@ startluni
 instinct sky 52
 ftspin
 tesiak
-kalfountain
 khalarm
 citadel start
 sloan
@@ -230,6 +226,7 @@ paxcenter
 ritglymmer
 itanus
 tantsouth
+dkorayne
 startrayne
 raynegate
 dkspell rayne
@@ -252,7 +249,6 @@ bogmire
 nytetunnel
 ritkago
 kagoboulder
-kalfountain
 dimdoor
 startsilvi
 bogwall
@@ -268,7 +264,6 @@ ctguards
 ctcent
 streamshayd
 palcrypt
-kalfountain
 palcrypt
 startlargus
 starticen
@@ -284,7 +279,6 @@ solcler
 startslig
 slig2
 brogdruid
-kalbank
 balibed
 havweap
 solscout
@@ -325,6 +319,7 @@ startriver
 harmonium
 unemestar
 irdacell
+irdasand
 garnetslab
 garnetnorth
 belowlubs
@@ -369,9 +364,12 @@ jaketh
 brithnea
 sahsponge
 bogfight
+tosorin
 newsouth
 tocloud
 cinder
 crowbar
 t
 eastthon
+footlocker
+kyle
