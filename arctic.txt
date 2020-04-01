@@ -1187,6 +1187,7 @@ reseteye;
 #alias cornbrew {medicorn; brsh; gmal}
 
 #alias ue3 {#unticker e3}
+#alias ue2 {#unticker e20}
 #alias brcl
 {
   rest; brew 'cu li'; st
@@ -2733,6 +2734,7 @@ reseteye;
   mem 'bles' 'know' 'aid' 'ai' 'c f' 'c w' 're st' 're st' 'sil' 'sil' 'sil' 'cu bli' 'cu bl' 'cu bl' 'bli' 'bli' 'bli' 're cu' 're po' 're po' 're po' 'gust' 'gust' 'gust' 'cloak' 'san' 'f a' 'f a' 'f a' 'di ma' 'di ma' 'di ma' 'for' 'cu cr' 'cu cr' 'cur cr' 'cu cr' 'cu se' 'sum' 'sum' 'sum' 'sum';
   mem 'so le' 'so le' 'so le' 'gate' 'steel' 'he mi';
 }
+#alias memsham {mnap; restick mdeath}
 #alias mnap {m s; mem 'sat' 'nap' 'da so' 'sp gl' 'sp si'; rest}
 #alias mdeath
 {
@@ -4769,13 +4771,7 @@ cancel;
 #highlight {ivory spined} {green}
 #highlight {gleaming pearl covers} {green}
 #highlight {frumpy dwarf} {green}
-#highlight {ruby studded block} {green}
-#highlight {hematite tablet} {green}
-#highlight {diamond encrusted jackal skull} {green}
-#highlight {pearl tablet} {green}
-#highlight {inlaid tablet} {green}
-#highlight {jade tablet} {green}
-#highlight {ivy-covered slab} {green}
+#highlight {tablet} {green}
 #highlight {ashen spellbook} {green}
 #highlight {delicate prayerbook} {green}
 #highlight {radiant white prayerbook} {green}

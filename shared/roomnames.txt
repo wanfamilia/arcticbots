@@ -1,7 +1,10 @@
 kalinn
+kalbank
 recuperate kal
+kalbank
 kalvoy
 kalsquare
+kalbank
 kalshop
 zardonna
 kalwest
@@ -23,6 +26,7 @@ nersouth
 fuddlesign
 nereast
 recuperate kenbard
+zardonna
 recuperate bal
 eastwinds
 balnorth
@@ -40,6 +44,7 @@ torenth
 starthct
 palsouth
 recuperate pal
+kaldruid
 palinn
 anatole
 tolemish
@@ -93,6 +98,7 @@ schaeffa
 southwinds
 sondra
 balrank
+kalcomp
 balinn
 lemloc
 blackshore
@@ -108,6 +114,7 @@ recuperate sol
 startthorb
 component neraka
 nerinn
+kalcomp
 sanction
 citadel kalaman
 pirates
@@ -158,7 +165,7 @@ cloud pendant
 cloud priest
 castle gate
 essence air dara
-sageway bugbears
+sagebears
 windfall barbarian
 startswamp
 b4troll
@@ -264,6 +271,7 @@ ctguards
 ctcent
 streamshayd
 palcrypt
+kalcler
 palcrypt
 startlargus
 starticen
@@ -286,6 +294,7 @@ kalsham
 startgian
 lemnorth
 lemsouth
+kalbank
 startterzak
 terzakcliff
 startdko
@@ -315,6 +324,7 @@ beforetroll
 startlyt
 startshadow
 ritquali
+irdapearl
 startriver
 harmonium
 unemestar
@@ -322,6 +332,8 @@ irdacell
 irdasand
 garnetslab
 garnetnorth
+startdeepmine
+kalinn
 belowlubs
 raynelord
 dkquestkeep
@@ -349,6 +361,7 @@ raynemansakr
 rayneselissa
 thcsmith
 palgrate
+aligngc
 drogo dk quest
 jibur
 valleyabove
@@ -373,3 +386,5 @@ t
 eastthon
 footlocker
 kyle
+cokbakali
+kalsquare
