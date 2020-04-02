@@ -1,10 +1,7 @@
 kalinn
-kalbank
 recuperate kal
-kalbank
 kalvoy
 kalsquare
-kalbank
 kalshop
 zardonna
 kalwest
@@ -26,7 +23,6 @@ nersouth
 fuddlesign
 nereast
 recuperate kenbard
-zardonna
 recuperate bal
 eastwinds
 balnorth
@@ -44,12 +40,12 @@ torenth
 starthct
 palsouth
 recuperate pal
-kaldruid
 palinn
 anatole
 tolemish
 tocae
 recuperate light
+kalbank
 recuperate bung
 solsquare
 theobald
@@ -60,7 +56,8 @@ bognorth
 recuperate cabin
 recuperate thorb
 acorn
-tarfountain
+tarsissquare
+kalinn
 darvinus
 torath
 recuperate twen
@@ -98,15 +95,16 @@ schaeffa
 southwinds
 sondra
 balrank
-kalcomp
 balinn
 lemloc
 blackshore
+kalbank
 misty woods
 nalan
 towaterspan
 dragonpoint
 recuperate tar
+kalvoy
 tarsinn
 solinn
 solrank
@@ -114,7 +112,6 @@ recuperate sol
 startthorb
 component neraka
 nerinn
-kalcomp
 sanction
 citadel kalaman
 pirates
@@ -148,6 +145,7 @@ startcv
 celestial valley
 bors cv
 after arch
+kalbank
 succubus
 khane
 velchoir
@@ -218,6 +216,7 @@ citadel vin
 citadel tenlo
 dv copse
 dv acidic
+kaldruid
 sky instinct 51
 dkspell irda
 instinct mountain 51
@@ -225,23 +224,28 @@ reefdragon
 bonfair
 rabbitwand
 knifetent
+kalshop
 goodleaf
 tarsisbase
 tarsishermit
 stoneskin spire
 paxcenter
 ritglymmer
+glymmerfight
 itanus
 tantsouth
 dkorayne
+aligngc
 startrayne
 raynegate
 dkspell rayne
 dkspell hct
 startwda
+kalcler
 stoneseal
 luniboulder
 afterboulder
+kalcler
 luniavatar
 mound
 moundcloud
@@ -249,6 +253,7 @@ aspre
 statue
 gopi
 eras
+kalfountain
 ochreportal
 bogkey
 bogmire
@@ -271,7 +276,6 @@ ctguards
 ctcent
 streamshayd
 palcrypt
-kalcler
 palcrypt
 startlargus
 starticen
@@ -280,6 +284,7 @@ illyoctrio
 tultuk
 startphysix
 balitrio
+kalbank
 bogmage
 solwraith
 solundead
@@ -294,15 +299,16 @@ kalsham
 startgian
 lemnorth
 lemsouth
-kalbank
 startterzak
 terzakcliff
 startdko
 dkosayskull
 dkonightlord
 palscout
+kalfountain
 morticliff
 mortivillage
+kalcler
 startbda
 startbullywug
 startbully
@@ -333,7 +339,6 @@ irdasand
 garnetslab
 garnetnorth
 startdeepmine
-kalinn
 belowlubs
 raynelord
 dkquestkeep
@@ -349,6 +354,7 @@ vinwar
 vindragontrain
 alignng
 palwar
+kalfountain
 aligngn
 aligngl
 tantwest
@@ -361,13 +367,14 @@ raynemansakr
 rayneselissa
 thcsmith
 palgrate
-aligngc
+kaldruid
 drogo dk quest
 jibur
 valleyabove
 unicorn
 palowl
 blodesign
+kalwest
 tosilvi
 transmog
 lemucler
@@ -379,6 +386,7 @@ sahsponge
 bogfight
 tosorin
 newsouth
+zardonna
 tocloud
 cinder
 crowbar
@@ -387,4 +395,3 @@ eastthon
 footlocker
 kyle
 cokbakali
-kalsquare

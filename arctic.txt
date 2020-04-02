@@ -23,7 +23,7 @@
 #alias rtm {retrieve 1; wear medal}
 #alias dohctvault {pull down; pull right; pull right; pull up; pull left; pull down; pull down ; pull handle}
 #alias onleader {#delay 1 %1}
-#alias gtca {gt someone small: crank catapult, kill mob, loot, wear helmet, all west, get bag, east north east, then stack commands: drop bag, light bag in room}
+#alias gtca {gt someone small: crank catapult, wear a light, kill mob, loot, wear helmet, all west, get bag, east north east, then stack commands: drop bag, light bag in room}
 #alias waitroc {#action {bird} {#bell}; e3 look}
 #action {^The death cry of the shade of Jar} {get all.!component}
 #action {^Harmonium is dead} {gac; get all.!component druid}
@@ -362,7 +362,10 @@ reseteye;
 	groupcapture
 }
 {5}
-#alias ctl {ct i can lead celestial temple, lemuria, bog, forgotten temple, cloud kingdom, drac tower, dko, bluff, theiwar, some largus, storms, shayds, nytes, spire, dargaard keep, glymmer, bmobs, mystic queen, cervos, celestial valley}
+#alias ctl {ct i can lead celestial temple, lemuria, bog, forgotten temple, cloud kingdom, drac tower, sarson, lemuria, dko, bluff, theiwar, some largus, storms, shayds, nytes, spire, dargaard keep, glymmer, bmobs, mystic queen, cervos, celestial valley}
+
+#alias lootvaj {get key vaj; move rug; turn dial left 44 right 23 left 10; uog safe}
+#alias ctc {ct anyone want celestial temple, spider queen, nytes, storms, largus, dargaard keep, cloud kingdom, bluff, spire, dargaard valley, celestial valley, glymmer, bmobs, mystic queen, cervos, dark knight outpost?}
 
 #ACTION {^{You are now sober|You throw away your bloody bandages|The rising sun|The clouds block|The cloud-veiled sky|The darkness marks the end of another day|The sun slowly sinks in the|The sun begins its ascent|Some meat decays in your hands|You are ready to|You feel more vigorous}}
 {
@@ -642,7 +645,7 @@ reseteye;
 #alias refly {dispel 'fly'; air me;}
 #alias vv {quaff vial}
 #alias vsap {quaff sap}
-#alias bcr {bani creature}
+#alias bcr {st; bani creature}
 #alias mesh {for 'end' 'a b' 're cu'; mem '%1 %2' '%1 %2' '%1 %2'}
 #alias fosh {for '%1 %2' '%1 %2' '%1 %2'; mem 'end' 'a b' 're cu'}
 #alias kds {c 'harm' sivak}
@@ -655,6 +658,7 @@ reseteye;
 #alias kifaul {s; s; s; c 'harm' baaz; st; flee; flee; flee;flee; flee; n; n;}
 #alias kigoth {n; n; n; c 'harm' baaz; st; flee; flee; flee; flee; s; s;}
 #alias sopr {jd so pr; 
+  sari;
   #delay 125 {#show ---> RECASTING SOUL; sean; jd so pr};
   #delay 250 {#show ---> soul 2; jd so pr};
   #delay 375 {#show ---> soul 3; jd so pr};
@@ -951,7 +955,7 @@ reseteye;
 #action {^{\d[^\[]+}>} {#var fighting 0; groupcaptureoff}
 #action {^{\d.+Pos:standing[^\[]+}>} {#var fighting 0; groupcaptureoff}
 #action {^{\d.+Me:}} {#var fighting 1; groupcaptureoff}
-#var pets {Ayoade|Steamboat|Jake}
+#var pets {Ayoade|Burten|Steamboat|Derp|Jake}
 #action {{$pets} the {\w+\s?\w+}{$tanksuffix}} {pethit %1}
 #alias ctdi {ct check #rich-bots channel in discord}
 #alias gtri {gt kill risol, if you get booted from fight: stand, up}
@@ -1796,8 +1800,8 @@ reseteye;
 }
 
 #alias pdithis {punch %1; disarm}
-#alias oeg oe grapple
-#alias oem oe maul
+#alias oeg {oe grapple %1; oe st}
+#alias oem {oe maul %1; oe st}
 #alias pdi {bot pdithis}
 #ALIAS {drk}
 {
@@ -3613,12 +3617,13 @@ richard_wan@hotmail.com;	1;	1;	1;	1;
 
 #ALIAS {pufthis}
 {
+  #map leave;
 	#if {"%1"!=""}
 	{
-		jsrelo %1
+		js relo %1
 	}
 	{
-		jsrelo zardonna
+		js relo zardonna
 	}
 }
 
@@ -3723,6 +3728,7 @@ richard_wan@hotmail.com;	1;	1;	1;	1;
 #ALIAS {rr}
 {
 	cancel; rec recall %1;
+  #map leave;
 	get recall $belt; hold sphere;
 }
 
@@ -4727,6 +4733,9 @@ cancel;
 
 #HIGHLIGHT        {disarms your weapon}   {red}                        {4}
 #HIGHLIGHT        {$tank}                 {magenta}                    {5}
+#var warrior Dawsen
+#highlight {$warrior stumbles and falls} {light yellow}
+#highlight {$warrior crashes into} {green}
 #HIGHLIGHT        {cloud kill}                {light yellow}               {5}
 #highlight {soul has returned} {light yellow}
 #HIGHLIGHT        {stops tingling}                {light yellow}               {5}
@@ -4772,6 +4781,7 @@ cancel;
 #highlight {gleaming pearl covers} {green}
 #highlight {frumpy dwarf} {green}
 #highlight {tablet} {green}
+#highlight {strange magical energy flows} {green}
 #highlight {ashen spellbook} {green}
 #highlight {delicate prayerbook} {green}
 #highlight {radiant white prayerbook} {green}
