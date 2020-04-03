@@ -3818,7 +3818,7 @@ cancel;
   kyrik; mypw; 1; 1; modepala; modewar; fly;
   #alias bot {#war};
 }
-#alias logthi {newses thi; vontrapp; mypw; 1; 1; fly; modethief}
+#alias logthi {newses thi; nikson; mypw; 1; 1; fly; modethief}
 #alias modethief {
   #alias boa {ass; bpa};
   #action {^The master assassin looks at you from behind} {lrn; smile};

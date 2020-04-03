@@ -34,9 +34,11 @@ dustmerch
 northwinds
 mythsh
 startdk
+kalbank
 tollhouse
 vinguard
 torenth
+kalbank
 starthct
 palsouth
 recuperate pal
@@ -45,10 +47,10 @@ anatole
 tolemish
 tocae
 recuperate light
-kalbank
 recuperate bung
 solsquare
 theobald
+zardonna
 recuperate hovel
 whiterage
 toquali
@@ -57,7 +59,6 @@ recuperate cabin
 recuperate thorb
 acorn
 tarsissquare
-kalinn
 darvinus
 torath
 recuperate twen
@@ -86,6 +87,7 @@ werewolf
 gulfeast
 gulfport
 gulfgar
+kalcomp
 glade whitestone
 shayd
 deepfish
@@ -98,16 +100,16 @@ balrank
 balinn
 lemloc
 blackshore
-kalbank
 misty woods
 nalan
 towaterspan
 dragonpoint
 recuperate tar
-kalvoy
 tarsinn
 solinn
+zardonna
 solrank
+zardonna
 recuperate sol
 startthorb
 component neraka
@@ -144,8 +146,8 @@ loccv
 startcv
 celestial valley
 bors cv
+kalcler
 after arch
-kalbank
 succubus
 khane
 velchoir
@@ -178,17 +180,21 @@ lemusouth
 lemcase
 lemuvoyloc
 lemchest
+aligngc
 lemvashka
 sara
+kalbank
 stormloc
 qk
 nytetree
 starttheiwar
 chutebottom
 belowsimm
+kalfountain
 kern
 startpigmy
 rahnkagi
+aligngc
 rhankagi
 gargath
 teiresias blind glasses
@@ -216,15 +222,14 @@ citadel vin
 citadel tenlo
 dv copse
 dv acidic
-kaldruid
 sky instinct 51
 dkspell irda
 instinct mountain 51
 reefdragon
+aligngc
 bonfair
 rabbitwand
 knifetent
-kalshop
 goodleaf
 tarsisbase
 tarsishermit
@@ -235,17 +240,14 @@ glymmerfight
 itanus
 tantsouth
 dkorayne
-aligngc
 startrayne
 raynegate
 dkspell rayne
 dkspell hct
 startwda
-kalcler
 stoneseal
 luniboulder
 afterboulder
-kalcler
 luniavatar
 mound
 moundcloud
@@ -253,7 +255,6 @@ aspre
 statue
 gopi
 eras
-kalfountain
 ochreportal
 bogkey
 bogmire
@@ -284,7 +285,6 @@ illyoctrio
 tultuk
 startphysix
 balitrio
-kalbank
 bogmage
 solwraith
 solundead
@@ -295,25 +295,26 @@ brogdruid
 balibed
 havweap
 solscout
+zardonna
 kalsham
 startgian
 lemnorth
 lemsouth
 startterzak
 terzakcliff
+kaldruid
 startdko
 dkosayskull
 dkonightlord
 palscout
-kalfountain
 morticliff
 mortivillage
-kalcler
 startbda
 startbullywug
 startbully
 startbully
 solwar
+zardonna
 tokruins
 startkruin
 startcitdrac
@@ -322,8 +323,10 @@ startbluff
 startbandit
 startregen
 soldruid
+zardonna
 startmom
 sarson
+kaldruid
 startraven
 ritraven
 beforetroll
@@ -340,6 +343,7 @@ garnetslab
 garnetnorth
 startdeepmine
 belowlubs
+kalcler
 raynelord
 dkquestkeep
 lieutreed
@@ -354,8 +358,8 @@ vinwar
 vindragontrain
 alignng
 palwar
-kalfountain
 aligngn
+zardonna
 aligngl
 tantwest
 startbalcombe
@@ -367,14 +371,12 @@ raynemansakr
 rayneselissa
 thcsmith
 palgrate
-kaldruid
 drogo dk quest
 jibur
 valleyabove
 unicorn
 palowl
 blodesign
-kalwest
 tosilvi
 transmog
 lemucler
@@ -386,7 +388,6 @@ sahsponge
 bogfight
 tosorin
 newsouth
-zardonna
 tocloud
 cinder
 crowbar
