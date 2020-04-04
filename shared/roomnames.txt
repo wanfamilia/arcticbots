@@ -29,16 +29,18 @@ balnorth
 balinorth
 balsquare
 balsham
+kalvoy
+balwar
+recuperate kal
 petrin
+recuperate kal
 dustmerch
 northwinds
 mythsh
 startdk
-kalbank
 tollhouse
 vinguard
 torenth
-kalbank
 starthct
 palsouth
 recuperate pal
@@ -50,7 +52,6 @@ recuperate light
 recuperate bung
 solsquare
 theobald
-zardonna
 recuperate hovel
 whiterage
 toquali
@@ -87,13 +88,13 @@ werewolf
 gulfeast
 gulfport
 gulfgar
-kalcomp
 glade whitestone
 shayd
 deepfish
 irdalagoon
 irdagate
 schaeffa
+kalfountain
 southwinds
 sondra
 balrank
@@ -107,9 +108,7 @@ dragonpoint
 recuperate tar
 tarsinn
 solinn
-zardonna
 solrank
-zardonna
 recuperate sol
 startthorb
 component neraka
@@ -146,11 +145,11 @@ loccv
 startcv
 celestial valley
 bors cv
-kalcler
 after arch
 succubus
 khane
 velchoir
+kalbank
 vshrinal
 shalzan
 startcrytic
@@ -173,6 +172,7 @@ swamptroll
 solamnic keep
 palanthas library key drawer
 astinus
+kalfountain
 palanthas library dorshan
 palshelf
 fishreef
@@ -180,21 +180,17 @@ lemusouth
 lemcase
 lemuvoyloc
 lemchest
-aligngc
 lemvashka
 sara
-kalbank
 stormloc
 qk
 nytetree
 starttheiwar
 chutebottom
 belowsimm
-kalfountain
 kern
 startpigmy
 rahnkagi
-aligngc
 rhankagi
 gargath
 teiresias blind glasses
@@ -203,10 +199,12 @@ solbank
 grom
 kul
 trade
+zardonna
 stormspin
 noom
 startluni
 instinct sky 52
+kalbank
 ftspin
 tesiak
 khalarm
@@ -226,7 +224,6 @@ sky instinct 51
 dkspell irda
 instinct mountain 51
 reefdragon
-aligngc
 bonfair
 rabbitwand
 knifetent
@@ -241,6 +238,7 @@ itanus
 tantsouth
 dkorayne
 startrayne
+kalfountain
 raynegate
 dkspell rayne
 dkspell hct
@@ -295,14 +293,12 @@ brogdruid
 balibed
 havweap
 solscout
-zardonna
 kalsham
 startgian
 lemnorth
 lemsouth
 startterzak
 terzakcliff
-kaldruid
 startdko
 dkosayskull
 dkonightlord
@@ -314,19 +310,17 @@ startbullywug
 startbully
 startbully
 solwar
-zardonna
 tokruins
 startkruin
 startcitdrac
+aligngc
 abovecitdrac
 startbluff
 startbandit
 startregen
 soldruid
-zardonna
 startmom
 sarson
-kaldruid
 startraven
 ritraven
 beforetroll
@@ -343,7 +337,6 @@ garnetslab
 garnetnorth
 startdeepmine
 belowlubs
-kalcler
 raynelord
 dkquestkeep
 lieutreed
@@ -359,8 +352,8 @@ vindragontrain
 alignng
 palwar
 aligngn
-zardonna
 aligngl
+kalfountain
 tantwest
 startbalcombe
 serra
@@ -371,6 +364,7 @@ raynemansakr
 rayneselissa
 thcsmith
 palgrate
+kalcler
 drogo dk quest
 jibur
 valleyabove
@@ -392,6 +386,7 @@ tocloud
 cinder
 crowbar
 t
+kalcomp
 eastthon
 footlocker
 kyle
