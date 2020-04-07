@@ -7,6 +7,7 @@ zardonna
 kalwest
 kalcomp
 kalbank
+kalbank
 kalcler
 kalfountain
 kaldruid
@@ -15,17 +16,16 @@ kalnorth
 kalsouth
 kaleast
 recuperate spring
+kalbank
 togarg
 nernorth
 nerforge
 snaggle
 nersouth
-kalsquare
 fuddlesign
 nereast
 recuperate kenbard
 recuperate bal
-kalshop
 eastwinds
 balnorth
 balinorth
@@ -36,17 +36,23 @@ petrin
 dustmerch
 northwinds
 mythsh
+kalinn
+oldsh
 startdk
+kalcomp
 tollhouse
 vinguard
 torenth
+kalcomp
 starthct
 palsouth
 recuperate pal
 palinn
+kalbank
 anatole
 tolemish
 tocae
+kalwest
 recuperate light
 recuperate bung
 solsquare
@@ -63,6 +69,7 @@ darvinus
 torath
 recuperate twen
 midsea
+zardonna
 ritbluff
 startcloud
 canstin
@@ -85,24 +92,22 @@ palsquare
 hylosquare
 werewolf
 gulfeast
+zardonna
 gulfport
 gulfgar
 glade whitestone
 shayd
 deepfish
 irdalagoon
-kalbank
 irdagate
 schaeffa
 southwinds
 sondra
 balrank
 balinn
-kalwest
 lemloc
 blackshore
 misty woods
-kalcomp
 nalan
 towaterspan
 dragonpoint
@@ -127,6 +132,7 @@ zmij
 ixpat
 gleam
 sanport
+kalwest
 sansouth
 starttoede
 starttael
@@ -137,6 +143,7 @@ locpax
 kharolis
 citadel hylo
 citadel solace
+zardonna
 citadel thorbardin
 startdwarfkeep
 citadel dwarfkeep
@@ -153,7 +160,6 @@ velchoir
 vshrinal
 shalzan
 startcrytic
-kalcomp
 essence earth eern
 dargo start
 dargo squid jawbow
@@ -171,6 +177,7 @@ startswamp
 b4troll
 swamptroll
 solamnic keep
+kalwest
 palanthas library key drawer
 astinus
 palanthas library dorshan
@@ -183,6 +190,7 @@ lemuvoyloc
 lemchest
 lemvashka
 sara
+kalcomp
 stormloc
 qk
 nytetree
@@ -190,9 +198,7 @@ starttheiwar
 chutebottom
 belowsimm
 kern
-kalcomp
 startpigmy
-kalcomp
 rahnkagi
 rhankagi
 gargath
@@ -242,7 +248,6 @@ startrayne
 raynegate
 dkspell rayne
 dkspell hct
-kalbank
 startwda
 stoneseal
 luniboulder
@@ -265,10 +270,10 @@ dimdoor
 startsilvi
 bogwall
 startxak
+kalwest
 xakoaktree
 startspire
 ritspire
-kalcomp
 spireend
 inferno
 startct
@@ -279,6 +284,7 @@ streamshayd
 palcrypt
 palcrypt
 startlargus
+zardonna
 starticen
 startgreenen
 illyoctrio
@@ -310,7 +316,6 @@ morticliff
 mortivillage
 startbda
 startbullywug
-kalcomp
 startbully
 startbully
 solwar
@@ -331,11 +336,11 @@ startlyt
 startshadow
 ritquali
 irdapearl
+kaldruid
 startriver
 harmonium
 unemestar
 irdacell
-kalcler
 irdasand
 garnetslab
 garnetnorth
@@ -347,8 +352,10 @@ lieutreed
 alignec
 branchala
 branchguard
+kalbank
 alignen
 alignne
+kalwest
 aligncn
 alignnl
 vinwar
@@ -360,7 +367,6 @@ aligngl
 tantwest
 startbalcombe
 serra
-kalcler
 lhex
 balcombe
 gownnocharm
