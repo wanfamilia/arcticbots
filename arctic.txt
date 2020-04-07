@@ -73,7 +73,7 @@
 #action {^{\w+} tells your {clan} '$myshaman rit {\w+}'} {othervoy %1 %3} {1}
 #alias ptab {pta barbarian}
 #alias oes {oe smile $myshaman; oe st}
-#alias ctv {ct when ready, ct $myshaman rit me}
+#alias ctv {ct if you are nocharm, ct $myshaman rit me}
 #alias oeb {oe bop}
 #alias drn {js drain %1 in inventory}
 #alias bols {sky bolster}
@@ -498,6 +498,7 @@ reseteye;
   west; north; north; %1; ef; sk;
 }
 #alias k4 {ke %1; #4 $engvar}
+#alias beng {bot eng}
 #alias ksgw {skillbell; #%1 solghost kgw}
 #alias kgw {k4 wraith; k4 ghost; get all.coins}
 #alias gebe {get berry; eat berry}
@@ -1078,7 +1079,7 @@ reseteye;
 #alias conbo {#var pet Boanes; conj bone}
 #alias conir {#var pet Fereous; conj iron}
 #alias conlea {#var pet Plumbic; conj lead}
-#alias conca {#var pet Fuffy; conj cat}
+#alias conca {#var pet Burten; conj cat}
 #alias conow {#var pet Ayoade; conj owl;
   oe for 'di ma' 'blur' 'shield' 'inv';
   oe mem 'li bo' 'ma mi' 'ma mi' 's g';
@@ -1947,24 +1948,27 @@ reseteye;
 	{
 		mac rem $held;
 	};
+  get $light belt;
 	hold $light;
+   put $held belt;
 	wear shield;
+  eng bash;
 	agg bt
 }
 
 #ALIAS {godual}
 {
 	rem $light;
+  put $light belt;
 	rem shield;
 	agg kl;
+  eng klow;
 	#if {"%1"!=""}
 	{
-		mac hold %1;
 		#variable held %1
-	}
-	{
-		mac hold $held
-	}
+	};
+  get $held belt;
+  mac hold $held
 }
 
 #ALIAS {goirda} {n;n;w;n;e;n;n;e;n;n;w;w;w;w;s;s;e;n;n;e;#show EAST}
@@ -3448,6 +3452,7 @@ richard_wan@hotmail.com;	1;	1;	1;	1;
 #alias shd {modebarb; sharp dagger; sharp 2.dagger; sharp 3.dagger; sharp 4.dagger; sharp 5.dagger; sharp 6.dagger; sharp 7.dagger; sharp 8.dagger}
 #alias asb {assist; batt; assail}
 #alias ttr {track %2.%1}
+#alias tr9 {#9 track}
 #alias gtk {gt gank %1; kill %1}
 #alias gtdd {gt disengage d}
 #alias gtdu {gt disengage u}
@@ -3815,7 +3820,7 @@ cancel;
 #alias logdar {logbot; iyler; mypw; 1; 1; modepala; modedar; fly}
 #alias logwaro {
   newses war;
-  kyrik; mypw; 1; 1; modepala; modewar; fly;
+  dawsen; mypw; 1; 1; modepala; modewar; fly;
   #alias bot {#war};
 }
 #alias logthi {newses thi; nikson; mypw; 1; 1; fly; modethief}
@@ -4796,6 +4801,7 @@ cancel;
 #highlight {A man with bright red skin glistens with sweat} {green}
 #HIGHLIGHT        {ethereal energy}         {green}                      {5}
 #HIGHLIGHT        {ancient tome}         {green}                      {5}
+#HIGHLIGHT        {A beautiful mockingbird whistles}         {green}                      {5}
 #HIGHLIGHT        {binding you dissolve}  {green}                      {5}
 #HIGHLIGHT        {clears up}             {green}                      {5}
 #HIGHLIGHT        {cloud permeates the air}  {light yellow}               {5}
@@ -4980,7 +4986,7 @@ cancel;
 #VARIABLE         {healMainAtBad}         {1}
 #VARIABLE         {healsleft}             {0}
 #VARIABLE         {healtemp}              {0}
-#VARIABLE         {held}                  {cudgel}
+#VARIABLE         {held}                  {coral.sword}
 #VARIABLE         {kwordindex}            {0}
 #VARIABLE         {kwords}                {{push}{rotate}{slide}{shift}{open}{shatter}{break}{smash}{crack}{lift}{kneel}{worship}{pray}{lick}{quaff}{consume}{brush}{mop}{climb}{press}{surmount}{repel}{break}{dig}{puncture}{rip}{tear}{withdraw}{cease}{change}{cut}{depart}{drown}{befall}{break}{become}{fix}{arrive}{appear}{abate}{advance}{emerge}{enter}{design}{miscarry}{land}{improve}{happen}{hang}{grow}{go}{get}{recover}{rummage}{revolt}{ride}{tug}{run}{raise}{rise}{set}{settle}{sink}{speed}{spread}{stumble}{bend}{bite}{bind}{blow}{beat}{burst}{broadcast}{cling}{cut}{dream}{drive}{do}{explore}{feed}{forbid}{forcast}{fortell}{fling}{feel}{grind}{hang}{hear}{hide}{hurt}{keep}{kneel}{listen}{knit}{lead}{lean}{leap}{learn}{leave}{lend}{let}{lie}{light}{lose}{make}{mean}{meet}{mislay}{move}{mistake}{overtake}{prove}{pull}{put}{read}{ring}{rise}{run}{rid}{saw}{seek}{set}{sew}{shake}{shear}{shine}{shoot}{show}{shrink}{shut}{squeeze}{sing}{sink}{brush}{yank}{slay}{slit}{smell}{speak}{spoil}{stick}{sting}{stink}{strew}{spring}{spread}{strike}{strive}{swear}{sweep}{swell}{swim}{swing}{shove}{take}{teach}{throw}{thrust}{touch}{undergo}{understand}{undertake}{wake}{wear}{weave}{weep}{wet}{win}{wind}{wring}{write}{clear}}
 #VARIABLE         {lasttick}              {1294726325}

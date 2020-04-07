@@ -20,20 +20,19 @@ nernorth
 nerforge
 snaggle
 nersouth
+kalsquare
 fuddlesign
 nereast
 recuperate kenbard
 recuperate bal
+kalshop
 eastwinds
 balnorth
 balinorth
 balsquare
 balsham
-kalvoy
 balwar
-recuperate kal
 petrin
-recuperate kal
 dustmerch
 northwinds
 mythsh
@@ -92,16 +91,18 @@ glade whitestone
 shayd
 deepfish
 irdalagoon
+kalbank
 irdagate
 schaeffa
-kalfountain
 southwinds
 sondra
 balrank
 balinn
+kalwest
 lemloc
 blackshore
 misty woods
+kalcomp
 nalan
 towaterspan
 dragonpoint
@@ -149,10 +150,10 @@ after arch
 succubus
 khane
 velchoir
-kalbank
 vshrinal
 shalzan
 startcrytic
+kalcomp
 essence earth eern
 dargo start
 dargo squid jawbow
@@ -172,10 +173,10 @@ swamptroll
 solamnic keep
 palanthas library key drawer
 astinus
-kalfountain
 palanthas library dorshan
 palshelf
 fishreef
+sahcent
 lemusouth
 lemcase
 lemuvoyloc
@@ -189,7 +190,9 @@ starttheiwar
 chutebottom
 belowsimm
 kern
+kalcomp
 startpigmy
+kalcomp
 rahnkagi
 rhankagi
 gargath
@@ -199,12 +202,10 @@ solbank
 grom
 kul
 trade
-zardonna
 stormspin
 noom
 startluni
 instinct sky 52
-kalbank
 ftspin
 tesiak
 khalarm
@@ -238,10 +239,10 @@ itanus
 tantsouth
 dkorayne
 startrayne
-kalfountain
 raynegate
 dkspell rayne
 dkspell hct
+kalbank
 startwda
 stoneseal
 luniboulder
@@ -267,6 +268,7 @@ startxak
 xakoaktree
 startspire
 ritspire
+kalcomp
 spireend
 inferno
 startct
@@ -295,6 +297,7 @@ havweap
 solscout
 kalsham
 startgian
+buskel
 lemnorth
 lemsouth
 startterzak
@@ -307,13 +310,13 @@ morticliff
 mortivillage
 startbda
 startbullywug
+kalcomp
 startbully
 startbully
 solwar
 tokruins
 startkruin
 startcitdrac
-aligngc
 abovecitdrac
 startbluff
 startbandit
@@ -332,6 +335,7 @@ startriver
 harmonium
 unemestar
 irdacell
+kalcler
 irdasand
 garnetslab
 garnetnorth
@@ -353,10 +357,10 @@ alignng
 palwar
 aligngn
 aligngl
-kalfountain
 tantwest
 startbalcombe
 serra
+kalcler
 lhex
 balcombe
 gownnocharm
@@ -364,7 +368,6 @@ raynemansakr
 rayneselissa
 thcsmith
 palgrate
-kalcler
 drogo dk quest
 jibur
 valleyabove
@@ -386,8 +389,8 @@ tocloud
 cinder
 crowbar
 t
-kalcomp
 eastthon
 footlocker
 kyle
 cokbakali
+vinbank
