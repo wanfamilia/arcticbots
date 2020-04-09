@@ -3,20 +3,22 @@ recuperate kal
 kalvoy
 kalsquare
 kalshop
+kalcomp
 zardonna
 kalwest
 kalcomp
+kalcomp
 kalbank
-kalbank
+kalcomp
 kalcler
 kalfountain
 kaldruid
 aligngc
+kalcomp
 kalnorth
 kalsouth
 kaleast
 recuperate spring
-kalbank
 togarg
 nernorth
 nerforge
@@ -36,23 +38,18 @@ petrin
 dustmerch
 northwinds
 mythsh
-kalinn
 oldsh
 startdk
-kalcomp
 tollhouse
 vinguard
 torenth
-kalcomp
 starthct
 palsouth
 recuperate pal
 palinn
-kalbank
 anatole
 tolemish
 tocae
-kalwest
 recuperate light
 recuperate bung
 solsquare
@@ -69,7 +66,6 @@ darvinus
 torath
 recuperate twen
 midsea
-zardonna
 ritbluff
 startcloud
 canstin
@@ -92,8 +88,8 @@ palsquare
 hylosquare
 werewolf
 gulfeast
-zardonna
 gulfport
+aligngc
 gulfgar
 glade whitestone
 shayd
@@ -106,6 +102,7 @@ sondra
 balrank
 balinn
 lemloc
+kalcler
 blackshore
 misty woods
 nalan
@@ -132,7 +129,6 @@ zmij
 ixpat
 gleam
 sanport
-kalwest
 sansouth
 starttoede
 starttael
@@ -143,7 +139,6 @@ locpax
 kharolis
 citadel hylo
 citadel solace
-zardonna
 citadel thorbardin
 startdwarfkeep
 citadel dwarfkeep
@@ -154,6 +149,7 @@ startcv
 celestial valley
 bors cv
 after arch
+kaldruid
 succubus
 khane
 velchoir
@@ -172,25 +168,27 @@ cloud priest
 castle gate
 essence air dara
 sagebears
+kalfountain
 windfall barbarian
 startswamp
 b4troll
 swamptroll
 solamnic keep
-kalwest
 palanthas library key drawer
 astinus
 palanthas library dorshan
 palshelf
 fishreef
+zardonna
 sahcent
+atlacamani
+kalinn
 lemusouth
 lemcase
 lemuvoyloc
 lemchest
 lemvashka
 sara
-kalcomp
 stormloc
 qk
 nytetree
@@ -231,6 +229,7 @@ sky instinct 51
 dkspell irda
 instinct mountain 51
 reefdragon
+kalshop
 bonfair
 rabbitwand
 knifetent
@@ -270,7 +269,6 @@ dimdoor
 startsilvi
 bogwall
 startxak
-kalwest
 xakoaktree
 startspire
 ritspire
@@ -284,7 +282,6 @@ streamshayd
 palcrypt
 palcrypt
 startlargus
-zardonna
 starticen
 startgreenen
 illyoctrio
@@ -318,6 +315,7 @@ startbda
 startbullywug
 startbully
 startbully
+aligngc
 solwar
 tokruins
 startkruin
@@ -330,13 +328,14 @@ soldruid
 startmom
 sarson
 startraven
+kalcler
 ritraven
 beforetroll
+kaldruid
 startlyt
 startshadow
 ritquali
 irdapearl
-kaldruid
 startriver
 harmonium
 unemestar
@@ -352,10 +351,8 @@ lieutreed
 alignec
 branchala
 branchguard
-kalbank
 alignen
 alignne
-kalwest
 aligncn
 alignnl
 vinwar
@@ -371,6 +368,7 @@ lhex
 balcombe
 gownnocharm
 raynemansakr
+kaldruid
 rayneselissa
 thcsmith
 palgrate
@@ -379,10 +377,12 @@ jibur
 valleyabove
 unicorn
 palowl
+kalcler
 blodesign
 tosilvi
 transmog
 lemucler
+kalfountain
 steamgolem
 chutegaard
 jaketh

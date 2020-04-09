@@ -19,6 +19,7 @@
  } {1};
 }
 
+#alias saylich {say amarazilac tomanaris tusun}
 #alias bst {bash %1; st; }
 #alias rtm {retrieve 1; wear medal}
 #alias dohctvault {pull down; pull right; pull right; pull up; pull left; pull down; pull down ; pull handle}
@@ -3250,6 +3251,7 @@ richard_wan@hotmail.com;	1;	1;	1;	1;
 #alias w9 {#9 with 99}
 #alias w50 {#51 with 99}
 #alias w10k {#101 with 99}
+#alias wlegend {#10 w10k}
 #alias ott {onfight; tan watch; opet assist $tank; opet st}
 
 #alias opr {opet rest}
@@ -3875,10 +3877,10 @@ cancel;
 #alias sky {#sky}
 
 #alias modewar {
-  #alias kstthis {punch %%1; disarm; $engvar %%1; };
+  #alias kstthis {punch %%1; $engvar %%1; };
   #alias palassthis {assist %%1; kstthis};
   #alias bigrest {rest; ban me};
-  ef ration;
+  ef leg;
   #alias warhit donothing;
   #alias rewar {repala; modewar};
   #action {^The Hall of Bravery and Combat} {lrn; smile};
@@ -4458,7 +4460,7 @@ cancel;
   #replace vescape {"} {};
   #replace vescape {'} {};
 }
-#action {^{The book of the dead|A sparkling black bracelet equipped|A discolored helmet equipped by Rahnkagi|A shimmering prayerbook with silver pages|A pair of spiked sterling gauntlets equipped by Bors|A black metal pike in|The mithril plate of shadows|A ruby studded block of limestone|An iridescent hematite tablet|A stunning pearl-inlaid tablet|A golden twined oak longbow equipped|A gold inlaid bone bracer|A holy talisman|The cape of shadows in a|A bladeless sword equipped|A suit of flexible red dragon scale armor|An ancient holy avenger equipped|Gauntlets of ogre power equipped|A dwarven face shield|A sky blue prayerbook with sapphire runes|A dragonrider's talisman|A moist piece of sea sponge|A gangrenous foot|A shimmering cube|A small piece of meteorite|A satiny layer of ectoplasm|A lone, gray flame|A feathered dreamcatcher|A golden battle-honor equipped|A book with frosted glass covers|A globe of sparkling liquid in a steel|A green dragonhide spellbook|A wretched medallion|An ivory spined spellbook|A translucent jade|A charred black ring|The mottled robes of the Archmagus in|A golden bracelet inlaid with emeralds in|A tightly bound tome of magic|A floppy hat|A tiny jade effigy|A timeworn book bound with chains|A belt of cured hylar skin equipped|A wispy black veil|A prayerbook with gleaming pearl covers|An ivy-covered slab of rock|A silver and ruby ring|A ring of finest silver|A dark elven bracelet in a} {.+}}
+#action {^{The book of the dead|A sparkling black bracelet equipped|A discolored helmet equipped by Rahnkagi|A shimmering prayerbook with silver pages|A pair of spiked sterling gauntlets equipped by Bors|A black metal pike in|The mithril plate of shadows|A ruby studded block of limestone|An iridescent hematite tablet|A stunning pearl-inlaid tablet|A golden twined oak longbow equipped|A gold inlaid bone bracer equipped|A holy talisman|The cape of shadows in a|A bladeless sword equipped|A suit of flexible red dragon scale armor|An ancient holy avenger equipped|Gauntlets of ogre power equipped|A dwarven face shield|A sky blue prayerbook with sapphire runes|A dragonrider's talisman|A moist piece of sea sponge|A gangrenous foot|A shimmering cube|A small piece of meteorite|A satiny layer of ectoplasm|A lone, gray flame|A feathered dreamcatcher|A golden battle-honor equipped|A book with frosted glass covers|A globe of sparkling liquid in a steel|A green dragonhide spellbook|A wretched medallion|An ivory spined spellbook|A translucent jade|A charred black ring|The mottled robes of the Archmagus in|A golden bracelet inlaid with emeralds in|A tightly bound tome of magic|A floppy hat|A tiny jade effigy|A timeworn book bound with chains|A belt of cured hylar skin equipped|A wispy black veil|A prayerbook with gleaming pearl covers|An ivy-covered slab of rock|A silver and ruby ring|A ring of finest silver|A dark elven bracelet in a} {.+}}
 {
  ct %1: %2;
  dtell %1: %2;
