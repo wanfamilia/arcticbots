@@ -65,9 +65,11 @@
 #action {^Constantine appears before you} {hl constantine}
 #alias yas {#sky ass; ota Talinia}
 #action {^You disappear.} {mlea}
+#alias dolog {#line log messages.txt}
+#alias nolog {#alias dolog donothing}
 #ACTION {^%w {tell|shout|yell|say|clanmate}{.?\s}}
 {
-	#line log messages.txt
+  dolog;
 }
 {2}
 #var myshaman dawner
@@ -166,7 +168,8 @@
 
 #ACTION {^You {receive|lost} %d}
 {
-	dolater5 doloot
+	dolater5 doloot;
+  #var fighting 0;
 }
 {5}
 
@@ -451,6 +454,7 @@ reseteye;
 #alias skymelee {
  modemelee;
  #alias trs donothing;
+ eng ki;
  casres;
  #alias rs dorescue;
 }
@@ -613,7 +617,7 @@ reseteye;
 #alias pracsean {sean; #action {^The faintest connection to the undead} {sean}}
 #alias jba {js bone arrow; give arrows %1}
 #alias jbab {jba brakus}
-#alias jbas {jba talinia}
+#alias jbas {jba $skycout} 
 #alias vass {vass1}
 #alias vass3 {#delay 3 {nospam 2 palass %1}}
 #alias vass1 {nospam 6 ota }
@@ -950,6 +954,7 @@ reseteye;
 #alias gobung {gosol; e; s; s; d; fsf; n;n;n;n;n;n;n;n;e;e;e;n;n;n;n;e;rest}
 #alias gorbu {gosol; gorec bung}
 #alias gobu {gorec bung}
+#alias goblo {mrun blodesign}
 #alias chief {%0 constantine}
 #alias oei {oe c 'i'}
 #alias oeim {oe c 'i' me}
@@ -983,6 +988,8 @@ reseteye;
 #action {^You sense another fortress in your} {nospam 1 fortress}
 #action {^You feel the need, the need to assault} {nospam 1 assault}
 #alias asfo {assault %1; fortress}
+#alias pafo {parry; fortress; donothing %1}
+#alias fopa {fortress; parry; donothing %1}
 #alias asfok {asfo %1; kick %1}
 #alias asfob {asfo %1; bash %1}
 #alias tg {bot target}
@@ -1192,6 +1199,12 @@ reseteye;
 #alias medibrew {cancel; brsh; medibar; }
 #alias cornbrew {medicorn; brsh; gmal}
 
+#alias checkroc {
+  #action {^A hulking beast of a bird} {noisy};
+  sgl; ghob;
+  n;n;e;w;s;s;
+}
+#alias noisy {#bell; sysplay smb3_coin; }
 #alias ue3 {#unticker e3}
 #alias ue2 {#unticker e20}
 #alias brcl
@@ -1825,7 +1838,7 @@ reseteye;
 #alias dheb {batt; dhe}
 
 #alias ssh {stup %1; hex %1; spook %1; hex %1; spook %1; lrn} 
-#action {^{\w+} has called you} {cancel; wake; st; fly}
+#action {^{\w+} has called you} {cancel; mlea; wake; st; fly}
 
 
 #alias sagr {bot {jd sa gr}}
@@ -2313,7 +2326,7 @@ reseteye;
 	mac ke $arrival
 }
 
-#alias ke {punch %1; $engvar %1}
+#alias ke {ll kstthis}
 #ALIAS {kas}
 {
 	mag jda ar sp
@@ -2439,15 +2452,15 @@ reseteye;
 #alias kl {mac bot klthis}
 #ALIAS {klthis}
 {
-	punch %1;
-	mac kick %1 low;
+	punch %1; ass;
+	mac kick low;
 	st;
 }
 
 #alias counb {coup; unbalance}
 #alias kico {ki %1; counb}
 #alias klfo {kick low; fortress}
-#alias klow {mac kick %1 low}
+#alias klow {ass; mac kick low; donothing %1}
 #alias ruci {mrun2 citadel}
 #ALIAS {klb}
 {
@@ -2553,6 +2566,7 @@ reseteye;
 	js locate book
 }
 #alias lcm {lc macabre}
+#alias lct {lc tablet}
 #ALIAS {log}
 {
 	#if {"%0" == "on"}
@@ -2620,7 +2634,6 @@ reseteye;
         platformwin;
 }
 
-#alias kstthis {strike %1; bpa}
 #alias kst {bot aggone kstthis} 
 #alias ksta {kst %1; mai ott}
 #alias brs {bot {cancel; rescue %1}}
@@ -3490,6 +3503,7 @@ richard_wan@hotmail.com;	1;	1;	1;	1;
   #action {^{$capsham} tells your group '{st|lrn|eject|gflap|refade|skyfood|fade|stand|wildfire|rescue|volley|wingsweep|bolster}'} {st; %%2} {1};
   #alias othervoy {#show %1:%2};
   #unticker feedme;
+  fastacc;
   #action {^You have been blinded} {sysplay smb3_thwomp; #all #show --> SKY BLIND};
   #action {^{\w+} pants heavily} {classif flap %%1};
   #alias gank ko;
@@ -3567,8 +3581,10 @@ richard_wan@hotmail.com;	1;	1;	1;	1;
 #alias pscout {pscout3; pscout2 e 9; pscout4}
 #alias assd {ass %1; dart; st}
 #alias pwil {wildfire; #action {^A tingle in your fingertips} {wildfire}}
+#alias camwil {camp; wildfire}
 #alias fastpow {archery s 5 a 1 p 3; modebow}
 #alias fastacc {archery s 5 a 3 p 1; modebow}
+#alias droparr {drop all.raven; drop all.sparrow; drop all.crow; drop all.owl}
 
 #alias mabu {mapload; mgo recuperate bung}
 #alias modemelee {#alias asst assd; 
@@ -3586,6 +3602,7 @@ richard_wan@hotmail.com;	1;	1;	1;	1;
 #alias modebow {
   #alias vass reshoot; 
   #alias ota reshoot;
+  eng ko;
   #alias oag {mac ko %%2};
   #alias refade {fade; reshoot};
   #alias rs donothing;
@@ -3816,7 +3833,8 @@ cancel;
 #alias logsham {logwin; $myshaman; mypw; 1;1;modeshaman; fly}
 #alias lcvoy {lc meteorite; lc veil; lc clove; lc effigy}
 #alias plpd {present letter; present pendant}
-#alias logsky {newses sky; graysen; mypw; 1; 1; modesky}
+#var skyscout graysen
+#alias logsky {newses sky; $skyscout; mypw; 1; 1; modesky}
 #alias logpal {logbot; boone; mypw; 1; 1; modepala; fly; d; d; n; e; jd r i}
 #alias logwar {logbot; dawsen; mypw; 1; 1; modepala; modewar; fly}
 #alias logdar {logbot; iyler; mypw; 1; 1; modepala; modedar; fly}
@@ -3831,7 +3849,6 @@ cancel;
   #action {^The master assassin looks at you from behind} {lrn; smile};
   #action {^Aldur A'Kul the master thief sits} {lrn; smile};
   #alias rethi {rewin; modethief};
- #alias kstthis {ki %%1; $engvar %%1};
   #alias palassthis {assist %%1; kstthis};
   #var weapon spear;
   #alias vass vass2;
@@ -3881,7 +3898,6 @@ cancel;
   #alias palassthis {assist %%1; kstthis};
   #alias bigrest {rest; ban me};
   ef leg;
-  #alias warhit donothing;
   #alias rewar {repala; modewar};
   #action {^The Hall of Bravery and Combat} {lrn; smile};
   eng kick;
@@ -3893,11 +3909,11 @@ cancel;
 #alias modedar {
   modewar;
   #var circle1 curse;
-  #alias kstthis $engvar;
   #alias redar {repala; modedar};
   eng dt;
 }
 
+#alias kstthis ageng;
 #alias {kalbelt} {runto ne2n7w; open gate; 4w5n2w2s; lc hylar; lc honor; lc hylar; lcb }
 #alias ll {#all}
 #alias kta {kst %1; otta}
@@ -4106,7 +4122,6 @@ cancel;
   nutr $food;
   #alias fastmem {ban me; deep};
   #action {disarms your weapon} {cancel; gw};
-  #alias ke {kst %%1; ageng %%1};
   guston;
   #var {circle1} {infrav};
 }
@@ -4232,6 +4247,7 @@ cancel;
 #alias modepala
 {
   #alias bigrest {dism; rest; sip elixir};
+  #alias kstthis {strike %%1; bpa};
   #var pet Steamboat;
   #action {^Warriors' Training Room} {lrn; smile};
   #action {disarms your weapon} {cancel; gw};
@@ -4240,9 +4256,11 @@ cancel;
   #action {^You are now the new leader} {march};
   #action {^A gleaming silver medal warms up} {ll #show -->    Medal};
   #ticker feedme {sip elixir} 160;
-  #action {^Paladins' Training Room} {lrn; smile};
+  #action {^{Shrine of the Holy|Paladins' Training Room}} {lrn; smile};
   #action {^You have been blinded} {sysplay smb3_thwomp; #all #show --> BOT BLIND};
   #alias lootcomp donothing;
+  nolog;
+  skillbell;
   casres;
   #alias warhit {dnrs 2 %1};
   #action {^Your sense of indignation weakens and fades} {#all #show -->  RI gone};
@@ -4705,7 +4723,7 @@ cancel;
 #alias {mtkal} {jd ma tel zardonna}
 #ALIAS {wb}
 {
-	jd water breath
+	jd water breath me
 }
 
 #alias saco {jd sa co}
@@ -4800,6 +4818,7 @@ cancel;
 #HIGHLIGHT        {peculiar looking rock is lying on the ground here}         {green}                      {5}
 #HIGHLIGHT        {wispy black veil}         {green}                      {5}
 #HIGHLIGHT        {gangrenous foot}         {green}                      {5}
+#HIGHLIGHT        {green swordsman gloves}         {green}                      {5}
 #highlight {A man with bright red skin glistens with sweat} {green}
 #HIGHLIGHT        {ethereal energy}         {green}                      {5}
 #HIGHLIGHT        {ancient tome}         {green}                      {5}
@@ -4815,8 +4834,9 @@ cancel;
 #HIGHLIGHT        {freezes in place}      {light yellow}               {5}
 #HIGHLIGHT        {green aura}            {light yellow}               {5}
 #highlight {twists to your advantage} {cyan} {5}
+#highlight  {slightly dented black} {cyan}
 #HIGHLIGHT        {he begins to drool}    {light yellow}               {5}
-#HIGHLIGHT        {heal}                  {green}                      {5}
+#HIGHLIGHT        {heal }                  {green}                      {5}
 #HIGHLIGHT        {is destroyed}          {light yellow}               {5}
 #HIGHLIGHT        {is disrupted}          {light yellow}               {5}
 #HIGHLIGHT        {is lodged within}      {light yellow}               {5}
