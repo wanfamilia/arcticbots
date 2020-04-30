@@ -19,6 +19,7 @@
  } {1};
 }
 
+#var {leadercommands} {lie|scale|jump|say|touch|push|pull|move|slide|stand|enter|leave|squeeze|open|part|climb}
 #alias saylich {say amarazilac tomanaris tusun}
 #alias bst {bash %1; st; }
 #alias rtm {retrieve 1; wear medal}
@@ -67,6 +68,7 @@
 #action {^You disappear.} {mlea}
 #alias dolog {#line log messages.txt}
 #alias nolog {#alias dolog donothing}
+#alias botlog {#alias dolog #line log messages.txt}
 #ACTION {^%w {tell|shout|yell|say|clanmate}{.?\s}}
 {
   dolog;
@@ -76,7 +78,7 @@
 #action {^{\w+} tells your {clan} '$myshaman rit {\w+}'} {othervoy %1 %3} {1}
 #alias ptab {pta barbarian}
 #alias oes {oe smile $myshaman; oe st}
-#alias ctv {ct if you are nocharm, ct $myshaman rit me}
+#alias ctv {ct if you are nocharm or willing to lead or die, ct $myshaman rit me}
 #alias oeb {oe bop}
 #alias drn {js drain %1 in inventory}
 #alias bols {sky bolster}
@@ -369,7 +371,7 @@ reseteye;
 #alias ctl {ct i can lead celestial temple, lemuria, bog, forgotten temple, cloud kingdom, drac tower, sarson, lemuria, dko, bluff, theiwar, some largus, storms, shayds, nytes, spire, dargaard keep, glymmer, bmobs, mystic queen, cervos, celestial valley}
 
 #alias lootvaj {get key vaj; move rug; turn dial left 44 right 23 left 10; uog safe}
-#alias ctc {ct anyone want celestial temple, spider queen, nytes, storms, largus, dargaard keep, cloud kingdom, bluff, spire, dargaard valley, celestial valley, glymmer, bmobs, mystic queen, cervos, dark knight outpost?}
+#alias ctc {ct anyone want celestial temple, spider queen, nytes, storms, forgotten temple, largus, dargaard keep, cloud kingdom, bluff, spire, dargaard valley, celestial valley, glymmer, bmobs, mystic queen, cervos, dark knight outpost?}
 
 #ACTION {^{You are now sober|You throw away your bloody bandages|The rising sun|The clouds block|The cloud-veiled sky|The darkness marks the end of another day|The sun slowly sinks in the|The sun begins its ascent|Some meat decays in your hands|You are ready to|You feel more vigorous}}
 {
@@ -945,14 +947,14 @@ reseteye;
 #alias gofer {goto ferris}
 #alias gosol {goto theobald}
 #alias gohav {goto canstin}
-#alias goner {goto snaggle}
+#alias goner {puf snaggle; mgo snaggle}
 #alias goto {jsport %1; #map goto %1}
 #alias gocae {goto mirus}
 #alias gophy {gocae; mirphy}
 #alias mirphy {w; w; s; s; w; w; w; open gate; w; w; n; n; climb cliff; d; n; w; w; w; lcb; lcb}
 #alias goan {puf anchor}
 #alias gobung {gosol; e; s; s; d; fsf; n;n;n;n;n;n;n;n;e;e;e;n;n;n;n;e;rest}
-#alias gorbu {gosol; gorec bung}
+#alias gorbu {gosol; #delay 5 {gorec bung}}
 #alias gobu {gorec bung}
 #alias goblo {mrun blodesign}
 #alias chief {%0 constantine}
@@ -961,6 +963,7 @@ reseteye;
 #alias pbrl {push 2.button; reach ledge; st; e; jump guild}
 #action {^{\d[^\[]+}>} {#var fighting 0; groupcaptureoff}
 #action {^{\d.+Pos:standing[^\[]+}>} {#var fighting 0; groupcaptureoff}
+#action {^{\d.+Att:[^\[]+}>} {#var fighting 0; groupcaptureoff}
 #action {^{\d.+Me:}} {#var fighting 1; groupcaptureoff}
 #var pets {Ayoade|Burten|Steamboat|Derp|Jake}
 #action {{$pets} the {\w+\s?\w+}{$tanksuffix}} {pethit %1}
@@ -1427,6 +1430,7 @@ reseteye;
 #alias mgmy {#map goto mythsh}
 #alias mapmy {mloa; mgmy}
 #alias mapso {mloa; mgo solinn}
+#alias masof {mloa; mgo solsquare}
 #alias mapba {mloa; mgo balinn}
 #alias rrb {rr %1; mgo balinn}
 #alias mlea {#map leave}
@@ -1702,7 +1706,7 @@ reseteye;
 
 #alias otaa {ota %1; ass}
 
-#alias asf {assist; #3 fren}
+#alias asfrenzy {assist; #3 fren}
 
 #ALIAS {dopk}
 {
@@ -2968,7 +2972,6 @@ richard_wan@hotmail.com;	1;	1;	1;	1;
 #alias modeshaman {
   #alias bigrest {rest; tan watch; #var resting 1};
   #alias othervoy othervoyimpl;
-  #alias ke {kst %%1; ageng %%1};
   #alias cleancomp cleancomp1;
   #var {circle1} {clot};
   #unticker feedme;
@@ -3647,7 +3650,7 @@ richard_wan@hotmail.com;	1;	1;	1;	1;
 		js relo %1
 	}
 	{
-		js relo zardonna
+		js relo zardonna; mgo zardonna;
 	}
 }
 
@@ -3853,7 +3856,6 @@ cancel;
   #var weapon spear;
   #alias vass vass2;
   #alias boa {assist; bpa};
-  #alias ke {aggone ki %%1; kst %%1};
 }
 #alias thi {#thi}
 #alias pc {thi pick}
@@ -3892,9 +3894,9 @@ cancel;
 #alias bason {bot autoass}
 #alias basoff {bot autoassoff}
 #alias sky {#sky}
-
+#alias wareng {punch %1; $engvar %1}
 #alias modewar {
-  #alias kstthis {punch %%1; $engvar %%1; };
+  #alias kstthis {aggone wareng };
   #alias palassthis {assist %%1; kstthis};
   #alias bigrest {rest; ban me};
   ef leg;
@@ -4240,15 +4242,16 @@ cancel;
 #alias nyteforge {search forge; get scoop; uog panel; shove forge}
 #alias tepa {d; s; s; tear parchment}
 #alias aog {bot c 'a o g'}
-#action {^{\d.+}:sitting} {nospam 1 stand}
+#action {^{\d.+}:sitting} {nospam 1 stand} {4}
 #alias mai {#arc}
 #alias knoc {mag c 'knock'}
 #alias subl {mag js sublimation}
+#alias paleng {strike %1; bpa}
 #alias modepala
 {
   #alias bigrest {dism; rest; sip elixir};
-  #alias kstthis {strike %%1; bpa};
   #var pet Steamboat;
+  eng paleng;
   #action {^Warriors' Training Room} {lrn; smile};
   #action {disarms your weapon} {cancel; gw};
   #var circle1 bless;
@@ -4274,7 +4277,6 @@ cancel;
 };
   #alias vass vass3;
   agg strike;
-  eng strike;
 }
 
 #var {vmock} {A beautiful mockingbird whistles derisive notes at passersby}
@@ -4441,7 +4443,7 @@ cancel;
 {
 	jd su el;
 	drink elixir;
-	fill canteen elixir;
+	fill skin elixir;
 }
 
 #alias bfl {bot {cancel; #3 {st; flee}}}

@@ -19,6 +19,7 @@ togarg
 nernorth
 nerforge
 snaggle
+kalcomp
 nersouth
 fuddlesign
 nereast
@@ -46,15 +47,13 @@ palinn
 anatole
 tolemish
 tocae
-recuperate light
 recuperate bung
 solsquare
-kalvoy
 theobald
-kalsquare
 solmerchant
 recuperate hovel
 whiterage
+kalwest
 toquali
 bognorth
 recuperate cabin
@@ -66,9 +65,9 @@ torath
 recuperate twen
 midsea
 ritbluff
+kalshop
 startcloud
 canstin
-kalwest
 mirus
 caergoth
 kalscout
@@ -82,13 +81,12 @@ luniboat
 qualm
 startboku
 darval
-kalbank
 darkeep
 palwest
 palsquare
 hylosquare
+gulfambush
 werewolf
-kalcomp
 gulfeast
 gulfport
 gulfgar
@@ -105,19 +103,18 @@ balinn
 lemloc
 blackshore
 misty woods
-nalan
 towaterspan
 dragonpoint
+kalbank
 recuperate tar
 tarsinn
 solinn
-kalsquare
 solrank
-kalsquare
 recuperate sol
 startthorb
 component neraka
 nerinn
+kalcomp
 sanction
 citadel kalaman
 pirates
@@ -126,7 +123,7 @@ hct2maze
 ritfrosty
 frostycave
 frostybottom
-daggorath turtle
+daggorathturtle
 zmij
 ixpat
 gleam
@@ -155,16 +152,15 @@ succubus
 khane
 velchoir
 vshrinal
-kalcler
 shalzan
 startcrytic
 essence earth eern
-kalcler
 dargo start
 dargo squid jawbow
 essence water lezi
 pracevade
 startstormhead
+kalcomp
 essence fire slarn
 cloud pendant
 cloud priest
@@ -180,6 +176,7 @@ palanthas library key drawer
 astinus
 palanthas library dorshan
 palshelf
+kalbank
 fishreef
 sahcent
 atlacamani
@@ -257,6 +254,7 @@ luniavatar
 mound
 moundcloud
 aspre
+kalbank
 statue
 gopi
 eras
@@ -274,6 +272,7 @@ startxak
 xakoaktree
 startspire
 ritspire
+zardonna
 spireend
 inferno
 startct
@@ -299,9 +298,7 @@ slig2
 brogdruid
 balibed
 havweap
-kalwest
 solscout
-kalsquare
 kalsham
 startgian
 buskel
@@ -321,39 +318,39 @@ startbullywug
 startbully
 startbully
 solwar
-kalsquare
 tokruins
 startkruin
+kalbank
 startcitdrac
 abovecitdrac
 startbluff
 startbandit
 startregen
 soldruid
-kalsquare
 startmom
 sarson
 startraven
 ritraven
+kalbank
 beforetroll
 startlyt
 startshadow
 ritquali
 irdapearl
 startriver
-kalcomp
 harmonium
 unemestar
 irdacell
 irdasand
 garnetslab
+kalshop
 garnetnorth
-kalcomp
 startdeepmine
 belowlubs
 lyzian
 raynelord
 dkquestkeep
+kalcomp
 lieutreed
 alignec
 branchala
@@ -367,11 +364,9 @@ vindragontrain
 alignng
 palwar
 aligngn
-kalsquare
 aligngl
 tantwest
 startbalcombe
-kalbank
 serra
 lhex
 balcombe
@@ -384,14 +379,13 @@ drogo dk quest
 jibur
 valleyabove
 unicorn
-kalcomp
 palowl
 blodesign
-kalcomp
 tosilvi
 transmog
 lemucler
 steamgolem
+kalcomp
 chutegaard
 jaketh
 brithnea
