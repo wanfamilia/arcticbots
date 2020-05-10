@@ -19,12 +19,12 @@ togarg
 nernorth
 nerforge
 snaggle
-kalcomp
 nersouth
 fuddlesign
 nereast
 recuperate kenbard
 recuperate bal
+kalbank
 eastwinds
 balnorth
 balinorth
@@ -53,11 +53,11 @@ theobald
 solmerchant
 recuperate hovel
 whiterage
-kalwest
 toquali
 bognorth
 recuperate cabin
 recuperate thorb
+aligngc
 acorn
 tarsissquare
 darvinus
@@ -65,7 +65,6 @@ torath
 recuperate twen
 midsea
 ritbluff
-kalshop
 startcloud
 canstin
 mirus
@@ -98,6 +97,7 @@ irdagate
 schaeffa
 southwinds
 sondra
+kalfountain
 balrank
 balinn
 lemloc
@@ -105,16 +105,15 @@ blackshore
 misty woods
 towaterspan
 dragonpoint
-kalbank
 recuperate tar
 tarsinn
 solinn
 solrank
 recuperate sol
 startthorb
+kalfountain
 component neraka
 nerinn
-kalcomp
 sanction
 citadel kalaman
 pirates
@@ -129,6 +128,8 @@ ixpat
 gleam
 sanport
 sansouth
+sankit
+sanstudy
 starttoede
 starttael
 instinct sky42
@@ -152,16 +153,18 @@ succubus
 khane
 velchoir
 vshrinal
+aligngc
 shalzan
 startcrytic
 essence earth eern
+kaldruid
 dargo start
 dargo squid jawbow
 essence water lezi
 pracevade
 startstormhead
-kalcomp
 essence fire slarn
+aligngc
 cloud pendant
 cloud priest
 castle gate
@@ -176,7 +179,6 @@ palanthas library key drawer
 astinus
 palanthas library dorshan
 palshelf
-kalbank
 fishreef
 sahcent
 atlacamani
@@ -194,6 +196,8 @@ chutebottom
 belowsimm
 kern
 startpigmy
+locrahn
+kalinn
 rahnkagi
 rhankagi
 gargath
@@ -208,6 +212,7 @@ noom
 startluni
 azul
 instinct sky 52
+ritlowdarkeep
 ftspin
 startft
 tesiak
@@ -229,9 +234,11 @@ dkspell irda
 instinct mountain 51
 reefdragon
 bonfair
+aligngc
 rabbitwand
 knifetent
 goodleaf
+kalfountain
 tarsisbase
 tarsishermit
 stoneskin spire
@@ -245,6 +252,7 @@ startrayne
 raynegate
 dkspell rayne
 dkspell hct
+kalbank
 startwda
 stoneseal
 luniboulder
@@ -254,7 +262,6 @@ luniavatar
 mound
 moundcloud
 aspre
-kalbank
 statue
 gopi
 eras
@@ -272,7 +279,6 @@ startxak
 xakoaktree
 startspire
 ritspire
-zardonna
 spireend
 inferno
 startct
@@ -284,6 +290,7 @@ palcrypt
 palcrypt
 startlargus
 starticen
+kaldruid
 startgreenen
 illyoctrio
 tultuk
@@ -306,6 +313,7 @@ lemnorth
 lemsouth
 startterzak
 terzakcliff
+kalshop
 startdko
 dkogates
 dkosayskull
@@ -320,7 +328,6 @@ startbully
 solwar
 tokruins
 startkruin
-kalbank
 startcitdrac
 abovecitdrac
 startbluff
@@ -331,7 +338,6 @@ startmom
 sarson
 startraven
 ritraven
-kalbank
 beforetroll
 startlyt
 startshadow
@@ -343,14 +349,12 @@ unemestar
 irdacell
 irdasand
 garnetslab
-kalshop
 garnetnorth
 startdeepmine
 belowlubs
 lyzian
 raynelord
 dkquestkeep
-kalcomp
 lieutreed
 alignec
 branchala
@@ -385,8 +389,8 @@ tosilvi
 transmog
 lemucler
 steamgolem
-kalcomp
 chutegaard
+kalnorth
 jaketh
 brithnea
 sahsponge
@@ -400,6 +404,7 @@ t
 eastthon
 footlocker
 kyle
+kalfountain
 cokbakali
 vinbank
 instinct mmtn 51 grizzly

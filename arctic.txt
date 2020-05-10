@@ -19,7 +19,7 @@
  } {1};
 }
 
-#var {leadercommands} {lie|scale|jump|say|touch|push|pull|move|slide|stand|enter|leave|squeeze|open|part|climb}
+#var {leadercommands} {lie|lift|search|scale|jump|say|touch|push|pull|move|slide|stand|ent|enter|leave|squeeze|open|part|climb}
 #alias saylich {say amarazilac tomanaris tusun}
 #alias bst {bash %1; st; }
 #alias rtm {retrieve 1; wear medal}
@@ -954,7 +954,7 @@ reseteye;
 #alias mirphy {w; w; s; s; w; w; w; open gate; w; w; n; n; climb cliff; d; n; w; w; w; lcb; lcb}
 #alias goan {puf anchor}
 #alias gobung {gosol; e; s; s; d; fsf; n;n;n;n;n;n;n;n;e;e;e;n;n;n;n;e;rest}
-#alias gorbu {gosol; #delay 5 {gorec bung}}
+#alias gorbu {gosol; #delay 8 {gorec bung}}
 #alias gobu {gorec bung}
 #alias goblo {mrun blodesign}
 #alias chief {%0 constantine}
@@ -967,7 +967,7 @@ reseteye;
 #action {^{\d.+Me:}} {#var fighting 1; groupcaptureoff}
 #var pets {Ayoade|Burten|Steamboat|Derp|Jake}
 #action {{$pets} the {\w+\s?\w+}{$tanksuffix}} {pethit %1}
-#alias ctdi {ct check #rich-bots channel in discord}
+#alias ctdi {ct check #rich-bot-and-lorebot channel in discord}
 #alias gtri {gt kill risol, if you get booted from fight: stand, up}
 #alias pethit {
   #var petresc %1;
@@ -1527,7 +1527,7 @@ reseteye;
 #alias autobind {#alias gts {csp; tan bsp}}
 #alias autocontrol {#alias gts csp}
 #alias abs {absorb %1.spirit}
-#alias abl {js absolu}
+#alias abl {bot js absolu}
 
 #alias abf {abs 1}
 #alias chs {channel %1.spirit %2}
@@ -3506,7 +3506,7 @@ richard_wan@hotmail.com;	1;	1;	1;	1;
   #action {^{$capsham} tells your group '{st|lrn|eject|gflap|refade|skyfood|fade|stand|wildfire|rescue|volley|wingsweep|bolster}'} {st; %%2} {1};
   #alias othervoy {#show %1:%2};
   #unticker feedme;
-  fastacc;
+  fastdam;
   #action {^You have been blinded} {sysplay smb3_thwomp; #all #show --> SKY BLIND};
   #action {^{\w+} pants heavily} {classif flap %%1};
   #alias gank ko;
@@ -3530,7 +3530,7 @@ richard_wan@hotmail.com;	1;	1;	1;	1;
 #alias arch4 {hover; archery s 4 p 4 a 4}
 #alias resham {rewin; modeshaman}
 #alias ptran {#action {^The time for giving} {js imp; rpm; transfer %1}}
-#alias fastdam {hover; #alias upvolley volley; pburst; archery s 5 p 5 a 2; legarr}
+#alias fastdam {modebow; hover; #alias upvolley volley; pburst; archery s 5 p 5 a 2; legarr}
 #alias bbn {bot kk %1; bn %1}
 #alias legarr {inst owl; inst owl; gather; #delay 900 {quell owl}}
 #alias kwe {kw eject}
@@ -3544,7 +3544,7 @@ richard_wan@hotmail.com;	1;	1;	1;	1;
 #alias ptpw {ptar paladin warrior}
 #alias ptms {ptar mage scout}
 #alias skyin {inst crow; inst swan; fly; inst mock; inst harrier; inst roc}
-#alias kvo {vo; ko %1}
+#alias kvo {vo; ke %1}
 #alias resky {rewin; modesky; #unticker e20s}
 #alias mtran {fd he wa; mb md trans}
 #alias jtran {js tran; ms trans; mb md he wa}
@@ -3563,6 +3563,7 @@ richard_wan@hotmail.com;	1;	1;	1;	1;
 
 #alias retrain {cancel; camp; w;w;w;n;n;n;e; open door; e; s; lrn; n;w;open door;w;s;s;s;e;e;e}
 #alias pscout2 { #%2 {scout %1; %1; st; $reverses[%1]}; }
+#alias ps9 {psct %1 9}
 #alias psct {pscout2 %1 9}
 #alias psneak {w; sneak; sneak; sneak; e; 
   #action {pokes you in the ribs} {cancel; psneak};
@@ -3764,6 +3765,7 @@ richard_wan@hotmail.com;	1;	1;	1;	1;
   #action {^{%1} flies in} {poke %1};
 }
 #alias rgr {rg %1; rest}
+#alias mrg {mai rgr}
 #alias cleancomp1 {
   get all.!necromantic pouch;
   put all.protection pouch;
