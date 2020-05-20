@@ -4,15 +4,19 @@ kalvoy
 kalsquare
 kalshop
 zardonna
+kalfountain
 kalwest
-aligngc
+kalcler
 kalcomp
 kalbank
 kalcler
+kaldruid
 kalfountain
+kaldruid
 kaldruid
 aligngc
 kalnorth
+kaldruid
 kalsouth
 kaleast
 recuperate spring
@@ -34,6 +38,7 @@ balwar
 petrin
 dustmerch
 northwinds
+aligngc
 mythsh
 oldsh
 startdk
@@ -69,11 +74,13 @@ canstin
 mirus
 caergoth
 kalscout
+kaldruid
 kalwar
+kaldruid
 westwinds
 locdarg
 tirabot
-aligngc
+kalcler
 startgrak
 gormskun
 luniboat
@@ -81,7 +88,7 @@ qualm
 startboku
 darval
 darkeep
-aligngc
+kalcler
 palwest
 palsquare
 hylosquare
@@ -89,9 +96,10 @@ gulfambush
 werewolf
 gulfeast
 gulfport
-aligngc
+kalcler
 gulfgar
 glade whitestone
+kaldruid
 shayd
 deepfish
 irdalagoon
@@ -144,6 +152,7 @@ startdwarfkeep
 citadel dwarfkeep
 citadel rockhorde
 ritgarret
+aligngc
 loccv
 startcv
 celestial valley
@@ -169,6 +178,7 @@ essence air dara
 sagebears
 windfall barbarian
 startswamp
+kaldruid
 b4troll
 swamptroll
 solamnic keep
@@ -198,7 +208,6 @@ rahnkagi
 rhankagi
 gargath
 teiresias blind glasses
-kalcler
 totstatue
 solbank
 grom
@@ -232,15 +241,17 @@ instinct mountain 51
 reefdragon
 bonfair
 rabbitwand
+kalwest
 knifetent
 goodleaf
-kalwest
 tarsisbase
 tarsishermit
 stoneskin spire
 paxcenter
 ritglymmer
+aligngc
 glymmerfight
+aligngc
 itanus
 tantsouth
 dkorayne
@@ -250,7 +261,9 @@ dkspell rayne
 dkspell hct
 startwda
 stoneseal
+mysticshark
 mysticgates
+kalsquare
 luniboulder
 afterboulder
 lunigate
@@ -302,14 +315,15 @@ balibed
 havweap
 solscout
 kalsham
+kalfountain
 startgian
-kalbank
 buskel
 lemnorth
 lemsouth
 startterzak
 terzakcliff
 todractower
+recuperate kal
 startdko
 dkogates
 dkosayskull
@@ -321,7 +335,6 @@ startbda
 startbullywug
 startbully
 startbully
-kalcler
 solwar
 tokruins
 startkruin
@@ -334,11 +347,10 @@ startregen
 soldruid
 startmom
 sarson
-aligngc
+kalcler
 startraven
 ritraven
 beforetroll
-kalnorth
 startlyt
 startshadow
 ritquali
@@ -375,7 +387,6 @@ serra
 lhex
 balcombe
 gownnocharm
-kalcler
 raynemansakr
 rayneselissa
 thcsmith
@@ -394,18 +405,21 @@ chutegaard
 jaketh
 brithnea
 sahsponge
-kalnorth
 bogfight
 tosorin
 newsouth
 tocloud
 cinder
 crowbar
+kaldruid
 t
+kalbank
 eastthon
 footlocker
+aligngc
 kyle
 cokbakali
 vinbank
 instinct mmtn 51 grizzly
+kalfountain
 startvrykith
