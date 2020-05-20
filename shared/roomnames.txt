@@ -5,6 +5,7 @@ kalsquare
 kalshop
 zardonna
 kalwest
+aligngc
 kalcomp
 kalbank
 kalcler
@@ -43,11 +44,9 @@ starthct
 palsouth
 recuperate pal
 palinn
-kalnorth
 anatole
 tolemish
 tocae
-aligngc
 recuperate bung
 solsquare
 theobald
@@ -74,6 +73,7 @@ kalwar
 westwinds
 locdarg
 tirabot
+aligngc
 startgrak
 gormskun
 luniboat
@@ -81,6 +81,7 @@ qualm
 startboku
 darval
 darkeep
+aligngc
 palwest
 palsquare
 hylosquare
@@ -88,8 +89,8 @@ gulfambush
 werewolf
 gulfeast
 gulfport
-gulfgar
 aligngc
+gulfgar
 glade whitestone
 shayd
 deepfish
@@ -103,15 +104,12 @@ balinn
 lemloc
 blackshore
 misty woods
-kaldruid
 towaterspan
 dragonpoint
 recuperate tar
 tarsinn
 solinn
-kalfountain
 solrank
-kalfountain
 recuperate sol
 startthorb
 component neraka
@@ -131,14 +129,11 @@ gleam
 sanport
 sansouth
 sankit
-aligngc
 sanstudy
-aligngc
 starttoede
 starttael
 instinct sky42
 startquali
-kalfountain
 paxgem
 locpax
 kharolis
@@ -160,7 +155,6 @@ velchoir
 vshrinal
 shalzan
 startcrytic
-kaldruid
 essence earth eern
 dargo start
 dargo squid jawbow
@@ -177,7 +171,6 @@ windfall barbarian
 startswamp
 b4troll
 swamptroll
-kalnorth
 solamnic keep
 palanthas library key drawer
 astinus
@@ -204,14 +197,13 @@ locrahn
 rahnkagi
 rhankagi
 gargath
-kalfountain
 teiresias blind glasses
+kalcler
 totstatue
 solbank
 grom
 kul
 trade
-aligngc
 stormspin
 noom
 startluni
@@ -242,6 +234,7 @@ bonfair
 rabbitwand
 knifetent
 goodleaf
+kalwest
 tarsisbase
 tarsishermit
 stoneskin spire
@@ -302,17 +295,15 @@ bogmage
 solwraith
 solundead
 solcler
-kalfountain
 startslig
-aligngc
 slig2
 brogdruid
 balibed
-kalcler
 havweap
 solscout
 kalsham
 startgian
+kalbank
 buskel
 lemnorth
 lemsouth
@@ -328,14 +319,13 @@ morticliff
 mortivillage
 startbda
 startbullywug
-kaldruid
 startbully
 startbully
+kalcler
 solwar
 tokruins
 startkruin
 locatedractower
-kalinn
 startcitdrac
 abovecitdrac
 startbluff
@@ -344,13 +334,14 @@ startregen
 soldruid
 startmom
 sarson
+aligngc
 startraven
 ritraven
 beforetroll
+kalnorth
 startlyt
 startshadow
 ritquali
-aligngc
 irdapearl
 startriver
 harmonium
@@ -359,7 +350,6 @@ irdacell
 irdasand
 garnetslab
 garnetnorth
-aligngc
 startdeepmine
 belowlubs
 lyzian
@@ -385,6 +375,7 @@ serra
 lhex
 balcombe
 gownnocharm
+kalcler
 raynemansakr
 rayneselissa
 thcsmith
@@ -403,12 +394,12 @@ chutegaard
 jaketh
 brithnea
 sahsponge
+kalnorth
 bogfight
 tosorin
 newsouth
 tocloud
 cinder
-aligngc
 crowbar
 t
 eastthon
