@@ -1,11 +1,7 @@
 kalinn
-kaldruid
 recuperate kal
-kaldruid
 kalvoy
-kalfountain
 kalsquare
-kaldruid
 kalshop
 zardonna
 kalwest
@@ -47,9 +43,11 @@ starthct
 palsouth
 recuperate pal
 palinn
+kalnorth
 anatole
 tolemish
 tocae
+aligngc
 recuperate bung
 solsquare
 theobald
@@ -79,7 +77,6 @@ tirabot
 startgrak
 gormskun
 luniboat
-aligngc
 qualm
 startboku
 darval
@@ -90,9 +87,9 @@ hylosquare
 gulfambush
 werewolf
 gulfeast
-kaldruid
 gulfport
 gulfgar
+aligngc
 glade whitestone
 shayd
 deepfish
@@ -106,12 +103,15 @@ balinn
 lemloc
 blackshore
 misty woods
+kaldruid
 towaterspan
 dragonpoint
 recuperate tar
 tarsinn
 solinn
+kalfountain
 solrank
+kalfountain
 recuperate sol
 startthorb
 component neraka
@@ -131,11 +131,14 @@ gleam
 sanport
 sansouth
 sankit
+aligngc
 sanstudy
+aligngc
 starttoede
 starttael
 instinct sky42
 startquali
+kalfountain
 paxgem
 locpax
 kharolis
@@ -153,11 +156,11 @@ bors cv
 after arch
 succubus
 khane
-kaldruid
 velchoir
 vshrinal
 shalzan
 startcrytic
+kaldruid
 essence earth eern
 dargo start
 dargo squid jawbow
@@ -174,6 +177,7 @@ windfall barbarian
 startswamp
 b4troll
 swamptroll
+kalnorth
 solamnic keep
 palanthas library key drawer
 astinus
@@ -189,7 +193,6 @@ lemchest
 lemvashka
 sara
 stormloc
-kalfountain
 qk
 nytetree
 starttheiwar
@@ -201,12 +204,14 @@ locrahn
 rahnkagi
 rhankagi
 gargath
+kalfountain
 teiresias blind glasses
 totstatue
 solbank
 grom
 kul
 trade
+aligngc
 stormspin
 noom
 startluni
@@ -253,7 +258,6 @@ dkspell hct
 startwda
 stoneseal
 mysticgates
-kalinn
 luniboulder
 afterboulder
 lunigate
@@ -280,7 +284,6 @@ startspire
 ritspire
 spireend
 inferno
-kaldruid
 startct
 ctcorner
 ctguards
@@ -289,7 +292,6 @@ streamshayd
 palcrypt
 palcrypt
 startlargus
-kalcler
 starticen
 startgreenen
 illyoctrio
@@ -300,10 +302,13 @@ bogmage
 solwraith
 solundead
 solcler
+kalfountain
 startslig
+aligngc
 slig2
 brogdruid
 balibed
+kalcler
 havweap
 solscout
 kalsham
@@ -323,13 +328,15 @@ morticliff
 mortivillage
 startbda
 startbullywug
+kaldruid
 startbully
 startbully
 solwar
 tokruins
 startkruin
+locatedractower
+kalinn
 startcitdrac
-kalnorth
 abovecitdrac
 startbluff
 startbandit
@@ -343,15 +350,16 @@ beforetroll
 startlyt
 startshadow
 ritquali
+aligngc
 irdapearl
 startriver
 harmonium
 unemestar
 irdacell
 irdasand
-kalsouth
 garnetslab
 garnetnorth
+aligngc
 startdeepmine
 belowlubs
 lyzian
@@ -400,6 +408,7 @@ tosorin
 newsouth
 tocloud
 cinder
+aligngc
 crowbar
 t
 eastthon
