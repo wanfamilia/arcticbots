@@ -1,7 +1,11 @@
 kalinn
+kaldruid
 recuperate kal
+kaldruid
 kalvoy
+kalfountain
 kalsquare
+kaldruid
 kalshop
 zardonna
 kalwest
@@ -24,7 +28,6 @@ fuddlesign
 nereast
 recuperate kenbard
 recuperate bal
-kalbank
 eastwinds
 balnorth
 balinorth
@@ -57,7 +60,6 @@ toquali
 bognorth
 recuperate cabin
 recuperate thorb
-aligngc
 acorn
 tarsissquare
 darvinus
@@ -77,6 +79,7 @@ tirabot
 startgrak
 gormskun
 luniboat
+aligngc
 qualm
 startboku
 darval
@@ -87,6 +90,7 @@ hylosquare
 gulfambush
 werewolf
 gulfeast
+kaldruid
 gulfport
 gulfgar
 glade whitestone
@@ -97,7 +101,6 @@ irdagate
 schaeffa
 southwinds
 sondra
-kalfountain
 balrank
 balinn
 lemloc
@@ -111,7 +114,6 @@ solinn
 solrank
 recuperate sol
 startthorb
-kalfountain
 component neraka
 nerinn
 sanction
@@ -151,20 +153,18 @@ bors cv
 after arch
 succubus
 khane
+kaldruid
 velchoir
 vshrinal
-aligngc
 shalzan
 startcrytic
 essence earth eern
-kaldruid
 dargo start
 dargo squid jawbow
 essence water lezi
 pracevade
 startstormhead
 essence fire slarn
-aligngc
 cloud pendant
 cloud priest
 castle gate
@@ -189,6 +189,7 @@ lemchest
 lemvashka
 sara
 stormloc
+kalfountain
 qk
 nytetree
 starttheiwar
@@ -197,7 +198,6 @@ belowsimm
 kern
 startpigmy
 locrahn
-kalinn
 rahnkagi
 rhankagi
 gargath
@@ -234,11 +234,9 @@ dkspell irda
 instinct mountain 51
 reefdragon
 bonfair
-aligngc
 rabbitwand
 knifetent
 goodleaf
-kalfountain
 tarsisbase
 tarsishermit
 stoneskin spire
@@ -252,9 +250,10 @@ startrayne
 raynegate
 dkspell rayne
 dkspell hct
-kalbank
 startwda
 stoneseal
+mysticgates
+kalinn
 luniboulder
 afterboulder
 lunigate
@@ -281,6 +280,7 @@ startspire
 ritspire
 spireend
 inferno
+kaldruid
 startct
 ctcorner
 ctguards
@@ -289,8 +289,8 @@ streamshayd
 palcrypt
 palcrypt
 startlargus
+kalcler
 starticen
-kaldruid
 startgreenen
 illyoctrio
 tultuk
@@ -313,7 +313,7 @@ lemnorth
 lemsouth
 startterzak
 terzakcliff
-kalshop
+todractower
 startdko
 dkogates
 dkosayskull
@@ -329,6 +329,7 @@ solwar
 tokruins
 startkruin
 startcitdrac
+kalnorth
 abovecitdrac
 startbluff
 startbandit
@@ -348,6 +349,7 @@ harmonium
 unemestar
 irdacell
 irdasand
+kalsouth
 garnetslab
 garnetnorth
 startdeepmine
@@ -390,7 +392,6 @@ transmog
 lemucler
 steamgolem
 chutegaard
-kalnorth
 jaketh
 brithnea
 sahsponge
@@ -404,7 +405,7 @@ t
 eastthon
 footlocker
 kyle
-kalfountain
 cokbakali
 vinbank
 instinct mmtn 51 grizzly
+startvrykith

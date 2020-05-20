@@ -68,7 +68,7 @@
 #action {^You disappear.} {mlea}
 #alias dolog {#line log messages.txt}
 #alias nolog {#alias dolog donothing}
-#alias botlog {#alias dolog #line log messages.txt}
+#alias messlog {#alias dolog #line log messages.txt}
 #ACTION {^%w {tell|shout|yell|say|clanmate}{.?\s}}
 {
   dolog;
@@ -752,7 +752,7 @@ reseteye;
 }
 
 #alias praclay {
-  #action {^Your hands tingle} {rem braces; wear braces; st; lay me};
+  #action {^Your hands tingle} {rem %1; wear %1; st; lay me;lrn};
 }
 
 #ALIAS {ahoff}
@@ -965,7 +965,7 @@ reseteye;
 #action {^{\d.+Pos:standing[^\[]+}>} {#var fighting 0; groupcaptureoff}
 #action {^{\d.+Att:[^\[]+}>} {#var fighting 0; groupcaptureoff}
 #action {^{\d.+Me:}} {#var fighting 1; groupcaptureoff}
-#var pets {Ayoade|Burten|Steamboat|Derp|Jake}
+#var pets {Ayoade|Ocasek|Burten|Steamboat|Derp|Jake}
 #action {{$pets} the {\w+\s?\w+}{$tanksuffix}} {pethit %1}
 #alias ctdi {ct check #rich-bot-and-lorebot channel in discord}
 #alias gtri {gt kill risol, if you get booted from fight: stand, up}
@@ -1095,7 +1095,7 @@ reseteye;
   oe for 'di ma' 'blur' 'shield' 'inv';
   oe mem 'li bo' 'ma mi' 'ma mi' 's g';
 }
-
+#alias conew {#var pet Ocasek; conj newt}
 #alias dosei {say Seinihs Enim; e; fol %1}
 #alias kld {mag okd klb}
 #alias ofm {okd kfm}
@@ -3530,7 +3530,7 @@ richard_wan@hotmail.com;	1;	1;	1;	1;
 #alias arch4 {hover; archery s 4 p 4 a 4}
 #alias resham {rewin; modeshaman}
 #alias ptran {#action {^The time for giving} {js imp; rpm; transfer %1}}
-#alias fastdam {modebow; hover; #alias upvolley volley; pburst; archery s 5 p 5 a 2; legarr}
+#alias fastdam {modebow; hover; pburst; archery s 5 p 5 a 2; legarr}
 #alias bbn {bot kk %1; bn %1}
 #alias legarr {inst owl; inst owl; gather; #delay 900 {quell owl}}
 #alias kwe {kw eject}
@@ -3543,7 +3543,7 @@ richard_wan@hotmail.com;	1;	1;	1;	1;
 #alias amsitem {say May I walk with the clouds}
 #alias ptpw {ptar paladin warrior}
 #alias ptms {ptar mage scout}
-#alias skyin {inst crow; inst swan; fly; inst mock; inst harrier; inst roc}
+#alias skyin {inst crow; inst swan; fly; inst king; inst harrier; inst roc}
 #alias kvo {vo; ke %1}
 #alias resky {rewin; modesky; #unticker e20s}
 #alias mtran {fd he wa; mb md trans}
@@ -3804,7 +3804,7 @@ cancel;
   #var food ration;
 }
 #alias modewhite {
-  #alias goway {goto wilma};
+  #alias goway {puf wilma};
   #alias ide {rec identify};
   #alias remage {rewin; modemage; modewhite};
   #alias jsrelo jsport;
@@ -4482,7 +4482,7 @@ cancel;
   #replace vescape {"} {};
   #replace vescape {'} {};
 }
-#action {^{The book of the dead|A sparkling black bracelet equipped|A discolored helmet equipped by Rahnkagi|A shimmering prayerbook with silver pages|A pair of spiked sterling gauntlets equipped by Bors|A black metal pike in|The mithril plate of shadows|A ruby studded block of limestone|An iridescent hematite tablet|A stunning pearl-inlaid tablet|A golden twined oak longbow equipped|A gold inlaid bone bracer equipped|A holy talisman|The cape of shadows in a|A bladeless sword equipped|A suit of flexible red dragon scale armor|An ancient holy avenger equipped|Gauntlets of ogre power equipped|A dwarven face shield|A sky blue prayerbook with sapphire runes|A dragonrider's talisman|A moist piece of sea sponge|A gangrenous foot|A shimmering cube|A small piece of meteorite|A satiny layer of ectoplasm|A lone, gray flame|A feathered dreamcatcher|A golden battle-honor equipped|A book with frosted glass covers|A globe of sparkling liquid in a steel|A green dragonhide spellbook|A wretched medallion|An ivory spined spellbook|A translucent jade|A charred black ring|The mottled robes of the Archmagus in|A golden bracelet inlaid with emeralds in|A tightly bound tome of magic|A floppy hat|A tiny jade effigy|A timeworn book bound with chains|A belt of cured hylar skin equipped|A wispy black veil|A prayerbook with gleaming pearl covers|An ivy-covered slab of rock|A silver and ruby ring|A ring of finest silver|A dark elven bracelet in a} {.+}}
+#action {^{The book of the dead|A sparkling black bracelet equipped|A discolored helmet equipped by Rahnkagi|A shimmering prayerbook with silver pages|A pair of spiked sterling gauntlets equipped by Bors|A black metal pike in|The mithril plate of shadows|A ruby studded block of limestone|An iridescent hematite tablet|A stunning pearl-inlaid tablet|A golden twined oak longbow equipped|A gold inlaid bone bracer equipped|A holy talisman|The cape of shadows in a|A bladeless sword equipped|A suit of flexible red dragon scale armor equipped|An ancient holy avenger equipped|Gauntlets of ogre power equipped|A dwarven face shield|A sky blue prayerbook with sapphire runes|A dragonrider's talisman|A moist piece of sea sponge|A gangrenous foot|A shimmering cube|A small piece of meteorite|A satiny layer of ectoplasm|A lone, gray flame|A feathered dreamcatcher|A golden battle-honor equipped|A book with frosted glass covers|A globe of sparkling liquid in a steel|A green dragonhide spellbook|A wretched medallion|An ivory spined spellbook|A translucent jade|A charred black ring|The mottled robes of the Archmagus in|A golden bracelet inlaid with emeralds in|A tightly bound tome of magic|A floppy hat|A tiny jade effigy|A timeworn book bound with chains|A belt of cured hylar skin equipped|A wispy black veil|A prayerbook with gleaming pearl covers|An ivy-covered slab of rock|A silver and ruby ring|A ring of finest silver|A dark elven bracelet in a} {.+}}
 {
  ct %1: %2;
  dtell %1: %2;
