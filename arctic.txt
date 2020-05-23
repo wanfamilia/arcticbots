@@ -529,6 +529,8 @@ reseteye;
   #if {$autoassv == 1} {%1}
 }
 #alias okd {otk %2; %1 %2; }
+#alias doig {#delay 1 okd kig}
+#alias dotk {#delay 1 otk}
 #alias oeku {okd stup %1}
 #alias oekup {oeku priestess}
 #alias sgl {nbf spectral glow}
@@ -2395,6 +2397,7 @@ reseteye;
 	js force
 }
 
+#alias fib {mag js fireb}
 #alias kfm {jdm fo mi}
 
 #alias ide {js iden}
@@ -3899,7 +3902,7 @@ cancel;
 #alias wareng {punch %1; $engvar %1}
 #alias modewar {
   #alias kstthis {aggone wareng };
-  #alias palassthis {assist %%1; kstthis};
+  #alias palassthis {assist %%1; wareng};
   #alias bigrest {rest; ban me};
   ef leg;
   #alias rewar {repala; modewar};
@@ -4812,6 +4815,7 @@ cancel;
 #highlight {tablet} {green}
 #highlight {strange magical energy flows} {green}
 #highlight {ashen spellbook} {green}
+#highlight {ageing tome lies here} {green}
 #highlight {delicate prayerbook} {green}
 #highlight {radiant white prayerbook} {green}
 #HIGHLIGHT        {moist piece of sea sponge}         {green}                      {5}
@@ -5002,7 +5006,7 @@ cancel;
 #VARIABLE         {charmie2}              {}
 #VARIABLE         {clerfood}              {food}
 #VARIABLE         {countheals}            {0}
-#VARIABLE         {engvar}                {kk}
+#VARIABLE         {engvar}                {otk}
 #VARIABLE         {firstspell}            {0}
 #VARIABLE         {food}                  {food}
 #VARIABLE         {groupindex}            {9}
