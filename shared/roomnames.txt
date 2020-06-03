@@ -1,5 +1,7 @@
 kalinn
+kalcomp
 recuperate kal
+kalcomp
 kalvoy
 kalsquare
 kalshop
@@ -9,6 +11,7 @@ kalcomp
 kalbank
 kalcler
 kalfountain
+kalcomp
 kaldruid
 aligngc
 kalnorth
@@ -22,6 +25,7 @@ snaggle
 nersouth
 fuddlesign
 nereast
+kalbank
 recuperate kenbard
 recuperate bal
 eastwinds
@@ -56,7 +60,6 @@ toquali
 bognorth
 recuperate cabin
 recuperate thorb
-kalbank
 acorn
 tarsissquare
 darvinus
@@ -105,15 +108,18 @@ towaterspan
 dragonpoint
 recuperate tar
 tarsinn
+kalcler
 solinn
 solrank
 recuperate sol
+kalbank
 startthorb
 component neraka
 nerinn
 sanction
 citadel kalaman
 pirates
+kaldruid
 hctmze
 hct2maze
 ritfrosty
@@ -146,6 +152,7 @@ loccv
 startcv
 celestial valley
 bors cv
+kalfountain
 after arch
 succubus
 khane
@@ -155,7 +162,6 @@ shalzan
 startcrytic
 essence earth eern
 dargo start
-kalfountain
 dargo squid jawbow
 essence water lezi
 pracevade
@@ -166,7 +172,6 @@ cloud priest
 castle gate
 essence air dara
 sagebears
-kalcomp
 windfall barbarian
 startswamp
 b4troll
@@ -187,6 +192,7 @@ lemvashka
 sara
 stormloc
 qk
+kalwest
 nytetree
 starttheiwar
 chutebottom
@@ -200,16 +206,17 @@ gargath
 teiresias blind glasses
 totstatue
 solbank
+romis
 grom
 stormbutton
 kul
 trade
-kaldruid
 stormspin
 noom
 startluni
 azul
 instinct sky 52
+fidlas
 ritlowdarkeep
 ftspin
 startft
@@ -242,11 +249,11 @@ paxcenter
 ritglymmer
 glymmerfight
 itanus
+kalcler
 tantsouth
 dkorayne
 startrayne
 raynegate
-kalcler
 dkspell rayne
 dkspell hct
 startwda
@@ -257,7 +264,6 @@ luniboulder
 afterboulder
 lunigate
 luniavatar
-aligngc
 mound
 moundcloud
 aspre
@@ -281,11 +287,12 @@ startxak
 xakoaktree
 startspire
 ritspire
+spirebase
 spireend
+kalcler
 inferno
 startct
 ctcorner
-aligngc
 ctguards
 ctcent
 streamshayd
@@ -295,14 +302,15 @@ startlargus
 starticen
 startgreenen
 illyoctrio
-aligngc
 tultuk
 startphysix
 balitrio
 bogmage
 solwraith
 solundead
+kalbank
 solcler
+kalbank
 startslig
 slig2
 brogdruid
@@ -315,8 +323,8 @@ buskel
 lemnorth
 lemsouth
 startterzak
-aligngc
 terzakcliff
+kalbank
 todractower
 startdko
 dkogates
@@ -329,14 +337,12 @@ startbda
 startbullywug
 startbully
 startbully
-kalfountain
 solwar
 tokruins
 startkruin
 locatedractower
 startcitdrac
 abovecitdrac
-aligngc
 startbluff
 startbandit
 startregen
@@ -347,7 +353,9 @@ startraven
 ritraven
 beforetroll
 startlyt
+kalcomp
 startshadow
+kalcler
 ritquali
 irdapearl
 startriver
@@ -355,14 +363,18 @@ harmonium
 unemestar
 irdacell
 irdasand
+kaldruid
 garnetslab
 garnetnorth
 startdeepmine
 belowlubs
+kalfountain
 lyzian
 raynelord
 dkquestkeep
 lieutreed
+gamso
+recuperate kal
 alignec
 branchala
 branchguard
@@ -378,11 +390,11 @@ aligngn
 aligngl
 tantwest
 startbalcombe
+kalfountain
 serra
 lhex
 balcombe
 gownnocharm
-kalfountain
 raynemansakr
 rayneselissa
 thcsmith
@@ -398,7 +410,6 @@ transmog
 lemucler
 steamgolem
 chutegaard
-kalcler
 jaketh
 brithnea
 sahsponge
@@ -417,3 +428,9 @@ vinbank
 instinct mmtn 51 grizzly
 startvrykith
 startboylein
+kalcler
+startwayreth
+startgalvari
+ritlich
+startkhur
+ritkhur
