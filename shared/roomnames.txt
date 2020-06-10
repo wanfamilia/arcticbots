@@ -1,7 +1,5 @@
 kalinn
-kalcomp
 recuperate kal
-kalcomp
 kalvoy
 kalsquare
 kalshop
@@ -11,7 +9,6 @@ kalcomp
 kalbank
 kalcler
 kalfountain
-kalcomp
 kaldruid
 aligngc
 kalnorth
@@ -25,7 +22,6 @@ snaggle
 nersouth
 fuddlesign
 nereast
-kalbank
 recuperate kenbard
 recuperate bal
 eastwinds
@@ -37,7 +33,6 @@ balwar
 petrin
 dustmerch
 northwinds
-mythsh
 oldsh
 startdk
 tollhouse
@@ -50,12 +45,14 @@ palinn
 anatole
 tolemish
 tocae
+kalbank
 recuperate bung
 solsquare
 theobald
 solmerchant
 recuperate hovel
 whiterage
+kalbank
 toquali
 bognorth
 recuperate cabin
@@ -63,11 +60,13 @@ recuperate thorb
 acorn
 tarsissquare
 darvinus
+kalcler
 torath
 recuperate twen
 midsea
 ritbluff
 startcloud
+kaldruid
 canstin
 mirus
 caergoth
@@ -108,18 +107,15 @@ towaterspan
 dragonpoint
 recuperate tar
 tarsinn
-kalcler
 solinn
 solrank
 recuperate sol
-kalbank
 startthorb
 component neraka
 nerinn
 sanction
 citadel kalaman
 pirates
-kaldruid
 hctmze
 hct2maze
 ritfrosty
@@ -130,17 +126,19 @@ zmij
 ixpat
 gleam
 sanport
+kalbank
 sansouth
 sankit
 sanstudy
 starttoede
 totaeldeth
-starttael
+taelboy
 instinct sky42
 startquali
 paxgem
 locpax
 kharolis
+kalcler
 citadel hylo
 citadel solace
 citadel thorbardin
@@ -148,11 +146,13 @@ startdwarfkeep
 citadel dwarfkeep
 citadel rockhorde
 ritgarret
+enbir
+kalinn
 loccv
 startcv
 celestial valley
+kalcler
 bors cv
-kalfountain
 after arch
 succubus
 khane
@@ -185,6 +185,7 @@ fishreef
 sahcent
 atlacamani
 lemusouth
+aligngc
 lemcase
 lemuvoyloc
 lemchest
@@ -192,7 +193,6 @@ lemvashka
 sara
 stormloc
 qk
-kalwest
 nytetree
 starttheiwar
 chutebottom
@@ -203,6 +203,7 @@ locrahn
 rahnkagi
 rhankagi
 gargath
+kalcler
 teiresias blind glasses
 totstatue
 solbank
@@ -216,6 +217,7 @@ noom
 startluni
 azul
 instinct sky 52
+kalfountain
 fidlas
 ritlowdarkeep
 ftspin
@@ -249,7 +251,6 @@ paxcenter
 ritglymmer
 glymmerfight
 itanus
-kalcler
 tantsouth
 dkorayne
 startrayne
@@ -261,8 +262,10 @@ stoneseal
 mysticshark
 mysticgates
 luniboulder
+kaldruid
 afterboulder
 lunigate
+lunignome
 luniavatar
 mound
 moundcloud
@@ -271,15 +274,19 @@ statue
 gopi
 eras
 ochreportal
+kaldruid
 bogkey
 bogmire
 bogmire
 nytetunnel
 ritkago
+kalbank
 kagoboulder
 hyuk
 nytecata
+kaldruid
 risolbelow
+kaldruid
 dimdoor
 startsilvi
 bogwall
@@ -289,7 +296,6 @@ startspire
 ritspire
 spirebase
 spireend
-kalcler
 inferno
 startct
 ctcorner
@@ -308,13 +314,12 @@ balitrio
 bogmage
 solwraith
 solundead
-kalbank
 solcler
-kalbank
 startslig
 slig2
 brogdruid
 balibed
+kalfountain
 havweap
 solscout
 kalsham
@@ -324,7 +329,6 @@ lemnorth
 lemsouth
 startterzak
 terzakcliff
-kalbank
 todractower
 startdko
 dkogates
@@ -346,16 +350,17 @@ abovecitdrac
 startbluff
 startbandit
 startregen
+kaldruid
 soldruid
 startmom
+kaldruid
 sarson
 startraven
 ritraven
 beforetroll
+kalfountain
 startlyt
-kalcomp
 startshadow
-kalcler
 ritquali
 irdapearl
 startriver
@@ -363,18 +368,17 @@ harmonium
 unemestar
 irdacell
 irdasand
-kaldruid
 garnetslab
 garnetnorth
 startdeepmine
+kalcler
 belowlubs
-kalfountain
 lyzian
 raynelord
 dkquestkeep
 lieutreed
+mythsh
 gamso
-recuperate kal
 alignec
 branchala
 branchguard
@@ -390,7 +394,6 @@ aligngn
 aligngl
 tantwest
 startbalcombe
-kalfountain
 serra
 lhex
 balcombe
@@ -398,6 +401,7 @@ gownnocharm
 raynemansakr
 rayneselissa
 thcsmith
+kalcler
 palgrate
 drogo dk quest
 jibur
@@ -428,9 +432,10 @@ vinbank
 instinct mmtn 51 grizzly
 startvrykith
 startboylein
-kalcler
 startwayreth
 startgalvari
+kalbank
 ritlich
+kalsquare
 startkhur
 ritkhur

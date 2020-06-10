@@ -19,6 +19,18 @@
  } {1};
 }
 
+#alias mapto {
+   swap me %1;
+   mapoff;
+   %2 {mloa mgo %3};
+   %2;
+}
+
+#alias mapwhi mapto pryor mag
+#alias maptank {mapto boone bot}
+#alias mapsky mapto graysen sky
+#alias mapsham mapto $myshaman mai
+#alias mainmage {ll #alias mai mag}
 #var {leadercommands} {lie|lift|search|scale|jump|say|touch|push|pull|move|slide|stand|ent|enter|leave|squeeze|open|part|climb}
 #alias saylich {say amarazilac tomanaris tusun}
 #alias bst {bash %1; st; }
@@ -509,10 +521,11 @@ reseteye;
 
 #alias solgho {
   south; %1 ghost; %1 wraith;
-  #delay 12 {south; %1 ghost; %1 wraith};
-  #delay 24 {east; %1 ghost; %1 wraith};
-  #delay 36 {west; north; north; %1 ghost; %1 wraith};
+  #delay 15 {south; %1 ghost; %1 wraith};
+  #delay 30 {east; %1 ghost; %1 wraith};
+  #delay 45 {west; north; north; %1 ghost; %1 wraith};
 }
+#alias somak {solgho maki; suel}
 #alias k4 {ke %1; #4 $engvar}
 #alias maki {mag {#delay 1 ki %1}}
 #alias tu3 {sk; #3 turn}
@@ -578,7 +591,6 @@ reseteye;
 
 #alias showclans {
   showclan RISE;
-  showclan CORE;
   showclan DnD;
   showclan evil;
 }
@@ -643,7 +655,7 @@ reseteye;
 #alias bpa {bot palassthis}
 #alias palass bpa
 #alias haze {bot jd men ha}
-#alias palassthis {ass %1; ota; rally; strike; av leg; strike}
+#alias palassthis {ass %1; rally; strike; av leg; strike}
 #alias kdr {st; drain}
 
 #ACTION {{he begins to drool|is stunned!}}
@@ -903,8 +915,8 @@ reseteye;
 #alias kendru {flick eye; csp; #delay 1 {drumem}}
 #alias drumem {
   oed for 'cu cr' 'pr fu' 'pr fu' 'iceskin' 'iceskin' 'iceskin' 'iceskin' 'iceskin';
-  oed for 're po' 're po' 're po' 'w b' 'w b' 'w b' 'ref' 'ref' 'ref' ;
-  oed mem 'ice s' 'ice s' 'ice s' 'ice s' 'ice s' 'cul' 'cul' 'cul' 'cul' 'cul' 'cul';
+  oed for 'cu ser' 'cu ser' 'blur' 'blur';
+  oed mem 'ice s' 'ice s' 'ice s' 'ice s' 'ice s' 'cul' 'cul' 'cul' 'flame' 'flame' 'flame';
 }
 #alias kenthi {flick finger; csp}
 #alias kencle {flick ear; csp}
@@ -2355,7 +2367,7 @@ reseteye;
 {
 	jd ma bl
 }
-#alias kig {mag {jsa ignite %1; ota}}
+#alias kig {mag {otk %1; jsa ignite %1}}
 #alias krot {jsa rot}
 #alias ksb {jda s b}
 #alias frn {st; fren}
@@ -4158,7 +4170,7 @@ cancel;
 
 #alias khurpython {rummage cloth; get rope; kw climb window}
 #alias risu {right; suel}
-#alias td {tan rg; #delay 3 {bot %1}}
+#alias td {tan rg; #delay 4 {bot %1}}
 #alias sarune {
   get all chest;
   quaff yellow.potion;  
@@ -4274,7 +4286,7 @@ cancel;
   eng paleng;
   #action {^Warriors' Training Room} {lrn; smile};
   #action {disarms your weapon} {cancel; gw};
-  #var circle1 bless;
+  #var circle1 {det ev};
   #action {^You are ready to slam again} {slam};
   #action {^You are now the new leader} {march};
   #action {^A gleaming silver medal warms up} {ll #show -->    Medal};
@@ -4787,15 +4799,18 @@ cancel;
 #highlight {soul has returned} {light yellow}
 #HIGHLIGHT        {stops tingling}                {light yellow}               {5}
 #HIGHLIGHT        {RISE}                {light yellow}               {5}
+#HIGHLIGHT        {blue light elemental}                {light yellow}               {5}
 #highlight {A large ogre stands here barking orders} {light yellow}
 #HIGHLIGHT        {Samus clenches his fist and growls}  {light yellow}               {5}
 #highligh {spectral creature now follows} {light yellow}
 #highlight {The tortured ghost of a theiwar cleric} {yellow}
 #highligh {gleaming silver medal warms up briefly} {green}
+#highlight {grey silken robe}{green}
 #highlight {tattooed goblin skins} {green}
 #highlight {feeling and colour return} {light yellow}
 #highlight {squeezes your finger with incredible} {light yellow}
 #highligh  {volley again} {green}
+#highligh  {Sir Marquinn von Israeth} {green}
 #HIGHLIGHT        {You fall down, your ears ringing}  {red}                        {5}
 #highlight {You feel vulnerable again as the protective cloak about you fades} {5}
 #highlight {ghostly hue vanishes} {light yellow}
