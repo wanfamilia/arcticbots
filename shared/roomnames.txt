@@ -17,6 +17,7 @@ kaleast
 recuperate spring
 togarg
 nernorth
+zardonna
 nerforge
 snaggle
 nersouth
@@ -45,14 +46,13 @@ palinn
 anatole
 tolemish
 tocae
-kalbank
 recuperate bung
+zardonna
 solsquare
 theobald
 solmerchant
 recuperate hovel
 whiterage
-kalbank
 toquali
 bognorth
 recuperate cabin
@@ -60,19 +60,19 @@ recuperate thorb
 acorn
 tarsissquare
 darvinus
-kalcler
 torath
 recuperate twen
 midsea
 ritbluff
+kalshop
 startcloud
-kaldruid
 canstin
 mirus
 caergoth
 kalscout
 kalwar
 westwinds
+kalcomp
 locdarg
 tirabot
 startgrak
@@ -126,7 +126,7 @@ zmij
 ixpat
 gleam
 sanport
-kalbank
+kalvoy
 sansouth
 sankit
 sanstudy
@@ -138,7 +138,6 @@ startquali
 paxgem
 locpax
 kharolis
-kalcler
 citadel hylo
 citadel solace
 citadel thorbardin
@@ -147,11 +146,9 @@ citadel dwarfkeep
 citadel rockhorde
 ritgarret
 enbir
-kalinn
 loccv
 startcv
 celestial valley
-kalcler
 bors cv
 after arch
 succubus
@@ -185,7 +182,6 @@ fishreef
 sahcent
 atlacamani
 lemusouth
-aligngc
 lemcase
 lemuvoyloc
 lemchest
@@ -203,7 +199,6 @@ locrahn
 rahnkagi
 rhankagi
 gargath
-kalcler
 teiresias blind glasses
 totstatue
 solbank
@@ -217,7 +212,6 @@ noom
 startluni
 azul
 instinct sky 52
-kalfountain
 fidlas
 ritlowdarkeep
 ftspin
@@ -234,7 +228,7 @@ vaj
 citadel drake
 citadel vin
 citadel tenlo
-dv copse
+dvcopse
 dv acidic
 sky instinct 51
 dkspell irda
@@ -262,31 +256,27 @@ stoneseal
 mysticshark
 mysticgates
 luniboulder
-kaldruid
 afterboulder
 lunigate
 lunignome
 luniavatar
 mound
+kalbank
 moundcloud
 aspre
 statue
 gopi
 eras
 ochreportal
-kaldruid
 bogkey
 bogmire
 bogmire
 nytetunnel
 ritkago
-kalbank
 kagoboulder
 hyuk
 nytecata
-kaldruid
 risolbelow
-kaldruid
 dimdoor
 startsilvi
 bogwall
@@ -294,6 +284,7 @@ startxak
 xakoaktree
 startspire
 ritspire
+zardonna
 spirebase
 spireend
 inferno
@@ -317,9 +308,9 @@ solundead
 solcler
 startslig
 slig2
+kalbank
 brogdruid
 balibed
-kalfountain
 havweap
 solscout
 kalsham
@@ -334,6 +325,7 @@ startdko
 dkogates
 dkosayskull
 dkonightlord
+kalcler
 palscout
 morticliff
 mortivillage
@@ -350,15 +342,12 @@ abovecitdrac
 startbluff
 startbandit
 startregen
-kaldruid
 soldruid
 startmom
-kaldruid
 sarson
 startraven
 ritraven
 beforetroll
-kalfountain
 startlyt
 startshadow
 ritquali
@@ -368,10 +357,10 @@ harmonium
 unemestar
 irdacell
 irdasand
+sealem
 garnetslab
 garnetnorth
 startdeepmine
-kalcler
 belowlubs
 lyzian
 raynelord
@@ -401,7 +390,6 @@ gownnocharm
 raynemansakr
 rayneselissa
 thcsmith
-kalcler
 palgrate
 drogo dk quest
 jibur
@@ -419,6 +407,7 @@ brithnea
 sahsponge
 bogfight
 tosorin
+kalwest
 newsouth
 tocloud
 cinder
@@ -434,8 +423,8 @@ startvrykith
 startboylein
 startwayreth
 startgalvari
-kalbank
 ritlich
-kalsquare
 startkhur
+kalcomp
 ritkhur
+cloudcomp

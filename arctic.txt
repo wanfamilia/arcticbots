@@ -31,7 +31,7 @@
 #alias mapsky mapto graysen sky
 #alias mapsham mapto $myshaman mai
 #alias mainmage {ll #alias mai mag}
-#var {leadercommands} {lie|lift|search|scale|jump|say|touch|push|pull|move|slide|stand|ent|enter|leave|squeeze|open|part|climb}
+#var {leadercommands} {lie|lift|crawl|search|scale|jump|say|touch|push|pull|move|slide|stand|ent|enter|leave|squeeze|open|part|climb}
 #alias saylich {say amarazilac tomanaris tusun}
 #alias bst {bash %1; st; }
 #alias rtm {retrieve 1; wear medal}
@@ -94,7 +94,7 @@
 #alias oeb {oe bop}
 #alias drn {js drain %1 in inventory}
 #alias bols {sky bolster}
-#alias bser {bot {cancel; oe c 'cu se' %1; oe st; ser %1}}
+#alias bser {bot {cancel; oe c 'cu se' %1; oe st; }}
 #alias tbs {tan bser}
 
 #alias frensponge {
@@ -206,6 +206,7 @@
 
 #alias dostmain {st; #var resting 0}
 #alias dost dostmain;
+#alias refly  {st; dispel 'fly'; air me}
 #alias restick {
   #var onestand %1;
   rest; #delay 30 rest;
@@ -371,9 +372,14 @@ reseteye;
 #alias ctw {ct woke up; wake; st; fly}
 
 #action {^{$linebegin}{\w+(\s\w+)?}: this spell isn't on your mem} {for '$circle1'}
-
+#alias pracwhi {
+  presi; resi;
+  parc; arcane;
+  pgift; gift;
+  ptran %1;
+}
 #alias presi {
-  #action {^{$linebegin}The area seems ripe with} {st; resi};
+  resi; #action {^{$linebegin}The area seems ripe with} {st; resi};
 }
 #var linebegin {(\d.+>\s)?}
 #alias gmar {gift; magi; arcane}
@@ -770,8 +776,14 @@ reseteye;
   st; magi; gift; arcane; brsc stre; #6 {sr me}; #3 {air me}; lrn; sk; exam pouch; rest;
 }
 
-#alias pacorn {st; #6 {c 'stre' me}; #3 {c 'fly' me}; rest}
+#alias pacorn {st; #3 {dispel 'stren'; c 'stre' me}; #3 {dispel 'fly'; c 'fly' me}; lrn; rest}
 
+#alias spamacorn {
+  #ticker e1 {restick pacorn} 50;
+  sr me; restick pacorn;
+  skillbell;
+  #alias gotenligh {#bell; cancel; lrn; #unticker e1; #delay 2000 {spamacorn}};
+}
 #alias pracpal {
   #action {^You can focus again on your prayers} {divine};
   #action {^Through the darkness, you find a connection} {right};
@@ -1052,6 +1064,11 @@ reseteye;
 #alias gocit {mrun2 citadel}
 #alias thim {thr %1; imp}
 
+#alias mythbrsc {
+  st; runto e2sd; fsf; 7n2w2nws;
+  rest; brew '%1'; scribe '%1'; drop all.strength;
+  st; runto ne2s2e7su2nw; lrn;
+}
 #ALIAS {banprac}
 {
 	rem guard;
@@ -1219,7 +1236,7 @@ reseteye;
  #action {^You feel ready to} {nospam 3 brsc stren}
 }
 
-#alias taracorn {w; s; e;e;e;e; fsf; n;n;n;n;n;n; w;n;n;w; n;n;n;w;w; n;n;n;n;n; e;n;n;n;n;n;n;n;w;s;e}
+#alias taracorn {van me; js imp; air me; w; s; open gate; runto w3n3enw2nw3n2w4nw7nwse; buac}
 #alias recler {rewin; modecleric}
 #alias readybrew brewonly
 #alias brewonly {brsh; ghob; gmal}
@@ -2394,6 +2411,7 @@ reseteye;
 }
 
 #alias csn {mag jd co sn}
+#alias clr {mag js color}
 #alias cso {csn; mag ota; mai ott}
 #ALIAS {kcr}
 {
@@ -3294,6 +3312,7 @@ richard_wan@hotmail.com;	1;	1;	1;	1;
 #alias w9 {#9 with 99}
 #alias w50 {#51 with 99}
 #alias w10k {#101 with 99}
+#alias w50k {#5 w10k}
 #alias wlegend {#10 w10k}
 #alias ott {onfight; tan watch; opet assist $tank; opet st}
 
@@ -3556,7 +3575,10 @@ richard_wan@hotmail.com;	1;	1;	1;	1;
 #alias prba {banp %1; st; lrn};
 #alias arch4 {hover; archery s 4 p 4 a 4}
 #alias resham {rewin; modeshaman}
-#alias ptran {#action {^The time for giving} {js imp; rpm; transfer %1}}
+#alias ptran {
+  rpm; sr me; transfer %1;
+  #action {^The time for giving} {js imp; sr me; rpm; transfer %1; lrn; rest; deep}
+}
 #alias fastdam {modebow; hover; pburst; archery s 5 p 5 a 2; legarr}
 #alias bbn {bot kk %1; bn %1}
 #alias legarr {inst owl; inst owl; gather; #delay 900 {quell owl}}
@@ -4825,6 +4847,7 @@ cancel;
 #HIGHLIGHT        {macabre}         {green}                      {5}
 #HIGHLIGHT        {A large creature paws at the ground}         {green}                      {5}
 #HIGHLIGHT        {hulking beast}         {green}                      {5}
+#HIGHLIGHT        {has an ethereal shimmer}         {green}                      {5}
 #HIGHLIGHT        {regal kingfisher puffs}         {green}                      {5}
 #HIGHLIGHT        {horrible looking vulture}         {green}                      {5}
 #highlight {brown swallow bobs and weaves} {green}
