@@ -1843,7 +1843,7 @@ reseteye;
 #alias dorogen {stabclose boxes west; otk rogeneye}
 #alias doxill {stabclose door west; otk xill}
 #alias dorhun {stabclose doors north; otk rhun}
-#alias refade {wingsweep; fade; reshoot}
+#alias refade {cancel; wingsweep; fade; reshoot}
 #ALIAS {dowater}
 {
 	wat bottle
@@ -3657,7 +3657,7 @@ richard_wan@hotmail.com;	1;	1;	1;	1;
   #alias ota reshoot;
   eng ko;
   #alias oag {mac ko %%2};
-  #alias refade {fade; reshoot};
+  #alias refade {cancel; fade; reshoot};
   #alias rs donothing;
   #action {^You {barely hit|hit}} {nospam 3 refade};
   #action {^You {miss|bruise} {.+with your hit.$}} {nospam 3 refade};
