@@ -19,10 +19,10 @@ togarg
 nernorth
 nerforge
 snaggle
+zardonna
 nersouth
 fuddlesign
 nereast
-zardonna
 recuperate kenbard
 recuperate bal
 eastwinds
@@ -109,9 +109,10 @@ solrank
 recuperate sol
 startthorb
 component neraka
+kalwest
 nerinn
+zardonna
 sanction
-kalvoy
 citadel kalaman
 pirates
 hctmze
@@ -120,15 +121,19 @@ ritfrosty
 frostycave
 frostybottom
 daggorathturtle
+kalwest
 zmij
 ixpat
+kalbank
 gleam
 sanport
+kalsquare
 sansouth
 sankit
 sanstudy
 starttoede
 totaeldeth
+kalbank
 taelboy
 instinct sky42
 startquali
@@ -144,6 +149,7 @@ citadel rockhorde
 ritgarret
 enbir
 loccv
+kalcomp
 startcv
 celestial valley
 bors cv
@@ -189,6 +195,7 @@ qk
 nytetree
 starttheiwar
 chutebottom
+kalfountain
 belowsimm
 kern
 startpigmy
@@ -226,7 +233,6 @@ citadel drake
 citadel vin
 citadel tenlo
 dvcopse
-kalbank
 dv acidic
 sky instinct 51
 dkspell irda
@@ -249,6 +255,7 @@ startrayne
 raynegate
 dkspell rayne
 dkspell hct
+kalbank
 startwda
 stoneseal
 mysticshark
@@ -297,13 +304,13 @@ startgreenen
 illyoctrio
 tultuk
 startphysix
+kalbank
 balitrio
 bogmage
 solwraith
 solundead
 solcler
 startslig
-kalbank
 slig2
 brogdruid
 balibed
@@ -328,6 +335,7 @@ startbda
 startbullywug
 startbully
 startbully
+kalbank
 solwar
 tokruins
 startkruin
@@ -347,6 +355,7 @@ startlyt
 startshadow
 ritquali
 irdapearl
+kalcler
 startriver
 harmonium
 unemestar
@@ -381,6 +390,7 @@ startbalcombe
 serra
 lhex
 balcombe
+kalcler
 gownnocharm
 raynemansakr
 rayneselissa
@@ -398,7 +408,6 @@ lemucler
 steamgolem
 chutegaard
 jaketh
-kalfountain
 brithnea
 sahsponge
 bogfight
@@ -417,7 +426,6 @@ instinct mmtn 51 grizzly
 startvrykith
 startboylein
 startwayreth
-kalcomp
 startgalvari
 ritlich
 startkhur
