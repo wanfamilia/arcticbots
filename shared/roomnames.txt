@@ -17,12 +17,12 @@ kaleast
 recuperate spring
 togarg
 nernorth
-zardonna
 nerforge
 snaggle
 nersouth
 fuddlesign
 nereast
+zardonna
 recuperate kenbard
 recuperate bal
 eastwinds
@@ -47,7 +47,6 @@ anatole
 tolemish
 tocae
 recuperate bung
-zardonna
 solsquare
 theobald
 solmerchant
@@ -64,7 +63,6 @@ torath
 recuperate twen
 midsea
 ritbluff
-kalshop
 startcloud
 canstin
 mirus
@@ -72,7 +70,6 @@ caergoth
 kalscout
 kalwar
 westwinds
-kalcomp
 locdarg
 tirabot
 startgrak
@@ -114,6 +111,7 @@ startthorb
 component neraka
 nerinn
 sanction
+kalvoy
 citadel kalaman
 pirates
 hctmze
@@ -126,7 +124,6 @@ zmij
 ixpat
 gleam
 sanport
-kalvoy
 sansouth
 sankit
 sanstudy
@@ -229,6 +226,7 @@ citadel drake
 citadel vin
 citadel tenlo
 dvcopse
+kalbank
 dv acidic
 sky instinct 51
 dkspell irda
@@ -261,7 +259,6 @@ lunigate
 lunignome
 luniavatar
 mound
-kalbank
 moundcloud
 aspre
 statue
@@ -284,7 +281,6 @@ startxak
 xakoaktree
 startspire
 ritspire
-zardonna
 spirebase
 spireend
 inferno
@@ -307,8 +303,8 @@ solwraith
 solundead
 solcler
 startslig
-slig2
 kalbank
+slig2
 brogdruid
 balibed
 havweap
@@ -325,7 +321,6 @@ startdko
 dkogates
 dkosayskull
 dkonightlord
-kalcler
 palscout
 morticliff
 mortivillage
@@ -403,11 +398,11 @@ lemucler
 steamgolem
 chutegaard
 jaketh
+kalfountain
 brithnea
 sahsponge
 bogfight
 tosorin
-kalwest
 newsouth
 tocloud
 cinder
@@ -422,9 +417,9 @@ instinct mmtn 51 grizzly
 startvrykith
 startboylein
 startwayreth
+kalcomp
 startgalvari
 ritlich
 startkhur
-kalcomp
 ritkhur
 cloudcomp
