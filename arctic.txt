@@ -26,11 +26,18 @@
    %2;
 }
 
+#alias autofol {
+  #var leader $groupmembers[1];
+  autoass;
+  #alias onerest {rest; #show RESTING: %1} ;
+  #action {^leader tells your group '{$leadercommands} {\w+}'} {#delay 1 mac %%1 %%2};
+}
 #alias mapwhi mapto pryor mag
+#alias sha {#arc}
 #alias maptank {mapto boone bot}
 #alias mapsky mapto graysen sky
 #alias mapsham mapto $myshaman mai
-#alias mainmage {ll #alias mai mag}
+#alias mainmage {ll #alias mai mag; #alias ser bser}
 #var {leadercommands} {lie|lift|crawl|search|scale|jump|say|touch|push|pull|move|slide|stand|ent|enter|leave|squeeze|open|part|climb}
 #alias saylich {say amarazilac tomanaris tusun}
 #alias bst {bash %1; st; }
@@ -526,10 +533,10 @@ reseteye;
 }
 
 #alias solgho {
-  south; %1 ghost; %1 wraith;
-  #delay 15 {south; %1 ghost; %1 wraith};
-  #delay 30 {east; %1 ghost; %1 wraith};
-  #delay 45 {west; north; north; %1 ghost; %1 wraith};
+  south; %1 ghost; 
+  #delay 15 {south; %1 ghost; };
+  #delay 30 {east; %1 ghost; };
+  #delay 45 {west; north; north; %1 ghost; };
 }
 #alias somak {solgho maki; suel}
 #alias k4 {ke %1; #4 $engvar}
@@ -787,8 +794,13 @@ reseteye;
 #alias pracpal {
   #action {^You can focus again on your prayers} {divine};
   #action {^Through the darkness, you find a connection} {right};
+  #action {^Once again the time has come for righteous anger} {reck};
+  #action {^The spirit of the heavens fades slowly} {bes majere};
+  praclay;
+  lay me; div; reck; right; beseech majere;
 }
 
+#alias palmaj {bes majere; lay me; div; reck; righ}
 #alias praclay {
   #action {^Your hands tingle} {rem %1; wear %1; st; lay me;lrn};
 }
@@ -1400,7 +1412,9 @@ reseteye;
   mapon;
 }
 
+#alias bohj {ct Bohj!  Bohj! %1 ur ippistuxj ko!}
 #alias maft {#map exit %1 command {%1; %2 %3 %4 %5}}
+#alias gomyth {mrun mythsh}
 #alias mbef {#map exit %1 command {%2 %3 %4; %1}}
 #alias mapon {
   #alias cleartop donothing;
@@ -1409,6 +1423,8 @@ reseteye;
   #map flag static off;
   #map flag vtmap on;
   #action {^Alas, you cannot go that way} {#map undo};
+  #action {^Center of the Celestial Temple} {mgoc};
+  #action {^Approaching a Rise} {mgo 3268};
 }
 
 #var runspeed 0.23
@@ -3020,7 +3036,7 @@ richard_wan@hotmail.com;	1;	1;	1;	1;
   #alias cleancomp cleancomp1;
   #var {circle1} {clot};
   #unticker feedme;
-  eng otk;
+  eng dotk;
   #alias stabclose shamstabclose;
   #alias rs rga;
   #var pet all.spirit;
@@ -3454,6 +3470,7 @@ richard_wan@hotmail.com;	1;	1;	1;	1;
 #alias stuntshore {stuntbush; w;d;n;d;e;d;n;e;e;n;e;e;}
 #alias jread {get saffron belt; put saffron pouch; js read}
 #alias jmoc {sysplay smb3_coin; js moment}
+#alias playcoin {sysplay smb3_coin}
 #alias cubread {get metal.cube belt; say praise the gods; put metal.cube belt; put 6*food belt; drop all.food; get all.food belt}
 #alias bushcrop {s; s; e; e;}
 #alias agc {assail; gore; charge; st}
@@ -3581,7 +3598,7 @@ richard_wan@hotmail.com;	1;	1;	1;	1;
 }
 #alias fastdam {modebow; hover; pburst; archery s 5 p 5 a 2; legarr}
 #alias bbn {bot kk %1; bn %1}
-#alias legarr {inst owl; inst owl; gather; #delay 900 {quell owl}}
+#alias legarr {#alias upvolley volley; inst owl; inst owl; gather; #delay 900 {quell owl}}
 #alias kwe {kw eject}
 #alias kdsham {otk %1; ko %1}
 #alias kda {kd %1; ass}
@@ -3871,7 +3888,6 @@ cancel;
 #alias lopuf {mag {tp %1; ddo %1}}
 #alias logcler {logwin; guna; mypw; 1;1;modecleric; fly; guston;}
 
-#alias logclero {newses hea; guna; mypw; 1;1;modecleric; fly; guston;}
 #alias logimm {logwin; gnua; mypw; 1;1; modeimm; }
 
 #alias delzap {#delay 7200 #zap}
@@ -3896,6 +3912,11 @@ cancel;
   newses war;
   dawsen; mypw; 1; 1; modepala; modewar; fly;
   #alias bot {#war};
+}
+#alias logclero {
+  newses hea;
+  wilson; mypw; 1; 1; modecleric; fly;
+  #alias mai  {#hea}
 }
 #alias logthi {newses thi; nikson; mypw; 1; 1; fly; modethief}
 #alias modethief {
@@ -4296,6 +4317,7 @@ cancel;
 #alias nyteforge {search forge; get scoop; uog panel; shove forge}
 #alias tepa {d; s; s; tear parchment}
 #alias aog {bot c 'a o g'}
+#alias maog {bot mem 'a o g'}
 #action {^{\d.+}:sitting} {nospam 1 stand} {4}
 #alias mai {#arc}
 #alias knoc {mag c 'knock'}
@@ -4832,6 +4854,7 @@ cancel;
 #highlight {feeling and colour return} {light yellow}
 #highlight {squeezes your finger with incredible} {light yellow}
 #highligh  {volley again} {green}
+#highligh  {You hear the sound of a creaky gate opening} {green}
 #highligh  {Sir Marquinn von Israeth} {green}
 #HIGHLIGHT        {You fall down, your ears ringing}  {red}                        {5}
 #highlight {You feel vulnerable again as the protective cloak about you fades} {5}
@@ -4968,7 +4991,7 @@ cancel;
 
 #MACRO {\eOw}
 {
-	cancel; mac flee;
+	mac flee; 
 	st; mlea;
 
 }
@@ -5061,7 +5084,7 @@ cancel;
 #VARIABLE         {charmie2}              {}
 #VARIABLE         {clerfood}              {food}
 #VARIABLE         {countheals}            {0}
-#VARIABLE         {engvar}                {otk}
+#VARIABLE         {engvar}                {dotk}
 #VARIABLE         {firstspell}            {0}
 #VARIABLE         {food}                  {food}
 #VARIABLE         {groupindex}            {9}

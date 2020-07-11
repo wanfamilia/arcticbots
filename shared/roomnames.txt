@@ -4,6 +4,7 @@ kalvoy
 kalsquare
 kalshop
 zardonna
+kalnorth
 kalwest
 kalcomp
 kalbank
@@ -22,7 +23,7 @@ snaggle
 nersouth
 fuddlesign
 nereast
-zardonna
+aligngc
 recuperate kenbard
 recuperate bal
 eastwinds
@@ -63,6 +64,7 @@ torath
 recuperate twen
 midsea
 ritbluff
+kaldruid
 startcloud
 canstin
 mirus
@@ -111,7 +113,6 @@ startthorb
 component neraka
 nerinn
 sanction
-kalvoy
 citadel kalaman
 pirates
 hctmze
@@ -171,6 +172,7 @@ startswamp
 b4troll
 swamptroll
 solamnic keep
+kalcler
 palanthas library key drawer
 astinus
 palanthas library dorshan
@@ -178,6 +180,7 @@ palshelf
 fishreef
 sahcent
 atlacamani
+kalsouth
 lemusouth
 lemcase
 lemuvoyloc
@@ -207,6 +210,7 @@ trade
 stormspin
 noom
 startluni
+kalnorth
 azul
 instinct sky 52
 fidlas
@@ -226,7 +230,6 @@ citadel drake
 citadel vin
 citadel tenlo
 dvcopse
-kalbank
 dv acidic
 sky instinct 51
 dkspell irda
@@ -240,6 +243,7 @@ tarsisbase
 tarsishermit
 stoneskin spire
 paxcenter
+recuperate light
 ritglymmer
 glymmerfight
 itanus
@@ -278,6 +282,7 @@ dimdoor
 startsilvi
 bogwall
 startxak
+kalcler
 xakoaktree
 startspire
 ritspire
@@ -303,7 +308,6 @@ solwraith
 solundead
 solcler
 startslig
-kalbank
 slig2
 brogdruid
 balibed
@@ -398,7 +402,6 @@ lemucler
 steamgolem
 chutegaard
 jaketh
-kalfountain
 brithnea
 sahsponge
 bogfight
@@ -417,9 +420,9 @@ instinct mmtn 51 grizzly
 startvrykith
 startboylein
 startwayreth
-kalcomp
 startgalvari
 ritlich
 startkhur
 ritkhur
 cloudcomp
+dargomoon
