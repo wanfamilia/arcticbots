@@ -33,6 +33,7 @@
   #action {^leader tells your group '{$leadercommands} {\w+}'} {#delay 1 mac %%1 %%2};
 }
 #alias mapwhi mapto pryor mag
+#alias pew {em pewpewpew}
 #alias sha {#arc}
 #alias maptank {mapto boone bot}
 #alias mapsky mapto graysen sky
@@ -131,7 +132,7 @@
 }
 
 
-#alias ghob {mai {jd gho be; eat berry; drop all.berry}}
+#alias ghob {sha {jd gho be; eat berry; drop all.berry}}
 #alias gbt {jd gho be; #3 {taste berry}; drop all.berry}
 
 #variable castpat {^{\s}{\w+}{\s+\[.+}{Cleric|White Robe|Red Robe|Shaman|Druid|Black Robe|Magic User}{$}}
@@ -1574,7 +1575,7 @@ reseteye;
 }
 
 #alias tfa {js twisted}
-#alias csp {mai cspthis}
+#alias csp {sha cspthis}
 #ALIAS {cspthis}
 {
 	st;
@@ -2464,7 +2465,7 @@ reseteye;
 #alias ome {js omen}
 #alias ansh {jd anc shr}
 
-#alias gma {mai js ghostmaster}
+#alias gma {sha js ghostmaster}
 
 #alias gdark {gma dark}
 #alias gthie {gma thie}
@@ -3001,7 +3002,6 @@ richard_wan@hotmail.com;	1;	1;	1;	1;
 	#variable food $clerfood;
  #var circle1 bless;
  agg turn;
- #alias ke {kst %%1; oes; otk %%1};
 
  vch corpse;
  guston;

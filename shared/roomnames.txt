@@ -4,7 +4,6 @@ kalvoy
 kalsquare
 kalshop
 zardonna
-kalnorth
 kalwest
 kalcomp
 kalbank
@@ -23,7 +22,6 @@ snaggle
 nersouth
 fuddlesign
 nereast
-aligngc
 recuperate kenbard
 recuperate bal
 eastwinds
@@ -46,6 +44,7 @@ recuperate pal
 palinn
 anatole
 tolemish
+kalbank
 tocae
 recuperate bung
 solsquare
@@ -64,7 +63,6 @@ torath
 recuperate twen
 midsea
 ritbluff
-kaldruid
 startcloud
 canstin
 mirus
@@ -89,9 +87,11 @@ werewolf
 gulfeast
 gulfport
 gulfgar
+kalwest
 glade whitestone
 shayd
 deepfish
+aligngc
 irdalagoon
 irdagate
 schaeffa
@@ -143,7 +143,10 @@ startdwarfkeep
 citadel dwarfkeep
 citadel rockhorde
 ritgarret
+tolich
+kalinn
 enbir
+kalvoy
 loccv
 startcv
 celestial valley
@@ -172,7 +175,6 @@ startswamp
 b4troll
 swamptroll
 solamnic keep
-kalcler
 palanthas library key drawer
 astinus
 palanthas library dorshan
@@ -180,10 +182,11 @@ palshelf
 fishreef
 sahcent
 atlacamani
-kalsouth
 lemusouth
+kaldruid
 lemcase
 lemuvoyloc
+aligngc
 lemchest
 lemvashka
 sara
@@ -194,12 +197,15 @@ starttheiwar
 chutebottom
 belowsimm
 kern
+aligngc
 startpigmy
+aligngc
 locrahn
 rahnkagi
 rhankagi
 gargath
 teiresias blind glasses
+kalcler
 totstatue
 solbank
 romis
@@ -210,11 +216,11 @@ trade
 stormspin
 noom
 startluni
-kalnorth
 azul
 instinct sky 52
 fidlas
 ritlowdarkeep
+kalcler
 ftspin
 startft
 tesiak
@@ -240,12 +246,15 @@ rabbitwand
 knifetent
 goodleaf
 tarsisbase
+kalfountain
 tarsishermit
+aligngc
 stoneskin spire
 paxcenter
 recuperate light
 ritglymmer
 glymmerfight
+kalfountain
 itanus
 tantsouth
 dkorayne
@@ -265,6 +274,7 @@ luniavatar
 mound
 moundcloud
 aspre
+kalcler
 statue
 gopi
 eras
@@ -282,9 +292,9 @@ dimdoor
 startsilvi
 bogwall
 startxak
-kalcler
 xakoaktree
 startspire
+kalbank
 ritspire
 spirebase
 spireend
@@ -316,6 +326,7 @@ solscout
 kalsham
 startgian
 buskel
+kalfountain
 lemnorth
 lemsouth
 startterzak
@@ -331,6 +342,7 @@ mortivillage
 startbda
 startbullywug
 startbully
+aligngc
 startbully
 solwar
 tokruins
@@ -339,6 +351,7 @@ locatedractower
 startcitdrac
 abovecitdrac
 startbluff
+kalbank
 startbandit
 startregen
 soldruid
@@ -346,6 +359,7 @@ startmom
 sarson
 startraven
 ritraven
+kalcler
 beforetroll
 startlyt
 startshadow
@@ -373,6 +387,7 @@ branchguard
 alignen
 alignne
 aligncn
+aligngc
 alignnl
 vinwar
 vindragontrain
@@ -388,6 +403,7 @@ balcombe
 gownnocharm
 raynemansakr
 rayneselissa
+aligngc
 thcsmith
 palgrate
 drogo dk quest
@@ -410,6 +426,7 @@ newsouth
 tocloud
 cinder
 crowbar
+zardonna
 t
 eastthon
 footlocker
@@ -422,6 +439,7 @@ startboylein
 startwayreth
 startgalvari
 ritlich
+kalvoy
 startkhur
 ritkhur
 cloudcomp
