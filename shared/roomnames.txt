@@ -3,10 +3,8 @@ recuperate kal
 kalvoy
 kalsquare
 kalshop
-kalwest
 zardonna
 kalwest
-zardonna
 kalcomp
 kalbank
 kalcler
@@ -38,9 +36,9 @@ Northwinds
 oldsh
 startdk
 tollhouse
+kalbank
 vinguard
 torenth
-kalshop
 starthct
 palsouth
 recuperate pal
@@ -73,7 +71,6 @@ kalscout
 kalwar
 Westwinds
 locdarg
-kalshop
 tirabot
 startgrak
 gormskun
@@ -139,7 +136,6 @@ paxgem
 locpax
 kharolis
 citadel hylo
-kalbank
 citadel solace
 citadel thorbardin
 startdwarfkeep
@@ -152,9 +148,11 @@ loccv
 startcv
 celestial valley
 bors cv
+kaldruid
 cvphil
 after arch
 succubus
+aligngc
 khane
 velchoir
 vshrinal
@@ -169,13 +167,16 @@ startstormhead
 essence fire slarn
 cloud pendant
 cloud priest
+aligngc
 castle gate
 essence air dara
 sagebears
 windfall barbarian
+kalinn
 startswamp
 b4troll
 swamptroll
+kalcomp
 solamnic keep
 palanthas library key drawer
 astinus
@@ -185,6 +186,7 @@ fishreef
 sahcent
 atlacamani
 lemusouth
+kalcler
 lemcase
 lemuvoyloc
 lemchest
@@ -210,6 +212,7 @@ grom
 stormbutton
 kul
 trade
+kalfountain
 stormspin
 noom
 startluni
@@ -233,12 +236,14 @@ citadel vin
 citadel tenlo
 darvmurk
 dvcopse
+kaldruid
 dv acidic
 sky instinct 51
 dkspell irda
 instinct mountain 51
 reefdragon
 bonfair
+kalfountain
 rabbitwand
 knifetent
 goodleaf
@@ -250,6 +255,7 @@ recuperate light
 ritglymmer
 glymmerfight
 itanus
+kalbank
 tantsouth
 dkorayne
 startrayne
@@ -307,6 +313,7 @@ startphysix
 balitrio
 bogmage
 solwraith
+kalwest
 solundead
 solcler
 startslig
@@ -353,6 +360,7 @@ beforetroll
 startlyt
 startshadow
 ritquali
+kalbank
 irdapearl
 startriver
 harmonium
@@ -364,6 +372,7 @@ garnetslab
 garnetnorth
 startdeepmine
 belowlubs
+kaldruid
 lyzian
 raynelord
 dkquestkeep
@@ -372,7 +381,6 @@ mythsh
 gamso
 alignec
 branchala
-kalbank
 branchguard
 alignen
 alignne
@@ -389,13 +397,12 @@ startbalcombe
 serra
 lhex
 balcombe
-kalfountain
 gownnocharm
 raynemansakr
 rayneselissa
+aligngc
 thcsmith
 palgrate
-kalcomp
 drogo dk quest
 jibur
 valleyabove
@@ -408,7 +415,6 @@ lemucler
 steamgolem
 chutegaard
 jaketh
-aligngc
 brithnea
 sahsponge
 bogfight
@@ -416,11 +422,13 @@ tosorin
 Southwinds
 tocloud
 cinder
+kalbank
 crowbar
 t
 eastthon
 footlocker
 kyle
+kalbank
 cokbakali
 vinbank
 instinct mmtn 51 grizzly
