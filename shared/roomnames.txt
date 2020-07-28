@@ -36,7 +36,6 @@ Northwinds
 oldsh
 startdk
 tollhouse
-kalbank
 vinguard
 torenth
 starthct
@@ -148,11 +147,9 @@ loccv
 startcv
 celestial valley
 bors cv
-kaldruid
 cvphil
 after arch
 succubus
-aligngc
 khane
 velchoir
 vshrinal
@@ -167,16 +164,13 @@ startstormhead
 essence fire slarn
 cloud pendant
 cloud priest
-aligngc
 castle gate
 essence air dara
 sagebears
 windfall barbarian
-kalinn
 startswamp
 b4troll
 swamptroll
-kalcomp
 solamnic keep
 palanthas library key drawer
 astinus
@@ -186,7 +180,6 @@ fishreef
 sahcent
 atlacamani
 lemusouth
-kalcler
 lemcase
 lemuvoyloc
 lemchest
@@ -205,14 +198,12 @@ rahnkagi
 rhankagi
 gargath
 teiresias blind glasses
-totstatue
 solbank
 romis
 grom
 stormbutton
 kul
 trade
-kalfountain
 stormspin
 noom
 startluni
@@ -234,16 +225,15 @@ vaj
 citadel drake
 citadel vin
 citadel tenlo
+silvigates
 darvmurk
 dvcopse
-kaldruid
 dv acidic
 sky instinct 51
 dkspell irda
 instinct mountain 51
 reefdragon
 bonfair
-kalfountain
 rabbitwand
 knifetent
 goodleaf
@@ -255,7 +245,6 @@ recuperate light
 ritglymmer
 glymmerfight
 itanus
-kalbank
 tantsouth
 dkorayne
 startrayne
@@ -313,7 +302,6 @@ startphysix
 balitrio
 bogmage
 solwraith
-kalwest
 solundead
 solcler
 startslig
@@ -360,7 +348,6 @@ beforetroll
 startlyt
 startshadow
 ritquali
-kalbank
 irdapearl
 startriver
 harmonium
@@ -372,7 +359,6 @@ garnetslab
 garnetnorth
 startdeepmine
 belowlubs
-kaldruid
 lyzian
 raynelord
 dkquestkeep
@@ -397,14 +383,15 @@ startbalcombe
 serra
 lhex
 balcombe
+nerguards
 gownnocharm
 raynemansakr
 rayneselissa
-aligngc
 thcsmith
 palgrate
 drogo dk quest
 jibur
+totstatue
 valleyabove
 unicorn
 palowl
@@ -422,13 +409,11 @@ tosorin
 Southwinds
 tocloud
 cinder
-kalbank
 crowbar
 t
 eastthon
 footlocker
 kyle
-kalbank
 cokbakali
 vinbank
 instinct mmtn 51 grizzly
