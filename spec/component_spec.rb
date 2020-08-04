@@ -54,6 +54,4 @@ describe Component do
        expect(component.lines(text).length).to eq 2
      end
   end
-  
-  describe 
 end

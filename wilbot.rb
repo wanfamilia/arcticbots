@@ -4,6 +4,7 @@ require 'discordrb'
 require 'csv'
 require_relative 'poro/walkthrough'
 require_relative 'poro/component'
+require_relative 'poro/mapper'
 
 def secret(key)
   require 'yaml'
@@ -97,66 +98,11 @@ The mud has crashed. Please try again later.'
   end
 end
 
-class Mapper
-  require 'ostruct'
-
-  def room_names(filter)
-    filtered(filter).join(', ')
-  end
-
-  def filtered(filter)
-    fragments = filter.split('.')
-    all_rooms.select { |x| match_all(x, fragments) }
-  end
-
-  def match_all(text, fragments)
-    fragments.all?{|x| text.include?(x)}
-  end
-
-  def all_rooms
-    @room_names ||= IO.readlines('shared/roomnames.txt').uniq.map(&:strip).sort
-  end
-
-  def path(start, finish)
-    start_match = matches(start)
-    end_match = matches(finish)
-    start_match.error || end_match.error || path_impl(start_match.value, end_match.value)
-  end
-
-  def path_impl(start, finish)
-    content = %Q{#read shared/path.txt
-path {#{start}} {#{finish}}
-#end}
-    File.write('tmp/pathin.txt', content)
-    run_shell 'tt++ tmp/pathin.txt'
-    path = File.read('tmp/pathout.txt')
-    "#{start} -> #{finish}: #{path}"
-  end
-    
-  def run_shell(command)
-    system command
-  end
-  
-  def pty(command)
-    PTY.spawn(command) do |r, _, pid| 
-    end
-  end
-
-  def matches(fragment)
-    exact = all_rooms.select{|x| x == fragment}.first
-    return OpenStruct.new(error: nil, value: exact) if exact
-    loose = filtered(fragment)
-    return OpenStruct.new(error: nil, value: loose.first) if loose.length == 1
-    return OpenStruct.new(error: "No matches for #{fragment}") if loose.length < 1
-    OpenStruct.new(error: "Multiples matches: #{loose.join(', ')}")
-  end
-
-end
 
 bot = Discordrb::Commands::CommandBot.new token: t2, prefix: ':', client_id: 566506575569616898
 words = MagicWords.new
 zone = Walkthrough.new
-mapper = Mapper.new
+mapper = Mapper.new(IO.readlines('shared/roomnames.txt'))
 component = Component.new
 bot.command(:hello, description: 'example :hello world')  do |_event, *args|
   "tty: #{STDIN.tty?}"
@@ -196,7 +142,7 @@ end
 
 bot.command :path, description: 'Example (use rooms to filter lister of rooms) :path westwinds rec.kal' do |_event, *args|
   alen = args.length
-  return "expected 2 args but got #{alen}" unless alen == 2
+  return "expected 1 or 2 args but got #{alen}" unless (alen == 1 or alen == 2)
   mapper.path args[0], args[1]
 end
 
