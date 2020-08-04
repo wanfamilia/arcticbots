@@ -22,7 +22,7 @@
 #alias mapto {
    swap me %1;
    mapoff;
-   %2 {mloa mgo %3};
+   %2 {mloa %3};
    %2;
 }
 
@@ -110,7 +110,6 @@
 #alias drn {js drain %1 in inventory}
 #alias bols {sky bolster}
 #alias bser {bot {cancel; oe c 'cu se' %1; oe st; }}
-#alias tbs {tan bser}
 
 #alias frensponge {
   #action {^A red mist blurs} {oe rescue $myshaman};
@@ -709,7 +708,7 @@ reseteye;
 #alias chg {ch %1; gore %1;}
 #alias kb2 {c 'bli' 2.baaz}
 #alias kdb {c 'harm' baaz}
-#alias dofaul {get staff corpse; n; n; n; get blue.crystal belt; attach blue.crystal staff; place blue.staff statue; ef bread; sit; rem all; study disks;}
+#alias dofaul {get staff corpse; n; n; n; get blue.crystal belt; attach blue.crystal staff; place blue.staff statue; ef bread; sit; study disks;}
 
 #alias kifaul {s; s; s; c 'harm' baaz; st; flee; flee; flee;flee; flee; n; n;}
 #alias kigoth {n; n; n; c 'harm' baaz; st; flee; flee; flee; flee; s; s;}
@@ -1120,7 +1119,9 @@ reseteye;
 
 #alias bk {aggone back}
 #alias bedir {
-  thi #3 {aggone be %2; fade %1; sneak; st; $reverses[%1]};
+  enven $weapon;
+  thi #5 {bk %2; fade %1; sneak; st; $reverses[%1]};
+  #alias dolater5 {cancel; %%1}
 }
 #alias bfn {bedir n}
 #alias afterxeg {get tendril; shatter tendril; uog golden.chest}
@@ -1434,6 +1435,7 @@ reseteye;
   #map flag vtmap on;
   #action {^Alas, you cannot go that way} {#map undo};
   #action {^Center of the Celestial Temple} {mgoc};
+  #action {^A beautiful statue of Mishakal stands here, illuminating the chamber} {mgo startheal};
   #action {^{North|South|East|West}ern {Reach|Branch}} {mgo %%1winds; #show %%1};
   #action {^Approaching a Rise} {mgo 3268};
   #action {^A Large Meeting Room} {mgo risolbelow};
@@ -4610,7 +4612,7 @@ cancel;
   sesss3e; lc dark.elven; restick lcb; 
 }
 
-#alias lcf {lc flexible.red}
+#alias lcf {lc flexible.red; lc ring.bones}
 #alias lclem2 {lc black.pike; lc bone.bracer; lc wretched; lc shadow.cape; restick lcshad}
 #alias dlcold {
   rps me; cubread; ef bread;

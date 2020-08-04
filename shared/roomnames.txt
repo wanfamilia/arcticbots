@@ -93,7 +93,6 @@ deepfish
 irdalagoon
 irdagate
 schaeffa
-southwinds
 sondra
 balrank
 balinn
@@ -392,6 +391,7 @@ palgrate
 drogo dk quest
 jibur
 totstatue
+lesath
 valleyabove
 unicorn
 palowl
@@ -427,3 +427,4 @@ ritkhur
 cloudcomp
 dargomoon
 stingworm
+startheal
