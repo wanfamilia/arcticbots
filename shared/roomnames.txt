@@ -4,6 +4,7 @@ kalvoy
 kalsquare
 kalshop
 zardonna
+kalbank
 kalwest
 kalcomp
 kalbank
@@ -27,10 +28,12 @@ recuperate bal
 Eastwinds
 balnorth
 balinorth
+zardonna
 balsquare
 balsham
 balwar
 petrin
+kalwest
 dustmerch
 Northwinds
 oldsh
@@ -79,6 +82,7 @@ startboku
 darval
 darkeep
 palwest
+kaldruid
 palsquare
 hylosquare
 gulfambush
@@ -124,7 +128,9 @@ gleam
 sanport
 sansouth
 sankit
+kalbank
 sanstudy
+kalbank
 starttoede
 totaeldeth
 taelboy
@@ -145,6 +151,7 @@ enbir
 loccv
 startcv
 celestial valley
+kalcomp
 bors cv
 cvphil
 after arch
@@ -155,6 +162,7 @@ vshrinal
 shalzan
 startcrytic
 essence earth eern
+kalbank
 dargo start
 dargo squid jawbow
 essence water lezi
@@ -168,10 +176,12 @@ essence air dara
 sagebears
 windfall barbarian
 startswamp
+kalbank
 b4troll
 swamptroll
 solamnic keep
 palanthas library key drawer
+aligngc
 astinus
 palanthas library dorshan
 palshelf
@@ -238,7 +248,6 @@ knifetent
 goodleaf
 tarsisbase
 tarsishermit
-stoneskin spire
 paxcenter
 recuperate light
 ritglymmer
@@ -290,6 +299,7 @@ ctcorner
 ctguards
 ctcent
 streamshayd
+elric
 palcrypt
 palcrypt
 startlargus
@@ -310,6 +320,7 @@ balibed
 havweap
 solscout
 kalsham
+kalbank
 startgian
 buskel
 lemnorth
@@ -357,6 +368,7 @@ sealem
 garnetslab
 garnetnorth
 startdeepmine
+kalcomp
 belowlubs
 lyzian
 raynelord
@@ -371,6 +383,7 @@ alignen
 alignne
 aligncn
 alignnl
+kalbank
 vinwar
 vindragontrain
 alignng
@@ -388,6 +401,7 @@ raynemansakr
 rayneselissa
 thcsmith
 palgrate
+kalfountain
 drogo dk quest
 jibur
 totstatue
@@ -407,6 +421,7 @@ sahsponge
 bogfight
 tosorin
 Southwinds
+stoneskin spire
 tocloud
 cinder
 crowbar
@@ -428,3 +443,9 @@ cloudcomp
 dargomoon
 stingworm
 startheal
+totmerge
+totafterstatue
+taeljudge
+todarren
+uthlib
+kaldruid

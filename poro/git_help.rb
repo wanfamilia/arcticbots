@@ -36,6 +36,10 @@ class GitHelp
     '~/bin/rubow.rb --branch'
   end
 
+  def title(title)
+    %Q{echo -n -e "\033]0;#{title}\007"}
+  end
+
   def ruboa
     '~/bin/rubow.rb --branch -a'
   end

@@ -523,7 +523,7 @@ reseteye;
 #alias lcshayd {lctab}
 #alias lcck {lc ectoplasm; lc dreamcatcher; lc flame; lc brains}
 #alias lcshado {lc wretched; lc shadow; lc gossamer; lc bladeless}
-#alias rlcred {gobal; sph; runto s4e9n4w3sw2s2wnw7nw; lcf; lcf; lc spiked.sterling; lc braided}
+#alias rlcred {gobal; rd imp; runto s4e8n6w2sw2s2wnw7nw; lcf; lcb; lc flexible.red ; }
 #alias rlcck {gobal; runto s4e9n4w3sw4sdw2s2ws5w; lcck}
 #alias rlckith {gosol; runto e2sd10se4sw5se4sw3s6wd2s; lckith}
 #alias rlcspi {gosol; runto e2sd8n3e5n4e3n9e5s6es2ese; climb ladder; ee; lckith}
@@ -1119,7 +1119,7 @@ reseteye;
 
 #alias bk {aggone back}
 #alias bedir {
-  enven $weapon;
+  thi enven $weapon;
   thi #5 {bk %2; fade %1; sneak; st; $reverses[%1]};
   #alias dolater5 {cancel; %%1}
 }
@@ -1437,6 +1437,7 @@ reseteye;
   #action {^Center of the Celestial Temple} {mgoc};
   #action {^A beautiful statue of Mishakal stands here, illuminating the chamber} {mgo startheal};
   #action {^{North|South|East|West}ern {Reach|Branch}} {mgo %%1winds; #show %%1};
+  #action {^{The Slimy Chute}} {mgo slimychute};
   #action {^Approaching a Rise} {mgo 3268};
   #action {^A Large Meeting Room} {mgo risolbelow};
 }
@@ -4585,7 +4586,7 @@ cancel;
   #replace vescape {"} {};
   #replace vescape {'} {};
 }
-#action {^{The book of the dead|A burned black prayerbook|A sparkling black bracelet equipped|A discolored helmet equipped by Rahnkagi|A shimmering prayerbook with silver pages|A pair of spiked sterling gauntlets equipped by Bors|A black metal pike in|The mithril plate of shadows|A ruby studded block of limestone|An iridescent hematite tablet|A stunning pearl-inlaid tablet|A golden twined oak longbow equipped|A gold inlaid bone bracer equipped|A holy talisman|The cape of shadows in a|A bladeless sword equipped|A suit of flexible red dragon scale armor equipped|An ancient holy avenger equipped|Gauntlets of ogre power equipped|A dwarven face shield|A sky blue prayerbook with sapphire runes|A dragonrider's talisman|A moist piece of sea sponge|A gangrenous foot|A shimmering cube|A small piece of meteorite|A satiny layer of ectoplasm|A lone, gray flame|A feathered dreamcatcher|A golden battle-honor equipped|A book with frosted glass covers|A globe of sparkling liquid in a steel|A green dragonhide spellbook|A wretched medallion|An ivory spined spellbook|A translucent jade|A charred black ring|The mottled robes of the Archmagus in|A golden bracelet inlaid with emeralds in|A tightly bound tome of magic|A floppy hat|A tiny jade effigy|A timeworn book bound with chains|A belt of cured hylar skin equipped|A wispy black veil|A prayerbook with gleaming pearl covers|An ivy-covered slab of rock|A silver and ruby ring|A ring of finest silver|A dark elven bracelet in a} {.+}}
+#action {^{The book of the dead|A burned black prayerbook|A sparkling black bracelet equipped|A discolored helmet equipped by Rahnkagi|A shimmering prayerbook with silver pages|A pair of spiked sterling gauntlets equipped by Bors|A black metal pike in|The mithril plate of shadows|A ruby studded block of limestone|An iridescent hematite tablet|A stunning pearl-inlaid tablet|A golden twined oak longbow equipped|A gold inlaid bone bracer equipped|A holy talisman|The cape of shadows in a|A bladeless sword equipped|A suit of flexible red dragon scale armor equipped|An ancient holy avenger equipped|Gauntlets of ogre power equipped|A dwarven face shield|A sky blue prayerbook with sapphire runes|A dragonrider's talisman|A moist piece of sea sponge|A gangrenous foot|A shimmering cube|A small piece of meteorite|A radiant white prayerbook|A satiny layer of ectoplasm|A lone, gray flame|A feathered dreamcatcher|A golden battle-honor equipped|A book with frosted glass covers|A globe of sparkling liquid in a steel|A green dragonhide spellbook|A wretched medallion|An ivory spined spellbook|A translucent jade|A charred black ring|The mottled robes of the Archmagus in|A golden bracelet inlaid with emeralds in|A tightly bound tome of magic|A floppy hat|A tiny jade effigy|A timeworn book bound with chains|A belt of cured hylar skin equipped|A wispy black veil|A prayerbook with gleaming pearl covers|An ivy-covered slab of rock|A silver and ruby ring|A ring of finest silver|A dark elven bracelet in a} {.+}}
 {
  ct %1: %2;
  dtell %1: %2;
@@ -4936,7 +4937,7 @@ cancel;
 #HIGHLIGHT        {green swordsman gloves}         {green}                      {5}
 #highlight {A man with bright red skin glistens with sweat} {green}
 #HIGHLIGHT        {ethereal energy}         {green}                      {5}
-#HIGHLIGHT        {ancient tome}         {green}                      {5}
+#HIGHLIGHT        {righteous indignation}         {green}                      {5}
 #HIGHLIGHT        {A beautiful mockingbird whistles}         {green}                      {5}
 #HIGHLIGHT        {binding you dissolve}  {green}                      {5}
 #HIGHLIGHT        {clears up}             {green}                      {5}
