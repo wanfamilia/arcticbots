@@ -3037,7 +3037,6 @@ richard_wan@hotmail.com;	1;	1;	1;	1;
  agg turn;
  #action {^The Temple of Healing} {lrn; smile};
  vch corpse;
- guston;
 	#alias fastmem {med; }
 }
 
@@ -3893,7 +3892,7 @@ cancel;
 #alias tmpa {%1 %2; ota; temp}
 #alias ksbt {tmpa ksb}
 #alias logred {#alias mag {#red} ; newses red; wilbon; mypw; 1; 1; fly; modemage; modered;} 
-#alias logwhi {newses white; pryor; mypw; #var food food; 1; 1; fly; modemage; modewhite}
+#alias logwhi {newses white {pryor; mypw; #var food food; 1; 1; fly; modemage; modewhite}}
 #alias mag {#white}
 #alias modered {
   #alias mag {#red};
@@ -3935,26 +3934,21 @@ cancel;
   #ticker e60 {who needs_title};
 }
 #action {^Mustakrakish, the ancient death troll glows a bright lunar white} {gt -->    TROLL CLEANSED  !!}
-#alias logsham {logwin; $myshaman; mypw; 1;1;modeshaman; fly}
+#alias logshamo {logwin; $myshaman; mypw; 1;1;modeshaman; fly}
+#alias logsham {newses mai {$myshaman; mypw; 1; 1; modeshaman; fly}  }
 #alias lcvoy {lc meteorite; lc veil; lc clove; lc effigy}
 #alias plpd {present letter; present pendant}
 #var skyscout graysen
-#alias logsky {newses sky; $skyscout; mypw; 1; 1; modesky}
-#alias logpal {logbot; boone; mypw; 1; 1; modepala; fly; d; d; n; e; jd r i}
-#alias logwar {logbot; dawsen; mypw; 1; 1; modepala; modewar; fly}
-#alias logmou {logbot; penniman; mypw; 1;1; modepala; fly}
-#alias logdar {logbot; iyler; mypw; 1; 1; modepala; modedar; fly}
+#alias logsky {newses sky {$skyscout; mypw; 1; 1; modesky}}
+#alias logpal {logbot {boone; mypw; 1; 1; modepala; fly; d; d; n; e; jd r i}}
+#alias logwar {logbot {dawsen; mypw; 1; 1; modepala; modewar; fly}}
+#alias logmou logbot {penniman; mypw; 1;1; modepala; fly}
+#alias logdar logbot {iyler; mypw; 1; 1; modepala; modedar; fly}
 #alias logwaro {
-  newses war;
-  dawsen; mypw; 1; 1; modepala; modewar; fly;
-  #alias bot {#war};
+  newses war {dawsen; mypw; 1; 1; modepala; modewar; fly; #alias bot #war;}
 }
-#alias logclero {
-  newses hea;
-  wilson; mypw; 1; 1; modecleric; fly;
-  #alias mai  {#hea}
-}
-#alias logthi {newses thi; nikson; mypw; 1; 1; fly; modethief}
+#alias logclero newses hea {wilson; mypw; 1; 1; modecleric; fly; #alias mai  {#hea} }
+#alias logthi newses thi {nikson; mypw; 1; 1; fly; modethief}
 #alias modethief {
   #alias boa {ass; bpa};
   #action {^The master assassin looks at you from behind} {lrn; smile};
