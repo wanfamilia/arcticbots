@@ -2708,15 +2708,28 @@ reseteye;
 
 
 #ALIAS {logbot} {newses bot}
-#alias newses
+#alias newses limitses 1 newsesimpl
+
+#alias newsesimpl
 {
         #session %1 mud.arctic.org 2700;
         #split $gsizep 2;
         reload;
-        #delay 1 {#ses};
         platformwin;
 }
 
+#alias limitses {
+  sessioncount;
+  #if {$sessioncountv > %1} {#bell; #show !!! SESSIONS --> $sessioncountv  } {%2 %3; %4}
+}
+#alias sessioncount {
+  ll #var sessioncountv = 0;
+  ll ll incrementsession;
+}
+
+#alias incrementsession {
+  #math sessioncountv {$sessioncountv + 1}
+}
 #alias kst {bot aggone kstthis} 
 #alias ksta {kst %1; mai ott}
 #alias brs {bot {cancel; rescue %1}}
@@ -3892,7 +3905,7 @@ cancel;
 #alias modewhite {
   #alias goway {puf wilma};
   #alias ide {rec identify};
-  #var held clear.sceptre;
+  #var held clear.sphere;
   #alias remage {rewin; modemage; modewhite};
   #alias jsrelo jsport;
   #var food food;

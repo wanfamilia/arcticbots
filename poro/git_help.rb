@@ -36,6 +36,7 @@ class GitHelp
     '~/bin/rubow.rb --branch'
   end
 
+  # sets the title on a mac
   def title(title)
     %Q{echo -n -e "\033]0;#{title}\007"}
   end
