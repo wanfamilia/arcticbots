@@ -36,6 +36,14 @@ class GitHelp
     '~/bin/rubow.rb --branch'
   end
 
+  def masterbase
+    'git merge-base HEAD master'
+  end
+
+  def resetbase
+    'git reset `git merge-base HEAD master`'
+  end
+
   # sets the title on a mac
   def title(title)
     %Q{echo -n -e "\033]0;#{title}\007"}
