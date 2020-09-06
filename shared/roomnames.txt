@@ -1,20 +1,20 @@
 kalinn
 recuperate kal
 kalvoy
-kalbank
+kalsquare
 kalsquare
 kalshop
 zardonna
+kalinn
 kalwest
 kalcomp
 kalbank
 kalcler
-kalbank
+kalsquare
 kalfountain
 kaldruid
 aligngc
 kalnorth
-kalbank
 kalsouth
 kaleast
 recuperate spring
@@ -24,7 +24,6 @@ nerforge
 snaggle
 nersouth
 fuddlesign
-kalcomp
 nereast
 recuperate kenbard
 recuperate bal
@@ -37,15 +36,16 @@ balwar
 petrin
 dustmerch
 Northwinds
+kalshop
 oldsh
 startdk
 tollhouse
+kalwest
 vinguard
 torenth
 starthct
 palsouth
 recuperate pal
-kalbank
 palinn
 anatole
 tolemish
@@ -91,7 +91,6 @@ werewolve
 werewolf
 gulfeast
 gulfport
-zardonna
 gulfgar
 glade whitestone
 shayd
@@ -101,6 +100,7 @@ irdagate
 schaeffa
 sondra
 balrank
+kalbank
 balinn
 lemloc
 blackshore
@@ -109,12 +109,12 @@ towaterspan
 dragonpoint
 recuperate tar
 tarsinn
-kalbank
 solinn
 solrank
 recuperate sol
 startthorb
 component neraka
+kalcomp
 nerinn
 sanction
 citadel kalaman
@@ -125,7 +125,6 @@ ritfrosty
 frostycave
 frostybottom
 daggorathturtle
-kalshop
 zmij
 ixpat
 gleam
@@ -136,7 +135,6 @@ sanstudy
 starttoede
 totaeldeth
 taelboy
-kalcomp
 instinct sky42
 startquali
 paxgem
@@ -145,7 +143,6 @@ kharolis
 citadel hylo
 citadel solace
 citadel thorbardin
-kalbank
 startdwarfkeep
 citadel dwarfkeep
 citadel rockhorde
@@ -173,6 +170,7 @@ startstormhead
 essence fire slarn
 cloud pendant
 cloud priest
+kalcler
 castle gate
 essence air dara
 sagebears
@@ -216,6 +214,7 @@ trade
 stormspin
 noom
 startluni
+kalcomp
 azul
 instinct sky 52
 fidlas
@@ -251,6 +250,7 @@ tarsishermit
 paxcenter
 recuperate light
 ritglymmer
+aligngc
 glymmerfight
 itanus
 tantsouth
@@ -275,11 +275,11 @@ statue
 gopi
 eras
 ochreportal
+kalbank
 bogkey
 bogmire
 bogmire
 nytetunnel
-kalbank
 ritkago
 kagoboulder
 hyuk
@@ -294,7 +294,6 @@ startspire
 ritspire
 spirebase
 spireend
-kalbank
 inferno
 startct
 ctcorner
@@ -315,6 +314,7 @@ bogmage
 solwraith
 solundead
 solcler
+kalbank
 startslig
 slig2
 brogdruid
@@ -357,7 +357,6 @@ startraven
 ritraven
 beforetroll
 startlyt
-kalcomp
 startshadow
 ritquali
 irdapearl
@@ -376,7 +375,6 @@ raynelord
 dkquestkeep
 lieutreed
 mythsh
-kalinn
 gamso
 alignec
 branchala
@@ -430,8 +428,10 @@ eastthon
 footlocker
 kyle
 cokbakali
+kalbank
 vinbank
 instinct mmtn 51 grizzly
+shardneck
 startvrykith
 startboylein
 startwayreth
@@ -444,7 +444,6 @@ dargomoon
 stingworm
 startheal
 totmerge
-kalbank
 totafterstatue
 taeljudge
 todarren
