@@ -46,7 +46,7 @@
 #alias mapsky mapto graysen sky
 #alias mapsham mapto $myshaman mai
 #alias mainmage {ll #alias mai mag; #alias ser bser}
-#var {leadercommands} {lie|swim|flip|join|dive|cut|lift|scale|crawl|search|scale|jump|trace|break|say|touch|push|pull|move|slide|stand|ent|enter|leave|squeeze|open|part|climb}
+#var {leadercommands} {lie|swim|flip|join|dive|pledge|run|ride|cut|lift|scale|crawl|search|scale|jump|trace|break|say|touch|push|pull|move|slide|stand|ent|enter|leave|squeeze|open|part|climb}
 #alias saylich {say amarazilac tomanaris tusun}
 #alias bst {bash %1; st; }
 #alias rtm {retrieve 1; wear medal}
@@ -1439,6 +1439,7 @@ reseteye;
   #action {^{North|South|East|West}ern {Reach|Branch}} {mgo %%1winds; #show %%1};
   #action {^{The Slimy Chute}} {mgo slimychute};
   #action {^Approaching a Rise} {mgo 3268};
+  #actio {^A View of Palanthas} {mgo 5812};
   #action {^A Large Meeting Room} {mgo risolbelow};
 }
 
@@ -1944,6 +1945,7 @@ reseteye;
 }
 
 #alias pssh {fol %1; mssh %1; #ticker e4 {cancel; mssh %1} 240}
+#alias alltank {bot #alias tankhit dnrs 6}
 #alias ue4 {cancel; #unticker e4}
 #alias dogem {bow elf; #9 {n;s}}
 #alias saygem {say you have my word}
@@ -2720,7 +2722,7 @@ reseteye;
 
 #alias limitses {
   sessioncount;
-  #if {$sessioncountv > %1} {#bell; #show !!! SESSIONS --> $sessioncountv  } {%2 %3; %4}
+  #if {$sessioncountv > %1} {#bell; #ses; #show !!! SESSIONS --> $sessioncountv  } {%2 %3; %4}
 }
 #alias sessioncount {
   ll #var sessioncountv = 0;
@@ -3044,15 +3046,18 @@ richard_wan@hotmail.com;	1;	1;	1;	1;
   #alias oe {o $pet %%0; ocl %%0}
 }
 
+#alias onsteel {vch steel; bocl steel; twopets; oe hold club}
 #alias oej {give jaw corpse; oe get jaw; oe wield jaw}
 #alias guston {#alias oncloud {cancel; c 'gust'}}
 #alias gustoff {#alias oncloud {gt -->    GUST please}}
 #alias gfl {sky gflap}
+#alias bgend {bot gall endu}
 #alias wilf {sky wildfire}
 #alias zom {js zom}
 #alias gtan {gt tank %1; tan rg}
 #alias baf {asf; bpa}
 #alias bsm {bot aggone slam %1; }
+#alias heki {head %1; ki %1}
 
 #alias ctb {ct I don't mean to be rude, but keeping the group alive has my full attention right now. There is almost always room in my group and you are most welcome to join, but I'm going to forget I even said this, so please ask again in 5 minutes}
 #alias inri {inspect gleaming.medal}
@@ -3891,7 +3896,7 @@ cancel;
 #alias oncloud {gt -->    GUST please}
 #alias tmpa {%1 %2; ota; temp}
 #alias ksbt {tmpa ksb}
-#alias logred {#alias mag {#red} ; newses red; wilbon; mypw; 1; 1; fly; modemage; modered;} 
+#alias logred newses red {#alias mag red; wilbon; mypw; 1; 1; fly; modemage; modered;} 
 #alias logwhi {newses white {pryor; mypw; #var food food; 1; 1; fly; modemage; modewhite}}
 #alias mag {#white}
 #alias modered {
@@ -3935,7 +3940,7 @@ cancel;
 }
 #action {^Mustakrakish, the ancient death troll glows a bright lunar white} {gt -->    TROLL CLEANSED  !!}
 #alias logshamo {logwin; $myshaman; mypw; 1;1;modeshaman; fly}
-#alias logsham {newses mai {$myshaman; mypw; 1; 1; modeshaman; fly}  }
+#alias logsham {newses arc {$myshaman; mypw; 1; 1; modeshaman; fly}  }
 #alias lcvoy {lc meteorite; lc veil; lc clove; lc effigy}
 #alias plpd {present letter; present pendant}
 #var skyscout graysen
@@ -3944,9 +3949,7 @@ cancel;
 #alias logwar {logbot {dawsen; mypw; 1; 1; modepala; modewar; fly}}
 #alias logmou logbot {penniman; mypw; 1;1; modepala; fly}
 #alias logdar logbot {iyler; mypw; 1; 1; modepala; modedar; fly}
-#alias logwaro {
-  newses war {dawsen; mypw; 1; 1; modepala; modewar; fly; #alias bot #war;}
-}
+#alias logwaro newses war {dawsen; mypw; 1; 1; modepala; modewar; fly; #alias bot #war;}
 #alias logclero newses hea {wilson; mypw; 1; 1; modecleric; fly; #alias mai  {#hea} }
 #alias logthi newses thi {nikson; mypw; 1; 1; fly; modethief}
 #alias modethief {
@@ -4593,12 +4596,13 @@ cancel;
   #replace vescape {"} {};
   #replace vescape {'} {};
 }
-#action {^{The book of the dead|A burned black prayerbook|A sparkling black bracelet equipped|A discolored helmet equipped by Rahnkagi|A shimmering prayerbook with silver pages|A pair of spiked sterling gauntlets equipped by Bors|A black metal pike in|The mithril plate of shadows|A ruby studded block of limestone|An iridescent hematite tablet|A stunning pearl-inlaid tablet|A golden twined oak longbow equipped|A gold inlaid bone bracer equipped|A holy talisman|The cape of shadows in a|A bladeless sword equipped|A suit of flexible red dragon scale armor equipped|An ancient holy avenger equipped|Gauntlets of ogre power equipped|A dwarven face shield|A sky blue prayerbook with sapphire runes|A dragonrider's talisman|A moist piece of sea sponge|A gangrenous foot|A shimmering cube|A small piece of meteorite|A radiant white prayerbook|A satiny layer of ectoplasm|A lone, gray flame|A feathered dreamcatcher|A golden battle-honor equipped|A book with frosted glass covers|A globe of sparkling liquid in a steel|A green dragonhide spellbook|A wretched medallion|An ivory spined spellbook|A translucent jade|A charred black ring|The mottled robes of the Archmagus in|A golden bracelet inlaid with emeralds in|A tightly bound tome of magic|A floppy hat|A tiny jade effigy|A timeworn book bound with chains|A belt of cured hylar skin equipped|A wispy black veil|A prayerbook with gleaming pearl covers|An ivy-covered slab of rock|A silver and ruby ring|A ring of finest silver|A dark elven bracelet in a} {.+}}
+#action {^{The book of the dead|A burned black prayerbook|A sparkling black bracelet equipped|A discolored helmet equipped by Rahnkagi|A shimmering prayerbook with silver pages|A pair of spiked sterling gauntlets equipped by Bors|A black metal pike in|The mithril plate of shadows|A ruby studded block of limestone|An iridescent hematite tablet|A stunning pearl-inlaid tablet|A golden twined oak longbow equipped|A gold inlaid bone bracer equipped|A holy talisman|The cape of shadows in a|A bladeless sword equipped|A suit of flexible red dragon scale armor equipped|An ancient holy avenger equipped|Gauntlets of ogre power equipped|A dwarven face shield|A sky blue prayerbook with sapphire runes|A dragonrider's talisman|A moist piece of sea sponge|A gangrenous foot|A shimmering cube|A small piece of meteorite|A radiant white prayerbook|A satiny layer of ectoplasm|A lone, gray flame|A feathered dreamcatcher|A golden battle-honor equipped|A book with frosted glass covers|A globe of sparkling liquid in a steel|A green dragonhide spellbook|A wretched medallion|An ivory spined spellbook|A translucent jade|A charred black ring|The mottled robes of the Archmagus in|A golden bracelet inlaid with emeralds in|A tightly bound tome of magic|A floppy hat|A tiny jade effigy|A timeworn book bound with chains|A belt of cured hylar skin equipped|A wispy black veil|A prayerbook with gleaming pearl covers|An ivy-covered slab of rock|A silver and ruby ring|A ring of finest silver in|A dark elven bracelet in a} {.+}}
 {
  ct %1: %2;
  dtell %1: %2;
 }
 
+#alias terscis {hold scissors; pull black.strings; cut black.strings; cut blue.strings; pull green.strings; cut green.strings; pull white.string}
 #alias goba {gorec kenba}
 #alias goth {mrun tollhouse}
 #alias kib {aggtwo ll ki}
@@ -4926,6 +4930,7 @@ cancel;
 #highlight {gleaming pearl covers} {green}
 #highlight {frumpy dwarf} {green}
 #highlight {tablet} {green}
+#highlight {The whistle is simple, made of silver} {green}
 #highlight {feeling of goodness} {green}
 #highlight {Knight of the Sword in riding chaps} {green}
 #highlight {strange magical energy flows} {green}

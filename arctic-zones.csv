@@ -230,7 +230,21 @@ glade of whitestone,,"n mount, ne stormhead, s shayds, wn ft"
 Spider queen,,"Spider queen: thorb, s..allw, s..allw, alld, s..dig crack, w..d, s till esw, flee e to news, flee south and down as much as possible, West, south, enter crack, follow path, unlock trapdoor (eastimp back), n.. (wseees and back), n til sw, westish north, until 2 demons and, esu, all up east, tank enter portal (widow queen and spider queen), break coffin (with rune etched mithril hammer bound to spirit of lubs ginello) "
 Terzak entrance,,"Terzak tower:
 Entrance: nneewn,  3en to crack and demon, spin, westnorth end
-Clear out mobs get keys/items: (massive skeletal guardian): rag, scissors, bar, case, circle, rock, hammer
+guardians: need CASE and RAG, might need scissors or bar (if no key located after exposing well lit room chest)
+tower: u, pull block, get key, u, n (well lit room), pull torch, rotate torch, stand, south locate slender.iron.key
+  - if located key could be
+    - north
+    - up north, break mirrors, get key alcove,
+    - up, (nofly dt) east alone, twist sphere, get all sphere,  west down west, unlock grate, open grate
+  - no key located:
+    - could be downdown hold bar pry block,
+    - upsouth blow (simple, made of silver) whistle search room,
+    - east, hold scissors, pull black.strings, cut black.strings, cut blue.strings, pull green.strings, cut green.strings, pull white.string
+Well lit room: grab rag, clean soot, loot safe,
+Top golems: (wsne) key for case, pieces of crystal, unlock hatch
+
+
+Clear out mobs get keys/items: (massive skeletal guardian): rag, scissors, bar, CASE, circle, rock, hammer
 Esu: wield hammer, break rock, get key
 Room with no floor: no fly dt, twist sphere, get all sphere
 Room of mirrors: break mirrors, get key alcove

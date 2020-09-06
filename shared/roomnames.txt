@@ -1,18 +1,20 @@
 kalinn
 recuperate kal
 kalvoy
+kalbank
 kalsquare
 kalshop
 zardonna
-kalbank
 kalwest
 kalcomp
 kalbank
 kalcler
+kalbank
 kalfountain
 kaldruid
 aligngc
 kalnorth
+kalbank
 kalsouth
 kaleast
 recuperate spring
@@ -22,18 +24,17 @@ nerforge
 snaggle
 nersouth
 fuddlesign
+kalcomp
 nereast
 recuperate kenbard
 recuperate bal
 Eastwinds
 balnorth
 balinorth
-zardonna
 balsquare
 balsham
 balwar
 petrin
-kalwest
 dustmerch
 Northwinds
 oldsh
@@ -44,6 +45,7 @@ torenth
 starthct
 palsouth
 recuperate pal
+kalbank
 palinn
 anatole
 tolemish
@@ -82,7 +84,6 @@ startboku
 darval
 darkeep
 palwest
-kaldruid
 palsquare
 hylosquare
 gulfambush
@@ -90,6 +91,7 @@ werewolve
 werewolf
 gulfeast
 gulfport
+zardonna
 gulfgar
 glade whitestone
 shayd
@@ -107,6 +109,7 @@ towaterspan
 dragonpoint
 recuperate tar
 tarsinn
+kalbank
 solinn
 solrank
 recuperate sol
@@ -122,18 +125,18 @@ ritfrosty
 frostycave
 frostybottom
 daggorathturtle
+kalshop
 zmij
 ixpat
 gleam
 sanport
 sansouth
 sankit
-kalbank
 sanstudy
-kalbank
 starttoede
 totaeldeth
 taelboy
+kalcomp
 instinct sky42
 startquali
 paxgem
@@ -142,6 +145,7 @@ kharolis
 citadel hylo
 citadel solace
 citadel thorbardin
+kalbank
 startdwarfkeep
 citadel dwarfkeep
 citadel rockhorde
@@ -151,7 +155,6 @@ enbir
 loccv
 startcv
 celestial valley
-kalcomp
 bors cv
 cvphil
 after arch
@@ -162,7 +165,6 @@ vshrinal
 shalzan
 startcrytic
 essence earth eern
-kalbank
 dargo start
 dargo squid jawbow
 essence water lezi
@@ -176,12 +178,10 @@ essence air dara
 sagebears
 windfall barbarian
 startswamp
-kalbank
 b4troll
 swamptroll
 solamnic keep
 palanthas library key drawer
-aligngc
 astinus
 palanthas library dorshan
 palshelf
@@ -279,6 +279,7 @@ bogkey
 bogmire
 bogmire
 nytetunnel
+kalbank
 ritkago
 kagoboulder
 hyuk
@@ -293,6 +294,7 @@ startspire
 ritspire
 spirebase
 spireend
+kalbank
 inferno
 startct
 ctcorner
@@ -320,7 +322,6 @@ balibed
 havweap
 solscout
 kalsham
-kalbank
 startgian
 buskel
 lemnorth
@@ -338,7 +339,7 @@ mortivillage
 startbda
 startbullywug
 startbully
-startbully
+waterspanshop
 solwar
 tokruins
 startkruin
@@ -356,6 +357,7 @@ startraven
 ritraven
 beforetroll
 startlyt
+kalcomp
 startshadow
 ritquali
 irdapearl
@@ -368,13 +370,13 @@ sealem
 garnetslab
 garnetnorth
 startdeepmine
-kalcomp
 belowlubs
 lyzian
 raynelord
 dkquestkeep
 lieutreed
 mythsh
+kalinn
 gamso
 alignec
 branchala
@@ -383,7 +385,6 @@ alignen
 alignne
 aligncn
 alignnl
-kalbank
 vinwar
 vindragontrain
 alignng
@@ -401,7 +402,6 @@ raynemansakr
 rayneselissa
 thcsmith
 palgrate
-kalfountain
 drogo dk quest
 jibur
 totstatue
@@ -444,8 +444,8 @@ dargomoon
 stingworm
 startheal
 totmerge
+kalbank
 totafterstatue
 taeljudge
 todarren
 uthlib
-kaldruid
