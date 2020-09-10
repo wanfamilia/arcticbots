@@ -39,6 +39,7 @@
   } ;
 }
 #alias mapwhi mapto pryor mag
+#alias solcal {n; lrn; s alone; cal}
 #alias pew {em pewpewpew PEWpew}
 #alias sha {#arc}
 #alias hea {#hea}
@@ -576,12 +577,14 @@ reseteye;
 #alias okd {otk %2; %1 %2; }
 #alias doig {#delay 1 okd kig}
 #alias dotk {oe st; otk}
+#alias dtaun {st; #3 taunt %1}
 #alias oeku {okd stup %1}
 #alias oekup {oeku priestess}
 #alias sgl {nbf spectral glow}
 #alias sneakon {rem all.!staff; wear belt; put all chest}
 #alias sneakoff {get all chest; wear all}
 #alias pp {punch %1; ota}
+#alias {silviport} {#action {^{An|The} undead} {nospam 3 vom}}
 
 #var clans {nothing};
 #alias captureclans
@@ -1086,8 +1089,15 @@ reseteye;
 
 #alias mythbrsc {
   st; runto e2sd; fsf; 7n2w2nws;
-  rest; brew '%1'; scribe '%1'; drop all.strength;
+  rest; brew '%1'; scribe '%1'; drop satiate; drop all.strength;
   st; runto ne2s2e7su2nw; lrn;
+}
+
+#alias mythbrew {
+  st; runto 3sd7n2w2nws;
+  rest; brew 'sat'; drop satiate; st;
+  runto ne2s2e7su3n; 
+  ghob; lrn;
 }
 #ALIAS {banprac}
 {
@@ -1250,7 +1260,8 @@ reseteye;
 }
 
 #alias trigbrsh {
-  #action {^You feel ready to brew again} {readybrew}
+  #action {^You feel ready to brew again} {readybrew};
+  #show You feel ready to brew again;
 }
 #alias trigbrcl {
   #action {^You feel ready to} {nospam 3 brsc aid}
@@ -3046,6 +3057,8 @@ richard_wan@hotmail.com;	1;	1;	1;	1;
   #alias oe {o $pet %%0; ocl %%0}
 }
 
+#alias onepet {#alias oe o $pet}
+#alias nopet {#alias oe donothing}
 #alias onsteel {vch steel; bocl steel; twopets; oe hold club}
 #alias oej {give jaw corpse; oe get jaw; oe wield jaw}
 #alias guston {#alias oncloud {cancel; c 'gust'}}
@@ -3362,8 +3375,9 @@ richard_wan@hotmail.com;	1;	1;	1;	1;
 	oe st;
 }
 
-#alias w9 {#9 with 99}
+#alias w9 {#11 with 99}
 #alias w5k {#51 with 99}
+#alias d5k {#51 dep 99}
 #alias w10k {#101 with 99}
 #alias w50k {#5 w10k}
 #alias wlegend {#10 w10k}
@@ -3995,8 +4009,7 @@ cancel;
 #alias kalinit {
   clan who; skill;
   runto ne2n2en; with 200;
-  s4ws; bre; nn; ki me; buy 3*ration; eat ration; eat ration; ss;
-  nw6ne; drink fountain; drink fountain; es2e4s;
+  s4ws; bre; nn; ki me; buy 3*ration; #3 eat ration; sw6ne; drink fountain; drink fountain; es2e4s;
 }
 
 #alias mek {#map exit %1 command {%2 %3 %4}}
@@ -4169,11 +4182,16 @@ cancel;
 #alias afterbuffcapture nothing
 
 #alias needbuff {
-  #if {"$buffs[%0]" == "1"}
-  {nothing}
-  {cast '%0' me};
+  #if {"$buffs[%0]" == "1"} {nothing} {buffcast %0};
 }
 
+#alias buffcast {
+  #if {"$vbuffover[%0]" == ""} {cast '%0' me} {$vbuffover[%0]}
+}
+
+#var vbuffover {
+  {resist magic}{rmag}
+}
 #alias hewold {
   #alias afterbuffcapture {needbuff healing wave};
   buffcapture;
@@ -4191,6 +4209,7 @@ cancel;
 }
 #alias solknow {prune bush; present beaker; quaff green.potion}
 #alias hew {nbf healing wave}
+#alias boh {boa; hew}
 #alias nri {bot nbf righteous indignation}
 #alias brig {bot right}
 #alias kop {ko %1; bpa}
@@ -4445,6 +4464,7 @@ cancel;
 {
   onshabuff;
   needbuff ghostskin;
+  needbuff resist magic;
   needbuff ethereal armor;
 }
 #alias onshobuff
