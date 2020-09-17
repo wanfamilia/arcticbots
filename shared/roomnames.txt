@@ -4,6 +4,7 @@ kalvoy
 kalsquare
 kalshop
 zardonna
+kalnorth
 kalwest
 kalcomp
 kalbank
@@ -22,6 +23,7 @@ snaggle
 nersouth
 fuddlesign
 nereast
+aligngc
 recuperate kenbard
 recuperate bal
 Eastwinds
@@ -36,7 +38,6 @@ Northwinds
 oldsh
 startdk
 tollhouse
-kalbank
 vinguard
 torenth
 starthct
@@ -63,6 +64,7 @@ torath
 recuperate twen
 midsea
 ritbluff
+kaldruid
 startcloud
 canstin
 mirus
@@ -147,11 +149,9 @@ loccv
 startcv
 celestial valley
 bors cv
-kaldruid
 cvphil
 after arch
 succubus
-aligngc
 khane
 velchoir
 vshrinal
@@ -166,17 +166,15 @@ startstormhead
 essence fire slarn
 cloud pendant
 cloud priest
-aligngc
 castle gate
 essence air dara
 sagebears
 windbarb
-kalinn
 startswamp
 b4troll
 swamptroll
-kalcomp
 solamnic keep
+kalcler
 palanthas library key drawer
 astinus
 palanthas library dorshan
@@ -184,8 +182,8 @@ palshelf
 fishreef
 sahcent
 atlacamani
+kalsouth
 lemusouth
-kalcler
 lemcase
 lemuvoyloc
 lemchest
@@ -200,7 +198,6 @@ belowsimm
 kern
 startpigmy
 locrahn
-aligngc
 rahnkagi
 rhankagi
 gargath
@@ -211,10 +208,10 @@ grom
 stormbutton
 kul
 trade
-kalfountain
 stormspin
 noom
 startluni
+kalnorth
 azul
 instinct sky 52
 fidlas
@@ -235,16 +232,13 @@ citadel vin
 citadel tenlo
 silvigates
 darvmurk
-kalcler
 dvcopse
-kalfountain
 dv acidic
 sky instinct 51
 dkspell irda
 instinct mountain 51
 reefdragon
 bonfair
-kalfountain
 rabbitwand
 knifetent
 goodleaf
@@ -255,7 +249,6 @@ recuperate light
 ritglymmer
 glymmerfight
 itanus
-kalbank
 tantsouth
 dkorayne
 startrayne
@@ -291,6 +284,7 @@ dimdoor
 startsilvi
 bogwall
 startxak
+kalcler
 xakoaktree
 startspire
 ritspire
@@ -314,7 +308,6 @@ startphysix
 balitrio
 bogmage
 solwraith
-kalwest
 solundead
 solcler
 startslig
@@ -361,7 +354,6 @@ beforetroll
 startlyt
 startshadow
 ritquali
-kalbank
 irdapearl
 startriver
 harmonium
@@ -373,7 +365,6 @@ garnetslab
 garnetnorth
 startdeepmine
 belowlubs
-kaldruid
 lyzian
 raynelord
 dkquestkeep
@@ -402,7 +393,6 @@ nerguards
 gownnocharm
 raynemansakr
 rayneselissa
-aligngc
 thcsmith
 palgrate
 drogo dk quest
@@ -427,18 +417,15 @@ Southwinds
 stoneskin spire
 tocloud
 cinder
-kalbank
 crowbar
 t
 eastthon
 footlocker
 kyle
-kalbank
 cokbakali
 vinbank
 instinct mmtn 51 grizzly
 shardneck
-kalcler
 startvrykith
 startboylein
 startwayreth
@@ -453,5 +440,7 @@ startheal
 totmerge
 totafterstatue
 taeljudge
+kalcler
 todarren
 uthlib
+khurreaver

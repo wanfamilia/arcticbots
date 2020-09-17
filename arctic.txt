@@ -1130,7 +1130,7 @@ reseteye;
 #alias bk {aggone back}
 #alias bedir {
   thi enven $weapon;
-  thi #5 {bk %2; fade %1; sneak; st; $reverses[%1]};
+  thi #5 {sneak; %1; bk %2; fade $reverses[%1]}; 
   #alias dolater5 {cancel; %%1}
 }
 #alias bfn {bedir n}
@@ -1451,6 +1451,7 @@ reseteye;
   #action {^{The Slimy Chute}} {mgo slimychute};
   #action {^Approaching a Rise} {mgo 3268};
   #actio {^A View of Palanthas} {mgo 5812};
+  #action {^The Top of the Keep} {mgo 3153};
   #action {^A Large Meeting Room} {mgo risolbelow};
 }
 
@@ -3950,6 +3951,7 @@ cancel;
   #kill ticker;
   #alias rentimm {quit; 0};
   who needs_title;
+  #delay 1800 rentimm;
   #ticker e60 {who needs_title};
 }
 #action {^Mustakrakish, the ancient death troll glows a bright lunar white} {gt -->    TROLL CLEANSED  !!}
@@ -4186,7 +4188,10 @@ cancel;
 }
 
 #alias buffcast {
-  #if {"$vbuffover[%0]" == ""} {cast '%0' me} {$vbuffover[%0]}
+  #if {"$vbuffover[%0]" == ""}{mac cast '%0' me}{
+    #var command $vbuffover[%0];
+    $command;
+  }
 }
 
 #var vbuffover {
