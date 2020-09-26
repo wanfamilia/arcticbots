@@ -1133,6 +1133,10 @@ reseteye;
   thi #5 {sneak; %1; bk %2; fade $reverses[%1]}; 
   #alias dolater5 {cancel; %%1}
 }
+#alias fadeback {
+  fade %1; sneak; $reverses[%1];
+  be %2;
+}
 #alias bfn {bedir n}
 #alias afterxeg {get tendril; shatter tendril; uog golden.chest}
 #alias bfs {bedir s}
@@ -1430,7 +1434,7 @@ reseteye;
 #alias mloa {
   #config charset utf-8;
   #map read krynn.txt;
-  #if {"%1"==""} {#map goto 1} {#map goto %1};
+  #if {"%1"==""} {#map goto mythsh} {#map goto %1};
   mapon;
 }
 
@@ -1451,10 +1455,13 @@ reseteye;
   #action {^{The Slimy Chute}} {mgo slimychute};
   #action {^Approaching a Rise} {mgo 3268};
   #actio {^A View of Palanthas} {mgo 5812};
+  #action {^The End of River Shin} {mgo 10045};
+  #action {^The End of the Khaldat River} {mgo 9974};
   #action {^The Top of the Keep} {mgo 3153};
   #action {^A Large Meeting Room} {mgo risolbelow};
 }
 
+#alias dowraith {recite tattered.brown.scroll; say Sallahas fah'si nakasha ujishi ak'vasaj ish Ix'asahala}
 #var runspeed 0.23
 #alias tr {#map travel %1 $runspeed}
 #alias mapsmall {
@@ -3943,7 +3950,7 @@ cancel;
 #alias logcler {logwin; guna; mypw; 1;1;modecleric; fly; guston;}
 
 #alias logimm {logwin; gnua; mypw; 1;1; modeimm; }
-
+#alias doindent {1,$ ind 0}
 #alias delzap {#delay 7200 #zap}
 #alias modeimm {
   #kill alias;
@@ -4394,7 +4401,7 @@ cancel;
   #action {^Warriors' Training Room} {lrn; smile};
   #action {disarms your weapon} {cancel; sysplay smb3_cannon; gw};
   #var circle1 {det ev};
-  #var weapon gavel;
+  #var weapon pike;
   #action {^You are ready to slam again} {slam};
   #action {^You are now the new leader} {march};
   #action {^A gleaming silver medal warms up} {ll #show -->    Medal};

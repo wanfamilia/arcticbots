@@ -4,8 +4,8 @@ kalvoy
 kalsquare
 kalshop
 zardonna
-kalnorth
 kalwest
+kalbank
 kalcomp
 kalbank
 kalcler
@@ -20,14 +20,18 @@ togarg
 nernorth
 nerforge
 snaggle
+kalcomp
 nersouth
 fuddlesign
+kalcomp
 nereast
-aligngc
 recuperate kenbard
 recuperate bal
+zardonna
 Eastwinds
+kalwest
 balnorth
+kalwest
 balinorth
 balsquare
 balsham
@@ -45,6 +49,7 @@ palsouth
 recuperate pal
 palinn
 anatole
+aligngc
 tolemish
 tocae
 recuperate bung
@@ -64,7 +69,6 @@ torath
 recuperate twen
 midsea
 ritbluff
-kaldruid
 startcloud
 canstin
 mirus
@@ -74,6 +78,7 @@ kalwar
 Westwinds
 locdarg
 tirabot
+kalbank
 startgrak
 gormskun
 luniboat
@@ -81,8 +86,10 @@ qualm
 startboku
 darval
 darkeep
+kalbank
 palwest
 palsquare
+aligngc
 hylosquare
 gulfambush
 werewolve
@@ -120,6 +127,7 @@ hct2maze
 ritfrosty
 frostycave
 frostybottom
+kalcler
 daggorathturtle
 zmij
 ixpat
@@ -138,6 +146,7 @@ locpax
 kharolis
 citadel hylo
 citadel solace
+kalbank
 citadel thorbardin
 startdwarfkeep
 citadel dwarfkeep
@@ -174,15 +183,15 @@ startswamp
 b4troll
 swamptroll
 solamnic keep
-kalcler
 palanthas library key drawer
 astinus
 palanthas library dorshan
+aligngc
 palshelf
 fishreef
 sahcent
 atlacamani
-kalsouth
+kalcler
 lemusouth
 lemcase
 lemuvoyloc
@@ -211,7 +220,6 @@ trade
 stormspin
 noom
 startluni
-kalnorth
 azul
 instinct sky 52
 fidlas
@@ -266,6 +274,7 @@ lunignome
 luniavatar
 mound
 moundcloud
+kalcler
 aspre
 statue
 gopi
@@ -284,7 +293,6 @@ dimdoor
 startsilvi
 bogwall
 startxak
-kalcler
 xakoaktree
 startspire
 ritspire
@@ -314,7 +322,9 @@ startslig
 slig2
 brogdruid
 balibed
+kalcomp
 havweap
+kalbank
 solscout
 kalsham
 startgian
@@ -331,6 +341,7 @@ dkonightlord
 palscout
 morticliff
 mortivillage
+kalcler
 startbda
 startbullywug
 startbully
@@ -398,7 +409,9 @@ palgrate
 drogo dk quest
 jibur
 totstatue
+kalcomp
 lesath
+kalcomp
 valleyabove
 unicorn
 palowl
@@ -416,6 +429,7 @@ tosorin
 Southwinds
 stoneskin spire
 tocloud
+underbridge
 cinder
 crowbar
 t
@@ -433,6 +447,7 @@ startgalvari
 ritlich
 startkhur
 ritkhur
+kalsquare
 cloudcomp
 dargomoon
 stingworm
@@ -440,7 +455,8 @@ startheal
 totmerge
 totafterstatue
 taeljudge
-kalcler
 todarren
 uthlib
 khurreaver
+aran
+kerius
