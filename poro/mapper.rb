@@ -47,10 +47,12 @@ path {#{start}} {#{finish}}
 
   def run_shell(command)
     system command
+    # pty command
   end
 
   def pty(command)
-    PTY.spawn(command) do |r, _, pid|
+    require 'pty'
+    PTY.spawn(command) do |_r, _, _pid|
     end
   end
 

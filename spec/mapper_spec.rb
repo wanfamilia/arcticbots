@@ -1,6 +1,13 @@
 require_relative '../poro/mapper'
+require 'rspec'
+
 describe Mapper do
   let(:mapper) {Mapper.new %w(theobald anatole Northwinds Southwinds Westwinds solsquare)}
+
+  before do
+    path = 'tmp/pathout.txt'
+    File.delete path if File.exists? path
+  end
 
   describe 'path' do
 

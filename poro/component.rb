@@ -1,3 +1,5 @@
+require 'csv'
+
 class Component
   def component_for(line)
     match = line.match(/As the usefulness of ((a|an)?.+) ends, it suddenly/)
@@ -20,7 +22,7 @@ class Component
   end
   
   def parse(line)
-    match = line.match /^\S+ x ([^\(]+)\(([^)]+)/
+    match = line.match /^\S+ x ([^(]+)\(([^)]+)/
     raise StandardError, "cannot parse: #{line}" unless match
     [match[1].strip, match[2]]
   end

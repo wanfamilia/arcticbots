@@ -1,4 +1,6 @@
 require_relative '../poro/walkthrough'
+require 'rspec'
+
 describe Walkthrough do
   it 'preserves newlines' do
     garg = Walkthrough.new.data['gargath']
