@@ -161,10 +161,11 @@
 
 #ACTION {^A pile of steel coins}
 {
-	get all.coins
+	getcoins
 }
 {5}
 
+#alias getcoins get all.coins
 #action {^Someone has called you} {wake; st; fly; look}
 #action {^{\w+} has summoned you} {beensum %1}
 
@@ -2455,8 +2456,8 @@ reseteye;
 
 #ALIAS {kbust}
 {
+	mac $kwords[$kwordindex] %1;
 	#math kwordindex {$kwordindex+1};
-	mac $kwords[$kwordindex] %1
 }
 
 #ALIAS {kco}
@@ -5170,7 +5171,180 @@ cancel;
 #VARIABLE         {healtemp}              {0}
 #VARIABLE         {held}                  {coral.sword}
 #VARIABLE         {kwordindex}            {0}
-#VARIABLE         {kwords}                {{push}{rotate}{slide}{shift}{open}{shatter}{break}{smash}{crack}{lift}{kneel}{worship}{pray}{lick}{quaff}{consume}{brush}{mop}{climb}{press}{surmount}{repel}{break}{dig}{puncture}{rip}{tear}{withdraw}{cease}{change}{cut}{depart}{drown}{befall}{break}{become}{fix}{arrive}{appear}{abate}{advance}{emerge}{enter}{design}{miscarry}{land}{improve}{happen}{hang}{grow}{go}{get}{recover}{rummage}{revolt}{ride}{tug}{run}{raise}{rise}{set}{settle}{sink}{speed}{spread}{stumble}{bend}{bite}{bind}{blow}{beat}{burst}{broadcast}{cling}{cut}{dream}{drive}{do}{explore}{feed}{forbid}{forcast}{fortell}{fling}{feel}{grind}{hang}{hear}{hide}{hurt}{keep}{kneel}{listen}{knit}{lead}{lean}{leap}{learn}{leave}{lend}{let}{lie}{light}{lose}{make}{mean}{meet}{mislay}{move}{mistake}{overtake}{prove}{pull}{put}{read}{ring}{rise}{run}{rid}{saw}{seek}{set}{sew}{shake}{shear}{shine}{shoot}{show}{shrink}{shut}{squeeze}{sing}{sink}{brush}{yank}{slay}{slit}{smell}{speak}{spoil}{stick}{sting}{stink}{strew}{spring}{spread}{strike}{strive}{swear}{sweep}{swell}{swim}{swing}{shove}{take}{teach}{throw}{thrust}{touch}{undergo}{understand}{undertake}{wake}{wear}{weave}{weep}{wet}{win}{wind}{wring}{write}{clear}}
+#VARIABLE         {kwords}                {
+    {0}{abate}
+    {1}{advance}
+    {2}{appear}
+    {3}{arrive}
+    {4}{beat}
+    {5}{become}
+    {6}{befall}
+    {7}{bend}
+    {8}{bind}
+    {9}{bite}
+    {10}{blow}
+    {11}{break}
+    {12}{break}
+    {13}{break}
+    {14}{broadcast}
+    {15}{brush}
+    {16}{brush}
+    {17}{burst}
+    {18}{cease}
+    {19}{change}
+    {20}{clear}
+    {21}{climb}
+    {22}{cling}
+    {23}{consume}
+    {24}{crack}
+    {25}{cut}
+    {26}{cut}
+    {27}{depart}
+    {28}{design}
+    {29}{dig}
+    {30}{do}
+    {31}{dream}
+    {32}{drive}
+    {33}{drown}
+    {34}{emerge}
+    {35}{enter}
+    {36}{explore}
+    {37}{feed}
+    {38}{feel}
+    {39}{fix}
+    {40}{fling}
+    {41}{forbid}
+    {42}{forcast}
+    {43}{fortell}
+    {44}{get}
+    {45}{go}
+    {46}{grind}
+    {47}{grow}
+    {48}{hang}
+    {49}{hang}
+    {50}{happen}
+    {51}{hear}
+    {52}{hide}
+    {53}{hurt}
+    {54}{improve}
+    {55}{keep}
+    {56}{kneel}
+    {57}{kneel}
+    {58}{knit}
+    {59}{land}
+    {60}{lead}
+    {61}{lean}
+    {62}{leap}
+    {63}{learn}
+    {64}{leave}
+    {65}{lend}
+    {66}{let}
+    {67}{lick}
+    {68}{lie}
+    {69}{lift}
+    {70}{light}
+    {71}{listen}
+    {72}{lose}
+    {73}{make}
+    {74}{mean}
+    {75}{meet}
+    {76}{miscarry}
+    {77}{mislay}
+    {78}{mistake}
+    {79}{mop}
+    {80}{move}
+    {81}{open}
+    {82}{overtake}
+    {83}{pray}
+    {84}{press}
+    {85}{prove}
+    {86}{pull}
+    {87}{puncture}
+    {88}{push}
+    {89}{put}
+    {90}{quaff}
+    {91}{raise}
+    {92}{read}
+    {93}{recover}
+    {94}{repel}
+    {95}{revolt}
+    {96}{rid}
+    {97}{ride}
+    {98}{ring}
+    {99}{rip}
+    {100}{rise}
+    {101}{rise}
+    {102}{rotate}
+    {103}{rummage}
+    {104}{run}
+    {105}{run}
+    {106}{saw}
+    {107}{seek}
+    {108}{set}
+    {109}{set}
+    {110}{settle}
+    {111}{sew}
+    {112}{shake}
+    {113}{shatter}
+    {114}{shear}
+    {115}{shift}
+    {116}{shine}
+    {117}{shoot}
+    {118}{shove}
+    {119}{show}
+    {120}{shrink}
+    {121}{shut}
+    {122}{sing}
+    {123}{sink}
+    {124}{sink}
+    {125}{slay}
+    {126}{slide}
+    {127}{slit}
+    {128}{smash}
+    {129}{smell}
+    {130}{speak}
+    {131}{speed}
+    {132}{spoil}
+    {133}{spread}
+    {134}{spread}
+    {135}{spring}
+    {136}{squeeze}
+    {137}{stick}
+    {138}{sting}
+    {139}{stink}
+    {140}{strew}
+    {141}{strike}
+    {142}{strive}
+    {143}{stumble}
+    {144}{surmount}
+    {145}{swear}
+    {146}{sweep}
+    {147}{swell}
+    {148}{swim}
+    {149}{swing}
+    {150}{take}
+    {151}{teach}
+    {152}{tear}
+    {153}{throw}
+    {154}{thrust}
+    {155}{touch}
+    {156}{tug}
+    {157}{undergo}
+    {158}{understand}
+    {159}{undertake}
+    {160}{wake}
+    {161}{wear}
+    {162}{weave}
+    {163}{weep}
+    {164}{wet}
+    {165}{win}
+    {166}{wind}
+    {167}{withdraw}
+    {168}{worship}
+    {169}{wring}
+    {170}{write}
+    {171}{yank}
+}
 #VARIABLE         {lasttick}              {1294726325}
 #VARIABLE         {laterpat}              {^{(\d.+>\s)?}{You knock yourself}}
 #VARIABLE         {light}                 {clear.sphere}

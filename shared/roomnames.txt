@@ -1,18 +1,20 @@
 kalinn
 recuperate kal
 kalvoy
+kalbank
 kalsquare
 kalshop
 zardonna
 kalwest
-kalbank
 kalcomp
 kalbank
 kalcler
+kalbank
 kalfountain
 kaldruid
 aligngc
 kalnorth
+kalbank
 kalsouth
 kaleast
 recuperate spring
@@ -20,18 +22,14 @@ togarg
 nernorth
 nerforge
 snaggle
-kalcomp
 nersouth
 fuddlesign
 kalcomp
 nereast
 recuperate kenbard
 recuperate bal
-zardonna
 Eastwinds
-kalwest
 balnorth
-kalwest
 balinorth
 balsquare
 balsham
@@ -47,9 +45,9 @@ torenth
 starthct
 palsouth
 recuperate pal
+kalbank
 palinn
 anatole
-aligngc
 tolemish
 tocae
 recuperate bung
@@ -78,7 +76,6 @@ kalwar
 Westwinds
 locdarg
 tirabot
-kalbank
 startgrak
 gormskun
 luniboat
@@ -86,16 +83,15 @@ qualm
 startboku
 darval
 darkeep
-kalbank
 palwest
 palsquare
-aligngc
 hylosquare
 gulfambush
 werewolve
 werewolf
 gulfeast
 gulfport
+zardonna
 gulfgar
 glade whitestone
 shayd
@@ -113,6 +109,7 @@ towaterspan
 dragonpoint
 recuperate tar
 tarsinn
+kalbank
 solinn
 solrank
 recuperate sol
@@ -127,8 +124,8 @@ hct2maze
 ritfrosty
 frostycave
 frostybottom
-kalcler
 daggorathturtle
+kalshop
 zmij
 ixpat
 gleam
@@ -139,6 +136,7 @@ sanstudy
 starttoede
 totaeldeth
 taelboy
+kalcomp
 instinct sky42
 startquali
 paxgem
@@ -146,8 +144,8 @@ locpax
 kharolis
 citadel hylo
 citadel solace
-kalbank
 citadel thorbardin
+kalbank
 startdwarfkeep
 citadel dwarfkeep
 citadel rockhorde
@@ -186,12 +184,10 @@ solamnic keep
 palanthas library key drawer
 astinus
 palanthas library dorshan
-aligngc
 palshelf
 fishreef
 sahcent
 atlacamani
-kalcler
 lemusouth
 lemcase
 lemuvoyloc
@@ -274,7 +270,6 @@ lunignome
 luniavatar
 mound
 moundcloud
-kalcler
 aspre
 statue
 gopi
@@ -284,10 +279,12 @@ bogkey
 bogmire
 bogmire
 nytetunnel
+kalbank
 ritkago
 kagoboulder
 hyuk
 nytecata
+nytedebuff
 risolbelow
 dimdoor
 startsilvi
@@ -298,6 +295,7 @@ startspire
 ritspire
 spirebase
 spireend
+kalbank
 inferno
 startct
 ctcorner
@@ -322,9 +320,7 @@ startslig
 slig2
 brogdruid
 balibed
-kalcomp
 havweap
-kalbank
 solscout
 kalsham
 startgian
@@ -341,7 +337,6 @@ dkonightlord
 palscout
 morticliff
 mortivillage
-kalcler
 startbda
 startbullywug
 startbully
@@ -363,6 +358,7 @@ startraven
 ritraven
 beforetroll
 startlyt
+kalcomp
 startshadow
 ritquali
 irdapearl
@@ -381,6 +377,7 @@ raynelord
 dkquestkeep
 lieutreed
 mythsh
+kalinn
 gamso
 alignec
 branchala
@@ -409,9 +406,7 @@ palgrate
 drogo dk quest
 jibur
 totstatue
-kalcomp
 lesath
-kalcomp
 valleyabove
 unicorn
 palowl
@@ -447,12 +442,12 @@ startgalvari
 ritlich
 startkhur
 ritkhur
-kalsquare
 cloudcomp
 dargomoon
 stingworm
 startheal
 totmerge
+kalbank
 totafterstatue
 taeljudge
 todarren
