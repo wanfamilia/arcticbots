@@ -1,7 +1,6 @@
 kalinn
 recuperate kal
 kalvoy
-kalbank
 kalsquare
 kalshop
 zardonna
@@ -9,12 +8,10 @@ kalwest
 kalcomp
 kalbank
 kalcler
-kalbank
 kalfountain
 kaldruid
 aligngc
 kalnorth
-kalbank
 kalsouth
 kaleast
 recuperate spring
@@ -24,7 +21,6 @@ nerforge
 snaggle
 nersouth
 fuddlesign
-kalcomp
 nereast
 recuperate kenbard
 recuperate bal
@@ -45,11 +41,11 @@ torenth
 starthct
 palsouth
 recuperate pal
-kalbank
 palinn
 anatole
 tolemish
 tocae
+kalfountain
 recuperate bung
 solsquare
 theobald
@@ -74,10 +70,12 @@ caergoth
 kalscout
 kalwar
 Westwinds
+aligngc
 locdarg
 tirabot
 startgrak
 gormskun
+kalcler
 luniboat
 qualm
 startboku
@@ -91,12 +89,13 @@ werewolve
 werewolf
 gulfeast
 gulfport
-zardonna
 gulfgar
+kalfountain
 glade whitestone
 shayd
 deepfish
 irdalagoon
+kalnorth
 irdagate
 schaeffa
 sondra
@@ -109,7 +108,7 @@ towaterspan
 dragonpoint
 recuperate tar
 tarsinn
-kalbank
+kalcomp
 solinn
 solrank
 recuperate sol
@@ -125,18 +124,18 @@ ritfrosty
 frostycave
 frostybottom
 daggorathturtle
-kalshop
 zmij
 ixpat
 gleam
 sanport
 sansouth
 sankit
+kalfountain
 sanstudy
+kalfountain
 starttoede
 totaeldeth
 taelboy
-kalcomp
 instinct sky42
 startquali
 paxgem
@@ -145,7 +144,6 @@ kharolis
 citadel hylo
 citadel solace
 citadel thorbardin
-kalbank
 startdwarfkeep
 citadel dwarfkeep
 citadel rockhorde
@@ -156,9 +154,11 @@ loccv
 startcv
 celestial valley
 bors cv
+kaldruid
 cvphil
 after arch
 succubus
+aligngc
 khane
 velchoir
 vshrinal
@@ -189,6 +189,7 @@ fishreef
 sahcent
 atlacamani
 lemusouth
+kalcler
 lemcase
 lemuvoyloc
 lemchest
@@ -200,6 +201,7 @@ nytetree
 starttheiwar
 chutebottom
 belowsimm
+aligngc
 kern
 startpigmy
 locrahn
@@ -208,11 +210,13 @@ rhankagi
 gargath
 teiresias blind glasses
 solbank
+kalcler
 romis
 grom
 stormbutton
 kul
 trade
+kalfountain
 stormspin
 noom
 startluni
@@ -262,6 +266,7 @@ dkspell hct
 startwda
 stoneseal
 mysticshark
+mysticshark
 mysticgates
 luniboulder
 afterboulder
@@ -272,14 +277,15 @@ mound
 moundcloud
 aspre
 statue
+kalnorth
 gopi
+kalnorth
 eras
 ochreportal
 bogkey
 bogmire
 bogmire
 nytetunnel
-kalbank
 ritkago
 kagoboulder
 hyuk
@@ -295,7 +301,6 @@ startspire
 ritspire
 spirebase
 spireend
-kalbank
 inferno
 startct
 ctcorner
@@ -314,9 +319,11 @@ startphysix
 balitrio
 bogmage
 solwraith
+kalcler
 solundead
 solcler
 startslig
+kalfountain
 slig2
 brogdruid
 balibed
@@ -344,6 +351,8 @@ waterspanshop
 solwar
 tokruins
 startkruin
+startdractower
+kalinn
 locatedractower
 startcitdrac
 abovecitdrac
@@ -358,9 +367,9 @@ startraven
 ritraven
 beforetroll
 startlyt
-kalcomp
 startshadow
 ritquali
+kalfountain
 irdapearl
 startriver
 harmonium
@@ -372,12 +381,12 @@ garnetslab
 garnetnorth
 startdeepmine
 belowlubs
+kaldruid
 lyzian
 raynelord
 dkquestkeep
 lieutreed
 mythsh
-kalinn
 gamso
 alignec
 branchala
@@ -426,6 +435,7 @@ stoneskin spire
 tocloud
 underbridge
 cinder
+kalfountain
 crowbar
 t
 eastthon
@@ -437,6 +447,7 @@ instinct mmtn 51 grizzly
 shardneck
 startvrykith
 startboylein
+aligngc
 startwayreth
 startgalvari
 ritlich
@@ -447,7 +458,6 @@ dargomoon
 stingworm
 startheal
 totmerge
-kalbank
 totafterstatue
 taeljudge
 todarren
