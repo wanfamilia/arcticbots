@@ -35,9 +35,11 @@
   autoass;
   #alias onerest {
     #show RESTING: %%1;
-    #if {"$leader"=="%%1"} {rest};
+    #if {"$leader"=="%%1"} {folrest};
   } ;
 }
+
+#alias folrest donothing
 #alias mapwhi mapto pryor mag
 #alias solcal {n; lrn; s alone; cal}
 #alias pew {em pewpewpew PEWpew}
@@ -311,30 +313,30 @@ reseteye;
 
 #alias sasu {sat; suel; ll rest}
 #sub {loaf of bread} {fried chicken thigh}
-#sub {silver jeweled bracelet} {silver jeweled bracelet(imm_poi)}
+#sub {silver jeweled bracelet} {silver jeweled bracelet(nytes)}
 #sub {an iron ration} {a juicy steak}
-#sub {a translucent shroud} {a translucent shroud(-2ss 15sneak)}
-#sub {Aurinite ring} {Aurinite ring(1con)}
+#sub {a translucent shroud} {a translucent shroud(storm)}
+#sub {Aurinite ring} {Aurinite ring(ct)}
 #sub {necklace with a small ruby condor} {ruby condor necklace(slot6)}
 #sub {bone cabalist shield} {bone cabalist shield(+68slot nocharm, 5hedo, cha2)}
-#sub {ancient jade ring} {ancient jade ring(+slot8)}
-#sub {shroud of slimy ectoplasm} {shroud of slimy ectoplasm(12 hedo, invis, rbre 8)}
-#sub {adamantine bracelet} {adamantine bracelet(npp, -10ac)}
+#sub {ancient jade ring} {ancient jade ring(tot)}
+#sub {shroud of slimy ectoplasm} {shroud of slimy ectoplasm(khur)}
+#sub {adamantine bracelet} {adamantine bracelet(spider)}
+#sub {sparkling black bracelet} {sparkling black bracelet(ft)} 
 #sub {feathered blowgun} {feathered blowgun(4d5 1/2 imm_disarm 10hedo)}
-#sub {rune etched mithril ring} {rune etched mithril ring(immpoi 1cl)}
+#sub {rune etched mithril ring} {rune etched mithril ring(spider)}
 #sub {amber necklace} {amber necklace(invis deti)}
 #sub {ancient lemurian warhammer} {ancient lemurian warhammer(4d8 3/3 deteg)}
 #sub {{\d\d\dX} } {kX }
 #sub {giant clamshell encrusted with corals} {giant coral clamshell(++slot5, 10hedo, sb-2, wb)}
-#sub {black fang of a shadow beast} {shadow beast fang(3d5 nv)}
-#sub {desert wraith's tattered robes} {desert wraith robes(-2ss hardbash)}
-#sub {malachite encrusted bracelet} {malachite bracelete(+slot6)}
+#sub {black fang of a shadow beast} {shadow beast fang(tot)}
+#sub {desert wraith's tattered robes} {desert wraith robes(khur)}
+#sub {malachite encrusted bracelet} {malachite bracelete(lagaar)}
 #sub {plume of luminous blue fringe} {luminous blue plume(-2ss resco 30 wb)}
 #sub {wretched medallion}{wretched medallion(+slot6)}
 #sub {tattered purple cloak} {tattered purple cloak(ac -10, reco 36, npp)}
 #sub {pitch black bracer} {pitch black bracer(-1ss 2hr)}
-#sub {belt of cured hylar skin}{cured hylar skin belt(++slot6 rema6)}
-#sub {sparkling black bracelet}{sparkling black bracelet(npp)}
+#sub {belt of cured hylar skin}{cured hylar skin belt(darkeep)}
 #sub {rat ration} {bacon cheeseburger}
 #sub {grey stone bracelet}{grey stone bracelet(2con)}
 #sub {ring of sea elven bones} {ring of sea elven bones(+345slot 1cl 6hit)}
@@ -345,13 +347,13 @@ reseteye;
 #sub {shark jaw bone crossbow}{shark jaw bone crossbow(6d4 2/3)}
 #sub {giant crab shell shield}{giant crab shell shield(-1ss 8conc)}
 #sub {a shadow orb}{the Shadow Orb(+slot -25% damtaken)}
-#sub {ring of finest silver}{finest silver ring(+slot8 -1ss)}
+#sub {ring of finest silver}{finest silver ring(bluff)}
 #sub {grey band of residual ghostly energy}{residual ghostly energy(+slot5 npp)}
-#sub {pair of baggy black pants} {black baggy pants(fly cl container)}
-#sub {pair of succubus wings}{succubus wings pair(cl3 nocharm npp fly)}
+#sub {pair of baggy black pants} {black baggy pants(nytes)}
+#sub {pair of succubus wings}{succubus wings pair(cv)}
 #high {succubus wings} {green}
-#sub {a blue dragon skull}{Flare dragon bone skull(+slot68 deti sense)}
-#sub {a blackened and pulsating heart} {a pulsating black heart(+slot8 +cha)}
+#sub {a blue dragon skull}{Flare dragon bone skull(storms)}
+#sub {a blackened and pulsating heart} {a pulsating black heart(storms)}
 #sub {silver fauld} {silver fauld (2con)}
 #sub {jet-black leather quiver} {jet-black leather quiver(rhr1 shoot5)}
 #sub {elongated leather quiver} {elongated leather quiver(2rhr 3inst)}
@@ -366,24 +368,20 @@ reseteye;
 #sub {a sturdy staff of rosewood} {the Sturdy Rosewood Staff(2d5 3/3specs)}
 #sub {bloody whale heart amulet}{bloody whale heart amulet(+1slot6 8reg)}
 #sub {silver girdle} {silver girdle (2con 2hr)}
-#sub {golden bracelet inlaid with emeralds} {golden emerald bracelet(+slot6)}
+#sub {golden bracelet inlaid with emeralds} {golden emerald bracelet(bluff)}
 #sub {colossal black iron war flail} {colossal black iron war flail(3d10 0/3, w48)}
 #sub {small silver medallion} {small silver medallion(light det invis neck)}
-#sub {spider shaped braces} {spider shaped braces(imm poison)}
-#sub {fiery red wrist guard} {fiery red wrist guard(nocharm imm neg)}
+#sub {spider shaped braces} {spider shaped braces(spider)}
+#sub {fiery red wrist guard} {fiery red wrist guard(fc)}
 #sub {clear crystal ring} {clear crystal ring(1wis)}
+#sub {neck ring of crystal and stone} {neck ring of crystal and stone(ct)}
+#sub {a gold inlaid bone bracer} {a gold inlaid bone bracer(lemuria)}
 #sub {ruby and diamond necklace} {ruby and diamond necklace(1int)}
 #sub {diamond-studded jaguar collar} {diamond-studded jaguar collar(1con)}
 #sub {tunic of leviathan scales}{ tunic of leviathan scales(2str, water, spell-2, here 8, sense life)}
 #sub {ancient leviathan scale leggings} {ancient leviathan scale leggins(2dex,para-2,fade5, wild5)}
 #sub {gauntlets of black hydrascale} {gauntlets of black hydrascale(2str, here5, gas10)}
 #sub {cloak of black hydrascale} {cloak of black hydrascale(health15, hit20, canfly, nosummon, nocham, imm poi)}
-#sub {human bone gauntlets} {gauntlets(1str, 10hedo)}
-#sub {mask of human bone} {mask(2cha, deti)}
-#sub {human bone boots} {boots(20vi)}
-#sub {human bone armlets} {armlets(1int)}
-#sub {human bone leggings} {leggings(1con)}
-#sub {human bone breastplate} {breastplate(1con)}
 #alias bpu {buy 3*putrid}
 #alias cts {sleep; ct sleeping...}
 #alias ctw {ct woke up; wake; st; fly}
@@ -1016,8 +1014,8 @@ reseteye;
 #alias goan {puf anchor}
 #alias gobung {gosol; e; s; s; d; fsf; n;n;n;n;n;n;n;n;e;e;e;n;n;n;n;e;rest}
 #alias gorbu {gosol; #delay 8 {gorec bung}}
-#alias gobu {gorec bung}
-#alias goblo {mrun blodesign}
+#alias runbung {gorec bung}
+#alias runblo {mrun blodesign}
 #alias chief {%0 constantine}
 #alias oei {oe c 'i'}
 #alias oeim {oe c 'i' me}
@@ -1026,7 +1024,7 @@ reseteye;
 #action {^{\d.+Pos:standing[^\[]+}>} {#var fighting 0; groupcaptureoff}
 #action {^{\d.+Att:[^\[]+}>} {#var fighting 0; groupcaptureoff}
 #action {^{\d.+Me:}} {#var fighting 1; groupcaptureoff}
-#var pets {Ayoade|Ocasek|Burten|Steamboat|Derp|Jake}
+#var pets {Ayoade|Ocasek|Ip|Burten|Steamboat|Derp|Jake}
 #action {{$pets} the {\w+\s?\w+}{$tanksuffix}} {pethit %1}
 #alias ctdi {ct check #rich-bot-and-lorebot channel in discord}
 #alias gtri {gt kill risol, if you get booted from fight: stand, up}
@@ -1440,7 +1438,7 @@ reseteye;
 
 #alias bohj {ct Bohj!  Bohj! %1 ur ippistuxj ko!}
 #alias maft {#map exit %1 command {%1; %2 %3 %4 %5}}
-#alias gomyth {mrun mythsh}
+#alias runmyth {mrun mythsh}
 #alias mbef {#map exit %1 command {%2 %3 %4; %1}}
 #alias mapon {
   #alias cleartop donothing;
@@ -1791,6 +1789,11 @@ reseteye;
 	get coins;
 }
 
+#alias aftergargan {
+  #action {^You get tangled in the kelp as you try to leave the pool} {#delay 1 north};
+  north;
+}
+
 #alias yi {sky ki %1; ota Talinia}
 
 #alias lootcomp {
@@ -1957,7 +1960,7 @@ reseteye;
 }
 
 #alias palsham {mai voy rohane; #delay 1 {mai bfg $myshaman; buftwo}; }
-#alias vogr {mai; voy %1; #delay 1 {bfg $myshaman}; ghob; group form; hb %1}
+#alias vogr {mai; voy %1; #delay 1 {bfg $myshaman; sumo}; ghob; group form; hb %1}
 #alias buftwo
 {
   mai {hb rohane; ghob};
@@ -2888,7 +2891,7 @@ reseteye;
 {
   sgl; rg me; jd sp si; sat;
   mem 'a b' 'bo sh' 'an sh' 'an sh' 'bli' 'cu bl' 're cu' 'cu bl' 'cu bl' 're st' 'vi sp' 're po' 're po' 're po' 'vi sp' 'am sp' 'su re' 'su re' 'su re' 'gh be' 'so le' 'te h' 'gho ri' 'cu cr' 'cu cr' 'cu cr' 'cu cr';
-  mem 'ri vo' 'ri vo' 'ri vo' 'ri vo' 'da so' 'ri vo' 'ghosts' 'e a' 'ghosts' 'twi fa' 'so pr' 'he wa' 'he wa' 'he wa' 'he wa' 'sa co' 'bo sh' 'so le';
+  mem 'ri vo' 'ri vo' 'ri vo' 'ri vo' 'zom' 'ri vo' 'cu cr' 'sanctu' 'ri vo' 'ghosts' 'e a' 'ghosts' 'twi fa' 'twi fa' 'so pr' 'he wa' 'he wa' 'he wa' 'ome' 'cu bl' 'bo sh' 'he wa' 'he wa' 'so le';
   js nap;
 }
 #alias finchar {y;
@@ -3536,7 +3539,7 @@ richard_wan@hotmail.com;	1;	1;	1;	1;
 #alias jread {get saffron belt; put saffron pouch; js read}
 #alias jmoc {sysplay smb3_coin; js moment}
 #alias playcoin {sysplay smb3_coin}
-#alias cubread {get metal.cube belt; rem $held; hold cube; say praise the gods; rem cube; put metal.cube belt; hold $held; put 6*food belt; drop all.food; get all.food belt}
+#alias cubread {get metal.cube belt; rem $held; hold cube; say praise the gods; rem cube; put metal.cube belt; hold $held; ef; put 6*food belt; drop all.food; get all.food belt}
 #alias bushcrop {s; s; e; e;}
 #alias agc {assail; gore; charge; st}
 #alias otag {ott; ass; ga}
@@ -3674,7 +3677,7 @@ richard_wan@hotmail.com;	1;	1;	1;	1;
 #alias amsitem {say May I walk with the clouds}
 #alias ptpw {ptar paladin warrior}
 #alias ptms {ptar mage scout}
-#alias skyin {inst crow; inst swan; fly; inst king; inst harrier; inst roc}
+#alias skyin {inst crow; inst swan; fly; inst mock; inst harrier; inst roc}
 #alias kvo {vo; ke %1}
 #alias resky {rewin; modesky; #unticker e20s}
 #alias mtran {fd he wa; mb md trans}
@@ -4210,6 +4213,10 @@ cancel;
 
 #var vbuffover {
   {resist magic}{rmag}
+  {resist gas}{rgas}
+  {resist breath}{rbre}
+  {resist negative}{rneg}
+  
 }
 #alias hewold {
   #alias afterbuffcapture {needbuff healing wave};
@@ -4486,6 +4493,12 @@ cancel;
   needbuff resist magic;
   needbuff ethereal armor;
 }
+#alias onshrbuff {
+  needbuff resist magic;
+  needbuff resist negative;
+  needbuff resist gas;
+  needbuff resist breath;
+}
 #alias onshobuff
 {
   needbuff boiling blood;
@@ -4635,15 +4648,15 @@ cancel;
   #replace vescape {"} {};
   #replace vescape {'} {};
 }
-#action {^{The book of the dead|A burned black prayerbook|A sparkling black bracelet equipped by T|A discolored helmet equipped by R|A shimmering prayerbook with silver pages|A pair of spiked sterling gauntlets equipped by Bors|A black metal pike in|The mithril plate of shadows|A ruby studded block of limestone|An iridescent hematite tablet|A stunning pearl-inlaid tablet|A golden twined oak longbow equipped|A gold inlaid bone bracer equipped|A holy talisman|The cape of shadows in a|A bladeless sword equipped|A suit of flexible red dragon scale armor equipped|An ancient holy avenger equipped|Gauntlets of ogre power equipped|A ring of braided bones equipped|A dwarven face shield|A sky blue prayerbook with sapphire runes|A dragonrider's talisman|A moist piece of sea sponge|A gangrenous foot|A shimmering cube|A small piece of meteorite|A radiant white prayerbook|A satiny layer of ectoplasm|A lone, gray flame|A feathered dreamcatcher|A golden battle-honor equipped|A book with frosted glass covers|A globe of sparkling liquid in a steel|A green dragonhide spellbook|A wretched medallion|An ivory spined spellbook|A translucent jade|A charred black ring|The mottled robes of the Archmagus in|A golden bracelet inlaid with emeralds in|A tightly bound tome of magic|A floppy hat|A tiny jade effigy|A timeworn book bound with chains|A belt of cured hylar skin equipped|A wispy black veil|A prayerbook with gleaming pearl covers|A delicate prayerbook wrapped with silk|An ivy-covered slab of rock|A silver and ruby ring|A ring of finest silver in|A dark elven bracelet in a} {.+}}
+#action {^{The book of the dead|A burned black prayerbook|A sparkling black bracelet equipped by T|A discolored helmet equipped by R|A shimmering prayerbook with silver pages|A pair of spiked sterling gauntlets equipped by Bors|A black metal pike in|The mithril plate of shadows|A ruby studded block of limestone|An iridescent hematite tablet|A stunning pearl-inlaid tablet|A golden twined oak longbow equipped|A gold inlaid bone bracer equipped|A holy talisman|The cape of shadows in a|A bladeless sword equipped|A suit of flexible red dragon scale armor equipped|An ancient holy avenger equipped|Gauntlets of ogre power equipped|A ring of braided bones equipped|A dwarven face shield|A sky blue prayerbook with sapphire runes|A dragonrider's talisman|A moist piece of sea sponge|A gangrenous foot|A shimmering cube|A small piece of meteorite|A grey stone bracelet equipped|A glowing golden amulet|A black domino is in|A radiant white prayerbook|A satiny layer of ectoplasm|A lone, gray flame|A feathered dreamcatcher|A golden battle-honor equipped|A book with frosted glass covers|A globe of sparkling liquid in a steel|A green dragonhide spellbook|A wretched medallion|An ivory spined spellbook|A translucent jade|A charred black ring|The mottled robes of the Archmagus in|A golden bracelet inlaid with emeralds in|A tightly bound tome of magic|A floppy hat|A tiny jade effigy|A timeworn book bound with chains|A belt of cured hylar skin equipped|A wispy black veil|A prayerbook with gleaming pearl covers|A delicate prayerbook wrapped with silk|An ivy-covered slab of rock|A silver and ruby ring|A battlehammer inscribed with Solamnic|A ring of finest silver in|A dark elven bracelet in a}{.+}}
 {
- ct %1: %2;
- dtell %1: %2;
+ ct %1:%2;
+ dtell %1:%2;
 }
 
 #alias terscis {hold scissors; pull black.strings; cut black.strings; cut blue.strings; pull green.strings; cut green.strings; pull white.string}
-#alias goba {gorec kenba}
-#alias goth {mrun tollhouse}
+#alias runbard {gorec kenba}
+#alias runth {mrun tollhouse}
 #alias kib {aggtwo ll ki}
 #alias las {ll ass}
 #alias rrk {rr; mgo kalinn}
@@ -4651,7 +4664,7 @@ cancel;
 #alias kpr {bot {punch %1; parry}}
 #sub {hungry. feed me!} {warrior needs food, badly}
 #alias tban {bot rest; st; tan ban; #delay 1 {bot st}}
-#alias rlcbluff {gobung; lc fine.silver.ring; lc face; lc holy; lc golden.bracelet; rest }
+#alias rlcbluff {gobung; lc fine.silver.ring; lc face; lc holy.talisman; lc golden.bracelet; rest }
 #alias dlcshayd {runshayd; restick lcshayd}
 #alias dlcner {goner; lctab; restick lcsan}
 #alias rlclem {gobal; runlem; lcvoy; }
@@ -4666,7 +4679,7 @@ cancel;
 
 #var vlocates {
   {1}{rlcred}
-  {2}{rlcbluff}
+  {2}{cubread; rlcbluff}
   {3}{runshayd}
   {4}{lcshayd}
   {5}{rlckal}
@@ -4674,6 +4687,17 @@ cancel;
   {7}{rlclem}
   {8}{lclem2}
   {9}{gotar; lc solamnic.hammer}
+  {10}{rlckith; lc ancient.scabbard}
+  {11}{lcb; lc talisman; lc greenswathe; lc wyrmslayer; }
+  {12}{rlcspire}
+  {13}{lc grey.stone; lc girdle; lc domino; lc dragon}
+  {14}{rlccloud}
+  {15}{lc mithril; lc stormbringer}
+}
+
+#alias rlccloud {
+  gotar; js imp; runto ws14es4e2neu9s3en4e4s3e2se;
+  lcck;
 }
 #list vlocates size vlocatessize
 #alias megaloc {
@@ -4683,9 +4707,15 @@ cancel;
     #delay 30 restick megaloc;
   }{
     #var vlocate 1;
+    gomyth;
+    rest;
   }
 }
 
+#alias gomyth {gosol; runto e2sd7n2w2nwu}
+
+#alias rlcstorm {n; open wall; runto ene8se2sw2s3en6ese2nwnen; accept; n; }
+#alias rlcspire {gosol; runto e2sd8n3e7n4en9e5s6es2ese; climb ladder; ee; lckith; lc forge.ring}
 #var vlocate 1;
 #alias lcf {lc flexible.red; lc ring.bones}
 #alias lclem2 {lc black.pike; lc bone.bracer; lc wretched; lc shadow.cape; restick lcshad}
@@ -4730,7 +4760,7 @@ cancel;
 }
 
 #alias rlcbog2 {lc dark.bracelet; lcb; rlckal}
-#alias rlckal {gokal; runto dnn10e; lc discolored; lc silver.ring; 14w; open gate; 4w5nww;  restick rlcdar}
+#alias rlckal {gokal; runto dnn10e; lc discolored; lc silver.ring; 14w; open gate; 4w5nww;  }
 #alias rlcqk {runto 4nwwsww4nwnnwn; lctab}
 #alias rlcdar {deltwo lcdar rlcqk }
 
@@ -4916,7 +4946,7 @@ cancel;
 }
 
 #CONFIG           {AUTO TAB}              {5000}
-#CONFIG           {BUFFER SIZE}           {20000}
+#CONFIG           {BUFFER SIZE}           {10000}
 #CONFIG           {CONNECT RETRY}         {15}
 #CONFIG           {CONVERT META}          {OFF}
 #CONFIG           {COMMAND COLOR}         {<078>}
@@ -5058,7 +5088,8 @@ cancel;
 	resave
 }
 
-#macro {\eOm} {cancel}
+#alias keyminus {cancel; #kill delay}
+#macro {\eOm} {mac keyminus}
 #MACRO {\eOl}
 {
 	ready
@@ -5174,7 +5205,6 @@ cancel;
 #PATHDIR          {sw}                    {ne}                         {12}
 #PATHDIR          {u}                     {d}                          {16}
 #PATHDIR          {d}                     {u}                          {32}
-#TICKER           {eachsec}               {updateheader}               {1}
 #VARIABLE         {aggro}                 {bt}
 #VARIABLE         {arrival}               {Balifor}
 #VARIABLE         {autoclean}             {0}
