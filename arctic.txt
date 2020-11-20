@@ -1591,7 +1591,7 @@ reseteye;
 #alias mrr {rr; mgmy; hold heart; down; south; west; bre}
 #ALIAS {cleartopwin}
 {
-  #if {%1 <= -$gsize} {#loop %1 $gsize clearloop {#showme {.}{$clearloop}}}
+  #if {%1 <= $gsize} {#loop %1 $gsize clearloop {#showme {.}{$clearloop}}}
 }
 
 #ALIAS {cli}
@@ -3541,7 +3541,7 @@ richard_wan@hotmail.com;	1;	1;	1;	1;
 #alias jread {get saffron belt; put saffron pouch; js read}
 #alias jmoc {sysplay smb3_coin; js moment}
 #alias playcoin {sysplay smb3_coin}
-#alias cubread {get metal.cube belt; rem $held; hold cube; say praise the gods; rem cube; put metal.cube belt; hold $held; ef; put 6*food belt; drop all.food; get all.food belt}
+#alias cubread {get metal.cube belt; rem $held; hold cube; say praise the gods; rem cube; put metal.cube belt; hold $held; ef; put 6*bread belt; drop all.food; get all.food belt}
 #alias bushcrop {s; s; e; e;}
 #alias agc {assail; gore; charge; st}
 #alias otag {ott; ass; ga}
@@ -4995,7 +4995,7 @@ cancel;
 #highligh  {You hear the sound of a creaky gate opening} {green}
 #highligh  {Sir Marquinn von Israeth} {green}
 #HIGHLIGHT        {You fall down, your ears ringing}  {red}                        {5}
-#highlight {You feel vulnerable again as the protective cloak about you fades} {5}
+#highlight {You feel vulnerable again as the protective cloak about you fades} {light yellow} {5}
 #highlight {ghostly hue vanishes} {light yellow}
 #highlight {soul has returned} {light yellow}
 #HIGHLIGHT        {You feel your mind slip away}  {red}                        {5}
