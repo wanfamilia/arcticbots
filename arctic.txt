@@ -1591,7 +1591,7 @@ reseteye;
 #alias mrr {rr; mgmy; hold heart; down; south; west; bre}
 #ALIAS {cleartopwin}
 {
-  #if {%1 >= -$gsize} {#loop %1 -$gsize clearloop {#showme {.}{$clearloop}}}
+  #if {%1 <= -$gsize} {#loop %1 $gsize clearloop {#showme {.}{$clearloop}}}
 }
 
 #ALIAS {cli}
@@ -2149,7 +2149,7 @@ reseteye;
 
 #ALIAS {groupcapture}
 {
-	#variable groupline -1;
+	#variable groupline 1;
 	#variable groupmembers {};
 	#action {{^\s+}{\S+}{\s+}{\S+}{\s+}{\S+}{\s+\S+\s+\S+\s+\S+\s+\S+\s+\S+\s+\S+\s+}{\S+}} {showgroup %%4 %%6 %%8 %%2};
         #alias cleartop cleartopwin;
@@ -3512,7 +3512,9 @@ richard_wan@hotmail.com;	1;	1;	1;	1;
 	#alias cleartop cleartopwin;
 	#alias addc addcwin;
 	#message variables off;
-	#message actions off
+	#message actions off;
+    #TICKER           {eachsec}               {updateheader}               {1};
+
 }
 
 #ALIAS {pot}
@@ -4148,7 +4150,7 @@ cancel;
 
 #ALIAS {showgroup}
 {
-	#math groupindex {0-$groupline};
+	#var groupindex $groupline;
 	groupappend %1;
 	#if {"%3"=="Y"}
 	{
@@ -4180,7 +4182,7 @@ cancel;
 	#var classes[%1] %4;
 	formshowgroup %1 %4;
 	#showme {$tempshowgroup} {$groupline};
-	#math groupline {$groupline - 1}
+	#math groupline {$groupline + 1}
 }
 
 #alias onfair {#show atfair: }
@@ -4873,13 +4875,15 @@ cancel;
 #ALIAS {updateheader}
 {
 	#format now {%T};
-	#math tilltick {$ticklen - (($now - $lasttick) % $ticklen)};
+	#math fromtick {$now - $lasttick};
+	#math sincetick {$fromtick % $ticklen};
+	#math tilltick {$ticklen - $sincetick};
 	setheader;
 	#if {$tilltick==10}
 	{
 	  nospam 2 gt10
 	};
-	#showme {$header} {1};
+	#showme {$header} {-2};
 	#if {$autoheal==2}
 	{
 		dolater3 group
@@ -5222,8 +5226,8 @@ cancel;
 #VARIABLE         {engvar}                {dotk}
 #VARIABLE         {firstspell}            {0}
 #VARIABLE         {food}                  {food}
-#VARIABLE         {groupindex}            {9}
-#VARIABLE         {groupline}             {-10}
+#VARIABLE         {groupindex}            {1}
+#VARIABLE         {groupline}             {1}
 #VARIABLE         {groupmembers}          {}
 #VARIABLE         {header}                {heals left: 0  till tick: 42   resc: Co            arrive: Balifor}
 #VARIABLE         {healMainAtBad}         {1}
