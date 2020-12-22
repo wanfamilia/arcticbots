@@ -64,7 +64,6 @@ recuperate twen
 midsea
 ritbluff
 startcloud
-kalbank
 canstin
 mirus
 caergoth
@@ -84,7 +83,6 @@ palwest
 palsquare
 hylosquare
 gulfambush
-kalbank
 werewolve
 werewolf
 gulfeast
@@ -92,7 +90,6 @@ gulfport
 gulfgar
 glade whitestone
 shayd
-kalbank
 deepfish
 irdalagoon
 irdagate
@@ -110,7 +107,6 @@ tarsinn
 solinn
 solrank
 recuperate sol
-kalcomp
 startthorb
 component neraka
 nerinn
@@ -164,7 +160,6 @@ dargo start
 dargo squid jawbow
 essence water lezi
 pracevade
-kalbank
 startstormhead
 essence fire slarn
 cloud pendant
@@ -291,7 +286,6 @@ startspire
 ritspire
 spirebase
 spireend
-kalwest
 inferno
 startct
 ctcorner
@@ -311,9 +305,7 @@ balitrio
 bogmage
 solwraith
 solundead
-kalcomp
 solcler
-kalcomp
 startslig
 slig2
 brogdruid
@@ -350,10 +342,8 @@ startbluff
 startbandit
 banditbush
 startregen
-kalbank
 soldruid
 startmom
-kalbank
 sarson
 startraven
 ritraven
@@ -373,7 +363,6 @@ garnetnorth
 startdeepmine
 belowlubs
 lyzian
-kalcler
 raynelord
 dkquestkeep
 lieutreed
@@ -397,7 +386,6 @@ startbalcombe
 serra
 lhex
 balcombe
-kalfountain
 nerguards
 gownnocharm
 raynemansakr
@@ -420,7 +408,6 @@ chutegaard
 jaketh
 brithnea
 sahsponge
-aligngc
 bogfight
 tosorin
 Southwinds
@@ -446,7 +433,6 @@ startkhur
 ritkhur
 cloudcomp
 dargomoon
-kaldruid
 stingworm
 startheal
 totsplit
