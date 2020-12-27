@@ -2741,6 +2741,7 @@ reseteye;
 #ALIAS {logbot} {newses bot}
 #alias newses limitses 1 newsesimpl
 #var port 2700
+#var devport 1919
 #alias newsesimpl
 {
         #session %1 mud.arctic.org $port;
