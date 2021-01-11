@@ -56,6 +56,7 @@ toquali
 bognorth
 recuperate cabin
 recuperate thorb
+northhope
 acorn
 tarsissquare
 darvinus
@@ -188,6 +189,8 @@ sara
 stormloc
 qk
 nytetree
+kuoscout
+tospider
 starttheiwar
 chutebottom
 belowsimm
@@ -410,6 +413,7 @@ brithnea
 sahsponge
 bogfight
 tosorin
+zeeriak
 Southwinds
 stoneskin spire
 tocloud
@@ -444,3 +448,6 @@ uthlib
 khurreaver
 aran
 kerius
+rainsong
+vrytree
+ansabar
