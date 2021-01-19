@@ -2185,7 +2185,7 @@ reseteye;
 	#variable groupmembers {};
 	#action {{^\s+}{\S+}{\s+}{\S+}{\s+}{\S+}{\s+\S+\s+\S+\s+\S+\s+\S+\s+\S+\s+\S+\s+}{\S+}} {showgroup %%4 %%6 %%8 %%2};
         #alias cleartop cleartopwin;
-	#action {^{\d}} {groupcaptureoff};
+	#action {^{\d}} {groupcaptureoff} {4};
 }
 
 #var grouppat {{^\s+}{\S+}{\s+}{\S+}{\s+}{\S+}{\s+\S+\s+\S+\s+\S+\s+\S+\s+\S+\s+\S+\s+}{\S+}}
@@ -4497,12 +4497,13 @@ cancel;
   #alias thiefhit {dnrs 1 %1};
   #alias pethit {dnrs 1 %1};
 
-#action {^The protective presence around you fades} {
-  gt ---> HEAL BOOST GONE <---;
-  ll #show -->   LOST BOOST;
-  sysplay smb3_powerdown;
-};
+  #action {^The protective presence around you fades} {
+    gt ---> HEAL BOOST GONE <---;
+    ll #show -->   LOST BOOST;
+    sysplay smb3_powerdown;
+  };
   #alias vass vass3;
+  #alias vota donothing;
   agg strike;
 }
 
