@@ -491,10 +491,11 @@ reseteye;
 }
 #alias gothit gothitimpl
 
+#alias stki {st; ki %1}
 #alias skymelee {
  modemelee;
  #alias trs donothing;
- eng ki;
+ eng stki;
  casres;
  #alias rs dorescue;
 }
@@ -2287,12 +2288,12 @@ reseteye;
 
 #ALIAS {headerlin}
 {
-	#format header {heals left:%+2s  till tick: %+2s   resc: %-12s  arrive: %s}{{$healsleft}{$tilltick}{$resctar}{$arrival}}
+	#format header {heals left:%+2s  till tick: %+2s   fight: %-2s  arrive: %s}{{$healsleft}{$tilltick}{$fighting}{$arrival}}
 }
 
 #ALIAS {headerwin}
 {
-	#format header {heals left:%+2s  till tick: %+2s   resc: %-12s  arrive: %s} {$healsleft}{$tilltick}{$resctar}{$arrival}
+	#format header {heals left:%+2s  till tick: %+2s   fight: %-2s  resc: %s} {$healsleft}{$tilltick}{$fighting}{$resctar}
 }
 
 #ALIAS {healcountoff}
@@ -2797,7 +2798,7 @@ reseteye;
 }
 #alias kst {bot aggone kstthis}
 #alias ksta {kst %1; mai ott}
-#alias brs {bot {cancel; rescue %1}}
+#alias brs bot dorescue
 #ALIAS {logwip}
 {
 	#session arc 52.43.146.225 2700;
@@ -3217,7 +3218,7 @@ richard_wan@hotmail.com;	1;	1;	1;	1;
   rescoff;
 }
 #alias rescoff {#alias rs donothing}
-#alias rescon {#alias rs {st; rescue %%1 }}
+#alias rescon {#alias rs dorescue}
 #action {^You utter the words, 'regenerate'} {#delay 24 {showgen}}
 
 #alias showgen {#showme ----> REGEN back up}
@@ -3781,10 +3782,12 @@ richard_wan@hotmail.com;	1;	1;	1;	1;
 #alias modemelee {#alias asst assd;
   #alias refade donothing;
   #alias vass vass2; #alias ota assd; #alias oag {mac ki %%2};
+  remb bow; wield $skyprime; hold $skyoff;
   #alias rs dorescue;
 }
 
-
+#var skyprime bardiche
+#var skyoff moon.staff
 #alias bepres {get %1 belt; present %1}
 #alias kylepres {bepres books; bepres sheaf; bepres code; bepres package; bepres parchment}
 #alias prepstone {
@@ -3795,12 +3798,13 @@ richard_wan@hotmail.com;	1;	1;	1;	1;
 #alias hud {#sky huntmode dis}
 #alias modebow {
   #alias vass reshoot;
+  rem $skyprime; rem $skyoff;
   get bow belt; hold bow;
   #alias ota reshoot;
   eng ko;
   #alias oag {mac ko %%2};
   #alias refade {cancel; wingsweep; fade; reshoot};
-  #alias rs donothing;
+  #alias rs brs;
   #action {^You {barely hit|hit}} {nospam 3 refade};
   #action {^You {miss|bruise} {.+with your hit.$}} {nospam 3 refade};
 }
@@ -3908,8 +3912,6 @@ richard_wan@hotmail.com;	1;	1;	1;	1;
 #alias ksa {bot strike %1; mai ass}
 #alias swapto {swap me %1; oth}
 #alias bfg {bot {follow %1; guard %1; rescon}; #delay 1 {group form}}
-#alias rescon {#alias rs rss}
-#alias rescoff {#alias rs donothing}
 #alias rss {cancel; st; rescue %1; }
 #ALIAS {rgc}
 {
@@ -3978,7 +3980,6 @@ richard_wan@hotmail.com;	1;	1;	1;	1;
 cancel;
 	st;
 	rescue %1;
-	st;
 }
 #alias nrs {nospam 3 rs}
 #alias bavash {bt2 toram vashka}
@@ -4517,8 +4518,16 @@ cancel;
   bot messlog;
 }
 #alias showprompt {
-  #action {^{\d+H\s+\d+}V{.{1,75}}} {allprompt {%%1M%%2} };
-  #alias allprompt {ifinactive #ats #show {%%1} {-3}};
+  #action {^{\d+H\s+\d+}V{.+>}} {allprompt {%%1} {%%2} } {3};
+  #alias allprompt allpromptimpl;
+}
+
+#alias allpromptimpl {
+  #format shortprompt {%sM%.80s} {%1} {%2};
+  ifinactive #ats #show {$shortprompt} {-3};
+  groupcaptureoff;
+  #regex {%2} {:sitting} { nospam 1 stand};  
+  #regex {%2} {\[Me:} {setfight 1} {setfight 0};
 }
 #alias feng {fence eng; ripo slash}
 #alias ifinactive {

@@ -18,7 +18,7 @@ F 10
 
 G 0
 
-I 10474
+I 3236
 
 L {ASCII NESW LINE} {NO EXITS} {x}
 L {ASCII NESW LINE} {N} {o}
@@ -216,7 +216,7 @@ L {MUDFONT CURVED} {N E} {\u2818}
 L {MUDFONT CURVED} {S E} {\u28A0}
 L {MUDFONT CURVED} {S W} {\u2844}
 L {MUDFONT CURVED} {N W} {\u2803}
-L {UNICODE GRAPHICS} {NO DIAGONAL} {}
+L {UNICODE GRAPHICS} {NO DIAGONAL} { }
 L {UNICODE GRAPHICS} {SE} {\u2E0C}
 L {UNICODE GRAPHICS} {NE} {\u2E1D}
 L {UNICODE GRAPHICS} {SE NE} {>}
@@ -13758,7 +13758,7 @@ E { 3234} {east} {east} {2} {0} {} {1.000} {} {0.00}
 E { 3236} {north} {open door north; north} {1} {0} {} {1.000} {} {0.00}
 
 R { 3236} {0} {} {} { } {} {} {} {} {} {1.000} {}
-E { 3235} {south} {south} {4} {0} {} {1.000} {} {0.00}
+E { 3235} {south} {open door south; south} {4} {0} {} {1.000} {} {0.00}
 
 R { 3237} {0} {} {ritlowdarkeep} { } {} {} {} {} {} {1.000} {}
 E { 3210} {down} {down} {32} {0} {} {1.000} {} {0.00}
@@ -51511,6 +51511,6 @@ E {12610} {east} {east} {2} {0} {} {1.000} {} {0.00}
 R {12612} {0} {} {} { } {} {} {} {} {} {1.000} {}
 E {10475} {south} {south} {4} {0} {} {1.000} {} {0.00}
 
-R {12613} {10} {} {} { } {} {} {} {} {} {1.000} {}
+R {12613} {5130} {} {} { } {} {} {} {} {} {1.000} {}
 E { 3588} {east} {east} {2} {0} {} {1.000} {} {0.00}
 E {10474} {west} {west} {8} {0} {} {1.000} {} {0.00}
