@@ -13,10 +13,13 @@
 
 #alias bstep {bot autostepthis}
 #alias autostepthis {
-  #var leader $groupmembers[1];
-  #action {^$leader tells your group '{(rohane|tank )?}{n|s|w|e|u|d|north|south|west|east|up|down}'} {
-  onleader %%3;
- } {1};
+  group;
+  #delay 3 {
+    #var leader $groupmembers[1];
+    #action {^$leader tells your group '{(Tank|tank )?}{N|S|W|E|U|D|n|s|w|e|u|d|north|south|west|east|up|down}'} {
+      mac onleader %%3;
+    } {1};
+  }
 }
 
 #alias mapto {
@@ -56,7 +59,12 @@
 #alias dohctvault {pull down; pull right; pull right; pull up; pull left; pull down; pull down ; pull handle}
 #alias onleader {#delay 1 %1}
 #alias gtca {gt someone small: crank catapult, wear a light, kill mob, loot, wear helmet, all west, get bag, east north east, then stack commands: drop bag, light bag in room}
-#alias waitroc {#action {bird} {#bell}; e3 look}
+#alias waitphoen {
+  #action {phoenix is perched here} {noisy};
+  coli; air me;
+  runto 3des2d;
+  runto 2unw3u;
+}
 #action {^The death cry of the shade of Jar} {get all.!component}
 #action {^Onyx is dead} {gac; get all.charm onyx}
 #action {^Flare is dead} {gac; get all.charm flare}
@@ -316,6 +324,7 @@ reseteye;
 #alias sasu {mai sat; suel; ll rest}
 #sub {loaf of bread} {fried chicken thigh}
 #sub {silver jeweled bracelet} {silver jeweled bracelet(nytes)}
+#sub {bow of aged yew} {bow of aged yew(suun vault)}
 #sub {an iron ration} {a juicy steak}
 #sub {a translucent shroud} {a translucent shroud(storm)}
 #sub {a shrunken demon's horn charm} {a shrunken demon's horn charm(nap)}
@@ -532,6 +541,8 @@ reseteye;
 #alias rlcck {gobal; runto s4e9n4w3sw4sdw2s2ws5w; lcck}
 #alias rlckith {gosol; runto e2sd10se4sw5se4sw3s6wd2s; lckith}
 #alias rlcspi {gosol; runto e2sd8n3e5n4e3n9e5s6es2ese; climb ladder; ee; lckith}
+#alias 4 0
+#alias lowpal {bot {#alias strike kill; eng ki; #alias dorescue {cancel; st; assist; rescue %%1}}}
 #alias enfothis {enter arch; follo %1}
 #alias enfo {ll enfothis}
 #alias trigcure {
@@ -921,7 +932,8 @@ reseteye;
   %1 %2 $aggrovar;
 }
 
-#alias ko {sky kothis}
+#alias ko sky koi
+#alias koold {sky kothis}
 #alias kothis {
   #if {"%1"==""} {reshoot }{koi %1};
 }
@@ -1040,11 +1052,7 @@ reseteye;
 #alias oei {oe c 'i'}
 #alias oeim {oe c 'i' me}
 #alias pbrl {push 2.button; reach ledge; st; e; jump guild}
-#action {^{\d[^\[]+}>} {setfight 0; groupcaptureoff}
-#action {^{\d.+Pos:standing[^\[]+}>} {setfight 0; groupcaptureoff}
-#action {^{\d.+Att:[^\[]+}>} {setfight 0; groupcaptureoff}
-#action {^{\d+H \d+V.+\[Me:.+}} {setfight 1 promfight; groupcaptureoff}
-#var pets {Ayoade|Ocasek|Ip|Burten|Steamboat|Derp|Durge|Jake}
+#var pets {Ayoade|Ocasek|Ip|Burten|Steamboat|Derp|Durge|Tori|Jake}
 #action {{$pets} the {\w+\s?\w+}{$tanksuffix}} {pethit %1}
 #alias ctdi {ct check #bots channel in discord}
 #alias gtri {gt kill risol, if you get booted from fight: stand, up}
@@ -1299,6 +1307,7 @@ reseteye;
 }
 
 #alias taracorn {van me; js imp; air me; w; s; open gate; runto w3n3enw2nw3n2w4nw7nwse; buac}
+#alias recat {conca; release $pet}
 #alias recler {rewin; modecleric}
 #alias readybrew brewonly
 #alias brewonly {brsh; ghob; gmal}
@@ -1478,7 +1487,7 @@ reseteye;
   #map flag vtmap on;
   #action {^Alas, you cannot go that way} {#map undo};
   #action {^Center of the Celestial Temple} {mgoc};
-  #action {^Solace Square} {mgo solsquare};
+  #action {^Otik watches you calmly} {mgo otik};
   #action {^A beautiful statue of Mishakal stands here, illuminating the chamber} {mgo startheal};
   #action {^{North|South|East|West}ern {Reach|Branch}} {mgo %%1winds; #show %%1};
   #action {^{The Slimy Chute}} {mgo slimychute};
@@ -1991,7 +2000,9 @@ reseteye;
 }
 
 
+#alias dofote {enter portal; say evil; enter portal; say will; enter portal; say win; enter portal}
 #alias bfsh bfg $myshaman
+#alias bfsk bfg $skyscout
 #alias palsham {mai voy rohane; #delay 1 {mai bfg $myshaman; buftwo}; }
 #alias vogr {mai; voy %1; #delay 1 {bfg $myshaman; sumo}; ghob; group form; hb %1}
 #alias buftwo
@@ -2578,7 +2589,7 @@ reseteye;
 #alias btm {bt %1; mai ki %1}
 #alias kkm {kk %1; mai ki %1}
 #alias kos {kst %1; ko %1}
-#alias slh {bot slam %1; ko %1}
+#alias slki {slam %1; ki %1}
 #ALIAS {kha}
 {
 	js harm
@@ -2707,12 +2718,11 @@ reseteye;
 #alias alc {jd as lo}
 #alias alcm {alc macabre}
 #alias alcb {alc book}
-#ALIAS {lcb}
-{
-	js locate book
-}
+#ALIAS {lcb} { lc book; lc book; }
+
 #alias lcm {lc macabre}
-#alias lct {lc tablet}
+#alias lct {lc tablet; lc tablet}
+#alias lcharm {lc charm; lc charm}
 #ALIAS {log}
 {
 	#if {"%0" == "on"}
@@ -3791,20 +3801,21 @@ richard_wan@hotmail.com;	1;	1;	1;	1;
 #alias bepres {get %1 belt; present %1}
 #alias kylepres {bepres books; bepres sheaf; bepres code; bepres package; bepres parchment}
 #alias prepstone {
- bot {guard stop; tk Talinia};
+ bot {guard stop; tk $skyscout};
  modemelee;
 }
 #alias hua {#sky {hunt %1; huntmode agg}}
 #alias hud {#sky huntmode dis}
+#alias vass4 {nospam 6 koi}
 #alias modebow {
-  #alias vass reshoot;
+  #alias vass vass4;
   rem $skyprime; rem $skyoff;
   get bow belt; hold bow;
   #alias ota reshoot;
   eng ko;
   #alias oag {mac ko %%2};
   #alias refade {cancel; wingsweep; fade; reshoot};
-  #alias rs brs;
+  #alias rs mac brs;
   #action {^You {barely hit|hit}} {nospam 3 refade};
   #action {^You {miss|bruise} {.+with your hit.$}} {nospam 3 refade};
 }
@@ -3984,7 +3995,7 @@ cancel;
 #alias nrs {nospam 3 rs}
 #alias bavash {bt2 toram vashka}
 #alias dnrs {#delay %1 {nrs %2}}
-#action {^A yellowish-{\w+} cloud} {oncloud}
+#action {^A yellowish-{\w+} cloud} {nospam 3 oncloud}
 #alias oncloud {gt -->    GUST please}
 #alias tmpa {%1 %2; ota; temp}
 #alias ksbt {tmpa ksb}
@@ -4458,7 +4469,6 @@ cancel;
 #alias boas {boa; oct}
 #alias mshgi {cancel; mssh girl}
 #alias moa {mag otaa; mai ott}
-#action {^{\d.+:sitting.+Me:}} {setfight 1 sitme; groupcaptureoff; nospam 1 stand} {4}
 #alias asm {bot #alias rally {slam; rall} }
 #alias asma {asm; mai ass}
 #alias treein {ride cart; %1; ride ferry; %1}
@@ -4481,7 +4491,7 @@ cancel;
   #action {^Warriors' Training Room} {lrn; smile};
   #action {disarms your weapon} {cancel; sysplay smb3_cannon; gw};
   #var circle1 {det ev};
-  #var weapon pike;
+  #var weapon bastard.sword;
   #action {^You are ready to slam again} {slam};
   #action {^You are now the new leader} {march};
   #action {^A gleaming silver medal warms up} {ll #show -->    Medal};
@@ -4757,7 +4767,7 @@ cancel;
   #replace vescape {"} {};
   #replace vescape {'} {};
 }
-#action {^{The book of the dead|A burned black prayerbook|A sparkling black bracelet equipped by T|A discolored helmet equipped by R|A shimmering prayerbook with silver pages|A pair of spiked sterling gauntlets equipped by Bors|A black metal pike in|The mithril plate of shadows|A ruby studded block of limestone|An iridescent hematite tablet|A stunning pearl-inlaid tablet|A golden twined oak longbow equipped|A gold inlaid bone bracer equipped|A holy talisman|The cape of shadows in a|A bladeless sword equipped|A suit of flexible red dragon scale armor equipped|An ancient holy avenger equipped|Gauntlets of ogre power equipped|A ring of braided bones equipped|A dwarven face shield|A sky blue prayerbook with sapphire runes|A dragonrider's talisman|A moist piece of sea sponge|A gangrenous foot|A shimmering cube|A small piece of meteorite|A grey stone bracelet equipped|A glowing golden amulet|A black domino is in|A radiant white prayerbook|A satiny layer of ectoplasm|A lone, gray flame|A feathered dreamcatcher|A golden battle-honor equipped|A book with frosted glass covers|A globe of sparkling liquid in a steel|A green dragonhide spellbook|A wretched medallion|An ivory spined spellbook|A translucent jade|A charred black ring equipped|The mottled robes of the Archmagus in|A golden bracelet inlaid with emeralds in|A tightly bound tome of magic|A floppy hat|A tiny jade effigy|A timeworn book bound with chains|A belt of cured hylar skin equipped|A wispy black veil|A prayerbook with gleaming pearl covers|A delicate prayerbook wrapped with silk|An ivy-covered slab of rock|A silver and ruby ring|A battlehammer inscribed with Solamnic|A ring of finest silver in|A dark elven bracelet in a}{.+}}
+#action {^{The book of the dead|A burned black prayerbook|A sparkling black bracelet equipped by T|A discolored helmet equipped by R|A shimmering prayerbook with silver pages|A pair of spiked sterling gauntlets equipped by Bors|A black metal pike in|The mithril plate of shadows|A ruby studded block of limestone|An iridescent hematite tablet|A stunning pearl-inlaid tablet|A golden twined oak longbow equipped|A gold inlaid bone bracer equipped|A holy talisman|The cape of shadows in a|A bladeless sword equipped|A suit of flexible red dragon scale armor equipped|An ancient holy avenger equipped|Gauntlets of ogre power equipped|A ring of braided bones equipped|A dwarven face shield|A sky blue prayerbook with sapphire runes|A dragonrider's talisman|A moist piece of sea sponge|A gangrenous foot|A shimmering cube|A small piece of meteorite|A charm covered|A grey stone bracelet equipped|A glowing golden amulet|A black domino is in|A radiant white prayerbook|A satiny layer of ectoplasm|A lone, gray flame|A feathered dreamcatcher|A golden battle-honor equipped|A book with frosted glass covers|A globe of sparkling liquid in a steel|A green dragonhide spellbook|A wretched medallion|An ivory spined spellbook|A translucent jade|A charred black ring equipped|The mottled robes of the Archmagus in|A golden bracelet inlaid with emeralds in|A tightly bound tome of magic|A floppy hat|A tiny jade effigy|A timeworn book bound with chains|A belt of cured hylar skin equipped|A wispy black veil|A prayerbook with gleaming pearl covers|A delicate prayerbook wrapped with silk|An ivy-covered slab of rock|A silver and ruby ring|A battlehammer inscribed with Solamnic|A ring of finest silver in|A dark elven bracelet in a}{.+}}
 {
  ct %1:%2;
  dtell %1:%2;
@@ -5111,6 +5121,7 @@ cancel;
 #HIGHLIGHT        {macabre}         {green}                      {5}
 #HIGHLIGHT        {A large creature paws at the ground}         {green}                      {5}
 #HIGHLIGHT        {hulking beast}         {green}                      {5}
+#high {phoenix is perched here, preening} {green}
 #HIGHLIGHT        {has an ethereal shimmer}         {green}                      {5}
 #HIGHLIGHT        {regal kingfisher puffs}         {green}                      {5}
 #HIGHLIGHT        {horrible looking vulture}         {green}                      {5}
@@ -5143,10 +5154,14 @@ cancel;
 #highlight {barely see a small stick} {green}
 #highlight {A squishy, yellowish blob} {green}
 #highlight {charm} {green}
+#highligh {briefly glow red} {green}
+#highlight {aura of command} {green}
 #HIGHLIGHT        {small piece of meteorite}         {green}                      {5}
 #HIGHLIGHT        {peculiar looking rock is lying on the ground here}         {green}                      {5}
 #HIGHLIGHT        {wispy black veil}         {green}                      {5}
 #HIGHLIGHT        {gangrenous foot}         {green}                      {5}
+#sub {charm covered in a sparkling silvery mist} {charm covered in a sparkling silvery mist(RITUAL VOYAGE)}
+#sub {charm covered in a lone gray flame} {charm covered in a lone gray flame(HEALING WAVE)}
 #HIGHLIGHT        {green swordsman gloves}         {green}                      {5}
 #highlight {A man with bright red skin glistens with sweat} {green}
 #HIGHLIGHT        {ethereal energy}         {green}                      {5}

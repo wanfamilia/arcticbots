@@ -104,6 +104,7 @@ towaterspan
 dragonpoint
 recuperate tar
 tarsinn
+otik
 solinn
 solrank
 recuperate sol
@@ -271,6 +272,7 @@ bogkey
 bogmire
 bogmire
 nytetunnel
+nyteconverge
 ritkago
 kagoboulder
 hyuk
@@ -387,12 +389,14 @@ startbalcombe
 serra
 lhex
 balcombe
+fyzian
 nerguards
 gownnocharm
 raynemansakr
 rayneselissa
 thcsmith
 palgrate
+palthief
 drogo dk quest
 jibur
 totstatue
@@ -448,3 +452,6 @@ kerius
 rainsong
 palthug
 shoaldome
+ansabar
+hctmaze3
+egreckl
