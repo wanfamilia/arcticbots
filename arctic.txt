@@ -58,6 +58,7 @@
 #alias rtm {retrieve 1; wear medal}
 #alias dohctvault {pull down; pull right; pull right; pull up; pull left; pull down; pull down ; pull handle}
 #alias onleader {#delay 1 %1}
+#alias norally bot #alias rally donothing
 #alias gtca {gt someone small: crank catapult, wear a light, kill mob, loot, wear helmet, all west, get bag, east north east, then stack commands: drop bag, light bag in room}
 #alias waitphoen {
   #action {phoenix is perched here} {noisy};
@@ -4478,7 +4479,6 @@ cancel;
 #alias aog bot {st; c 'a o g'}
 #alias aoc bot {st; c 'a o c'} 
 #alias maog {bot mem 'a o g'}
-#action {^{\d.+}:sitting} {nospam 1 stand} {4}
 #alias mai {#arc}
 #alias knoc {mag c 'knock'}
 #alias subl {mag js sublimation}
