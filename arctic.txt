@@ -3811,6 +3811,7 @@ richard_wan@hotmail.com;	1;	1;	1;	1;
 #alias modebow {
   #alias vass vass4;
   rem $skyprime; rem $skyoff;
+  #alias boa {palass; st; ko}
   get bow belt; hold bow;
   #alias ota reshoot;
   eng ko;
@@ -4773,6 +4774,7 @@ cancel;
  dtell %1:%2;
 }
 
+#alias afterkenny {north; otk squire; ki mage}
 #alias terscis {hold scissors; pull black.strings; cut black.strings; cut blue.strings; pull green.strings; cut green.strings; pull white.string}
 #alias runbard {gorec kenbard}
 #alias runth {mrun tollhouse}
