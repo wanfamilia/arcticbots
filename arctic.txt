@@ -331,7 +331,6 @@ reseteye;
 #sub {an iron ration} {a juicy steak}
 #sub {a translucent shroud} {a translucent shroud(storm)}
 #sub {rejected ideas} {us make this game better you have, hmm?}
-#sub {a shrunken demon's horn charm} {a shrunken demon's horn charm(nap)}
 #sub {pair of soft lambskin moccasins} {pair of soft lambskin moccasins(darkeep)}
 #sub {Aurinite ring} {Aurinite ring(ct)}
 #sub {necklace with a small ruby condor} {ruby condor necklace(slot6)}
@@ -339,7 +338,6 @@ reseteye;
 #sub {ancient jade ring} {ancient jade ring(tot)}
 #sub {shroud of slimy ectoplasm} {shroud of slimy ectoplasm(khur)}
 #sub {adamantine bracelet} {adamantine bracelet(spider)}
-#sub {sparkling black bracelet} {sparkling black bracelet(ft)} 
 #sub {feathered blowgun} {feathered blowgun(4d5 1/2 imm_disarm 10hedo)}
 #sub {rune etched mithril ring} {rune etched mithril ring(spider)}
 #sub {amber necklace} {amber necklace(invis deti)}
@@ -350,10 +348,8 @@ reseteye;
 #sub {desert wraith's tattered robes} {desert wraith robes(khur)}
 #sub {malachite encrusted bracelet} {malachite bracelete(lagaar)}
 #sub {plume of luminous blue fringe} {luminous blue plume(-2ss resco 30 wb)}
-#sub {wretched medallion}{wretched medallion(+slot6)}
 #sub {tattered purple cloak} {tattered purple cloak(ac -10, reco 36, npp)}
 #sub {pitch black bracer} {pitch black bracer(-1ss 2hr)}
-#sub {belt of cured hylar skin}{cured hylar skin belt(darkeep)}
 #sub {rat ration} {bacon cheeseburger}
 #sub {grey stone bracelet}{grey stone bracelet(2con)}
 #sub {ring of sea elven bones} {ring of sea elven bones(+345slot 1cl 6hit)}
@@ -363,8 +359,6 @@ reseteye;
 
 #sub {shark jaw bone crossbow}{shark jaw bone crossbow(dargo)}
 #sub {giant crab shell shield}{giant crab shell shield(-1ss 8conc)}
-#sub {a shadow orb}{the Shadow Orb(+slot -25% damtaken)}
-#sub {ring of finest silver}{finest silver ring(bluff)}
 #sub {grey band of residual ghostly energy}{residual ghostly energy(+slot5 npp)}
 #sub {pair of baggy black pants} {black baggy pants(nytes)}
 #sub {pair of succubus wings}{succubus wings pair(cv)}
@@ -374,7 +368,6 @@ reseteye;
 #sub {silver fauld} {silver fauld (2con)}
 #sub {jet-black leather quiver} {jet-black leather quiver(rhr1 shoot5)}
 #sub {elongated leather quiver} {elongated leather quiver(2rhr 3inst)}
-#sub {dark elven bracelet} {dark elven bracelet(+slot6)}
 #sub {nightmare's twisted tendril} {nightmare tendril(imm_fear)}
 #sub {Brab tells your clan 'Mahs Sucks!'} {Brab: Battle Cryer Online}
 #sub {Mahs tells your clan 'Brab Blows!'} {Mahs: Ritual Voyage good to go, sir}
@@ -385,14 +378,12 @@ reseteye;
 #sub {a sturdy staff of rosewood} {the Sturdy Rosewood Staff(2d5 3/3specs)}
 #sub {bloody whale heart amulet}{bloody whale heart amulet(+1slot6 8reg)}
 #sub {silver girdle} {silver girdle (2con 2hr)}
-#sub {golden bracelet inlaid with emeralds} {golden emerald bracelet(bluff)}
 #sub {colossal black iron war flail} {colossal black iron war flail(3d10 0/3, w48)}
 #sub {small silver medallion} {small silver medallion(light det invis neck)}
 #sub {spider shaped braces} {spider shaped braces(spider)}
 #sub {fiery red wrist guard} {fiery red wrist guard(fc)}
 #sub {clear crystal ring} {clear crystal ring(1wis)}
 #sub {neck ring of crystal and stone} {neck ring of crystal and stone(ct)}
-#sub {a gold inlaid bone bracer} {a gold inlaid bone bracer(lemuria)}
 #sub {ruby and diamond necklace} {ruby and diamond necklace(1int)}
 #sub {diamond-studded jaguar collar} {diamond-studded jaguar collar(1con)}
 #sub {tunic of leviathan scales}{ tunic of leviathan scales(2str, water, spell-2, here 8, sense life)}
@@ -4807,11 +4798,6 @@ cancel;
   #replace vescape {"} {};
   #replace vescape {'} {};
 }
-#action {^{The book of the dead|A velvet book tied with blue ribbon carried|A burned black prayerbook|A sparkling black bracelet equipped by T|A discolored helmet equipped by R|A slender book bound with oily plates equipped|A blackened charm of defiled flesh carried|A ball-shaped charm formed of enigmatic energy carried|A spherical obsidian tablet|A small tattered prayerbook carried|A shimmering prayerbook with silver pages|A pair of spiked sterling gauntlets equipped by Bors|A black metal pike in|The mithril plate of shadows|A ruby studded block of limestone|An iridescent hematite tablet|A stunning pearl-inlaid tablet|A golden twined oak longbow equipped|A gold inlaid bone bracer equipped|A holy talisman|The cape of shadows in a|A bladeless sword equipped|A suit of flexible red dragon scale armor equipped|An ancient holy avenger equipped|Gauntlets of ogre power equipped|A ring of braided bones equipped|A dwarven face shield|A sky blue prayerbook with sapphire runes|A dragonrider's talisman|A moist piece of sea sponge|A gangrenous foot|A shimmering cube|A small piece of meteorite|A charm covered|A grey stone bracelet equipped|A glowing golden amulet|A black domino is in|A radiant white prayerbook|A satiny layer of ectoplasm|A lone, gray flame|A feathered dreamcatcher|A golden battle-honor equipped|A book with frosted glass covers|A globe of sparkling liquid in a steel|A green dragonhide spellbook|A wretched medallion|An ivory spined spellbook|A translucent jade|A charred black ring equipped|The mottled robes of the Archmagus in|A golden bracelet inlaid with emeralds in|A tightly bound tome of magic|A floppy hat|A tiny jade effigy|A timeworn book bound with chains|A belt of cured hylar skin equipped|A wispy black veil|A prayerbook with gleaming pearl covers|A delicate prayerbook wrapped with silk|An ivy-covered slab of rock|A silver and ruby ring|A battlehammer inscribed with Solamnic|A ring of finest silver in|A dark elven bracelet in a}{.+}}
-{
- ct %1:%2;
- dtell %1:%2;
-}
 
 #alias stormout {#action {^An Unfortunate Fall}{east; up}}
 #alias afterkenny {north; otk squire; ki mage}
@@ -5602,24 +5588,20 @@ cancel;
 #VARIABLE         {weapon}                {sword}
 #VARIABLE         {window}                {{ } { } { } { } { }}
 
-#sub {charm of defiled flesh}{charm of defiled flesh(rotting flesh)}
-#sub {A velvet book tied with blue ribbon} {A velvet book tied with blue ribbon(RELO)}
 #sub {animated suit of armor} {animated suit of armor(immheat)}
-#sub {charm formed of enigmatic energy} {charm formed of enigmatic energy(dark soul)}
-#sub {wispy charm of twined hair} {wispy charm of twined hair(soul protection)}
 
 #var itemlocates {
     {book of the dead}{animate}
-    {velvet book tied with blue ribbon carried}{RELOCATE}
+    {velvet book tied with blue ribbon}{RELOCATE}
     {compendium of ancient magic}{LOCATE}
     {burned black prayerbook}{??}
     {sparkling black bracelet}{ft}
     {discolored helmet equipped}{kern}
     {slender book bound with oily plates}{gate}
     {blackened charm of defiled flesh}{rotting flesh}
-    {ball-shaped charm formed of enigmatic energy carried}{dark soul}
+    {ball-shaped charm formed of enigmatic energy}{dark soul}
     {spherical obsidian tablet}{??}
-    {small tattered prayerbook carried}{??}
+    {small tattered prayerbook}{??}
     {shimmering prayerbook with silver pages}{??}
     {pair of spiked sterling gauntlets}{cv}
     {black metal pike}{lemuria}
@@ -5665,13 +5647,18 @@ cancel;
     {dark elven bracelet}{bog}
 }
 
-#action {^{A|An|The}{.+}{carried|equipped|in|is}{.+}}
+#action {^{A|An|The} {.+} {carried|equipped|in|is}{.+}}
 {
-  locatereport %2 %3%4
+  locatereport {%2} {%3%4};
 }
 
 #alias locatereport {
-  #if {$itemlocates[%1] != ""} {
-    #show %1($itemlocates[%1]):%2;
-  }
+  #if {"$itemlocates[%1]" != ""} {
+    alltell {%1($itemlocates[%1]): %2};
+  } {#show :nomatch :%1:}
+}
+
+#alias alltell {
+ ct %1;
+ dtell %1;
 }
