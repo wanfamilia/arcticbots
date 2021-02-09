@@ -5222,13 +5222,6 @@ cancel;
 #HIGHLIGHT        {peculiar looking rock is lying on the ground here}         {green}                      {5}
 #HIGHLIGHT        {wispy black veil}         {green}                      {5}
 #HIGHLIGHT        {gangrenous foot}         {green}                      {5}
-#sub {charm covered in a sparkling silvery mist} {charm covered in a sparkling silvery mist(RITUAL VOYAGE)}
-#sub {charm covered in a lone gray flame} {charm covered in a lone gray flame(HEALING WAVE)}
-#sub {charm of defiled flesh}{charm of defiled flesh(rotting flesh)}
-#sub {A velvet book tied with blue ribbon} {A velvet book tied with blue ribbon(RELO)}
-#sub {animated suit of armor} {animated suit of armor(immheat)}
-#sub {charm formed of enigmatic energy} {charm formed of enigmatic energy(dark soul)}
-#sub {wispy charm of twined hair} {wispy charm of twined hair(soul protection)}
 #HIGHLIGHT        {green swordsman gloves}         {green}                      {5}
 #highlight {A man with bright red skin glistens with sweat} {green}
 #HIGHLIGHT        {ethereal energy}         {green}                      {5}
@@ -5608,3 +5601,77 @@ cancel;
 #VARIABLE         {vc2}                   {}
 #VARIABLE         {weapon}                {sword}
 #VARIABLE         {window}                {{ } { } { } { } { }}
+
+#sub {charm of defiled flesh}{charm of defiled flesh(rotting flesh)}
+#sub {A velvet book tied with blue ribbon} {A velvet book tied with blue ribbon(RELO)}
+#sub {animated suit of armor} {animated suit of armor(immheat)}
+#sub {charm formed of enigmatic energy} {charm formed of enigmatic energy(dark soul)}
+#sub {wispy charm of twined hair} {wispy charm of twined hair(soul protection)}
+
+#var itemlocates {
+    {book of the dead}{animate}
+    {velvet book tied with blue ribbon carried}{RELOCATE}
+    {compendium of ancient magic}{LOCATE}
+    {burned black prayerbook}{??}
+    {sparkling black bracelet}{ft}
+    {discolored helmet equipped}{kern}
+    {slender book bound with oily plates}{gate}
+    {blackened charm of defiled flesh}{rotting flesh}
+    {ball-shaped charm formed of enigmatic energy carried}{dark soul}
+    {spherical obsidian tablet}{??}
+    {small tattered prayerbook carried}{??}
+    {shimmering prayerbook with silver pages}{??}
+    {pair of spiked sterling gauntlets}{cv}
+    {black metal pike}{lemuria}
+    {mithril plate of shadows}{shadows}
+    {ruby studded block of limestone}{??}
+    {iridescent hematite tablet}{??}
+    {stunning pearl-inlaid tablet}{??}
+    {golden twined oak longbow equipped}{enbir}
+    {gold inlaid bone bracer equipped}{lemuria}
+    {holy talisman}{bluff}
+    {cape of shadows}{shadows}
+    {bladeless sword}{shadows}
+    {suit of flexible red dragon scale armor}{cv}
+    {ancient holy avenger equipped}{??}
+    {Gauntlets of ogre power equipped}{??}
+    {ring of braided bones equipped}{cv}
+    {dwarven face shield}{bluff}
+    {sky blue prayerbook with sapphire runes}{??}
+    {dragonrider's talisman}{pax}
+    {charm covered in a sparkling silvery mist} {RITUAL VOYAGE}
+    {charm covered in a lone gray flame}{HEALING WAVE}
+    {grey stone bracelet}{bluff}
+    {glowing golden amulet}{bluff}
+    {black domino}{bluff}
+    {radiant white prayerbook}{??}
+    {golden battle-honor}{dv}
+    {book with frosted glass covers}{??}
+    {wretched medallion}{shadows}
+    {ivory spined spellbook}{??}
+    {translucent jade tablet}{mass refresh}
+    {charred black ring}{darke}
+    {mottled robes of the Archmagus}{ft}
+    {golden bracelet inlaid with emeralds}{bluff}
+    {tightly bound tome of magic}{??}
+    {floppy hat}{shayds}
+    {timeworn book bound with chains}{??}
+    {belt of cured hylar skin}{darkeep}
+    {prayerbook with gleaming pearl covers}{??}
+    {delicate prayerbook wrapped with silk}{??}
+    {silver and ruby ring}{kerns}
+    {battlehammer inscribed with Solamnic runes}{pod}
+    {ring of finest silver}{bluff}
+    {dark elven bracelet}{bog}
+}
+
+#action {^{A|An|The}{.+}{carried|equipped|in|is}{.+}}
+{
+  locatereport %2 %3%4
+}
+
+#alias locatereport {
+  #if {$itemlocates[%1] != ""} {
+    #show %1($itemlocates[%1]):%2;
+  }
+}
