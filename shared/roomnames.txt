@@ -208,6 +208,7 @@ trade
 stormspin
 noom
 startluni
+dargkdoor
 azul
 instinct sky 52
 fidlas
@@ -356,6 +357,7 @@ startlyt
 startshadow
 ritquali
 irdapearl
+rivercrevice
 startriver
 harmonium
 unemestar
@@ -379,6 +381,7 @@ alignen
 alignne
 aligncn
 alignnl
+kagowhite
 vinwar
 vindragontrain
 alignng
@@ -429,6 +432,7 @@ kyle
 cokbakali
 vinbank
 instinct mmtn 51 grizzly
+tantnorth
 shardneck
 startvrykith
 startboylein
@@ -456,3 +460,4 @@ shoaldome
 ansabar
 hctmaze3
 egreckl
+lashathal

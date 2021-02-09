@@ -151,7 +151,7 @@
 }
 
 
-#alias ghob {sha {jd gho be; eat berry; drop all.berry}}
+#alias ghob {sha {jd gho be; eat berry; drop all.berry; js mons; mem 'ri vo' 'he wa'}}
 #alias gbt {jd gho be; #3 {taste berry}; drop all.berry}
 
 #variable castpat {^{\s}{\w+}{\s+\[.+}{Cleric|White Robe|Red Robe|Shaman|Druid|Black Robe|Magic User}{$}}
@@ -255,7 +255,9 @@
 #alias asit {
   #action {^{$linebegin}{\w+} heroically} {mota %%3}
 }
-#alias mota {classif ota %1}
+
+#alias macota mac ota
+#alias mota {classif macota %1}
 #alias impoi {rem plain.ring; wear mithril.ring}
 #alias imbli {rem mithril.ring; wear plain.ring}
 #action {^{$linebegin}Through your wizard's eye: {\w+} has arrived from the {\w+}}
@@ -328,7 +330,9 @@ reseteye;
 #sub {bow of aged yew} {bow of aged yew(suun vault)}
 #sub {an iron ration} {a juicy steak}
 #sub {a translucent shroud} {a translucent shroud(storm)}
+#sub {rejected ideas} {us make this game better you have, hmm?}
 #sub {a shrunken demon's horn charm} {a shrunken demon's horn charm(nap)}
+#sub {pair of soft lambskin moccasins} {pair of soft lambskin moccasins(darkeep)}
 #sub {Aurinite ring} {Aurinite ring(ct)}
 #sub {necklace with a small ruby condor} {ruby condor necklace(slot6)}
 #sub {bone cabalist shield} {bone cabalist shield(+68slot nocharm, 5hedo, cha2)}
@@ -373,7 +377,7 @@ reseteye;
 #sub {dark elven bracelet} {dark elven bracelet(+slot6)}
 #sub {nightmare's twisted tendril} {nightmare tendril(imm_fear)}
 #sub {Brab tells your clan 'Mahs Sucks!'} {Brab: Battle Cryer Online}
-#sub {Mahs tells your clan 'Fuck you Brab!'} {Mahs: Ritual Voyage good to go, sir}
+#sub {Mahs tells your clan 'Brab Blows!'} {Mahs: Ritual Voyage good to go, sir}
 
 #sub {idol carved of green malachite} {green malachite idol(imm_poi imm_curse regas 16)}
 #sub {golden band coated with red dust} {red gold band(mindshield imm_sleep 2cl)}
@@ -538,7 +542,8 @@ reseteye;
 #alias lcshayd {lctab}
 #alias lcck {lc ectoplasm; lc dreamcatcher; lc flame; lc brains}
 #alias lcshado {lc wretched; lc shadow; lc gossamer; lc bladeless}
-#alias rlcred {rps me; gobal; rd imp; runto s4e8n6w2sw2s2wnw7nw; lcf; lcb; lc flexible.red ; }
+#alias rlcred {rps me; gobal; coli; rd imp; runto s4e8n6w2sw2s2wnw7n2w2nw9n2u4n; lcf; lcb; }
+#alias rlcredleg {rps me; gobal; rd imp; runto s4e8n6w2sw2s2wnw7nw; lcf; lcb; lc flexible.red ; }
 #alias rlcck {gobal; runto s4e9n4w3sw4sdw2s2ws5w; lcck}
 #alias rlckith {gosol; runto e2sd10se4sw5se4sw3s6wd2s; lckith}
 #alias rlcspi {gosol; runto e2sd8n3e5n4e3n9e5s6es2ese; climb ladder; ee; lckith}
@@ -613,6 +618,7 @@ reseteye;
   #action {^{\s+}{\w+}{(\s+(\w+))?}} {#line gag; untagged %%2 %%3;};
 }
 
+#alias lcter {lc slender.iron.key; lcb}
 #alias untagged
 {
   #if {"$evils[%1]"=="1" || "$evils[%2]"=="1"}{inclantitle evil %1 %2;};
@@ -634,7 +640,6 @@ reseteye;
 
 #alias showclans {
   showclan RISE;
-  showclan DnD;
   showclan evil;
 }
 
@@ -647,8 +652,8 @@ reseteye;
   #if {$oldsize!=$newsize}
   {
     #var oldclans[%1] {$clans[%1]};
-    ctell %1:$newsize $clans[%1][];
-  } {#showme %1:$newsize $clans[%1][]};
+    ctell %1:$newsize *clans[%1][];
+  } {#showme %1:$newsize *clans[%1][]};
 }
 
 #alias repclan {ctell %1:$clans[%1][];}
@@ -940,7 +945,7 @@ reseteye;
 }
 #alias rsp  {release %1.spirit}
 #alias lunion  {#action {^The local foliage}{kfoli}}
-#alias reshoot {st; koi $myaim; #if {"%1"==""}{tan watch}{watch %1}}
+#alias reshoot {st; tan watch; koi $myaim; }
 #alias lunioff {#unaction {^The local foliage}}
 #alias lunionsh {#action {^The local foliage}{otkk foliage}}
 #alias kfoli {ke foliage}
@@ -1471,7 +1476,7 @@ reseteye;
 #alias mloa {
   #config charset utf-8;
   #map read krynn.txt;
-  #if {"%1"==""} {#map goto solinn} {#map goto %1};
+  #if {"%1"==""} {#map goto mythsh} {#map goto %1};
   mapon;
 }
 
@@ -1494,6 +1499,7 @@ reseteye;
   #action {^{The Slimy Chute}} {mgo slimychute};
   #action {^Approaching a Rise} {mgo 3268};
   #actio {^A View of Palanthas} {mgo 5812};
+  #action {^The Inn of Myth} {mgo mythsh};
   #action {^Shore of the Mystic Island} {mgo 4008};
   #action {^A Dark Citadel Looms Overhead} {mgo citadel start};
   #action {^The End of River Shin} {mgo 10045};
@@ -1667,6 +1673,7 @@ reseteye;
 
 #alias abf {abs 1}
 #alias chs {channel %1.spirit %2}
+#alias tch tan chs
 #alias chf {chs 1 %1}
 #alias fsd {fly stop; down}
 
@@ -1826,8 +1833,9 @@ reseteye;
 {
 	get coins corpse;
 	tw;
-	exam corpse;
+	look in corpse;
 	get coins;
+        lootcomp;
 }
 
 #alias aftergargan {
@@ -1835,7 +1843,6 @@ reseteye;
   north;
 }
 
-#alias yi {sky ki %1; ota Talinia}
 
 #alias lootcomp {
   get all.component corpse;
@@ -2004,7 +2011,7 @@ reseteye;
 #alias dofote {enter portal; say evil; enter portal; say will; enter portal; say win; enter portal}
 #alias bfsh bfg $myshaman
 #alias bfsk bfg $skyscout
-#alias palsham {mai voy rohane; #delay 1 {mai bfg $myshaman; buftwo}; }
+#alias palsham {mai voy boone; #delay 1 {mai bfg $myshaman; buftwo}; }
 #alias vogr {mai; voy %1; #delay 1 {bfg $myshaman; sumo}; ghob; group form; hb %1}
 #alias buftwo
 {
@@ -2405,8 +2412,14 @@ reseteye;
 		m s '$circle1';
 		#variable firstspell 0
 	}
+   for '$circle1';
 }
 
+#alias spamjumpriver {
+  #action {^You scramble to shore as the river disappears} {jump river};
+  jump river;
+}
+ 
 #var {circle1} {bone}
 
 #ALIAS {jd2}
@@ -2488,7 +2501,7 @@ reseteye;
 {
 	jd ma bl
 }
-#alias kig {mag {otk %1; jsa ignite %1}}
+#alias kig {mag {jsa ignite %1}}
 #alias krot {jsa rot}
 #alias ksb {jda s b}
 #alias frn {st; fren}
@@ -3145,11 +3158,13 @@ richard_wan@hotmail.com;	1;	1;	1;	1;
 #alias rga {ota %1; rg %1}
 #alias rgab {brs %1; rga %1}
 
+#alias rlckhur {gobal; js imp; runto s4e8n4wn3wn2w4nwn; lcharm; lcb; lc tablet}
 #alias novoyyet {donothing %1; ct If I deactivate my ethical subroutines, I could insist on yet another ritual voyage run}
 #alias modeshaman {
   #alias bigrest {rest; tan watch; #var resting 1};
   #alias othervoy othervoyimpl;
-  #alias cleancomp cleancomp1;
+  #alias cleancomp cleancomp2;
+  #alias assthis ott;
   #var {circle1} {de po};
   #unticker feedme;
   eng dotk;
@@ -3698,6 +3713,7 @@ richard_wan@hotmail.com;	1;	1;	1;	1;
   #action {^Scouts' Training Room} {lrn; smile};
   #action {^Elrax the master scout is here,} {lrn; smile};
   #delay 30 {group};
+  legarr;
   fly;
 }
 
@@ -3706,6 +3722,7 @@ richard_wan@hotmail.com;	1;	1;	1;	1;
 #alias vom {voy pryor; rg pryor; mai rest}
 #alias ctt {ct tick in $tilltick}
 #alias blay {bot {cancel; st; lay %1}}
+#alias bhl blay
 #alias bfree {bot invoke reorx}
 #alias nyno {enter hole; n; n; s}
 #alias nyso {n; s; enter hatch; s}
@@ -3716,9 +3733,9 @@ richard_wan@hotmail.com;	1;	1;	1;	1;
   rpm; sr me; transfer %1;
   #action {^The time for giving} {js imp; sr me; rpm; transfer %1; lrn; rest; deep}
 }
-#alias fastdam {modebow; hover; pburst; archery s 5 p 5 a 2; legarr}
+#alias fastdam {modebow; inst harrier; hover; archery s 5 p 5 a 2; }
 #alias bbn {bot kk %1; bn %1}
-#alias legarr {#alias upvolley volley; inst owl; inst owl; gather; #delay 900 {quell owl}}
+#alias legarr {skyfood; #delay 900 {skyscav}; pburst; fastdam}
 #alias kwe {kw eject}
 #alias kdsham {otk %1; ko %1}
 #alias kda {kd %1; ass}
@@ -3786,7 +3803,7 @@ richard_wan@hotmail.com;	1;	1;	1;	1;
 #alias pwil {wildfire; #action {^A tingle in your fingertips} {wildfire}}
 #alias camwil {camp; wildfire}
 #alias fastpow {archery s 5 a 1 p 3; modebow}
-#alias fastacc {archery s 5 a 3 p 1; modebow}
+#alias fastacc {archery s 5 a 3 p 1; modebow; }
 #alias droparr {drop all.raven; drop all.sparrow; drop all.crow; drop all.owl}
 
 #alias mabu {mapload; mgo recuperate bung}
@@ -3807,13 +3824,14 @@ richard_wan@hotmail.com;	1;	1;	1;	1;
 }
 #alias hua {#sky {hunt %1; huntmode agg}}
 #alias hud {#sky huntmode dis}
-#alias vass4 {nospam 6 koi}
+#alias vass4 {nospam 6 assthis}
+#alias aimass {watch %1; ko}
 #alias modebow {
   #alias vass vass4;
   rem $skyprime; rem $skyoff;
-  #alias boa {palass; st; ko}
   get bow belt; hold bow;
-  #alias ota reshoot;
+  #alias ota aimass;
+  #alias assthis tan aimass;
   eng ko;
   #alias oag {mac ko %%2};
   #alias refade {cancel; wingsweep; fade; reshoot};
@@ -3865,7 +3883,7 @@ richard_wan@hotmail.com;	1;	1;	1;	1;
 	}
 }
 
-#alias jsrelo jsport
+#alias jsrelo js relo
 #alias jsport {js tele %1; ddo %1}
 #alias dofrosty {say it is time for ice to turn to tin once again}
 #ALIAS {qp}
@@ -4017,8 +4035,9 @@ cancel;
   #alias ide {rec identify};
   #var held clear.sphere;
   #alias remage {rewin; modemage; modewhite};
-  #alias jsrelo jsport;
-  #var food food;
+  #alias jsrelo js relo;
+  #var food turkey;
+  nutr $food;
   #alias mlo {msw locate knock};
   #action {^{\w+} makes a mockery out of everyone} {nospam 30 jmoc %%1};
 }
@@ -4049,6 +4068,7 @@ cancel;
 #action {^Mustakrakish, the ancient death troll glows a bright lunar white} {gt -->    TROLL CLEANSED  !!}
 #alias logshamo {logwin; $myshaman; mypw; 1;1;modeshaman; fly}
 #alias logsham {newses arc {$myshaman; mypw; 1; 1; modeshaman; fly}  }
+#alias logdru newses arc {wagner; mypw; 1; 1; modedruid; fly}
 #alias newchar {newses %1 {makechar %2 %3}}
 #alias lcvoy {lc meteorite; lc veil; lc clove; lc effigy}
 #alias plpd {present letter; present pendant}
@@ -4057,34 +4077,43 @@ cancel;
 #alias logpal {logbot {boone; mypw; 1; 1; modepala; fly; d; d; n; e; jd r i}}
 #alias logwar {logbot {dawsen; mypw; 1; 1; modepala; modewar; fly}}
 #alias logmou logbot {penniman; mypw; 1;1; modepala; fly}
-#alias logdar logbot {iyler; mypw; 1; 1; modepala; modedar; fly}
+#alias logdar logbot {gere; mypw; 1; 1; modepala; modedar; fly}
 #alias logwaro newses war {dawsen; mypw; 1; 1; modepala; modewar; fly; #alias bot #war;}
 #alias logclero newses hea {wilson; mypw; 1; 1; modecleric; fly; #alias mai  {#hea} }
 #alias logthi newses thi {nikson; mypw; 1; 1; fly; modethief}
 #alias modethief {
-  #alias boa {ass; bpa};
   #action {^The master assassin looks at you from behind} {lrn; smile};
   #action {^Aldur A'Kul the master thief sits} {lrn; smile};
+  #alias lootcomp donothing;
   #alias rethi {rewin; modethief};
   #alias onerest donothing;
   #alias palassthis {assist %%1; kstthis};
+  #alias assthis assist;
   #var weapon spear;
   #alias vass vass2;
-  #alias boa {assist; bpa};
 }
 #alias thi {#thi}
+#alias modedruid {
+  #var circle1 {fa fo};
+  #alias redru {rewin; modedruid};
+  #alias hp js par;
+}
 #alias pc {thi pick}
 #alias thuc {throat; unbalance; coup}
 #alias disablekal {4e2s2wd2n;det;det plate;disable plate;!;ene;det;det chest in r;det 2.chest in r;det 3.chest in r;disable chest in r;!;disable 2.chest in r;!;disable 3.chest in r;!;pick chest in r;pick 2.chest in r;pick 3.chest in r;wsww3n;learn all;3sessu2enn4w}
 #alias kalth {7w;open gate; 4w5n2w4n2ws3ws8w2sw}
-#alias disablevin {sneak;3n6w5n;open door east;2e;open trapdoor;d;det;det chest in r;det 2.chest in r;det 3.chest in r;det 4.chest in r;disable chest in r;!;disable 2.chest in r;!;disable 3.chest in r;!;disable 4.chest in r;!;pick chest in r;pick 2.chest in r;pick 3.chest in r;pick 4.chest in r;op chest in r;op 2.chest in r;open 3.chest in r;open 4.chest in r;get all chest in r;get all 2.chest in r;get all 3.chest in r;get all 4.chest in r;learn all;open hatch; uw;open door w;w;sneak;5s6e3s;}
+#alias dedi {detect %1 in room; disable %1 in room; disable %1 in room; disable %1 in room; pick %1 in room; pick %1 in room;}
+#alias disablevin {sneak;runto 3n6w5n;open door east;2e;open trapdoor;d;det; dedi 1.chest; dedi 2.chest; dedi 3.chest; dedi 4.chest; op chest in r;op 2.chest in r;open 3.chest in r;open 4.chest in r;get all chest in r;get all 2.chest in r;get all 3.chest in r;get all 4.chest in r;learn all;open hatch; uw;open door w;w;sneak;5s6e3s;}
+#alias disablevino {sneak;3n6w5n;open door east;2e;open trapdoor;d;det;det chest in r;det 2.chest in r;det 3.chest in r;det 4.chest in r;disable chest in r;!;disable 2.chest in r;!;disable 3.chest in r;!;disable 4.chest in r;!;pick chest in r;pick 2.chest in r;pick 3.chest in r;pick 4.chest in r;op chest in r;op 2.chest in r;open 3.chest in r;open 4.chest in r;get all chest in r;get all 2.chest in r;get all 3.chest in r;get all 4.chest in r;learn all;open hatch; uw;open door w;w;sneak;5s6e3s;}
 #alias thgrate {4w2n2wd2wuw2n2e3n2w6n8w4n4wne}
-#alias disablepalanthas {open grate;sneak;d;det pile;disable pile;disable pile;disable pile;e;det pile;disable pile;disable pile;disable pile;sneak;eeee;det pile;disable pile;disable pile;disable pile;een;det pile;disable pile;disable pile;disable pile;swwwwwwwss;det pile;disable pile;disable pile;disable pile;nnwn;det pile;disable pile;disable pile;disable pile;nnneen;det pile;disable pile;disable pile;disable pile;n;det pile;disable pile;disable pile;disable pile;sswwssssesswws;learn all;neenn;open grate;u}
+#alias disablepalanthas {gustoff; open grate;sneak;d;det pile;disable pile;disable pile;disable pile;e;det pile;disable pile;disable pile;disable pile;sneak;eeee;det pile;disable pile;disable pile;disable pile;een;det pile;disable pile;disable pile;disable pile;swwwwwwwss;det pile;disable pile;disable pile;disable pile;nnwn;det pile;disable pile;disable pile;disable pile;nnneen;det pile;disable pile;disable pile;disable pile;n;det pile;disable pile;disable pile;disable pile;sswwssssesswws;learn all;neenn;open grate;u}
 #alias disable3 {
   kalinit;
   disablekal; kalth; rest;
-  #delay 180 {st; disablevin; thgrate; disablepalanthas; rest; sk};
+  #delay 180 thi mac disablevinpal;
 }
+
+#alias disablevinpal {st; disablevin; thgrate; disablepalanthas; rest; sk}
 #alias disablefull {
   logthi; disable3;
   #delay 420 {thiefout};
@@ -4130,7 +4159,11 @@ cancel;
 #alias modedar {
   modewar;
   #var circle1 curse;
+  #action {^A Hidden Shrine} {lrn; smile};
   #alias redar {repala; modedar};
+  #alias assthis {assist %1; dt; };
+  #alias vass vass2;
+  #alias asst assthis;
   eng dt;
 }
 
@@ -4262,14 +4295,16 @@ cancel;
 #alias onfair {#show atfair: }
 #alias buffcapture {
   #var buffs {none};
-  #action {^{\s+}{.+}$} captureaffect %%2;
+  #action {^{\s+}{.+\w}{\s+\[}} captureaffect %%2;
+  #action {^{\s+}{.+\w}$} captureaffect %%2;
   affect;
   dolater7 onbuffcapture;
 }
 
 #alias onbuffcapture
 {
-  #unaction {^{\s+}{.+}$};
+  #unaction {^{\s+}{.+\w}{\s+\[}};
+  #unaction {^{\s+}{.+\w}$};
   dost;
   afterbuffcapture;
 }
@@ -4356,6 +4391,7 @@ cancel;
 #alias modemage {
   nutr $food;
   #alias fastmem {deep};
+  #alias assthis ott;
   #action {disarms your weapon} {cancel; gw};
   guston;
   #var {circle1} {infrav};
@@ -4462,7 +4498,8 @@ cancel;
   bes paladine;
 }
 
-#alias boa {palass; mai ott}
+#alias boaold {palass; mai ott}
+#alias boa {las}
 #alias boe {boa; ass}
 #alias bos {palass; ass}
 #alias bof {boa; asf}
@@ -4489,7 +4526,9 @@ cancel;
   #alias bigrest {dism; rest; sip elixir};
   #var pet Steamboat;
   eng paleng;
+  #action {^Your hands tingle as a feeling of goodness} {ll #show :LAY ready} {7};
   #action {^Warriors' Training Room} {lrn; smile};
+  #alias assthis palassthis;
   #action {disarms your weapon} {cancel; sysplay smb3_cannon; gw};
   #var circle1 {det ev};
   #var weapon bastard.sword;
@@ -4768,27 +4807,29 @@ cancel;
   #replace vescape {"} {};
   #replace vescape {'} {};
 }
-#action {^{The book of the dead|A burned black prayerbook|A sparkling black bracelet equipped by T|A discolored helmet equipped by R|A shimmering prayerbook with silver pages|A pair of spiked sterling gauntlets equipped by Bors|A black metal pike in|The mithril plate of shadows|A ruby studded block of limestone|An iridescent hematite tablet|A stunning pearl-inlaid tablet|A golden twined oak longbow equipped|A gold inlaid bone bracer equipped|A holy talisman|The cape of shadows in a|A bladeless sword equipped|A suit of flexible red dragon scale armor equipped|An ancient holy avenger equipped|Gauntlets of ogre power equipped|A ring of braided bones equipped|A dwarven face shield|A sky blue prayerbook with sapphire runes|A dragonrider's talisman|A moist piece of sea sponge|A gangrenous foot|A shimmering cube|A small piece of meteorite|A charm covered|A grey stone bracelet equipped|A glowing golden amulet|A black domino is in|A radiant white prayerbook|A satiny layer of ectoplasm|A lone, gray flame|A feathered dreamcatcher|A golden battle-honor equipped|A book with frosted glass covers|A globe of sparkling liquid in a steel|A green dragonhide spellbook|A wretched medallion|An ivory spined spellbook|A translucent jade|A charred black ring equipped|The mottled robes of the Archmagus in|A golden bracelet inlaid with emeralds in|A tightly bound tome of magic|A floppy hat|A tiny jade effigy|A timeworn book bound with chains|A belt of cured hylar skin equipped|A wispy black veil|A prayerbook with gleaming pearl covers|A delicate prayerbook wrapped with silk|An ivy-covered slab of rock|A silver and ruby ring|A battlehammer inscribed with Solamnic|A ring of finest silver in|A dark elven bracelet in a}{.+}}
+#action {^{The book of the dead|A velvet book tied with blue ribbon carried|A burned black prayerbook|A sparkling black bracelet equipped by T|A discolored helmet equipped by R|A slender book bound with oily plates equipped|A blackened charm of defiled flesh carried|A ball-shaped charm formed of enigmatic energy carried|A spherical obsidian tablet|A small tattered prayerbook carried|A shimmering prayerbook with silver pages|A pair of spiked sterling gauntlets equipped by Bors|A black metal pike in|The mithril plate of shadows|A ruby studded block of limestone|An iridescent hematite tablet|A stunning pearl-inlaid tablet|A golden twined oak longbow equipped|A gold inlaid bone bracer equipped|A holy talisman|The cape of shadows in a|A bladeless sword equipped|A suit of flexible red dragon scale armor equipped|An ancient holy avenger equipped|Gauntlets of ogre power equipped|A ring of braided bones equipped|A dwarven face shield|A sky blue prayerbook with sapphire runes|A dragonrider's talisman|A moist piece of sea sponge|A gangrenous foot|A shimmering cube|A small piece of meteorite|A charm covered|A grey stone bracelet equipped|A glowing golden amulet|A black domino is in|A radiant white prayerbook|A satiny layer of ectoplasm|A lone, gray flame|A feathered dreamcatcher|A golden battle-honor equipped|A book with frosted glass covers|A globe of sparkling liquid in a steel|A green dragonhide spellbook|A wretched medallion|An ivory spined spellbook|A translucent jade|A charred black ring equipped|The mottled robes of the Archmagus in|A golden bracelet inlaid with emeralds in|A tightly bound tome of magic|A floppy hat|A tiny jade effigy|A timeworn book bound with chains|A belt of cured hylar skin equipped|A wispy black veil|A prayerbook with gleaming pearl covers|A delicate prayerbook wrapped with silk|An ivy-covered slab of rock|A silver and ruby ring|A battlehammer inscribed with Solamnic|A ring of finest silver in|A dark elven bracelet in a}{.+}}
 {
  ct %1:%2;
  dtell %1:%2;
 }
 
+#alias stormout {#action {^An Unfortunate Fall}{east; up}}
 #alias afterkenny {north; otk squire; ki mage}
 #alias terscis {hold scissors; pull black.strings; cut black.strings; cut blue.strings; pull green.strings; cut green.strings; pull white.string}
 #alias runbard {gorec kenbard}
 #alias runth {mrun tollhouse}
 #alias kib {aggtwo ll ki}
-#alias las {ll ass}
+#alias las {ll assthis}
 #alias rrk {rr; mgo kalinn}
 #alias rrs {rr; mgo solinn}
 #alias kpr {bot {punch %1; parry}}
 #sub {hungry. feed me!} {warrior needs food, badly}
 #alias tban {bot rest; st; tan ban; #delay 1 {bot st}}
-#alias rlcbluff {gobung; lc fine.silver.ring; lc face; lc holy.talisman; lc golden.bracelet; rest }
+#alias rlcbluffreg {gobung; st; runto w3n4en9e5s6e5n ; lc fine.silver.ring; lc face; lc holy.talisman; lc golden.bracelet; lc glowing.amulet}
+#alias rlcbluffleg {gobung; lc fine.silver.ring; lc face; lc holy.talisman; lc golden.bracelet; rest }
 #alias dlcshayd {runshayd; restick lcshayd}
 #alias dlcner {goner; lctab; restick lcsan}
-#alias rlclem {gobal; runlem; lcvoy; }
+#alias rlclem {gobal; runlem; lcb; }
 #alias dlccae {gocae; lcb; lc ivory.book; restick dlcner}
 #alias rlckal {gokal; runto dnn10e; lc discolored; lc silver.ring; 14w; open gate; 4w5nww; }
 #alias dlcbog {
@@ -4797,8 +4838,28 @@ cancel;
   sesss3e; lc dark.elven; restick lcb;
 }
 
-
 #var vlocates {
+  {1}{rlcred}
+  {2}{rlcbluffreg}
+  {3}{gobung}
+  {4}{bungshayd}
+  {5}{rlcstorm}
+  {6}{lcstorm}
+  {7}{rlcqk}
+  {8}{qkdargk}
+  {9}{rlcner}
+  {10}{lcsan1}
+  {11}{lcsan2}
+  {12}{rlckhur}
+}
+
+#alias {qkdargk} {runto se2se4s2en2e6se3s2w2seses2e2n; lc hylar; lc hylar; lcb}
+#alias bungshayd {runto w3n8ws6w4n7ws6w4n6es2e3se2s2es; lcb; lct }
+#alias rlcqk {gokal; runto d2n4w; open gate; 4w5n2w4n2ws2w4nw2nwn; lcb; lct}
+#alias rlcreef {gokal; runto d2n3e9n3edn3e3nen2en; gift; lcharm; lcharm; }
+#alias rlcstorm {govin; north; open wall east; runto ene8se2sw2s3en6ese2nwnen; accept; n; lcb ; lcharm}
+#alias lcstorm {lc rose; lc takhisis; lc orb; lc lance}
+#var vlocatesold {
   {1}{rlcred}
   {2}{cubread; rlcbluff}
   {3}{runshayd}
@@ -4835,7 +4896,6 @@ cancel;
 
 #alias gomyth {gosol; runto e2sd7n2w2nwu}
 
-#alias rlcstorm {n; open wall; runto ene8se2sw2s3en6ese2nwnen; accept; n; }
 #alias rlcspire {gosol; runto e2sd8n3e7n4en9e5s6es2ese; climb ladder; ee; lckith; lc forge.ring}
 #var vlocate 1;
 #alias lcf {lc flexible.red; lc ring.bones}
@@ -4861,8 +4921,7 @@ cancel;
 #alias rlcshayd {deltwo runshayd rlcshayd2}
 #alias rlcshayd2 {deltwo lcshayd rlccae}
 #alias rlccae {gocae; lc ivory.book; deltwo lcb rlcner}
-#alias rlcner {goner; deltwo lctab rlcsan}
-#alias rlcsan {deltwo lcsan rlclem1}
+#alias rlcner {goner; lcb; open door west; runto wsw2s; open gate west; w2se3se2s2d3wds2w2swd2seunue; lct}
 #alias rlclem1 {gobal; runlem; deltwo lcvoy rlclem2}
 #alias rlclem2 {lc black.pike; lc bone.bracer; lc wretched; lc shadow.cape; restick rlcshadow}
 #alias rlcshadow {deltwo lcshad rlcbog}
@@ -4882,10 +4941,10 @@ cancel;
 
 #alias rlcbog2 {lc dark.bracelet; lcb; rlckal}
 #alias rlckal {gokal; runto dnn10e; lc discolored; lc silver.ring; 14w; open gate; 4w5nww;  }
-#alias rlcqk {runto 4nwwsww4nwnnwn; lctab}
 #alias rlcdar {deltwo lcdar rlcqk }
 
-#alias lcsan {lc power; lc mace.destruction; lc blue.dragon; rest}
+#alias lcsan2 {lc power; lc mace.destruction; lc blue.dragon; rest}
+#alias lcsan1 {lcb; lcharm}
 
 #ALIAS {sysplay2}
 {
@@ -4979,9 +5038,9 @@ cancel;
 
 #ALIAS {uog}
 {
-	unlock %1;
-	open %1;
-	get all %1
+	unlock %1 in room;
+	open %1 in room;
+	get all %1 in room;
 }
 
 #alias pmedic {
@@ -5089,6 +5148,7 @@ cancel;
 
 #HIGHLIGHT        {disarms your weapon}   {red}                        {4}
 #HIGHLIGHT        {$tank}                 {magenta}                    {5}
+#highlight {Steamboat} {magenta}
 #var warrior Dawsen
 #highlight {$warrior stumbles and falls} {light yellow}
 #highlight {$warrior crashes into} {green}
@@ -5164,6 +5224,11 @@ cancel;
 #HIGHLIGHT        {gangrenous foot}         {green}                      {5}
 #sub {charm covered in a sparkling silvery mist} {charm covered in a sparkling silvery mist(RITUAL VOYAGE)}
 #sub {charm covered in a lone gray flame} {charm covered in a lone gray flame(HEALING WAVE)}
+#sub {charm of defiled flesh}{charm of defiled flesh(rotting flesh)}
+#sub {A velvet book tied with blue ribbon} {A velvet book tied with blue ribbon(RELO)}
+#sub {animated suit of armor} {animated suit of armor(immheat)}
+#sub {charm formed of enigmatic energy} {charm formed of enigmatic energy(dark soul)}
+#sub {wispy charm of twined hair} {wispy charm of twined hair(soul protection)}
 #HIGHLIGHT        {green swordsman gloves}         {green}                      {5}
 #highlight {A man with bright red skin glistens with sweat} {green}
 #HIGHLIGHT        {ethereal energy}         {green}                      {5}
@@ -5214,7 +5279,7 @@ cancel;
 	resave
 }
 
-#alias keyminus {cancel; #kill delay}
+#alias keyminus {cancel; #kill delay; #alias dost dostmain}
 #macro {\eOm} {mac keyminus}
 #MACRO {\eOl}
 {
