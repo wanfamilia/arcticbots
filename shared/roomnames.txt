@@ -147,6 +147,7 @@ enbir
 loccv
 startcv
 celestial valley
+cvkenny
 bors cv
 cvphil
 after arch
@@ -461,3 +462,4 @@ ansabar
 hctmaze3
 egreckl
 lashathal
+dargospeaker

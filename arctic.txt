@@ -66,8 +66,8 @@
   runto 3des2d;
   runto 2unw3u;
 }
-#action {^The death cry of the shade of Jar} {get all.!component}
-#action {^Onyx is dead} {gac; get all.charm onyx}
+#action {^Onyx is dead} { get all.charm onyx}
+#action {^Egreckl Steamus is dead} {get all.charm egreckl}
 #action {^Flare is dead} {gac; get all.charm flare}
 #action {^The night golem is dead} {ll get bladeless night.golem}
 #action {^The stone giant shaman is dead} {get all giant.shaman}
@@ -343,6 +343,7 @@ reseteye;
 #sub {amber necklace} {amber necklace(invis deti)}
 #sub {ancient lemurian warhammer} {ancient lemurian warhammer(4d8 3/3 deteg)}
 #sub {{\d\d\dX} } {kX }
+#sub {{\d\d\d\) steel} } {k) steel}
 #sub {giant clamshell encrusted with corals} {giant coral clamshell(++slot5, 10hedo, sb-2, wb)}
 #sub {black fang of a shadow beast} {shadow beast fang(tot)}
 #sub {desert wraith's tattered robes} {desert wraith robes(khur)}
@@ -351,7 +352,6 @@ reseteye;
 #sub {tattered purple cloak} {tattered purple cloak(ac -10, reco 36, npp)}
 #sub {pitch black bracer} {pitch black bracer(-1ss 2hr)}
 #sub {rat ration} {bacon cheeseburger}
-#sub {grey stone bracelet}{grey stone bracelet(2con)}
 #sub {ring of sea elven bones} {ring of sea elven bones(+345slot 1cl 6hit)}
 #sub {chrysoberyl inset band} {chrysoberyl inset band(inv deti 2cl 15hit)}
 #sub {cape of severed mermaid tails} {cape of severed mermaid tails(+8slot 10 hedo)}
@@ -490,7 +490,7 @@ reseteye;
   onfight;
   #if {"$classes[%1]" != ""  && "%1" != "$tank"}
   {
-    #if {"%1"=="$skyscout" || "$classes[%1]"=="CL" || "$classes[%1]"=="DR" || "$classes[%1]"=="SH" || "$classes[%1]"=="WH" || "$classes[%1]"=="BL" || "$classes[%1]"=="RE"}
+    #if {"$classes[%1]"=="SS" || "$classes[%1]"=="CL" || "$classes[%1]"=="DR" || "$classes[%1]"=="SH" || "$classes[%1]"=="WH" || "$classes[%1]"=="BL" || "$classes[%1]"=="RE"}
     {setcasres %1}{trs %1};
   }
 }
@@ -505,8 +505,8 @@ reseteye;
  #alias rs dorescue;
 }
 #alias trs {
-  #if {"$classes[%1]"=="TH" || "$classes[%1]" == "SC"} {thiefhit %1};
-  #if {"$classes[%1]"=="WA" || "$classes[%1]" == "DA"} {warhit %1};
+  #if {"$classes[%1]"=="TH" || "$classes[%1]" == "MS"} {thiefhit %1};
+  #if {"$classes[%1]"=="WA" || "$classes[%1]" == "DA" || "$classes[%1]"=="OS"} {warhit %1};
   #if {"$classes[%1]"=="BA" || "$classes[%1]" == "PA"} {tankhit %1};
 }
 
@@ -531,11 +531,12 @@ reseteye;
 #alias lcrav {lc skull; lc lion; lc globe; lc tablet}
 #alias lctab {lc tablet; lc slab; lc ruby.block; lcb; rest }
 #alias lcshayd {lctab}
-#alias lcck {lc ectoplasm; lc dreamcatcher; lc flame; lc brains}
+#alias lcck {lcharm; lc mithril; lc stormbringer }
+#alias rlcrayne {gopal; runto 2wn2e5sw2sw2sesuse3sesuwsue; lct; lcb}
 #alias lcshado {lc wretched; lc shadow; lc gossamer; lc bladeless}
-#alias rlcred {rps me; gobal; coli; rd imp; runto s4e8n6w2sw2s2wnw7n2w2nw9n2u4n; lcf; lcb; }
+#alias rlcred {rps me; gobal; lrn; coli; rd imp; runto s4e8n6w2sw2s2wnw7n2w2nw9n2u4n; lcf; lcb; }
 #alias rlcredleg {rps me; gobal; rd imp; runto s4e8n6w2sw2s2wnw7nw; lcf; lcb; lc flexible.red ; }
-#alias rlcck {gobal; runto s4e9n4w3sw4sdw2s2ws5w; lcck}
+#alias rlcck {gotar; runto ws14es4e2neu9s3en4e4s3e2se2nen2e3n2eneususeueun; lcck}
 #alias rlckith {gosol; runto e2sd10se4sw5se4sw3s6wd2s; lckith}
 #alias rlcspi {gosol; runto e2sd8n3e5n4e3n9e5s6es2ese; climb ladder; ee; lckith}
 #alias 4 0
@@ -612,7 +613,7 @@ reseteye;
 #alias lcter {lc slender.iron.key; lcb}
 #alias untagged
 {
-  #if {"$evils[%1]"=="1" || "$evils[%2]"=="1"}{inclantitle evil %1 %2;};
+  #if {"*evils[%1]"=="1" || "*evils[%2]"=="1"}{inclantitle evil %1 %2;};
 }
 
 #action {^Total visible people} {
@@ -630,8 +631,8 @@ reseteye;
 
 
 #alias showclans {
-  showclan RISE;
   showclan evil;
+  showclan RISE;
 }
 
 #var oldclans {}
@@ -655,6 +656,7 @@ reseteye;
 
 #var evils {{Bo}{1}{Malice}{1}{Nguyen}{1}{Bespee}{1}{Mousasi}{1}{Abom}{1}{Tenten}{1}{Qwiz}{1}{Sano}{1}{Zor}{1}{Seagal}{1}
   {Dutch}{1}{Trautman}{1}{Schmendrick}{1}{Evelynn}{1}{Fueling}{1}{Pacific}{1}
+  {Balanar}{1}{Lizette}{1}{Derpenstein}{1}
 }
 
 #alias eachmin {#ticker e60 {%0} 63}
@@ -2797,6 +2799,7 @@ reseteye;
         reload;
   #log append logs/%1.txt;
         platformwin;
+  makesubs;
 }
 
 #alias limitses {
@@ -3148,15 +3151,16 @@ richard_wan@hotmail.com;	1;	1;	1;	1;
 #alias drlicr {drop crate; light crate}
 #alias rga {ota %1; rg %1}
 #alias rgab {brs %1; rga %1}
+#alias swapout {swap me %1; group form; fol me}
 
-#alias rlckhur {gobal; js imp; runto s4e8n4wn3wn2w4nwn; lcharm; lcb; lc tablet}
+#alias rlckhur {gobal; js imp; runto s4e8n4wn3wn2w4nwn; lcharm; lc tablet}
 #alias novoyyet {donothing %1; ct If I deactivate my ethical subroutines, I could insist on yet another ritual voyage run}
 #alias modeshaman {
   #alias bigrest {rest; tan watch; #var resting 1};
   #alias othervoy othervoyimpl;
   #alias cleancomp cleancomp2;
   #alias assthis ott;
-  #var {circle1} {de po};
+  #var {circle1} {slow po};
   #unticker feedme;
   eng dotk;
   #alias stabclose shamstabclose;
@@ -3590,7 +3594,7 @@ richard_wan@hotmail.com;	1;	1;	1;	1;
 }
 #alias stunttar {stuntbush; gotar}
 #alias mystmirror {
-  #action {^A Small Guest Room} {enter; n; n;}
+  #action {^A Small Guest Room} {enter;}
 }
 #alias gc {st; gore %1; ch %1}
 #alias stuntshore {stuntbush; w;d;n;d;e;d;n;e;e;n;e;e;}
@@ -4026,6 +4030,7 @@ cancel;
   #alias ide {rec identify};
   #var held clear.sphere;
   #alias remage {rewin; modemage; modewhite};
+  #alias locatereport locatereportimpl;
   #alias jsrelo js relo;
   #var food turkey;
   nutr $food;
@@ -4517,6 +4522,7 @@ cancel;
   #alias bigrest {dism; rest; sip elixir};
   #var pet Steamboat;
   eng paleng;
+  #var hrec battle.horn;
   #action {^Your hands tingle as a feeling of goodness} {ll #show :LAY ready} {7};
   #action {^Warriors' Training Room} {lrn; smile};
   #alias assthis palassthis;
@@ -4823,6 +4829,7 @@ cancel;
   6wdss; lckith; lc talisman; nnu6e;
   sesss3e; lc dark.elven; restick lcb;
 }
+#alias rlcrahn {gokal; van me; js imp; runto d2n10e; open gate; 2e4s4eu3enu3e2nesed8w2s; lc discolored; lc silver.ring}
 
 #var vlocates {
   {1}{rlcred}
@@ -4833,18 +4840,24 @@ cancel;
   {6}{lcstorm}
   {7}{rlcqk}
   {8}{qkdargk}
-  {9}{rlcner}
-  {10}{lcsan1}
-  {11}{lcsan2}
-  {12}{rlckhur}
+  {9}{dargklemisouth}
+  {10}{rlcner}
+  {11}{lcsan1}
+  {12}{lcsan2}
+  {13}{rlckhur}
+  {14}{rlcrahn}
+  {15}{rlcck}
+  {16}{rlcrayne}
 }
 
+#alias dargklemisouth {runto 2s2wnw2se5se2s2w3s2ws6w2n; lct}
 #alias {qkdargk} {runto se2se4s2en2e6se3s2w2seses2e2n; lc hylar; lc hylar; lcb}
 #alias bungshayd {runto w3n8ws6w4n7ws6w4n6es2e3se2s2es; lcb; lct }
 #alias rlcqk {gokal; runto d2n4w; open gate; 4w5n2w4n2ws2w4nw2nwn; lcb; lct}
 #alias rlcreef {gokal; runto d2n3e9n3edn3e3nen2en; gift; lcharm; lcharm; }
 #alias rlcstorm {govin; north; open wall east; runto ene8se2sw2s3en6ese2nwnen; accept; n; lcb ; lcharm}
 #alias lcstorm {lc rose; lc takhisis; lc orb; lc lance}
+#alias gotoll {govin; north; open wall east; runto nene5s}
 #var vlocatesold {
   {1}{rlcred}
   {2}{cubread; rlcbluff}
@@ -4869,7 +4882,7 @@ cancel;
 }
 #list vlocates size vlocatessize
 #alias megaloc {
-  $vlocates[$vlocate];
+  mac $vlocates[$vlocate];
   #if {$vlocate < $vlocatessize} {
     #math vlocate {$vlocate + 1};
     #delay 30 restick megaloc;
@@ -4880,7 +4893,7 @@ cancel;
   }
 }
 
-#alias gomyth {gosol; runto e2sd7n2w2nwu}
+#alias gomyth {puf stronghold; up}
 
 #alias rlcspire {gosol; runto e2sd8n3e7n4en9e5s6es2ese; climb ladder; ee; lckith; lc forge.ring}
 #var vlocate 1;
@@ -5186,7 +5199,6 @@ cancel;
 #highlight {timeworn book} {green}
 #highlight {You stub your big toe on a roc}{green}
 #highlight {ivory spined} {green}
-#highlight {gleaming pearl covers} {green}
 #highlight {frumpy dwarf} {green}
 #highlight {tablet} {green}
 #highlight {The whistle is simple, made of silver} {green}
@@ -5594,32 +5606,43 @@ cancel;
     {book of the dead}{animate}
     {velvet book tied with blue ribbon}{RELOCATE}
     {compendium of ancient magic}{LOCATE}
-    {burned black prayerbook}{??}
+    {wispy cloud tablet}{tornado}
+  {brilliant amethyst tablet}{iceskin}
+  {driftwood tablet wrapped in seaweed}{cure massive}
+  {crystalline tablet}{crit}
+    {burned black prayerbook}{soul leech}
     {sparkling black bracelet}{ft}
-    {discolored helmet equipped}{kern}
+    {sandy green tablet}{iceshield}
+    {volume of delicate crystalline pages}{chaos/read/moc}
+    {leather tome pitted with rusty iron runes}{youth/identify/knock}
+    {discolored helmet}{kern}
     {slender book bound with oily plates}{gate}
+  {ancient book with archaic runes}{rend/peek/slumber}
     {blackened charm of defiled flesh}{rotting flesh}
     {ball-shaped charm formed of enigmatic energy}{dark soul}
-    {spherical obsidian tablet}{??}
-    {small tattered prayerbook}{??}
-    {shimmering prayerbook with silver pages}{??}
+    {dark brown book}{cob}
+    {book with wooden covers}{gust}
+    {spherical obsidian tablet}{enlarge}
+    {small tattered prayerbook}{restoration}
+    {shimmering prayerbook with silver pages}{steelskin}
     {pair of spiked sterling gauntlets}{cv}
     {black metal pike}{lemuria}
     {mithril plate of shadows}{shadows}
-    {ruby studded block of limestone}{??}
-    {iridescent hematite tablet}{??}
-    {stunning pearl-inlaid tablet}{??}
-    {golden twined oak longbow equipped}{enbir}
-    {gold inlaid bone bracer equipped}{lemuria}
+    {ruby studded block of limestone}{enlarge}
+    {iridescent hematite tablet}{veil of ice}
+    {stunning pearl-inlaid tablet}{ice storm}
+    {golden twined oak longbow}{enbir}
+    {gold inlaid bone bracer}{lemuria}
     {holy talisman}{bluff}
     {cape of shadows}{shadows}
     {bladeless sword}{shadows}
     {suit of flexible red dragon scale armor}{cv}
-    {ancient holy avenger equipped}{??}
-    {Gauntlets of ogre power equipped}{??}
-    {ring of braided bones equipped}{cv}
+    {ancient holy avenger}{??}
+    {Gauntlets of ogre power}{??}
+    {ring of braided bones}{cv}
     {dwarven face shield}{bluff}
-    {sky blue prayerbook with sapphire runes}{??}
+    {sky blue prayerbook with sapphire runes}{holy word}
+    {white leather book with golden hinges}{circle}
     {dragonrider's talisman}{pax}
     {charm covered in a sparkling silvery mist} {RITUAL VOYAGE}
     {charm covered in a lone gray flame}{HEALING WAVE}
@@ -5632,30 +5655,43 @@ cancel;
     {wretched medallion}{shadows}
     {ivory spined spellbook}{??}
     {translucent jade tablet}{mass refresh}
-    {charred black ring}{darke}
+    {tablet engraved with emeralds}{recall}
+    {charred black ring}{darkeep}
     {mottled robes of the Archmagus}{ft}
     {golden bracelet inlaid with emeralds}{bluff}
-    {tightly bound tome of magic}{??}
+    {tightly bound tome of magic}{damageshield}
     {floppy hat}{shayds}
+ {green book with frayed edges}{flesh/mirror/juke}
     {timeworn book bound with chains}{??}
     {belt of cured hylar skin}{darkeep}
-    {prayerbook with gleaming pearl covers}{??}
-    {delicate prayerbook wrapped with silk}{??}
+  {aspen leaf tablet}{barrier}
+    {prayerbook with gleaming pearl covers}{holy aura}
+    {delicate prayerbook wrapped with silk}{soo}
+  {weathered conch shell tablet}{summon}
     {silver and ruby ring}{kerns}
     {battlehammer inscribed with Solamnic runes}{pod}
     {ring of finest silver}{bluff}
     {dark elven bracelet}{bog}
 }
 
-#action {^{A|An|The} {.+} {carried|equipped|in|is}{.+}}
+
+#alias boomcrate {drop crate; light crate in room}
+#alias makesubs {
+  #foreach *itemlocates[] vitem {
+    makesub {$vitem} {$vitem($itemlocates[$vitem])};
+  }
+}
+#alias makesub {
+  #sub {%1} {%2}
+}
+#action {^{A|An|The} {.+} {carried|equipped|is in|(?<!is )in|is}{.+}}
 {
   locatereport {%2} {%3%4};
 }
 
-#alias locatereport {
-  #if {"$itemlocates[%1]" != ""} {
-    alltell {%1($itemlocates[%1]): %2};
-  } {#show :nomatch :%1:}
+#alias locatereport donothing;
+#alias locatereportimpl {
+  #if {"$itemlocates[%1]" != ""} { alltell {%1($itemlocates[%1]): %2}; } {donothing %1} ;
 }
 
 #alias alltell {
