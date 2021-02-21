@@ -363,6 +363,7 @@ reseteye;
 #sub {pair of baggy black pants} {black baggy pants(nytes)}
 #sub {pair of succubus wings}{succubus wings pair(cv)}
 #high {succubus wings} {green}
+#high {Danarn the Inept Assistant gapes in horror} {green}
 #sub {a blue dragon skull}{Flare dragon bone skull(storms)}
 #sub {a blackened and pulsating heart} {a pulsating black heart(storms)}
 #sub {silver fauld} {silver fauld (2con)}
@@ -523,7 +524,7 @@ reseteye;
 #alias ghostfor {
   nospam 9 gma $vmasters[$classes[%1]]
 }
-#alias lckith {lc sponge; lc ethereal.cube; lc foot}
+#alias lckith {lc charm; lc tablet; lc book; lc talisman}
 #alias saym {say when ready, type MOC (dont emote or say or tell)}
 #alias gtm {gt to make a master, type: mak}
 #alias lcshad {lc bladeless; lcb; lc shadow.mask; lc shadow.plate; rest}
@@ -4486,6 +4487,7 @@ cancel;
   needbuff holy arms;
   needbuff aura of glory;
   needbuff bless;
+  needbuff heal boost;
   needbuff high prayer;
   needbuff holy vision;
   needbuff crusade;
@@ -4536,6 +4538,7 @@ cancel;
   #action {^{Shrine of the Holy|Paladins' Training Room}} {lrn; smile};
   #action {^You have been blinded} {sysplay smb3_thwomp; #all #show --> BOT BLIND};
   showprompt;
+  #var vbuffover[heal boost] {gt no heal boost};
   #alias lootcomp donothing;
   nolog;
   skillbell;
@@ -5601,6 +5604,7 @@ cancel;
 #VARIABLE         {window}                {{ } { } { } { } { }}
 
 #sub {animated suit of armor} {animated suit of armor(immheat)}
+#sub {Gr'Ithnar} {Gr'Ithnar(immheat)}
 
 #var itemlocates {
     {book of the dead}{animate}
