@@ -117,7 +117,7 @@
 #var myshaman donnerr
 #action {^{\w+} tells your {clan} '$myshaman rit {\w+}'} {othervoy %1 %3} {1}
 #alias ptab {pta barbarian}
-#alias oes {oe smile $myshaman; oe st}
+#alias oes {group own; oe smile $myshaman; oe st}
 #alias ctv {ct if you are nocharm or nonevil or willing to lead or die, ct $myshaman rit me}
 #alias oeb {oe bop}
 #alias drn {js drain %1 in inventory}
@@ -1052,8 +1052,11 @@ reseteye;
 #alias oei {oe c 'i'}
 #alias oeim {oe c 'i' me}
 #alias pbrl {push 2.button; reach ledge; st; e; jump guild}
-#var pets {Ayoade|Ocasek|Ip|Burten|Steamboat|Derp|Durge|Tori|Jake}
-#action {{$pets} the {\w+\s?\w+}{$tanksuffix}} {pethit %1}
+#action {^You have {\d+} devout fol}{#var vfollow %1}
+#action {{[A-Z]\w+} the {\w+\s?\w+}{$tanksuffix}} {ifpethit %1}
+#alias ifpethit {
+  #if {"$classes[%1]"=="^^"} {pethit %1};
+}
 #alias ctdi {ct check #bots channel in discord}
 #alias gtri {gt kill risol, if you get booted from fight: stand, up}
 #alias pethit {
@@ -1095,10 +1098,11 @@ reseteye;
   #format nnow {%T};
   #if {$nnow > $gavailable} {
     #math gavailable {$nnow + 1};
-    mac group ;
+    mac groupimpl ;
   };
 }
 #var gavailable 0
+#alias groupimpl group
 #alias nothing {#var varnothing 0}
 
 #alias {cwho}
@@ -2306,9 +2310,10 @@ reseteye;
 
 #ALIAS {headerwin}
 {
-	#format header {heals left:%+2s  till tick: %+2s   fight: %-2s  resc: %s} {$healsleft}{$tilltick}{$fighting}{$resctar}
+	#format header {heals left:%+2s  till tick: %+2s  follow: %-2s  fight: %-2s  resc: %s} {$healsleft}{$tilltick}{$vfollow}{$fighting}{$resctar}
 }
 
+#var vfollow 0
 #ALIAS {healcountoff}
 {
 	#variable countheals 0;
@@ -3158,7 +3163,7 @@ richard_wan@hotmail.com;	1;	1;	1;	1;
 #alias novoyyet {donothing %1; ct If I deactivate my ethical subroutines, I could insist on yet another ritual voyage run}
 #alias modeshaman {
   #alias bigrest {rest; tan watch; #var resting 1};
-  #alias othervoy othervoyimpl;
+  #alias othervoy nospam 4 othervoyimpl;
   #alias cleancomp cleancomp2;
   #alias assthis ott;
   #var {circle1} {slow po};
@@ -3944,14 +3949,14 @@ richard_wan@hotmail.com;	1;	1;	1;	1;
 {
 	js reg %1;
 	healcounton;
-	dolater3 group
+	dolater3 groupimpl;
 }
 
 #alias voyc
 {
 	jd rit voy %1;
 	healcounton;
-	dolater3 group
+	dolater3 groupimpl;
 }
 
 #alias voy {mai {jd rit voy %1}}
@@ -3959,7 +3964,7 @@ richard_wan@hotmail.com;	1;	1;	1;	1;
 #alias rit {#show ->    use cc; cc}
 #ALIAS {cc}
 {
-	mai {jd cu cr %1; group}
+	mai {jd cu cr %1; groupimpl}
 }
 
 #ALIAS {rp}
@@ -3998,7 +4003,7 @@ richard_wan@hotmail.com;	1;	1;	1;	1;
 #alias dropcomp {cleancomp; dropallcomp}
 #alias sellcomp {cleancomp; sell20}
 #alias dropallcomp {drop all.component}
-#alias sell20 {put all.web belt; #20 {sell component}}
+#alias sell20 {dimo; put all.web belt; #20 {sell component}}
 #alias lch {jd la ch}
 #alias bura {ki me; buy 8*ration}
 #alias rs {mac bot dorescue}
@@ -4484,10 +4489,10 @@ cancel;
 
 #alias onpalbuff
 {
+  needbuff heal boost;
   needbuff holy arms;
   needbuff aura of glory;
   needbuff bless;
-  needbuff heal boost;
   needbuff high prayer;
   needbuff holy vision;
   needbuff crusade;
@@ -4523,6 +4528,7 @@ cancel;
 {
   #alias bigrest {dism; rest; sip elixir};
   #var pet Steamboat;
+  #alias groupimpl group full;
   eng paleng;
   #var hrec battle.horn;
   #action {^Your hands tingle as a feeling of goodness} {ll #show :LAY ready} {7};
@@ -4546,7 +4552,7 @@ cancel;
   #alias warhit {dnrs 2 %1};
   #action {^Your sense of indignation weakens and fades} {#all #show -->  RI gone};
   #alias thiefhit {dnrs 1 %1};
-  #alias pethit {dnrs 1 %1};
+  #alias pethit {dnrs 2 %1};
 
   #action {^The protective presence around you fades} {
     gt ---> HEAL BOOST GONE <---;
@@ -4768,9 +4774,10 @@ cancel;
 {
 	jd su el;
 	drink elixir;
-	fill skin elixir in inventory;
+	fill $paldrink elixir in inventory;
 }
 
+#var paldrink keg;
 #alias fleethis {cancel; #3 {st; flee}}
 #alias bfl bot fleethis
 #alias lfl ll fleethis
@@ -5337,9 +5344,10 @@ cancel;
 	karr
 }
 
-#MACRO {\e[15~}
-{
-	mac group;
+#MACRO {\e[15~} {f5}
+
+#alias f5 {
+	mac groupimpl;
 	#unaction {^{\s+}{.+}$};
 }
 
@@ -5604,6 +5612,7 @@ cancel;
 #VARIABLE         {window}                {{ } { } { } { } { }}
 
 #sub {animated suit of armor} {animated suit of armor(immheat)}
+#sub {a stone gargoyle} {a stone gargoyle(immheat)}
 #sub {Gr'Ithnar} {Gr'Ithnar(immheat)}
 
 #var itemlocates {
@@ -5680,6 +5689,7 @@ cancel;
 
 
 #alias boomcrate {drop crate; light crate in room}
+#alias lc5 {#5 {lc %1}}
 #alias makesubs {
   #foreach *itemlocates[] vitem {
     makesub {$vitem} {$vitem($itemlocates[$vitem])};
