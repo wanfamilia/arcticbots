@@ -131,6 +131,7 @@ starttoede
 totaeldeth
 taelboy
 instinct sky42
+qualibush
 startquali
 paxgem
 locpax
@@ -271,6 +272,8 @@ statue
 gopi
 eras
 ochreportal
+mystichatch
+ritmystic
 bogkey
 bogmire
 bogmire
@@ -290,6 +293,7 @@ xakoaktree
 onyx
 startspire
 ritspire
+spirebow
 spirebase
 spireend
 inferno
@@ -358,6 +362,8 @@ startlyt
 startshadow
 ritquali
 irdapearl
+paxslam
+kithkanan
 rivercrevice
 startriver
 harmonium
@@ -400,6 +406,7 @@ gownnocharm
 raynemansakr
 rayneselissa
 thcsmith
+feisal
 palgrate
 palthief
 drogo dk quest
@@ -420,6 +427,7 @@ brithnea
 sahsponge
 bogfight
 tosorin
+zeeriak
 Southwinds
 stoneskin spire
 tocloud
@@ -463,3 +471,7 @@ hctmaze3
 egreckl
 lashathal
 dargospeaker
+bakalishaman
+ritvermi
+startgalazor
+mystictunnel

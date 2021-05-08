@@ -13,7 +13,7 @@
 
 #alias bstep {bot autostepthis}
 #alias autostepthis {
-  group;
+  groupc;
   #delay 3 {
     #var leader $groupmembers[1];
     #action {^$leader tells your group '{(Tank|tank )?}{N|S|W|E|U|D|n|s|w|e|u|d|north|south|west|east|up|down}'} {
@@ -57,7 +57,7 @@
 #alias bst {bash %1; st; }
 #alias rtm {retrieve 1; wear medal}
 #alias dohctvault {pull down; pull right; pull right; pull up; pull left; pull down; pull down ; pull handle}
-#alias onleader {#delay 1 %1}
+#alias onleader {nextcommand %1}
 #alias norally bot #alias rally donothing
 #alias gtca {gt someone small: crank catapult, wear a light, kill mob, loot, wear helmet, all west, get bag, east north east, then stack commands: drop bag, light bag in room}
 #alias waitphoen {
@@ -89,7 +89,7 @@
 #PATHDIR {west} {east} {8}
 
 #alias kw {ll oe %1 %2; gt %1 %2; #all {%1 %2}}
-#alias brst {brsc stre}
+#alias brst {sr me; air me; brsc stre}
 #alias oegc {oe get all.corpse; get all.corpse; oe give all.corpse %1}
 #alias otl {m1 ota}
 #alias eject {gt eject; rr}
@@ -118,11 +118,11 @@
 #action {^{\w+} tells your {clan} '$myshaman rit {\w+}'} {othervoy %1 %3} {1}
 #alias ptab {pta barbarian}
 #alias oes {group own; oe smile $myshaman; oe st}
-#alias ctv {ct if you are nocharm or nonevil or willing to lead or die, ct $myshaman rit me}
+#alias ctv {ct if you are confident i have made this trigger legal, ct $myshaman rit me}
 #alias oeb {oe bop}
 #alias drn {js drain %1 in inventory}
 #alias bols {sky bolster}
-#alias bser {bot {cancel; oe c 'cu se' %1; oe st; }}
+#alias bser {bot ser}
 
 #alias frensponge {
   #action {^A red mist blurs} {oe rescue $myshaman};
@@ -233,7 +233,7 @@
 {5}
 
 #alias ew50 {#50 {e; w}}
-#alias dostmain {st; #var resting 0}
+#alias dostmain {st; #var resting 0; #delay 1 allnext }
 #alias dost dostmain;
 #alias refly  {st; dispel 'fly'; air me}
 #alias restick {
@@ -253,7 +253,7 @@
 #action {^{$linebegin}Through your wizard's eye: {\w+} has left through the {\w+}}
 {eye leave %2 %3 %4}
 #alias asit {
-  #action {^{$linebegin}{\w+} heroically} {mota %%3}
+  #action {^{$linebegin}{\w+} heroically} {nospam 1 mota %%3}
 }
 
 #alias macota mac ota
@@ -327,6 +327,7 @@ reseteye;
 #alias sasu {mai sat; suel; ll rest}
 #sub {loaf of bread} {fried chicken thigh}
 #sub {silver jeweled bracelet} {silver jeweled bracelet(nytes)}
+#sub {large golden shield} {large golden shield(irda)}
 #sub {bow of aged yew} {bow of aged yew(suun vault)}
 #sub {an iron ration} {a juicy steak}
 #sub {a translucent shroud} {a translucent shroud(storm)}
@@ -524,7 +525,7 @@ reseteye;
 #alias ghostfor {
   nospam 9 gma $vmasters[$classes[%1]]
 }
-#alias lckith {lc charm; lc tablet; lc book; lc talisman}
+#alias lckith {lct; lc talisman; lc talisman}
 #alias saym {say when ready, type MOC (dont emote or say or tell)}
 #alias gtm {gt to make a master, type: mak}
 #alias lcshad {lc bladeless; lcb; lc shadow.mask; lc shadow.plate; rest}
@@ -571,7 +572,7 @@ reseteye;
 #alias ksgw {skillbell; #%1 solghost kgw}
 #alias kgw {k4 wraith; k4 ghost; get all.coins}
 #alias gebe {get berry; eat berry}
-#action {^{\w+} drops an ethereal ghost} {nospam 1 gebe}
+#action {^{\w+} drops an ethereal ghost} {nospamdo 1 gebe}
 #alias onbleed {$vcure %2 }
 #alias airm {nbf repose; nbf fly}
 
@@ -591,7 +592,7 @@ reseteye;
   #if {$autoassv == 1} {%1}
 }
 #alias okd {otk %2; %1 %2; }
-#alias doig {#delay 1 okd kig}
+#alias doig {oe st; okd kig}
 #alias dotk {oe st; otk}
 #alias otkt {otk %1; #3 taunt %1}
 #alias dtaun {st; #3 taunt %1}
@@ -1075,14 +1076,27 @@ reseteye;
   #action {^Gaining speed, the lift accelerates down the dark mountain shaf} {#delay 1 pbrl};
 }
 #var fighting {0}
-#alias nospam {
+
+#alias nospam nospamimpl
+#alias nospamdo {nospamimpl %1 %2 %3; donextthis}
+#alias nospamimpl {
   #format nnow {%T};
   #if {$nnow > $navailable} {
     #math navailable {$nnow + %1};
-    mac %2 %3;
+    #if {"%2"=="stand"} {mac stand} { mac nextcommand %2 %3;}
   };
 }
 
+#alias nextauto mac %1 %2
+#alias nextcommand {
+  #var vnextcommand {%1 %2};
+}
+
+#var vnextcommand groupimpl
+#alias donextthis {
+  #if {"$vnextcommand"=="groupc"} {groupc} {mac $vnextcommand};
+  #var vnextcommand groupc;  
+}
 #action {^You sense another fortress in your} {nospam 1 fortress}
 #action {^You feel the need, the need to assault} {nospam 1 assault}
 #alias asfo {assault %1; fortress}
@@ -1097,7 +1111,7 @@ reseteye;
 #alias groupc {
   #format nnow {%T};
   #if {$nnow > $gavailable} {
-    #math gavailable {$nnow + 1};
+    #var gavailable $nnow;
     mac groupimpl ;
   };
 }
@@ -1767,7 +1781,10 @@ reseteye;
 #ALIAS {dolater}
 {
 	#variable nextaction %0;
-	#action {^{(\d.+>\s)?}{You knock yourself}}{mac $nextaction;#line gag;#unACTION {^{(\d.+>\s)?}{You knock yourself}}};
+	#action {^{(\d.+>\s)?}{You knock yourself}} {
+          mac $nextaction; #line gag;
+          #unaction {^{(\d.+>\s)?}{You knock yourself}};
+        };
 	bonk me
 }
 
@@ -1841,10 +1858,11 @@ reseteye;
   north;
 }
 
+#alias lc4t {#4 lct}
 
 #alias lootcomp {
   get all.component corpse;
-  put all.component pouch;
+  put all.component component.pouch;
 }
 #alias otta {ott; st; ass}
 
@@ -2288,7 +2306,7 @@ reseteye;
 #ALIAS {handlelater}
 {
 	#variable candlevel 0;
-	#unaction {$laterpat};
+	#unaction $$laterpat;
 	mac $nextaction;
 	#line gag
 }
@@ -2310,7 +2328,7 @@ reseteye;
 
 #ALIAS {headerwin}
 {
-	#format header {heals left:%+2s  till tick: %+2s  follow: %-2s  fight: %-2s  resc: %s} {$healsleft}{$tilltick}{$vfollow}{$fighting}{$resctar}
+	#format header {heals left:%+2s  till tick: %+2s  follow: %-2s  fight: %-2s  next: %s} {$healsleft}{$tilltick}{$vfollow}{$fighting}{$vnextcommand}
 }
 
 #var vfollow 0
@@ -2731,10 +2749,10 @@ reseteye;
 #alias alc {jd as lo}
 #alias alcm {alc macabre}
 #alias alcb {alc book}
-#ALIAS {lcb} { lc book; lc book; }
+#ALIAS {lcb} { lc book; }
 
 #alias lcm {lc macabre}
-#alias lct {lc tablet; lc tablet}
+#alias lct {lc tablet}
 #alias lcharm {lc charm; lc charm}
 #ALIAS {log}
 {
@@ -2776,8 +2794,9 @@ reseteye;
 	platformlin
 }
 
+#alias gfull {#alias groupimpl group full}
 #var gsize 8
-#var gsizep 9
+#math gsizep {$gsize + 1}
 #ALIAS {logip}
 {
 	#split $gsizep $bottomsize;
@@ -2924,7 +2943,7 @@ reseteye;
 
 #ALIAS {makebar} {makechar %1 n; 7;6;5;9; finchar}
 
-#alias enci {enc %1; ide %1}
+#alias enci {enc %1; ide %1 in inventory}
 
 #alias makechar
 {
@@ -3068,6 +3087,7 @@ richard_wan@hotmail.com;	1;	1;	1;	1;
 
 #alias dech {detect %1.chest in room}
 #alias dech4 {#loop 1 4 loop {dech $loop}}
+#alias dich {#4 disable %1.chest in room}
 #ALIAS {mfo}
 {
 	fo4 loca;
@@ -3163,7 +3183,7 @@ richard_wan@hotmail.com;	1;	1;	1;	1;
 #alias novoyyet {donothing %1; ct If I deactivate my ethical subroutines, I could insist on yet another ritual voyage run}
 #alias modeshaman {
   #alias bigrest {rest; tan watch; #var resting 1};
-  #alias othervoy nospam 4 othervoyimpl;
+  #alias othervoy #var vnextcommand {othervoyimpl %%1 %%2};
   #alias cleancomp cleancomp2;
   #alias assthis ott;
   #var {circle1} {slow po};
@@ -3732,7 +3752,7 @@ richard_wan@hotmail.com;	1;	1;	1;	1;
 #alias resham {rewin; modeshaman}
 #alias ptran {
   rpm; sr me; transfer %1;
-  #action {^The time for giving} {js imp; sr me; rpm; transfer %1; lrn; rest; deep}
+  #action {^The time for giving} {js imp; air me; sr me; rpm; transfer %1; lrn; rest; deep}
 }
 #alias fastdam {modebow; inst harrier; hover; archery s 5 p 5 a 2; }
 #alias bbn {bot kk %1; bn %1}
@@ -3747,7 +3767,7 @@ richard_wan@hotmail.com;	1;	1;	1;	1;
 #alias amsitem {say May I walk with the clouds}
 #alias ptpw {ptar paladin warrior}
 #alias ptms {ptar green.mage green.scout}
-#alias skyin {inst crow; inst swan; fly; inst mock; inst roc; inst harrier; }
+#alias skyin {inst crow; inst swan; inst swan; fly; inst mock; inst roc; inst vulture; inst harrier; }
 #alias kvo {vo; ke %1}
 #alias resky {rewin; modesky; #unticker e20s}
 #alias mtran {fd he wa; mb md trans}
@@ -3949,14 +3969,12 @@ richard_wan@hotmail.com;	1;	1;	1;	1;
 {
 	js reg %1;
 	healcounton;
-	dolater3 groupimpl;
 }
 
 #alias voyc
 {
 	jd rit voy %1;
 	healcounton;
-	dolater3 groupimpl;
 }
 
 #alias voy {mai {jd rit voy %1}}
@@ -3964,7 +3982,7 @@ richard_wan@hotmail.com;	1;	1;	1;	1;
 #alias rit {#show ->    use cc; cc}
 #ALIAS {cc}
 {
-	mai {jd cu cr %1; groupimpl}
+	mai {jd cu cr %1; }
 }
 
 #ALIAS {rp}
@@ -3998,7 +4016,7 @@ richard_wan@hotmail.com;	1;	1;	1;	1;
   get all.!necromantic pouch;
   put all.protection pouch;
 }
-#alias cleancomp2 {get all.component pouch}
+#alias cleancomp2 {get all.!acorn component.pouch}
 #alias cleancomp cleancomp2
 #alias dropcomp {cleancomp; dropallcomp}
 #alias sellcomp {cleancomp; sell20}
@@ -4021,7 +4039,7 @@ cancel;
 #alias tmpa {%1 %2; ota; temp}
 #alias ksbt {tmpa ksb}
 #alias logred newses red {#alias mag red; wilbon; mypw; 1; 1; fly; modemage; modered;}
-#alias logwhi {newses white {pryor; mypw; #var food food; 1; 1; fly; modemage; modewhite}}
+#alias logwhi {newses white {pryor; mypw; #var food food; ones; fly; modemage; modewhite}}
 #alias logmag {newses mag {wilbon; mypw; #var food food; 1; 1; fly; modemage; modewhite}}
 #alias mag {#white}
 #alias modered {
@@ -4038,10 +4056,10 @@ cancel;
   #alias remage {rewin; modemage; modewhite};
   #alias locatereport locatereportimpl;
   #alias jsrelo js relo;
-  #var food turkey;
+  #var food cheese;
   nutr $food;
   #alias mlo {msw locate knock};
-  #action {^{\w+} makes a mockery out of everyone} {nospam 30 jmoc %%1};
+  #action {^{\w+} makes a mockery out of everyone} {nospamdo 30 jmoc %%1};
 }
 
 #alias mspin {#map undo; #map set roomsymbol [S]}
@@ -4069,14 +4087,15 @@ cancel;
 }
 #action {^Mustakrakish, the ancient death troll glows a bright lunar white} {gt -->    TROLL CLEANSED  !!}
 #alias logshamo {logwin; $myshaman; mypw; 1;1;modeshaman; fly}
-#alias logsham {newses arc {$myshaman; mypw; 1; 1; modeshaman; fly}  }
+#alias logsham {newses arc {$myshaman; mypw; ones; modeshaman; fly}  }
 #alias logdru newses arc {wagner; mypw; 1; 1; modedruid; fly}
 #alias newchar {newses %1 {makechar %2 %3}}
 #alias lcvoy {lc meteorite; lc veil; lc clove; lc effigy}
 #alias plpd {present letter; present pendant}
 #var skyscout grayson
-#alias logsky {newses sky {$skyscout; mypw; 1; 1; modesky}}
-#alias logpal {logbot {boone; mypw; 1; 1; modepala; fly; d; d; n; e; jd r i}}
+#alias ones {1; 1; 1}
+#alias logsky {newses sky {$skyscout; mypw; ones; modesky}}
+#alias logpal {logbot {boone; mypw; ones; modepala; fly; jd r i}}
 #alias logwar {logbot {dawsen; mypw; 1; 1; modepala; modewar; fly}}
 #alias logmou logbot {penniman; mypw; 1;1; modepala; fly}
 #alias logdar logbot {gere; mypw; 1; 1; modepala; modedar; fly}
@@ -4296,15 +4315,20 @@ cancel;
 
 #alias onfair {#show atfair: }
 #alias buffcapture {
-  #var buffs {none};
+  clearbuff;
+  #alias clearbuff #show :supress buffer clear;
   #action {^{\s+}{.+\w}{\s+\[}} captureaffect %%2;
   #action {^{\s+}{.+\w}$} captureaffect %%2;
   affect;
   dolater7 onbuffcapture;
 }
 
+#alias clearbuff clearbuffimpl
+#alias clearbuffimpl #var buffs none;
+
 #alias onbuffcapture
 {
+  #alias clearbuff clearbuffimpl;
   #unaction {^{\s+}{.+\w}{\s+\[}};
   #unaction {^{\s+}{.+\w}$};
   dost;
@@ -4315,6 +4339,7 @@ cancel;
 
 #alias needbuff {
   #if {"$buffs[%0]" == "1"} {nothing} {buffcast %0};
+  groupc;
 }
 
 #alias buffcast {
@@ -4328,6 +4353,7 @@ cancel;
   {resist magic}{rmag}
   {resist gas}{rgas}
   {monstrous mantle}{mons}
+  {righteous indignation}{ll #show -->   CASTING RI; jd r i}
   {resist breath}{rbre}
   {resist negative}{rneg}
   
@@ -4427,6 +4453,7 @@ cancel;
 #alias novoy {donothing %1; ct omen quest}
 #alias startomen {
   #alias othervoy novoy;
+  option noclan;
   nod; rem jaw; gw staff; wear purple.hide;
 }
 
@@ -4489,6 +4516,7 @@ cancel;
 
 #alias onpalbuff
 {
+  needbuff righteous indignation;
   needbuff heal boost;
   needbuff holy arms;
   needbuff aura of glory;
@@ -4502,10 +4530,12 @@ cancel;
 }
 
 #alias boaold {palass; mai ott}
-#alias boa {las}
+#alias boa {ll donextthis; las;}
 #alias boe {boa; ass}
 #alias bos {palass; ass}
 #alias bof {boa; asf}
+#alias kef {ke %1; asf}
+#alias baco {bani corpse}
 #alias bou {boa; oe lunge}
 #alias goha {mrun harmonium}
 #alias boas {boa; oct}
@@ -4528,10 +4558,11 @@ cancel;
 {
   #alias bigrest {dism; rest; sip elixir};
   #var pet Steamboat;
+  #alia allnext donothing;
   #alias groupimpl group full;
   eng paleng;
   #var hrec battle.horn;
-  #action {^Your hands tingle as a feeling of goodness} {ll #show :LAY ready} {7};
+  #action {^Your hands tingle as a feeling of goodness} {ll #show -->       LAY ready} {7};
   #action {^Warriors' Training Room} {lrn; smile};
   #alias assthis palassthis;
   #action {disarms your weapon} {cancel; sysplay smb3_cannon; gw};
@@ -4582,7 +4613,7 @@ cancel;
   #format shortprompt {%sM%.80s} {%1} {%2};
   ifinactive #ats #show {$shortprompt} {-3};
   groupcaptureoff;
-  #regex {%2} {:sitting} { nospam 1 stand};  
+  #regex {%2} {:sitting} { nospam 0 stand};  
   #regex {%2} {\[Me:} {setfight 1} {setfight 0};
 }
 #alias feng {fence eng; ripo slash}
@@ -4651,6 +4682,7 @@ cancel;
 {
   onshabuff;
   needbuff ghostskin;
+  needbuff twisted fate;
   needbuff resist magic;
   needbuff ethereal armor;
 }
@@ -4680,9 +4712,9 @@ cancel;
 
 #alias onshabuff {
   needbuff tenacious heart;
+  needbuff heal boost;
   needbuff ancestral shroud;
   needbuff amplify spirits;
-  needbuff heal boost;
 }
 #alias ongshambuff
 {
@@ -4827,7 +4859,7 @@ cancel;
 #alias kpr {bot {punch %1; parry}}
 #sub {hungry. feed me!} {warrior needs food, badly}
 #alias tban {bot rest; st; tan ban; #delay 1 {bot st}}
-#alias rlcbluffreg {gobung; st; runto w3n4en9e5s6e5n ; lc fine.silver.ring; lc face; lc holy.talisman; lc golden.bracelet; lc glowing.amulet}
+#alias rlcbluffreg {gobung; st; runto w3n4en9e5s6e5n ; lc fine.silver.ring; lc face; lc golden.bracelet; lc glowing.amulet}
 #alias rlcbluffleg {gobung; lc fine.silver.ring; lc face; lc holy.talisman; lc golden.bracelet; rest }
 #alias dlcshayd {runshayd; restick lcshayd}
 #alias dlcner {goner; lctab; restick lcsan}
@@ -4860,6 +4892,7 @@ cancel;
   {16}{rlcrayne}
 }
 
+#alias kimasq {north; otk squire; ki mage}
 #alias dargklemisouth {runto 2s2wnw2se5se2s2w3s2ws6w2n; lct}
 #alias {qkdargk} {runto se2se4s2en2e6se3s2w2seses2e2n; lc hylar; lc hylar; lcb}
 #alias bungshayd {runto w3n8ws6w4n7ws6w4n6es2e3se2s2es; lcb; lct }
@@ -5076,7 +5109,6 @@ cancel;
 #alias onfight
 {
   #format fnow {%T};
-  groupc;
   #math fightoff {$fnow + 5};
 }
 #alias checkfight
@@ -5172,6 +5204,7 @@ cancel;
 #highlight {The tortured ghost of a theiwar cleric} {yellow}
 #highligh {gleaming silver medal warms up briefly} {green}
 #highlight {grey silken robe}{green}
+#highlight {glowing with a faint blue light}{green}
 #highlight {tattooed goblin skins} {green}
 #highlight {feeling and colour return} {light yellow}
 #highlight {squeezes your finger with incredible} {light yellow}
@@ -5280,7 +5313,8 @@ cancel;
 	resave
 }
 
-#alias keyminus {cancel; #kill delay; #alias dost dostmain}
+#alias keyminus {cancel; #kill delay; #alias dost dostmain; ll #var vnextcommand groupc;  }
+
 #macro {\eOm} {mac keyminus}
 #MACRO {\eOl}
 {
@@ -5347,10 +5381,11 @@ cancel;
 #MACRO {\e[15~} {f5}
 
 #alias f5 {
-	mac groupimpl;
+	ll donextthis;
 	#unaction {^{\s+}{.+}$};
 }
 
+#alias allnext ll donextthis
 #MACRO {\e[17~}
 {
 	mac bigrest
@@ -5366,12 +5401,8 @@ cancel;
 	mac dost
 }
 
-#MACRO {\e[20~}
-{
-	st;
-	assist
-}
-
+#MACRO {\e[20~} {f9}
+#alias f9 { boa } 
 #MACRO {\e[21~}
 {
 	rs $resctar
@@ -5612,14 +5643,22 @@ cancel;
 #VARIABLE         {window}                {{ } { } { } { } { }}
 
 #sub {animated suit of armor} {animated suit of armor(immheat)}
+#sub {granite watcher} {granite watcher(immheat)}
+#sub {a margle statue} {a marble statue(immheat)}
 #sub {a stone gargoyle} {a stone gargoyle(immheat)}
+#sub {The Kinslayer Wars} {2 Kinslayer}
 #sub {Gr'Ithnar} {Gr'Ithnar(immheat)}
+#sub {Bringer of the Great Cataclysm} {4 Cataclysm}
+#sub {The Origins of Mankind} {1 Origins}
+#sub {Vinas Solamnus} {3 Vinas}
 
 #var itemlocates {
     {book of the dead}{animate}
     {velvet book tied with blue ribbon}{RELOCATE}
     {compendium of ancient magic}{LOCATE}
+  {set of power cuisses}{sanction}
     {wispy cloud tablet}{tornado}
+  {emerald tablet engraved with runes}{HEALING CLOUD}
   {brilliant amethyst tablet}{iceskin}
   {driftwood tablet wrapped in seaweed}{cure massive}
   {crystalline tablet}{crit}
@@ -5657,6 +5696,7 @@ cancel;
     {sky blue prayerbook with sapphire runes}{holy word}
     {white leather book with golden hinges}{circle}
     {dragonrider's talisman}{pax}
+    {alabaster garlic clove charm}{LAST CHANCE}
     {charm covered in a sparkling silvery mist} {RITUAL VOYAGE}
     {charm covered in a lone gray flame}{HEALING WAVE}
     {grey stone bracelet}{bluff}
@@ -5664,6 +5704,7 @@ cancel;
     {black domino}{bluff}
     {radiant white prayerbook}{??}
     {golden battle-honor}{dv}
+  {wispy black veil charm}{ghostskin}
     {book with frosted glass covers}{??}
     {wretched medallion}{shadows}
     {ivory spined spellbook}{??}
@@ -5682,6 +5723,7 @@ cancel;
     {delicate prayerbook wrapped with silk}{soo}
   {weathered conch shell tablet}{summon}
     {silver and ruby ring}{kerns}
+  {windswept sandstone tablet}{winds}
     {battlehammer inscribed with Solamnic runes}{pod}
     {ring of finest silver}{bluff}
     {dark elven bracelet}{bog}
@@ -5689,7 +5731,8 @@ cancel;
 
 
 #alias boomcrate {drop crate; light crate in room}
-#alias lc5 {#5 {lc %1}}
+#alias twss {ct thats what she said}
+#alias lc5 {#5 {lc %1}; rest}
 #alias makesubs {
   #foreach *itemlocates[] vitem {
     makesub {$vitem} {$vitem($itemlocates[$vitem])};
