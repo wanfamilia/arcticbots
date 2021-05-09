@@ -95,6 +95,11 @@ class Velm
     require_relative 'poro/parse_arctic'
     ParseArctic.new.filter_file filename
   end
+
+  def parc
+    require_relative 'poro/parse_arctic'
+    ParseArctic.new
+  end
   
   def swagger
     display

@@ -1,0 +1,88 @@
+#sub {clear sphere}{clear sphere(mote)}
+#sub {sea elven headband}{sea elven headband(mote)}
+#sub {flexible red dragon scale bracer}{flexible red dragon scale bracer(mote)}
+#sub {flexible red dragon scale sleeves}{flexible red dragon scale sleeves(mote)}
+#sub {pair of flexible red dragon scale leggings}{pair of flexible red dragon scale leggings(mote)}
+#sub {ivory belt}{ivory belt(mote)}
+#sub {furry white cloak}{furry white cloak(mote)}
+#sub {clear crystal ring}{clear crystal ring(mote)}
+#sub {pair of clear crystal gauntlets}{pair of clear crystal gauntlets(mote)}
+#sub {white chicken feather}{white chicken feather(mote)}
+#sub {pair of flexible red dragon scale gloves}{pair of flexible red dragon scale gloves(mote)}
+#sub {long black stole, lined with red}{long black stole, lined with red(mote)}
+#sub {grey robes of the Thorn}{grey robes of the Thorn(mote)}
+#sub {grandiose plate of black steel}{grandiose plate of black steel(mote)}
+#sub {suit of blue scalemail armor}{suit of blue scalemail armor(mote)}
+#sub {stitched hood of enchanted gossamer}{stitched hood of enchanted gossamer(mote)}
+#sub {pair of soft lambskin moccasins}{pair of soft lambskin moccasins(mote)}
+#sub {silver runed black sleeves}{silver runed black sleeves(mote)}
+#sub {shimmering chartreuse robe}{shimmering chartreuse robe(mote)}
+#sub {macabre pair of human bone gauntlets}{macabre pair of human bone gauntlets(mote)}
+#sub {ivory bracelet}{ivory bracelet(mote)}
+#sub {advisor's robe}{advisor's robe(mote)}
+#sub {pair of enchanted gossamer sleeves}{pair of enchanted gossamer sleeves(mote)}
+#sub {blue elven hair ribbon}{blue elven hair ribbon(mote)}
+#sub {pair of goblin skin leggings}{pair of goblin skin leggings(mote)}
+#sub {bright blue hood}{bright blue hood(mote)}
+#sub {Silvery sleeves of stalking}{Silvery sleeves of stalking(mote)}
+#sub {carved marble mask}{carved marble mask(mote)}
+#sub {Gnomish workman's leather armor}{Gnomish workman's leather armor(mote)}
+#sub {battle-scarred adamantite breastplate}{battle-scarred adamantite breastplate(mote)}
+#sub {small white ring}{small white ring(mote)}
+#sub {embroidered white robe}{embroidered white robe(mote)}
+#sub {golden battle-honor}{golden battle-honor(mote)}
+#sub {clear crystal sceptre}{clear crystal sceptre(mote)}
+#sub {ruby inlaid silver ring}{ruby inlaid silver ring(mote)}
+#sub {earthen plate}{earthen plate(mote)}
+#sub {black velvet cloak}{black velvet cloak(mote)}
+#sub {pair of blue gloves}{pair of blue gloves(mote)}
+#sub {necklace of nephaline fragments}{necklace of nephaline fragments(mote)}
+#sub {large bead necklace}{large bead necklace(mote)}
+#sub {delicate black opal necklace}{delicate black opal necklace(mote)}
+#sub {elaborate dragon robe}{elaborate dragon robe(mote)}
+#sub {set of enchanted gossamer leggings}{set of enchanted gossamer leggings(mote)}
+#sub {blue lobster shell bracer}{blue lobster shell bracer(mote)}
+#sub {regal merlion head pauldrons}{regal merlion head pauldrons(mote)}
+#sub {suit of glimmering adamantite platemail}{suit of glimmering adamantite platemail(mote)}
+#sub {charred rosewood staff}{charred rosewood staff(mote)}
+#sub {heavy earthen plate}{heavy earthen plate(mote)}
+#sub {embroidered blue purse}{embroidered blue purse(mote)}
+#sub {elven vest of beads and bone}{elven vest of beads and bone(mote)}
+#sub {pair of golden arm braces}{pair of golden arm braces(mote)}
+#sub {teal cloak}{teal cloak(mote)}
+#sub {silver-streaked black hood}{silver-streaked black hood(mote)}
+#sub {thin golden wristband}{thin golden wristband(mote)}
+#sub {shard of crystallized nightmares}{shard of crystallized nightmares(mote)}
+#sub {gray and blue checkered pants}{gray and blue checkered pants(mote)}
+#sub {azure symboled white hood}{azure symboled white hood(mote)}
+#sub {leather jerkin}{leather jerkin(mote)}
+#sub {pair of ringmail leggings}{pair of ringmail leggings(mote)}
+#sub {blood red captain's sash}{blood red captain's sash(mote)}
+#sub {pair of high soft leather boots}{pair of high soft leather boots(mote)}
+#sub {earthen brown robe}{earthen brown robe(mote)}
+#sub {crown of leaves}{crown of leaves(mote)}
+#sub {long silver-streaked black robe}{long silver-streaked black robe(mote)}
+#sub {alb adorned with gold trim}{alb adorned with gold trim(mote)}
+#sub {gold embroidered emerald maniple}{gold embroidered emerald maniple(mote)}
+#sub {staff of carved wood}{staff of carved wood(mote)}
+#sub {eye of an umber hulk}{eye of an umber hulk(mote)}
+#sub {grey silken robe}{grey silken robe(mote)}
+#sub {sinister black battle greaves}{sinister black battle greaves(mote)}
+#sub {pair of black fighting trousers}{pair of black fighting trousers(mote)}
+#sub {belt of seashells}{belt of seashells(mote)}
+#sub {runed crimson skull staff}{runed crimson skull staff(mote)}
+#sub {emerald green fiddleback chasuble}{emerald green fiddleback chasuble(mote)}
+#sub {globe of vision}{globe of vision(mote)}
+#sub {pair of black steel-toed boots}{pair of black steel-toed boots(mote)}
+#sub {pair of black leather sleeves}{pair of black leather sleeves(mote)}
+#sub {black granite shield}{black granite shield(mote)}
+#sub {radiant alabaster breastplate}{radiant alabaster breastplate(mote)}
+#sub {sterling cuff}{sterling cuff(mote)}
+#sub {pair of huge white wings}{pair of huge white wings(mote)}
+#sub {pair of magi pants}{pair of magi pants(mote)}
+#sub {carved stone seal}{carved stone seal(mote)}
+#sub {runed shirt of enchanted gossamer}{runed shirt of enchanted gossamer(mote)}
+#sub {moon staff}{moon staff(mote)}
+#sub {staff of Vari}{staff of Vari(mote)}
+#sub {Queen's crown}{Queen's crown(mote)}
+#sub {jade belt}{jade belt(mote)}

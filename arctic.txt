@@ -1,4 +1,5 @@
 #read passwords.txt
+#read shared/motesub.txt
 #ACTION {$pktarg {.*}is {standing|sitting|resting|sleeping|lying}{.+}{\.|\)}$}
 {
 	dopk
@@ -1368,6 +1369,9 @@ reseteye;
 	stand
 }
 
+#alias spamwake {
+  #ticker e3 {mac wake} 3;
+}
 
 #alias end {nbf endurance}
 #alias jde {js devo}
@@ -2548,7 +2552,7 @@ reseteye;
 	js cone
 }
 
-#alias csn {mag jd co sn}
+#alias csn {mag ott; mag jd co sn}
 #alias clr {mag js color}
 #alias cso {csn; mag ota; mai ott}
 #ALIAS {kcr}
@@ -5652,6 +5656,7 @@ cancel;
 #sub {The Origins of Mankind} {1 Origins}
 #sub {Vinas Solamnus} {3 Vinas}
 
+#alias lc4 #4 lc
 #var itemlocates {
     {book of the dead}{animate}
     {velvet book tied with blue ribbon}{RELOCATE}
@@ -5687,6 +5692,7 @@ cancel;
     {gold inlaid bone bracer}{lemuria}
     {holy talisman}{bluff}
     {cape of shadows}{shadows}
+    {blackened charm of defiled flesh}{ROTTING FLESH}
     {bladeless sword}{shadows}
     {suit of flexible red dragon scale armor}{cv}
     {ancient holy avenger}{??}
@@ -5698,6 +5704,7 @@ cancel;
     {dragonrider's talisman}{pax}
     {alabaster garlic clove charm}{LAST CHANCE}
     {charm covered in a sparkling silvery mist} {RITUAL VOYAGE}
+    {shrunken demon's horn charm}{NAP}
     {charm covered in a lone gray flame}{HEALING WAVE}
     {grey stone bracelet}{bluff}
     {glowing golden amulet}{bluff}

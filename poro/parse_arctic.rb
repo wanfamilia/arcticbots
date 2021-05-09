@@ -32,6 +32,22 @@ class ParseArctic
     'echo done parse'
   end
 
+
+  def motes(input_name)
+    # cat logs/white.txt | grep "vanishes leaving behind \(a\|several\) sparkling mote" > shared/motes.txt
+    outlines = File.open(input_name).each.uniq.map do |line|
+      pat = /(A |An |The |Some )?([^(]+)(\(.+\))? vanishes leaving.+$/
+      item = line.gsub(pat, '\2').strip
+      "#sub {#{item}}{#{item}(mote)}"
+    end
+
+    output_name = input_name + '.short.txt'
+    File.open(output_name, 'w') do |f|
+      outlines.each {|line| f.puts line}
+    end
+    'echo done motes'
+  end
+
   def to_write(lines)
     return [lines.first] if lines.length < 3
     last_line = lines.last.strip
