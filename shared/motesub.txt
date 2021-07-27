@@ -34,10 +34,15 @@
 #sub {clear crystal sceptre}{clear crystal sceptre(mote)}
 #sub {ruby inlaid silver ring}{ruby inlaid silver ring(mote)}
 #sub {earthen plate}{earthen plate(mote)}
+#sub {earthen mace}{earthen mace(mote)}
+#sub {white silk robe trimmed in gold}{white silk robe trimmed in gold(mote)}
 #sub {black velvet cloak}{black velvet cloak(mote)}
+#sub {small draconian ring}{small draconian ring(mote)}
 #sub {pair of blue gloves}{pair of blue gloves(mote)}
+#sub {cloak of Ixitxachitl skin}{cloak of Ixitxachitl skin(mote)}
 #sub {necklace of nephaline fragments}{necklace of nephaline fragments(mote)}
 #sub {large bead necklace}{large bead necklace(mote)}
+#sub {black runed ring}{black runed ring(mote)}
 #sub {delicate black opal necklace}{delicate black opal necklace(mote)}
 #sub {elaborate dragon robe}{elaborate dragon robe(mote)}
 #sub {set of enchanted gossamer leggings}{set of enchanted gossamer leggings(mote)}
@@ -45,6 +50,7 @@
 #sub {regal merlion head pauldrons}{regal merlion head pauldrons(mote)}
 #sub {suit of glimmering adamantite platemail}{suit of glimmering adamantite platemail(mote)}
 #sub {charred rosewood staff}{charred rosewood staff(mote)}
+#sub {cuirass of silver dragonscale}{cuirass of silver dragonscale(mote)}
 #sub {heavy earthen plate}{heavy earthen plate(mote)}
 #sub {embroidered blue purse}{embroidered blue purse(mote)}
 #sub {elven vest of beads and bone}{elven vest of beads and bone(mote)}

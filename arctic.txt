@@ -115,7 +115,7 @@
   dolog;
 }
 {2}
-#var myshaman donnerr
+#var myshaman velm
 #action {^{\w+} tells your {clan} '$myshaman rit {\w+}'} {othervoy %1 %3} {1}
 #alias ptab {pta barbarian}
 #alias oes {group own; oe smile $myshaman; oe st}
@@ -522,26 +522,27 @@ reseteye;
   #if {"$classes[%2]" != ""} {%1 %2 %3};
 }
 
+#alias blev {bot {pull lever; w}}
 #var vmasters {{CL}{cleric}{DA}{dark}{WA}{warrior}{BA}{barbarian}{DR}{druid}{PA}{paladin}{SH}{shaman}{SC}{scout}{TH}{thief}{WH}{white}{RE}{red}{BL}{black}}
 #alias ghostfor {
   nospam 9 gma $vmasters[$classes[%1]]
 }
-#alias lckith {lct; lc talisman; lc talisman}
+#alias lckith {lct; lc talisman; lc charm }
 #alias saym {say when ready, type MOC (dont emote or say or tell)}
 #alias gtm {gt to make a master, type: mak}
-#alias lcshad {lc bladeless; lcb; lc shadow.mask; lc shadow.plate; rest}
+#alias lcshad {lc bladeless; lc shadow.cape; lc shadow.mask; lc shadow.plate; rest}
 #alias lcreef {lc candle; lc knuckle; lc twig; lc head}
 #alias lcrav {lc skull; lc lion; lc globe; lc tablet}
 #alias lctab {lc tablet; lc slab; lc ruby.block; lcb; rest }
 #alias lcshayd {lctab}
-#alias lcck {lcharm; lc mithril; lc stormbringer }
+#alias lcck {lc charm; lc mithril; lc stormbringer }
 #alias rlcrayne {gopal; runto 2wn2e5sw2sw2sesuse3sesuwsue; lct; lcb}
 #alias lcshado {lc wretched; lc shadow; lc gossamer; lc bladeless}
 #alias rlcred {rps me; gobal; lrn; coli; rd imp; runto s4e8n6w2sw2s2wnw7n2w2nw9n2u4n; lcf; lcb; }
 #alias rlcredleg {rps me; gobal; rd imp; runto s4e8n6w2sw2s2wnw7nw; lcf; lcb; lc flexible.red ; }
-#alias rlcck {gotar; runto ws14es4e2neu9s3en4e4s3e2se2nen2e3n2eneususeueun; lcck}
-#alias rlckith {gosol; runto e2sd10se4sw5se4sw3s6wd2s; lckith}
-#alias rlcspi {gosol; runto e2sd8n3e5n4e3n9e5s6es2ese; climb ladder; ee; lckith}
+#alias rlcck {gotar; lc hammer; runto ws14es4e2neu9s3en4e4s3e2se2nen2e3n2eneususeueun; lcck}
+#alias rlckith {gosol; runto e2sd10se4sw5se4sw3s6wd2s; lckith; lc dark.elven}
+#alias rlcspi {gosol; runto e2sd8n3e5n4e3n9e5s6es2ese; climb ladder; ee; lckith; lc domino}
 #alias 4 0
 #alias lowpal {bot {#alias strike kill; eng ki; #alias dorescue {cancel; st; assist; rescue %%1}}}
 #alias enfothis {enter arch; follo %1}
@@ -700,8 +701,9 @@ reseteye;
 #alias bpa {bot palassthis}
 #alias palass bpa
 #alias haze {bot jd men ha}
-#alias palassthis {ass %1; rally; strike; av leg; strike}
+#alias palassthis {ass %1; rally; strike; av soul; strike}
 #alias kdr {st; drain}
+#alias bufdar {bot buf dk}
 
 #ACTION {{he begins to drool|is stunned!}}
 {
@@ -1046,7 +1048,7 @@ reseteye;
 #alias gophy {gocae; mirphy}
 #alias mirphy {w; w; s; s; w; w; w; open gate; w; w; n; n; climb cliff; d; n; w; w; w; lcb; lcb}
 #alias goan {puf anchor}
-#alias gobung {gosol; e; s; s; d; fsf; n;n;n;n;n;n;n;n;e;e;e;n;n;n;n;e;rest}
+#alias gobung {gosol; e; s; s; d; fsf; n;n;n;n;n;n;n;n;e;e;e;n;n;n;n;e; coli; rest}
 #alias gorbu {gosol; #delay 8 {gorec bung}}
 #alias runbung {gorec bung}
 #alias runblo {mrun blodesign}
@@ -1495,7 +1497,7 @@ reseteye;
   #if {"%1"==""} {#map goto mythsh} {#map goto %1};
   mapon;
 }
-
+#alias wagg {jd mass}
 #alias bohj {ct Bohj!  Bohj! %1 ur ippistuxj ko!}
 #alias maft {#map exit %1 command {%1; %2 %3 %4 %5}}
 #alias runmyth {mrun mythsh}
@@ -1510,6 +1512,8 @@ reseteye;
   #action {^Alas, you cannot go that way} {#map undo};
   #action {^Center of the Celestial Temple} {mgoc};
   #action {^Otik watches you calmly} {mgo otik};
+  #action {^A Running Stream}{mgo shaydstream};
+  #action {^Gate to the Fishing Village}{mgo irdagate};
   #action {^A beautiful statue of Mishakal stands here, illuminating the chamber} {mgo startheal};
   #action {^{North|South|East|West}ern {Reach|Branch}} {mgo %%1winds; #show %%1};
   #action {^{The Slimy Chute}} {mgo slimychute};
@@ -2552,6 +2556,7 @@ reseteye;
 	js cone
 }
 
+#alias noam {bot {north; ki ambassador}}
 #alias csn {mag ott; mag jd co sn}
 #alias clr {mag js color}
 #alias cso {csn; mag ota; mai ott}
@@ -2757,7 +2762,7 @@ reseteye;
 
 #alias lcm {lc macabre}
 #alias lct {lc tablet}
-#alias lcharm {lc charm; lc charm}
+#alias lcharm {lc charm; }
 #ALIAS {log}
 {
 	#if {"%0" == "on"}
@@ -2818,8 +2823,10 @@ reseteye;
 
 #ALIAS {logbot} {newses bot}
 #alias newses limitses 1 newsesimpl
-#var port 2700
+#var mainport 2700
 #var devport 1919
+#var createport 5772
+#var port $createport
 #alias newsesimpl
 {
         #session %1 mud.arctic.org $port;
@@ -3197,7 +3204,7 @@ richard_wan@hotmail.com;	1;	1;	1;	1;
   #alias rs rga;
   #var pet all.spirit;
   #VARIABLE {slot6} {regenerate|heal boost|zombify|ancestral spirit|ritual voyage|darkened soul};
-  #alias hl {rgc};
+  #alias hl {ota %%1; rgc %%1;};
   #action {^{\w+} makes preparations for} {classif ghostfor %%1};
   #ALIAS {someheals}
 	{
@@ -4096,16 +4103,15 @@ cancel;
 #alias newchar {newses %1 {makechar %2 %3}}
 #alias lcvoy {lc meteorite; lc veil; lc clove; lc effigy}
 #alias plpd {present letter; present pendant}
-#var skyscout grayson
 #alias ones {1; 1; 1}
 #alias logsky {newses sky {$skyscout; mypw; ones; modesky}}
-#alias logpal {logbot {boone; mypw; ones; modepala; fly; jd r i}}
+#alias logpal {logbot {rohane; mypw; ones; modepala; fly; jd r i}}
 #alias logwar {logbot {dawsen; mypw; 1; 1; modepala; modewar; fly}}
 #alias logmou logbot {penniman; mypw; 1;1; modepala; fly}
 #alias logdar logbot {gere; mypw; 1; 1; modepala; modedar; fly}
 #alias logwaro newses war {dawsen; mypw; 1; 1; modepala; modewar; fly; #alias bot #war;}
 #alias logclero newses hea {wilson; mypw; 1; 1; modecleric; fly; #alias mai  {#hea} }
-#alias logthi newses thi {nikson; mypw; 1; 1; fly; modethief}
+#alias logthi newses thi {ringo; mypw; 1; 1; fly; modethief}
 #alias modethief {
   #action {^The master assassin looks at you from behind} {lrn; smile};
   #action {^Aldur A'Kul the master thief sits} {lrn; smile};
@@ -4122,7 +4128,9 @@ cancel;
   #var circle1 {fa fo};
   #alias redru {rewin; modedruid};
   #alias hp js par;
+  #alias csn jd ice sto;
 }
+#alias ktor js torna
 #alias pc {thi pick}
 #alias thuc {throat; unbalance; coup}
 #alias disablekal {4e2s2wd2n;det;det plate;disable plate;!;ene;det;det chest in r;det 2.chest in r;det 3.chest in r;disable chest in r;!;disable 2.chest in r;!;disable 3.chest in r;!;pick chest in r;pick 2.chest in r;pick 3.chest in r;wsww3n;learn all;3sessu2enn4w}
@@ -4718,6 +4726,7 @@ cancel;
   needbuff tenacious heart;
   needbuff heal boost;
   needbuff ancestral shroud;
+  needbuff detect poison;
   needbuff amplify spirits;
 }
 #alias ongshambuff
@@ -4867,7 +4876,7 @@ cancel;
 #alias rlcbluffleg {gobung; lc fine.silver.ring; lc face; lc holy.talisman; lc golden.bracelet; rest }
 #alias dlcshayd {runshayd; restick lcshayd}
 #alias dlcner {goner; lctab; restick lcsan}
-#alias rlclem {gobal; runlem; lcb; }
+#alias rlclem {gobal; runlem; lcb; lcharm; lc bone.bracer; lc wretched }
 #alias dlccae {gocae; lcb; lc ivory.book; restick dlcner}
 #alias rlckal {gokal; runto dnn10e; lc discolored; lc silver.ring; 14w; open gate; 4w5nww; }
 #alias dlcbog {
@@ -4877,7 +4886,9 @@ cancel;
 }
 #alias rlcrahn {gokal; van me; js imp; runto d2n10e; open gate; 2e4s4eu3enu3e2nesed8w2s; lc discolored; lc silver.ring}
 
-#var vlocates {
+#alias paxtomb {lie %1.tomb; gt lie %1.tomb; #map move down}
+#alias paxwheel {bot {pray statue; north; #3 turn wheel}}
+#var vlocatesold2 {
   {1}{rlcred}
   {2}{rlcbluffreg}
   {3}{gobung}
@@ -4896,9 +4907,32 @@ cancel;
   {16}{rlcrayne}
 }
 
+#alias addloc
+{
+        #list vlocates add %1;
+}
+
+#alias addlocates {
+  #var vlocates {};
+  addloc rlcred; addloc rlcbluffreg; addloc gobung;
+  addloc bungshayd; addloc rlcstorm; addloc lcstorm;
+  addloc rlcqk; addloc qkdargk;
+  addloc rlcner; addloc lcsan1; addloc lcsan2;
+  addloc rlcrahn;
+  addloc rlcck;
+  addloc rlcrayne;
+}
+#alias addleglocs {
+  addloc rlckith;
+  addloc rlclem;
+  addloc lcshad;
+  addloc rlcspi;
+}
+addlocates;
+addleglocs;
 #alias kimasq {north; otk squire; ki mage}
 #alias dargklemisouth {runto 2s2wnw2se5se2s2w3s2ws6w2n; lct}
-#alias {qkdargk} {runto se2se4s2en2e6se3s2w2seses2e2n; lc hylar; lc hylar; lcb}
+#alias {qkdargk} {runto se2se4s2en2e6se3s2w2seses2e2n; lc hylar; lc hylar; lcb; lc lambskin}
 #alias bungshayd {runto w3n8ws6w4n7ws6w4n6es2e3se2s2es; lcb; lct }
 #alias rlcqk {gokal; runto d2n4w; open gate; 4w5n2w4n2ws2w4nw2nwn; lcb; lct}
 #alias rlcreef {gokal; runto d2n3e9n3edn3e3nen2en; gift; lcharm; lcharm; }
@@ -5647,6 +5681,7 @@ cancel;
 #VARIABLE         {window}                {{ } { } { } { } { }}
 
 #sub {animated suit of armor} {animated suit of armor(immheat)}
+#sub {granite golem}{granite golem(immheat)}
 #sub {granite watcher} {granite watcher(immheat)}
 #sub {a margle statue} {a marble statue(immheat)}
 #sub {a stone gargoyle} {a stone gargoyle(immheat)}
@@ -5662,10 +5697,11 @@ cancel;
     {velvet book tied with blue ribbon}{RELOCATE}
     {compendium of ancient magic}{LOCATE}
   {set of power cuisses}{sanction}
+  {spellbook with a bronze latch}{IGNITE}
     {wispy cloud tablet}{tornado}
   {emerald tablet engraved with runes}{HEALING CLOUD}
   {brilliant amethyst tablet}{iceskin}
-  {driftwood tablet wrapped in seaweed}{cure massive}
+  {driftwood tablet wrapped in seaweed}{massive}
   {crystalline tablet}{crit}
     {burned black prayerbook}{soul leech}
     {sparkling black bracelet}{ft}
@@ -5681,6 +5717,7 @@ cancel;
     {book with wooden covers}{gust}
     {spherical obsidian tablet}{enlarge}
     {small tattered prayerbook}{restoration}
+   {shimmering charm of ethereal energy}{ghostmaster}
     {shimmering prayerbook with silver pages}{steelskin}
     {pair of spiked sterling gauntlets}{cv}
     {black metal pike}{lemuria}
@@ -5753,6 +5790,7 @@ cancel;
   locatereport {%2} {%3%4};
 }
 
+#alias bg {bot {guard stop; guard %1}}
 #alias locatereport donothing;
 #alias locatereportimpl {
   #if {"$itemlocates[%1]" != ""} { alltell {%1($itemlocates[%1]): %2}; } {donothing %1} ;

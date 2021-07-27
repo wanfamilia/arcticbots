@@ -351,6 +351,7 @@ abovecitdrac
 startbluff
 startbandit
 banditbush
+paxtokith
 startregen
 soldruid
 startmom
@@ -476,3 +477,4 @@ bakalishaman
 ritvermi
 startgalazor
 mystictunnel
+irdasphinx
