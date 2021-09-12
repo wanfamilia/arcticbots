@@ -18,7 +18,7 @@ F 10
 
 G 0
 
-I 8761
+I 11848
 
 L {ASCII NESW LINE} {NO EXITS} {x}
 L {ASCII NESW LINE} {N} {o}
@@ -216,7 +216,7 @@ L {MUDFONT CURVED} {N E} {\u2818}
 L {MUDFONT CURVED} {S E} {\u28A0}
 L {MUDFONT CURVED} {S W} {\u2844}
 L {MUDFONT CURVED} {N W} {\u2803}
-L {UNICODE GRAPHICS} {NO DIAGONAL} {}
+L {UNICODE GRAPHICS} {NO DIAGONAL} { }
 L {UNICODE GRAPHICS} {SE} {\u2E0C}
 L {UNICODE GRAPHICS} {NE} {\u2E1D}
 L {UNICODE GRAPHICS} {SE NE} {>}
@@ -48550,7 +48550,6 @@ E {11846} {north} {north} {1} {0} {} {1.000} {} {0.00}
 R {11846} {0} {} {} { } {} {} {} {} {} {1.000} {}
 E {11845} {south} {south} {4} {0} {} {1.000} {} {0.00}
 E {11847} {north} {north} {1} {0} {} {1.000} {} {0.00}
-E { 5431} {up} {up} {16} {0} {} {1.000} {} {0.00}
 
 R {11847} {0} {} {} { } {} {} {} {} {} {1.000} {}
 E {11846} {south} {south} {4} {0} {} {1.000} {} {0.00}

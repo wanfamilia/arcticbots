@@ -484,7 +484,7 @@ reseteye;
 
 #alias rfe {jd re fe}
 #alias repet {release $pet; conjure $pet}
-#var skyscout Talinia
+#var skyscout Grayson
 
 #alias donothing {#var nothing nothing:%1}
 
@@ -2826,7 +2826,7 @@ reseteye;
 #var mainport 2700
 #var devport 1919
 #var createport 5772
-#var port $createport
+#var port $mainport
 #alias newsesimpl
 {
         #session %1 mud.arctic.org $port;
@@ -4105,7 +4105,7 @@ cancel;
 #alias plpd {present letter; present pendant}
 #alias ones {1; 1; 1}
 #alias logsky {newses sky {$skyscout; mypw; ones; modesky}}
-#alias logpal {logbot {rohane; mypw; ones; modepala; fly; jd r i}}
+#alias logpal {logbot {boone; mypw; ones; modepala; fly; jd r i}}
 #alias logwar {logbot {dawsen; mypw; 1; 1; modepala; modewar; fly}}
 #alias logmou logbot {penniman; mypw; 1;1; modepala; fly}
 #alias logdar logbot {gere; mypw; 1; 1; modepala; modedar; fly}
