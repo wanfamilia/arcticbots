@@ -115,7 +115,7 @@
   dolog;
 }
 {2}
-#var myshaman velm
+#var myshaman donnerr
 #action {^{\w+} tells your {clan} '$myshaman rit {\w+}'} {othervoy %1 %3} {1}
 #alias ptab {pta barbarian}
 #alias oes {group own; oe smile $myshaman; oe st}
@@ -531,6 +531,7 @@ reseteye;
 #alias saym {say when ready, type MOC (dont emote or say or tell)}
 #alias gtm {gt to make a master, type: mak}
 #alias lcshad {lc bladeless; lc shadow.cape; lc shadow.mask; lc shadow.plate; rest}
+#alias lcshad2 {lc paladine; lc rosewood.buckler}
 #alias lcreef {lc candle; lc knuckle; lc twig; lc head}
 #alias lcrav {lc skull; lc lion; lc globe; lc tablet}
 #alias lctab {lc tablet; lc slab; lc ruby.block; lcb; rest }
@@ -1089,8 +1090,8 @@ reseteye;
     #if {"%2"=="stand"} {mac stand} { mac nextcommand %2 %3;}
   };
 }
-
 #alias nextauto mac %1 %2
+#var navailable 0
 #alias nextcommand {
   #var vnextcommand {%1 %2};
 }
@@ -5717,11 +5718,13 @@ addleglocs;
     {book with wooden covers}{gust}
     {spherical obsidian tablet}{enlarge}
     {small tattered prayerbook}{restoration}
+  {set of power brassards}{sanction}
    {shimmering charm of ethereal energy}{ghostmaster}
     {shimmering prayerbook with silver pages}{steelskin}
     {pair of spiked sterling gauntlets}{cv}
     {black metal pike}{lemuria}
     {mithril plate of shadows}{shadows}
+   {divine shield of Paladine}{shadows}
     {ruby studded block of limestone}{enlarge}
     {iridescent hematite tablet}{veil of ice}
     {stunning pearl-inlaid tablet}{ice storm}
