@@ -1,3 +1,4 @@
+#alias mypw {#bell; #show SETUP passwords.txt}
 #read passwords.txt
 #read shared/motesub.txt
 #ACTION {$pktarg {.*}is {standing|sitting|resting|sleeping|lying}{.+}{\.|\)}$}
