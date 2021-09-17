@@ -541,7 +541,7 @@ reseteye;
 #alias lcshado {lc wretched; lc shadow; lc gossamer; lc bladeless}
 #alias rlcred {rps me; gobal; lrn; coli; rd imp; runto s4e8n6w2sw2s2wnw7n2w2nw9n2u4n; lcf; lcb; }
 #alias rlcredleg {rps me; gobal; rd imp; runto s4e8n6w2sw2s2wnw7nw; lcf; lcb; lc flexible.red ; }
-#alias rlcck {gotar; lc hammer; runto ws14es4e2neu9s3en4e4s3e2se2nen2e3n2eneususeueun; lcck}
+#alias rlcck {gotar; lc battle.hammer; runto ws14es4e2neu9s3en4e4s3e2se2nen2e3n2eneususeueun; lcck}
 #alias rlckith {gosol; runto e2sd10se4sw5se4sw3s6wd2s; lckith; lc dark.elven}
 #alias rlcspi {gosol; runto e2sd8n3e5n4e3n9e5s6es2ese; climb ladder; ee; lckith; lc domino}
 #alias 4 0
@@ -4028,7 +4028,7 @@ richard_wan@hotmail.com;	1;	1;	1;	1;
   get all.!necromantic pouch;
   put all.protection pouch;
 }
-#alias cleancomp2 {get all.!acorn component.pouch}
+#alias cleancomp2 {get all.!web.!acorn component.pouch}
 #alias cleancomp cleancomp2
 #alias dropcomp {cleancomp; dropallcomp}
 #alias sellcomp {cleancomp; sell20}
@@ -4104,7 +4104,7 @@ cancel;
 #alias newchar {newses %1 {makechar %2 %3}}
 #alias lcvoy {lc meteorite; lc veil; lc clove; lc effigy}
 #alias plpd {present letter; present pendant}
-#alias ones {1; 1; 1}
+#alias ones {1; 1; }
 #alias logsky {newses sky {$skyscout; mypw; ones; modesky}}
 #alias logpal {logbot {boone; mypw; ones; modepala; fly; jd r i}}
 #alias logwar {logbot {dawsen; mypw; 1; 1; modepala; modewar; fly}}
@@ -4112,7 +4112,7 @@ cancel;
 #alias logdar logbot {gere; mypw; 1; 1; modepala; modedar; fly}
 #alias logwaro newses war {dawsen; mypw; 1; 1; modepala; modewar; fly; #alias bot #war;}
 #alias logclero newses hea {wilson; mypw; 1; 1; modecleric; fly; #alias mai  {#hea} }
-#alias logthi newses thi {ringo; mypw; 1; 1; fly; modethief}
+#alias logthi newses thi {nikson; mypw; 1; 1; fly; modethief}
 #alias modethief {
   #action {^The master assassin looks at you from behind} {lrn; smile};
   #action {^Aldur A'Kul the master thief sits} {lrn; smile};
@@ -4727,7 +4727,6 @@ cancel;
   needbuff tenacious heart;
   needbuff heal boost;
   needbuff ancestral shroud;
-  needbuff detect poison;
   needbuff amplify spirits;
 }
 #alias ongshambuff
@@ -4925,6 +4924,7 @@ cancel;
 }
 #alias addleglocs {
   addloc rlckith;
+  addloc rlcshoal;
   addloc rlclem;
   addloc lcshad;
   addloc rlcspi;
@@ -4932,6 +4932,7 @@ cancel;
 addlocates;
 addleglocs;
 #alias kimasq {north; otk squire; ki mage}
+#alias rlcshoal {gokal; runto d2n3e7n; open gate; 2n3edn3e3nen2en; lcharm; lcm; lc whale.spear}
 #alias dargklemisouth {runto 2s2wnw2se5se2s2w3s2ws6w2n; lct}
 #alias {qkdargk} {runto se2se4s2en2e6se3s2w2seses2e2n; lc hylar; lc hylar; lcb; lc lambskin}
 #alias bungshayd {runto w3n8ws6w4n7ws6w4n6es2e3se2s2es; lcb; lct }
@@ -4969,9 +4970,8 @@ addleglocs;
     #math vlocate {$vlocate + 1};
     #delay 30 restick megaloc;
   }{
-    #var vlocate 1;
-    gomyth;
-    rest;
+    #var vlocate 1; gomyth;
+    buy 3*cheese; arr; rest;
   }
 }
 
@@ -5025,7 +5025,7 @@ addleglocs;
 #alias rlcdar {deltwo lcdar rlcqk }
 
 #alias lcsan2 {lc power; lc mace.destruction; lc blue.dragon; rest}
-#alias lcsan1 {lcb; lcharm}
+#alias lcsan1 {lcb; lcharm; lc red.dragonscale}
 
 #ALIAS {sysplay2}
 {
@@ -5683,6 +5683,7 @@ addleglocs;
 
 #sub {animated suit of armor} {animated suit of armor(immheat)}
 #sub {granite golem}{granite golem(immheat)}
+#sub {loser clanmate} {heroically optimistic}
 #sub {granite watcher} {granite watcher(immheat)}
 #sub {a margle statue} {a marble statue(immheat)}
 #sub {a stone gargoyle} {a stone gargoyle(immheat)}
@@ -5696,6 +5697,7 @@ addleglocs;
 #var itemlocates {
     {book of the dead}{animate}
     {velvet book tied with blue ribbon}{RELOCATE}
+ {ancient sword of the morning rose}{storms}
     {compendium of ancient magic}{LOCATE}
   {set of power cuisses}{sanction}
   {spellbook with a bronze latch}{IGNITE}
@@ -5704,6 +5706,7 @@ addleglocs;
   {brilliant amethyst tablet}{iceskin}
   {driftwood tablet wrapped in seaweed}{massive}
   {crystalline tablet}{crit}
+  {red dragonscale battle armour}{sanction}
     {burned black prayerbook}{soul leech}
     {sparkling black bracelet}{ft}
     {sandy green tablet}{iceshield}
@@ -5712,7 +5715,6 @@ addleglocs;
     {discolored helmet}{kern}
     {slender book bound with oily plates}{gate}
   {ancient book with archaic runes}{rend/peek/slumber}
-    {blackened charm of defiled flesh}{rotting flesh}
     {ball-shaped charm formed of enigmatic energy}{dark soul}
     {dark brown book}{cob}
     {book with wooden covers}{gust}
@@ -5748,7 +5750,7 @@ addleglocs;
     {charm covered in a lone gray flame}{HEALING WAVE}
     {grey stone bracelet}{bluff}
     {glowing golden amulet}{bluff}
-    {black domino}{bluff}
+    {black domino}{spire}
     {radiant white prayerbook}{??}
     {golden battle-honor}{dv}
   {wispy black veil charm}{ghostskin}
