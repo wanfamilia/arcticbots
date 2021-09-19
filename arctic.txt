@@ -2036,6 +2036,8 @@ reseteye;
 
 #alias dofote {enter portal; say evil; enter portal; say will; enter portal; say win; enter portal}
 #alias bfsh bfg $myshaman
+#alias rlore {recite lore %1 in inventory}
+#alias {rec lore} {thwack me; rlore %1;}
 #alias bfsk bfg $skyscout
 #alias palsham {mai voy boone; #delay 1 {mai bfg $myshaman; buftwo}; }
 #alias vogr {mai; voy %1; #delay 1 {bfg $myshaman; sumo}; ghob; group form; hb %1}
@@ -4936,7 +4938,7 @@ addleglocs;
 #alias rlcshoal {gokal; runto d2n3e7n; open gate; 2n3edn3e3nen2en; lcharm; lcm; lc whale.spear}
 #alias dargklemisouth {runto 2s2wnw2se5se2s2w3s2ws6w2n; lct}
 #alias {qkdargk} {runto se2se4s2en2e6se3s2w2seses2e2n; lc hylar; lc hylar; lcb; lc lambskin}
-#alias bungshayd {runto w3n8ws6w4n7ws6w4n6es2e3se2s2es; lcb; lct }
+#alias bungshayd {runto w3n8ws6w4n7ws6w4n6e; lc sparkling ; s2e3se2s2es; lcb; lct }
 #alias rlcqk {gokal; runto d2n4w; open gate; 4w5n2w4n2ws2w4nw2nwn; lcb; lct}
 #alias rlcreef {gokal; runto d2n3e9n3edn3e3nen2en; gift; lcharm; lcharm; }
 #alias rlcstorm {govin; north; open wall east; runto ene8se2sw2s3en6ese2nwnen; accept; n; lcb ; lcharm}
@@ -5694,6 +5696,7 @@ addleglocs;
 #sub {The Origins of Mankind} {1 Origins}
 #sub {Vinas Solamnus} {3 Vinas}
 
+#alias shadowcrack {enter crack; cut rope; restrain minotaur; open grate; up}
 #alias lc4 #4 lc
 #var itemlocates {
     {book of the dead}{animate}
@@ -5701,6 +5704,7 @@ addleglocs;
  {ancient sword of the morning rose}{storms}
     {compendium of ancient magic}{LOCATE}
   {set of power cuisses}{sanction}
+  {rosewood buckler clad with iron}{shadows}
   {spellbook with a bronze latch}{IGNITE}
     {wispy cloud tablet}{tornado}
   {emerald tablet engraved with runes}{HEALING CLOUD}
