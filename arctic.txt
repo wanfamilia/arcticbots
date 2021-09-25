@@ -5703,6 +5703,7 @@ addleglocs;
     {velvet book tied with blue ribbon}{RELOCATE}
  {ancient sword of the morning rose}{storms}
     {compendium of ancient magic}{LOCATE}
+  {gigantic whale bone spear}{shoal}
   {set of power cuisses}{sanction}
   {rosewood buckler clad with iron}{shadows}
   {spellbook with a bronze latch}{IGNITE}
