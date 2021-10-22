@@ -4938,7 +4938,7 @@ addleglocs;
 #alias rlcshoal {gokal; runto d2n3e7n; open gate; 2n3edn3e3nen2en; lcharm; lcm; lc whale.spear}
 #alias dargklemisouth {runto 2s2wnw2se5se2s2w3s2ws6w2n; lct}
 #alias {qkdargk} {runto se2se4s2en2e6se3s2w2seses2e2n; lc hylar; lc hylar; lcb; lc lambskin}
-#alias bungshayd {runto w3n8ws6w4n7ws6w4n6e; lc sparkling ; s2e3se2s2es; lcb; lct }
+#alias bungshayd {runto w3n8ws6w4n7ws6w4n6e; lc sparkling; lc golden.bow ; s2e3se2s2es; lcb; lct }
 #alias rlcqk {gokal; runto d2n4w; open gate; 4w5n2w4n2ws2w4nw2nwn; lcb; lct}
 #alias rlcreef {gokal; runto d2n3e9n3edn3e3nen2en; gift; lcharm; lcharm; }
 #alias rlcstorm {govin; north; open wall east; runto ene8se2sw2s3en6ese2nwnen; accept; n; lcb ; lcharm}
@@ -4968,6 +4968,7 @@ addleglocs;
 }
 #list vlocates size vlocatessize
 #alias megaloc {
+  taste cheese; sip water;
   mac $vlocates[$vlocate];
   #if {$vlocate < $vlocatessize} {
     #math vlocate {$vlocate + 1};
@@ -5686,8 +5687,9 @@ addleglocs;
 
 #sub {animated suit of armor} {animated suit of armor(immheat)}
 #sub {granite golem}{granite golem(immheat)}
-#sub {loser clanmate} {heroically optimistic}
 #sub {granite watcher} {granite watcher(immheat)}
+#sub {loser clanmate} {heroic clanmate} 
+#sub {has lost} {remains optimistic after having lost}
 #sub {a margle statue} {a marble statue(immheat)}
 #sub {a stone gargoyle} {a stone gargoyle(immheat)}
 #sub {The Kinslayer Wars} {2 Kinslayer}
@@ -5702,6 +5704,7 @@ addleglocs;
     {book of the dead}{animate}
     {velvet book tied with blue ribbon}{RELOCATE}
  {ancient sword of the morning rose}{storms}
+ {azure book with torn covers}{tent/chain/spray}
     {compendium of ancient magic}{LOCATE}
   {gigantic whale bone spear}{shoal}
   {set of power cuisses}{sanction}
@@ -5781,6 +5784,7 @@ addleglocs;
   {windswept sandstone tablet}{winds}
     {battlehammer inscribed with Solamnic runes}{pod}
     {ring of finest silver}{bluff}
+  {Stormbringer}{ck}
     {dark elven bracelet}{bog}
 }
 
@@ -5801,6 +5805,10 @@ addleglocs;
   locatereport {%2} {%3%4};
 }
 
+#action {^{\w+} {carried|equipped|is in|(?<!is )in|is}{.+}}
+{
+  locatereport {%1} {%2%3}
+}
 #alias bg {bot {guard stop; guard %1}}
 #alias locatereport donothing;
 #alias locatereportimpl {

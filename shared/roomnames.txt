@@ -481,3 +481,5 @@ startgalazor
 mystictunnel
 irdasphinx
 sancook
+shoaldome
+shoalwartide
