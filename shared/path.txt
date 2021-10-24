@@ -27,5 +27,5 @@
 #PATHDIR {up} {down} {16}
 #PATHDIR {west} {east} {8}
 #var samplelong {north;east;east;west;south}
-#map read krynn.txt
+#map read krynn201.txt
 #map static flag on

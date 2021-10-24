@@ -11,6 +11,19 @@ class ParseArctic
     end.map{|me| me.last}
   end
 
+  def krynn201
+    input_name = 'krynn.txt'
+    output_name = 'krynn201.txt'
+    File.open(output_name, 'w') do |f|
+      delimit(IO.foreach input_name) do |line|
+        line.start_with?('V 2020') || line.start_with?('T')
+      end.reject{|lines| lines.last.start_with? 'T' }.each do |lines|
+        f.puts lines.reject{|line| line.start_with? 'V 2020'}
+      end
+    end
+    "echo done krynn201"
+  end
+
   def parse_millis(value)
     /200 OK in (\d+)/.match(value)[1].to_i
   end
