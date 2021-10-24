@@ -98,6 +98,7 @@ class Velm
 
   def parc
     require_relative 'poro/parse_arctic'
+    Dir.chdir __dir__
     ParseArctic.new
   end
   
