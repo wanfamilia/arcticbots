@@ -4080,6 +4080,7 @@ cancel;
 #alias mspin {#map undo; #map set roomsymbol [S]}
 #alias sysv {#system ~/bin/velm.rb }
 #alias gitpush {
+  sysv parc krynn201;
   sysv push;
   #system ssh docker@155.138.220.71 git -C repos/sandbox pull;
   dtell :reload;

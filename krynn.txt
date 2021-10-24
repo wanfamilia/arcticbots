@@ -18,7 +18,7 @@ F 10
 
 G 0
 
-I 13311
+I 6706
 
 L {ASCII NESW LINE} {NO EXITS} {x}
 L {ASCII NESW LINE} {N} {o}
@@ -216,7 +216,7 @@ L {MUDFONT CURVED} {N E} {\u2818}
 L {MUDFONT CURVED} {S E} {\u28A0}
 L {MUDFONT CURVED} {S W} {\u2844}
 L {MUDFONT CURVED} {N W} {\u2803}
-L {UNICODE GRAPHICS} {NO DIAGONAL} {}
+L {UNICODE GRAPHICS} {NO DIAGONAL} { }
 L {UNICODE GRAPHICS} {SE} {\u2E0C}
 L {UNICODE GRAPHICS} {NE} {\u2E1D}
 L {UNICODE GRAPHICS} {SE NE} {>}
@@ -28019,7 +28019,7 @@ E { 5800} {west} {west} {8} {0} {} {1.000} {} {0.00}
 R { 6705} {0} {} {soldruid} { } {} {} {} {} {} {1.000} {}
 E {12543} {up} {up} {16} {0} {} {1.000} {} {0.00}
 
-R { 6706} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R { 6706} {0} {} {solsham} { } {} {} {} {} {} {1.000} {}
 E {  711} {south} {south} {4} {0} {} {1.000} {} {0.00}
 
 R { 6707} {0} {} {} { } {} {} {} {} {} {1.000} {}
@@ -54209,7 +54209,7 @@ R {13269} {0} {} {} { } {} {} {} {} {} {1.000} {}
 E {13270} {up} {up} {16} {0} {} {1.000} {} {0.00}
 E {13271} {south} {south} {4} {0} {} {1.000} {} {0.00}
 
-R {13270} {10} {} {} { } {} {} {} {} {} {1.000} {}
+R {13270} {5130} {} {} { } {} {} {} {} {} {1.000} {}
 E {13268} {up} {up} {16} {0} {} {1.000} {} {0.00}
 E {13269} {down} {down} {32} {0} {} {1.000} {} {0.00}
 
