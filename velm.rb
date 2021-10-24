@@ -170,8 +170,13 @@ class Velm
     'ssh docker@wanforall.org git -C repos/sandbox pull'
   end
 
+  def showdir
+    display
+    "dir: #{__dir__}"
+  end
+
   def pull
-    ['cd ~/bin && git pull']
+    ["cd #{__dir__} && git pull"]
   end
 end
 
