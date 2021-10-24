@@ -4888,7 +4888,7 @@ cancel;
   6wdss; lckith; lc talisman; nnu6e;
   sesss3e; lc dark.elven; restick lcb;
 }
-#alias rlcrahn {gokal; van me; js imp; runto d2n10e; open gate; 2e4s4eu3enu3e2nesed8w2s; lc discolored; lc silver.ring}
+#alias rlcrahn {gokal; van me; js imp; runto d2n10e; open gate; 2e4s4eu3enu3e2nesed8w2s; lc discolored; lc silver.ring; lcb}
 
 #alias paxtomb {lie %1.tomb; gt lie %1.tomb; #map move down}
 #alias paxwheel {bot {pray statue; north; #3 turn wheel}}
