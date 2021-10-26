@@ -471,7 +471,6 @@ aran
 kerius
 rainsong
 palthug
-shoaldome
 ansabar
 hctmaze3
 egreckl
@@ -484,4 +483,10 @@ mystictunnel
 irdasphinx
 sancook
 shoaldome
+shoalbaron1
+bloodreef
 shoalwartide
+shoalbaby
+shoalpregnant
+shoaldarkswell
+shoalbaron2
