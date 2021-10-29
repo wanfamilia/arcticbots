@@ -18,7 +18,7 @@ F 10
 
 G 0
 
-I 526
+I 6638
 
 L {ASCII NESW LINE} {NO EXITS} {x}
 L {ASCII NESW LINE} {N} {o}
@@ -216,7 +216,7 @@ L {MUDFONT CURVED} {N E} {\u2818}
 L {MUDFONT CURVED} {S E} {\u28A0}
 L {MUDFONT CURVED} {S W} {\u2844}
 L {MUDFONT CURVED} {N W} {\u2803}
-L {UNICODE GRAPHICS} {NO DIAGONAL} {}
+L {UNICODE GRAPHICS} {NO DIAGONAL} { }
 L {UNICODE GRAPHICS} {SE} {\u2E0C}
 L {UNICODE GRAPHICS} {NE} {\u2E1D}
 L {UNICODE GRAPHICS} {SE NE} {>}
@@ -27743,7 +27743,7 @@ E { 6637} {east} {uo recess east; east} {2} {0} {} {1.000} {} {0.00}
 
 R { 6637} {0} {} {} { } {} {} {} {} {} {1.000} {}
 E { 6636} {west} {west} {8} {0} {} {1.000} {} {0.00}
-E { 6638} {east} {east} {2} {0} {} {1.000} {} {0.00}
+E { 6638} {east} {east; uog ancient.chest  } {2} {0} {} {1.000} {} {0.00}
 
 R { 6638} {0} {} {} { } {} {} {} {} {} {1.000} {}
 E { 6637} {west} {west} {8} {0} {} {1.000} {} {0.00}
@@ -29662,11 +29662,11 @@ E { 7086} {south} {south} {4} {0} {} {1.000} {} {0.00}
 
 R { 7113} {0} {} {} { } {} {} {} {} {} {1.000} {}
 E { 6453} {west} {west} {8} {0} {} {1.000} {} {0.00}
-E { 7116} {up} {up} {16} {0} {} {1.000} {} {0.00}
+E { 7116} {up} {up; pull lever  } {16} {0} {} {1.000} {} {0.00}
 
 R { 7114} {0} {} {} { } {} {} {} {} {} {1.000} {}
-E { 6453} {east} {east} {2} {0} {} {1.000} {} {0.00}
-E { 7115} {up} {up} {16} {0} {} {1.000} {} {0.00}
+E { 6453} {east} {east; press gate  } {2} {0} {} {1.000} {} {0.00}
+E { 7115} {up} {up; pull lever  } {16} {0} {} {1.000} {} {0.00}
 
 R { 7115} {0} {} {} { } {} {} {} {} {} {1.000} {}
 E { 7114} {down} {down} {32} {0} {} {1.000} {} {0.00}
