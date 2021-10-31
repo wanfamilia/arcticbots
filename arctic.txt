@@ -136,6 +136,7 @@
 }
 
 #alias othervoy {#var nothing {%1:%2}}
+#alias {shadowcrack} {cut rope; restrain minotaur; open grate; up}
 #alias {othervoyimpl}
 {
  #format cnow {%T};
@@ -312,6 +313,7 @@ reseteye;
   js fold;
 }
 
+#alias cwh {clan who}
 #alias jfold {mag js fold}
 #alias bufwhi {mag buf white}
 #alias onredbuff {
@@ -364,7 +366,7 @@ reseteye;
 #sub {giant crab shell shield}{giant crab shell shield(-1ss 8conc)}
 #sub {grey band of residual ghostly energy}{residual ghostly energy(+slot5 npp)}
 #sub {pair of baggy black pants} {black baggy pants(nytes)}
-#sub {pair of succubus wings}{succubus wings pair(cv)}
+#sub {pair of succubus wings}{Celestial pair of succubus wings}
 #high {succubus wings} {green}
 #high {Danarn the Inept Assistant gapes in horror} {green}
 #sub {a blue dragon skull}{Flare dragon bone skull(storms)}
@@ -2959,6 +2961,7 @@ reseteye;
 #ALIAS {makebar} {makechar %1 n; 7;6;5;9; finchar}
 
 #alias enci {enc %1; ide %1 in inventory}
+#alias enlo {enc %1; rlore %1; hold feather}
 
 #alias makechar
 {
@@ -3200,6 +3203,7 @@ richard_wan@hotmail.com;	1;	1;	1;	1;
   #alias bigrest {rest; tan watch; #var resting 1};
   #alias othervoy #var vnextcommand {othervoyimpl %%1 %%2};
   #alias cleancomp cleancomp2;
+  #alias lootcomp donothing;
   #alias assthis ott;
   #var {circle1} {slow po};
   #unticker feedme;
@@ -4880,7 +4884,7 @@ cancel;
 #alias rlcbluffleg {gobung; lc fine.silver.ring; lc face; lc holy.talisman; lc golden.bracelet; rest }
 #alias dlcshayd {runshayd; restick lcshayd}
 #alias dlcner {goner; lctab; restick lcsan}
-#alias rlclem {gobal; runlem; lcb; lcharm; lc bone.bracer; lc wretched }
+#alias rlclem {gobal; runlem; lcb; black.pike; lc bone.bracer; lc wretched }
 #alias dlccae {gocae; lcb; lc ivory.book; restick dlcner}
 #alias rlckal {gokal; runto dnn10e; lc discolored; lc silver.ring; 14w; open gate; 4w5nww; }
 #alias dlcbog {
@@ -5279,7 +5283,7 @@ addleglocs;
 #HIGHLIGHT        {feathered dreamcatcher}         {green}                      {5}
 #HIGHLIGHT        {satiny layer of ectoplasm}         {green}                      {5}
 #HIGHLIGHT        {rotting brains}         {green}                      {5}
-#HIGHLIGHT        {lone, gray flame}         {green}                      {5}
+#HIGHLIGHT        {grey flame}         {green}                      {5}
 #HIGHLIGHT        {A warm, evil sensation}         {green}                      {5}
 #HIGHLIGHT        {dolphin bone staff}         {green}                      {5}
 #HIGHLIGHT        {A darkness falls over your vision}         {green}                      {5}
@@ -5474,6 +5478,7 @@ addleglocs;
 #PATHDIR          {u}                     {d}                          {16}
 #PATHDIR          {d}                     {u}                          {32}
 #VARIABLE         {aggro}                 {bt}
+#var fightoff 0
 #VARIABLE         {arrival}               {Balifor}
 #VARIABLE         {autoclean}             {0}
 #VARIABLE         {autoheal}              {0}
@@ -5704,6 +5709,7 @@ addleglocs;
 #var itemlocates {
     {book of the dead}{animate}
     {velvet book tied with blue ribbon}{RELOCATE}
+ {dark plates of Takhisis}{storms}
  {ancient sword of the morning rose}{storms}
  {azure book with torn covers}{tent/chain/spray}
     {compendium of ancient magic}{LOCATE}
