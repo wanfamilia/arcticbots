@@ -1515,7 +1515,6 @@ reseteye;
   #map flag vtmap on;
   #action {^Alas, you cannot go that way} {#map undo};
   #action {^Center of the Celestial Temple} {mgoc};
-  #action {^Otik watches you calmly} {mgo otik};
   #action {^A Running Stream}{mgo shaydstream};
   #action {^Gate to the Fishing Village}{mgo irdagate};
   #action {^A beautiful statue of Mishakal stands here, illuminating the chamber} {mgo startheal};
@@ -1532,6 +1531,7 @@ reseteye;
   #action {^A Large Meeting Room} {mgo risolbelow};
 }
 
+#alias comsus {sus; comm; }
 #alias dowraith {recite tattered.brown.scroll; say Sallahas fah'si nakasha ujishi ak'vasaj ish Ix'asahala}
 #var runspeed 0.23
 #alias tr {#map travel %1 $runspeed}
@@ -1872,7 +1872,8 @@ reseteye;
 
 #alias lc4t {#4 lct}
 
-#alias lootcomp {
+#alias lootcomp donothing
+#alias lootcompimpl {
   get all.component corpse;
   put all.component component.pouch;
 }
@@ -2509,7 +2510,7 @@ reseteye;
 	oha
 }
 
-#alias kab {mag okd kacbl}
+#alias kab {jdm ac bl}
 #ALIAS {kacbl}
 {
 	jda ac bl
@@ -2670,6 +2671,7 @@ reseteye;
 	jdm li bo
 }
 
+#alias klba {klb %1; mag ota; assthis}
 #alias jdm {mag jda}
 #alias klbn {jd li bo}
 #ALIAS {klc}
@@ -3908,7 +3910,7 @@ richard_wan@hotmail.com;	1;	1;	1;	1;
 
 #alias msw {fo4 %2; me4 %1}
 #alias mknock {msw knock locate}
-#alias klba {mag klb %1; mag ota; otta}
+#alias kem {mag ageng %1; mag ota; st; tw; assthis}
 #alias puf {mag pufthis}
 
 #ALIAS {pufthis}
@@ -4396,6 +4398,7 @@ cancel;
 }
 #alias solknow {prune bush; present beaker; quaff green.potion}
 #alias hew {nbf healing wave}
+#alias hec {nbf healing cloud}
 #alias boh {boa; hew}
 #alias nri {bot nbf righteous indignation}
 #alias brig {bot right}
@@ -5242,6 +5245,7 @@ addleglocs;
 #highlight {$warrior stumbles and falls} {light yellow}
 #highlight {$warrior crashes into} {green}
 #HIGHLIGHT        {cloud kill}                {light yellow}               {5}
+#high {The cloud of light blinks one last time}{light yellow}
 #highlight {soul has returned} {light yellow}
 #HIGHLIGHT        {stops tingling}                {light yellow}               {5}
 #HIGHLIGHT        {RISE}                {light yellow}               {5}
@@ -5710,6 +5714,7 @@ addleglocs;
     {book of the dead}{animate}
     {velvet book tied with blue ribbon}{RELOCATE}
  {dark plates of Takhisis}{storms}
+ {diamond bracelet}{mystic}
  {ancient sword of the morning rose}{storms}
  {azure book with torn covers}{tent/chain/spray}
     {compendium of ancient magic}{LOCATE}

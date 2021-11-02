@@ -142,7 +142,8 @@ end
 
 bot.command :path, description: 'Example (use rooms to filter lister of rooms) :path westwinds rec.kal' do |_event, *args|
   alen = args.length
-  return "expected 1 or 2 args but got #{alen}" unless (alen == 1 or alen == 2)
+  return "enter a start room and a destination room" if alen < 1
+  return "use . instead of spaces for rooms that have spaces" if alen > 2
   mapper.path args[0], args[1]
 end
 

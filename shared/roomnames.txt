@@ -204,6 +204,7 @@ rahnkagi
 rhankagi
 gargath
 teiresias blind glasses
+solknow
 solbank
 romis
 grom
@@ -288,6 +289,7 @@ hyuk
 nytecata
 nytedebuff
 risolbelow
+xegyi
 dimdoor
 startsilvi
 bogwall
