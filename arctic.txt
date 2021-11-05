@@ -539,12 +539,12 @@ reseteye;
 #alias lcrav {lc skull; lc lion; lc globe; lc tablet}
 #alias lctab {lc tablet; lc slab; lc ruby.block; lcb; rest }
 #alias lcshayd {lctab}
-#alias lcck {lc charm; lc mithril; lc stormbringer }
+#alias lcck {lc charm; lc poinard; lc stormbringer }
 #alias rlcrayne {gopal; runto 2wn2e5sw2sw2sesuse3sesuwsue; lct; lcb}
 #alias lcshado {lc wretched; lc shadow; lc gossamer; lc bladeless}
 #alias rlcred {rps me; gobal; lrn; coli; rd imp; runto s4e8n6w2sw2s2wnw7n2w2nw9n2u4n; lcf; lcb; }
 #alias rlcredleg {rps me; gobal; rd imp; runto s4e8n6w2sw2s2wnw7nw; lcf; lcb; lc flexible.red ; }
-#alias rlcck {gotar; lc battle.hammer; runto ws14es4e2neu9s3en4e4s3e2se2nen2e3n2eneususeueun; lcck}
+#alias rlcck {gotar; lc battle.hammer; lcharm; runto ws14es4e2neu9s3en4e4s3e2se2nen2e3n2eneususeueun; lcck}
 #alias rlckith {gosol; runto e2sd10se4sw5se4sw3s6wd2s; lckith; lc dark.elven}
 #alias rlcspi {gosol; runto e2sd8n3e5n4e3n9e5s6es2ese; climb ladder; ee; lckith; lc domino}
 #alias 4 0
@@ -721,7 +721,7 @@ reseteye;
 {
 	assist $charmie
 }
-#alias buac {#10 {buy 10*acorn; put all.acorn pouch}}
+#alias buac {#10 {buy 10*acorn; put all.acorn component.pouch}}
 #alias busl {#3 {buy 12*sliver; put all.sliver pouch}}
 #alias swingbakali {
   crawl trunk; swing branch;
@@ -1150,6 +1150,12 @@ reseteye;
   st; runto ne2s2e7su2nw; lrn;
 }
 
+#alias ecp exam component.pouch
+#alias mythdru {
+  st; runto u2sd; fsf; 7n2w2nws;
+  rest; brew 'water'; scribe 'water'; drop all.water;
+  st; runto ne2s2e7su2nd; lrn;
+}
 #alias mythbrew {
   st; runto 3sd7n2w2nws;
   rest; brew 'sat'; drop satiate; st;
@@ -3211,7 +3217,7 @@ richard_wan@hotmail.com;	1;	1;	1;	1;
   #unticker feedme;
   eng dotk;
   #alias stabclose shamstabclose;
-  #alias rs rga;
+  #alias rs donothing;
   #var pet all.spirit;
   #VARIABLE {slot6} {regenerate|heal boost|zombify|ancestral spirit|ritual voyage|darkened soul};
   #alias hl {ota %%1; rgc %%1;};
@@ -3910,7 +3916,7 @@ richard_wan@hotmail.com;	1;	1;	1;	1;
 
 #alias msw {fo4 %2; me4 %1}
 #alias mknock {msw knock locate}
-#alias kem {mag ageng %1; mag ota; st; tw; assthis}
+#alias kem {mag ageng %1; mag ota; st; assthis}
 #alias puf {mag pufthis}
 
 #ALIAS {pufthis}
@@ -4013,9 +4019,10 @@ richard_wan@hotmail.com;	1;	1;	1;	1;
 
 #alias sgl {jd sp gl}
 
+#alias jsm mag js
 #ALIAS {rps}
 {
-	js repo %1;
+	jsm repo %1;
 }
 #alias rpm {fly; rps me; }
 
@@ -4111,7 +4118,7 @@ cancel;
 #alias logshamo {logwin; $myshaman; mypw; 1;1;modeshaman; fly}
 #alias logsham {newses arc {$myshaman; mypw; ones; modeshaman; fly}  }
 #alias logdru newses arc {wagner; mypw; 1; 1; modedruid; fly}
-#alias newchar {newses %1 {makechar %2 %3}}
+#alias newchar {newses %1 {makechar %2 n}}
 #alias lcvoy {lc meteorite; lc veil; lc clove; lc effigy}
 #alias plpd {present letter; present pendant}
 #alias ones {1; 1; }
@@ -4205,6 +4212,7 @@ cancel;
   #var circle1 curse;
   #action {^A Hidden Shrine} {lrn; smile};
   #alias redar {repala; modedar};
+  #alias warhit donothing;
   #alias assthis {assist %1; dt; };
   #alias vass vass2;
   #alias asst assthis;
@@ -4398,7 +4406,7 @@ cancel;
 }
 #alias solknow {prune bush; present beaker; quaff green.potion}
 #alias hew {nbf healing wave}
-#alias hec {nbf healing cloud}
+#alias hec {mai jd healing cloud}
 #alias boh {boa; hew}
 #alias nri {bot nbf righteous indignation}
 #alias brig {bot right}
@@ -4443,6 +4451,7 @@ cancel;
 #alias modemage {
   nutr $food;
   #alias fastmem {deep};
+  #alias rs donothing;
   #alias assthis ott;
   #action {disarms your weapon} {cancel; gw};
   guston;
@@ -4646,6 +4655,12 @@ cancel;
   #if {"$sesname"=="$actsesname"} {donothing foo} {
     %0;
   };
+}
+#alias onlyinactive ll ifinactive %0
+#alias givecomp {
+  get all.component component.pouch; 
+  give all.component %1;
+  onlyinactive #delay 1 put all.component component.pouch;
 }
 #alias offprompt #alias allprompt donothing
 #alias setsesname #all #var actsesname $sesname 
@@ -5455,14 +5470,17 @@ addleglocs;
 
 #MACRO {\e[20~} {f9}
 #alias f9 { boa } 
-#MACRO {\e[21~}
+#MACRO {\e[21~} {f10}
+
+#alias f10
 {
-	rs $resctar
+	mac lrs $resctar
 }
 
+#alias lrs ll rs
 #MACRO {\e[23~}
 {
-	rs $casres
+	mac lrs $casres
 }
 
 #MACRO {\e[24~}
