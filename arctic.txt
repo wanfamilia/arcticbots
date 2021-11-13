@@ -4129,7 +4129,11 @@ cancel;
 #alias logmou logbot {penniman; mypw; 1;1; modepala; fly}
 #alias logdar logbot {gere; mypw; 1; 1; modepala; modedar; fly}
 #alias logwaro newses war {dawsen; mypw; 1; 1; modepala; modewar; fly; #alias bot #war;}
-#alias logclero newses hea {wilson; mypw; 1; 1; modecleric; fly; #alias mai  {#hea} }
+#var mycler kimbl
+#alias newcler newchar hea $mycler
+#alias newsham newchar arc $myshaman
+#alias newpal newchar bot $mypaladin
+#alias logcler newses hea {$mycler; mypw; 1; 1; modecleric; fly; #alias mai  {#hea} }
 #alias logthi newses thi {nikson; mypw; 1; 1; fly; modethief}
 #alias modethief {
   #action {^The master assassin looks at you from behind} {lrn; smile};
