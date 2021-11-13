@@ -1,5 +1,5 @@
+require 'spec'
 require_relative '../poro/walkthrough'
-require 'rspec'
 
 describe Walkthrough do
   it 'preserves newlines' do

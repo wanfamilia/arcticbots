@@ -15,12 +15,13 @@ describe Mapper do
 
     context 'to theobald' do
       let(:finish) {'theobald'}
+      let(:expectedFragment) {'1n2e2s1w5s2e5n5e6s2e7s1u2n1w'}
 
       context 'matching upper case' do
         let(:start) {'Westwinds'}
 
         it 'has path' do
-          expect(path).to include('n2e2sw5s2e5n5e6s2e7su2nw')
+          expect(path).to include(expectedFragment)
         end
       end
 
@@ -28,7 +29,7 @@ describe Mapper do
         let(:start) {'westwinds'}
 
         it 'has path' do
-          expect(path).to include('n2e2sw5s2e5n5e6s2e7su2nw')
+          expect(path).to include(expectedFragment)
         end
       end
 
@@ -36,7 +37,7 @@ describe Mapper do
         let(:start) {'westwi'}
 
         it 'has path' do
-          expect(path).to include('n2e2sw5s2e5n5e6s2e7su2nw')
+          expect(path).to include(expectedFragment)
         end
       end
     end
@@ -46,7 +47,7 @@ describe Mapper do
       let(:finish) {nil}
 
       it 'has path' do
-        expect(path).to eq 'solsquare -> theobald: u2nw'
+        expect(path).to eq 'solsquare -> theobald: 1u2n1w'
       end
     end
   end

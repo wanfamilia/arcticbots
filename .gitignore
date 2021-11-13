@@ -3,3 +3,4 @@ secret.yml
 .idea
 *.swp
 tmp/*
+/spec/tmp/*
