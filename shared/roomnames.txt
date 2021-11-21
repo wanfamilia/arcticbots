@@ -441,6 +441,7 @@ Southwinds
 stoneskin spire
 tocloud
 underbridge
+openbook
 cinder
 crowbar
 t
