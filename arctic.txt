@@ -4129,7 +4129,7 @@ cancel;
 #alias logmou logbot {penniman; mypw; 1;1; modepala; fly}
 #alias logdar logbot {gere; mypw; 1; 1; modepala; modedar; fly}
 #alias logwaro newses war {dawsen; mypw; 1; 1; modepala; modewar; fly; #alias bot #war;}
-#var mycler kimbl
+#var mycler knaak
 #alias newcler newchar hea $mycler
 #alias newsham newchar arc $myshaman
 #alias newpal newchar bot $mypaladin
