@@ -53,6 +53,7 @@
 #alias maptank {mapto $mypaladin  bot}
 #alias mapsky mapto $skyscout sky
 #alias mapsham mapto $myshaman mai
+#alias mapcler mapto $mycler mai
 #alias mainmage {ll #alias mai mag; #alias ser bser}
 #var {leadercommands} {lie|swim|flip|join|dive|pledge|run|ride|cut|lift|scale|crawl|search|scale|jump|trace|break|say|touch|push|pull|move|slide|stand|ent|enter|leave|squeeze|open|part|climb}
 #alias saylich {say amarazilac tomanaris tusun}
@@ -704,6 +705,8 @@ reseteye;
 #alias otai {ota; imp}
 #alias asst {ass %1; st}
 #alias bpa {bot palassthis}
+#alias assyes #alias assthis assist
+#alias assno #alias assthis donothing
 #alias palass bpa
 #alias haze {bot jd men ha}
 #alias palassthis {ass %1; rally; strike; av soul; strike}
@@ -3170,10 +3173,10 @@ richard_wan@hotmail.com;	1;	1;	1;	1;
 #ALIAS {modecleric}
 {
 	#variable food $clerfood;
- #var circle1 bless;
+ #var circle1 aid;
+ #alias sat dofood
  agg turn;
  #action {^The Temple of Healing} {lrn; smile};
- vch corpse;
 	#alias fastmem {med; }
 }
 
@@ -4100,7 +4103,6 @@ cancel;
   dtell :reload;
 }
 #alias lopuf {mag {tp %1; ddo %1}}
-#alias logcler {logwin; guna; mypw; 1;1;modecleric; fly; guston;}
 
 #alias logimm {logwin; gnua; mypw; 1;1; modeimm; }
 #alias doindent {1,$ ind 0}
@@ -4133,7 +4135,7 @@ cancel;
 #alias newcler newchar hea $mycler
 #alias newsham newchar arc $myshaman
 #alias newpal newchar bot $mypaladin
-#alias logcler newses hea {$mycler; mypw; 1; 1; modecleric; fly; #alias mai  {#hea} }
+#alias logcler newses arc {$mycler; mypw; 1; 1; modecleric; fly; }
 #alias logthi newses thi {nikson; mypw; 1; 1; fly; modethief}
 #alias modethief {
   #action {^The master assassin looks at you from behind} {lrn; smile};
@@ -4599,7 +4601,7 @@ cancel;
   #alia allnext donothing;
   #alias groupimpl group full;
   eng paleng;
-  #var hrec battle.horn;
+  #var hrec clear.sphere;
   #action {^Your hands tingle as a feeling of goodness} {ll #show -->       LAY ready} {7};
   #action {^Warriors' Training Room} {lrn; smile};
   #alias assthis palassthis;
@@ -4853,7 +4855,7 @@ cancel;
 	fill $paldrink elixir in inventory;
 }
 
-#var paldrink keg;
+#var paldrink waterskin;
 #alias fleethis {cancel; #3 {st; flee}}
 #alias bfl bot fleethis
 #alias lfl ll fleethis
@@ -5791,9 +5793,11 @@ addleglocs;
     {alabaster garlic clove charm}{LAST CHANCE}
     {charm covered in a sparkling silvery mist} {RITUAL VOYAGE}
     {shrunken demon's horn charm}{NAP}
+  {pristine book in a blue cover}{summon}
     {charm covered in a lone gray flame}{HEALING WAVE}
     {grey stone bracelet}{bluff}
     {glowing golden amulet}{bluff}
+  {small golden book}{recall}
     {black domino}{spire}
     {radiant white prayerbook}{??}
     {golden battle-honor}{dv}

@@ -350,12 +350,15 @@ startbully
 waterspanshop
 solwar
 tokruins
+kruinbush
 startkruin
+darvar
 startdractower
 locatedractower
 startcitdrac
 abovecitdrac
 startbluff
+rahnkagi
 startbandit
 banditbush
 paxtokith
@@ -443,6 +446,7 @@ stoneskin spire
 tocloud
 underbridge
 openbook
+crownzone
 cinder
 crowbar
 t
@@ -497,3 +501,4 @@ shoaldarkswell
 shoalbaron2
 ghostpyre
 newvoulge
+surrey
