@@ -55,6 +55,7 @@
 #alias mapsham mapto $myshaman mai
 #alias mapcler mapto $mycler mai
 #alias mainmage {ll #alias mai mag; #alias ser bser}
+#alias mser {mai ser}
 #var {leadercommands} {lie|swim|ent|flip|join|dive|pledge|run|ride|cut|lift|scale|crawl|search|scale|jump|trace|break|say|touch|push|pull|move|slide|stand|ent|enter|leave|squeeze|open|part|climb}
 #alias saylich {say amarazilac tomanaris tusun}
 #alias bst {bash %1; st; }
@@ -4092,7 +4093,7 @@ cancel;
   #var held clear.sphere;
   #alias remage {rewin; modemage; modewhite};
   #alias locatereport locatereportimpl;
-  #alias jsrelo js relo;
+  #alias jsrelo jsport;
   #var food cheese;
   nutr $food;
   #alias mlo {msw locate knock};
