@@ -440,6 +440,7 @@ brithnea
 sahsponge
 bogfight
 tosorin
+fyzianrep
 zeeriak
 Southwinds
 stoneskin spire
@@ -456,6 +457,7 @@ kyle
 cokbakali
 vinbank
 instinct mmtn 51 grizzly
+nothing1
 tantnorth
 shardneck
 startvrykith
@@ -502,3 +504,5 @@ shoalbaron2
 ghostpyre
 newvoulge
 surrey
+shiar
+alannah

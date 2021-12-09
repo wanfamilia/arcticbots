@@ -55,7 +55,7 @@
 #alias mapsham mapto $myshaman mai
 #alias mapcler mapto $mycler mai
 #alias mainmage {ll #alias mai mag; #alias ser bser}
-#var {leadercommands} {lie|swim|flip|join|dive|pledge|run|ride|cut|lift|scale|crawl|search|scale|jump|trace|break|say|touch|push|pull|move|slide|stand|ent|enter|leave|squeeze|open|part|climb}
+#var {leadercommands} {lie|swim|ent|flip|join|dive|pledge|run|ride|cut|lift|scale|crawl|search|scale|jump|trace|break|say|touch|push|pull|move|slide|stand|ent|enter|leave|squeeze|open|part|climb}
 #alias saylich {say amarazilac tomanaris tusun}
 #alias bst {bash %1; st; }
 #alias rtm {retrieve 1; wear medal}
@@ -117,7 +117,7 @@
   dolog;
 }
 {2}
-#var myshaman donnerr
+#var myshaman donnr
 #var mypaladin boone
 #action {^{\w+} tells your {clan} '$myshaman rit {\w+}'} {othervoy %1 %3} {1}
 #alias ptab {pta barbarian}
@@ -837,11 +837,12 @@ reseteye;
   #action {^You can focus again on your prayers} {divine; lrn};
   #action {^Through the darkness, you find a connection} {right};
   #action {^Once again the time has come for righteous anger} {reck};
-  #action {^The spirit of the heavens fades slowly} {bes majere};
+  #action {^The spirit of the heavens fades slowly} {besimpl};
   praclay iron.wrist;
-  lay me; div; reck; right; beseech majere;
+  lay me; div; reck; right; besimpl;
 }
 
+#alias besimpl beseech majere
 #alias pracright {
   right;
    #action {^Through the darkness, you find a connection} {right; lrn};
@@ -1088,6 +1089,9 @@ reseteye;
 }
 #var fighting {0}
 
+#alias autobot {bot #alias nospam nospamdo}
+#alias legalbot {bot #alias nospam nospamimpl}
+#alias ltu ll turn
 #alias nospam nospamimpl
 #alias nospamdo {nospamimpl %1 %2 %3; donextthis}
 #alias nospamimpl {
@@ -1130,7 +1134,7 @@ reseteye;
 #alias groupimpl group
 #alias nothing {#var varnothing 0}
 
-#alias {cwho}
+#alias {checkwho}
 {
   #ticker {spamwho}{whoen}{23};
 }
@@ -1789,7 +1793,7 @@ reseteye;
 #ALIAS {dofood}
 {
 	eat $food; drink water;
-        cw skin;
+        cw waterskin;
 	jd c f;
 	put 8*$food belt;
 	drop all.$food;
@@ -2049,6 +2053,7 @@ reseteye;
 
 #alias dofote {enter portal; say evil; enter portal; say will; enter portal; say win; enter portal}
 #alias bfsh bfg $myshaman
+#alias bfcl bfg $mycler
 #alias rlore {recite lore %1 in inventory}
 #alias {rec lore} {thwack me; rlore %1;}
 #alias bfsk bfg $skyscout
@@ -2428,7 +2433,7 @@ reseteye;
 		js word %1
 	}
 	{
-		js word me
+		mlea; js word me
 	}
 }
 
@@ -2528,7 +2533,6 @@ reseteye;
 
 #ALIAS {karr}
 {
-	st;
 	mac ke $arrival
 }
 
@@ -3174,8 +3178,8 @@ richard_wan@hotmail.com;	1;	1;	1;	1;
 {
 	#variable food $clerfood;
  #var circle1 aid;
- #alias sat dofood
- agg turn;
+ #alias sat dofood;
+ #alias assthis {ott};
  #action {^The Temple of Healing} {lrn; smile};
 	#alias fastmem {med; }
 }
@@ -3209,6 +3213,7 @@ richard_wan@hotmail.com;	1;	1;	1;	1;
 #alias rgab {brs %1; rga %1}
 #alias swapout {swap me %1; group form; fol me}
 
+#alias hlr {hl %1; rest}
 #alias rlckhur {gobal; js imp; runto s4e8n4wn3wn2w4nwn; lcharm; lc tablet}
 #alias novoyyet {donothing %1; ct If I deactivate my ethical subroutines, I could insist on yet another ritual voyage run}
 #alias modeshaman {
@@ -4126,7 +4131,8 @@ cancel;
 #alias plpd {present letter; present pendant}
 #alias ones {1; 1; }
 #alias logsky {newses sky {$skyscout; mypw; ones; modesky}}
-#alias logpal {logbot {$mypaladin; mypw; ones; modepala; fly; jd r i}}
+#alias leaveinn {d; d; n; e}
+#alias logpal {logbot {$mypaladin; mypw; ones; modepala; fly; leaveinn; jd r i}}
 #alias logwar {logbot {dawsen; mypw; 1; 1; modepala; modewar; fly}}
 #alias logmou logbot {penniman; mypw; 1;1; modepala; fly}
 #alias logdar logbot {gere; mypw; 1; 1; modepala; modedar; fly}
@@ -4391,7 +4397,7 @@ cancel;
   {resist magic}{rmag}
   {resist gas}{rgas}
   {monstrous mantle}{mons}
-  {righteous indignation}{ll #show -->   CASTING RI; jd r i}
+  {righteous indignation}{ll #show -->   CASTING RI; jd rig ind}
   {resist breath}{rbre}
   {resist negative}{rneg}
   
@@ -4401,6 +4407,13 @@ cancel;
   buffcapture;
 }
 
+
+#alias prachdiv {
+  #action {^You feel ready to call upon the strength of the Gods} {divinity};
+  divinity;
+}
+
+#alias hdiv divinity
 #alias nbf {
   #var vafterbuff {%0};
   #alias afterbuffcapture {needbuff $vafterbuff};
@@ -4628,7 +4641,7 @@ cancel;
   #action {^The protective presence around you fades} {
     gt ---> HEAL BOOST GONE <---;
     ll #show -->   LOST BOOST;
-    sysplay smb3_powerdown;
+    #show sysplay smb3_powerdown;
   };
   #alias vass vass3;
   #alias vota donothing;
@@ -5381,7 +5394,9 @@ addleglocs;
 	#read arc;
 	#showme :loaded
 }
-#macro {\eOS} {karr}
+#macro {\eOS} {f4}
+
+#alias f4 multif5
 #MACRO {\co}
 {
 	resave
@@ -5447,11 +5462,6 @@ addleglocs;
 	gw
 }
 
-#MACRO {\e[14~}
-{
-	karr
-}
-
 #MACRO {\e[15~} {f5}
 
 #alias f5 {
@@ -5465,16 +5475,32 @@ addleglocs;
 	mac bigrest
 }
 
-#MACRO {\e[18~}
+#MACRO {\e[18~} {f7}
+#macro {\eOR}  f3
+#macro {\eOQ} f2
+#alias f7
 {
 	tan hl; tan watch;
 }
 
+#alias f2 {mac bigrest}
+#macro {\eOP} f1
+#alias f3 f7
 #MACRO {\e[19~}
 {
 	mac dost
 }
 
+#alias f1 mac dost
+
+#alias multif5 {
+ f9;
+ #delay 4 f5;
+ #delay 8 f5;
+ #delay 12 f5;
+}
+
+#alias spamgroup #loop 1 4 f1loop {#delay $f1loop f5}
 #MACRO {\e[20~} {f9}
 #alias f9 { boa } 
 #MACRO {\e[21~} {f10}
