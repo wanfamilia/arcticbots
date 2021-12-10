@@ -2753,7 +2753,7 @@ reseteye;
 
 #ALIAS {kso}
 {
-	jda soul leech
+	mai jd soul leech
 }
 
 #ALIAS {ksun}
@@ -4100,6 +4100,14 @@ cancel;
   #action {^{\w+} makes a mockery out of everyone} {nospamdo 30 jmoc %%1};
 }
 
+#alias magecure {
+  #alias bigrest ll rest;
+  #alias dost ll stand;
+  #alias bot mai;
+  bot #alias assthis assist;
+  bot skillbell;
+  bot eng ki;
+}
 #alias mspin {#map undo; #map set roomsymbol [S]}
 #alias sysv {#system ~/bin/velm.rb }
 #alias gitpush {
@@ -4139,6 +4147,7 @@ cancel;
 #alias logdar logbot {gere; mypw; 1; 1; modepala; modedar; fly}
 #alias logwaro newses war {dawsen; mypw; 1; 1; modepala; modewar; fly; #alias bot #war;}
 #var mycler knaak
+#alias mser mai ser
 #alias newcler newchar hea $mycler
 #alias newsham newchar arc $myshaman
 #alias newpal newchar bot $mypaladin
