@@ -442,7 +442,8 @@ reseteye;
   js gate $pet;
 }
 #alias g2 {m2 %1; m1 %1}
-#alias goodpick {gate aspasia}
+#alias goodpick {gate Aspasia}
+#alias goodmelee {gate Shiroc}
 #alias ref2 {g2 flap}
 #ACTION {^{(<\w+>\s)?}{\S+ \S+}{.+}green aura)}
 {
@@ -4406,6 +4407,8 @@ cancel;
 #var vbuffover {
   {resist magic}{rmag}
   {resist gas}{rgas}
+  {protection from evil}{mp}
+  {bless}{prayer}
   {monstrous mantle}{mons}
   {righteous indignation}{ll #show -->   CASTING RI; jd rig ind}
   {resist breath}{rbre}
@@ -4544,6 +4547,10 @@ cancel;
 #alias onclerbuff
 {
   needbuff fortify self;
+  needbuff cloak of bravery;
+  needbuff bless;
+  needbuff protection from evil;
+  needbuff sacred ward;
   needbuff heroism;
   needbuff sanctuary;
 }
