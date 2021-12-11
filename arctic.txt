@@ -847,7 +847,7 @@ reseteye;
 #alias besimpl beseech majere
 #alias pracright {
   right;
-   #action {^Through the darkness, you find a connection} {right; lrn};
+   #action {^Through the darkness, you find a connection} {st; right; lrn};
 }
 #alias pracdiv {
    #action {^You can focus again on your prayers} {divine; lrn};
@@ -2052,10 +2052,14 @@ reseteye;
   mai;
 }
 
+#tab chernobog
+#tab marchesa
 
+#alias gtfo {gt -->  GET OUT!!; gt --> GET OUT!! (barbarians can wild and recall); tan hl}
 #alias dofote {enter portal; say evil; enter portal; say will; enter portal; say win; enter portal}
 #alias bfsh bfg $myshaman
 #alias bfcl bfg $mycler
+#alias tanksquare {maptank solsquare}
 #alias rlore {recite lore %1 in inventory}
 #alias {rec lore} {thwack me; rlore %1;}
 #alias bfsk bfg $skyscout
@@ -4408,7 +4412,7 @@ cancel;
   {resist magic}{rmag}
   {resist gas}{rgas}
   {protection from evil}{mp}
-  {bless}{prayer}
+  {bless}{js prayer}
   {monstrous mantle}{mons}
   {righteous indignation}{ll #show -->   CASTING RI; jd rig ind}
   {resist breath}{rbre}

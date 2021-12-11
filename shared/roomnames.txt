@@ -413,6 +413,7 @@ startbalcombe
 serra
 lhex
 balcombe
+malaak
 fyzian
 nerguards
 gownnocharm
@@ -464,6 +465,7 @@ startvrykith
 startboylein
 startwayreth
 startgalvari
+galvarispin
 ritlich
 startkhur
 ritkhur
