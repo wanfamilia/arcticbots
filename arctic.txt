@@ -4984,6 +4984,7 @@ cancel;
   #var vlocates {};
   addloc rlcred;
   addloc rlcrahn;
+  addloc rlctael;
   addloc rlcrainsong; 
   addloc rlcbluffreg; addloc gobung;
   addloc bungshayd; addloc rlcstorm; addloc lcstorm;
@@ -4993,7 +4994,12 @@ cancel;
   addloc rlcrayne;
 }
 
-#alias rlcrainsong {gosol; runto e2sd25e2sw4sesese2s; lcharm; lcb; lct}
+#alias rlcrainsong {gosol; van me; runto e2sd25e2sw4sesese2s; lcharm; lct; lcb}
+#alias rlctael {
+  gosol; van me;
+  runto e2sd10se4sw5se3s3w2s2w2s2w3se4se2ses3w3seue;
+  lcharm; lc gavel;
+}
 #alias addleglocs {
   addloc rlckith;
   addloc rlcshoal;
