@@ -132,6 +132,7 @@ sanariakas
 starttoede
 totaeldeth
 taelboy
+loctael
 instinct sky42
 qualibush
 startquali
@@ -178,7 +179,7 @@ mistyfairy
 b4troll
 swamptroll
 solamnic keep
-palanthas library key drawer
+astinuskey
 astinus
 palanthas library dorshan
 palshelf

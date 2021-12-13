@@ -70,6 +70,7 @@
   runto 3des2d;
   runto 2unw3u;
 }
+#alias boombag  {drop bag; light bag in room}
 #action {^Onyx is dead} { get all.charm onyx}
 #action {^Egreckl Steamus is dead} {get all.charm egreckl}
 #action {^Flare is dead} {gac; get all.charm flare}
@@ -543,7 +544,7 @@ reseteye;
 #alias lcrav {lc skull; lc lion; lc globe; lc tablet}
 #alias lctab {lc tablet; lc slab; lc ruby.block; lcb; rest }
 #alias lcshayd {lctab}
-#alias lcck {lc charm; lc poinard; lc stormbringer }
+#alias lcck {lc charm; lc tablet; lcb}
 #alias rlcrayne {gopal; runto 2wn2e5sw2sw2sesuse3sesuwsue; lct; lcb}
 #alias lcshado {lc wretched; lc shadow; lc gossamer; lc bladeless}
 #alias rlcred {rps me; gobal; lrn; coli; rd imp; runto s4e8n6w2sw2s2wnw7n2w2nw9n2u4n; lcf; lcb; }
@@ -708,7 +709,7 @@ reseteye;
 #alias asst {ass %1; st}
 #alias bpa {bot palassthis}
 #alias assyes #alias assthis assist
-#alias assno #alias assthis donothing
+#alias assno #alias assthis ott
 #alias palass bpa
 #alias haze {bot jd men ha}
 #alias palassthis {ass %1; rally; strike; av soul; strike}
@@ -4098,8 +4099,8 @@ cancel;
   #var held clear.sphere;
   #alias remage {rewin; modemage; modewhite};
   #alias locatereport locatereportimpl;
-  #alias jsrelo jsport;
-  #var food cheese;
+  #var food turkey;
+  #alias jsrelo js relo;
   nutr $food;
   #alias mlo {msw locate knock};
   #action {^{\w+} makes a mockery out of everyone} {nospamdo 30 jmoc %%1};
@@ -4981,14 +4982,18 @@ cancel;
 
 #alias addlocates {
   #var vlocates {};
-  addloc rlcred; addloc rlcbluffreg; addloc gobung;
+  addloc rlcred;
+  addloc rlcrahn;
+  addloc rlcrainsong; 
+  addloc rlcbluffreg; addloc gobung;
   addloc bungshayd; addloc rlcstorm; addloc lcstorm;
   addloc rlcqk; addloc qkdargk;
-  addloc rlcner; addloc lcsan1; addloc lcsan2;
-  addloc rlcrahn;
+  addloc rlcner; 
   addloc rlcck;
   addloc rlcrayne;
 }
+
+#alias rlcrainsong {gosol; runto e2sd25e2sw4sesese2s; lcharm; lcb; lct}
 #alias addleglocs {
   addloc rlckith;
   addloc rlcshoal;
@@ -4997,7 +5002,6 @@ cancel;
   addloc rlcspi;
 }
 addlocates;
-addleglocs;
 #alias kimasq {north; otk squire; ki mage}
 #alias rlcshoal {gokal; runto d2n3e7n; open gate; 2n3edn3e3nen2en; lcharm; lcm; lc whale.spear}
 #alias dargklemisouth {runto 2s2wnw2se5se2s2w3s2ws6w2n; lct}
@@ -5032,7 +5036,7 @@ addleglocs;
 }
 #list vlocates size vlocatessize
 #alias megaloc {
-  taste cheese; sip water;
+  taste $food; sip water;
   mac $vlocates[$vlocate];
   #if {$vlocate < $vlocatessize} {
     #math vlocate {$vlocate + 1};
@@ -5070,7 +5074,8 @@ addleglocs;
 #alias rlcshayd {deltwo runshayd rlcshayd2}
 #alias rlcshayd2 {deltwo lcshayd rlccae}
 #alias rlccae {gocae; lc ivory.book; deltwo lcb rlcner}
-#alias rlcner {goner; lcb; open door west; runto wsw2s; open gate west; w2se3se2s2d3wds2w2swd2seunue; lct}
+#alias rlcner {goner; lcb; lct}
+#alias rlcnerold {goner; lcb; open door west; runto wsw2s; open gate west; w2se3se2s2d3wds2w2swd2seunue; lct}
 #alias rlclem1 {gobal; runlem; deltwo lcvoy rlclem2}
 #alias rlclem2 {lc black.pike; lc bone.bracer; lc wretched; lc shadow.cape; restick rlcshadow}
 #alias rlcshadow {deltwo lcshad rlcbog}
@@ -5785,6 +5790,8 @@ addleglocs;
 #var itemlocates {
     {book of the dead}{animate}
     {velvet book tied with blue ribbon}{RELOCATE}
+ {sparkling crystal book}{HEALING MIST}
+ {sky blue prayerbook with sapphire runes}{holy word}
  {dark plates of Takhisis}{storms}
  {diamond bracelet}{mystic}
  {ancient sword of the morning rose}{storms}
@@ -5811,6 +5818,7 @@ addleglocs;
     {ball-shaped charm formed of enigmatic energy}{dark soul}
     {dark brown book}{cob}
     {book with wooden covers}{gust}
+  {small charm of meteorite}{berries}
     {spherical obsidian tablet}{enlarge}
     {small tattered prayerbook}{restoration}
   {set of power brassards}{sanction}
@@ -5846,7 +5854,7 @@ addleglocs;
     {glowing golden amulet}{bluff}
   {small golden book}{recall}
     {black domino}{spire}
-    {radiant white prayerbook}{??}
+    {radiant white prayerbook}{sunray}
     {golden battle-honor}{dv}
   {wispy black veil charm}{ghostskin}
     {book with frosted glass covers}{??}
