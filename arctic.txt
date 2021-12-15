@@ -545,11 +545,12 @@ reseteye;
 #alias lctab {lc tablet; lc slab; lc ruby.block; lcb; rest }
 #alias lcshayd {lctab}
 #alias lcck {lc charm; lc tablet; lcb}
+#alias lcck2 {lc mithril; lc stormbringer; lc poinard}
 #alias rlcrayne {gopal; runto 2wn2e5sw2sw2sesuse3sesuwsue; lct; lcb}
 #alias lcshado {lc wretched; lc shadow; lc gossamer; lc bladeless}
-#alias rlcred {rps me; gobal; lrn; coli; rd imp; runto s4e8n6w2sw2s2wnw7n2w2nw9n2u4n; lcf; lcb; }
+#alias rlcred {rps me; gobal; lcb; lrn; coli; rd imp; runto s4e8n6w2sw2s2wnw7n2w2nw9n2u4n; lcf; lcb; }
 #alias rlcredleg {rps me; gobal; rd imp; runto s4e8n6w2sw2s2wnw7nw; lcf; lcb; lc flexible.red ; }
-#alias rlcck {gotar; lc battle.hammer; lcharm; runto ws14es4e2neu9s3en4e4s3e2se2nen2e3n2eneususeueun; lcck}
+#alias rlcck {gotar; lc battle.hammer; van me; lcharm; runto ws14es4e2neu9s3en4e4s3e2se2nen2e3n2eneususeueun; lcck}
 #alias rlckith {gosol; runto e2sd10se4sw5se4sw3s6wd2s; lckith; lc dark.elven}
 #alias rlcspi {gosol; runto e2sd8n3e5n4e3n9e5s6es2ese; climb ladder; ee; lckith; lc domino}
 #alias 4 0
@@ -613,7 +614,7 @@ reseteye;
 #alias sneakon {rem all.!staff; wear belt; put all chest}
 #alias sneakoff {get all chest; wear all}
 #alias pp {punch %1; ota}
-#alias {silviport} {#action {^{An|The} undead} {nospam 3 vom}}
+#alias {silviport} {#action {^{An|The} undead} {nospamdo 3 vom}}
 
 #var clans {nothing};
 #alias captureclans
@@ -712,7 +713,7 @@ reseteye;
 #alias assno #alias assthis ott
 #alias palass bpa
 #alias haze {bot jd men ha}
-#alias palassthis {ass %1; rally; strike; av soul; strike}
+#alias palassthis {ass %1; rally; strike; av leg; strike}
 #alias kdr {st; drain}
 #alias bufdar {bot buf dk}
 
@@ -1250,6 +1251,7 @@ reseteye;
   oe mem 'li bo' 'ma mi' 'ma mi' 's g';
 }
 #alias conew {#var pet Ocasek; conj newt}
+#alias pracowl {st; conow; release ayoade;}
 #alias dosei {say Seinihs Enim; e; fol %1}
 #alias kld {mag okd klb}
 #alias ofm {okd kfm}
@@ -4138,8 +4140,8 @@ cancel;
   #ticker e60 {who needs_title};
 }
 #action {^Mustakrakish, the ancient death troll glows a bright lunar white} {gt -->    TROLL CLEANSED  !!}
-#alias logshamo {logwin; $myshaman; mypw; 1;1;modeshaman; fly}
 #alias logsham {newses arc {$myshaman; mypw; ones; modeshaman; fly}  }
+#alias logshamo {newses sha {$myshaman; mypw; ones; modeshaman; fly}  }
 #alias logdru newses arc {wagner; mypw; 1; 1; modedruid; fly}
 #alias newchar {newses %1 {makechar %2 n}}
 #alias lcvoy {lc meteorite; lc veil; lc clove; lc effigy}
@@ -4985,12 +4987,14 @@ cancel;
   addloc rlcred;
   addloc rlcrahn;
   addloc rlctael;
+  addloc rlcreef;
   addloc rlcrainsong; 
   addloc rlcbluffreg; addloc gobung;
   addloc bungshayd; addloc rlcstorm; addloc lcstorm;
   addloc rlcqk; addloc qkdargk;
   addloc rlcner; 
   addloc rlcck;
+  addloc lcck2;
   addloc rlcrayne;
 }
 
@@ -5048,11 +5052,16 @@ addlocates;
     #math vlocate {$vlocate + 1};
     #delay 30 restick megaloc;
   }{
-    #var vlocate 1; gomyth;
-    buy 3*cheese; arr; rest;
+    #var vlocate 1; 
+    gohav;
   }
 }
 
+#alias rlccq {gopal; runto 2wn2w6n4e9nw2n; 2nde; gift; lcharm; lcharm}
+#alias mythout {
+    gomyth;
+    buy 3*cheese; arr; rest;
+}
 #alias gomyth {puf stronghold; up}
 
 #alias rlcspire {gosol; runto e2sd8n3e7n4en9e5s6es2ese; climb ladder; ee; lckith; lc forge.ring}
@@ -5799,6 +5808,7 @@ addlocates;
  {sparkling crystal book}{HEALING MIST}
  {sky blue prayerbook with sapphire runes}{holy word}
  {dark plates of Takhisis}{storms}
+ {book bound in human skin}{npp}
  {diamond bracelet}{mystic}
  {ancient sword of the morning rose}{storms}
  {azure book with torn covers}{tent/chain/spray}
