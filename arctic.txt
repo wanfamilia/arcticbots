@@ -158,7 +158,7 @@
 }
 
 
-#alias ghob {sha {jd gho be; eat berry; drop all.berry; js mons; mem 'ri vo' 'he wa'}}
+#alias ghob {mai {jd gho ber; eat berry; drop all.berry}}
 #alias gbt {jd gho be; #3 {taste berry}; drop all.berry}
 
 #variable castpat {^{\s}{\w+}{\s+\[.+}{Cleric|White Robe|Red Robe|Shaman|Druid|Black Robe|Magic User}{$}}
@@ -444,7 +444,7 @@ reseteye;
 }
 #alias g2 {m2 %1; m1 %1}
 #alias goodpick {gate Aspasia}
-#alias goodmelee {gate Shiroc}
+#alias gant {gate Antioch}
 #alias ref2 {g2 flap}
 #ACTION {^{(<\w+>\s)?}{\S+ \S+}{.+}green aura)}
 {
@@ -3785,7 +3785,7 @@ richard_wan@hotmail.com;	1;	1;	1;	1;
 
 #action {^{\w+} steps near you and moves into a protective posture} {praise %1}
 #alias bdis {bot {ass; av prim}}
-#alias vom {voy pryor; rg pryor; mai rest}
+#alias vom {voy pryor; cc pryor; mai rest}
 #alias ctt {ct tick in $tilltick}
 #alias blay {bot {cancel; st; lay %1}}
 #alias bhl blay
@@ -4133,7 +4133,7 @@ cancel;
   #kill alias;
   #kill action;
   #kill ticker;
-  #alias seti {set %1 title %2 %3 %4 %5 %6 %7 %8 %9};
+  #alias seti {set %%1 title %%2 %%3 %%4 %%5 %%6 %%7 %%8 %%9};
   #alias rentimm {quit; 0};
   who needs_title;
   #delay 1800 rentimm;
@@ -4160,6 +4160,8 @@ cancel;
 #alias newsham newchar arc $myshaman
 #alias newpal newchar bot $mypaladin
 #alias logcler newses arc {$mycler; mypw; 1; 1; modecleric; fly; }
+#alias logclero newses hea {$mycler; mypw; 1; 1; modecleric; fly; }
+
 #alias logthi newses thi {nikson; mypw; 1; 1; fly; modethief}
 #alias modethief {
   #action {^The master assassin looks at you from behind} {lrn; smile};
@@ -4638,7 +4640,7 @@ cancel;
   #alia allnext donothing;
   #alias groupimpl group full;
   eng paleng;
-  #var hrec clear.sphere;
+  #var hrec rosary;
   #action {^Your hands tingle as a feeling of goodness} {ll #show -->       LAY ready} {7};
   #action {^Warriors' Training Room} {lrn; smile};
   #alias assthis palassthis;
@@ -4998,11 +5000,12 @@ cancel;
   addloc rlcrayne;
 }
 
+#alias lido js light dolphin
 #alias rlcrainsong {gosol; van me; runto e2sd25e2sw4sesese2s; lcharm; lct; lcb}
 #alias rlctael {
   gosol; van me;
   runto e2sd10se4sw5se3s3w2s2w2s2w3se4se2ses3w3seue;
-  lcharm; lc gavel;
+  lcharm; lcharm; lc gavel;
 }
 #alias addleglocs {
   addloc rlckith;
@@ -5015,10 +5018,10 @@ addlocates;
 #alias kimasq {north; otk squire; ki mage}
 #alias rlcshoal {gokal; runto d2n3e7n; open gate; 2n3edn3e3nen2en; lcharm; lcm; lc whale.spear}
 #alias dargklemisouth {runto 2s2wnw2se5se2s2w3s2ws6w2n; lct}
-#alias {qkdargk} {runto se2se4s2en2e6se3s2w2seses2e2n; lc hylar; lc hylar; lcb; lc lambskin}
+#alias {qkdargk} {runto se2se4s2en2e6se3s2w2seses2e2n; lc hylar; lct; lcb; lc lambskin; lc hylar}
 #alias bungshayd {runto w3n8ws6w4n7ws6w4n6e; lc sparkling; lc golden.bow ; s2e3se2s2es; lcb; lct }
 #alias rlcqk {gokal; runto d2n4w; open gate; 4w5n2w4n2ws2w4nw2nwn; lcb; lct}
-#alias rlcreef {gokal; runto d2n3e9n3edn3e3nen2en; gift; lcharm; lcharm; }
+#alias rlcreef {gokal; runto d2n3e7n; open gate; 2n3edn3e3nen2en; gift; lcharm; lcharm; }
 #alias rlcstorm {govin; north; open wall east; runto ene8se2sw2s3en6ese2nwnen; accept; n; lcb ; lcharm}
 #alias lcstorm {lc rose; lc takhisis; lc orb; lc lance}
 #alias gotoll {govin; north; open wall east; runto nene5s}
@@ -5319,6 +5322,7 @@ addlocates;
 #highlight {Steamboat} {magenta}
 #var warrior Dawsen
 #highlight {$warrior stumbles and falls} {light yellow}
+#highlight {barely bind} {light yellow}
 #highlight {$warrior crashes into} {green}
 #HIGHLIGHT        {cloud kill}                {light yellow}               {5}
 #high {The cloud of light blinks one last time}{light yellow}
@@ -5807,6 +5811,7 @@ addlocates;
     {velvet book tied with blue ribbon}{RELOCATE}
  {sparkling crystal book}{HEALING MIST}
  {sky blue prayerbook with sapphire runes}{holy word}
+ {small stone tablet}{STONESKIN}
  {dark plates of Takhisis}{storms}
  {book bound in human skin}{npp}
  {diamond bracelet}{mystic}
@@ -5865,6 +5870,9 @@ addlocates;
     {charm covered in a sparkling silvery mist} {RITUAL VOYAGE}
     {shrunken demon's horn charm}{NAP}
   {pristine book in a blue cover}{summon}
+  {small charm of meteorite}{berries}
+  {skewered dragon's eyeball char}{amplify}
+  {moist charm of sea sponge}{tenacious heart}
     {charm covered in a lone gray flame}{HEALING WAVE}
     {grey stone bracelet}{bluff}
     {glowing golden amulet}{bluff}
