@@ -406,6 +406,7 @@ alignnl
 kagowhite
 vinwar
 vindragontrain
+qkriver
 alignng
 palwar
 aligngn
@@ -484,6 +485,7 @@ uthlib
 khurreaver
 aran
 kerius
+eyedroppers
 rainsong
 palthug
 ansabar
@@ -504,6 +506,7 @@ shoalwartide
 shoalbaby
 shoalpregnant
 shoaldarkswell
+shoalrit
 shoalbaron2
 ghostpyre
 newvoulge
@@ -512,3 +515,5 @@ shiar
 alannah
 startcq
 tirabotgates
+vrykithchest
+startdread
