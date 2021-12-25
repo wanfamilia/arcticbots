@@ -1358,10 +1358,11 @@ reseteye;
 #alias recler {rewin; modecleric}
 #alias readybrew brewonly
 #alias brewonly {brsh; ghob; gmal}
-#alias medibar {st; ki barbarian; js clot me; #9 flee; w; s; rest; ban me; rg me; sat; gmal; }
+#alias medibar {st; ki barbarian; js clot me; #9 flee; w; s; rest; ban me; rg me; sgl; gmal; }
+#alias sshbar {#4 ssh barbarian; sat; gmal; sgl;rest}
 #alias kicf {ki barbarian; js clot me; #4 flee}
-#alias medibarh {medibar; #8 ssh barbarian}
-#alias medicorn {st; n; ki unicorn; js clot me; #9 flee; sk; rg me; ghob}
+#alias medibarh {medibar; restick sshbar}
+#alias medicorn {st; n; ki unicorn; js clot me; #9 flee; sk; rg me; ghob; gmal; rest}
 #alias medibrew {cancel; brsh; medibar; }
 #alias cornbrew {medicorn; brsh; gmal}
 
@@ -3590,7 +3591,7 @@ richard_wan@hotmail.com;	1;	1;	1;	1;
   #var vtaunt %1;
   #action {^{\w+} comes to your rescue} {cancel; skill; group; st; dotaunt $vtaunt};
   #action {^You laugh and jeer {.+} ignores you} {st; dotaunt $vtaunt};
-  #ticker e4 {cancel; gmal; ghob; st; dotaunt $vtaunt} 240;
+  #ticker e4 {stoptaunt; gmal; ghob; restick retaunt} 240;
 }
 
 #alias retaunt {
@@ -5000,14 +5001,15 @@ cancel;
   #var vlocates {};
   addloc rlcred;
   addloc rlcpirate;
+  addloc rlcreef;
   addloc rlcck;
   addloc lcck2;
-  addloc rlcreef;
   addloc rlcrahn;
   addloc rlctael;
   addloc rlcrainsong; 
   addloc rlcbluffreg; addloc gobung;
   addloc bungshayd; addloc rlcstorm; addloc lcstorm;
+  addloc rlcrayne;
   addloc rlctira; addloc lcdarkeep;
   addloc rlcner; 
 }
@@ -5041,9 +5043,12 @@ addlocates;
 #alias rlcshoal {gokal; runto d2n3e7n; open gate; 2n3edn3e3nen2en; lcharm; lcm; lc whale.spear}
 #alias dargklemisouth {runto 2s2wnw2se5se2s2w3s2ws6w2n; lct}
 #alias {qkdargk} {runto se2se4s2en2e6se3s2w2seses2e2n; lc hylar; lct; lcb; lc lambskin; lc hylar}
-#alias bungshayd {runto w3n8ws6w4n7ws6w4n6e; lc sparkling; lc golden.bow ; s2e3se2s2es; lcb; lct }
+#alias bungshayd {runto w3n8ws6w4n7ws6w4n6e; lc sparkling; lc golden.bow ; s2e3se2s2es; lcb; lct; lc floppy }
 #alias lcdarkeep {lc hylar; lcb; lct; lc lambskin; lc hylar}
-#alias rlcqk {gokal; runto d2n4w; open gate; 4w5n2w4n2ws2w4nw2nwn; lcb; lct}
+#alias rlcqk {gokal; runto d2n4w; open gate; 4w5n2w4n2ws2w2n; 
+  part reeds; inspect footprints; east; east; jump river;
+  lcb; lct;
+}
 #alias rlcreef {gokal; runto d2n3e7n; open gate; 2n3edn3e3nen2en; gift; lc4 charm; }
 #alias rlcstorm {govin; north; open wall east; runto ene8se2sw2s3en6ese2nwnen; accept; n; lcb ; lcharm}
 #alias lcstorm {lc rose; lc takhisis; lc orb; lc lance}
@@ -5345,6 +5350,7 @@ addlocates;
 #highlight {Steamboat} {magenta}
 #var warrior Dawsen
 #highlight {$warrior stumbles and falls} {light yellow}
+#highlight {There is a squirt of blood as Skylord releases you} {green}
 #highlight {A young mahkwahb boy grins mischievously at the hefty size}{green}
 #highlight {A young mahkwahb boy chuckles at the paltry size of your offer}{red}
 #highlight {barely bind} {light yellow}
