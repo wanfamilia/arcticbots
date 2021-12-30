@@ -449,6 +449,7 @@ Southwinds
 stoneskin spire
 tocloud
 underbridge
+kingroad
 openbook
 crownzone
 cinder
