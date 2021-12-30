@@ -394,7 +394,6 @@ lyzian
 raynelord
 dkquestkeep
 lieutreed
-mythsh
 gamso
 alignec
 branchala
@@ -454,12 +453,13 @@ openbook
 crownzone
 cinder
 crowbar
-t
+westthon
 eastthon
 footlocker
 kyle
 cokbakali
 vinbank
+mythsh
 instinct mmtn 51 grizzly
 nothing1
 tantnorth
@@ -517,3 +517,4 @@ startcq
 tirabotgates
 vrykithchest
 startdread
+uthlich

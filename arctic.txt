@@ -56,7 +56,7 @@
 #alias mapcler mapto $mycler mai
 #alias mainmage {ll #alias mai mag; #alias ser bser}
 #alias mser {mai ser}
-#var {leadercommands} {lie|swim|ent|flip|join|dive|pledge|run|ride|cut|lift|scale|crawl|search|scale|jump|trace|break|say|touch|push|pull|move|slide|stand|ent|enter|leave|squeeze|open|part|climb}
+#var {leadercommands} {lie|swing|swim|ent|flip|join|dive|pledge|run|ride|cut|lift|scale|crawl|search|scale|jump|trace|break|say|touch|push|pull|move|slide|stand|ent|enter|leave|squeeze|open|part|climb}
 #alias saylich {say amarazilac tomanaris tusun}
 #alias bst {bash %1; st; }
 #alias rtm {retrieve 1; wear medal}
@@ -702,6 +702,8 @@ reseteye;
 #alias otks {otk %1; stup %1; oe st}
 
 #alias pracsean {sean; #action {^The faintest connection to the undead} {sean}}
+#alias pracamel {amel; #action {^The gods smile upon you} {amel}}
+#alias pracraptu {raptu; #action {^You sense the call of the gods will be coming soon}{raptu}}
 #alias jba {js bone arrow; give arrows %1}
 #alias jbab {jba brakus}
 #alias jbas {jba $skyscout}
@@ -716,7 +718,7 @@ reseteye;
 #alias assno #alias assthis ott
 #alias palass bpa
 #alias haze {bot jd men ha}
-#alias palassthis {ass %1; rally; strike; av soul; strike}
+#alias palassthis {ass %1; rally; strike; av leg; strike}
 #alias kdr {st; drain}
 #alias bufdar {bot buf dk}
 
@@ -733,7 +735,7 @@ reseteye;
 	assist $charmie
 }
 #alias buac {#10 {buy 10*acorn; put all.acorn component.pouch}}
-#alias busl {#3 {buy 12*sliver; put all.sliver pouch}}
+#alias busl {#3 {buy 12*glass.sliver; put all.sliver pouch}}
 #alias swingbakali {
   crawl trunk; swing branch;
   #action {^You swing to a northern apex, becoming horizontal} {jump};
@@ -1046,7 +1048,7 @@ reseteye;
 #alias dwii {dwi; into}
 #alias dgo {dan gho}
 #alias ktu {js thun}
-#alias gokal {goto zardonna}
+#alias gokal {goto zardonna; }
 
 #alias gopal {goto anatole}
 #alias gobal {goto petrin}
@@ -1059,7 +1061,7 @@ reseteye;
 #alias gosol {goto theobald}
 #alias gohav {goto canstin}
 #alias goner {puf snaggle; mgo snaggle}
-#alias goto {puf %1; #map goto %1}
+#alias goto {puf %1; lrn; #map goto %1}
 #alias gocae {goto mirus}
 #alias gophy {gocae; mirphy}
 #alias mirphy {w; w; s; s; w; w; w; open gate; w; w; n; n; climb cliff; d; n; w; w; w; lcb; lcb}
@@ -1347,7 +1349,7 @@ reseteye;
   #show You feel ready to brew again;
 }
 #alias trigbrcl {
-  #action {^You feel ready to} {nospam 3 brsc aid}
+  #action {^You feel ready to} {nospamdo 3 brsc aid}
 }
 #alias trigbrma {
  #action {^You feel ready to} {nospam 3 brsc stren}
@@ -1358,11 +1360,11 @@ reseteye;
 #alias recler {rewin; modecleric}
 #alias readybrew brewonly
 #alias brewonly {brsh; ghob; gmal}
-#alias medibar {st; ki barbarian; js clot me; #9 flee; w; s; rest; ban me; rg me; sgl; gmal; }
+#alias medibar {st; ki barbarian; js clot me; #9 flee; w; s; rest; ban me; rg me; sat; sgl; gmal; }
 #alias sshbar {#4 ssh barbarian; sat; gmal; sgl;rest}
 #alias kicf {ki barbarian; js clot me; #4 flee}
 #alias medibarh {medibar; restick sshbar}
-#alias medicorn {st; n; ki unicorn; js clot me; #9 flee; sk; rg me; ghob; gmal; rest}
+#alias medicorn {st; n; ki unicorn; js clot me; #9 flee; rest; ban me; sk; rg me; sgl; ghob; gmal; rest}
 #alias medibrew {cancel; brsh; medibar; }
 #alias cornbrew {medicorn; brsh; gmal}
 
@@ -1372,6 +1374,12 @@ reseteye;
   sgl; ghob;
   n;n;e;w;s;s;
 }
+#alias checkmock {
+  #action {ethereal shimmer}{noisy};
+  n;e;s;w;
+}
+
+
 #alias noisy {#bell; #delay 1 sysplay smb3_coin; }
 #alias ue3 {#unticker e3}
 #alias ue2 {#unticker e20}
@@ -2061,12 +2069,14 @@ reseteye;
 
 #tab chernobog
 #tab marchesa
+#tab trinity
 
 #alias gtfo {gt -->  GET OUT!!; gt --> GET OUT!! (barbarians can wild and recall); tan hl}
 #alias dofote {enter portal; say evil; enter portal; say will; enter portal; say win; enter portal}
 #alias bfsh bfg $myshaman
 #alias bfcl bfg $mycler
 #alias tanksquare {maptank solsquare}
+#alias mythmarch {maptank mythsh}
 #alias rlore {recite lore %1 in inventory}
 #alias {rec lore} {thwack me; rlore %1;}
 #alias bfsk bfg $skyscout
@@ -2989,8 +2999,7 @@ reseteye;
 #ALIAS {makebar} {makechar %1 n; 7;6;5;9; finchar}
 
 #alias enci {enc %1; ide %1 in inventory}
-#alias enlo {enc %1; rlore %1; hold feather}
-
+#alias enlo {enc %1; rlore %1; hold pearl}
 #alias makechar
 {
 	start;	%1;	y;
@@ -3020,7 +3029,7 @@ reseteye;
   js nap;
 }
 #alias finchar {y;
-richard_wan@hotmail.com;	1;	1;	1;	1;
+myemail;	1;	1;	1;	1;
 	option brief;
 	prompt condition
 }
@@ -3189,7 +3198,7 @@ richard_wan@hotmail.com;	1;	1;	1;	1;
 #ALIAS {modecleric}
 {
 	#variable food $clerfood;
- #var circle1 aid;
+ #var circle1 {ca li};
  #alias sat dofood;
  #alias hew hem;
  #alias asf assist;
@@ -3296,7 +3305,7 @@ richard_wan@hotmail.com;	1;	1;	1;	1;
 	js night
 }
 
-#ALIAS {npp}
+#ALIAS {notent}
 {
 	jd neg pl
 }
@@ -4113,7 +4122,7 @@ cancel;
   #var held clear.sphere;
   #alias remage {rewin; modemage; modewhite};
   #alias locatereport locatereportimpl;
-  #var food turkey;
+  #var food cheese;
   #alias jsrelo js relo;
   nutr $food;
   #alias mlo {msw locate knock};
@@ -4153,14 +4162,15 @@ cancel;
 }
 #action {^Mustakrakish, the ancient death troll glows a bright lunar white} {gt -->    TROLL CLEANSED  !!}
 #alias logsham {newses arc {$myshaman; mypw; ones; modeshaman; leaveinn; anb; sgl; fly}  }
-#alias logshamo {newses sha {$myshaman; mypw; ones; modeshaman; fly}  }
+#alias logshamo {newses bot {$myshaman; mypw; ones; modeshaman; fly}  }
 #alias logdru newses arc {wagner; mypw; 1; 1; modedruid; fly}
 #alias newchar {newses %1 {makechar %2 n}}
 #alias lcvoy {lc meteorite; lc veil; lc clove; lc effigy}
 #alias plpd {present letter; present pendant}
 #alias ones {1; 1; }
 #alias logsky {newses sky {$skyscout; mypw; ones; modesky}}
-#alias leaveinn {d; d; n; e}
+#alias leaveinn donothing
+#alias leaveinnyes {d; d; n; e}
 #alias logpal {logbot {$mypaladin; mypw; ones; modepala; fly; leaveinn; jd r i}}
 #alias logwar {logbot {dawsen; mypw; 1; 1; modepala; modewar; fly}}
 #alias logmou logbot {penniman; mypw; 1;1; modepala; fly}
@@ -4172,7 +4182,7 @@ cancel;
 #alias newsham newchar arc $myshaman
 #alias newpal newchar bot $mypaladin
 #alias logcler newses arc {$mycler; mypw; 1; 1; modecleric; fly; leaveinn; ligst}
-#alias logclero newses hea {$mycler; mypw; 1; 1; modecleric; fly; }
+#alias logclero newses bot {$mycler; mypw; 1; 1; modecleric; fly; }
 
 #alias tust {turn; #bot #3 strike}
 #alias logthi newses thi {nikson; mypw; 1; 1; fly; modethief}
@@ -5019,7 +5029,7 @@ cancel;
   runto 4w5n2w2se3s5es2e2n2e; lct; lcb;
   2w2s2wn7w2seses2e2n;
 }
-#alias ligst js light staff
+#alias ligst js light green.pearl
 #alias rlcrainsong {gosol; van me; runto e2sd25e2sw4sesese2s; lcharm; lct; lcb}
 #alias rlctael {
   gosol; van me;
@@ -5046,9 +5056,11 @@ addlocates;
 #alias bungshayd {runto w3n8ws6w4n7ws6w4n6e; lc sparkling; lc golden.bow ; s2e3se2s2es; lcb; lct; lc floppy }
 #alias lcdarkeep {lc hylar; lcb; lct; lc lambskin; lc hylar}
 #alias rlcqk {gokal; runto d2n4w; open gate; 4w5n2w4n2ws2w2n; 
-  part reeds; inspect footprints; east; east; jump river;
+  part reeds; inspect footprints; follow footprints; east; east; jump river;
   lcb; lct;
 }
+#alias clangrow {clan increase_size 1}
+#alias qknyte {runto 4w3ses5e; enter trees; nes3e; enter copse; sdn; lcb; lct}
 #alias rlcreef {gokal; runto d2n3e7n; open gate; 2n3edn3e3nen2en; gift; lc4 charm; }
 #alias rlcstorm {govin; north; open wall east; runto ene8se2sw2s3en6ese2nwnen; accept; n; lcb ; lcharm}
 #alias lcstorm {lc rose; lc takhisis; lc orb; lc lance}
@@ -5093,7 +5105,7 @@ addlocates;
     gomyth;
     buy 3*cheese; arr; rest;
 }
-#alias gomyth {puf stronghold; up}
+#alias gomyth {puf stronghold; west; up}
 
 #alias rlcspire {gosol; runto e2sd8n3e7n4en9e5s6es2ese; climb ladder; ee; lckith; lc forge.ring}
 #var vlocate 1;
@@ -5913,7 +5925,7 @@ addlocates;
     {radiant white prayerbook}{sunray}
     {golden battle-honor}{dv}
   {wispy black veil charm}{ghostskin}
-    {book with frosted glass covers}{??}
+    {book with frosted glass covers}{zombie/beacon/epiphany}
     {wretched medallion}{shadows}
     {ivory spined spellbook}{??}
     {translucent jade tablet}{mass refresh}
