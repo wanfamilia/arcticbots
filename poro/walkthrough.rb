@@ -96,9 +96,9 @@ Nsw south of quali fork in the road: w.. Checkpoint, kill, south
 '
 
   dk_spells = '
-- Hct unholy wrath: you kill portcullis guards, unlock it, there are 2 sets of wandering knights then kill straph for the key, he has some people with him take the key and go s w (maybe one more west) of straph then go n, regen the tank, tank u then head south and up until you get to the hatch have a thief or white robe pick that hatch and then send your dk u if a non evil goes up draco will come out and murder everyone
-- irda dark blessing: irda all east, south, just before storm giant unessd, head westish down eastish to cells"
-- raynes impunity: Start in Pal S Gate 2s w 2s w 2s e s u s e 3s e s u w s u e to "Outside a Black Gate", east of gate is two rooms with lots of agro guards that dont see dark. Also, once fighting starts, more guards enter. Need to darkness at "Outside a Black Gate", go east, kill guards, go back to "Outside a Black Gate", recup/mem, and repeat until all guards are dead, get a thin silver whistle from the corpse of one of the guards, blow whistle, will get message, then open door,
+- Hct unholy wrath: atriho druul, you kill portcullis guards, unlock it, there are 2 sets of wandering knights then kill straph for the key, he has some people with him take the key and go s w (maybe one more west) of straph then go n, regen the tank, tank u then head south and up until you get to the hatch have a thief or white robe pick that hatch and then send your dk u if a non evil goes up draco will come out and murder everyone
+- irda dark blessing: gnobo ras, irda all east, south, just before storm giant unessd, head westish down eastish to cells"
+- raynes impunity: freya, Start in Pal S Gate 2s w 2s w 2s e s u s e 3s e s u w s u e to "Outside a Black Gate", east of gate is two rooms with lots of agro guards that dont see dark. Also, once fighting starts, more guards enter. Need to darkness at "Outside a Black Gate", go east, kill guards, go back to "Outside a Black Gate", recup/mem, and repeat until all guards are dead, get a thin silver whistle from the corpse of one of the guards, blow whistle, will get message, then open door,
 s to "In the Vestibule", open door, darkness, w d w to "A Misty Corridor", killing any guards on the way
 open door, Xill will insta agro. Stabs, bashes, triple massacres. Hard fight. Kill him, get a long black iron key
 2s, unlock door e, open door e. e. Learn all if Freya Tamerley is present to learn the impunity spell.

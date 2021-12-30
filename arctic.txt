@@ -5360,6 +5360,8 @@ addlocates;
 #HIGHLIGHT        {disarms your weapon}   {red}                        {4}
 #HIGHLIGHT        {$tank}                 {magenta}                    {5}
 #highlight {Steamboat} {magenta}
+#highligh {The Outer Gate of the Tower of the Stars} {green}
+#highligh {You cannot sense their presence.} {green}
 #var warrior Dawsen
 #highlight {$warrior stumbles and falls} {light yellow}
 #highlight {There is a squirt of blood as Skylord releases you} {green}
