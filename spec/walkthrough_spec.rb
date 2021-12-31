@@ -1,4 +1,3 @@
-require 'spec'
 require_relative '../poro/walkthrough'
 
 describe Walkthrough do

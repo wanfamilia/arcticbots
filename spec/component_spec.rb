@@ -1,5 +1,4 @@
 require_relative '../poro/component'
-require 'spec'
 
 describe Component do
   let(:component) {Component.new}

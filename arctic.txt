@@ -56,7 +56,7 @@
 #alias mapcler mapto $mycler mai
 #alias mainmage {ll #alias mai mag; #alias ser bser}
 #alias mser {mai ser}
-#var {leadercommands} {lie|swing|swim|ent|flip|join|dive|pledge|run|ride|cut|lift|scale|crawl|search|scale|jump|trace|break|say|touch|push|pull|move|slide|stand|ent|enter|leave|squeeze|open|part|climb}
+#var {leadercommands} {lie|swing|spin|en|ent|dance|swim|ent|flip|join|dive|pledge|run|ride|cut|lift|scale|crawl|search|scale|jump|trace|break|say|touch|push|pull|move|slide|stand|ent|enter|leave|squeeze|open|part|climb}
 #alias saylich {say amarazilac tomanaris tusun}
 #alias bst {bash %1; st; }
 #alias rtm {retrieve 1; wear medal}
@@ -185,7 +185,7 @@
 {5}
 
 #alias getcoins get all.coins
-#action {^Someone has called you} {wake; st; fly; look}
+#action {^Someone has called you} {mlea; wake; st; fly; look}
 #action {^{\w+} has summoned you} {beensum %1}
 
 #alias beensum {
@@ -484,6 +484,7 @@ reseteye;
 #alias autoass
 {
   #var autoassv 1;
+  #alias nospam nospamdo;
   #action {^{[A-Z]\w+} {.+}{$tanksuffix}} {doas %%1} {8};
 } {6}
 
@@ -3797,13 +3798,14 @@ myemail;	1;	1;	1;	1;
   #action {^{\w+} pants heavily} {classif flap %%1};
   #alias gank ko;
   #alias kd kdsky;
-  #alias prba {banp %%1; st; lrn};
+  #alias prba skyban;
   #action {^Scouts' Training Room} {lrn; smile};
   #action {^Elrax the master scout is here,} {lrn; smile};
   #delay 30 {group};
   fly;
 }
 
+#alias skyban {quell owl; #3 inst owl; rest; ban me; st}
 #action {^{\w+} steps near you and moves into a protective posture} {praise %1}
 #alias bdis {bot {ass; av prim}}
 #alias vom {voy pryor; cc pryor; mai rest}
@@ -3901,8 +3903,8 @@ myemail;	1;	1;	1;	1;
   #alias rs dorescue;
 }
 
-#var skyprime bardiche
-#var skyoff moon.staff
+#var skyprime hammer
+#var skyoff coral.sword
 #alias bepres {get %1 belt; present %1}
 #alias kylepres {bepres books; bepres sheaf; bepres code; bepres package; bepres parchment}
 #alias prepstone {
@@ -3911,7 +3913,7 @@ myemail;	1;	1;	1;	1;
 }
 #alias hua {#sky {hunt %1; huntmode agg}}
 #alias hud {#sky huntmode dis}
-#alias vass4 {nospam 6 assthis}
+#alias vass4 {nospam 6 aimass}
 #alias aimass {watch %1; ko}
 #alias modebow {
   #alias vass vass4;
@@ -5855,9 +5857,12 @@ addlocates;
     {book of the dead}{animate}
     {velvet book tied with blue ribbon}{RELOCATE}
  {sparkling crystal book}{HEALING MIST}
+ {book with platinum-gilded pages}{mist/lorb/delayed}
  {brilliant platinum prayerbook}{ward}
  {sky blue prayerbook with sapphire runes}{holy word}
  {small stone tablet}{STONESKIN}
+ {tablet wrapped in hymox leaves}{swarm}
+ {book inscribed with a single golden glyph}{siphon/trap/GLOBE}
  {dark plates of Takhisis}{storms}
  {book bound in human skin}{npp}
  {diamond bracelet}{mystic}

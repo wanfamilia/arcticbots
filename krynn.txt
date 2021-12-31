@@ -18,7 +18,7 @@ F 10
 
 G 0
 
-I 10018
+I 409
 
 L {ASCII NESW LINE} {NO EXITS} {x}
 L {ASCII NESW LINE} {N} {o}
@@ -216,7 +216,7 @@ L {MUDFONT CURVED} {N E} {\u2818}
 L {MUDFONT CURVED} {S E} {\u28A0}
 L {MUDFONT CURVED} {S W} {\u2844}
 L {MUDFONT CURVED} {N W} {\u2803}
-L {UNICODE GRAPHICS} {NO DIAGONAL} { }
+L {UNICODE GRAPHICS} {NO DIAGONAL} {}
 L {UNICODE GRAPHICS} {SE} {\u2E0C}
 L {UNICODE GRAPHICS} {NE} {\u2E1D}
 L {UNICODE GRAPHICS} {SE NE} {>}
@@ -1961,6 +1961,9 @@ E {  408} {s} {s} {4} {0} {} {1.000} {} {0.00}
 R {  408} {0} {} {nersouth} { } {} {} {} {} {} {1.000} {}
 E {  407} {north} {north} {1} {0} {} {1.000} {} {0.00}
 E {  407} {n} {n} {1} {0} {} {1.000} {} {0.00}
+
+R {  409} {0} {} {} { } {} {} {} {} {} {1.000} {}
+E { 2833} {west} {west} {8} {0} {} {1.000} {} {0.00}
 
 R {  410} {0} {} {} { } {} {} {} {} {} {1.000} {}
 E {  411} {east} {east} {2} {0} {} {1.000} {} {0.00}
@@ -12073,6 +12076,7 @@ E { 2833} {east} {east} {2} {0} {} {1.000} {} {0.00}
 R { 2833} {0} {} {atlacamani} { } {} {} {} {} {} {1.000} {}
 E { 2831} {north} {north} {1} {0} {} {1.000} {} {0.00}
 E { 2832} {west} {west} {8} {0} {} {1.000} {} {0.00}
+E {  409} {east} {enter alcove } {2} {0} {} {1.000} {} {0.00}
 
 R { 2834} {0} {} {} { } {} {} {} {} {} {1.000} {}
 E { 1746} {up} {up} {16} {0} {} {1.000} {} {0.00}

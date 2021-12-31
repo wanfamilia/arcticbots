@@ -1,5 +1,4 @@
 require_relative '../poro/mapper'
-require 'rspec'
 
 describe Mapper do
   let(:mapper) {Mapper.new %w(theobald anatole Northwinds Southwinds Westwinds solsquare)}
