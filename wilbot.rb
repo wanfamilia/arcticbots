@@ -123,6 +123,10 @@ bot.command(:decode, description: 'Example :decode pzar') do |_event, *args|
   words.decode line
 end
 
+bot.command(:restrict, description: 'invert the class restrctions') do |_event, *args|
+  zone.restrict args
+end
+
 bot.command(:encode, description: 'Example :encode heal') do |_event, *args|
   line = args.join(' ')
   words.encode line

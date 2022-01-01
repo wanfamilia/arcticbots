@@ -189,6 +189,10 @@ EL = A dark acolyte of Takhisis has a dark soul, with dark intentions. (Neraka, 
     pretty(result)
   end
 
+  def restrict(items)
+    %w(scout mage)
+  end
+
   def pretty(raw)
     "```#{raw}```"
   end

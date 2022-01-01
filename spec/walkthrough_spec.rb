@@ -19,4 +19,13 @@ describe Walkthrough do
       expect(walkthrough.myth_sheet nil).to start_with 'sheets: '
     end
   end
+
+  describe 'restrict' do
+    subject {Walkthrough.new.restrict(rejections)}
+    context 'scout' do
+      let(:rejections) {%w(NOMAGE NOTHIEF NOPALADIN NODRUID NOCLERIC NOWARRIOR NODARK_KNIGHT NOBARBARIAN
+NOBLACK_ROBE NORED_ROBE NOWHITE_ROBE NOSHAMAN)}
+      it {is_expected.to contain_exactly 'scout'}
+    end
+  end
 end

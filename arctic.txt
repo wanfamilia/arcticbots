@@ -514,7 +514,9 @@ reseteye;
 #alias skymelee {
  modemelee;
  #alias trs donothing;
+ #alias warhit donothing;
  eng stki;
+ #alias asst assist;
  casres;
  #alias rs dorescue;
 }
@@ -711,7 +713,7 @@ reseteye;
 #alias vass {vass1}
 #alias vass3 {#delay 3 {nospam 2 palass %1}}
 #alias vass1 {nospam 6 ota }
-#alias vass2 {nospam 1 asst}
+#alias vass2 {nospam 1 assist}
 #alias otai {ota; imp}
 #alias asst {ass %1; st}
 #alias bpa {bot palassthis}
@@ -3805,7 +3807,7 @@ myemail;	1;	1;	1;	1;
   fly;
 }
 
-#alias skyban {quell owl; #3 inst owl; rest; ban me; st}
+#alias skyban {quell owl; #3 inst owl; rest; ban me; st; lrn}
 #action {^{\w+} steps near you and moves into a protective posture} {praise %1}
 #alias bdis {bot {ass; av prim}}
 #alias vom {voy pryor; cc pryor; mai rest}
