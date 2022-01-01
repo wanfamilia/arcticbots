@@ -27,5 +27,11 @@ describe Walkthrough do
 NOBLACK_ROBE NORED_ROBE NOWHITE_ROBE NOSHAMAN)}
       it {is_expected.to contain_exactly 'scout'}
     end
+
+    context 'cures' do
+      let(:rejections) {%w(NOMAGE NOTHIEF NOPALADIN NODRUID NORANGER NOWARRIOR NODARK_KNIGHT
+NOBLACK_ROBE NORED_ROBE NOWHITE_ROBE)}
+      it {is_expected.to contain_exactly 'shaman', 'cleric'}
+    end
   end
 end

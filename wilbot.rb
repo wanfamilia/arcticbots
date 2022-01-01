@@ -124,7 +124,7 @@ bot.command(:decode, description: 'Example :decode pzar') do |_event, *args|
 end
 
 bot.command(:restrict, description: 'invert the class restrctions') do |_event, *args|
-  zone.restrict args
+  zone.restrict(args).join ', '
 end
 
 bot.command(:encode, description: 'Example :encode heal') do |_event, *args|
