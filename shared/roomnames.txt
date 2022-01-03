@@ -185,7 +185,7 @@ palanthas library dorshan
 palshelf
 fishreef
 sahcent
-sahshelf
+shoalshelf
 atlacamani
 lemusouth
 lemcase

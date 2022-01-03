@@ -18,7 +18,7 @@ F 10
 
 G 0
 
-I 13580
+I 2824
 
 L {ASCII NESW LINE} {NO EXITS} {x}
 L {ASCII NESW LINE} {N} {o}
@@ -216,7 +216,7 @@ L {MUDFONT CURVED} {N E} {\u2818}
 L {MUDFONT CURVED} {S E} {\u28A0}
 L {MUDFONT CURVED} {S W} {\u2844}
 L {MUDFONT CURVED} {N W} {\u2803}
-L {UNICODE GRAPHICS} {NO DIAGONAL} { }
+L {UNICODE GRAPHICS} {NO DIAGONAL} {}
 L {UNICODE GRAPHICS} {SE} {\u2E0C}
 L {UNICODE GRAPHICS} {NE} {\u2E1D}
 L {UNICODE GRAPHICS} {SE NE} {>}
@@ -12037,7 +12037,7 @@ R { 2823} {0} {} {} { } {} {} {} {} {} {1.000} {}
 E { 2822} {down} {down} {32} {0} {} {1.000} {} {0.00}
 E { 2824} {east} {east} {2} {0} {} {1.000} {} {0.00}
 
-R { 2824} {0} {} {sahshelf} { } {} {} {} {} {} {1.000} {}
+R { 2824} {0} {} {shoalshelf} { } {} {} {} {} {} {1.000} {}
 E { 2823} {west} {west} {8} {0} {} {1.000} {} {0.00}
 E { 2825} {east} {east} {2} {0} {} {1.000} {} {0.00}
 E {13580} {up} {up} {16} {0} {} {1.000} {} {0.00}
