@@ -706,6 +706,7 @@ reseteye;
 
 #alias pracsean {sean; #action {^The faintest connection to the undead} {sean}}
 #alias pracamel {amel; #action {^The gods smile upon you} {amel}}
+#alias praclegcler {pracamel; pracraptu; sat; e3 cww}
 #alias pracraptu {raptu; #action {^You sense the call of the gods will be coming soon}{raptu}}
 #alias jba {js bone arrow; give arrows %1}
 #alias jbab {jba brakus}
@@ -921,6 +922,7 @@ reseteye;
 
 #ALIAS {and}
 {
+  vch all.corpse;
 	#if {"%1"!=""}
 	{
 		jd animate dead %1
@@ -2054,6 +2056,7 @@ reseteye;
 
 #alias ssh {stup %1; hex %1; spook %1; hex %1; spook %1; lrn}
 #action {^{\w+} has called you} {cancel; mlea; wake; st; fly}
+#alias onecall {north; lrn; south alone; cal}
 
 
 #alias sagr {bot {jd sa gr}}
@@ -2071,6 +2074,7 @@ reseteye;
 }
 
 #tab chernobog
+#tab paijietng
 #tab marchesa
 #tab trinity
 
@@ -4151,6 +4155,17 @@ cancel;
 }
 #alias lopuf {mag {tp %1; ddo %1}}
 
+#alias hem5 {
+ hem;
+ #delay 12 hem;
+ #delay 24 hem;
+ #delay 36 hem;
+ #delay 48 {hem; rest};
+}
+
+#alias permahem {
+  hem5; #delay 50 restick permahem;
+}
 #alias logimm {logwin; gnua; mypw; 1;1; modeimm; }
 #alias doindent {1,$ ind 0}
 #alias delzap {#delay 7200 #zap}
@@ -4975,7 +4990,7 @@ cancel;
 #alias rlcbluffleg {gobung; lc fine.silver.ring; lc face; lc holy.talisman; lc golden.bracelet; rest }
 #alias dlcshayd {runshayd; restick lcshayd}
 #alias dlcner {goner; lctab; restick lcsan}
-#alias rlclem {gobal; runlem; lcb; black.pike; lc bone.bracer; lc wretched }
+#alias rlclem {gobal; runlem; lcb; lc black.pike; lc bone.bracer; lc wretched }
 #alias dlccae {gocae; lcb; lc ivory.book; restick dlcner}
 #alias rlckal {gokal; runto dnn10e; lc discolored; lc silver.ring; 14w; open gate; 4w5nww; }
 #alias dlcbog {
@@ -5448,6 +5463,7 @@ addlocates;
 #highlight {A man with bright red skin glistens with sweat} {green}
 #HIGHLIGHT        {ethereal energy}         {green}                      {5}
 #HIGHLIGHT        {righteous indignation}         {green}                      {5}
+#HIGHLIGHT        {holy quest}         {green}                      {5}
 #HIGHLIGHT        {A beautiful mockingbird whistles}         {green}                      {5}
 #HIGHLIGHT        {binding you dissolve}  {green}                      {5}
 #HIGHLIGHT        {clears up}             {green}                      {5}
@@ -5860,6 +5876,7 @@ addlocates;
     {velvet book tied with blue ribbon}{RELOCATE}
  {sparkling crystal book}{HEALING MIST}
  {book with platinum-gilded pages}{mist/lorb/delayed}
+ {golden orb}{storms}
  {brilliant platinum prayerbook}{ward}
  {sky blue prayerbook with sapphire runes}{holy word}
  {small stone tablet}{STONESKIN}
@@ -5943,6 +5960,8 @@ addlocates;
     {mottled robes of the Archmagus}{ft}
     {golden bracelet inlaid with emeralds}{bluff}
     {tightly bound tome of magic}{damageshield}
+  {codex of arcane lore}{ams}
+  {polished red oak book}{tenebrous/absorp/fold}
     {floppy hat}{shayds}
  {green book with frayed edges}{flesh/mirror/juke}
     {timeworn book bound with chains}{??}
