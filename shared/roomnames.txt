@@ -270,6 +270,9 @@ luniloc
 luniboulder
 afterboulder
 lunigate
+loccupelix
+loccupelix
+cupelix
 lunignome
 luniavatar
 mound

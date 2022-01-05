@@ -3907,6 +3907,7 @@ myemail;	1;	1;	1;	1;
 #alias modemelee {#alias asst assd;
   #alias refade donothing;
   #alias vass vass2; #alias ota assd; #alias oag {mac ki %%2};
+  #alias assthis assist;
   remb bow; wield $skyprime; hold $skyoff;
   #alias rs dorescue;
 }
@@ -3925,6 +3926,7 @@ myemail;	1;	1;	1;	1;
 #alias aimass {watch %1; ko}
 #alias modebow {
   #alias vass vass4;
+  #alias assthis tan aimass;
   rem $skyprime; rem $skyoff;
   get bow belt; hold bow;
   #alias ota aimass;
@@ -5126,9 +5128,9 @@ addlocates;
 #alias rlccq {gopal; runto 2wn2w6n4e9nw2n; 2nde; gift; lcharm; lcharm}
 #alias mythout {
     gomyth;
-    buy 3*cheese; arr; rest;
+    buy 2*cheese; arr; rest;
 }
-#alias gomyth {puf stronghold; west; up}
+#alias gomyth {puf stronghold; west; up; buy 2*cheese}
 
 #alias rlcspire {gosol; runto e2sd8n3e7n4en9e5s6es2ese; climb ladder; ee; lckith; lc forge.ring}
 #var vlocate 1;
