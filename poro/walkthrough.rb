@@ -192,14 +192,14 @@ EL = A dark acolyte of Takhisis has a dark soul, with dark intentions. (Neraka, 
   def restricts
     {
       NOMAGE: 'mage', NOTHIEF: 'thief', NOPALADIN: 'paladin', NODRUID: 'druid', NORANGER: 'scout',
-      NOCLERIC: 'cleric', NOWARRIOR: 'warrior', NODARK_KNIGHT: 'dark_knight', NOBARBARIAN: 'mage',
+      NOCLERIC: 'cleric', NOWARRIOR: 'warrior', NODARK_KNIGHT: 'dark_knight', NOBARBARIAN: 'barbarian',
       NOBLACK_ROBE: 'mage', NORED_ROBE: 'mage', NOWHITE_ROBE: 'mage', NOSHAMAN: 'shaman'
     }
   end
 
   def restrict(items)
     item_restricts = items.select{|x| x && !x.empty?}.map(&:upcase).map(&:to_sym).map{|x| restricts[x]}.compact
-    restricts.values.reject{|x| item_restricts.include?(x) }
+    restricts.values.uniq.reject{|x| item_restricts.include?(x) }
   end
 
   def pretty(raw)

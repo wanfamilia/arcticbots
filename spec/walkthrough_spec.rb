@@ -31,7 +31,18 @@ NOBLACK_ROBE NORED_ROBE NOWHITE_ROBE NOSHAMAN)}
     context 'cures' do
       let(:rejections) {%w(NOMAGE NOTHIEF NOPALADIN NODRUID NORANGER NOWARRIOR NODARK_KNIGHT
 NOBLACK_ROBE NORED_ROBE NOWHITE_ROBE)}
-      it {is_expected.to contain_exactly 'shaman', 'cleric'}
+      it {is_expected.to contain_exactly 'shaman', 'cleric', 'barbarian'}
+    end
+
+    context 'nothief' do
+      let(:rejections) {%w(NOTHIEF)}
+      it {is_expected.to contain_exactly 'cleric', 'dark_knight', 'druid', 'paladin', 'scout', 'shaman', 'warrior', 'barbarian', 'mage'}
+    end
+
+    context 'mageonly' do
+      let(:rejections) {%w(NOTHIEF NOPALADIN NODRUID NOCLERIC NORANGER NOWARRIOR NODARK_KNIGHT
+NOBARBARIAN NOSHAMAN)}
+      it {is_expected.to eq ['mage']}
     end
   end
 end

@@ -554,12 +554,12 @@ reseteye;
 #alias rlcrayne {gopal; runto 2wn2e5sw2sw2sesuse3sesuwsue; lct; lcb}
 #alias rlcpirate {gobal; rps me; runto s4e8ne3n2w3n2w2n2e3neneneund3e; open gate; 6e6n4e4w; lcb; lct; lcharm}
 #alias lcshado {lc wretched; lc shadow; lc gossamer; lc bladeless}
-#alias rlcred {rps me; gobal; lcb; lrn; coli; rd imp; runto s4e8n6w2sw2s2wnw7n2w2nw9n2u4n; lcf; lcb; }
+#alias rlcred {rps me; gobal; lcb; lrn; coli; rd imp; runto s4e8n6w2sw2s2wnw7n2w2nw9n2u4n; lcf; lcb; lcb}
 #alias rlcredleg {rps me; gobal; rd imp; runto s4e8n6w2sw2s2wnw7nw; lcf; lcb; lc flexible.red ; }
 #alias rlcck {gotar; lc battle.hammer; van me; lcharm; runto ws14es4e2neu9s3en4e4s3e2se2nen2e3n2eneususeueun; lcck}
 #alias rlckith {gosol; runto e2sd10se4sw5se4sw3s6wd2s; lckith; lc dark.elven}
 #alias rlcspi {gosol; runto e2sd8n3e5n4e3n9e5s6es2ese; climb ladder; ee; lckith; lc domino}
-#alias 4 0
+#alias 4 {#show unalias 4 if you are SURE}
 #alias lowpal {bot {#alias strike kill; eng ki; #alias dorescue {cancel; st; assist; rescue %%1}}}
 #alias enfothis {enter arch; follo %1}
 #alias enfo {ll enfothis}
@@ -1417,6 +1417,7 @@ reseteye;
   #ticker e3 {mac wake} 3;
 }
 
+#alias rlcdread {gosol; runto e2sd7n2w6n5w7se; rd imp; van me}
 #alias end {nbf endurance}
 #alias jde {js devo}
 #ALIAS {cab}
@@ -1565,6 +1566,7 @@ reseteye;
   #action {^A Dark Citadel Looms Overhead} {mgo citadel start};
   #action {^The End of River Shin} {mgo 10045};
   #action {^The End of the Khaldat River} {mgo 9974};
+  #action {^A Strange Hallway} {mgo 3179};
   #action {^The Top of the Keep} {mgo 3153};
   #action {^A Large Meeting Room} {mgo risolbelow};
 }
@@ -3696,7 +3698,7 @@ myemail;	1;	1;	1;	1;
 }
 #alias stunttar {stuntbush; gotar}
 #alias mystmirror {
-  #action {^A Small Guest Room} {enter;}
+  ll #action {^A Small Guest Room} {enter;}
 }
 #alias gc {st; gore %1; ch %1}
 #alias stuntshore {stuntbush; w;d;n;d;e;d;n;e;e;n;e;e;}
@@ -3783,6 +3785,7 @@ myemail;	1;	1;	1;	1;
 #alias msym {#map set roomsymbol [%1]}
 #alias wearb {get %1 $belt; wear %1}
 #action {^You feel up to using {gather|headbutt|forage|scrape|scavenge|dart}} {%1}
+#alias gather {gath; put all.bundle quiver}
 #action {^You feel up to using volley} {upvolley}
 #alias upvolley amaze
 #alias skyfoodthis {skyscav; skygath}
@@ -3862,9 +3865,11 @@ myemail;	1;	1;	1;	1;
  {north}{south}{east}{west}{south}{north}{west}{east}{up}{down}{down}{up}
 }
 #alias disengage {st; hover; fade %1; $reverses[%1]; reshoot}
-#alias ripo {riposte %1; #action {dazzled by your dexterity} {nospam 1 ripsk %1}}
+#alias ripo {riposte %1; #action {dazzled by your dexterity} {
+  nospam 1 ripsk %1;
+} {3} }
 
-#alias ripsk ripskimpl
+#alias ripsk mac ripskimpl
 #alias ripskimpl {riposte %1; st; sk}
 #alias retrain {cancel; camp; w;w;w;n;n;n;e; open door; e; s; lrn; n;w;open door;w;s;s;s;e;e;e}
 #alias pscout2 { #%2 {scout %1; %1; st; $reverses[%1]}; }
@@ -5040,8 +5045,6 @@ cancel;
   addloc rlcck;
   addloc lcck2;
   addloc rlcrahn;
-  addloc rlctael;
-  addloc rlcrainsong; 
   addloc rlcbluffreg; addloc gobung;
   addloc bungshayd; addloc rlcstorm; addloc lcstorm;
   addloc rlcrayne;
@@ -5049,6 +5052,9 @@ cancel;
   addloc rlcner; 
 }
 
+#alias addsmall {
+  addloc rlctael; addloc rlcrainsong;
+}
 #alias rlctira {
   gokal; runto d2n4w; open gates; 
   runto 4w5n2w2se3s5es2e2n2e; lct; lcb;
@@ -5087,7 +5093,7 @@ addlocates;
 #alias clangrow {clan increase_size 1}
 #alias qknyte {runto 4w3ses5e; enter trees; nes3e; enter copse; sdn; lcb; lct}
 #alias rlcreef {gokal; runto d2n3e7n; open gate; 2n3edn3e3nen2en; gift; lc4 charm; }
-#alias rlcstorm {govin; north; open wall east; runto ene8se2sw2s3en6ese2nwnen; accept; n; lcb ; lcharm}
+#alias rlcstorm {govin; north; open wall east; runto ene8se2sw2s3en6ese2nwnen; accept; n; lcb ; lcharm; lcharm}
 #alias lcstorm {lc rose; lc takhisis; lc orb; lc lance}
 #alias gotoll {govin; north; open wall east; runto nene5s}
 #var vlocatesold {
@@ -5130,7 +5136,8 @@ addlocates;
     gomyth;
     buy 2*cheese; arr; rest;
 }
-#alias gomyth {puf stronghold; west; up; buy 2*cheese}
+#alias gomyth {puf stronghold; west; up; buy cheese}
+#alias folicupe {kas foliage; runto ese2s4e2sw4swsws2w2sw5sw3sws2d; lcb; lcb}
 
 #alias rlcspire {gosol; runto e2sd8n3e7n4en9e5s6es2ese; climb ladder; ee; lckith; lc forge.ring}
 #var vlocate 1;

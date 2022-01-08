@@ -362,6 +362,7 @@ startdractower
 locatedractower
 startcitdrac
 abovecitdrac
+ckpick
 startbluff
 rahnkagi
 startbandit
