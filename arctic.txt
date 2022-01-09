@@ -5889,6 +5889,9 @@ addlocates;
     {velvet book tied with blue ribbon}{RELOCATE}
  {sparkling crystal book}{HEALING MIST}
  {book with platinum-gilded pages}{mist/lorb/delayed}
+ {amber book caked with dust}{constrict/thunder/shard}
+ {book scribed on brittle parchmeht}{barrage/mtel/cleanse}
+ {open book with fluttering pages}{craft/dscry/sphinv}
  {golden orb}{storms}
  {brilliant platinum prayerbook}{ward}
  {sky blue prayerbook with sapphire runes}{holy word}

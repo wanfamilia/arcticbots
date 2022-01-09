@@ -119,6 +119,7 @@ hct2maze
 ritfrosty
 frostycave
 frostybottom
+overdaggo
 daggorathturtle
 zmij
 ixpat
