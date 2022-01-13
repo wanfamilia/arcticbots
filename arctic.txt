@@ -45,7 +45,8 @@
 
 #alias folrest donothing
 #alias sase {sat; sean}
-#alias mapwhi mapto pryor mag
+#alias mapwhi mapto $mymage mag
+#var mymage pryor
 #alias solcal {n; lrn; s alone; cal}
 #alias pew {em pewpewpew PEWpew}
 #alias sha {#arc}
@@ -410,7 +411,6 @@ reseteye;
 #alias pracwhi {
   presi; resi;
   parc; arcane;
-  pgift; gift;
   ptran %1;
 }
 #alias presi {
@@ -1355,11 +1355,13 @@ reseteye;
   #action {^You feel ready to brew again} {readybrew};
   #show You feel ready to brew again;
 }
+
 #alias trigbrcl {
   #action {^You feel ready to} {nospamdo 3 brsc aid}
 }
 #alias trigbrma {
- #action {^You feel ready to} {nospam 3 brsc stren}
+  #alias readybrew mythbrsc stren;
+  trigbrsh;
 }
 
 #alias taracorn {van me; js imp; air me; w; s; open gate; runto w3n3enw2nw3n2w4nw7nwse; buac}
@@ -2086,6 +2088,7 @@ reseteye;
 #alias dofote {enter portal; say evil; enter portal; say will; enter portal; say win; enter portal}
 #alias bfsh bfg $myshaman
 #alias bfcl bfg $mycler
+#alias bfwh bfg $mymage
 #alias tanksquare {maptank solsquare}
 #alias mythmarch {maptank mythsh}
 #alias rlore {recite lore %1 in inventory}
@@ -3463,6 +3466,7 @@ myemail;	1;	1;	1;	1;
 	omcler
 }
 
+#alias ward {jd sacred ward}
 #ALIAS {omcler}
 {
 	ocl for 're po' 're po' 'pro fr ev' 'pro fr ev' 're cu' 're cu' 'cu bl' 'cu bl' 're cu' 'cu bl' 'cu bl' 'ca li' 'ca li' 'ca li';
@@ -3869,7 +3873,7 @@ myemail;	1;	1;	1;	1;
   nospam 1 ripsk %1;
 } {3} }
 
-#alias ripsk mac ripskimpl
+#alias ripsk ripskimpl
 #alias ripskimpl {riposte %1; st; sk}
 #alias retrain {cancel; camp; w;w;w;n;n;n;e; open door; e; s; lrn; n;w;open door;w;s;s;s;e;e;e}
 #alias pscout2 { #%2 {scout %1; %1; st; $reverses[%1]}; }
@@ -3878,9 +3882,9 @@ myemail;	1;	1;	1;	1;
 #alias psneak {w; sneak; sneak; sneak; e;
   #action {pokes you in the ribs} {cancel; psneak};
   #action {^You feel enligh} {cancel; sk; #bell};
-  #alias sneakit {dosneak 25};
+  #alias sneakit {dosneak 18};
 }
-#alias dosneak {#%1 {w; n; s; e;}}
+#alias dosneak {#%1 {n; e; w; s;}}
 #action {^The ghost of a long-dead {.+} materializes} {lrn}
 #alias pokethem {#action {^%1 flies in} {poke %1}}
 
@@ -3917,7 +3921,7 @@ myemail;	1;	1;	1;	1;
   #alias rs dorescue;
 }
 
-#var skyprime dragonarmy.crossbow
+#var skyprime bullwhip
 #var skyoff coral.sword
 #alias bepres {get %1 belt; present %1}
 #alias kylepres {bepres books; bepres sheaf; bepres code; bepres package; bepres parchment}
@@ -4094,13 +4098,19 @@ myemail;	1;	1;	1;	1;
 #alias pokein {
   #action {^{%1} flies in} {poke %1};
 }
-#alias rgr {rg %1; rest}
+#alias rgr mai {rg %1; rest}
 #alias mrg {mai rgr}
 #alias cleancomp1 {
   get all.!necromantic pouch;
   put all.protection pouch;
 }
 #alias cleancomp2 {get all.!web.!acorn component.pouch}
+
+#alias manyreg {
+  tan rg; 
+  #delay 30 tan rg; 
+  #delay 50 restick manyreg;
+}
 #alias cleancomp cleancomp2
 #alias dropcomp {cleancomp; dropallcomp}
 #alias sellcomp {cleancomp; sell20}
@@ -4123,7 +4133,7 @@ cancel;
 #alias tmpa {%1 %2; ota; temp}
 #alias ksbt {tmpa ksb}
 #alias logred newses red {#alias mag red; wilbon; mypw; 1; 1; fly; modemage; modered;}
-#alias logwhi {newses white {pryor; mypw; #var food food; ones; fly; modemage; modewhite}}
+#alias logwhi {newses white {$mymage; mypw; #var food food; ones; fly; modemage; modewhite}}
 #alias logmag {newses mag {wilbon; mypw; #var food food; 1; 1; fly; modemage; modewhite}}
 #alias mag {#white}
 #alias modered {
@@ -4748,7 +4758,7 @@ cancel;
   #regex {%2} {:sitting} { nospam 0 stand};  
   #regex {%2} {\[Me:} {setfight 1} {setfight 0};
 }
-#alias feng {fence eng; ripo slash}
+#alias feng {skillbell; fence eng; ripo slash; #alias nospam nospamdo; #alias dart donothing}
 #alias ifinactive {
   #ats setsesname;
   #if {"$sesname"=="$actsesname"} {donothing foo} {
@@ -5045,7 +5055,7 @@ cancel;
   addloc rlcck;
   addloc lcck2;
   addloc rlcrahn;
-  addloc rlcbluffreg; addloc gobung;
+  addloc gobung;
   addloc bungshayd; addloc rlcstorm; addloc lcstorm;
   addloc rlcrayne;
   addloc rlctira; addloc lcdarkeep;
@@ -5060,7 +5070,7 @@ cancel;
   runto 4w5n2w2se3s5es2e2n2e; lct; lcb;
   2w2s2wn7w2seses2e2n;
 }
-#alias ligst js light green.pearl
+#alias ligst donothing
 #alias rlcrainsong {gosol; van me; runto e2sd25e2sw4sesese2s; lcharm; lct; lcb}
 #alias rlctael {
   gosol; van me;

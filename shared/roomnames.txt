@@ -378,6 +378,7 @@ startraven
 ritraven
 beforetroll
 startlyt
+ritarmy
 startshadow
 ritquali
 irdapearl
@@ -396,6 +397,7 @@ garnetnorth
 startdeepmine
 belowlubs
 lyzian
+locrayne
 raynelord
 dkquestkeep
 lieutreed
@@ -524,3 +526,7 @@ tirabotgates
 vrykithchest
 startdread
 uthlich
+kalport
+belowmom
+beforegargan
+ritgargan
