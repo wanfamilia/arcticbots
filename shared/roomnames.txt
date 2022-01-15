@@ -159,8 +159,8 @@ after arch
 succubus
 khane
 velchoir
+shalzanarch
 vshrinal
-shalzan
 startcrytic
 essence earth eern
 dargo start

@@ -337,6 +337,8 @@ reseteye;
 
 #alias sasu {mai sat; suel; ll rest}
 #sub {loaf of bread} {fried chicken thigh}
+#sub {A guardian wrapped in blue robes}{A guardian wrapped in blue robes(enchant-scroll)}
+#high {A guardian wrapped in red robes}{green}
 #sub {silver jeweled bracelet} {silver jeweled bracelet(nytes)}
 #sub {large golden shield} {large golden shield(irda)}
 #sub {bow of aged yew} {bow of aged yew(suun vault)}
@@ -592,7 +594,6 @@ reseteye;
 #alias gebe {get berry; eat berry}
 #action {^{\w+} drops an ethereal ghost} {nospamdo 1 gebe}
 #alias onbleed {$vcure %2 }
-#alias airm {nbf repose; nbf fly}
 
 #alias trigfly {
   #action {^{\w+} jumps up in the air and flaps} {classif air %%1};
@@ -1356,6 +1357,10 @@ reseteye;
   #show You feel ready to brew again;
 }
 
+#alias trigscma {
+  #action {^You feel ready to} {rest; scribe 'stren'; drop all.strength};
+  #show You feel ready to scribe again;
+}
 #alias trigbrcl {
   #action {^You feel ready to} {nospamdo 3 brsc aid}
 }
@@ -1742,7 +1747,9 @@ reseteye;
 #alias tch tan chs
 #alias chf {chs 1 %1}
 #alias fsd {fly stop; down}
-
+#alias babs {bot js abso}
+#alias airm {air me; #6 sr me }
+#alias bdm {bot jd di ma}
 #action {^Your victim's tracks lead {\w+}} {ll #show track: %1}
 
 #alias cpn
@@ -3195,11 +3202,6 @@ myemail;	1;	1;	1;	1;
 	#ticker {min3} {%1 %2}{180}
 }
 
-#ALIAS {mlo}
-{
-	fo4 force;
-	me4 loca
-}
 
 #ALIAS {mm}
 {
@@ -3975,7 +3977,7 @@ myemail;	1;	1;	1;	1;
 }
 
 #alias msw {fo4 %2; me4 %1}
-#alias mknock {msw knock locate}
+#alias mknoc {msw knock locate}
 #alias kem {mag ageng %1; mag ota; st; assthis}
 #alias puf {mag pufthis}
 
@@ -4152,7 +4154,7 @@ cancel;
   #var food cheese;
   #alias jsrelo js relo;
   nutr $food;
-  #alias mlo {msw locate knock};
+  #alias mloc {msw locate knock};
   #action {^{\w+} makes a mockery out of everyone} {nospamdo 30 jmoc %%1};
 }
 
@@ -4568,7 +4570,7 @@ cancel;
 #alias e30 {#ticker e30 {%0; lrn} 1800; %0}
 #alias e10 {#ticker e10 {%0; lrn} 600; %0}
 #alias ue10 #unticker e10
-#alias parc {#action {^The energy in the air coal}{st; arcane}}
+#alias parc {arcane; #action {^The energy in the air coal}{st; arcane}}
 #alias magebuff
 {
   #alias afterbuffcapture onmagebuff;
@@ -5901,6 +5903,8 @@ addlocates;
  {book with platinum-gilded pages}{mist/lorb/delayed}
  {amber book caked with dust}{constrict/thunder/shard}
  {book scribed on brittle parchmeht}{barrage/mtel/cleanse}
+ {poinard}{ck}
+ {gold dragonscale battle armor}{bmobs}
  {open book with fluttering pages}{craft/dscry/sphinv}
  {golden orb}{storms}
  {brilliant platinum prayerbook}{ward}
@@ -6034,5 +6038,5 @@ addlocates;
 
 #alias alltell {
  ct %1;
- dtell %1;
+ #delay 1 dtell %1;
 }
