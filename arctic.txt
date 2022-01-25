@@ -338,7 +338,7 @@ reseteye;
 #alias sasu {mai sat; suel; ll rest}
 #sub {loaf of bread} {fried chicken thigh}
 #sub {A guardian wrapped in blue robes}{A guardian wrapped in blue robes(enchant-scroll)}
-#high {A guardian wrapped in red robes}{green}
+#high {A guard wrapped in red robes}{green}
 #sub {silver jeweled bracelet} {silver jeweled bracelet(nytes)}
 #sub {large golden shield} {large golden shield(irda)}
 #sub {bow of aged yew} {bow of aged yew(suun vault)}
@@ -1578,6 +1578,11 @@ reseteye;
   #action {^A Large Meeting Room} {mgo risolbelow};
 }
 
+#alias cvarch {gt follow me after enter arch; kw enter arch;
+  #delay 4 group form;
+  #delay 8 group form;
+  #delay 12 group form;
+}
 #alias comsus {sus; comm; }
 #alias dowraith {recite tattered.brown.scroll; say Sallahas fah'si nakasha ujishi ak'vasaj ish Ix'asahala}
 #var runspeed 0.23
@@ -3788,10 +3793,11 @@ myemail;	1;	1;	1;	1;
 
 #alias wieb {get %1 belt; wield %1}
 
+#alias dochalk {squeeze chalky}
 #alias msym {#map set roomsymbol [%1]}
 #alias wearb {get %1 $belt; wear %1}
 #action {^You feel up to using {gather|headbutt|forage|scrape|scavenge|dart}} {%1}
-#alias gather {gath; put all.bundle quiver}
+#alias gather {gath; put all.!blunt.bundle quiver; put all.arrow quiver}
 #action {^You feel up to using volley} {upvolley}
 #alias upvolley amaze
 #alias skyfoodthis {skyscav; skygath}
@@ -3818,6 +3824,7 @@ myemail;	1;	1;	1;	1;
   #alias prba skyban;
   #action {^Scouts' Training Room} {lrn; smile};
   #action {^Elrax the master scout is here,} {lrn; smile};
+  fastdam;
   #delay 30 {group};
   fly;
 }
@@ -3839,7 +3846,7 @@ myemail;	1;	1;	1;	1;
   rpm; sr me; transfer %1;
   #action {^The time for giving} {js imp; air me; sr me; rpm; transfer %1; lrn; rest; deep}
 }
-#alias fastdam {modebow; inst harrier; hover; archery s 5 p 5 a 2; }
+#alias fastdam {modebow; pburst; inst harrier; hover; archery s 5 p 5 a 2; }
 #alias bbn {bot kk %1; bn %1}
 #alias legarr {skyfood; #delay 900 {skyscav}; pburst; fastdam}
 #alias kwe {kw eject}
@@ -3919,12 +3926,13 @@ myemail;	1;	1;	1;	1;
   #alias refade donothing;
   #alias vass vass2; #alias ota assd; #alias oag {mac ki %%2};
   #alias assthis assist;
-  remb bow; wield $skyprime; hold $skyoff;
+  remb bow; wield $skyprime;  get $skyoff belt; hold $skyoff;
+  put bow belt;
   #alias rs dorescue;
 }
 
-#var skyprime bullwhip
-#var skyoff coral.sword
+#var skyprime bardiche
+#var skyoff poinard
 #alias bepres {get %1 belt; present %1}
 #alias kylepres {bepres books; bepres sheaf; bepres code; bepres package; bepres parchment}
 #alias prepstone {
@@ -3940,6 +3948,7 @@ myemail;	1;	1;	1;	1;
   #alias assthis tan aimass;
   rem $skyprime; rem $skyoff;
   get bow belt; hold bow;
+  put $skyoff belt;
   #alias ota aimass;
   #alias assthis tan aimass;
   eng ko;
@@ -4103,17 +4112,23 @@ myemail;	1;	1;	1;	1;
 #alias rgr mai {rg %1; rest}
 #alias mrg {mai rgr}
 #alias cleancomp1 {
-  get all.!necromantic pouch;
+  get all.!alteration  pouch;
   put all.protection pouch;
 }
 #alias cleancomp2 {get all.!web.!acorn component.pouch}
 
+#alias ravenshimmer {
+  place shimmering.ruby southern;
+  place shimmering.emerald northern;
+  place shimmering.diamond eastern;
+  place shimmering.sapphire western;
+}
 #alias manyreg {
   tan rg; 
   #delay 30 tan rg; 
   #delay 50 restick manyreg;
 }
-#alias cleancomp cleancomp2
+#alias cleancomp cleancomp1
 #alias dropcomp {cleancomp; dropallcomp}
 #alias sellcomp {cleancomp; sell20}
 #alias dropallcomp {drop all.component}
@@ -4184,6 +4199,12 @@ cancel;
  #delay 48 {hem; rest};
 }
 
+#alias hem4 {
+  hem;
+  #delay 15 hem;
+  #delay 30 hem;
+  #delay 45 hem;
+}
 #alias permahem {
   hem5; #delay 50 restick permahem;
 }
@@ -4559,6 +4580,7 @@ cancel;
   nutr $food;
   #alias fastmem {deep};
   #alias rs donothing;
+  #alias lootcomp lootcompimpl;
   #alias assthis ott;
   #action {disarms your weapon} {cancel; gw};
   guston;
@@ -4705,7 +4727,7 @@ cancel;
   #alia allnext donothing;
   #alias groupimpl group full;
   eng paleng;
-  #var hrec rosary;
+  #var hrec fireball;
   #action {^Your hands tingle as a feeling of goodness} {ll #show -->       LAY ready} {7};
   #action {^Warriors' Training Room} {lrn; smile};
   #alias assthis palassthis;
@@ -5072,7 +5094,7 @@ cancel;
   runto 4w5n2w2se3s5es2e2n2e; lct; lcb;
   2w2s2wn7w2seses2e2n;
 }
-#alias ligst donothing
+#alias ligst js light staff
 #alias rlcrainsong {gosol; van me; runto e2sd25e2sw4sesese2s; lcharm; lct; lcb}
 #alias rlctael {
   gosol; van me;
@@ -5149,7 +5171,7 @@ addlocates;
     buy 2*cheese; arr; rest;
 }
 #alias gomyth {puf stronghold; west; up; buy cheese}
-#alias folicupe {kas foliage; runto ese2s4e2sw4swsws2w2sw5sw3sws2d; lcb; lcb}
+#alias folicupe {kas foliage; runto ese2s4e2sw4swsws2w2sw5sw3sws2ds; lcb; lcb}
 
 #alias rlcspire {gosol; runto e2sd8n3e7n4en9e5s6es2ese; climb ladder; ee; lckith; lc forge.ring}
 #var vlocate 1;
@@ -5882,6 +5904,7 @@ addlocates;
 #VARIABLE         {window}                {{ } { } { } { } { }}
 
 #sub {animated suit of armor} {animated suit of armor(immheat)}
+#sub {caryatid column}{caryatid column(immheat)}
 #sub {granite golem}{granite golem(immheat)}
 #sub {granite watcher} {granite watcher(immheat)}
 #sub {loser clanmate} {heroic clanmate} 

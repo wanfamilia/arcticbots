@@ -315,6 +315,7 @@ ctcorner
 ctguards
 ctcent
 streamshayd
+jenna
 elric
 palcrypt
 palcrypt
@@ -530,3 +531,6 @@ kalport
 belowmom
 beforegargan
 ritgargan
+ravenintersection
+shyskeli
+ritfinale
