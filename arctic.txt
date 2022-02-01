@@ -67,9 +67,9 @@
 #alias gtca {gt someone small: crank catapult, wear a light, kill mob, loot, wear helmet, all west, get bag, east north east, then stack commands: drop bag, light bag in room}
 #alias waitphoen {
   #action {phoenix is perched here} {noisy};
-  coli; air me;
-  runto 3des2d;
-  runto 2unw3u;
+  air me;
+  runto 3des2d2sws;
+  runto ne2n2unw3u;
 }
 #alias boombag  {drop bag; light bag in room}
 #action {^Onyx is dead} { get all.charm onyx}
@@ -725,10 +725,12 @@ reseteye;
 #alias assno #alias assthis ott
 #alias palass bpa
 #alias haze {bot jd men ha}
-#alias palassthis {ass %1; rally; strike; av leg; strike}
+#alias palassthis {ass %1; rally; strike; av soul; strike}
 #alias kdr {st; drain}
 #alias bufdar {bot buf dk}
+#alias rlcshark {gotar; js imp; van me; runto ws3ws3wsw3sws4wundwsd4w4nw}
 
+#alias fshield {js fireshield}
 #ACTION {{he begins to drool|is stunned!}}
 {
 	#line log messages.txt
@@ -1926,7 +1928,7 @@ reseteye;
 
 #alias lc4t {#4 lct}
 #alias lc4ch {lc4 charm}
-#alias lootcomp donothing
+#alias lootcomp lootcompimpl
 #alias lootcompimpl {
   get all.component corpse;
   put all.component component.pouch;
@@ -3264,7 +3266,6 @@ myemail;	1;	1;	1;	1;
   #alias bigrest {rest; tan watch; #var resting 1};
   #alias othervoy #var vnextcommand {othervoyimpl %%1 %%2};
   #alias cleancomp cleancomp2;
-  #alias lootcomp donothing;
   #alias assthis ott;
   #var {circle1} {slow po};
   #unticker feedme;
@@ -3793,11 +3794,12 @@ myemail;	1;	1;	1;	1;
 
 #alias wieb {get %1 belt; wield %1}
 
+#action {^You step near {\w+} and move into a protective} {ll #show guarding: %1}
 #alias dochalk {squeeze chalky}
 #alias msym {#map set roomsymbol [%1]}
 #alias wearb {get %1 $belt; wear %1}
 #action {^You feel up to using {gather|headbutt|forage|scrape|scavenge|dart}} {%1}
-#alias gather {gath; put all.!blunt.bundle quiver; put all.arrow quiver}
+#alias gather {gath; put all.!blunt.bundle quiver; drop all.arrow }
 #action {^You feel up to using volley} {upvolley}
 #alias upvolley amaze
 #alias skyfoodthis {skyscav; skygath}
@@ -3824,7 +3826,7 @@ myemail;	1;	1;	1;	1;
   #alias prba skyban;
   #action {^Scouts' Training Room} {lrn; smile};
   #action {^Elrax the master scout is here,} {lrn; smile};
-  fastdam;
+  legarr;
   #delay 30 {group};
   fly;
 }
@@ -4112,7 +4114,7 @@ myemail;	1;	1;	1;	1;
 #alias rgr mai {rg %1; rest}
 #alias mrg {mai rgr}
 #alias cleancomp1 {
-  get all.!alteration  pouch;
+  get all.!acorn  pouch;
   put all.protection pouch;
 }
 #alias cleancomp2 {get all.!web.!acorn component.pouch}
@@ -4503,8 +4505,8 @@ cancel;
   {resist magic}{rmag}
   {resist gas}{rgas}
   {protection from evil}{mp}
-  {bless}{js prayer}
   {monstrous mantle}{mons}
+  {healing wave}{jd he wa}
   {righteous indignation}{ll #show -->   CASTING RI; jd rig ind}
   {resist breath}{rbre}
   {resist negative}{rneg}
@@ -5503,6 +5505,7 @@ addlocates;
 #highligh {briefly glow red} {green}
 #highlight {aura of command} {green}
 #HIGHLIGHT        {small piece of meteorite}         {green}                      {5}
+#high {pinch of golden dust} {green}
 #HIGHLIGHT        {peculiar looking rock is lying on the ground here}         {green}                      {5}
 #HIGHLIGHT        {wispy black veil}         {green}                      {5}
 #HIGHLIGHT        {gangrenous foot}         {green}                      {5}
@@ -5553,7 +5556,7 @@ addlocates;
 }
 #macro {\eOS} {f4}
 
-#alias f4 multif5
+#alias f4 mac dost
 #MACRO {\co}
 {
 	resave
@@ -5648,10 +5651,10 @@ addlocates;
 	mac dost
 }
 
-#alias f1 mac dost
+#alias f1 multif5
 
 #alias multif5 {
- f9;
+ f5;
  #delay 4 f5;
  #delay 8 f5;
  #delay 12 f5;
@@ -5925,6 +5928,7 @@ addlocates;
  {sparkling crystal book}{HEALING MIST}
  {book with platinum-gilded pages}{mist/lorb/delayed}
  {amber book caked with dust}{constrict/thunder/shard}
+ {open book with fluttering pages}{graft/dscry/sph-inv}
  {book scribed on brittle parchmeht}{barrage/mtel/cleanse}
  {poinard}{ck}
  {gold dragonscale battle armor}{bmobs}

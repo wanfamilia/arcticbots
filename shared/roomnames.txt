@@ -265,7 +265,6 @@ dkspell hct
 startwda
 stoneseal
 mysticshark
-mysticshark
 mysticgates
 luniloc
 luniboulder
@@ -392,6 +391,7 @@ unemestar
 shaydstream
 irdacell
 irdasand
+tarl
 sealem
 garnetslab
 garnetnorth
@@ -466,6 +466,9 @@ westthon
 eastthon
 footlocker
 kyle
+jaero
+mazuz
+vestiv
 cokbakali
 vinbank
 mythsh
@@ -504,6 +507,7 @@ lashathal
 dargospeaker
 bakalishaman
 ritvermi
+maritta
 startgalazor
 mystictunnel
 irdasphinx
