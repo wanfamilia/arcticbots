@@ -731,6 +731,7 @@ reseteye;
 #alias rlcshark {gotar; js imp; van me; runto ws3ws3wsw3sws4wundwsd4w4nw}
 
 #alias fshield {js fireshield}
+#alias glob {js globe}
 #ACTION {{he begins to drool|is stunned!}}
 {
 	#line log messages.txt
@@ -1921,16 +1922,28 @@ reseteye;
         lootcomp;
 }
 
+
+#alias met {
+  malo %1;
+  #delay 1 inac %1;
+}
 #alias aftergargan {
   #action {^You get tangled in the kelp as you try to leave the pool} {#delay 1 north};
   north;
 }
 
+#alias rdbf {mag {
+  js fireshield;
+  js juke;
+  js fold;
+  js boon;
+}}
 #alias lc4t {#4 lct}
 #alias lc4ch {lc4 charm}
 #alias lootcomp lootcompimpl
 #alias lootcompimpl {
-  get all.component corpse;
+  get all.component.!pouch corpse;
+  get all.pinch corpse;
   put all.component component.pouch;
 }
 #alias otta {ott; st; ass}

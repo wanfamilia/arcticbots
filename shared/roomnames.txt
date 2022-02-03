@@ -378,7 +378,8 @@ startraven
 ritraven
 beforetroll
 startlyt
-ritarmy
+lytjoin
+oldraven
 startshadow
 ritquali
 irdapearl
@@ -507,6 +508,7 @@ lashathal
 dargospeaker
 bakalishaman
 ritvermi
+zhultar
 maritta
 startgalazor
 mystictunnel
@@ -536,5 +538,8 @@ belowmom
 beforegargan
 ritgargan
 ravenintersection
+lordraven
 shyskeli
+ritarmy
+gabrielle
 ritfinale
