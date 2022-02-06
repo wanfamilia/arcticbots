@@ -1932,10 +1932,9 @@ reseteye;
   north;
 }
 
+#alias dovermi {south; exam lord; north}
 #alias rdbf {mag {
   js fireshield;
-  js juke;
-  js fold;
   js boon;
 }}
 #alias lc4t {#4 lct}
@@ -2610,7 +2609,11 @@ reseteye;
 {
 	jd ma bl
 }
-#alias kig {mag {jsa ignite %1}}
+#alias kig {mag {
+  ott;
+  jsa ignite %1; 
+  ota;
+}}
 #alias krot {jsa rot}
 #alias ksb {jda s b}
 #alias frn {st; fren}
@@ -4164,7 +4167,8 @@ cancel;
 #alias oncloud {gt -->    GUST please}
 #alias tmpa {%1 %2; ota; temp}
 #alias ksbt {tmpa ksb}
-#alias logred newses red {#alias mag red; wilbon; mypw; 1; 1; fly; modemage; modered;}
+#alias bqk {buy knowledge; quaff knowledge}
+#alias logred newses red {#alias mag red; gere; mypw; 1; 1; fly; modemage; modered;}
 #alias logwhi {newses white {$mymage; mypw; #var food food; ones; fly; modemage; modewhite}}
 #alias logmag {newses mag {wilbon; mypw; #var food food; 1; 1; fly; modemage; modewhite}}
 #alias mag {#white}
@@ -5001,6 +5005,15 @@ cancel;
 #alias bfl bot fleethis
 #alias lfl ll fleethis
 
+#alias newfood {
+  oe elixir;
+  pour large.skin out;
+  get 3*silver.nectar; drink silver.nectar;
+  get 3*golden.nectar; drink golden.nectar;
+  pour 2.large.skin out;
+  #5 fill large.skin silver.nectar;
+  #5 fill 2.large.skin golden.nectar;
+}
 #alias pfl {bot {punch %1; #3 {flee; st}}}
 #ALIAS {sumheal}
 {
@@ -5185,9 +5198,10 @@ addlocates;
     gomyth;
     buy 2*cheese; arr; rest;
 }
-#alias gomyth {puf stronghold; west; up; buy cheese}
+#alias gomyth {puf stronghold; west; fsf; up; buy cheese}
 #alias folicupe {kas foliage; runto ese2s4e2sw4swsws2w2sw5sw3sws2ds; lcb; lcb}
 
+#alias brewsac {rest; brew 'sacred ward'}
 #alias rlcspire {gosol; runto e2sd8n3e7n4en9e5s6es2ese; climb ladder; ee; lckith; lc forge.ring}
 #var vlocate 1;
 #alias lcf {lc flexible.red; lc ring.bones}
@@ -5402,6 +5416,9 @@ addlocates;
 	jd mass inv %1
 }
 
+#action {^The purple haze gently envelops Coatlicue the Great Priestess} {mac shoalhaze} 
+#alias shoalhaze {gt -->    Priestess hazed, dispel magic it please}
+
 #alias {mtkal} {jd ma tel zardonna}
 #ALIAS {wb}
 {
@@ -5442,6 +5459,7 @@ addlocates;
 #HIGHLIGHT        {$tank}                 {magenta}                    {5}
 #highlight {Steamboat} {magenta}
 #highligh {The Outer Gate of the Tower of the Stars} {green}
+#high {The purple haze gently envelops Coatlicue the Great Priestess}{yellow}
 #highligh {You cannot sense their presence.} {green}
 #var warrior Dawsen
 #highlight {$warrior stumbles and falls} {light yellow}
@@ -5923,8 +5941,7 @@ addlocates;
 #sub {caryatid column}{caryatid column(immheat)}
 #sub {granite golem}{granite golem(immheat)}
 #sub {granite watcher} {granite watcher(immheat)}
-#sub {loser clanmate} {heroic clanmate} 
-#sub {has lost} {remains optimistic after having lost}
+#sub {loser clanmate has lost} {optimistic clanmate will soon regain} 
 #sub {a margle statue} {a marble statue(immheat)}
 #sub {a stone gargoyle} {a stone gargoyle(immheat)}
 #sub {The Kinslayer Wars} {2 Kinslayer}

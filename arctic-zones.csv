@@ -356,8 +356,28 @@ All up, wander 3x3 grid, go to north middle, south, careful dt, all up, loot key
 All down, uo trapdoor, d, 3nuw, open flap, tank w, wander kill agroes, go to nw room, open flap
 Nn (optional ew rank mobs), n, open flap, tank north delay, circle around boss, mystic advisor mul"
 lemuria,,"From B4 Traders [] to Lemuria - 5w,s,3w,5s,4e,s,5w (get key),3d,2w (unlock/open chest), 3eswsesswsw, @Before the Palace Gates (n..w..e..sue..e..u..) s2e, get all case, wwn, 4n,w (locate) w,2s,e,s,u,2e,n,w,u,n,e,2s,w,u,n, (chest),e,s (iron golem - rittable - ice),u (winter - wall),u (autumn door),u (spring plate),u (summer),u (vashka-silence, loumar, toram-rescuer), loot key, 5d,n,w (unlock/open chest)"
-alchemysoulkeep,,"sacred ward potion (prot321), crude diamond, pinch golden, create potion of soulkeep "
+alchemysoulkeep,,"sacred ward potion (prot3211), crude diamond, pinch golden, create potion of soulkeep "
 alchemychalice,,"dazzling(merchesti), fortify self potion(prot 3322111), x-alt, pinch golden, create chalice of shimmering elixir "
 alchemyenchant,,"sleek wooden wand(pirates), enchant item scroll (ench 2211), x-enchant, pinch golden, create wand of greater enchantment"
 alchemydivinity,,"reorx(thorb), zeboim(nytes), mishakal(irda), heroism potion(prot 2211), x-ench, x-prot, diamond, create austere symbol of divinity"
 verminaard,,"kith area, eastish, raise medallion, columns, pull chip, nne, search debris, zhultar(key selector), rathan (6 mystic), smith (1 brass), maritta (3 iron), children (2 steel), vermi spawns 5am with ember, go in and out, ember dies and maritta follows you"
+finale,,"
+part 1 marshal
+- lemish jail: clear aggroes, runaway goblin, enter vein, aid goblin, who opens arkvarr, loot emerald from arkvarr, black robed guardian, get key, dispel magic hand, get key
+- leshak assistant, wait for him to walk out, kill assistant loot blueprints, kill leshak get head
+- tamper blueprints is optional, present blueprints architect give you a key or you loot it if tampered
+- lord lady ravenshadow, untie curtain
+- flight marshal (hard), nomagic enter hatchery, smash eggs, enter opening
+- head back to below leshak intersecion
+part 2 shimmering
+- bozak/guardian and free slave to get crowbar
+- south to the, waterbreath, pull rug, loot diamond eel, pry grate, immobilize mage, back to the doors north
+- shyskeli: kill steam, keep one non-steam alive, para-calm feces, kill shyskeli, heal/cure blood
+- one man priest fight, shove bookshelf, reza nobash, and debuffs including ri, room west of reza is nomagic, flee is safe dragon, loot shimmering
+- go to gabrielle, present head gabrielle, loot shimmering from desk
+part 3 finale
+- back to shyskeli say the weird words (detect magic circle), insert shimmering directions, central room.
+- east is druid fist and hands and thorns for damage, then south for shaman dev spirits jar, then ne for cleric heal man, sunbolt/flamestrike aggrob mob, then mage puff north for aggro mob, loot pedestal half a key
+- west is tankfights shades (fleeing go wrong way), man either lay kill, until behemoth, if facing away from you it bruises, thief to pick/loot pedestal
+- combine key, unlock door, north, spellup, enterportal tank first, be nocharm, only alchemy quest person can loot the tome
+"
