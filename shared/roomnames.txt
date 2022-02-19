@@ -111,6 +111,7 @@ recuperate sol
 startthorb
 component neraka
 nerinn
+todread
 sanction
 citadel kalaman
 pirates

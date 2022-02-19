@@ -728,7 +728,7 @@ reseteye;
 #alias palassthis {ass %1; rally; strike; av soul; strike}
 #alias kdr {st; drain}
 #alias bufdar {bot buf dk}
-#alias rlcshark {gotar; js imp; van me; runto ws3ws3wsw3sws4wundwsd4w4nw}
+#alias rlcshark {gotar; js imp; van me; west; south; open gate; runto 3ws3wsw3sws4wundwsd4w4nw}
 
 #alias fshield {js fireshield}
 #alias glob {js globe}
@@ -1060,6 +1060,7 @@ reseteye;
 #alias dgo {dan gho}
 #alias ktu {js thun}
 #alias gokal {goto zardonna; }
+#alias gostr {goto stronghold}
 
 #alias gopal {goto anatole}
 #alias gobal {goto petrin}
@@ -2674,6 +2675,7 @@ reseteye;
 }
 
 #alias fib {mag js fireb}
+#alias fibo {fib; ota}
 #alias kfm {jdm fo mi}
 
 #alias ide {js iden}
@@ -5201,7 +5203,10 @@ addlocates;
 #alias gomyth {puf stronghold; west; fsf; up; buy cheese}
 #alias folicupe {kas foliage; runto ese2s4e2sw4swsws2w2sw5sw3sws2ds; lcb; lcb}
 
-#alias brewsac {rest; brew 'sacred ward'}
+#alias brewsac dobrew sacred
+#alias brewfor dobrew fortify
+#alias brewher dobrew heroism
+#alias dobrew {rest; brew '%1'; st}
 #alias rlcspire {gosol; runto e2sd8n3e7n4en9e5s6es2ese; climb ladder; ee; lckith; lc forge.ring}
 #var vlocate 1;
 #alias lcf {lc flexible.red; lc ring.bones}
@@ -5224,7 +5229,7 @@ addlocates;
   rps me; cubread; ef food; deltwo dlcbluff rlcshayd;
 }
 
-#alias rlcshayd {deltwo runshayd rlcshayd2}
+#alias rlcshayd {gosol; runto e2sd7n2w6n6w4n7ws6w4n6es2e3se2s2es; lcb; lct; lc floppy}
 #alias rlcshayd2 {deltwo lcshayd rlccae}
 #alias rlccae {gocae; lc ivory.book; deltwo lcb rlcner}
 #alias rlcner {goner; lcb; lct}
@@ -5768,7 +5773,7 @@ addlocates;
     {14}{burst}
     {15}{cease}
     {16}{change}
-    {17}{clear}
+    {17}{convoke}
     {18}{climb}
     {19}{cling}
     {20}{consume}
@@ -5956,6 +5961,7 @@ addlocates;
     {book of the dead}{animate}
     {velvet book tied with blue ribbon}{RELOCATE}
  {sparkling crystal book}{HEALING MIST}
+ {pink candle charm with a green flame}{etharm}
  {book with platinum-gilded pages}{mist/lorb/delayed}
  {amber book caked with dust}{constrict/thunder/shard}
  {open book with fluttering pages}{graft/dscry/sph-inv}
