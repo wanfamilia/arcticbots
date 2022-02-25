@@ -157,6 +157,7 @@ cvkenny
 bors cv
 cvphil
 after arch
+cvbunny
 succubus
 khane
 velchoir
@@ -322,6 +323,7 @@ palcrypt
 startlargus
 starticen
 startgreenen
+chartreuse
 illyoctrio
 tultuk
 startphysix
@@ -540,6 +542,7 @@ beforegargan
 ritgargan
 ravenintersection
 lordraven
+ravenmarshal
 shyskeli
 ritarmy
 gabrielle

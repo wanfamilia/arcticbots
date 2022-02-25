@@ -78,6 +78,7 @@
 #action {^The night golem is dead} {ll get bladeless night.golem}
 #action {^The stone giant shaman is dead} {get all giant.shaman}
 #action {^A succubus is dead! R.I.P.} {get wings succubus}
+#action {^The shade of Jar'mal, the Kinslayer is dead}{get charm}
 #action {^A demonic minion is dead} {oegc ombra}
 #action {^A spirit rises} {gts}
 #alias gts {gt spirit}
@@ -5124,7 +5125,7 @@ cancel;
   runto 4w5n2w2se3s5es2e2n2e; lct; lcb;
   2w2s2wn7w2seses2e2n;
 }
-#alias ligst js light staff
+#alias ligst js light green.pearl
 #alias rlcrainsong {gosol; van me; runto e2sd25e2sw4sesese2s; lcharm; lct; lcb}
 #alias rlctael {
   gosol; van me;
@@ -5463,6 +5464,7 @@ addlocates;
 #HIGHLIGHT        {disarms your weapon}   {red}                        {4}
 #HIGHLIGHT        {$tank}                 {magenta}                    {5}
 #highlight {Steamboat} {magenta}
+#highlight {'Free to rule these lands!'} {yellow}
 #highligh {The Outer Gate of the Tower of the Stars} {green}
 #high {The purple haze gently envelops Coatlicue the Great Priestess}{yellow}
 #highligh {You cannot sense their presence.} {green}
@@ -5973,6 +5975,7 @@ addlocates;
  {brilliant platinum prayerbook}{ward}
  {sky blue prayerbook with sapphire runes}{holy word}
  {small stone tablet}{STONESKIN}
+ {grey stone tablet}{hands}
  {tablet wrapped in hymox leaves}{swarm}
  {book inscribed with a single golden glyph}{siphon/trap/GLOBE}
  {dark plates of Takhisis}{storms}
