@@ -47,6 +47,7 @@
 #alias sase {sat; sean}
 #alias mapwhi mapto $mymage mag
 #var mymage pryor
+#alias gcomp {get all.component pouch; give all.component $mymage; #delay 1 mag put all.component pouch}
 #alias solcal {n; lrn; s alone; cal}
 #alias pew {em pewpewpew PEWpew}
 #alias sha {#arc}
@@ -1587,6 +1588,10 @@ reseteye;
   #delay 4 group form;
   #delay 8 group form;
   #delay 12 group form;
+  #delay 16 group form;
+  #delay 24 group form;
+  #delay 32 group form;
+  #delay 44 group form;
 }
 #alias comsus {sus; comm; }
 #alias dowraith {recite tattered.brown.scroll; say Sallahas fah'si nakasha ujishi ak'vasaj ish Ix'asahala}
@@ -2532,7 +2537,7 @@ reseteye;
 }
  
 #var {circle1} {bone}
-
+#alias bpho {buy 12*phosphorus}
 #ALIAS {jd2}
 {
 	#if {@firstspell}
@@ -2645,6 +2650,7 @@ reseteye;
 	js cone
 }
 
+#alias fsuit {bot {get phosphorus pouch; sprinkle phosphorus suit}}
 #alias noam {bot {north; ki ambassador}}
 #alias csn {mag ott; mag jd co sn}
 #alias clr {mag js color}
@@ -4749,7 +4755,7 @@ cancel;
   #alia allnext donothing;
   #alias groupimpl group full;
   eng paleng;
-  #var hrec fireball;
+  #var hrec horn;
   #action {^Your hands tingle as a feeling of goodness} {ll #show -->       LAY ready} {7};
   #action {^Warriors' Training Room} {lrn; smile};
   #alias assthis palassthis;
