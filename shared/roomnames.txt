@@ -33,6 +33,7 @@ balwar
 petrin
 dustmerch
 Northwinds
+stronghold
 oldsh
 toqk
 startdk
@@ -491,6 +492,8 @@ ritkhur
 cloudcomp
 dargomoon
 stingworm
+silvismith
+silvistable
 startheal
 totsplit
 totmerge
@@ -548,3 +551,8 @@ ritarmy
 gabrielle
 ritfinale
 draaddis
+wayendspy
+silvicentre
+anatlab
+caiaphus
+tirvoulge
