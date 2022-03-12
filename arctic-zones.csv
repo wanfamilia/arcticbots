@@ -398,3 +398,18 @@ using alchemy:
 6. items which require a scroll can fail based on scribe skill. sorry shamans and filthy reincarnators
 7. darvar broken medallion, alchemy mend, up deathtrap, mithril noom, mithril frayal, mithril sarson, combine for key, unlock safe, loot ring, enchantment wand, wear ring, start mage quest
 "
+cyan,,"silvinotes:
+setup:
+ - setup repairs
+ - north, so thief disable, knock gates, south, stables, enter hole to stablemaster, loot anvil, back gates
+ - lorac centre, free lorac, guide lorac, bedroom east up to the centre, bedroom, west east, push bed, fight, push bed, shove wall
+ - down stairs to the south side, leave lit tank at 1 man fight entrance, group goes to centre
+ - ent 4.cabinet fight demon, loot, slide mirror
+ - key to leader, smith, combine key key, lorac bedroom, unlock door, south, enter portal
+
+portal:
+ - realm of illusion in the centre, 4 twisty dead ends
+ - each fork has 2 cyans
+ - real cyan is at the end of a path and has slaads. there is an intermediate cyan on the way to the real cyan. bugs spawn after intermediate cyan dies. spam wake until they stop spawning
+ - intermediate cyan at fair teleports you back to middle spam wake
+ - kill red bash death"

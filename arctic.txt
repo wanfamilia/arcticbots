@@ -59,7 +59,7 @@
 #alias mapcler mapto $mycler mai
 #alias mainmage {ll #alias mai mag; #alias ser bser}
 #alias mser {mai ser}
-#var {leadercommands} {lie|follow|swing|spin|en|ent|dance|swim|ent|flip|join|dive|pledge|run|ride|cut|lift|scale|crawl|search|scale|jump|trace|break|say|touch|push|pull|move|slide|stand|ent|enter|leave|squeeze|open|part|climb}
+#var {leadercommands} {lie|frolick|follow|swing|spin|en|ent|dance|swim|ent|flip|join|dive|pledge|run|ride|cut|lift|scale|crawl|search|scale|jump|trace|break|say|touch|push|pull|move|slide|stand|ent|enter|leave|squeeze|open|part|climb}
 #alias saylich {say amarazilac tomanaris tusun}
 #alias bst {bash %1; st; }
 #alias rtm {retrieve 1; wear medal}
@@ -343,6 +343,8 @@ reseteye;
 #sub {A guardian wrapped in blue robes}{A guardian wrapped in blue robes(enchant-scroll)}
 #high {A guard wrapped in red robes}{green}
 #sub {silver jeweled bracelet} {silver jeweled bracelet(nytes)}
+#sub {the boots of speed}{the boots of speed(zmij)}
+#sub {simple mithril brooch}{simple mithril brooch(shoalquest)}
 #sub {large golden shield} {large golden shield(irda)}
 #sub {bow of aged yew} {bow of aged yew(suun vault)}
 #sub {an iron ration} {a juicy steak}
@@ -561,8 +563,9 @@ reseteye;
 #alias lcshado {lc wretched; lc shadow; lc gossamer; lc bladeless}
 #alias rlcred {rps me; gobal; lcb; lrn; coli; rd imp; runto s4e8n6w2sw2s2wnw7n2w2nw9n2u4n; lcf; lcb; lcb}
 #alias rlcredleg {rps me; gobal; rd imp; runto s4e8n6w2sw2s2wnw7nw; lcf; lcb; lc flexible.red ; }
-#alias rlcck {gotar; lc battle.hammer; van me; lcharm; runto ws14es4e2neu9s3en4e4s3e2se2nen2e3n2eneususeueun; lcck}
+#alias rlcck {gotar; lcham; van me; lcharm; runto ws14es4e2neu9s3en4e4s3e2se2nen2e3n2eneususeueun; lcck}
 #alias rlckith {gosol; runto e2sd10se4sw5se4sw3s6wd2s; lckith; lc dark.elven}
+#alias lcham {lc solamnic.battlehammer}
 #alias rlcspi {gosol; runto e2sd8n3e5n4e3n9e5s6es2ese; climb ladder; ee; lckith; lc domino}
 #alias 4 {#show unalias 4 if you are SURE}
 #alias lowpal {bot {#alias strike kill; eng ki; #alias dorescue {cancel; st; assist; rescue %%1}}}
@@ -3248,6 +3251,7 @@ myemail;	1;	1;	1;	1;
 {
 	#variable food $clerfood;
  #var circle1 {ca li};
+  #var vbuffover[bless] {js prayer};
  #alias sat dofood;
  #alias hew hem;
  #alias asf assist;
@@ -3741,7 +3745,7 @@ myemail;	1;	1;	1;	1;
 #alias gc {st; gore %1; ch %1}
 #alias stuntshore {stuntbush; w;d;n;d;e;d;n;e;e;n;e;e;}
 #alias jread {get saffron belt; put saffron pouch; js read}
-#alias jmoc {sysplay smb3_coin; spellcraft high; js moment; spellcraft none}
+#alias jmoc {sysplay smb3_coin; spellcraft high; js moment %1; spellcraft none}
 #alias playcoin {sysplay smb3_coin}
 #alias cubread {get metal.cube belt; rem $held; hold cube; say praise the gods; rem cube; put metal.cube belt; hold $held; ef; put 6*bread belt; drop all.food; get all.food belt}
 #alias bushcrop {s; s; e; e;}

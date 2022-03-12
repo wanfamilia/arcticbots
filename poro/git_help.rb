@@ -1,5 +1,5 @@
 class GitHelp
-  def clean_soft
+  def prune
     'git branch --merged master | grep -vE "^\s+master$" | grep -v "\*" | xargs -n 1 git branch -d'
   end
 
