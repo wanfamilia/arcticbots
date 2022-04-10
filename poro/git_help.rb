@@ -3,6 +3,10 @@ class GitHelp
     'git branch --merged master | grep -vE "^\s+master$" | grep -v "\*" | xargs -n 1 git branch -d'
   end
 
+  def prunemain
+    'git branch --merged main | grep -vE "^\s+master$" | grep -v "\*" | xargs -n 1 git branch -d'
+  end
+
   def clean_medium
     'git branch | grep -vE "^\s+master$" | grep -v "\*" | xargs -n 1 git branch -d'
   end

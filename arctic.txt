@@ -934,7 +934,6 @@ reseteye;
 
 #ALIAS {and}
 {
-  vch all.corpse;
 	#if {"%1"!=""}
 	{
 		jd animate dead %1
@@ -943,6 +942,7 @@ reseteye;
 		jd animate dead corpse
 	}
 }
+
 
 #alias aggone {
   #if {"%2"!=""} {#var aggrovar %2};
@@ -1268,7 +1268,7 @@ reseteye;
 #alias conbo {#var pet Boanes; conj bone}
 #alias conir {#var pet Fereous; conj iron}
 #alias conlea {#var pet Plumbic; conj lead}
-#alias conca {#var pet Burten; conj cat}
+#alias conca {#var pet Montalban; conj cat}
 #alias conow {#var pet Ayoade; conj owl;
   oe for 'di ma' 'blur' 'shield' 'inv';
   oe mem 'li bo' 'ma mi' 'ma mi' 's g';
@@ -1953,7 +1953,8 @@ reseteye;
 #alias lootcomp lootcompimpl
 #alias lootcompimpl {
   get all.component.!pouch corpse;
-  get all.pinch corpse;
+  get golden.pinch corpse;
+  put golden.poinch pouch;
   put all.component component.pouch;
 }
 #alias otta {ott; st; ass}
@@ -2118,8 +2119,12 @@ reseteye;
 
 #tab chernobog
 #tab paijietng
+#tab jaqueline
+#tab mytzipixin
 #tab marchesa
 #tab trinity
+
+#alias dmas {ll dm ariakas}
 
 #alias gtfo {gt -->  GET OUT!!; gt --> GET OUT!! (barbarians can wild and recall); tan hl}
 #alias dofote {enter portal; say evil; enter portal; say will; enter portal; say win; enter portal}
@@ -4144,7 +4149,7 @@ myemail;	1;	1;	1;	1;
 #alias rgr mai {rg %1; rest}
 #alias mrg {mai rgr}
 #alias cleancomp1 {
-  get all.!acorn  pouch;
+  get all.!alteration.!protection.!pinch.!web pouch;
   put all.protection pouch;
 }
 #alias cleancomp2 {get all.!web.!acorn component.pouch}
@@ -4454,7 +4459,8 @@ cancel;
 	#variable food ration
 }
 
-#alias ams {js anti}
+#alias ams {js white}
+#alias gede {ll {get dented.armour; get dented.helmet; release $pet}}
 #alias lish {jd li sh}
 #alias hs {js sleep}
 #alias kch {jdm chain lig}
@@ -4760,7 +4766,7 @@ cancel;
   #alia allnext donothing;
   #alias groupimpl group full;
   eng paleng;
-  #var hrec horn;
+  #var hrec fireball;
   #action {^Your hands tingle as a feeling of goodness} {ll #show -->       LAY ready} {7};
   #action {^Warriors' Training Room} {lrn; smile};
   #alias assthis palassthis;
@@ -5136,7 +5142,9 @@ cancel;
   runto 4w5n2w2se3s5es2e2n2e; lct; lcb;
   2w2s2wn7w2seses2e2n;
 }
-#alias ligst js light green.pearl
+#alias ligst donothing
+#alias ligwi {js light %1; wield %1;}
+#alias ligho {js light %1; hold %1;}
 #alias rlcrainsong {gosol; van me; runto e2sd25e2sw4sesese2s; lcharm; lct; lcb}
 #alias rlctael {
   gosol; van me;
@@ -5979,7 +5987,12 @@ addlocates;
     {book of the dead}{animate}
     {velvet book tied with blue ribbon}{RELOCATE}
  {sparkling crystal book}{HEALING MIST}
- {flowing robe of white silk}{flowing robe of white silk(riverv)}
+ {vermillion suit of dragonscale}{inferno}
+ {bronze gas mask}{hylo}
+ {skull-encased black steel pauldrons}{ft}
+ {harbinger cape}{dread}
+ {the battle horn of the Darg'ak Clan}{jarmal}
+ {flowing robe of white silk}{riverv}
  {pink candle charm with a green flame}{etharm}
  {book with platinum-gilded pages}{mist/lorb/delayed}
  {amber book caked with dust}{constrict/thunder/shard}
@@ -6051,6 +6064,8 @@ addlocates;
     {dragonrider's talisman}{pax}
     {alabaster garlic clove charm}{LAST CHANCE}
     {charm covered in a sparkling silvery mist} {RITUAL VOYAGE}
+  {amber book caked in dust}{constrict/thunderbolt/shards}
+   {crimson red book of enchantments}{dev/massi/pres}
     {shrunken demon's horn charm}{NAP}
   {pristine book in a blue cover}{summon}
   {small charm of meteorite}{berries}

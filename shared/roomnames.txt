@@ -201,6 +201,7 @@ stormloc
 qk
 nytetree
 starttheiwar
+slimychute
 chutebottom
 belowsimm
 kern
@@ -228,6 +229,7 @@ ritlowdarkeep
 ftspin
 startft
 tesiak
+samus
 khalarm
 citadel start
 sloan
