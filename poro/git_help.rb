@@ -4,7 +4,7 @@ class GitHelp
   end
 
   def prunemain
-    'git branch --merged main | grep -vE "^\s+master$" | grep -v "\*" | xargs -n 1 git branch -d'
+    'git branch --merged main | grep -vE "^\s+main$" | grep -v "\*" | xargs -n 1 git branch -d'
   end
 
   def clean_medium
@@ -13,6 +13,10 @@ class GitHelp
 
   def purge
     'git branch | grep -vE "^\s+master$" | grep -v "\*" | xargs -n 1 git branch -D'
+  end
+
+  def getmain
+    `git pull && git fetch origin main:main`
   end
 
   def pullf
