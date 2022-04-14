@@ -213,6 +213,7 @@ gargath
 teiresias blind glasses
 solknow
 solbank
+stormcabinet
 romis
 grom
 stormbutton
