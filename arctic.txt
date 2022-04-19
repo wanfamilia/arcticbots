@@ -24,7 +24,7 @@
   }
 }
 
-#alias kdel {jsm delayed}
+#alias kdel {jsm delayed; ota}
 #alias mapto {
    swap me %1;
    mapoff;
@@ -3859,6 +3859,7 @@ myemail;	1;	1;	1;	1;
   #alias gank ko;
   #alias kd kdsky;
   #alias prba skyban;
+  #alias lootcomp donothing;
   #action {^Scouts' Training Room} {lrn; smile};
   #action {^Elrax the master scout is here,} {lrn; smile};
   legarr;
@@ -4237,6 +4238,16 @@ cancel;
  #delay 48 {hem; rest};
 }
 
+#alias hem6
+{
+  hem;
+  #delay 10 hem;
+  #delay 20 hem;
+  #delay 30 hem;
+  #delay 40 hem;
+  #delay 50 hem;
+}
+
 #alias hem4 {
   hem;
   #delay 15 hem;
@@ -4244,9 +4255,10 @@ cancel;
   #delay 45 hem;
 }
 #alias permahem {
-  hem5; #delay 50 restick permahem;
+  hem6; #delay 51 restick permahem;
 }
 
+#alias kho {jd ho wo}
 #alias hemtick restick permahem
 #alias logimm {logwin; gnua; mypw; 1;1; modeimm; }
 #alias doindent {1,$ ind 0}
@@ -4567,7 +4579,7 @@ cancel;
   buffcapture;
 }
 
-#alias hem {jd he mi}
+#alias hem {mai jd he mi}
 #alias scanshout {
   #action {for sale} {#bell; #line log messages.txt} {1}
 }

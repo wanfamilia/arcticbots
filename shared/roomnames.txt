@@ -96,6 +96,7 @@ irdalagoon
 irdagate
 schaeffa
 sondra
+darstump
 balrank
 balinn
 lemloc
