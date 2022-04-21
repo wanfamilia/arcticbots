@@ -1117,6 +1117,7 @@ reseteye;
 #var fighting {0}
 
 #alias autobot {bot #alias nospam nospamdo}
+#alias alivebot {bot #alias nospam nospamalive}
 #alias legalbot {bot #alias nospam nospamimpl}
 #alias ltu ll turn
 #alias nospam nospamimpl
@@ -1127,6 +1128,16 @@ reseteye;
     #math navailable {$nnow + %1};
     #if {"%2"=="stand"} {mac stand} { mac nextcommand %2 %3;}
   };
+}
+
+#var alivefor 12 
+#alias nospamalive {
+  #format nnow {%T};
+  #if {$nnow < $vactive + $alivefor} {nospamdo %1 %2 %3} {nospamimpl %1 %2 %3}
+}
+#alias amac {amactive; mac}
+#alias amactive {
+  ll #format vactive {%T}
 }
 #alias nextauto mac %1 %2
 #var navailable 0
@@ -2531,7 +2542,7 @@ reseteye;
 		mem '$circle1'
 	};
 	dost;
-	mac cast '%1 %2' %3;
+	amac cast '%1 %2' %3;
 	#if {$firstspell==1}
 	{
 		m s '$circle1';
@@ -2574,12 +2585,13 @@ reseteye;
 		mem '$circle1'
 	};
 	dost;
-	mac cast '%1' %2;
+	amac cast '%1' %2;
 	#if {$firstspell==1}
 	{
 		m s '$circle1';
 		#variable firstspell 0
-	}
+	}; 
+  for '$circle1';
 }
 
 #ALIAS {js2}
@@ -2614,7 +2626,7 @@ reseteye;
 	mac ke $arrival
 }
 
-#alias ke {ll kstthis}
+#alias ke {amactive; ll kstthis}
 #ALIAS {kas}
 {
 	mag jda ar sp
@@ -4634,7 +4646,6 @@ cancel;
   #alias lootcomp lootcompimpl;
   #alias assthis ott;
   #action {disarms your weapon} {cancel; gw};
-  guston;
   #var {circle1} {infrav};
 }
 #alias pfu {pf me}
@@ -5085,7 +5096,7 @@ cancel;
 #alias runbard {gorec kenbard}
 #alias runth {mrun tollhouse}
 #alias kib {aggtwo ll ki}
-#alias las {ll assthis}
+#alias las {amactive; ll assthis}
 #alias rrk {rr; mgo kalinn}
 #alias rrs {rr; mgo solinn}
 #alias kpr {bot {punch %1; parry}}
@@ -5498,6 +5509,8 @@ addlocates;
 #highlight {Steamboat} {magenta}
 #highlight {'Free to rule these lands!'} {yellow}
 #highligh {The Outer Gate of the Tower of the Stars} {green}
+#highlight {The ball of flame detonates in a violent explosion} {green}
+#action {^The ball of flame detonates in a violent explosion} {#delay 1 #show -->    DBF GONE}
 #high {The purple haze gently envelops Coatlicue the Great Priestess}{yellow}
 #highligh {You cannot sense their presence.} {green}
 #var warrior Dawsen
@@ -5627,65 +5640,68 @@ addlocates;
 }
 #macro {\eOS} {f4}
 
-#alias f4 mac dost
+#alias f4 amac dost
 #MACRO {\co}
 {
 	resave
 }
 
-#alias keyminus {ll cancel; #kill delay; #alias dost dostmain; ll #var vnextcommand groupc;  }
+#alias keyminus {
+  ll cancel; #kill delay; #alias dost dostmain; ll #var vnextcommand groupc; 
+  ll #var vactive 0;
+}
 
 #macro {\eOm} {mac keyminus}
 #MACRO {\eOl}
 {
-	ready
+	amactive; ready
 }
 
 #MACRO {\eOp}
 {
-	mac scan
+	amac scan
 }
 
 #MACRO {\eOr}
 {
-	mac south
+	amac south
 }
 
 #MACRO {\eOs}
 {
-	mac down
+	amac down
 }
 
 #MACRO {\eOt}
 {
-	mac west
+	amac west
 }
 
 #MACRO {\eOu}
 {
-	mac look
+	amac look
 }
 
 #MACRO {\eOv}
 {
-	mac east
+	amac east
 }
 
 #MACRO {\eOw}
 {
-	mac flee;
+	amac flee;
 	st; mlea;
 
 }
 
 #MACRO {\eOx}
 {
-	mac north
+	amac north
 }
 
 #MACRO {\eOy}
 {
-	mac up
+	amac up
 }
 
 #MACRO {\e[13~}
@@ -5696,6 +5712,7 @@ addlocates;
 #MACRO {\e[15~} {f5}
 
 #alias f5 {
+  amactive;
 	ll donextthis;
 	#unaction {^{\s+}{.+}$};
 }
@@ -5703,7 +5720,7 @@ addlocates;
 #alias allnext ll donextthis
 #MACRO {\e[17~}
 {
-	mac bigrest
+	amac bigrest
 }
 
 #MACRO {\e[18~} {f7}
@@ -5714,12 +5731,12 @@ addlocates;
 	tan hl; tan watch;
 }
 
-#alias f2 {mac bigrest}
+#alias f2 {amac bigrest}
 #macro {\eOP} f1
 #alias f3 f7
 #MACRO {\e[19~}
 {
-	mac dost
+	amac dost
 }
 
 #alias f1 multif5
@@ -5733,7 +5750,7 @@ addlocates;
 
 #alias spamgroup #loop 1 4 f1loop {#delay $f1loop f5}
 #MACRO {\e[20~} {f9}
-#alias f9 { boa } 
+#alias f9 { amac boa } 
 #MACRO {\e[21~} {f10}
 
 #alias f10
