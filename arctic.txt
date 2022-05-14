@@ -21,6 +21,7 @@
     #action {^$leader tells your group '{(Tank|tank )?}{N|S|W|E|U|D|n|s|w|e|u|d|north|south|west|east|up|down}'} {
       mac onleader %%3;
     } {1};
+    #action {^$leader points {NORTH|SOUTH|EAST|WEST|UP|DOWN}} {#show %%1};
   }
 }
 
@@ -59,7 +60,7 @@
 #alias mapcler mapto $mycler mai
 #alias mainmage {ll #alias mai mag; #alias ser bser}
 #alias mser {mai ser}
-#var {leadercommands} {lie|frolick|follow|swing|spin|en|ent|dance|swim|ent|flip|join|dive|pledge|run|ride|cut|lift|scale|crawl|search|scale|jump|trace|break|say|touch|push|pull|move|slide|stand|ent|enter|leave|squeeze|open|part|climb}
+#var {leadercommands} {lie|frolick|follow|op|swing|spin|en|ent|dance|swim|ent|flip|join|dive|pledge|run|ride|cut|lift|scale|crawl|search|scale|jump|trace|break|say|touch|push|pull|move|slide|stand|ent|enter|leave|squeeze|open|part|climb}
 #alias saylich {say amarazilac tomanaris tusun}
 #alias bst {bash %1; st; }
 #alias rtm {retrieve 1; wear medal}
@@ -315,12 +316,30 @@ reseteye;
 #alias onwhitebuff {
   #alias goway {goto wilma};
   needbuff white rune;
-  needbuff juke;
   needbuff fireshield;
+  needbuff globe of invulnerability;
   needbuff boon;
-  js fold;
 }
 
+#alias onfullwhitebuff {
+  onwhitebuff;
+  needbuff strength;
+  needbuff shield;
+  needbuff detect invisibility;
+  needbuff detect magic;
+  needbuff continual light;
+  needbuff fly;
+  needbuff blur;
+  oninvbuff;
+  needbuff juke;
+  needbuff sphere of invisibility;
+  needbuff water breath;
+  needbuff repose;
+  needbuff watchful eye;
+  needbuff preservation;
+  needbuff mind afire;
+}
+#alias kdc {kdel; fib; csn}
 #alias silvivines {n;e;n;e;n;e; climb vines}
 #alias cwh {clan who}
 #alias cww cw waterskin
@@ -1088,6 +1107,8 @@ reseteye;
 #alias gorbu {gosol; #delay 8 {gorec bung}}
 #alias runbung {gorec bung}
 #alias runblo {mrun blodesign}
+#alias {climb cliff} {#bell; #show if you really want to do this: iaminmortigoth}
+#alias iaminmortigoth {clim cliff}
 #alias chief {%0 constantine}
 #alias oei {oe c 'i'}
 #alias oeim {oe c 'i' me}
@@ -1958,6 +1979,7 @@ reseteye;
 #alias rdbf {mag {
   js fireshield;
   js boon;
+  #delay 9 bufwhi;
 }}
 #alias lc4t {#4 lct}
 #alias lc4ch {lc4 charm}
@@ -2546,9 +2568,9 @@ reseteye;
 	#if {$firstspell==1}
 	{
 		m s '$circle1';
-		#variable firstspell 0
+		#variable firstspell 0;
+          for '$circle1';
 	}
-   for '$circle1';
 }
 
 #alias spamjumpriver {
@@ -2589,11 +2611,12 @@ reseteye;
 	#if {$firstspell==1}
 	{
 		m s '$circle1';
-		#variable firstspell 0
+		#variable firstspell 0;
+              for '$circle1';
 	}; 
-  for '$circle1';
 }
 
+#alias lito {lie %1.tomb; gt lie %1.tomb}
 #ALIAS {js2}
 {
 	#if {@firstspell}
@@ -4167,6 +4190,9 @@ myemail;	1;	1;	1;	1;
 }
 #alias cleancomp2 {get all.!web.!acorn component.pouch}
 
+#alias bhlp bhl $pet
+#alias glpe glance $pet
+#alias nocomp {#alias lootcomp donothing}
 #alias ravenshimmer {
   place shimmering.ruby southern;
   place shimmering.emerald northern;
@@ -4271,7 +4297,7 @@ cancel;
 }
 
 #alias kho {jd ho wo}
-#alias hemtick restick permahem
+#alias hemtick mai restick permahem
 #alias logimm {logwin; gnua; mypw; 1;1; modeimm; }
 #alias doindent {1,$ ind 0}
 #alias delzap {#delay 7200 #zap}
@@ -4286,7 +4312,7 @@ cancel;
   #ticker e60 {who needs_title};
 }
 #action {^Mustakrakish, the ancient death troll glows a bright lunar white} {gt -->    TROLL CLEANSED  !!}
-#alias logsham {newses arc {$myshaman; mypw; ones; modeshaman; leaveinn; anb; sgl; fly}  }
+#alias logsham {newses arc {$myshaman; mypw; ones; modeshaman; leaveinn; fly}  }
 #alias logshamo {newses bot {$myshaman; mypw; ones; modeshaman; fly}  }
 #alias logdru newses arc {wagner; mypw; 1; 1; modedruid; fly}
 #alias newchar {newses %1 {makechar %2 n}}
@@ -4808,6 +4834,7 @@ cancel;
   nolog;
   skillbell;
   casres;
+  #alias nospam nospamalive;
   #alias warhit {dnrs 2 %1};
   #action {^Your sense of indignation weakens and fades} {#all #show -->  RI gone};
   #alias thiefhit {dnrs 1 %1};
@@ -5142,6 +5169,16 @@ cancel;
         #list vlocates add %1;
 }
 
+#alias megalocsham {
+  #var vlocates {};
+  addloc rlcshoal;
+  addloc rlckith;
+  addloc rlcspire;
+  addloc rlcck;
+  addloc lcck2;
+  rps me;
+  megaloc;
+}
 #alias addlocates {
   #var vlocates {};
   addloc rlcred;
@@ -5598,6 +5635,11 @@ addlocates;
 #HIGHLIGHT        {ethereal energy}         {green}                      {5}
 #HIGHLIGHT        {righteous indignation}         {green}                      {5}
 #HIGHLIGHT        {holy quest}         {green}                      {5}
+#HIGHLIGHT        {fireshield}         {green}                      {5}
+#HIGHLIGHT        {boon}         {green}                      {5}
+#HIGHLIGHT        {white rune}         {green}                      {5}
+#HIGHLIGHT        {globe of invulner}         {green}                      {5}
+
 #HIGHLIGHT        {A beautiful mockingbird whistles}         {green}                      {5}
 #HIGHLIGHT        {binding you dissolve}  {green}                      {5}
 #HIGHLIGHT        {clears up}             {green}                      {5}
@@ -5996,6 +6038,7 @@ addlocates;
 
 #sub {animated suit of armor} {animated suit of armor(immheat)}
 #sub {caryatid column}{caryatid column(immheat)}
+#sub {calmly ignores the acid aura} {-> IMM ACID <-}
 #sub {granite golem}{granite golem(immheat)}
 #sub {granite watcher} {granite watcher(immheat)}
 #sub {loser clanmate} {heroically optimistic clanmate} 
@@ -6021,6 +6064,7 @@ addlocates;
  {skull-encased black steel pauldrons}{ft}
  {harbinger cape}{dread}
  {the battle horn of the Darg'ak Clan}{jarmal}
+ {pair of dark blue satin boots}{cv-shalzan}
  {flowing robe of white silk}{riverv}
  {pink candle charm with a green flame}{etharm}
  {book with platinum-gilded pages}{mist/lorb/delayed}

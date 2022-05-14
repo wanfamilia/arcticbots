@@ -214,6 +214,7 @@ gargath
 teiresias blind glasses
 solknow
 solbank
+stormgate
 stormcabinet
 romis
 grom
@@ -493,6 +494,8 @@ galvarispin
 ritlich
 startkhur
 ritkhur
+khurilya
+khurhand
 cloudcomp
 dargomoon
 stingworm
