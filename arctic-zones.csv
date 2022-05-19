@@ -443,12 +443,14 @@ Standing on a ledge: l rubble;l pile;l refuse;l rocks;l bones, rummage pile;rumm
 A Dusty Chamber: look dust;look gouges;look wall;look quartz;c 'det invis';look sarcophagus;look scratches;open sarcophagus;take all sarcophagus;c 'strength' self;move sarcophagus;u;e;look shelves;look books;look book, listen mouth, read scratches, read writing, place cube square, insert sphere indentation, w place tetrahedron triangle, s, look steps, last letter first word is first letter of last word,  (kirito fisina ortigoop), invis golems, up, order golems assist, break sprocket, look circle, listen oval?
 Sea of Gray: imagine weapon;imagine armor;imagine shard;imagine light;imagine help, or demon spe, or demon m, or demon sk, wander kill stalker, imagine exit, twist staff
 "
-mage test 3,,"
+mage test 3a,,"
 a small study: spellup, pull board (push board to get back); protect dwarf; twirl cross dwarf; s (no lightning); dance irda; sing woman; display metal; smash figurine; o gargoyle move rug; quaff potion; move rug; o gargoyle rescue;
 a magical corridor: touch runes, wait in color for golem, use runes lock mage in and mem, shield, lightning bold, shocking grasp
 Outside a Cabin: magic blast door, e, investigate floorboards, spear in boards, u, open hatch, u, dispel magic ropes, rot ropes, blow flute for spiders, dispel magic renegade (especially when his rune appears)
 At the Base of a Brown Spire: ee; get all crate; break crate; get chains; wn; search objects; frag golem; get chains; search poo; sw; kill kender, join chains, e, bind dragon, fireball, d, enter portal
 animated kitchen: get all ice, w, unlock open trapdoor, down, (wait), listen man, frags, place ring brooch
+"
+mage test 3b,,"
 Within a Dank Prison Cell: s; Scrape slime, Grease hinge, c ‘magic blast’ door, use spell for the color which it does not reveal, Acid green, cold snap white, magic bolt purple, electric blue, fire red; Push door
 Lost in a Void Between Dimensions: n listen mother, say yes, south, Listen son, say yes, Display staff to mom, Display box to son, Display amulet to mom, c ‘mending’ staff, c ‘rot’ box, Wear amulet, Wield staff, c ‘dim door’ raz’kazar, Kill him, c ‘di m’ robes
 Warmliy lit room: e, open box, get all box, move rug, unlock trapdoor, listen mage (fistandantilus), say accept, go fight monsters, c ‘det m’ ring, get all, place ring brooch, wear brooch, go back to fistandantilus, profit

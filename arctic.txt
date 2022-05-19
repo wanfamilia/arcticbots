@@ -4293,7 +4293,7 @@ cancel;
   #delay 45 hem;
 }
 #alias permahem {
-  hem6; #delay 51 restick permahem;
+  hem5; #delay 51 restick permahem;
 }
 
 #alias kho {jd ho wo}
@@ -4591,6 +4591,7 @@ cancel;
 #var vbuffover {
   {resist magic}{rmag}
   {resist gas}{rgas}
+  {detect magic}{jd de ma}
   {protection from evil}{mp}
   {monstrous mantle}{mons}
   {healing wave}{jd he wa}
@@ -5202,7 +5203,7 @@ cancel;
   runto 4w5n2w2se3s5es2e2n2e; lct; lcb;
   2w2s2wn7w2seses2e2n;
 }
-#alias ligst donothing
+#alias ligst js light ogre.club
 #alias ligwi {js light %1; wield %1;}
 #alias ligho {js light %1; hold %1;}
 #alias rlcrainsong {gosol; van me; runto e2sd25e2sw4sesese2s; lcharm; lct; lcb}
@@ -6137,6 +6138,8 @@ addlocates;
     {dragonrider's talisman}{pax}
     {alabaster garlic clove charm}{LAST CHANCE}
     {charm covered in a sparkling silvery mist} {RITUAL VOYAGE}
+  {open book of fluttering pages}{graft/scry/spherei}
+  {book scribed on brittle parchment}{barrage/masstel/cleanse}
   {amber book caked in dust}{constrict/thunderbolt/shards}
    {crimson red book of enchantments}{dev/massi/pres}
     {shrunken demon's horn charm}{NAP}
