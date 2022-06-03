@@ -49,6 +49,7 @@
 #alias sase {sat; sean}
 #alias mapwhi mapto $mymage mag
 #var mymage pryor
+#alias magetank {bot #var tank $mymage}
 #alias gcomp {get all.component pouch; give all.component $mymage; #delay 1 mag put all.component pouch}
 #alias solcal {n; lrn; s alone; cal}
 #alias pew {em pewpewpew PEWpew}

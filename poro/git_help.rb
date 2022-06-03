@@ -16,7 +16,7 @@ class GitHelp
   end
 
   def getmain
-    `git pull && git fetch origin main:main`
+    'git pull && git fetch origin main:main'
   end
 
   def pullf
