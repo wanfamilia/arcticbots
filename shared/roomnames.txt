@@ -313,6 +313,7 @@ xakoaktree
 onyx
 startspire
 ritspire
+spireamber
 spirebow
 spirebase
 spireend
@@ -493,6 +494,7 @@ startgalvari
 galvarispin
 ritlich
 startkhur
+khurquarry
 ritkhur
 khurilya
 khurhand

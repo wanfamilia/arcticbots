@@ -48,7 +48,7 @@
 #alias folrest donothing
 #alias sase {sat; sean}
 #alias mapwhi mapto $mymage mag
-#var mymage pryor
+#var mymage Pryor
 #alias magetank {bot #var tank $mymage}
 #alias gcomp {get all.component pouch; give all.component $mymage; #delay 1 mag put all.component pouch}
 #alias solcal {n; lrn; s alone; cal}
@@ -4294,7 +4294,7 @@ cancel;
   #delay 45 hem;
 }
 #alias permahem {
-  hem5; #delay 51 restick permahem;
+  hem6; #delay 51 restick permahem;
 }
 
 #alias kho {jd ho wo}
@@ -5204,7 +5204,7 @@ cancel;
   runto 4w5n2w2se3s5es2e2n2e; lct; lcb;
   2w2s2wn7w2seses2e2n;
 }
-#alias ligst js light ogre.club
+#alias ligst js light dolphin.staff
 #alias ligwi {js light %1; wield %1;}
 #alias ligho {js light %1; hold %1;}
 #alias rlcrainsong {gosol; van me; runto e2sd25e2sw4sesese2s; lcharm; lct; lcb}

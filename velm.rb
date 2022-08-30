@@ -2,6 +2,7 @@
 
 require_relative 'poro/git_help'
 require_relative 'poro/docker_help'
+require_relative 'poro/rails_help'
 require_relative 'poro/swagger'
 
 class Webpage
@@ -38,6 +39,10 @@ class Velm
 
   def gh
     GitHelp.new
+  end
+
+  def rh
+    RailsHelp.new
   end
   
   def dh
