@@ -158,6 +158,7 @@ celestial valley
 cvkenny
 bors cv
 cvphil
+cvevil
 after arch
 cvbunny
 succubus

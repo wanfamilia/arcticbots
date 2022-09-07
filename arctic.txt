@@ -4186,8 +4186,7 @@ myemail;	1;	1;	1;	1;
 #alias rgr mai {rg %1; rest}
 #alias mrg {mai rgr}
 #alias cleancomp1 {
-  get all.!alteration.!protection.!pinch.!web pouch;
-  put all.protection pouch;
+  get all.!alteration.!protection.!pinch.!web component.pouch;
 }
 #alias cleancomp2 {get all.!web.!acorn component.pouch}
 
@@ -4294,7 +4293,7 @@ cancel;
   #delay 45 hem;
 }
 #alias permahem {
-  hem6; #delay 51 restick permahem;
+  hem5; #delay 51 restick permahem;
 }
 
 #alias kho {jd ho wo}
@@ -6139,6 +6138,7 @@ addlocates;
     {dragonrider's talisman}{pax}
     {alabaster garlic clove charm}{LAST CHANCE}
     {charm covered in a sparkling silvery mist} {RITUAL VOYAGE}
+  {black book inscribed with silver runes}{chaos}
   {open book of fluttering pages}{graft/scry/spherei}
   {book scribed on brittle parchment}{barrage/masstel/cleanse}
   {amber book caked in dust}{constrict/thunderbolt/shards}
