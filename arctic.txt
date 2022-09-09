@@ -5183,13 +5183,12 @@ cancel;
 #alias addlocates {
   #var vlocates {};
   addloc rlcred;
+  addloc rlcrahn;
+  addloc gobung; addloc bungshayd; 
   addloc rlcpirate;
   addloc rlcreef;
-  addloc rlcck;
-  addloc lcck2;
-  addloc rlcrahn;
-  addloc gobung;
-  addloc bungshayd; addloc rlcstorm; addloc lcstorm;
+  addloc rlcck; addloc lcck2;
+  addloc rlcstorm; addloc lcstorm;
   addloc rlcrayne;
   addloc rlctira; addloc lcdarkeep;
   addloc rlcner; 
@@ -5237,7 +5236,7 @@ addlocates;
 }
 #alias clangrow {clan increase_size 1}
 #alias qknyte {runto 4w3ses5e; enter trees; nes3e; enter copse; sdn; lcb; lct}
-#alias rlcreef {gokal; runto d2n3e7n; open gate; 2n3edn3e3nen2en; gift; lc4 charm; }
+#alias rlcreef {gokal; runto d2n3e7n; open gate; 2n3edn3e3nen2en; gift; lcharm; lcharm; lc macabre }
 #alias rlcstorm {govin; north; open wall east; runto ene8se2sw2s3en6ese2nwnen; accept; n; lcb ; lcharm; lcharm}
 #alias lcstorm {lc rose; lc takhisis; lc orb; lc lance}
 #alias gotoll {govin; north; open wall east; runto nene5s}
@@ -5311,7 +5310,7 @@ addlocates;
   rps me; cubread; ef food; deltwo dlcbluff rlcshayd;
 }
 
-#alias rlcshayd {gosol; runto e2sd7n2w6n6w4n7ws6w4n6es2e3se2s2es; lcb; lct; lc floppy}
+#alias rlcshayd {gosol; runto e2sd7n2w6n6w4n7ws6w4n6es2e3se2s2es; lcb; lct; lc floppy; lc sparkling}
 #alias rlcshayd2 {deltwo lcshayd rlccae}
 #alias rlccae {gocae; lc ivory.book; deltwo lcb rlcner}
 #alias rlcner {goner; lcb; lct}
@@ -6196,12 +6195,12 @@ addlocates;
 #alias makesub {
   #sub {%1} {%2}
 }
-#action {^{A|An|The} {.+} {carried|equipped|is in|(?<!is )in|is}{.+}}
+#action {^{A|An|The} {.+} {carried|equipped|is in|(?<!is )in}{.+}}
 {
   locatereport {%2} {%3%4};
 } {8}
 
-#action {^{\w+} {carried|equipped|is in|(?<!is )in|is}{.+}}
+#action {^{\w+} {carried|equipped|is in|(?<!is )in}{.+}}
 {
   locatereport {%1} {%2%3}
 }
