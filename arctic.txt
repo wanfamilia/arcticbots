@@ -251,7 +251,7 @@
 #alias refly  {st; dispel 'fly'; air me}
 #alias restick {
   #var onestand %1;
-  rest; #delay 30 rest;
+  rest; #delay 9 rest;
   #alias dost {
     #alias dost dostmain;
     dostmain;
@@ -3796,7 +3796,7 @@ myemail;	1;	1;	1;	1;
 #alias locer {goner; snagsan; lctab}
 #alias nerse {s;s;s;s;s;e;e;s;e;s;e;e;e;e;e;}
 #alias nerwn {w;w;w;w;w;n;w;n;w;w;n;n;n;n;n;}
-#alias delrent {#delay %1 {rent; 0}}
+#alias delrent {#delay %1 {rent quiet; 0}}
 #alias mageoff {gokal;  mrun kalinn; #delay 9 {restick rentout}}
 #alias rentout {st; rent quiet; 0}
 #ALIAS {prac}
@@ -4293,7 +4293,7 @@ cancel;
   #delay 45 hem;
 }
 #alias permahem {
-  hem5; #delay 51 restick permahem;
+  hem6; #delay 51 restick permahem;
 }
 
 #alias kho {jd ho wo}
@@ -6137,6 +6137,7 @@ addlocates;
     {dragonrider's talisman}{pax}
     {alabaster garlic clove charm}{LAST CHANCE}
     {charm covered in a sparkling silvery mist} {RITUAL VOYAGE}
+  {pair of spiked mithril boots}{dtroll}
   {black book inscribed with silver runes}{chaos}
   {open book of fluttering pages}{graft/scry/spherei}
   {book scribed on brittle parchment}{barrage/masstel/cleanse}
