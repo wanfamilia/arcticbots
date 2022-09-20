@@ -122,7 +122,7 @@ hct2maze
 ritfrosty
 frostycave
 frostybottom
-overdaggo
+overdaggoraath
 daggorathturtle
 zmij
 ixpat
@@ -449,6 +449,7 @@ drogo dk quest
 jibur
 totstatue
 lesath
+dinosaurs
 valleyabove
 unicorn
 palowl

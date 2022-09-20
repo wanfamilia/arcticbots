@@ -786,6 +786,7 @@ reseteye;
 #alias kbs {c 'bli' sivak}
 #alias chg {ch %1; gore %1;}
 #alias kb2 {c 'bli' 2.baaz}
+#alias lcmyst {lct; lc combat.sollerets; lc black.diamond; lc diamond.bracelet}
 #alias kdb {c 'harm' baaz}
 #alias dofaul {get staff corpse; n; n; n; get blue.crystal belt; attach blue.crystal staff; place blue.staff statue; ef bread; sit; study disks;}
 

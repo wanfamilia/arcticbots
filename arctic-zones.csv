@@ -11,7 +11,7 @@ Balifor Bay (Sh'iar),all,"Bali: Where the South Pier Meets the Bay, w,2n,3w4ne
  climb ladder to agro mobs - nw (mem room)
  2enwu (Karine) uus (Shi'ar)"
 Blood Sea (Istar),mid,Bal - 4se4n2e16ne5n3d
-intbonus,,"19int 4 heals, 23int 5 mists, 28int 6mists, 25int + 10 memfactor, 24int + 15 memfactor 6mists, 27int + 20memfactor 7 mists"
+intbonus,,"4 heals: 19int; 5 mists: 23 int; 6 mists: 28int, 26 int + 5 mem, 25int + 10 mem, 24int + 15 mem, 22int + 20mem; 7 mists: 27int + 20mem"
 podhammer,high,"blodesign, underbridge, hatchet, hack corpse, kerius, wield hatchet, hack kerius.corpse, derek, display head"
 Boku,mid,"Nerara - 5w3nen3eu
  3wsw3s5e : climb cliff, run around find the town, l healer, get axe, go to The Path Ends exits s. cut/chop/hack tree or something, nn get chips corpse, climb ladder into kobolds cave, unl desk in commander's room, get all rack/shelf in kitchen, unl door near kitchen; unl steel door (might be missing a key),kill all guards, kill overseer(shouts) loot key, log ends here"
@@ -347,6 +347,14 @@ present keeper.medallion gnome, n u, say open, prep, tank north, kill avatar, ki
 Void: obelisk, all up, throw dart, smash prism
 "
 Cloak spirit,,"hylo square, north, village green, enter well, nneswnn, follow path to dead end, enter fold, open bones to cavern and pool? (south east south to get out)"
+omen quest,,"
+- setup: loot goblin seductress in dv, go to quekul river spirit waterfall, listen woman present amulet in inventory, wield staff
+- staff evolution: in any order kill irda sandmason, bakali shaman, kagonesti shaman (lashathal?), control spirit, bind spirit staff. then go back to waterfall, listen spirit, control spirit, bind spirit staff, recall and gather prep
+- prep: immfire and some sort of limit damage is a must. you also need destroy undead, prot from undead, sanctify corpse, soul protection spells. go back to waterfall, nod, get staff, wield staff. a 4-6 heals and cure crits are highly recommended. legend ranks apart from legend omen also highly recommended
+miniboss undead creatures: you begin in a safe room but dont bother prepping since u lose buffs when going east. if a leader summons friends, flee and cast prot from undead, otherwise cast prot from undead and flee. use destroy undead to oneshot the non-leaders. if it doesnt die immediately it is the leader and u flee. kill leader last. control spirit, bind spirit me, go to room with jar, open jar
+miniboss fighting yourself: touch sphere, never cast cures on self because they will damage you, spellup, move in any direction, ancestral spirit, flee, regen ancestral, assist ancestral, loot ring (dont wear it yet), cast spectral sight, peer ring.shadows, wear ring.shadows
+final boss queen: sanctify corpse, use your prep, be immheat, soul prot before tick (it lasts about 140 seconds so you'll need to cast it again about 3 times), soul prot must be up at all times (npp is not a substitute), say Senthalliel kISu's'DorRz ENPRUHM puun-pe-uel (fight starts), if she summons creatures, banish creature (twice), if you are losing then 'caress sapphire',
+"
 stoneskin quest,,"When you have the essences go to the Zeeriak inn and buy a small silver twig. Then go east to (turning toward glacier, then south) the spire and unlock the door (the twig is the key).
 With all of the essences in your inventory, walk up the spire and 'worship altar' at the top. Can't get to the top without all of the essences. Be flying and water breath.
 After worshipping, the essences will be taken and you will receive 'a small stone tablet' which is the tablet."
