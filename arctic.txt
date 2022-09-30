@@ -5145,6 +5145,7 @@ cancel;
 }
 #alias rlcrahn {gokal; van me; js imp; runto d2n10e; open gate; 2e4s4eu3enu3e2nesed8w2s; lc discolored; lc silver.ring; lcb}
 
+#alias lcd {lc discolored.helmet}
 #alias paxtomb {lie %1.tomb; gt lie %1.tomb; #map move down}
 #alias paxwheel {bot {pray statue; north; #3 turn wheel}}
 #var vlocatesold2 {
@@ -5545,6 +5546,7 @@ addlocates;
 #HIGHLIGHT        {disarms your weapon}   {red}                        {4}
 #HIGHLIGHT        {$tank}                 {magenta}                    {5}
 #highlight {Steamboat} {magenta}
+#highlight {Maritta peeks her head in the door} {green}
 #highlight {'Free to rule these lands!'} {yellow}
 #highligh {The Outer Gate of the Tower of the Stars} {green}
 #highlight {The ball of flame detonates in a violent explosion} {green}
