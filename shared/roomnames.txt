@@ -505,6 +505,7 @@ dargomoon
 stingworm
 silvismith
 silvistable
+startuth
 startheal
 totsplit
 totmerge
@@ -515,6 +516,8 @@ uthlib
 khurreaver
 aran
 kerius
+dkspell uth
+xanitha
 eyedroppers
 rainsong
 palthug
