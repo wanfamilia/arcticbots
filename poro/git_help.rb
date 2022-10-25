@@ -60,4 +60,42 @@ class GitHelp
   def ruboa
     '~/bin/rubow.rb --branch -a'
   end
+
+  def config
+    require 'yaml'
+    @config ||= YAML::load_file('.cloud66/servers.yml')
+  end
+
+  def value(key)
+    config.dig(*key.split('.'))
+  end
+
+  def app
+    value 'app.name'
+  end
+
+  def branch
+    value 'app.branch'
+  end
+
+  def env
+    @env ||= 'staging'
+  end
+
+  def shell
+    "cx ssh -s #{app} -e #{env} #{server}"
+  end
+
+  def prod
+    @env = 'production'
+    self
+  end
+
+  def server
+    config['servers'][env]
+  end
+
+  def foo(key)
+    "echo foo #{value(key)}"
+  end
 end
