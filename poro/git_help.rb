@@ -63,7 +63,7 @@ class GitHelp
 
   def config
     require 'yaml'
-    @config ||= YAML::load_file('.cloud66/servers.yml')
+    @config ||= YAML::load_file('.idea/servers.yml')
   end
 
   def value(key)
