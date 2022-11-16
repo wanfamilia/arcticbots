@@ -4330,7 +4330,7 @@ cancel;
 #alias logwaro newses war {dawsen; mypw; 1; 1; modepala; modewar; fly; #alias bot #war;}
 #var mycler knaak
 #alias mser mai ser
-#alias newcler newchar hea $mycler
+#alias newcler newchar arc $mycler
 #alias newsham newchar arc $myshaman
 #alias newpal newchar bot $mypaladin
 #alias logcler newses arc {$mycler; mypw; 1; 1; modecleric; fly; leaveinn; ligst}
