@@ -1985,7 +1985,7 @@ reseteye;
 }}
 #alias lc4t {#4 lct}
 #alias lc4ch {lc4 charm}
-#alias lootcomp lootcompimpl
+#alias lootcomp donothing
 #alias lootcompimpl {
   get all.component.!pouch corpse;
   get golden.pinch corpse;
