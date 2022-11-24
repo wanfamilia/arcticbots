@@ -63,6 +63,7 @@ send tank or poofer n and drag group n u have poofer relo,e,d,n,u,n @On a Large 
 w,d,2n,2e,n,w (unlock/open gate),2w,2s (type enter),2n have group wait,
   - Nns, east at nes, graden in the court yard, open statue, open statue, get all statue; flee
   - Nn to es: east, get key smash orb,
+  - new layout: e is to the statue key OR it can also take you back outside, nn to the labyrinth sn to the orb/key wn to the hatch
   - If in labyrinth  unuds
 unlock/open hatch and crate, loot key,d (unlock/open silver),3e (open hatch),
 U (rittable),n,2w,s (open wooden),e,2u (kill quock),2d,w,n,2e,2s (ki Mira),n,d,

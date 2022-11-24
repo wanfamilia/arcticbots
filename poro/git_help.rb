@@ -12,7 +12,7 @@ class GitHelp
   end
 
   def purge
-    'git branch | grep -vE "^\s+master$" | grep -v "\*" | xargs -n 1 git branch -D'
+    'git branch | grep -vE "^\s+master$" | grep -vE "^\s+main$" | grep -v "\*" | xargs -n 1 git branch -D'
   end
 
   def getmain
