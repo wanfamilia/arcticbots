@@ -3,12 +3,42 @@ class ParseArctic
     previous_return = false
     previous_yield = false
     values.chunk do |me|
-      # every true yield marks the beginning of a new chunk
+      # every true yield marks the end of a chunk
       current_yield = yield me
       current_return = previous_yield ? !previous_return : previous_return
       previous_yield = current_yield
       previous_return = current_return
     end.map{|me| me.last}
+  end
+
+  def schema_info
+    output_name = 'log/small-schema.rb'
+    File.open(output_name, 'w') do |f|
+      td = table_lines.map{|lines| table_data lines}.to_h
+      f.write td
+    end
+    "echo done schema_info"
+  end
+
+  def table_data(lines)
+    table_name = lines.first.gsub /.+create_table\s+"(\w+)".+/, '\1'
+    columns = lines.select{|line| line.include? 'null: false'}.map{|line| column_name line}
+    [table_name.strip, columns.map(&:strip)]
+  end
+
+  def column_name(line)
+    line.gsub /\s+t.\w+\s+"(\w+)".+/, '\1'
+  end
+
+  def table_lines
+    input_name = 'db/schema.rb'
+    delimit(IO.foreach input_name) do |line|
+      line.strip.start_with?('end')
+    end.map{|lines| table_block lines}.reject{|lines| lines.empty?}
+  end
+
+  def table_block(lines)
+    lines.drop_while{|line| !line.strip.start_with? 'create_table'}
   end
 
   def krynn201

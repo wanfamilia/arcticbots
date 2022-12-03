@@ -140,6 +140,38 @@ EL = A dark acolyte of Takhisis has a dark soul, with dark intentions. (Neraka, 
     "https://docs.google.com/spreadsheets/d/1CaY1OIsBGBRqq6kvNlachl8FNQUjW6FGcE2FlYEvTwo/edit#gid=#{gids[name.to_sym]}"
   end
 
+  def races
+    # mage	14	18	17	16	14	17
+    # thief	16	15	16	18	16	17
+    # paladin	17	14	17	14	18	17
+    # druid	14	17	18	15	15	16
+    # cleric	14	17	18	15	16	16
+    # scout	17	16	15	18	16	15
+    # warrior	18	15	15	16	17	17
+    # dark knight	18	14	17	14	17	17
+    # barbarian	17	14	15	16	19	16
+    # shaman	16	17	16	14	16	18
+  end
+
+  def guilds
+    # Human	0	0	0	0	0	0
+    # Half-Elf	0	0	0	+2	0	0
+    # Silvanesti	-2	+3	0	+2	-1	-1
+    # Qualinesti	-2	0	+4	+2	-1	-1
+    # Kagonesti	+2	-2	-1	+3	0	0
+    # Hylar Dwarf	+2	-2	0	-2	+4	-1
+    # Theiwar Dwarf	-1	+4	+1	+2	-2	-1
+    # Hill Dwarf	-1	0	+4	-2	+2	0
+    # Kender	0	-1	+1	+5	0	-2
+    # Goblin	+1	-2	-2	+3	+2	+2
+    # Gnome	-4	+6	0	+1	-4	-1
+    # Minotaur	+7	-2	-1	-4	+1	-1
+    # Daergar Dwarf	+1	-3	+1	+1	+4	+2
+    # Dargonesti	+2	+2	-2	+4	0	-1
+    # Half-Ogre	+5	0	0	-1	+3	+1
+    # Irda	0	0	+3	+2	+1	+1
+  end
+
   essence = '
  - water: Lezi is NW part of Dargo in the coral gardens
  - earth: Directions to EERN (Earth Essence), N Gate Balifor nneenennneeneseeeeessesesww to Dense Forest of Beasts Run sseeeneenee to Fork in the Path, fight ssseeesenessenen, fall down (featherfall) esseneneeeu a bunch east. Fights along the way, they might not see invis though

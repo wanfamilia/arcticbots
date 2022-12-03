@@ -106,6 +106,11 @@ class Velm
     Dir.chdir __dir__
     ParseArctic.new
   end
+
+  def schim
+    require_relative 'poro/parse_arctic'
+    ParseArctic.new.schema_info
+  end
   
   def swagger
     display

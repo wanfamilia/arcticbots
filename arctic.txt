@@ -1960,8 +1960,7 @@ reseteye;
 
 #ALIAS {doloot}
 {
-  #alias dosplit {split %1; #delay 2 #alias dosplit donothing};
-  #delay 5 #alias dosplit donothing;
+  #alias dosplit {split %1};
 	get coins corpse;
 	tw;
 	look in corpse;
@@ -1969,7 +1968,7 @@ reseteye;
         lootcomp;
 }
 
-#alias dosplit donothing
+#alias dosplit split
 #alias met {
   malo %1;
   #delay 1 inac %1;
@@ -3295,7 +3294,7 @@ myemail;	1;	1;	1;	1;
 #ALIAS {modecleric}
 {
 	#variable food $clerfood;
- #var circle1 {ca li};
+ #var circle1 {cu li};
   #var vbuffover[bless] {js prayer};
  #alias sat dofood;
  #alias hew hem;
@@ -4335,6 +4334,8 @@ cancel;
 #alias mser mai ser
 #alias newcler newchar arc $mycler
 #alias newsham newchar arc $myshaman
+#alias newsky newchar sky $skyscout
+#alias newmage newchar mag $mymage
 #alias newpal newchar bot $mypaladin
 #alias logcler newses arc {$mycler; mypw; 1; 1; modecleric; fly; leaveinn; ligst}
 #alias logclero newses bot {$mycler; mypw; 1; 1; modecleric; fly; }
