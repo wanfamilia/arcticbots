@@ -4323,7 +4323,7 @@ cancel;
 #alias plpd {present letter; present pendant}
 #alias ones {1; 1; }
 #alias logsky {newses sky {$skyscout; mypw; ones; modesky}}
-#alias leaveinn donothing
+#alias leaveinn leaveinnyes
 #alias leaveinnyes {d; d; n; e}
 #alias logpal {logbot {$mypaladin; mypw; ones; modepala; fly; leaveinn; jd r i}}
 #alias logwar {logbot {dawsen; mypw; 1; 1; modepala; modewar; fly}}
