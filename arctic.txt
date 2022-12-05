@@ -400,7 +400,6 @@ reseteye;
 #sub {giant crab shell shield}{giant crab shell shield(-1ss 8conc)}
 #sub {grey band of residual ghostly energy}{residual ghostly energy(+slot5 npp)}
 #sub {pair of baggy black pants} {black baggy pants(nytes)}
-#sub {pair of succubus wings}{Celestial pair of succubus wings}
 #high {succubus wings} {green}
 #high {Danarn the Inept Assistant gapes in horror} {green}
 #sub {a blue dragon skull}{Flare dragon bone skull(storms)}
@@ -751,7 +750,7 @@ reseteye;
 #alias assno #alias assthis ott
 #alias palass bpa
 #alias haze {bot jd men ha}
-#alias palassthis {ass %1; rally; strike; av soul; strike}
+#alias palassthis {ass %1; rally; strike; av leg; strike}
 #alias kdr {st; drain}
 #alias bufdar {bot buf dk}
 #alias rlcshark {gotar; js imp; van me; west; south; open gate; runto 3ws3wsw3sws4wundwsd4w4nw}
@@ -2168,7 +2167,7 @@ reseteye;
 #alias bfcl bfg $mycler
 #alias bfwh bfg $mymage
 #alias tanksquare {maptank solsquare}
-#alias mythmarch {maptank mythsh}
+#alias mythmarch {maptank solsquare}
 #alias rlore {recite lore %1 in inventory}
 #alias {rec lore} {thwack me; rlore %1;}
 #alias bfsk bfg $skyscout
@@ -4248,11 +4247,16 @@ cancel;
   #alias locatereport locatereportimpl;
   #var food cheese;
   #alias jsrelo js relo;
+  norelo;
   nutr $food;
   #alias mloc {msw locate knock};
   #action {^{\w+} makes a mockery out of everyone} {nospamdo 30 jmoc %%1};
 }
 
+#alias norelo {
+  #alias jsrelo jsport;
+  #alias goway goto kailee;
+}
 #alias magecure {
   #alias bigrest ll rest;
   #alias dost ll stand;
@@ -4833,7 +4837,7 @@ cancel;
   #action {^A gleaming silver medal warms up} {ll #show -->    Medal};
   #ticker feedme {sip elixir} 160;
   #action {^{Shrine of the Holy|Paladins' Training Room}} {lrn; smile};
-  #action {^You have been blinded} {sysplay smb3_thwomp; #all #show --> BOT BLIND};
+  #action {^You have been blinded} {sysplay smb3_softthwomp; #all #show --> BOT BLIND};
   showprompt;
   #var vbuffover[heal boost] {gt no heal boost};
   #alias lootcomp donothing;

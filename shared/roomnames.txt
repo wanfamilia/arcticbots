@@ -575,3 +575,4 @@ paxashes
 vermithrone
 dragondock
 corsair
+boldskar
