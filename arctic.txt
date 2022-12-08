@@ -521,6 +521,7 @@ reseteye;
 
 #alias rfe {jd re fe}
 #alias repet {release $pet; conjure $pet}
+#alias reowl {conow; release ayoade}
 #var skyscout Grayson
 
 #alias donothing {#var nothing nothing:%1}
@@ -609,7 +610,7 @@ reseteye;
 }
 #alias somak {solgho maki; suel}
 #alias solturn {solgho tuki}
-#alias tuki {turn; ki %1}
+#alias tuki {turn; ki %1; #4 strike}
 #alias k4 {ke %1; #4 $engvar}
 #alias maki {mag {#delay 1 ki %1}}
 #alias tu3 {sk; #3 turn}
@@ -1086,6 +1087,8 @@ reseteye;
 #alias dgo {dan gho}
 #alias ktu {js thun}
 #alias gokal {goto zardonna; }
+#alias besma {suel; bes majere}
+#alias beski {suel; bes kiri}
 #alias gostr {goto stronghold}
 
 #alias gopal {goto anatole}
@@ -1108,7 +1111,8 @@ reseteye;
 #alias gorbu {gosol; #delay 8 {gorec bung}}
 #alias runbung {gorec bung}
 #alias runblo {mrun blodesign}
-#alias {climb cliff} {#bell; #show if you really want to do this: iaminmortigoth}
+#alias {climb cliff} {#bell; #show if you really want to do this: notinkhur}
+#alias notinkhur {#unalias climb cliff; climb cliff}
 #alias iaminmortigoth {clim cliff}
 #alias chief {%0 constantine}
 #alias oei {oe c 'i'}
@@ -1951,10 +1955,10 @@ reseteye;
 {
 	rem ball;
 	drop ball;
-	get ball chest;
+	get ball belt;
 	hold ball;
 	js light;
-	put ball chest
+	put ball belt
 }
 
 #ALIAS {doloot}
@@ -2153,6 +2157,7 @@ reseteye;
 }
 
 #tab chernobog
+#tab nahuatlipochty
 #tab paijietng
 #tab jaqueline
 #tab mytzipixin
@@ -2668,6 +2673,7 @@ reseteye;
   ota;
 }}
 #alias krot {jsa rot}
+#alias kwa {js wave}
 #alias ksb {jda s b}
 #alias frn {st; fren}
 #ALIAS {kbn}
@@ -4239,13 +4245,15 @@ cancel;
   #alias remage {rewin; modemage; modered};
   #var food ration;
 }
+
+#alias idter {recite identify silver.chest in room}
 #alias modewhite {
   #alias goway {puf wilma};
   #alias ide {rec identify};
   #var held clear.sphere;
   #alias remage {rewin; modemage; modewhite};
   #alias locatereport locatereportimpl;
-  #var food cheese;
+  #var food turkey;
   #alias jsrelo js relo;
   norelo;
   nutr $food;
@@ -4341,7 +4349,7 @@ cancel;
 #alias newsky newchar sky $skyscout
 #alias newmage newchar mag $mymage
 #alias newpal newchar bot $mypaladin
-#alias logcler newses arc {$mycler; mypw; 1; 1; modecleric; fly; leaveinn; ligst}
+#alias logcler newses arc {$mycler; mypw; 1; 1; modecleric; fly; }
 #alias logclero newses bot {$mycler; mypw; 1; 1; modecleric; fly; }
 
 #alias tust {turn; #bot #3 strike}
@@ -4825,7 +4833,7 @@ cancel;
   #alia allnext donothing;
   #alias groupimpl group full;
   eng paleng;
-  #var hrec fireball;
+  #var hrec stone.rose;
   #action {^Your hands tingle as a feeling of goodness} {ll #show -->       LAY ready} {7};
   #action {^Warriors' Training Room} {lrn; smile};
   #alias assthis palassthis;
@@ -5693,7 +5701,7 @@ addlocates;
 }
 #macro {\eOS} {f4}
 
-#alias f4 amac dost
+#alias f4 amac boa
 #MACRO {\co}
 {
 	resave
@@ -5732,9 +5740,12 @@ addlocates;
 
 #MACRO {\eOu}
 {
-	amac look
+	amac dolook
 }
 
+#alias dolook {look; #$sesname}
+
+#alias showmap #$sesname
 #MACRO {\eOv}
 {
 	amac east
@@ -5773,9 +5784,17 @@ addlocates;
 #alias allnext ll donextthis
 #MACRO {\e[17~}
 {
-	amac bigrest
+	f6
 }
 
+#ALIAS {bback}
+{
+    bfl;
+    bot {w; s};
+    #delay 2 ki barbarian;
+    group
+}
+#alias f6 amac dost
 #MACRO {\e[18~} {f7}
 #macro {\eOR}  f3
 #macro {\eOQ} f2

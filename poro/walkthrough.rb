@@ -123,7 +123,7 @@ EL = A dark acolyte of Takhisis has a dark soul, with dark intentions. (Neraka, 
 - Storms: noom room, look nightstand, exam nightstand, look letter
 - FC: Tenlo, search crates - malaak, sarson, terzak, gal’vari, nria, serra
 - Present books, pray at whitestone
-  - Boku: climb ladder, northeastish, researchers, move wall, kill malaak open cage, gather pages cages, kyle present sheaf, pray whitestone
+  - Boku: climb ladder, northeastish, researchers, move wall, kill malaak open cage, get pages cages, kyle present sheaf, pray whitestone
   - Terzak, get book shelf, kyle present code, pray whitestone
   - Gal’vari: xoc west, south display branch, kzazz all east, give block old, look desk, get package desk, kyle present package, pray whitestone
   - Balcombe, kill serra, kill balcombe, north library, listen librarian, c ‘abso’ librarian, kyle present parchment, kneel whitestone
