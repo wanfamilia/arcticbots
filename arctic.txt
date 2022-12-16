@@ -1088,7 +1088,7 @@ reseteye;
 #alias ktu {js thun}
 #alias gokal {goto zardonna; }
 #alias besma {suel; bes majere}
-#alias beski {suel; bes kiri}
+#alias besmi {suel; bes mishakal}
 #alias gostr {goto stronghold}
 
 #alias gopal {goto anatole}
@@ -1211,7 +1211,7 @@ reseteye;
 
 #alias rentskill {#action {^You feel especially skillful} {rent; 0}}
 #alias magh {mag ki ghost}
-#alias {pgift} {#action {^The lunar glimmer fades} {st; gift; resi; conow; release ayoade; lrn}}
+#alias {pgift} {gift; #action {^The lunar glimmer fades} {st; gift; resi; conow; release ayoade; lrn}}
 #alias {kalrn} {ent space; lrn; ent space}
 #alias gocit {mrun2 citadel}
 #alias thim {thr %1; imp}
@@ -1404,12 +1404,14 @@ reseteye;
   #show You feel ready to brew again;
 }
 
+#high {As the noxious fumes from the poisonous gas cloud} {green}
 #alias trigscma {
   #action {^You feel ready to} {rest; scribe 'stren'; drop all.strength};
   #show You feel ready to scribe again;
 }
 #alias trigbrcl {
-  #action {^You feel ready to} {nospamdo 3 brsc aid}
+  #action {^You feel ready to} {nospamdo 3 brsc aid};
+  brsc aid;
 }
 #alias trigbrma {
   #alias readybrew mythbrsc stren;
@@ -2889,6 +2891,8 @@ reseteye;
 
 #alias mbn {js sunray}
 
+#alias ksr js sunray
+#alias ksc {js scorch}
 #ALIAS {ksw}
 {
 	js insect
@@ -3300,6 +3304,7 @@ myemail;	1;	1;	1;	1;
 {
 	#variable food $clerfood;
  #var circle1 {cu li};
+ nopet;
   #var vbuffover[bless] {js prayer};
  #alias sat dofood;
  #alias hew hem;
@@ -3413,6 +3418,10 @@ myemail;	1;	1;	1;	1;
 
 #alias doha {fsd; w; say harmonious; n; w; w; en opening; fly}
 
+#alias miri {besmi; right}
+#alias shel jd ar shel
+#alias egrec {enter crevice}
+#alias sayha {say harmonious}
 #alias pbani
 {
   #action {^A{n?} {\w+}{(\s\w+)?} now follows} {cancel; lrn; sk; #15 bani %%2; };
@@ -3929,6 +3938,7 @@ myemail;	1;	1;	1;	1;
   #action {^The time for giving} {js imp; air me; sr me; rpm; transfer %1; lrn; rest; deep}
 }
 #alias fastdam {modebow; pburst; inst harrier; hover; archery s 5 p 5 a 2; }
+#high {The time for giving} {green}
 #alias bbn {bot kk %1; bn %1}
 #alias legarr {skyfood; #delay 900 {skyscav}; pburst; fastdam}
 #alias kwe {kw eject}
@@ -4255,12 +4265,23 @@ cancel;
   #alias locatereport locatereportimpl;
   #var food turkey;
   #alias jsrelo js relo;
-  norelo;
   nutr $food;
   #alias mloc {msw locate knock};
   #action {^{\w+} makes a mockery out of everyone} {nospamdo 30 jmoc %%1};
 }
 
+
+#alias beforearmy {
+  rem bone.plate; rem arm; rem pants; rem mace;
+  wear all.dinged; wear leather.vest; wear leather.boots; wield beaten.sword
+}
+
+#alias hts {malo south; tan hl; north; #4 flee}
+#alias afterarmy {
+  rem all.dinged; rem leather.vest; rem leather.boots; rem sword;
+  wear bone.plate; wear arm; wear pants; wield mace;
+}
+#alias wser  {wake; stand; east; rest}
 #alias norelo {
   #alias jsrelo jsport;
   #alias goway goto kailee;
@@ -4312,7 +4333,9 @@ cancel;
 }
 
 #alias kho {jd ho wo}
+#alias saypal {say Paladine Protect Us}
 #alias hemtick mai restick permahem
+#alias sayoath {say Est Sularus Oth Mithas}
 #alias logimm {logwin; gnua; mypw; 1;1; modeimm; }
 #alias doindent {1,$ ind 0}
 #alias delzap {#delay 7200 #zap}
@@ -4854,7 +4877,11 @@ cancel;
   casres;
   #alias nospam nospamalive;
   #alias warhit {dnrs 2 %1};
-  #action {^Your sense of indignation weakens and fades} {#all #show -->  RI gone};
+  #action {^Your sense of indignation weakens and fades} {rigone};
+  #action {^The receptionist stores your stuff in the safe} {
+    #alias rigone donothing;
+    #delay 5 rigone rigoneimpl;
+  };
   #alias thiefhit {dnrs 1 %1};
   #alias pethit {dnrs 2 %1};
 
@@ -4868,6 +4895,11 @@ cancel;
   agg strike;
 }
 
+#alias rigone rigoneimpl
+#alias rigoneimpl {
+  #all #show --> RI gone <--;
+  sysplay smb3_powerdown;
+}
 #alias showprompta {
   #action {^{\d+H\s+\d+}V{.{1,75}}} {ll #show {%%1M%%2} {-3}}
 }
@@ -5146,6 +5178,11 @@ cancel;
 #alias rrs {rr; mgo solinn}
 #alias kpr {bot {punch %1; parry}}
 #sub {hungry. feed me!} {warrior needs food, badly}
+#sub {The End of the Passage} {Lemuria ICE}
+#sub {The Chamber of Winter} {Lemuria WALL} 
+#sub {The Chamber of Autumn} {Lemuria WOOD} 
+#sub {The Chamber of Spring} {Lemuria PLATE} 
+#sub {The Chamber of Summer} {Lemuria PORTAL} 
 #alias tban {bot rest; st; tan ban; #delay 1 {bot st}}
 #alias rlcbluffreg {gobung; st; runto w3n4en9e5s6e5n ; lc fine.silver.ring; lc face; lc golden.bracelet; lc glowing.amulet}
 #alias rlcbluffleg {gobung; lc fine.silver.ring; lc face; lc holy.talisman; lc golden.bracelet; rest }

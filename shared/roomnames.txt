@@ -197,6 +197,7 @@ lemusouth
 lemcase
 lemuvoyloc
 lemchest
+lemurit
 lemvashka
 sara
 stormloc
@@ -576,3 +577,4 @@ vermithrone
 dragondock
 corsair
 boldskar
+lemusum
