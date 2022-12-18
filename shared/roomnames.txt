@@ -175,7 +175,7 @@ pracevade
 startstormhead
 essence fire slarn
 cloud pendant
-cloud priest
+cloudpriest
 castle gate
 essence air dara
 sagebears
@@ -433,6 +433,7 @@ aligngn
 aligngl
 tantwest
 startbalcombe
+balcledge
 serra
 lhex
 balcombe

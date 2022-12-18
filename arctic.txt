@@ -92,6 +92,8 @@
 }
 {5}
 
+#alias enknow {rem %1; drop %1; enc %1; wield %1; quaff knowledge; rest}
+#high {The melodious tunes of battle fade from your mind} {green}
 #PATHDIR {down} {up} {32}
 #PATHDIR {east} {west} {2}
 #PATHDIR {north} {south} {1}
@@ -1409,11 +1411,15 @@ reseteye;
   #action {^You feel ready to} {rest; scribe 'stren'; drop all.strength};
   #show You feel ready to scribe again;
 }
+#alias trigbrma {
+  #action {^You feel ready to} {nospamdo 3 brsc stren};
+  brsc stren;
+}
 #alias trigbrcl {
   #action {^You feel ready to} {nospamdo 3 brsc aid};
   brsc aid;
 }
-#alias trigbrma {
+#alias trigbrmash {
   #alias readybrew mythbrsc stren;
   trigbrsh;
 }
@@ -1448,7 +1454,7 @@ reseteye;
 #alias ue2 {#unticker e20}
 #alias brcl
 {
-  rest; brew 'cu li'; st
+  rest; get empty chest; brew 'aid'; drop brewed; put all.empty chest; st
 }
 
 #ALIAS {bt}
@@ -1806,7 +1812,7 @@ reseteye;
 #alias chf {chs 1 %1}
 #alias fsd {fly stop; down}
 #alias babs {bot js abso}
-#alias airm {air me; #6 sr me }
+#alias airm {air me; #6 sr me; lrn }
 #alias bdm {bot jd di ma}
 #action {^Your victim's tracks lead {\w+}} {ll #show track: %1}
 
@@ -2271,10 +2277,6 @@ reseteye;
 	healcounton
 }
 
-#ALIAS {git}
-{
-	give all.identify temoke
-}
 
 #ALIAS {gobash}
 {
@@ -2541,10 +2543,6 @@ reseteye;
 	js hero %1;
 }
 
-#ALIAS {hte}
-{
-	hl temoke
-}
 
 #ALIAS {inn}
 {
@@ -3232,7 +3230,7 @@ myemail;	1;	1;	1;	1;
 #alias mfla {fo4 para; me4 flame}
 #alias voy4 {m s; me4 ri vo}
 #alias ha4 {m s; me4 harm}
-#alias hlr {js heal %1; rest}
+#alias hlr mai {js heal %1; rest}
 #ALIAS {me4}
 {
   mb mem '%1 %2' '%1 %2' '%1 %2' '%1 %2';
@@ -3803,7 +3801,8 @@ myemail;	1;	1;	1;	1;
 #alias gc {st; gore %1; ch %1}
 #alias stuntshore {stuntbush; w;d;n;d;e;d;n;e;e;n;e;e;}
 #alias jread {get saffron belt; put saffron pouch; js read}
-#alias jmoc {sysplay smb3_coin; spellcraft high; js moment %1; spellcraft none}
+#alias jmoc {sysplay smb3_coin; spellcraft high; js moment %1; spellcraft low}
+#alias chalkghost {dochalk; accept soldier; mloa startraven}
 #alias playcoin {sysplay smb3_coin}
 #alias cubread {get metal.cube belt; rem $held; hold cube; say praise the gods; rem cube; put metal.cube belt; hold $held; ef; put 6*bread belt; drop all.food; get all.food belt}
 #alias bushcrop {s; s; e; e;}
@@ -4272,14 +4271,24 @@ cancel;
 
 
 #alias beforearmy {
-  rem bone.plate; rem arm; rem pants; rem mace;
+  rem bone.plate; rem arm; rem $clerlegs; rem mace;
   wear all.dinged; wear leather.vest; wear leather.boots; wield beaten.sword
 }
 
-#alias hts {malo south; tan hl; north; #4 flee}
+#var clerlegs alabaster.legplates
+#alias bcheckpriest {bot; checkpriest}
+#alias hts halone south
+#alias htw halone west
+#alias hte halone east
+#alias htn halone north
+#alias htu halone up
+#alias htd halone down
+
+#alias halone mai {st; malo %1; tan hl}
 #alias afterarmy {
-  rem all.dinged; rem leather.vest; rem leather.boots; rem sword;
-  wear bone.plate; wear arm; wear pants; wield mace;
+  hl me; rem all.dinged; rem leather.vest; rem leather.boots; rem sword;
+  wear bone.plate; wear arm; wear $clerlegs; wield mace;
+  md sum;
 }
 #alias wser  {wake; stand; east; rest}
 #alias norelo {
@@ -4853,10 +4862,12 @@ cancel;
 {
   #alias bigrest {dism; rest; sip elixir};
   #var pet Steamboat;
+  #alias gts #all #show --> spirit;
+  #alias checkpriest {up alone; east; east; open door south; south; exam priest};
   #alia allnext donothing;
   #alias groupimpl group full;
   eng paleng;
-  #var hrec stone.rose;
+  #var hrec black.stone;
   #action {^Your hands tingle as a feeling of goodness} {ll #show -->       LAY ready} {7};
   #action {^Warriors' Training Room} {lrn; smile};
   #alias assthis palassthis;
