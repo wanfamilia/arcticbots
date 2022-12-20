@@ -373,6 +373,7 @@ startkruin
 darvar
 startdractower
 locatedractower
+mordrednomagic
 startcitdrac
 abovecitdrac
 ckpick
@@ -485,6 +486,7 @@ jaero
 mazuz
 vestiv
 cokbakali
+predraad3
 vinbank
 mythsh
 instinct mmtn 51 grizzly
@@ -567,6 +569,8 @@ shyskeli
 ritarmy
 gabrielle
 ritfinale
+predraad1
+predraad2
 draaddis
 wayendspy
 silvicentre

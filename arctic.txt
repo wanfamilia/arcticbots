@@ -77,7 +77,7 @@
 }
 #alias boombag  {drop bag; light bag in room}
 #action {^Onyx is dead} { get all.charm onyx}
-#action {^Egreckl Steamus is dead} {get all.charm egreckl}
+#action {^Egreckl Steamus is dead} {get all.!component egreckl}
 #action {^Flare is dead} {gac; get all.charm flare}
 #action {^The night golem is dead} {ll get bladeless night.golem}
 #action {^The stone giant shaman is dead} {get all giant.shaman}
@@ -4303,7 +4303,7 @@ cancel;
   bot skillbell;
   bot eng ki;
 }
-#alias mspin {#map undo; #map set roomsymbol [S]}
+#alias mspin {#map undo; #map set roomsymbol [S]; #map roomflag leave}
 #alias sysv {#system ~/bin/velm.rb }
 #alias gitpush {
   sysv parc krynn201;
@@ -4381,7 +4381,7 @@ cancel;
 #alias newsky newchar sky $skyscout
 #alias newmage newchar mag $mymage
 #alias newpal newchar bot $mypaladin
-#alias logcler newses arc {$mycler; mypw; 1; 1; modecleric; fly; }
+#alias logcler newses arc {$mycler; mypw; 1; 1; modecleric; fly; ligst}
 #alias logclero newses bot {$mycler; mypw; 1; 1; modecleric; fly; }
 
 #alias tust {turn; #bot #3 strike}
@@ -4854,18 +4854,22 @@ cancel;
 #alias aog bot {st; c 'a o g'}
 #alias aoc bot {st; c 'a o c'} 
 #alias maog {bot mem 'a o g'}
+#alias bdef bot js defens
 #alias mai {#arc}
 #alias knoc {mag c 'knock'}
 #alias subl {mag js sublimation}
+#alias dokhita {stand; east; enter cave}
 #alias paleng {strike %1; bpa}
 #alias modepala
 {
   #alias bigrest {dism; rest; sip elixir};
   #var pet Steamboat;
+  #alias checkphil {up alone; east; exam phil; exam scout; west; flee; st; #4 flee};
   #alias gts #all #show --> spirit;
   #alias checkpriest {up alone; east; east; open door south; south; exam priest};
   #alia allnext donothing;
   #alias groupimpl group full;
+  #alias oegc {cancel; get corpse; give corpse %1};
   eng paleng;
   #var hrec black.stone;
   #action {^Your hands tingle as a feeling of goodness} {ll #show -->       LAY ready} {7};
@@ -5268,7 +5272,9 @@ cancel;
   runto 4w5n2w2se3s5es2e2n2e; lct; lcb;
   2w2s2wn7w2seses2e2n;
 }
-#alias ligst js light dolphin.staff
+
+#alias ligst ligstimpl
+#alias ligstimpl {leaveinn; js light diamond}
 #alias ligwi {js light %1; wield %1;}
 #alias ligho {js light %1; hold %1;}
 #alias rlcrainsong {gosol; van me; runto e2sd25e2sw4sesese2s; lcharm; lct; lcb}
@@ -6215,6 +6221,7 @@ addlocates;
     {dragonrider's talisman}{pax}
     {alabaster garlic clove charm}{LAST CHANCE}
     {charm covered in a sparkling silvery mist} {RITUAL VOYAGE}
+  {golden tinged broadsword}{raynes?}
   {pair of spiked mithril boots}{dtroll}
   {black book inscribed with silver runes}{chaos}
   {open book of fluttering pages}{graft/scry/spherei}
