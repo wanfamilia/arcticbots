@@ -76,8 +76,12 @@
   runto ne2n2unw3u;
 }
 #alias boombag  {drop bag; light bag in room}
+#alias explainvermi {gt verminaard fight: all kill/bash draconian, thrust lord, absolution lord, dont use heals on people not tanking, let area heals take care of them}
 #action {^Onyx is dead} { get all.charm onyx}
-#action {^Egreckl Steamus is dead} {get all.!component egreckl}
+#alias gotomb {bot lie %1.tomb; gt if boone doesnt die, lie %1.tomb; #delay 5 lie %1.tomb}
+#action {^Oracle, the Battle Cleric is dead} { get book oracle}
+#action {^Egreckl Steamus is dead} {get all.charm egreckl}
+#action {^Glymmer is dead} {get book glymmer}
 #action {^Flare is dead} {gac; get all.charm flare}
 #action {^The night golem is dead} {ll get bladeless night.golem}
 #action {^The stone giant shaman is dead} {get all giant.shaman}
@@ -360,7 +364,7 @@ reseteye;
 #alias domith {say Grant me your blessings for the battles to come}
 #alias stmo {store all.mote}
 
-#alias sasu {mai sat; suel; ll rest}
+#alias sasu {mai sat; suel; aog; ll rest}
 #sub {loaf of bread} {fried chicken thigh}
 #sub {A guardian wrapped in blue robes}{A guardian wrapped in blue robes(enchant-scroll)}
 #high {A guard wrapped in red robes}{green}
@@ -2180,7 +2184,7 @@ reseteye;
 #alias bfcl bfg $mycler
 #alias bfwh bfg $mymage
 #alias tanksquare {maptank solsquare}
-#alias mythmarch {maptank solsquare}
+#alias mythmarch {maptank mythsh}
 #alias rlore {recite lore %1 in inventory}
 #alias {rec lore} {thwack me; rlore %1;}
 #alias bfsk bfg $skyscout
@@ -3304,6 +3308,7 @@ myemail;	1;	1;	1;	1;
  #var circle1 {cu li};
  nopet;
   #var vbuffover[bless] {js prayer};
+  #alias lootcomp lootcompimpl;
  #alias sat dofood;
  #alias hew hem;
  #alias asf assist;
@@ -4211,10 +4216,10 @@ myemail;	1;	1;	1;	1;
 #alias glpe glance $pet
 #alias nocomp {#alias lootcomp donothing}
 #alias ravenshimmer {
-  place shimmering.ruby southern;
-  place shimmering.emerald northern;
-  place shimmering.diamond eastern;
-  place shimmering.sapphire western;
+  insert shimmering.ruby southern;
+  insert shimmering.emerald northern;
+  insert shimmering.diamond eastern;
+  insert shimmering.sapphire western;
 }
 #alias manyreg {
   tan rg; 
@@ -4271,7 +4276,7 @@ cancel;
 
 
 #alias beforearmy {
-  rem bone.plate; rem arm; rem $clerlegs; rem mace;
+  rem bone.plate; rem arm; rem $clerlegs; rem mace; rem alabaster.boots;
   wear all.dinged; wear leather.vest; wear leather.boots; wield beaten.sword
 }
 
@@ -4287,7 +4292,7 @@ cancel;
 #alias halone mai {st; malo %1; tan hl}
 #alias afterarmy {
   hl me; rem all.dinged; rem leather.vest; rem leather.boots; rem sword;
-  wear bone.plate; wear arm; wear $clerlegs; wield mace;
+  wear bone.plate; wear arm; wear $clerlegs; wield mace; wear alabaster.boots;
   md sum;
 }
 #alias wser  {wake; stand; east; rest}
@@ -4338,11 +4343,11 @@ cancel;
   #delay 45 hem;
 }
 #alias permahem {
-  hem6; #delay 51 restick permahem;
+  hem5; #delay 51 restick permahem;
 }
 
 #alias kho {jd ho wo}
-#alias saypal {say Paladine Protect Us}
+#alias saypal {bot say Paladine Protect Us}
 #alias hemtick mai restick permahem
 #alias sayoath {say Est Sularus Oth Mithas}
 #alias logimm {logwin; gnua; mypw; 1;1; modeimm; }
@@ -4367,8 +4372,8 @@ cancel;
 #alias plpd {present letter; present pendant}
 #alias ones {1; 1; }
 #alias logsky {newses sky {$skyscout; mypw; ones; modesky}}
-#alias leaveinn leaveinnyes
-#alias leaveinnyes {d; d; n; e}
+#alias leaveinn donothing
+#alias leaveinnimpl {d; d; n; e}
 #alias logpal {logbot {$mypaladin; mypw; ones; modepala; fly; leaveinn; jd r i}}
 #alias logwar {logbot {dawsen; mypw; 1; 1; modepala; modewar; fly}}
 #alias logmou logbot {penniman; mypw; 1;1; modepala; fly}
@@ -4383,9 +4388,10 @@ cancel;
 #alias newpal newchar bot $mypaladin
 #alias logcler newses arc {$mycler; mypw; 1; 1; modecleric; fly; ligst}
 #alias logclero newses bot {$mycler; mypw; 1; 1; modecleric; fly; }
-
+#var mythief nikson
 #alias tust {turn; #bot #3 strike}
-#alias logthi newses thi {nikson; mypw; 1; 1; fly; modethief}
+#alias newthi newchar thi $mythief
+#alias logthi newses thi {$mythief; mypw; 1; 1; fly; modethief}
 #alias modethief {
   #action {^The master assassin looks at you from behind} {lrn; smile};
   #action {^Aldur A'Kul the master thief sits} {lrn; smile};
@@ -4782,7 +4788,7 @@ cancel;
 {
   needbuff fortify self;
   needbuff cloak of bravery;
-  needbuff bless;
+  needbuff steelskin;
   needbuff protection from evil;
   needbuff sacred ward;
   needbuff heroism;
@@ -4893,7 +4899,7 @@ cancel;
   #alias nospam nospamalive;
   #alias warhit {dnrs 2 %1};
   #action {^Your sense of indignation weakens and fades} {rigone};
-  #action {^The receptionist stores your stuff in the safe} {
+  #action {^The {stronghold r|r}eceptionist stores your stuff in the safe} {
     #alias rigone donothing;
     #delay 5 rigone rigoneimpl;
   };
@@ -5185,7 +5191,7 @@ cancel;
 #alias stormout {#action {^An Unfortunate Fall}{east; up}}
 #alias afterkenny {north; otk squire; ki mage}
 #alias terscis {hold scissors; pull black.strings; cut black.strings; cut blue.strings; pull green.strings; cut green.strings; pull white.string}
-#alias runbard {gorec kenbard}
+#alias runbard {mrun kenderbard}
 #alias runth {mrun tollhouse}
 #alias kib {aggtwo ll ki}
 #alias las {amactive; ll assthis}

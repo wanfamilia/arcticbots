@@ -22,7 +22,7 @@ snaggle
 nersouth
 fuddlesign
 nereast
-recuperate kenbard
+kenderbard
 recuperate bal
 Eastwinds
 balnorth
@@ -276,6 +276,9 @@ startwda
 stoneseal
 mysticshark
 mysticgates
+luninorth
+lunisouth
+lunitoe
 luniloc
 luniboulder
 afterboulder
