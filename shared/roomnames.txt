@@ -8,8 +8,6 @@ kalwest
 kalcomp
 kalbank
 kalcler
-kalfountain
-kaldruid
 aligngc
 kalnorth
 kalsouth
@@ -68,6 +66,7 @@ startcloud
 canstin
 mirus
 caergoth
+caerleather
 kalscout
 kalwar
 Westwinds
@@ -586,3 +585,6 @@ dragondock
 corsair
 boldskar
 lemusum
+xmas
+xmasladder
+kaldruid

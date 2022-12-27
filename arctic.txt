@@ -76,7 +76,8 @@
   runto ne2n2unw3u;
 }
 #alias boombag  {drop bag; light bag in room}
-#alias explainvermi {gt verminaard fight: all kill/bash draconian, thrust lord, absolution lord, dont use heals on people not tanking, let area heals take care of them}
+#alias ridebelt {kw ride belt in room}
+#alias explainvermi {gt verminaard fight: all kill/bash draconian, thrust lord, absolution lord, dont use heals on people not tanking, let area heals take care of them. no warddancing without legend rank}
 #action {^Onyx is dead} { get all.charm onyx}
 #alias gotomb {bot lie %1.tomb; gt if boone doesnt die, lie %1.tomb; #delay 5 lie %1.tomb}
 #action {^Oracle, the Battle Cleric is dead} { get book oracle}
@@ -89,7 +90,7 @@
 #action {^The shade of Jar'mal, the Kinslayer is dead}{get charm}
 #action {^A demonic minion is dead} {oegc ombra}
 #action {^A spirit rises} {gts}
-#alias gts {gt spirit}
+#alias gts {donothing}
 #ACTION {^%w {smiles as} {he|she} finishes {his|her} meditation}
 {
 	calibrate $ticklen;
@@ -105,7 +106,7 @@
 #PATHDIR {up} {down} {16}
 #PATHDIR {west} {east} {8}
 
-#alias kw {ll oe %1 %2; gt %1 %2; #all {%1 %2}}
+#alias kw {ll oe %1 %2 %3 %4; gt %1 %2 %3 %4; #all {%1 %2 %3 %4}}
 #alias brst {sr me; air me; brsc stre}
 #alias oegc {oe get all.corpse; get all.corpse; oe give all.corpse %1}
 #alias otl {m1 ota}
@@ -526,7 +527,7 @@ reseteye;
 }
 
 #alias rfe {jd re fe}
-#alias repet {release $pet; conjure $pet}
+#alias repet {release $pet}
 #alias reowl {conow; release ayoade}
 #var skyscout Grayson
 
@@ -741,7 +742,7 @@ reseteye;
 
 #alias pracsean {sean; #action {^The faintest connection to the undead} {sean}}
 #alias pracamel {amel; #action {^The gods smile upon you} {amel}}
-#alias praclegcler {pracamel; pracraptu; sat; e3 cww}
+#alias praclegcler {pracamel; pracraptu; sat; e10 cww}
 #alias pracraptu {raptu; #action {^You sense the call of the gods will be coming soon}{raptu}}
 #alias jba {js bone arrow; give arrows %1}
 #alias jbab {jba brakus}
@@ -776,7 +777,7 @@ reseteye;
 {
 	assist $charmie
 }
-#alias buac {#10 {buy 10*acorn; put all.acorn component.pouch}}
+#alias buac {#10 {buy 10*acorn; put all.acorn pouch}}
 #alias busl {#3 {buy 12*glass.sliver; put all.sliver pouch}}
 #alias swingbakali {
   crawl trunk; swing branch;
@@ -1817,6 +1818,7 @@ reseteye;
 #alias fsd {fly stop; down}
 #alias babs {bot js abso}
 #alias airm {air me; #6 sr me; lrn }
+#alias aisr {air me; sr me; sr me;}
 #alias bdm {bot jd di ma}
 #action {^Your victim's tracks lead {\w+}} {ll #show track: %1}
 
@@ -2006,7 +2008,7 @@ reseteye;
   get all.component.!pouch corpse;
   get golden.pinch corpse;
   put golden.poinch pouch;
-  put all.component component.pouch;
+  put all.component pouch;
 }
 #alias otta {ott; st; ass}
 
@@ -3307,6 +3309,7 @@ myemail;	1;	1;	1;	1;
 	#variable food $clerfood;
  #var circle1 {cu li};
  nopet;
+ #alias knoc o aspasia pick;
   #var vbuffover[bless] {js prayer};
   #alias lootcomp lootcompimpl;
  #alias sat dofood;
@@ -3390,7 +3393,6 @@ myemail;	1;	1;	1;	1;
 #ALIAS {mp}
 {
 	jd ho au;
-	modecleric
 }
 
 #ALIAS {ms}
@@ -4101,6 +4103,7 @@ myemail;	1;	1;	1;	1;
 #alias jsrelo js relo
 #alias jsport {js tele %1; ddo %1}
 #alias dofrosty {say it is time for ice to turn to tin once again}
+#alias gtfrost {gt say it is time for ice to turn to tin once again}
 #ALIAS {qp}
 {
 	quaff putrid.potion
@@ -4208,7 +4211,7 @@ myemail;	1;	1;	1;	1;
 #alias rgr mai {rg %1; rest}
 #alias mrg {mai rgr}
 #alias cleancomp1 {
-  get all.!alteration.!protection.!pinch.!web component.pouch;
+  get all.!alteration.!protection.!pinch.!web pouch;
 }
 #alias cleancomp2 {get all.!web.!acorn component.pouch}
 
@@ -4249,7 +4252,7 @@ cancel;
 #alias ksbt {tmpa ksb}
 #alias bqk {buy knowledge; quaff knowledge}
 #alias logred newses red {#alias mag red; gere; mypw; 1; 1; fly; modemage; modered;}
-#alias logwhi {newses white {$mymage; mypw; #var food food; ones; fly; modemage; modewhite}}
+#alias logwhi {newses white {$mymage; mypw; #var food food; ones; fly; leaveinn; coli; modemage; modewhite}}
 #alias logmag {newses mag {wilbon; mypw; #var food food; 1; 1; fly; modemage; modewhite}}
 #alias mag {#white}
 #alias modered {
@@ -4267,7 +4270,7 @@ cancel;
   #var held clear.sphere;
   #alias remage {rewin; modemage; modewhite};
   #alias locatereport locatereportimpl;
-  #var food turkey;
+  #var food cheese;
   #alias jsrelo js relo;
   nutr $food;
   #alias mloc {msw locate knock};
@@ -4325,7 +4328,6 @@ cancel;
  #delay 36 hem;
  #delay 48 {hem; rest};
 }
-
 #alias hem6
 {
   hem;
@@ -4336,19 +4338,30 @@ cancel;
   #delay 50 hem;
 }
 
+#alias dar js darkness
+#alias hemdar {
+  hem; mai dar;
+  #delay 15 hem;
+  #delay 30 hem;
+  #delay 45 {hem; mai rest}
+}
 #alias hem4 {
   hem;
   #delay 15 hem;
   #delay 30 hem;
   #delay 45 hem;
 }
+
 #alias permahem {
-  hem5; #delay 51 restick permahem;
+  dohem; #delay 51 restick permahem;
 }
+
+
 
 #alias kho {jd ho wo}
 #alias saypal {bot say Paladine Protect Us}
-#alias hemtick mai restick permahem
+#alias hemtick {#alias dohem hem5; mai restick permahem}
+#alias dartick {mai #alias dohem hemdar; mai restick permahem}
 #alias sayoath {say Est Sularus Oth Mithas}
 #alias logimm {logwin; gnua; mypw; 1;1; modeimm; }
 #alias doindent {1,$ ind 0}
@@ -4397,10 +4410,14 @@ cancel;
   #action {^Aldur A'Kul the master thief sits} {lrn; smile};
   #alias lootcomp donothing;
   #alias rethi {rewin; modethief};
+  #var hrec dagger;
+  eng be;
+  #var food cheese;
+  #var belt girdle;
   #alias onerest donothing;
   #alias palassthis {assist %%1; kstthis};
   #alias assthis assist;
-  #var weapon spear;
+  #var weapon prongs;
   #alias vass vass2;
 }
 #alias thi {#thi}
@@ -4413,12 +4430,13 @@ cancel;
 #alias ktor js torna
 #alias pc {thi pick}
 #alias thuc {throat; unbalance; coup}
-#alias disablekal {4e2s2wd2n;det;det plate;disable plate;!;ene;det;det chest in r;det 2.chest in r;det 3.chest in r;disable chest in r;!;disable 2.chest in r;!;disable 3.chest in r;!;pick chest in r;pick 2.chest in r;pick 3.chest in r;wsww3n;learn all;3sessu2enn4w}
+#alias disablekal {runto 4e2s2wd2n;det;det plate;disable plate;!;eene;det;det chest in r;det 2.chest in r;det 3.chest in r;disable chest in r;!;disable 2.chest in r;!;disable 3.chest in r;!;pick chest in r;pick 2.chest in r;pick 3.chest in r;wsww3n;learn all;3sessu2enn4w}
 #alias kalth {7w;open gate; 4w5n2w4n2ws3ws8w2sw}
 #alias dedi {detect %1 in room; disable %1 in room; disable %1 in room; disable %1 in room; pick %1 in room; pick %1 in room;}
 #alias disablevin {sneak;runto 3n6w5n;open door east;2e;open trapdoor;d;det; dedi 1.chest; dedi 2.chest; dedi 3.chest; dedi 4.chest; op chest in r;op 2.chest in r;open 3.chest in r;open 4.chest in r;get all chest in r;get all 2.chest in r;get all 3.chest in r;get all 4.chest in r;learn all;open hatch; uw;open door w;w;sneak;5s6e3s;}
 #alias disablevino {sneak;3n6w5n;open door east;2e;open trapdoor;d;det;det chest in r;det 2.chest in r;det 3.chest in r;det 4.chest in r;disable chest in r;!;disable 2.chest in r;!;disable 3.chest in r;!;disable 4.chest in r;!;pick chest in r;pick 2.chest in r;pick 3.chest in r;pick 4.chest in r;op chest in r;op 2.chest in r;open 3.chest in r;open 4.chest in r;get all chest in r;get all 2.chest in r;get all 3.chest in r;get all 4.chest in r;learn all;open hatch; uw;open door w;w;sneak;5s6e3s;}
 #alias thgrate {4w2n2wd2wuw2n2e3n2w6n8w4n4wne}
+#alias grateth {runto ws4e4s8e6s2e3s2w2sed2eu2e2s4e}
 #alias disablepalanthas {gustoff; open grate;sneak;d;det pile;disable pile;disable pile;disable pile;e;det pile;disable pile;disable pile;disable pile;sneak;eeee;det pile;disable pile;disable pile;disable pile;een;det pile;disable pile;disable pile;disable pile;swwwwwwwss;det pile;disable pile;disable pile;disable pile;nnwn;det pile;disable pile;disable pile;disable pile;nnneen;det pile;disable pile;disable pile;disable pile;n;det pile;disable pile;disable pile;disable pile;sswwssssesswws;learn all;neenn;open grate;u}
 #alias disable3 {
   kalinit;
@@ -4445,8 +4463,10 @@ cancel;
 #alias thiefout {get recall belt; rec recall me; hold sword; sk; rentout}
 #alias kalinit {
   clan who; skill;
-  runto ne2n2en; with 200;
-  s4ws; bre; nn; ki me; buy 3*ration; #3 eat ration; sw6ne; drink fountain; drink fountain; es2e4s;
+  put all.recall $belt;
+  runto ne2n2en; with 150;
+  s4ws; bre; nn; ki me; buy 3*ration; #3 eat ration; sw6ne; 
+  drink fountain; drink fountain; 3e4s;
 }
 
 #alias mek {#map exit %1 command {%2 %3 %4}}
@@ -4779,7 +4799,6 @@ cancel;
 
 #alias clerbuff
 {
-  modecleric;
   #alias afterbuffcapture onclerbuff;
   buffcapture;
 }
@@ -4789,6 +4808,7 @@ cancel;
   needbuff fortify self;
   needbuff cloak of bravery;
   needbuff steelskin;
+  needbuff strength of one;
   needbuff protection from evil;
   needbuff sacred ward;
   needbuff heroism;
@@ -4877,7 +4897,7 @@ cancel;
   #alias groupimpl group full;
   #alias oegc {cancel; get corpse; give corpse %1};
   eng paleng;
-  #var hrec black.stone;
+  #var hrec fireball;
   #action {^Your hands tingle as a feeling of goodness} {ll #show -->       LAY ready} {7};
   #action {^Warriors' Training Room} {lrn; smile};
   #alias assthis palassthis;
@@ -4951,9 +4971,9 @@ cancel;
 }
 #alias onlyinactive ll ifinactive %0
 #alias givecomp {
-  get all.component component.pouch; 
-  give all.component %1;
-  onlyinactive #delay 1 put all.component component.pouch;
+  get all.%1 component.pouch; 
+  give all.%1 %2;
+  onlyinactive #delay 1 put all.%1 component.pouch;
 }
 #alias offprompt #alias allprompt donothing
 #alias setsesname #all #var actsesname $sesname 
@@ -5280,7 +5300,7 @@ cancel;
 }
 
 #alias ligst ligstimpl
-#alias ligstimpl {leaveinn; js light diamond}
+#alias ligstimpl {leaveinn; js light diamond.stone}
 #alias ligwi {js light %1; wield %1;}
 #alias ligho {js light %1; hold %1;}
 #alias rlcrainsong {gosol; van me; runto e2sd25e2sw4sesese2s; lcharm; lct; lcb}
@@ -5622,6 +5642,7 @@ addlocates;
 #HIGHLIGHT        {disarms your weapon}   {red}                        {4}
 #HIGHLIGHT        {$tank}                 {magenta}                    {5}
 #highlight {Steamboat} {magenta}
+#highlight {Blackness grows above Lord Verminaard's head as a dark visage} {red}
 #highlight {Maritta peeks her head in the door} {green}
 #highlight {'Free to rule these lands!'} {yellow}
 #highligh {The Outer Gate of the Tower of the Stars} {green}
@@ -6148,6 +6169,7 @@ addlocates;
 #var itemlocates {
     {book of the dead}{animate}
     {velvet book tied with blue ribbon}{RELOCATE}
+    {grey book with silk bindings} {tunnel/portal/mindaf}
  {sparkling crystal book}{HEALING MIST}
  {vermillion suit of dragonscale}{inferno}
  {bronze gas mask}{hylo}
