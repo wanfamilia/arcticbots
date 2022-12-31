@@ -167,7 +167,7 @@ shalzanarch
 vshrinal
 startcrytic
 essence earth eern
-dargo start
+dargostart
 dargo squid jawbow
 essence water lezi
 pracevade
@@ -381,6 +381,7 @@ abovecitdrac
 ckpick
 startbluff
 rahnkagi
+terzaktower
 startbandit
 banditbush
 paxtokith
@@ -408,6 +409,7 @@ shaydstream
 irdacell
 irdasand
 tarl
+irdatrio
 sealem
 garnetslab
 garnetnorth

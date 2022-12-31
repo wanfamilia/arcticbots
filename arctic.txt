@@ -48,6 +48,7 @@
 #alias folrest donothing
 #alias sase {sat; sean}
 #alias mapwhi mapto $mymage mag
+#alias mapthi mapto nikson thi
 #var mymage Pryor
 #alias magetank {bot #var tank $mymage}
 #alias gcomp {get all.component pouch; give all.component $mymage; #delay 1 mag put all.component pouch}
@@ -79,7 +80,7 @@
 #alias ridebelt {kw ride belt in room}
 #alias explainvermi {gt verminaard fight: all kill/bash draconian, thrust lord, absolution lord, dont use heals on people not tanking, let area heals take care of them. no warddancing without legend rank}
 #action {^Onyx is dead} { get all.charm onyx}
-#alias gotomb {bot lie %1.tomb; gt if boone doesnt die, lie %1.tomb; #delay 5 lie %1.tomb}
+#alias gotomb {#map move down; bot lie %1.tomb; gt if boone doesnt die, lie %1.tomb; #delay 5 lie %1.tomb}
 #action {^Oracle, the Battle Cleric is dead} { get book oracle}
 #action {^Egreckl Steamus is dead} {get all.charm egreckl}
 #action {^Glymmer is dead} {get book glymmer}
@@ -479,7 +480,7 @@ reseteye;
 }
 #alias g2 {m2 %1; m1 %1}
 #alias goodpick {gate Aspasia}
-#alias gant {gate Antioch}
+#alias gant {gate Antioch; onepet}
 #alias ref2 {g2 flap}
 #ACTION {^{(<\w+>\s)?}{\S+ \S+}{.+}green aura)}
 {
@@ -1624,8 +1625,9 @@ reseteye;
   #action {^A Running Stream}{mgo shaydstream};
   #action {^Gate to the Fishing Village}{mgo irdagate};
   #action {^A beautiful statue of Mishakal stands here, illuminating the chamber} {mgo startheal};
-  #action {^{North|South|East|West}ern {Reach|Branch}} {mgo %%1winds; #show %%1};
+  #action {^The {North|South|East|West}ern {Reach|Branch}} {mgo %%1winds; #show %%1};
   #action {^{The Slimy Chute}} {mgo slimychute};
+  #action {^Zardonna, the elven high sorceress}{mgo zardonna};
   #action {^Approaching a Rise} {mgo 3268};
   #actio {^A View of Palanthas} {mgo 5812};
   #action {^The Inn of Myth} {mgo mythsh};
@@ -1638,6 +1640,8 @@ reseteye;
   #action {^A Large Meeting Room} {mgo risolbelow};
 }
 
+
+#alias gst {plant bread %1; give bread %1; #3 steal bread %1; sk}
 #alias cvarch {gt follow me after enter arch; kw enter arch;
   #delay 4 group form;
   #delay 8 group form;
@@ -2007,8 +2011,8 @@ reseteye;
 #alias lootcompimpl {
   get all.component.!pouch corpse;
   get golden.pinch corpse;
-  put golden.poinch pouch;
-  put all.component pouch;
+  put golden.poinch $compouch;
+  put all.component $compouch;
 }
 #alias otta {ott; st; ass}
 
@@ -2185,6 +2189,8 @@ reseteye;
 #alias bfsh bfg $myshaman
 #alias bfcl bfg $mycler
 #alias bfwh bfg $mymage
+#alias bfth bfg $mythief
+#var mythief nikson
 #alias tanksquare {maptank solsquare}
 #alias mythmarch {maptank mythsh}
 #alias rlore {recite lore %1 in inventory}
@@ -2518,6 +2524,7 @@ reseteye;
 #alias hl {mai hlthis}
 #ALIAS {hlthis}
 {
+  cancel;
 	js heal %1;
 	healcounton;
 	dolater3 group
@@ -3313,6 +3320,7 @@ myemail;	1;	1;	1;	1;
   #var vbuffover[bless] {js prayer};
   #alias lootcomp lootcompimpl;
  #alias sat dofood;
+ #var hrec black.diamond;
  #alias hew hem;
  #alias asf assist;
  #alias assthis {ott};
@@ -4211,10 +4219,11 @@ myemail;	1;	1;	1;	1;
 #alias rgr mai {rg %1; rest}
 #alias mrg {mai rgr}
 #alias cleancomp1 {
-  get all.!alteration.!protection.!pinch.!web pouch;
+  get all.!alteration.!protection.component.!web $compouch;
 }
 #alias cleancomp2 {get all.!web.!acorn component.pouch}
 
+#var compouch component.pouch;
 #alias bhlp bhl $pet
 #alias glpe glance $pet
 #alias nocomp {#alias lootcomp donothing}
@@ -4252,9 +4261,10 @@ cancel;
 #alias ksbt {tmpa ksb}
 #alias bqk {buy knowledge; quaff knowledge}
 #alias logred newses red {#alias mag red; gere; mypw; 1; 1; fly; modemage; modered;}
-#alias logwhi {newses white {$mymage; mypw; #var food food; ones; fly; leaveinn; coli; modemage; modewhite}}
+#alias logwhi {newses white {$mymage; mypw; #var food food; ones; fly; leaveinn; modemage; modewhite; lightrec }}
 #alias logmag {newses mag {wilbon; mypw; #var food food; 1; 1; fly; modemage; modewhite}}
 #alias mag {#white}
+#alias lightrec {js light $hrec}
 #alias modered {
   #alias mag {#red};
   #var pet Fereous;
@@ -4263,11 +4273,13 @@ cancel;
   #var food ration;
 }
 
-#alias idter {recite identify silver.chest in room}
+#alias idter {recite identify silver.chest in room; hold $hrec}
 #alias modewhite {
   #alias goway {puf wilma};
+  #var hrec ogre.spear;
   #alias ide {rec identify};
   #var held clear.sphere;
+  #var compouch jellyfish.pouch;
   #alias remage {rewin; modemage; modewhite};
   #alias locatereport locatereportimpl;
   #var food cheese;
@@ -4340,7 +4352,7 @@ cancel;
 
 #alias dar js darkness
 #alias hemdar {
-  hem; mai dar;
+  mai dar; hem;
   #delay 15 hem;
   #delay 30 hem;
   #delay 45 {hem; mai rest}
@@ -4360,7 +4372,7 @@ cancel;
 
 #alias kho {jd ho wo}
 #alias saypal {bot say Paladine Protect Us}
-#alias hemtick {#alias dohem hem5; mai restick permahem}
+#alias hemtick {mai #alias dohem hem5; mai restick permahem}
 #alias dartick {mai #alias dohem hemdar; mai restick permahem}
 #alias sayoath {say Est Sularus Oth Mithas}
 #alias logimm {logwin; gnua; mypw; 1;1; modeimm; }
@@ -4417,7 +4429,7 @@ cancel;
   #alias onerest donothing;
   #alias palassthis {assist %%1; kstthis};
   #alias assthis assist;
-  #var weapon prongs;
+  #var weapon curved.dagger;
   #alias vass vass2;
 }
 #alias thi {#thi}
@@ -4430,7 +4442,7 @@ cancel;
 #alias ktor js torna
 #alias pc {thi pick}
 #alias thuc {throat; unbalance; coup}
-#alias disablekal {runto 4e2s2wd2n;det;det plate;disable plate;!;eene;det;det chest in r;det 2.chest in r;det 3.chest in r;disable chest in r;!;disable 2.chest in r;!;disable 3.chest in r;!;pick chest in r;pick 2.chest in r;pick 3.chest in r;wsww3n;learn all;3sessu2enn4w}
+#alias disablekal {runto 4e2s2wd2n;det;det plate;disable plate;!;eene;det;det chest in r;det 2.chest in r;det 3.chest in r; #3 disable chest in r; #3 disable 2.chest in r; #3 disable 3.chest in r;pick chest in r;pick 2.chest in r;pick 3.chest in r;wsww3n;learn all;3sessu2enn4w}
 #alias kalth {7w;open gate; 4w5n2w4n2ws3ws8w2sw}
 #alias dedi {detect %1 in room; disable %1 in room; disable %1 in room; disable %1 in room; pick %1 in room; pick %1 in room;}
 #alias disablevin {sneak;runto 3n6w5n;open door east;2e;open trapdoor;d;det; dedi 1.chest; dedi 2.chest; dedi 3.chest; dedi 4.chest; op chest in r;op 2.chest in r;open 3.chest in r;open 4.chest in r;get all chest in r;get all 2.chest in r;get all 3.chest in r;get all 4.chest in r;learn all;open hatch; uw;open door w;w;sneak;5s6e3s;}
@@ -4808,10 +4820,10 @@ cancel;
   needbuff fortify self;
   needbuff cloak of bravery;
   needbuff steelskin;
+  needbuff heroism;
   needbuff strength of one;
   needbuff protection from evil;
   needbuff sacred ward;
-  needbuff heroism;
   needbuff sanctuary;
 }
 #alias onmagebuff
@@ -4971,10 +4983,12 @@ cancel;
 }
 #alias onlyinactive ll ifinactive %0
 #alias givecomp {
-  get all.%1 component.pouch; 
+  get all.%1 $compouch;
   give all.%1 %2;
-  onlyinactive #delay 1 put all.%1 component.pouch;
+  onlyinactive #delay 1 putcomp;
 }
+
+#alias putcomp put all.component $compouch
 #alias offprompt #alias allprompt donothing
 #alias setsesname #all #var actsesname $sesname 
 #var {vmock} {A beautiful mockingbird whistles derisive notes at passersby}
@@ -5210,7 +5224,7 @@ cancel;
 
 #alias stormout {#action {^An Unfortunate Fall}{east; up}}
 #alias afterkenny {north; otk squire; ki mage}
-#alias terscis {hold scissors; pull black.strings; cut black.strings; cut blue.strings; pull green.strings; cut green.strings; pull white.string}
+#alias terscis {rem $hrec; hold scissors; pull black.strings; cut black.strings; cut blue.strings; pull green.strings; cut green.strings; pull white.string; rem scissors; hold $hrec}
 #alias runbard {mrun kenderbard}
 #alias runth {mrun tollhouse}
 #alias kib {aggtwo ll ki}
@@ -5300,7 +5314,7 @@ cancel;
 }
 
 #alias ligst ligstimpl
-#alias ligstimpl {leaveinn; js light diamond.stone}
+#alias ligstimpl {leaveinn; lightrec}
 #alias ligwi {js light %1; wield %1;}
 #alias ligho {js light %1; hold %1;}
 #alias rlcrainsong {gosol; van me; runto e2sd25e2sw4sesese2s; lcharm; lct; lcb}
@@ -5902,6 +5916,7 @@ addlocates;
 }
 
 #alias spamgroup #loop 1 4 f1loop {#delay $f1loop f5}
+#alias lookwhistle #loop 1 12 floop {look $floop.whistle}
 #MACRO {\e[20~} {f9}
 #alias f9 { amac boa } 
 #MACRO {\e[21~} {f10}
@@ -6276,12 +6291,13 @@ addlocates;
     {tablet engraved with emeralds}{recall}
     {charred black ring}{darkeep}
     {mottled robes of the Archmagus}{ft}
+  {book bound in snakeskin}{dark}
     {golden bracelet inlaid with emeralds}{bluff}
     {tightly bound tome of magic}{damageshield}
   {codex of arcane lore}{ams}
   {polished red oak book}{tenebrous/absorp/fold}
     {floppy hat}{shayds}
- {green book with frayed edges}{flesh/mirror/juke}
+ {green book with frayed edges}{flesh/mirror/JUKE}
     {timeworn book bound with chains}{??}
     {belt of cured hylar skin}{darkeep}
   {aspen leaf tablet}{barrier}
@@ -6297,6 +6313,8 @@ addlocates;
     {dark elven bracelet}{bog}
 }
 
+#alias shoutgreen {shout paying 60k for green book with frayed edges or succubus wings}
+#alias dosilt {rem $weapon; wield coral.axe; dig silt; rem coral.axe; wield $weapon}
 
 #alias boomcrate {drop crate; light crate in room}
 #alias twss {ct thats what she said}
