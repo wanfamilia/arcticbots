@@ -337,6 +337,7 @@ startgreenen
 chartreuse
 illyoctrio
 tultuk
+phycliff
 startphysix
 balitrio
 bogmage
@@ -533,6 +534,7 @@ ansabar
 hctmaze3
 egreckl
 lashathal
+ritdargokeep
 dargospeaker
 bakalishaman
 ritvermi

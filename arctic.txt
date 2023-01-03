@@ -80,7 +80,7 @@
 #alias ridebelt {kw ride belt in room}
 #alias explainvermi {gt verminaard fight: all kill/bash draconian, thrust lord, absolution lord, dont use heals on people not tanking, let area heals take care of them. no warddancing without legend rank}
 #action {^Onyx is dead} { get all.charm onyx}
-#alias gotomb {#map move down; bot lie %1.tomb; gt if boone doesnt die, lie %1.tomb; #delay 5 lie %1.tomb}
+#alias gotomb {#map move down; onlyinactive lie %1.tomb; gt if boone doesnt die, lie %1.tomb; #delay 5 lie %1.tomb}
 #action {^Oracle, the Battle Cleric is dead} { get book oracle}
 #action {^Egreckl Steamus is dead} {get all.charm egreckl}
 #action {^Glymmer is dead} {get book glymmer}
@@ -437,10 +437,11 @@ reseteye;
 #sub {ancient leviathan scale leggings} {ancient leviathan scale leggins(2dex,para-2,fade5, wild5)}
 #sub {gauntlets of black hydrascale} {gauntlets of black hydrascale(2str, here5, gas10)}
 #sub {cloak of black hydrascale} {cloak of black hydrascale(health15, hit20, canfly, nosummon, nocham, imm poi)}
-#alias bpu {buy 3*putrid}
+#alias bpu {buy putrid}
 #alias cts {sleep; ct sleeping...}
 #alias ctw {ct woke up; wake; st; fly}
 
+#alias indargo {mgo dargostart; wake}
 #action {^{$linebegin}{\w+(\s\w+)?}: this spell isn't on your mem} {for '$circle1'}
 #alias pracwhi {
   presi; resi;
@@ -4092,7 +4093,8 @@ myemail;	1;	1;	1;	1;
 }
 
 #alias msw {fo4 %2; me4 %1}
-#alias mknoc {msw knock locate}
+#alias mknoc {msw knock color}
+#alias mcol msw color knock
 #alias kem {mag ageng %1; mag ota; st; assthis}
 #alias puf {mag pufthis}
 
@@ -4273,6 +4275,7 @@ cancel;
   #var food ration;
 }
 
+#alias beforexeg {get parchment $belt; analyze parchment; #delay 1 ke ball}
 #alias idter {recite identify silver.chest in room; hold $hrec}
 #alias modewhite {
   #alias goway {puf wilma};
@@ -4422,13 +4425,15 @@ cancel;
   #action {^Aldur A'Kul the master thief sits} {lrn; smile};
   #alias lootcomp donothing;
   #alias rethi {rewin; modethief};
+  #action {^Your coup works and you} {back};
+  #alias assthis {assist %%1; coup};
+  nopet;
   #var hrec dagger;
   eng be;
   #var food cheese;
   #var belt girdle;
   #alias onerest donothing;
   #alias palassthis {assist %%1; kstthis};
-  #alias assthis assist;
   #var weapon curved.dagger;
   #alias vass vass2;
 }
@@ -4984,7 +4989,7 @@ cancel;
 #alias onlyinactive ll ifinactive %0
 #alias givecomp {
   get all.%1 $compouch;
-  give all.%1 %2;
+  give all.component.%1 %2;
   onlyinactive #delay 1 putcomp;
 }
 
@@ -5398,6 +5403,10 @@ addlocates;
 #alias brewsac dobrew sacred
 #alias brewfor dobrew fortify
 #alias brewher dobrew heroism
+#alias brewcrit dobrew {cure critical}
+#alias mythcrit {runto des; brewcrit; nwu; put brewed chest}
+#alias manycrit {#alias readybrew mythcrit; trigbrsh}
+#alias mtt mag {st; tan transfer} 
 #alias dobrew {rest; brew '%1'; st}
 #alias doscribe {rest; scribe '%1'; st}
 #alias rlcspire {gosol; runto e2sd8n3e7n4en9e5s6es2ese; climb ladder; ee; lckith; lc forge.ring}
@@ -5609,6 +5618,7 @@ addlocates;
 	setresc %1
 }
 
+#alias slum {js slumber}
 #ALIAS {wagi}
 {
 	jd mass inv %1
@@ -6313,7 +6323,6 @@ addlocates;
     {dark elven bracelet}{bog}
 }
 
-#alias shoutgreen {shout paying 60k for green book with frayed edges or succubus wings}
 #alias dosilt {rem $weapon; wield coral.axe; dig silt; rem coral.axe; wield $weapon}
 
 #alias boomcrate {drop crate; light crate in room}
