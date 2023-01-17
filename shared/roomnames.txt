@@ -110,7 +110,7 @@ solinn
 solrank
 recuperate sol
 startthorb
-component neraka
+nercomp
 nerinn
 todread
 sanction
@@ -169,6 +169,7 @@ startcrytic
 essence earth eern
 dargostart
 dargo squid jawbow
+dargocomp
 essence water lezi
 pracevade
 startstormhead
@@ -450,6 +451,7 @@ gownnocharm
 raynemansakr
 rayneselissa
 thcsmith
+paxspirit
 feisal
 palgrate
 palthief
@@ -480,6 +482,7 @@ tocloud
 underbridge
 kingroad
 openbook
+palbank
 crownzone
 cinder
 crowbar
@@ -592,3 +595,6 @@ lemusum
 xmas
 xmasladder
 kaldruid
+startdairly
+dairlyshaman
+uthderek

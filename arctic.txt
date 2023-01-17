@@ -760,7 +760,7 @@ reseteye;
 #alias assno #alias assthis ott
 #alias palass bpa
 #alias haze {bot jd men ha}
-#alias palassthis {ass %1; rally; strike; av leg; strike}
+#alias palassthis {ass %1; rally; strike; av soul; strike}
 #alias kdr {st; drain}
 #alias bufdar {bot buf dk}
 #alias rlcshark {gotar; js imp; van me; west; south; open gate; runto 3ws3wsw3sws4wundwsd4w4nw}
@@ -897,6 +897,20 @@ reseteye;
   lay me; div; reck; right; besimpl;
 }
 
+#alias onrosebuff {
+  rem sword; wield lance; 
+  #action {^Once again the time has come for righteous anger} {reck};
+  #action {^Through the darkness, you find a connection} {right};
+  #action {A massive cryohydra slowly descends from}{bdef};
+  bes kiri;
+  reck;
+  needbuff holy arms;
+  needbuff aura of glory;
+  needbuff bless;
+  needbuff high prayer;
+  needbuff holy vision;
+  needbuff crusade;  
+}
 #alias besimpl beseech majere
 #alias pracright {
   right;
@@ -1340,10 +1354,20 @@ reseteye;
 
 #alias modebarb {
   #alias fastmem {ban me};
-  #var engvar chg;
-  nutr meat;
+  #var engvar chd;
+  casres;
+  #action {^Cloudreaver looms} {lrn; smile};
+  #var food cheese;
+  #alias dorescue {cancel; st; rescue %1};
+  #alias warhit {dnrs 2 %1};
+  alivebot;
+  #alias assthis {assist %1; chd};
+  skillbell;
+  #alias rebar {rewin; modebarb};
+  nutr cheese;
 }
 
+#var booze wine.bottle
 #ALIAS {blr}
 {
 	js blur
@@ -1401,6 +1425,13 @@ reseteye;
 
 #alias buch {buy 12*%1; put all.%1 chest}
 
+#alias kibard {south; west; %1 bard; #4 flee; e; e; n; e; w}
+#alias vcr {poch brewed.critical}
+#alias vchal poch chalice;
+
+#alias poch {
+  get %1 chest; quaff %1;
+}
 #alias brsh
 {
   rest;  get empty chest; get acorn pouch;
@@ -1469,12 +1500,15 @@ reseteye;
 	bot {punch %1; bash %1}
 }
 
+#config buffer_size 1000
 #ALIAS {bufw}
 {
 	#buffer write logs/%1.txt;
 	#log append logs/%1.txt
 }
 
+#alias elri {#2 shatter elemental.ring; twopets; vch elemental}
+#alias bogegg {#2 break egg; twopets; vch griffon}
 #ALIAS {bws}
 {
 	breathe;
@@ -1550,7 +1584,7 @@ reseteye;
 	st;
 	war;
 	heal;
-	wild; assail
+	wild; gore; assail
 }
 
 #alias dobooze {sip $booze; modebarb}
@@ -1621,12 +1655,13 @@ reseteye;
   #map flag asciigraphics on;
   #map flag static off;
   #map flag vtmap on;
+  #action {^A violent vortext wind forces your gaze skyward}{tempwind};
   #action {^Alas, you cannot go that way} {#map undo};
   #action {^Center of the Celestial Temple} {mgoc};
   #action {^A Running Stream}{mgo shaydstream};
   #action {^Gate to the Fishing Village}{mgo irdagate};
   #action {^A beautiful statue of Mishakal stands here, illuminating the chamber} {mgo startheal};
-  #action {^The {North|South|East|West}ern {Reach|Branch}} {mgo %%1winds; #show %%1};
+  #action {^The {North|South|East|West}ern {Reach|Branch}} {gowind %%1};
   #action {^{The Slimy Chute}} {mgo slimychute};
   #action {^Zardonna, the elven high sorceress}{mgo zardonna};
   #action {^Approaching a Rise} {mgo 3268};
@@ -1641,7 +1676,12 @@ reseteye;
   #action {^A Large Meeting Room} {mgo risolbelow};
 }
 
-
+#alias tempwind {
+  #alias gowind gowindimpl;
+  #delay 5 gowind donothing;
+}
+#alias gowind donothing
+#alias gowindimpl {mgo %1winds; #show %1;}
 #alias gst {plant bread %1; give bread %1; #3 steal bread %1; sk}
 #alias cvarch {gt follow me after enter arch; kw enter arch;
   #delay 4 group form;
@@ -1845,7 +1885,7 @@ reseteye;
 
 #ALIAS {dan}
 {
-	dobooze; st;%1
+	bot {dobooze; st;%1};
 }
 
 #ALIAS {ddo}
@@ -1990,6 +2030,7 @@ reseteye;
         lootcomp;
 }
 
+#alias buco {buy 12*%1; put all.component pouch}
 #alias dosplit split
 #alias met {
   malo %1;
@@ -2108,13 +2149,14 @@ reseteye;
 }
 
 #alias fgw {force gates; west; close gates}
-#alias clerstabclose {uo %1 %2; %2; close %1; tan hl}
+#alias clerstabclose {st; uo %1 %2; %2; close %1; c 'heal' $tank}
 #alias stabclose {clerstabclose}
 #alias shamstabclose {tan rg; uo %1 %2; %2; close %1; tc}
 #alias dotsu {stabclose door west; otk tsu}
 #alias dorogen {stabclose boxes west; otk rogeneye}
 #alias doxill {stabclose door west; otk xill}
 #alias dorhun {stabclose doors north; otk rhun}
+#alias doamb {stabclose door north}
 #alias refade {cancel; wingsweep; fade; reshoot}
 #ALIAS {dowater}
 {
@@ -2211,6 +2253,7 @@ reseteye;
 #alias ue4 {cancel; #unticker e4}
 #alias dogem {bow elf; #9 {n;s}}
 #alias saygem {say you have my word}
+#alias saydair say cerolv lafe ofur
 #alias mssh {ghob; sean; gmal; #20 {ssh %1}; }
 #alias age4 {st; #4 {age %1}; rest}
 #alias msshg {cancel; mssh 4.cityguard}
@@ -2240,9 +2283,13 @@ reseteye;
 
 #ALIAS {fo4}
 {
-	for '%1 %2' '%1 %2' '%1 %2' '%1 %2'
+	for '%1 %2' '%1 %2' '%1 %2' '%1 %2';
+	mem stop '%1 %2' '%1 %2' '%1 %2' '%1 %2';
 }
 
+#alias givemage {givecomp !protection $mymage}
+#alias givecler {givecomp protection $mycler}
+#alias shoutitem shout paying 50k for succubus wings, 100k for vermillion suit
 #ALIAS {formshowgroup}
 {
 	formshowgrouplin
@@ -2888,9 +2935,20 @@ reseteye;
 
 #ALIAS {ksil}
 {
-	jsa sil
+  spellcraft mid; jsa sil; spellcraft low;
 }
 
+#alias kling krose wyrmling
+
+#alias krose {
+  ota;
+  aven wing;
+  strike %1;
+  aven tail;
+  strike %1;
+  aven soul;
+  strike %1;
+}
 #ALIAS {kso}
 {
 	mai jd soul leech
@@ -3879,7 +3937,7 @@ myemail;	1;	1;	1;	1;
 #alias kduc {kdu creature}
 #alias aii {assail; into; into; sett}
 #alias shd {modebarb; sharp dagger; sharp 2.dagger; sharp 3.dagger; sharp 4.dagger; sharp 5.dagger; sharp 6.dagger; sharp 7.dagger; sharp 8.dagger}
-#alias asb {assist; batt; assail}
+#alias asb {assist; dwa; batt; assail; charge; gore}
 #alias ttr {track %2.%1}
 #alias tr9 {#9 track}
 #alias gtk {gt gank %1; kill %1}
@@ -4224,6 +4282,7 @@ myemail;	1;	1;	1;	1;
   get all.!alteration.!protection.component.!web $compouch;
 }
 #alias cleancomp2 {get all.!web.!acorn component.pouch}
+#alias barr be $arrival
 
 #var compouch component.pouch;
 #alias bhlp bhl $pet
@@ -4294,11 +4353,13 @@ cancel;
 
 
 #alias beforearmy {
-  rem bone.plate; rem arm; rem $clerlegs; rem mace; rem alabaster.boots;
+  rem $clerbody; rem $clerarms; rem $clerlegs; rem mace; rem alabaster.boots;
   wear all.dinged; wear leather.vest; wear leather.boots; wield beaten.sword
 }
 
-#var clerlegs alabaster.legplates
+#var clerarms diamond.circlets
+#var clerbody suit
+#var clerlegs leggings
 #alias bcheckpriest {bot; checkpriest}
 #alias hts halone south
 #alias htw halone west
@@ -4307,11 +4368,12 @@ cancel;
 #alias htu halone up
 #alias htd halone down
 
+#alias scolord {west; south; ksc lord; #4 flee; east}
 #alias halone mai {st; malo %1; tan hl}
 #alias afterarmy {
-  hl me; rem all.dinged; rem leather.vest; rem leather.boots; rem sword;
-  wear bone.plate; wear arm; wear $clerlegs; wield mace; wear alabaster.boots;
-  md sum;
+  rem all.dinged; rem leather.vest; rem leather.boots; rem sword;
+  wear $clerbody; wear $clerarms; wear $clerlegs; wield mace; wear alabaster.boots;
+  js heal me; fly;
 }
 #alias wser  {wake; stand; east; rest}
 #alias norelo {
@@ -4372,8 +4434,9 @@ cancel;
 }
 
 
-
+#alias bqw {buy water.blood; quaff water.blood}
 #alias kho {jd ho wo}
+#alias kwith js wither
 #alias saypal {bot say Paladine Protect Us}
 #alias hemtick {mai #alias dohem hem5; mai restick permahem}
 #alias dartick {mai #alias dohem hemdar; mai restick permahem}
@@ -4402,8 +4465,9 @@ cancel;
 #alias logsky {newses sky {$skyscout; mypw; ones; modesky}}
 #alias leaveinn donothing
 #alias leaveinnimpl {d; d; n; e}
-#alias logpal {logbot {$mypaladin; mypw; ones; modepala; fly; leaveinn; jd r i}}
+#alias logpal {logbot {$mypaladin; mypw; ones; modepala; fly; leaveinn; jd rig ind}}
 #alias logwar {logbot {dawsen; mypw; 1; 1; modepala; modewar; fly}}
+#alias logbar {logbot {cunningham; mypw; 1; 1; modebarb; fly}}
 #alias logmou logbot {penniman; mypw; 1;1; modepala; fly}
 #alias logdar logbot {gere; mypw; 1; 1; modepala; modedar; fly}
 #alias logwaro newses war {dawsen; mypw; 1; 1; modepala; modewar; fly; #alias bot #war;}
@@ -4949,7 +5013,7 @@ cancel;
     #show sysplay smb3_powerdown;
   };
   #alias vass vass3;
-  #alias vota donothing;
+  #alias ota donothing;
   agg strike;
 }
 
@@ -5403,6 +5467,7 @@ addlocates;
 #alias brewsac dobrew sacred
 #alias brewfor dobrew fortify
 #alias brewher dobrew heroism
+#alias scriwhi doscribe white rune
 #alias brewcrit dobrew {cure critical}
 #alias mythcrit {runto des; brewcrit; nwu; put brewed chest}
 #alias manycrit {#alias readybrew mythcrit; trigbrsh}
@@ -5964,7 +6029,6 @@ addlocates;
 #VARIABLE         {autoclean}             {0}
 #VARIABLE         {autoheal}              {0}
 #VARIABLE         {belt}                  {belt}
-#VARIABLE         {booze}                 {brown.bottle}
 #VARIABLE         {candidate}             {autodropoff}
 #VARIABLE         {candlevel}             {0}
 #VARIABLE         {casres}                {Fleur}
@@ -6188,6 +6252,7 @@ addlocates;
 
 #alias silvikey {combine key key}
 
+#alias bfree {bot js free}
 #alias shadowcrack {enter crack; cut rope; restrain minotaur; open grate; up}
 #alias lc4 #4 lc
 #alias fav {js favo}
