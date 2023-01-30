@@ -482,6 +482,7 @@ reseteye;
 #alias g2 {m2 %1; m1 %1}
 #alias goodpick {gate Aspasia}
 #alias gant {gate Antioch; onepet}
+#alias gshi {gate Shiroc; onepet}
 #alias ref2 {g2 flap}
 #ACTION {^{(<\w+>\s)?}{\S+ \S+}{.+}green aura)}
 {
@@ -760,7 +761,7 @@ reseteye;
 #alias assno #alias assthis ott
 #alias palass bpa
 #alias haze {bot jd men ha}
-#alias palassthis {ass %1; rally; strike; av soul; strike}
+#alias palassthis {ass %1; rally; strike; av leg; strike}
 #alias kdr {st; drain}
 #alias bufdar {bot buf dk}
 #alias rlcshark {gotar; js imp; van me; west; south; open gate; runto 3ws3wsw3sws4wundwsd4w4nw}
@@ -1310,7 +1311,7 @@ reseteye;
 
 #ALIAS {bigrest}
 {
-	rest;
+	cancel; rest;
 	#var resting 1;
 	tan watch;
 	fastmem;
@@ -1328,12 +1329,21 @@ reseteye;
 #alias conbo {#var pet Boanes; conj bone}
 #alias conir {#var pet Fereous; conj iron}
 #alias conlea {#var pet Plumbic; conj lead}
-#alias conca {#var pet Montalban; conj cat}
+#alias conca {#var pet Montalban; conj cat; onepet}
 #alias conow {#var pet Ayoade; conj owl;
   oe for 'di ma' 'blur' 'shield' 'inv';
   oe mem 'li bo' 'ma mi' 'ma mi' 's g';
 }
-#alias conew {#var pet Ocasek; conj newt}
+#alias conew {conj newt; nopet}
+
+#alias palrep {
+ rem bastard;
+ rem discolored;
+ rem jeweled;
+ rem shield;
+ repair bastard; repair discolored; repair jeweled; repair shield;
+ wield bastard; wear discolored; wear jeweled; wear shield;
+}
 #alias pracowl {st; conow; release ayoade;}
 #alias dosei {say Seinihs Enim; e; fol %1}
 #alias kld {mag okd klb}
@@ -1353,20 +1363,18 @@ reseteye;
 }
 
 #alias modebarb {
+  modepala;
   #alias fastmem {ban me};
   #var engvar chd;
-  casres;
   #action {^Cloudreaver looms} {lrn; smile};
   #var food cheese;
-  #alias dorescue {cancel; st; rescue %1};
-  #alias warhit {dnrs 2 %1};
-  alivebot;
-  #alias assthis {assist %1; chd};
-  skillbell;
+  #alias dorescue {cancel; st; rescue %%1; dhe; batt; gore};
+  #alias assthis {assist %%1; charge; batt; dwa; assail; gore; };
   #alias rebar {rewin; modebarb};
   nutr cheese;
 }
 
+#alias petcorpse {#var pet all.corpse; onepet}
 #var booze wine.bottle
 #ALIAS {blr}
 {
@@ -1556,8 +1564,8 @@ reseteye;
 
 #alias acn {addc $groupmembers[%1]}
 
-#ALIAS {ccn}
-{
+#ALIAS {ccnthis}
+{ 
 	autodropoff;
 	#action $patautodrop {mac drop %%4};
 	get all %1.corpse;
@@ -1565,15 +1573,8 @@ reseteye;
 	dolater9 autodropoff
 }
 
-#ALIAS {cco}
-{
-	autodropoff;
-        get all.coins corpse;
-	#action $patautodrop {mac drop !large.%%4};
-	get all corpse;
-	carve corpse;
-	dolater9 autodropoff
-}
+#alias ccn bot ccnthis
+#alias cco ccn 1
 
 #alias gac {get all.!component corpse; }
 
@@ -1587,8 +1588,8 @@ reseteye;
 	wild; gore; assail
 }
 
-#alias dobooze {sip $booze; modebarb}
-#alias sibo {#3 {sip $booze}; modebarb}
+#alias dobooze {sip $booze; }
+#alias sibo {#3 {sip $booze}; }
 #alias prago {#action {^Gore}{st; gore}}
 #ALIAS {chh}
 {
@@ -1655,7 +1656,7 @@ reseteye;
   #map flag asciigraphics on;
   #map flag static off;
   #map flag vtmap on;
-  #action {^A violent vortext wind forces your gaze skyward}{tempwind};
+  #action {^A violent vortext of wind forces your gaze skyward}{mac tempwind};
   #action {^Alas, you cannot go that way} {#map undo};
   #action {^Center of the Celestial Temple} {mgoc};
   #action {^A Running Stream}{mgo shaydstream};
@@ -1671,6 +1672,7 @@ reseteye;
   #action {^A Dark Citadel Looms Overhead} {mgo citadel start};
   #action {^The End of River Shin} {mgo 10045};
   #action {^The End of the Khaldat River} {mgo 9974};
+  #action {^Antechamber of the Ravenshadow Lord}{mgo lordraven};
   #action {^A Strange Hallway} {mgo 3179};
   #action {^The Top of the Keep} {mgo 3153};
   #action {^A Large Meeting Room} {mgo risolbelow};
@@ -1678,7 +1680,7 @@ reseteye;
 
 #alias tempwind {
   #alias gowind gowindimpl;
-  #delay 5 gowind donothing;
+  #delay 5 #alias gowind donothing;
 }
 #alias gowind donothing
 #alias gowindimpl {mgo %1winds; #show %1;}
@@ -2236,7 +2238,7 @@ reseteye;
 #var mythief nikson
 #alias tanksquare {maptank solsquare}
 #alias mythmarch {maptank mythsh}
-#alias rlore {recite lore %1 in inventory}
+#alias rlore {recite lore %1 in inventory; hold $hrec}
 #alias {rec lore} {thwack me; rlore %1;}
 #alias bfsk bfg $skyscout
 #alias palsham {mai voy $mypaladin; #delay 1 {mai bfg $myshaman; buftwo}; }
@@ -2766,7 +2768,7 @@ reseteye;
 #alias fsuit {bot {get phosphorus pouch; sprinkle phosphorus suit}}
 #alias noam {bot {north; ki ambassador}}
 #alias csn {mag ott; mag jd co sn}
-#alias clr {mag js color}
+#alias clr {mag js color; mag ota; mag deep}
 #alias cso {csn; mag ota; mai ott}
 #ALIAS {kcr}
 {
@@ -2935,7 +2937,7 @@ reseteye;
 
 #ALIAS {ksil}
 {
-  spellcraft mid; jsa sil; spellcraft low;
+  spellcraft mid; jsa sil %1; spellcraft low;
 }
 
 #alias kling krose wyrmling
@@ -2962,7 +2964,7 @@ reseteye;
 #alias mbn {js sunray}
 
 #alias ksr js sunray
-#alias ksc {js scorch}
+#alias ksc {js scorch; deep}
 #ALIAS {ksw}
 {
 	js insect
@@ -3306,7 +3308,7 @@ myemail;	1;	1;	1;	1;
 #ALIAS {me4}
 {
   mb mem '%1 %2' '%1 %2' '%1 %2' '%1 %2';
-  bigrest;
+  rest;
 }
 
 #alias dokith {place gem indentation; n; n; n; w; w; exam kith; e}
@@ -3374,12 +3376,14 @@ myemail;	1;	1;	1;	1;
 {
 	#variable food $clerfood;
  #var circle1 {cu li};
+ #var weapon mace;
  nopet;
  #alias knoc o aspasia pick;
   #var vbuffover[bless] {js prayer};
   #alias lootcomp lootcompimpl;
  #alias sat dofood;
- #var hrec black.diamond;
+ #var hrec golden.orb;
+ #alias ligst donothing;
  #alias hew hem;
  #alias asf assist;
  #alias assthis {ott};
@@ -4337,7 +4341,7 @@ cancel;
 #alias beforexeg {get parchment $belt; analyze parchment; #delay 1 ke ball}
 #alias idter {recite identify silver.chest in room; hold $hrec}
 #alias modewhite {
-  #alias goway {puf wilma};
+  #alias goway {goto wilma};
   #var hrec ogre.spear;
   #alias ide {rec identify};
   #var held clear.sphere;
@@ -4469,7 +4473,7 @@ cancel;
 #alias logwar {logbot {dawsen; mypw; 1; 1; modepala; modewar; fly}}
 #alias logbar {logbot {cunningham; mypw; 1; 1; modebarb; fly}}
 #alias logmou logbot {penniman; mypw; 1;1; modepala; fly}
-#alias logdar logbot {gere; mypw; 1; 1; modepala; modedar; fly}
+#alias logdar logbot {iyler; mypw; 1; 1; modepala; modedar; fly}
 #alias logwaro newses war {dawsen; mypw; 1; 1; modepala; modewar; fly; #alias bot #war;}
 #var mycler knaak
 #alias mser mai ser
@@ -4966,6 +4970,7 @@ cancel;
 #alias knoc {mag c 'knock'}
 #alias subl {mag js sublimation}
 #alias dokhita {stand; east; enter cave}
+#alias hemr {hem; mai rest}
 #alias paleng {strike %1; bpa}
 #alias modepala
 {
@@ -4978,7 +4983,7 @@ cancel;
   #alias groupimpl group full;
   #alias oegc {cancel; get corpse; give corpse %1};
   eng paleng;
-  #var hrec fireball;
+  #var hrec watermelon;
   #action {^Your hands tingle as a feeling of goodness} {ll #show -->       LAY ready} {7};
   #action {^Warriors' Training Room} {lrn; smile};
   #alias assthis palassthis;
@@ -4994,6 +4999,7 @@ cancel;
   showprompt;
   #var vbuffover[heal boost] {gt no heal boost};
   #alias lootcomp donothing;
+  norally;
   nolog;
   skillbell;
   casres;
@@ -5741,7 +5747,9 @@ addlocates;
 #highligh {You cannot sense their presence.} {green}
 #var warrior Dawsen
 #highlight {$warrior stumbles and falls} {light yellow}
+#highlight {The protective shell around you fades} {yellow}
 #highligh {while you were sleeping}{red}
+#highligh {decays in your hands}{red}
 #highlight {There is a squirt of blood as Skylord releases you} {green}
 #highlight {A young mahkwahb boy grins mischievously at the hefty size}{green}
 #highlight {A young mahkwahb boy chuckles at the paltry size of your offer}{red}
@@ -6252,7 +6260,7 @@ addlocates;
 
 #alias silvikey {combine key key}
 
-#alias bfree {bot js free}
+#alias bfree {bot cancel; bot js free}
 #alias shadowcrack {enter crack; cut rope; restrain minotaur; open grate; up}
 #alias lc4 #4 lc
 #alias fav {js favo}

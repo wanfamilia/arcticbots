@@ -249,6 +249,7 @@ citadel tenlo
 silvigates
 darvmurk
 dvcopse
+omengoblin
 darvmiddle
 dv acidic
 sky instinct 51
@@ -327,6 +328,7 @@ startct
 ctcorner
 ctguards
 ctcent
+ctmoonring
 streamshayd
 jenna
 elric
@@ -598,3 +600,4 @@ kaldruid
 startdairly
 dairlyshaman
 uthderek
+wilma
