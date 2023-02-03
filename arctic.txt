@@ -572,6 +572,7 @@ reseteye;
   #if {"$classes[%2]" != ""} {%1 %2 %3};
 }
 
+#alias candrop {cancel; drop component; sellcomp}
 #alias blev {bot {pull lever; w}}
 #var vmasters {{CL}{cleric}{DA}{dark}{WA}{warrior}{BA}{barbarian}{DR}{druid}{PA}{paladin}{SH}{shaman}{SC}{scout}{TH}{thief}{WH}{white}{RE}{red}{BL}{black}}
 #alias ghostfor {
@@ -1567,7 +1568,7 @@ reseteye;
 #ALIAS {ccnthis}
 { 
 	autodropoff;
-	#action $patautodrop {mac drop %%4};
+	#action $patautodrop {mac drop !large.%%4};
 	get all %1.corpse;
 	carve %1.corpse;
 	dolater9 autodropoff
@@ -2220,6 +2221,7 @@ reseteye;
 }
 
 #tab chernobog
+#tab cunningham
 #tab nahuatlipochty
 #tab paijietng
 #tab jaqueline
