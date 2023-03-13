@@ -330,6 +330,7 @@ reseteye;
   needbuff boon;
 }
 
+#alias mful {mag buf fullwhite}
 #alias onfullwhitebuff {
   onwhitebuff;
   needbuff strength;
@@ -337,11 +338,13 @@ reseteye;
   needbuff detect invisibility;
   needbuff detect magic;
   needbuff continual light;
+  needbuff boost;
   needbuff fly;
   needbuff blur;
   oninvbuff;
   needbuff juke;
   needbuff sphere of invisibility;
+  needbuff mental acuity;
   needbuff water breath;
   needbuff repose;
   needbuff watchful eye;
@@ -491,6 +494,7 @@ reseteye;
 }
 {5}
 
+#alias cvsong {ct come get rit to my side if u luv me, enter arch follow me when i say, just remember celestial valley, might load wings but they're all my decay}
 #ACTION {^{\w.+}{[A-Z]\w+}{$tanksuffix}}
 {
 	gothit %2;
@@ -754,7 +758,7 @@ reseteye;
 #alias vass {vass1}
 #alias vass3 {#delay 3 {nospam 2 palass %1}}
 #alias vass1 {nospam 6 ota }
-#alias vass2 {nospam 1 assist}
+#alias vass2 {nospam 1 assthis}
 #alias otai {ota; imp}
 #alias asst {ass %1; st}
 #alias bpa {bot palassthis}
@@ -972,7 +976,7 @@ reseteye;
 #alias asab {assault %1; bash %1}
 #alias mgoc {mgo ctcent}
 #alias rd {st; dispel '%1'; js %1 me}
-#alias fsh {mag rd fires}
+#alias fsh {mag js fires}
 #ALIAS {air}
 {
 	js fly
@@ -1126,8 +1130,8 @@ reseteye;
 #alias gofer {goto ferris}
 #alias gosol {goto theobald}
 #alias gohav {goto canstin}
-#alias goner {puf snaggle; mgo snaggle}
-#alias goto {puf %1; lrn; #map goto %1}
+#alias goner {goto snaggle}
+#alias goto {mag {puf %1; lrn; #map goto %1}}
 #alias gocae {goto mirus}
 #alias gophy {gocae; mirphy}
 #alias mirphy {w; w; s; s; w; w; w; open gate; w; w; n; n; climb cliff; d; n; w; w; w; lcb; lcb}
@@ -1335,7 +1339,7 @@ reseteye;
   oe for 'di ma' 'blur' 'shield' 'inv';
   oe mem 'li bo' 'ma mi' 'ma mi' 's g';
 }
-#alias conew {conj newt; nopet}
+#alias conew {conj newt; #var pet Ocasek; nopet}
 
 #alias palrep {
  rem bastard;
@@ -1657,7 +1661,7 @@ reseteye;
   #map flag asciigraphics on;
   #map flag static off;
   #map flag vtmap on;
-  #action {^A violent vortext of wind forces your gaze skyward}{mac tempwind};
+  #action {^A violent vortex of wind forces your gaze skyward}{mac tempwind};
   #action {^Alas, you cannot go that way} {#map undo};
   #action {^Center of the Celestial Temple} {mgoc};
   #action {^A Running Stream}{mgo shaydstream};
@@ -1869,6 +1873,7 @@ reseteye;
 #alias aisr {air me; sr me; sr me;}
 #alias bdm {bot jd di ma}
 #action {^Your victim's tracks lead {\w+}} {ll #show track: %1}
+#alias tr9 {#9 track}
 
 #alias cpn
 {
@@ -2824,7 +2829,7 @@ reseteye;
 
 #ALIAS {kfs}
 {
-	js flame
+	mai js flame
 }
 
 #alias kh bot khthis
@@ -2966,7 +2971,7 @@ reseteye;
 #alias mbn {js sunray}
 
 #alias ksr js sunray
-#alias ksc {js scorch; deep}
+#alias ksc mag {js scorch %1; deep}
 #ALIAS {ksw}
 {
 	js insect
@@ -4344,7 +4349,8 @@ cancel;
 #alias idter {recite identify silver.chest in room; hold $hrec}
 #alias modewhite {
   #alias goway {goto wilma};
-  #var hrec ogre.spear;
+  #alias bfm {bot follow pryor; #delay 1 group form};
+  #var hrec jeweled.sceptre;
   #alias ide {rec identify};
   #var held clear.sphere;
   #var compouch jellyfish.pouch;
@@ -4831,6 +4837,7 @@ cancel;
 #alias modemage {
   nutr $food;
   #alias fastmem {deep};
+  #alias ser inac jd cu ser;
   #alias rs donothing;
   #alias lootcomp lootcompimpl;
   #alias assthis ott;
@@ -4976,7 +4983,7 @@ cancel;
 #alias paleng {strike %1; bpa}
 #alias modepala
 {
-  #alias bigrest {dism; rest; sip elixir};
+  #alias bigrest donothing;
   #var pet Steamboat;
   #alias checkphil {up alone; east; exam phil; exam scout; west; flee; st; #4 flee};
   #alias gts #all #show --> spirit;
@@ -4985,7 +4992,7 @@ cancel;
   #alias groupimpl group full;
   #alias oegc {cancel; get corpse; give corpse %1};
   eng paleng;
-  #var hrec watermelon;
+  #var hrec fireball;
   #action {^Your hands tingle as a feeling of goodness} {ll #show -->       LAY ready} {7};
   #action {^Warriors' Training Room} {lrn; smile};
   #alias assthis palassthis;
@@ -5954,7 +5961,7 @@ addlocates;
 }
 
 #MACRO {\e[15~} {f5}
-
+#macro {\eOq} {amac ke}
 #alias f5 {
   amactive;
 	ll donextthis;
@@ -5983,7 +5990,7 @@ addlocates;
 	tan hl; tan watch;
 }
 
-#alias f2 {amac bigrest}
+#alias f2 {amac ll bigrest}
 #macro {\eOP} f1
 #alias f3 f7
 #MACRO {\e[19~}
@@ -6349,6 +6356,8 @@ addlocates;
     {dragonrider's talisman}{pax}
     {alabaster garlic clove charm}{LAST CHANCE}
     {charm covered in a sparkling silvery mist} {RITUAL VOYAGE}
+  {thin wooden wand}{dread}
+  {pair of succubus wings}{cv}
   {golden tinged broadsword}{raynes?}
   {pair of spiked mithril boots}{dtroll}
   {black book inscribed with silver runes}{chaos}

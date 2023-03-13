@@ -485,6 +485,7 @@ underbridge
 kingroad
 openbook
 palbank
+irdasignet
 crownzone
 cinder
 crowbar
@@ -600,4 +601,5 @@ kaldruid
 startdairly
 dairlyshaman
 uthderek
+tantlord
 wilma
