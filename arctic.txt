@@ -108,6 +108,7 @@
 #PATHDIR {west} {east} {8}
 
 #alias kw {ll oe %1 %2 %3 %4; gt %1 %2 %3 %4; #all {%1 %2 %3 %4}}
+#alias kw2 {ll oe %1 %2;  gt %1 %2; #all {%1 %2}}
 #alias brst {sr me; air me; brsc stre}
 #alias oegc {oe get all.corpse; get all.corpse; oe give all.corpse %1}
 #alias otl {m1 ota}
@@ -772,6 +773,7 @@ reseteye;
 #alias rlcshark {gotar; js imp; van me; west; south; open gate; runto 3ws3wsw3sws4wundwsd4w4nw}
 
 #alias fshield {js fireshield}
+#alias boo {jsm boon}
 #alias glob {js globe}
 #ACTION {{he begins to drool|is stunned!}}
 {
@@ -2061,7 +2063,7 @@ reseteye;
 #alias lootcompimpl {
   get all.component.!pouch corpse;
   get golden.pinch corpse;
-  put golden.poinch $compouch;
+  put golden.pinch $compouch;
   put all.component $compouch;
 }
 #alias otta {ott; st; ass}
@@ -2610,7 +2612,7 @@ reseteye;
 
 #ALIAS {hr}
 {
-	js hero %1;
+	mai js hero %1;
 }
 
 
@@ -4295,7 +4297,7 @@ myemail;	1;	1;	1;	1;
 #alias cleancomp2 {get all.!web.!acorn component.pouch}
 #alias barr be $arrival
 
-#var compouch component.pouch;
+#var compouch component.pouch.crafted;
 #alias bhlp bhl $pet
 #alias glpe glance $pet
 #alias nocomp {#alias lootcomp donothing}
@@ -4353,7 +4355,7 @@ cancel;
   #var hrec jeweled.sceptre;
   #alias ide {rec identify};
   #var held clear.sphere;
-  #var compouch jellyfish.pouch;
+  #var compouch crafted.pouch;
   #alias remage {rewin; modemage; modewhite};
   #alias locatereport locatereportimpl;
   #var food cheese;
@@ -4992,7 +4994,7 @@ cancel;
   #alias groupimpl group full;
   #alias oegc {cancel; get corpse; give corpse %1};
   eng paleng;
-  #var hrec fireball;
+  #var hrec coral.branch;
   #action {^Your hands tingle as a feeling of goodness} {ll #show -->       LAY ready} {7};
   #action {^Warriors' Training Room} {lrn; smile};
   #alias assthis palassthis;
@@ -5008,7 +5010,6 @@ cancel;
   showprompt;
   #var vbuffover[heal boost] {gt no heal boost};
   #alias lootcomp donothing;
-  norally;
   nolog;
   skillbell;
   casres;
