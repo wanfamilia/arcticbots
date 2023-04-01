@@ -4371,7 +4371,7 @@ cancel;
   wear all.dinged; wear leather.vest; wear leather.boots; wield beaten.sword
 }
 
-#var clerarms diamond.circlets
+#var clerarms rose.vambraces;
 #var clerbody suit
 #var clerlegs leggings
 #alias bcheckpriest {bot; checkpriest}
@@ -4506,7 +4506,8 @@ cancel;
   #action {^Your coup works and you} {back};
   #alias assthis {assist %%1; coup};
   nopet;
-  #var hrec dagger;
+  #var hrec spine;
+  #alias bigrest donothing;
   eng be;
   #var food cheese;
   #var belt girdle;
