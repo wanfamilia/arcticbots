@@ -426,7 +426,6 @@ reseteye;
 #sub {idol carved of green malachite} {green malachite idol(imm_poi imm_curse regas 16)}
 #sub {golden band coated with red dust} {red gold band(mindshield imm_sleep 2cl)}
 #sub {pantry door drenched in ectoplasm} {ectoplasm pantry door(ss -1, rema 10)}
-#sub {a sturdy staff of rosewood} {the Sturdy Rosewood Staff(2d5 3/3specs)}
 #sub {bloody whale heart amulet}{bloody whale heart amulet(+1slot6 8reg)}
 #sub {silver girdle} {silver girdle (2con 2hr)}
 #sub {colossal black iron war flail} {colossal black iron war flail(3d10 0/3, w48)}
@@ -2238,7 +2237,7 @@ reseteye;
 
 #alias dmas {ll dm ariakas}
 
-#alias gtfo {gt -->  GET OUT!!; gt --> GET OUT!! (barbarians can wild and recall); tan hl}
+#alias gtfo {gt -->  GET OUT!!; gt --> GET OUT!! (barbarians can wild and recall); tan hlthis}
 #alias dofote {enter portal; say evil; enter portal; say will; enter portal; say win; enter portal}
 #alias bfsh bfg $myshaman
 #alias bfcl bfg $mycler
@@ -2580,10 +2579,9 @@ reseteye;
 	mem
 }
 
-#alias hl {mai hlthis}
+#alias hl mai {cancel; hlthis %1}
 #ALIAS {hlthis}
 {
-  cancel;
 	js heal %1;
 	healcounton;
 	dolater3 group
@@ -4471,7 +4469,7 @@ cancel;
 #action {^Mustakrakish, the ancient death troll glows a bright lunar white} {gt -->    TROLL CLEANSED  !!}
 #alias logsham {newses arc {$myshaman; mypw; ones; modeshaman; leaveinn; fly}  }
 #alias logshamo {newses bot {$myshaman; mypw; ones; modeshaman; fly}  }
-#alias logdru newses arc {wagner; mypw; 1; 1; modedruid; fly}
+#alias logdru newses dru {wagner; mypw; 1; 1; modedruid; fly}
 #alias newchar {newses %1 {makechar %2 n}}
 #alias lcvoy {lc meteorite; lc veil; lc clove; lc effigy}
 #alias plpd {present letter; present pendant}
