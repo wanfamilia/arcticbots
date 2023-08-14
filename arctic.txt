@@ -60,6 +60,7 @@
 #alias mapsky mapto $skyscout sky
 #alias mapsham mapto $myshaman mai
 #alias mapcler mapto $mycler mai
+#alias mapdru mapto $mydruid dru
 #alias mainmage {ll #alias mai mag; #alias ser bser}
 #alias mser {mai ser}
 #var {leadercommands} {lie|frolick|follow|op|swing|spin|en|ent|dance|swim|ent|flip|join|dive|pledge|run|ride|cut|lift|scale|crawl|search|scale|jump|trace|break|say|touch|push|pull|move|slide|stand|ent|enter|leave|squeeze|open|part|climb}
@@ -786,7 +787,8 @@ reseteye;
 {
 	assist $charmie
 }
-#alias buac {#10 {buy 10*acorn; put all.acorn pouch}}
+#alias buac {#10 {buy 10*acorn; put all.acorn $compouch}}
+#alias boak {#10 {buy 10*oak; put all.oak component.pouch}}
 #alias busl {#3 {buy 12*glass.sliver; put all.sliver pouch}}
 #alias swingbakali {
   crawl trunk; swing branch;
@@ -1463,6 +1465,10 @@ reseteye;
   #action {^You feel ready to} {rest; scribe 'stren'; drop all.strength};
   #show You feel ready to scribe again;
 }
+#alias trigbrdr {
+  #action {^You feel ready to} {nospamdo 3 mythdru};
+  #show You feel ready to scribe again;
+}
 #alias trigbrma {
   #action {^You feel ready to} {nospamdo 3 brsc stren};
   brsc stren;
@@ -1701,8 +1707,8 @@ reseteye;
   #delay 44 group form;
 }
 #alias comsus {sus; comm; }
-#alias dowraith {recite tattered.brown.scroll; say Sallahas fah'si nakasha ujishi ak'vasaj ish Ix'asahala}
 #var runspeed 0.23
+#alias dowraithsus {recite tattered.brown.scroll; say Sallahas fah'si nakasha ujishi ak'vasaj ish Ix'asahala}
 #alias tr {#map travel %1 $runspeed}
 #alias mapsmall {
   #map flag asciigraphics off;
@@ -2050,6 +2056,7 @@ reseteye;
   north;
 }
 
+#alias mref dru wagg ref
 #alias dovermi {south; exam lord; north}
 #alias rdbf {mag {
   js fireshield;
@@ -2237,7 +2244,7 @@ reseteye;
 
 #alias dmas {ll dm ariakas}
 
-#alias gtfo {gt -->  GET OUT!!; gt --> GET OUT!! (barbarians can wild and recall); tan hlthis}
+#alias gtfo {cancel; gt -->  GET OUT!!; gt --> GET OUT!! (barbarians can wild and recall); tan hlthis}
 #alias dofote {enter portal; say evil; enter portal; say will; enter portal; say win; enter portal}
 #alias bfsh bfg $myshaman
 #alias bfcl bfg $mycler
@@ -2769,7 +2776,7 @@ reseteye;
 }
 #ALIAS {kco}
 {
-	js cone
+	dru js cone
 }
 
 #alias fsuit {bot {get phosphorus pouch; sprinkle phosphorus suit}}
@@ -2795,7 +2802,7 @@ reseteye;
 
 #ALIAS {kel}
 {
-	jd el fi
+	dru jd el fi
 }
 
 #ALIAS {kfo}
@@ -2979,7 +2986,7 @@ reseteye;
 
 #ALIAS {kth}
 {
-	js thorn
+	dru js thorn
 }
 
 #ALIAS {lc}
@@ -3389,10 +3396,11 @@ myemail;	1;	1;	1;	1;
   #var vbuffover[bless] {js prayer};
   #alias lootcomp lootcompimpl;
  #alias sat dofood;
- #var hrec golden.orb;
+ #var hrec starjewel;
  #alias ligst donothing;
  #alias hew hem;
  #alias asf assist;
+ #alias ccthis jd cu cr;
  #alias assthis {ott};
  #action {^The Temple of Healing} {lrn; smile};
 	#alias fastmem {med; }
@@ -3870,7 +3878,7 @@ myemail;	1;	1;	1;	1;
 	quaff %1.potion
 }
 
-#alias ksd {jdm shards of}
+#alias ksd {mag resi; jdm shards of}
 #alias gostunt {
   w; s; open gate; w; w; w; s; w; s; s; s; w; s;
 }
@@ -4256,11 +4264,8 @@ myemail;	1;	1;	1;	1;
 #alias voy {mai {jd rit voy %1}}
 
 #alias rit {#show ->    use cc; cc}
-#ALIAS {cc}
-{
-	mai {jd cu cr %1; }
-}
-
+#alias cc ll ccthis
+#alias ccthis donothing
 #ALIAS {rp}
 {
 	jd rem poi
@@ -4336,6 +4341,7 @@ cancel;
 #alias logwhi {newses white {$mymage; mypw; #var food food; ones; fly; leaveinn; modemage; modewhite; lightrec }}
 #alias logmag {newses mag {wilbon; mypw; #var food food; 1; 1; fly; modemage; modewhite}}
 #alias mag {#white}
+#alias dru #dru
 #alias lightrec {js light $hrec}
 #alias modered {
   #alias mag {#red};
@@ -4469,7 +4475,8 @@ cancel;
 #action {^Mustakrakish, the ancient death troll glows a bright lunar white} {gt -->    TROLL CLEANSED  !!}
 #alias logsham {newses arc {$myshaman; mypw; ones; modeshaman; leaveinn; fly}  }
 #alias logshamo {newses bot {$myshaman; mypw; ones; modeshaman; fly}  }
-#alias logdru newses dru {wagner; mypw; 1; 1; modedruid; fly}
+#var mydruid wagner
+#alias logdru newses dru {$mydruid; mypw; 1; 1; modedruid; fly}
 #alias newchar {newses %1 {makechar %2 n}}
 #alias lcvoy {lc meteorite; lc veil; lc clove; lc effigy}
 #alias plpd {present letter; present pendant}
@@ -4486,6 +4493,7 @@ cancel;
 #var mycler knaak
 #alias mser mai ser
 #alias newcler newchar arc $mycler
+#alias newdru newchar dru $mydruid
 #alias newsham newchar arc $myshaman
 #alias newsky newchar sky $skyscout
 #alias newmage newchar mag $mymage
@@ -4515,9 +4523,19 @@ cancel;
   #alias vass vass2;
 }
 #alias thi {#thi}
+#alias csus {commune; sus}
 #alias modedruid {
+  #var compouch plain.component.pouch;
+  #alias coli jd su fa;
   #var circle1 {fa fo};
   #alias redru {rewin; modedruid};
+  #alias bigrest {cancel; rest; tan watch; #var resting 1; ban me; commune};
+  #action {^{\w+} pants heavily} {classif ref %%1};
+  #alias assthis donothing;
+  trigfly;
+  #alias kfs dru js flame;
+  #alias ccthis jd cu cr;
+  #action {^Leehf the master of nature} {lrn};
   #alias hp js par;
   #alias csn jd ice sto;
 }
@@ -4614,7 +4632,8 @@ cancel;
 	get pile
 }
 
-#ALIAS {ser}
+#alias ser ll serthis
+#ALIAS {serthis}
 {
 	jd cu ser
 }
@@ -4870,7 +4889,7 @@ cancel;
   #action {The dark tendrils squeeze and crush your soul} {caress sapphire};
 }
 
-#alias khurwraith {rec brown.scroll; say Sallahas fah'si nakasha ujishi ak'vasaj ish ix'asahala}
+#alias khurwraith {rec tattered.brown.scroll; say Sallahas fah'si nakasha ujishi ak'vasaj ish ix'asahala}
 #alias novoy {donothing %1; ct omen quest}
 #alias startomen {
   #alias othervoy novoy;
@@ -4904,6 +4923,7 @@ cancel;
   needbuff cloak of bravery;
   needbuff steelskin;
   needbuff heroism;
+  needbuff bless;
   needbuff strength of one;
   needbuff protection from evil;
   needbuff sacred ward;
@@ -4986,6 +5006,7 @@ cancel;
 {
   #alias bigrest donothing;
   #var pet Steamboat;
+  #alias lootme {get all $mypaladin; wear star; wear shield; wield sword};
   #alias checkphil {up alone; east; exam phil; exam scout; west; flee; st; #4 flee};
   #alias gts #all #show --> spirit;
   #alias checkpriest {up alone; east; east; open door south; south; exam priest};
@@ -4993,7 +5014,7 @@ cancel;
   #alias groupimpl group full;
   #alias oegc {cancel; get corpse; give corpse %1};
   eng paleng;
-  #var hrec coral.branch;
+  #var hrec fireball;
   #action {^Your hands tingle as a feeling of goodness} {ll #show -->       LAY ready} {7};
   #action {^Warriors' Training Room} {lrn; smile};
   #alias assthis palassthis;
@@ -5283,11 +5304,7 @@ cancel;
 	say @sumhealtemp
 }
 
-#ALIAS {sus}
-{
-	st;
-	c 'sus'
-}
+#ALIAS {sus} { dru js sus }
 
 
 #alias sysplay {
@@ -5618,7 +5635,7 @@ addlocates;
 	mai tan ser
 }
 
-#alias tc {mai tan cc}
+#alias tc {tan cc}
 #ALIAS {tw}
 {
 	tan watch; setfight 0;
@@ -5763,6 +5780,7 @@ addlocates;
 #highlight {A young mahkwahb boy grins mischievously at the hefty size}{green}
 #highlight {A young mahkwahb boy chuckles at the paltry size of your offer}{red}
 #highlight {barely bind} {light yellow}
+#highlight {Your white rune of protection fades} {yellow}
 #highlight {$warrior crashes into} {green}
 #HIGHLIGHT        {cloud kill}                {light yellow}               {5}
 #high {The cloud of light blinks one last time}{light yellow}
@@ -6125,7 +6143,7 @@ addlocates;
     {55}{lean}
     {56}{leap}
     {57}{learn}
-    {58}{leave}
+    {58}{lean}
     {59}{lend}
     {60}{let}
     {61}{lick}

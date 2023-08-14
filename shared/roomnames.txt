@@ -28,6 +28,7 @@ balinorth
 balsquare
 balsham
 balwar
+baldruid
 petrin
 dustmerch
 Northwinds
@@ -335,7 +336,9 @@ elric
 palcrypt
 palcrypt
 startlargus
+startblacken
 starticen
+icendragon
 startgreenen
 chartreuse
 illyoctrio
@@ -382,6 +385,7 @@ locatedractower
 mordrednomagic
 startcitdrac
 abovecitdrac
+clouddruid
 ckpick
 startbluff
 rahnkagi
@@ -443,6 +447,7 @@ aligngl
 tantwest
 startbalcombe
 balcledge
+balcserra
 serra
 lhex
 balcombe
@@ -605,3 +610,5 @@ dairlyshaman
 uthderek
 tantlord
 wilma
+hillshar
+icentemple
