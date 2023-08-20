@@ -125,7 +125,7 @@ frostybottom
 overdaggoraath
 daggorathturtle
 zmij
-ixpat
+ixpathatan
 gleam
 sanport
 sansouth
@@ -502,7 +502,9 @@ jaero
 mazuz
 vestiv
 cokbakali
+dazzlingwheel
 predraad3
+dazzlinghaven
 vinbank
 mythsh
 instinct mmtn 51 grizzly
@@ -536,7 +538,7 @@ uthlib
 khurreaver
 aran
 kerius
-dkspell uth
+dkspell uth jethro
 xanitha
 eyedroppers
 rainsong
@@ -612,3 +614,5 @@ tantlord
 wilma
 hillshar
 icentemple
+sancgates
+bwindl

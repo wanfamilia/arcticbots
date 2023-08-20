@@ -177,6 +177,7 @@
 #alias ghob {mai {jd gho ber; eat berry; drop all.berry}}
 #alias gbt {jd gho be; #3 {taste berry}; drop all.berry}
 
+#alias kgh {dru jd gra ha}
 #variable castpat {^{\s}{\w+}{\s+\[.+}{Cleric|White Robe|Red Robe|Shaman|Druid|Black Robe|Magic User}{$}}
 
 #alias gsk {js ghostskin}
@@ -371,6 +372,9 @@ reseteye;
 #alias domith {say Grant me your blessings for the battles to come}
 #alias stmo {store all.mote}
 
+#alias prewind {
+  dru js prevail
+}
 #alias sasu {mai sat; suel; aog; ll rest}
 #sub {loaf of bread} {fried chicken thigh}
 #sub {A guardian wrapped in blue robes}{A guardian wrapped in blue robes(enchant-scroll)}
@@ -529,6 +533,12 @@ reseteye;
   #action {^{[A-Z]\w+} {.+}{$tanksuffix}} {doas %%1} {8};
 } {6}
 
+#alias dazzlingrooms {
+  #action {^End of the Corridors} {mgo dazzlingwheel};
+  #action {^Haven from the Storm} {mgo dazzlinghaven};
+}
+
+#alias lootdazzling {say i have your glasses; get key; uog golden.chest}
 #alias autoassoff {
   #var autoassv 0;
   #unaction {^{[A-Z]\w+} {.+}{$tanksuffix}}
@@ -1151,7 +1161,7 @@ reseteye;
 #alias oeim {oe c 'i' me}
 #alias pbrl {push 2.button; reach ledge; st; e; jump guild}
 #action {^You have {\d+} devout fol}{#var vfollow %1}
-#action {{[A-Z]\w+} the {\w+\s?\w+}{$tanksuffix}} {ifpethit %1}
+#action {{[A-Z]\w+} the {\w+\s?\w*\s?\w*}{$tanksuffix}} {ifpethit %1}
 #alias ifpethit {
   #if {"$classes[%1]"=="^^"} {pethit %1};
 }
@@ -1188,7 +1198,7 @@ reseteye;
   };
 }
 
-#var alivefor 12 
+#var alivefor 60 
 #alias nospamalive {
   #format nnow {%T};
   #if {$nnow < $vactive + $alivefor} {nospamdo %1 %2 %3} {nospamimpl %1 %2 %3}
@@ -1258,7 +1268,7 @@ reseteye;
 #alias mythdru {
   st; runto u2sd; fsf; 7n2w2nws;
   rest; brew 'water'; scribe 'water'; drop all.water;
-  st; runto ne2s2e7su2nd; lrn;
+  st; runto ne2s2e7su2nd; ref me; lrn;
 }
 #alias mythbrew {
   st; runto 3sd7n2w2nws;
@@ -1430,8 +1440,8 @@ reseteye;
   rest;
 	get empty chest;
 	get blank chest;
-	mac brew empty '%0';
-	mac scribe blank '%0';
+	mac brew '%0';
+	mac scribe '%0';
 	put all.empty chest;
 	put all.blank chest;
 	drop brewed;
@@ -1669,6 +1679,7 @@ reseteye;
   #map flag static off;
   #map flag vtmap on;
   #action {^A violent vortex of wind forces your gaze skyward}{mac tempwind};
+  #action {^You summon the winds of Krynn}{mac tempwind};
   #action {^Alas, you cannot go that way} {#map undo};
   #action {^Center of the Celestial Temple} {mgoc};
   #action {^A Running Stream}{mgo shaydstream};
@@ -2890,7 +2901,7 @@ reseteye;
 }
 
 #alias klba {klb %1; mag ota; assthis}
-#alias jdm {mag jda}
+#alias jdm {mag jda %1 %2 %3; deep}
 #alias klbn {jd li bo}
 #ALIAS {klc}
 {
@@ -2981,7 +2992,7 @@ reseteye;
 #alias ksc mag {js scorch %1; deep}
 #ALIAS {ksw}
 {
-	js insect
+	dru js insect
 }
 
 #ALIAS {kth}
@@ -4333,7 +4344,7 @@ cancel;
 #alias bavash {bt2 toram vashka}
 #alias dnrs {#delay %1 {nrs %2}}
 #action {^A yellowish-{\w+} cloud} {nospam 3 oncloud}
-#alias oncloud {gt -->    GUST please}
+#alias oncloud {ll #show -->    cloud kill <--}
 #alias tmpa {%1 %2; ota; temp}
 #alias ksbt {tmpa ksb}
 #alias bqk {buy knowledge; quaff knowledge}
@@ -4526,13 +4537,17 @@ cancel;
 #alias csus {commune; sus}
 #alias modedruid {
   #var compouch plain.component.pouch;
+  #alias gow jd co wi;
+  #alias sat sus;
+  nopet;
+  #alias assthis tan watch;
   #alias coli jd su fa;
   #var circle1 {fa fo};
   #alias redru {rewin; modedruid};
   #alias bigrest {cancel; rest; tan watch; #var resting 1; ban me; commune};
   #action {^{\w+} pants heavily} {classif ref %%1};
-  #alias assthis donothing;
   trigfly;
+  #alias cls dru jd clear skie;
   #alias kfs dru js flame;
   #alias ccthis jd cu cr;
   #action {^Leehf the master of nature} {lrn};
@@ -4929,6 +4944,12 @@ cancel;
   needbuff sacred ward;
   needbuff sanctuary;
 }
+#alias ondrubuff {
+  needbuff iceshield;
+  needbuff enlarge;
+  needbuff barkskin;
+  needbuff blur;
+}
 #alias onmagebuff
 {
   needbuff invisibility;
@@ -5020,7 +5041,7 @@ cancel;
   #alias assthis palassthis;
   #action {disarms your weapon} {cancel; sysplay smb3_cannon; gw};
   #var circle1 {det ev};
-  #var weapon bastard.sword;
+  #var weapon ancient.sword;
   #action {^You are ready to slam again} {slam};
   #action {^You are now the new leader} {march};
   #action {^A gleaming silver medal warms up} {ll #show -->    Medal};
