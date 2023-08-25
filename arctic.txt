@@ -375,10 +375,17 @@ reseteye;
 #alias prewind {
   dru js prevail
 }
+
+#alias wino prewind north
+#alias wiso prewind south
+#alias wiwe prewind west
+#alias wiea prewind east 
 #alias sasu {mai sat; suel; aog; ll rest}
+#alias lootdazzling {say i have your glasses; uog golden.chest}
 #sub {loaf of bread} {fried chicken thigh}
 #sub {A guardian wrapped in blue robes}{A guardian wrapped in blue robes(enchant-scroll)}
 #high {A guard wrapped in red robes}{green}
+#sub {A guardian wrapped in black robes}{A guardian wrapped in black robes(ctcharmie)}
 #sub {silver jeweled bracelet} {silver jeweled bracelet(nytes)}
 #sub {the boots of speed}{the boots of speed(zmij)}
 #sub {simple mithril brooch}{simple mithril brooch(shoalquest)}
@@ -782,7 +789,12 @@ reseteye;
 #alias bufdar {bot buf dk}
 #alias rlcshark {gotar; js imp; van me; west; south; open gate; runto 3ws3wsw3sws4wundwsd4w4nw}
 
+#alias pracclaim {
+ #action {^You can pray to Zivilyn}{st; reclaim; lrn};
+ #show You can pray to Zivilyn;
+}
 #alias fshield {js fireshield}
+#alias recl {st; reclaim}
 #alias boo {jsm boon}
 #alias glob {js globe}
 #ACTION {{he begins to drool|is stunned!}}
@@ -1670,6 +1682,8 @@ reseteye;
 #alias bohj {ct Bohj!  Bohj! %1 ur ippistuxj ko!}
 #alias maft {#map exit %1 command {%1; %2 %3 %4 %5}}
 #alias runmyth {mrun mythsh}
+#alias petfirst {oe %1 %2; %1 %2}
+#alias bpet bot petfirst
 #alias mbef {#map exit %1 command {%2 %3 %4; %1}}
 #var bottomsize 3
 #alias mapon {
@@ -2259,6 +2273,7 @@ reseteye;
 #alias dofote {enter portal; say evil; enter portal; say will; enter portal; say win; enter portal}
 #alias bfsh bfg $myshaman
 #alias bfcl bfg $mycler
+#alias bfdr bfg $mydruid
 #alias bfwh bfg $mymage
 #alias bfth bfg $mythief
 #var mythief nikson
@@ -2790,6 +2805,7 @@ reseteye;
 	dru js cone
 }
 
+#alias kcu {dru js cult}
 #alias fsuit {bot {get phosphorus pouch; sprinkle phosphorus suit}}
 #alias noam {bot {north; ki ambassador}}
 #alias csn {mag ott; mag jd co sn}
@@ -2873,7 +2889,8 @@ reseteye;
 
 #ALIAS {kist}
 {
-	jd ice storm
+	st; c 'ice storm';
+  lootoff; #delay 20 looton;
 }
 
 #alias slst {slam %1; stri %1;}
@@ -4222,7 +4239,7 @@ myemail;	1;	1;	1;	1;
 
 #ALIAS {ref}
 {
-	js ref
+	dru js ref
 }
 
 #ALIAS {reload}
@@ -4538,16 +4555,16 @@ cancel;
 #alias modedruid {
   #var compouch plain.component.pouch;
   #alias gow jd co wi;
+  #var hrec fireball;
   #alias sat sus;
   nopet;
   #alias assthis tan watch;
   #alias coli jd su fa;
   #var circle1 {fa fo};
   #alias redru {rewin; modedruid};
-  #alias bigrest {cancel; rest; tan watch; #var resting 1; ban me; commune};
+  #alias bigrest {cancel; rest; tan watch; #var resting 1;};
   #action {^{\w+} pants heavily} {classif ref %%1};
   trigfly;
-  #alias cls dru jd clear skie;
   #alias kfs dru js flame;
   #alias ccthis jd cu cr;
   #action {^Leehf the master of nature} {lrn};
@@ -4555,6 +4572,7 @@ cancel;
   #alias csn jd ice sto;
 }
 #alias ktor js torna
+#alias cls dru jd clear skie;
 #alias pc {thi pick}
 #alias thuc {throat; unbalance; coup}
 #alias disablekal {runto 4e2s2wd2n;det;det plate;disable plate;!;eene;det;det chest in r;det 2.chest in r;det 3.chest in r; #3 disable chest in r; #3 disable 2.chest in r; #3 disable 3.chest in r;pick chest in r;pick 2.chest in r;pick 3.chest in r;wsww3n;learn all;3sessu2enn4w}
@@ -5802,6 +5820,7 @@ addlocates;
 #highlight {A young mahkwahb boy chuckles at the paltry size of your offer}{red}
 #highlight {barely bind} {light yellow}
 #highlight {Your white rune of protection fades} {yellow}
+#highlight {You stop focusing} {yellow}
 #highlight {$warrior crashes into} {green}
 #HIGHLIGHT        {cloud kill}                {light yellow}               {5}
 #high {The cloud of light blinks one last time}{light yellow}
@@ -6358,6 +6377,7 @@ addlocates;
     {burned black prayerbook}{soul leech}
     {sparkling black bracelet}{ft}
     {sandy green tablet}{iceshield}
+    {onyx tablet covered in flames}{firestorm}
     {volume of delicate crystalline pages}{chaos/read/moc}
     {leather tome pitted with rusty iron runes}{youth/identify/knock}
     {discolored helmet}{kern}
