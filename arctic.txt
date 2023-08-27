@@ -2060,7 +2060,9 @@ reseteye;
 	put ball belt
 }
 
-#ALIAS {doloot}
+
+#alias doloot dolootimpl
+#ALIAS {dolootimpl}
 {
   #alias dosplit {split %1};
 	get coins corpse;
@@ -2890,7 +2892,8 @@ reseteye;
 #ALIAS {kist}
 {
 	st; c 'ice storm';
-  lootoff; #delay 20 looton;
+  #alias doloot donothing;
+  #action {^You stop focusing}{looton};
 }
 
 #alias slst {slam %1; stri %1;}
@@ -3144,12 +3147,7 @@ reseteye;
 
 #ALIAS {looton}
 {
-	#alias doloot {
-	  get coins corpse;
-	  tw;
-	  exam corpse;
-	  get coins;
-	}
+	#alias doloot dolootimpl
 }
 
 #ALIAS {lp}
@@ -4558,6 +4556,7 @@ cancel;
   #var hrec fireball;
   #alias sat sus;
   nopet;
+  #alias ssk jd stone skin;
   #alias assthis tan watch;
   #alias coli jd su fa;
   #var circle1 {fa fo};
