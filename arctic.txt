@@ -594,6 +594,9 @@ reseteye;
   #if {"$classes[%2]" != ""} {%1 %2 %3};
 }
 
+#alias guildif {
+  #if {"$classes[%3]"=="%1"} {%2 %3}
+}
 #alias candrop {cancel; drop component; sellcomp}
 #alias blev {bot {pull lever; w}}
 #var vmasters {{CL}{cleric}{DA}{dark}{WA}{warrior}{BA}{barbarian}{DR}{druid}{PA}{paladin}{SH}{shaman}{SC}{scout}{TH}{thief}{WH}{white}{RE}{red}{BL}{black}}
@@ -797,14 +800,31 @@ reseteye;
 #alias recl {st; reclaim}
 #alias boo {jsm boon}
 #alias glob {js globe}
-#ACTION {{he begins to drool|is stunned!}}
+#ACTION {{he begins to drool}}
 {
 	#line log messages.txt;
 }
 {3}
 
+#action {{[A-Z]\w+} is stunned!} {onstun %1} {3}
+#action {{[A-Z]\w+} recovers and sits up} {unstun %1} {3}
 #alias gkc {get key corpse}
+#alias onstun {
+  guildif CL clerstun %1;
+}
 
+#alias unstun guildif CL clerunstun %1
+#alias clerunstun gtl %1 healer cleansed
+#alias clerstun
+{
+  gtl --> %1 healer STUNNED!;
+}
+
+#alias gtl {
+  gt %0;
+  dolog %0;
+}
+#action {^You utter the words, 'freedom'}{gtl freedom used}
 #ALIAS {ach}
 {
 	assist $charmie
@@ -1178,7 +1198,7 @@ reseteye;
   #if {"$classes[%1]"=="^^"} {pethit %1};
 }
 #alias ctdi {ct check #bots channel in discord}
-#alias gtri {gt kill risol, if you get booted from fight: stand, up}
+#alias gtri {gt kill risol, bash gavin, if you get booted from fight: stand, up}
 #alias pethit {
   #var petresc %1;
   #show Pet: %1;
@@ -2261,6 +2281,7 @@ reseteye;
 }
 
 #tab chernobog
+#tab shmyaka
 #tab cunningham
 #tab nahuatlipochty
 #tab paijietng
@@ -4549,14 +4570,18 @@ cancel;
   #alias vass vass2;
 }
 #alias thi {#thi}
+#alias stca jd storm call
+#alias podderek {push shrub; east; exam derek; exam brian}
 #alias csus {commune; sus}
 #alias modedruid {
   #var compouch plain.component.pouch;
   #alias gow jd co wi;
-  #var hrec fireball;
+  #var hrec shadow.orb;
   #alias sat sus;
+  #alias kimasq {north; cast 'ice storm'};
   nopet;
   #alias ssk jd stone skin;
+  #alias dosuun mac surrender monolith;
   #alias assthis tan watch;
   #alias coli jd su fa;
   #var circle1 {fa fo};
@@ -4844,7 +4869,8 @@ cancel;
 }
 #alias solknow {prune bush; present beaker; quaff green.potion}
 #alias hew {nbf healing wave}
-#alias hec {mai jd healing cloud}
+#alias hec {dru jd healing cloud}
+#alias enl {js enlarge}
 #alias boh {boa; hew}
 #alias nri {bot nbf righteous indignation}
 #alias brig {bot right}
@@ -5051,6 +5077,7 @@ cancel;
   #alia allnext donothing;
   #alias groupimpl group full;
   #alias oegc {cancel; get corpse; give corpse %1};
+  #var belt girdle;
   eng paleng;
   #var hrec fireball;
   #action {^Your hands tingle as a feeling of goodness} {ll #show -->       LAY ready} {7};
