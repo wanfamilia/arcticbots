@@ -11,6 +11,57 @@ Balifor Bay (Sh'iar),all,"Bali: Where the South Pier Meets the Bay, w,2n,3w4ne
  climb ladder to agro mobs - nw (mem room)
  2enwu (Karine) uus (Shi'ar)"
 Blood Sea (Istar),mid,Bal - 4se4n2e16ne5n3d
+orbbuffs,mid,"
+Mavlad(Sh/Ishb/Ishv/Gop/Rey/Dis) — 09/05/2023 5:43 AM
+== cleric spells ===========
+use orb 'steelskin'
+use orb 'fortify self'
+
+=== druid spells ===
+use orb 'enlarge'
+use orb 'stoneskin'
+
+== shaman spells =======
+use orb 'boiling blood'
+use orb 'sub resistance' magic
+use orb 'ancestral blessing'
+use orb 'ancestral spirit'
+use orb 'eth armor'
+use orb 'monstrous mantle'
+use orb 'omen'
+
+== mage spells ===========
+use orb 'globe of inv'
+use orb 'mental acuity'
+use orb 'vitrio shield'
+use orb 'lightn shield'
+use orb 'juke'
+use orb 'mirror'
+use orb 'folds'
+use orb 'spheres of absorption'
+use orb 'impr invis'
+use orb 'antimagic shell'
+use orb 'shield'
+use orb 'displacement'
+use orb 'watch eye'
+
+========= group spells x8 ====================
+use orb 'twisted fate'
+use orb 'arcane shell'
+use orb 'stone skin'
+use orb 'ghostskin'
+use orb 'heal boost'
+use orb 'ancestral shroud'
+use orb 'last chance'
+use orb 'delay death'
+use orb 'ancestral shroud'
+use orb 'sacred ward'
+use orb 'blur'
+use orb 'barkskin'
+use orb 'strength'
+use orb 'heroism'
+use orb 'protection of evil'
+"
 physixrecover,mid,"physix, ww, detect/disable stalactite/stalagmite, south, detect/disable stalactite/stalagmite, south, kill shonorr, down"
 intbonus,,"4 heals: 19int; 5 mists: 23 int; 6 mists: 28int, 26 int + 5 mem, 25int + 10 mem, 24int + 15 mem, 22int + 20mem; 7 mists: 27int + 20mem"
 podhammer,high,"blodesign, underbridge, hatchet, hack corpse, kerius, wield hatchet, hack kerius.corpse, derek, display head"

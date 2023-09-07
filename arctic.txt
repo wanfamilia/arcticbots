@@ -807,6 +807,7 @@ reseteye;
 {3}
 
 #action {{[A-Z]\w+} is stunned!} {onstun %1} {3}
+#action {{[A-Z]\w+} succumbs to the nightmare} {onstun %1} {3}
 #action {{[A-Z]\w+} recovers and sits up} {unstun %1} {3}
 #alias gkc {get key corpse}
 #alias onstun {
@@ -815,10 +816,7 @@ reseteye;
 
 #alias unstun guildif CL clerunstun %1
 #alias clerunstun gtl %1 healer cleansed
-#alias clerstun
-{
-  gtl --> %1 healer STUNNED!;
-}
+#alias clerstun { gtl --> %1 healer STUNNED!; }
 
 #alias gtl {
   gt %0;
@@ -2353,8 +2351,11 @@ reseteye;
 	mem stop '%1 %2' '%1 %2' '%1 %2' '%1 %2';
 }
 
+#alias jdo {use dragon.orb '%1 %2' %3}
+#alias jso {use dragon.orb '%1' %2}
+#alias vda pot dazzling
 #alias givemage {givecomp !protection $mymage}
-#alias givecler {givecomp protection $mycler}
+#alias givecler {givecomp protection $mycler; givecomp healing $mycler}
 #alias shoutitem shout paying 50k for succubus wings, 100k for vermillion suit
 #ALIAS {formshowgroup}
 {
@@ -3433,6 +3434,7 @@ myemail;	1;	1;	1;	1;
 	mount
 }
 
+#alias crookmob {say Winds of autumn's harvest, I summon thee; #var pet autumn.spirit; onepet}
 #ALIAS {modecleric}
 {
 	#variable food $clerfood;
@@ -3443,7 +3445,7 @@ myemail;	1;	1;	1;	1;
   #var vbuffover[bless] {js prayer};
   #alias lootcomp lootcompimpl;
  #alias sat dofood;
- #var hrec starjewel;
+ #var hrec fireball;
  #alias ligst donothing;
  #alias hew hem;
  #alias asf assist;
@@ -4342,7 +4344,7 @@ myemail;	1;	1;	1;	1;
 #alias rgr mai {rg %1; rest}
 #alias mrg {mai rgr}
 #alias cleancomp1 {
-  get all.!alteration.!protection.component.!web $compouch;
+  get all.!alteration.!healing.!protection.component.!web $compouch;
 }
 #alias cleancomp2 {get all.!web.!acorn component.pouch}
 #alias barr be $arrival
@@ -4364,6 +4366,8 @@ myemail;	1;	1;	1;	1;
 }
 #alias cleancomp cleancomp1
 #alias dropcomp {cleancomp; dropallcomp}
+#alias tepet tether $pet
+#alias btp bot tepet
 #alias sellcomp {cleancomp; sell20}
 #alias dropallcomp {drop all.component}
 #alias sell20 {dimo; put all.web belt; #20 {sell component}}
@@ -4403,7 +4407,8 @@ cancel;
 #alias modewhite {
   #alias goway {goto wilma};
   #alias bfm {bot follow pryor; #delay 1 group form};
-  #var hrec jeweled.sceptre;
+  #var hrec fireball;
+  #var belt girdle;
   #alias ide {rec identify};
   #var held clear.sphere;
   #var compouch crafted.pouch;
@@ -4534,6 +4539,8 @@ cancel;
 #alias logpal {logbot {$mypaladin; mypw; ones; modepala; fly; leaveinn; jd rig ind}}
 #alias logwar {logbot {dawsen; mypw; 1; 1; modepala; modewar; fly}}
 #alias logbar {logbot {cunningham; mypw; 1; 1; modebarb; fly}}
+#alias logbaro {newses bar {cunningham; mypw; 1; 1; modebarb; fly}}
+
 #alias logmou logbot {penniman; mypw; 1;1; modepala; fly}
 #alias logdar logbot {iyler; mypw; 1; 1; modepala; modedar; fly}
 #alias logwaro newses war {dawsen; mypw; 1; 1; modepala; modewar; fly; #alias bot #war;}
