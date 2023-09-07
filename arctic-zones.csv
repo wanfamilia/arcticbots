@@ -11,6 +11,11 @@ Balifor Bay (Sh'iar),all,"Bali: Where the South Pier Meets the Bay, w,2n,3w4ne
  climb ladder to agro mobs - nw (mem room)
  2enwu (Karine) uus (Shi'ar)"
 Blood Sea (Istar),mid,Bal - 4se4n2e16ne5n3d
+dragonorb tutorial,mid,"
+- make sure you have 28int before holding or using
+- do not remove orb, recite scrolls if you want to let go
+- sample usage:  use dragon.orb 'arcane shell' rimuru
+"
 orbbuffs,mid,"
 == cleric spells ===========
 use orb 'steelskin'

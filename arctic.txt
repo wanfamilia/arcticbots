@@ -4920,12 +4920,19 @@ cancel;
   needbuff improved invisibility;
 }
 
-#alias onheatbuff
-{
-  needbuff steelskin;
+#alias oninfernobuff {
+  onheatbuff;
   needbuff iceshield;
   needbuff iceskin;
   needbuff fortify self;
+}
+#alias onheatbuff
+{
+  needbuff steelskin;
+  needbuff white rune;
+  needbuff globe of invulnerability;
+  needbuff arcane shell;
+  needbuff boon;
 }
 #alias modemage {
   nutr $food;
