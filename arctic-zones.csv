@@ -59,7 +59,7 @@ use orb 'blur'
 use orb 'barkskin'
 use orb 'strength'
 use orb 'heroism'
-use orb 'protection of evil'
+use orb 'protection from evil'
 "
 physixrecover,mid,"physix, ww, detect/disable stalactite/stalagmite, south, detect/disable stalactite/stalagmite, south, kill shonorr, down"
 intbonus,,"4 heals: 19int; 5 mists: 23 int; 6 mists: 28int, 26 int + 5 mem, 25int + 10 mem, 24int + 15 mem, 22int + 20mem; 7 mists: 27int + 20mem"

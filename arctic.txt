@@ -819,7 +819,8 @@ reseteye;
 #alias clerstun { gtl --> %1 healer STUNNED!; }
 
 #alias gtl {
-  gt %0;
+  cancel; gt %0;
+  #delay 1 #ats #show %0;
   dolog %0;
 }
 #action {^You utter the words, 'freedom'}{gtl freedom used}
@@ -4919,10 +4920,21 @@ cancel;
   needbuff improved invisibility;
 }
 
+#alias onheatbuff
+{
+  needbuff steelskin;
+  needbuff iceshield;
+  needbuff iceskin;
+  needbuff fortify self;
+}
 #alias modemage {
   nutr $food;
   #alias fastmem {deep};
   #alias ser inac jd cu ser;
+  #var vbuffover[steelskin] {jso steelskin};
+  #var vbuffover[iceshield] {jso iceshield};
+  #var vbuffover[iceskin] {jso iceskin};
+  #var vbuffover[fortify self] {jdo fortify self};
   #alias rs donothing;
   #alias lootcomp lootcompimpl;
   #alias assthis ott;
@@ -5837,6 +5849,7 @@ addlocates;
 #highlight {Steamboat} {magenta}
 #highlight {Blackness grows above Lord Verminaard's head as a dark visage} {red}
 #highlight {Maritta peeks her head in the door} {green}
+#highlight {the Dragon Emperor's magical shield absorbs the brunt}{yellow}
 #highlight {'Free to rule these lands!'} {yellow}
 #highligh {The Outer Gate of the Tower of the Stars} {green}
 #highlight {The ball of flame detonates in a violent explosion} {green}
