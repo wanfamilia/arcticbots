@@ -809,6 +809,7 @@ reseteye;
 #action {{[A-Z]\w+} is stunned!} {onstun %1} {3}
 #action {{[A-Z]\w+} succumbs to the nightmare} {onstun %1} {3}
 #action {{[A-Z]\w+} recovers and sits up} {unstun %1} {3}
+#action {{[A-Z]\w+} wakes up from} {unstun %1} {3}
 #alias gkc {get key corpse}
 #alias onstun {
   guildif CL clerstun %1;
@@ -2944,7 +2945,7 @@ reseteye;
 }
 
 #alias klba {klb %1; mag ota; assthis}
-#alias jdm {mag jda %1 %2 %3; deep}
+#alias jdm {mag jda %1 %2 %3; mag deep}
 #alias klbn {jd li bo}
 #ALIAS {klc}
 {
@@ -4323,7 +4324,8 @@ myemail;	1;	1;	1;	1;
 
 #alias sgl {jd sp gl}
 
-#alias jsm mag js
+#alias jsm {mag js %1 %2; mag deep }
+#alias ksp {jdm pris spray; mag ota}
 #ALIAS {rps}
 {
 	jsm repo %1;
@@ -4408,7 +4410,7 @@ cancel;
 #alias modewhite {
   #alias goway {goto wilma};
   #alias bfm {bot follow pryor; #delay 1 group form};
-  #var hrec fireball;
+  #var hrec dragon.orb;
   #var belt girdle;
   #alias ide {rec identify};
   #var held clear.sphere;
@@ -4601,7 +4603,6 @@ cancel;
   #alias ccthis jd cu cr;
   #action {^Leehf the master of nature} {lrn};
   #alias hp js par;
-  #alias csn jd ice sto;
 }
 #alias ktor js torna
 #alias cls dru jd clear skie;
@@ -4920,28 +4921,43 @@ cancel;
   needbuff improved invisibility;
 }
 
+#alias ongleambuff {
+  onheatbuff;
+  needbuff juke;
+  needbuff preservation;
+}
 #alias oninfernobuff {
   onheatbuff;
-  needbuff iceshield;
   needbuff iceskin;
-  needbuff fortify self;
 }
 #alias onheatbuff
 {
-  needbuff steelskin;
-  needbuff white rune;
+  orb1 steelskin;
+  orb1 iceshield;
+  orb2 fortify self;
+  needbuff heal boost;
+  orb2 ancestral blessing;
+  orb1 iceskin;
   needbuff globe of invulnerability;
   needbuff arcane shell;
+  needbuff white rune;
   needbuff boon;
+  dispel 'firesh';
+}
+
+#alias orb1 {
+  #var vbuffover[%1] {mac jso %1};
+  needbuff %1;
+}
+#alias orb2 {
+  #var vbuffover[%1 %2] {mac jdo %1 %2};
+  needbuff %1 %2;  
 }
 #alias modemage {
   nutr $food;
   #alias fastmem {deep};
   #alias ser inac jd cu ser;
-  #var vbuffover[steelskin] {jso steelskin};
-  #var vbuffover[iceshield] {jso iceshield};
-  #var vbuffover[iceskin] {jso iceskin};
-  #var vbuffover[fortify self] {jdo fortify self};
+  #var vbuffover[heal boost] {mac jdo heal boost $mymage};
   #alias rs donothing;
   #alias lootcomp lootcompimpl;
   #alias assthis ott;
@@ -5857,6 +5873,7 @@ addlocates;
 #highlight {Blackness grows above Lord Verminaard's head as a dark visage} {red}
 #highlight {Maritta peeks her head in the door} {green}
 #highlight {the Dragon Emperor's magical shield absorbs the brunt}{yellow}
+#highlight {The sparkling mist fades away from sigh}{yellow}  
 #highlight {'Free to rule these lands!'} {yellow}
 #highligh {The Outer Gate of the Tower of the Stars} {green}
 #highlight {The ball of flame detonates in a violent explosion} {green}
