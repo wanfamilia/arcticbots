@@ -486,10 +486,11 @@ reseteye;
 
 #ACTION {^{\w+} comes to your rescue! You're thankful, but a bit dazed}
 {
-	tan watch; mota %1;
+	onrescue %1;
 }
 {5}
 
+#alias onrescue {tan watch; mota %1}
 #alias gate {
   #if {"%1"!=""} {#var pet %1};
   js gate $pet;
@@ -2915,6 +2916,7 @@ reseteye;
 
 #ALIAS {kist}
 {
+  boa;
 	st; c 'ice storm';
   #alias doloot donothing;
   #action {^You stop focusing}{looton};
@@ -2969,7 +2971,7 @@ reseteye;
 }
 
 #alias dosheaf {w alone; get sheaf pants; present sheaf; #4 flee}
-#alias sph {js sphere}
+#alias sph jsm sphere
 #ALIAS {kma}
 {
 	js magic
@@ -3447,8 +3449,8 @@ myemail;	1;	1;	1;	1;
   #var vbuffover[bless] {js prayer};
   #alias lootcomp lootcompimpl;
  #alias sat dofood;
- #var hrec fireball;
- #alias ligst donothing;
+ #var hrec white.banner;
+ #alias ligst lightrec;
  #alias hew hem;
  #alias asf assist;
  #alias ccthis jd cu cr;
@@ -4930,12 +4932,17 @@ cancel;
   onheatbuff;
   needbuff iceskin;
 }
+
+#alias onorbbuff {
+  orb2 antimagic shell;
+  needbuff heal boost;
+  orb1 steelskin;
+}
 #alias onheatbuff
 {
-  orb1 steelskin;
+  onorbbuff;
   orb1 iceshield;
   orb2 fortify self;
-  needbuff heal boost;
   orb2 ancestral blessing;
   orb1 iceskin;
   needbuff globe of invulnerability;
@@ -4945,6 +4952,9 @@ cancel;
   dispel 'firesh';
 }
 
+#alias vbh {pot brewed.heal}
+#alias mshard {msw shards prismatic}
+#alias mprism {msw prismatic shards}
 #alias orb1 {
   #var vbuffover[%1] {mac jso %1};
   needbuff %1;
@@ -4959,9 +4969,9 @@ cancel;
   #alias ser inac jd cu ser;
   #var vbuffover[heal boost] {mac jdo heal boost $mymage};
   #alias rs donothing;
+  #var weapon heavy.mace;
   #alias lootcomp lootcompimpl;
   #alias assthis ott;
-  #action {disarms your weapon} {cancel; gw};
   #var {circle1} {infrav};
 }
 #alias pfu {pf me}
@@ -5108,6 +5118,7 @@ cancel;
 #alias dokhita {stand; east; enter cave}
 #alias hemr {hem; mai rest}
 #alias paleng {strike %1; bpa}
+#action {disarms your weapon} {cancel; sysplay smb3_cannon; gw};
 #alias modepala
 {
   #alias bigrest donothing;
@@ -5125,7 +5136,6 @@ cancel;
   #action {^Your hands tingle as a feeling of goodness} {ll #show -->       LAY ready} {7};
   #action {^Warriors' Training Room} {lrn; smile};
   #alias assthis palassthis;
-  #action {disarms your weapon} {cancel; sysplay smb3_cannon; gw};
   #var circle1 {det ev};
   #var weapon ancient.sword;
   #action {^You are ready to slam again} {slam};
