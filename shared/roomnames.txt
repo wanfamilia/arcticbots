@@ -557,6 +557,7 @@ ritvermi
 zhultar
 instinct sky 32
 maritta
+startelvan
 startgalazor
 mystictunnel
 irdasphinx
@@ -620,3 +621,6 @@ icentemple
 sancgates
 bwindl
 qualivelanos
+thiefcove
+shoalshop
+shoaloctopus

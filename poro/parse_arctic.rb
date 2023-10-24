@@ -104,7 +104,7 @@ class ParseArctic
   end
 
   def gag?(line)
-    line.strip.empty? || (line =~ /^\w+(( the)? (clay|fearsome blue|bronze) (dragon|golem))? (flies|leaves|arrives|bursts)/) ||
+    line.strip.empty? || (line =~ /^\w+(( the)? (clay|fearsome blue|bronze) (dragon|golem))? (flies|leaves|arrives|bursts|swims)/) ||
       (line =~ /^You feel a .whoosh/) || (line =~ /^The spirit/) || (line =~ /^\w+:/) || (line =~ /^:/)
   end
 

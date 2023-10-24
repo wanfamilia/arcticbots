@@ -799,6 +799,7 @@ reseteye;
 }
 #alias fshield {js fireshield}
 #alias recl {st; reclaim}
+#action {^You can pray to Zivilyn}{gtl --> Reclaim avaiable};
 #alias boo {jsm boon}
 #alias glob {js globe}
 #ACTION {{he begins to drool}}
@@ -816,6 +817,16 @@ reseteye;
   guildif CL clerstun %1;
 }
 
+
+#action {^The cloud of light blinks one last time}{
+  cloudgone
+}
+#alias cloudgone donothing
+#action {^You utter the words, 'healing cloud'}{dolog --> cloud up}
+#alias drucloudgone {
+  dolog --> Cloud gone;
+  #delay 1 #show --> Cloud gone;
+}
 #alias unstun guildif CL clerunstun %1
 #alias clerunstun gtl %1 healer cleansed
 #alias clerstun { gtl --> %1 healer STUNNED!; }
@@ -1417,6 +1428,7 @@ reseteye;
   modepala;
   #alias fastmem {ban me};
   #var engvar chd;
+  #var hrec mace;
   #action {^Cloudreaver looms} {lrn; smile};
   #var food cheese;
   #alias dorescue {cancel; st; rescue %%1; dhe; batt; gore};
@@ -2202,6 +2214,7 @@ reseteye;
 	#3 dobooze;
 }
 
+#alias bsip bot dosip
 #alias teth {js teth}
 #alias teba {teth bannon}
 #ALIAS {dotsu2}
@@ -2356,6 +2369,7 @@ reseteye;
 
 #alias jdo {use dragon.orb '%1 %2' %3}
 #alias jso {use dragon.orb '%1' %2}
+#alias orbout jdo mas tel zardonna
 #alias vda pot dazzling
 #alias givemage {givecomp !protection $mymage}
 #alias givecler {givecomp protection $mycler; givecomp healing $mycler}
@@ -2914,7 +2928,8 @@ reseteye;
 	js harm
 }
 
-#ALIAS {kist}
+#alias kist dru kistimpl
+#ALIAS {kistimpl}
 {
   boa;
 	st; c 'ice storm';
@@ -3247,7 +3262,7 @@ reseteye;
 #ALIAS {makebar} {makechar %1 n; 7;6;5;9; finchar}
 
 #alias enci {enc %1; ide %1 in inventory}
-#alias enlo {enc %1; rlore %1; hold pearl}
+#alias enlo {enc %1; rlore %1; hold $hrec}
 #alias makechar
 {
 	start;	%1;	y;
@@ -3488,7 +3503,6 @@ myemail;	1;	1;	1;	1;
 #alias rgab {brs %1; rga %1}
 #alias swapout {swap me %1; group form; fol me}
 
-#alias hlr {hl %1; rest}
 #alias rlckhur {gobal; js imp; runto s4e8n4wn3wn2w4nwn; lcharm; lc tablet}
 #alias novoyyet {donothing %1; ct If I deactivate my ethical subroutines, I could insist on yet another ritual voyage run}
 #alias modeshaman {
@@ -4412,7 +4426,7 @@ cancel;
 #alias modewhite {
   #alias goway {goto wilma};
   #alias bfm {bot follow pryor; #delay 1 group form};
-  #var hrec dragon.orb;
+  #var hrec fireball;
   #var belt girdle;
   #alias ide {rec identify};
   #var held clear.sphere;
@@ -4588,7 +4602,8 @@ cancel;
 #alias modedruid {
   #var compouch plain.component.pouch;
   #alias gow jd co wi;
-  #var hrec shadow.orb;
+  #var hrec banner;
+  #alias cloudgone drucloudgone;
   #alias sat sus;
   #alias kimasq {north; cast 'ice storm'};
   nopet;
@@ -4608,6 +4623,7 @@ cancel;
 }
 #alias ktor js torna
 #alias cls dru jd clear skie;
+#alias st4 #4 strike
 #alias pc {thi pick}
 #alias thuc {throat; unbalance; coup}
 #alias disablekal {runto 4e2s2wd2n;det;det plate;disable plate;!;eene;det;det chest in r;det 2.chest in r;det 3.chest in r; #3 disable chest in r; #3 disable 2.chest in r; #3 disable 3.chest in r;pick chest in r;pick 2.chest in r;pick 3.chest in r;wsww3n;learn all;3sessu2enn4w}
@@ -4952,9 +4968,8 @@ cancel;
   dispel 'firesh';
 }
 
+#alias dfs dispel 'fireshi'
 #alias vbh {pot brewed.heal}
-#alias mshard {msw shards prismatic}
-#alias mprism {msw prismatic shards}
 #alias orb1 {
   #var vbuffover[%1] {mac jso %1};
   needbuff %1;
@@ -5132,12 +5147,12 @@ cancel;
   #alias oegc {cancel; get corpse; give corpse %1};
   #var belt girdle;
   eng paleng;
-  #var hrec fireball;
+  #var hrec orb.justice;
   #action {^Your hands tingle as a feeling of goodness} {ll #show -->       LAY ready} {7};
   #action {^Warriors' Training Room} {lrn; smile};
   #alias assthis palassthis;
   #var circle1 {det ev};
-  #var weapon ancient.sword;
+  #var weapon bastard.sword;
   #action {^You are ready to slam again} {slam};
   #action {^You are now the new leader} {march};
   #action {^A gleaming silver medal warms up} {ll #show -->    Medal};
@@ -5400,8 +5415,11 @@ cancel;
 #var paldrink waterskin;
 #alias fleethis {cancel; #3 {st; flee}}
 #alias bfl bot fleethis
+#alias mfl mag fleethis
 #alias lfl ll fleethis
-
+#alias mprism mac mag msw prismat shard
+#alias mshard mac mag msw shard prismat
+#alias drfa {#5 drn faint}
 #alias newfood {
   oe elixir;
   pour large.skin out;
@@ -5452,6 +5470,8 @@ cancel;
 #alias kpr {bot {punch %1; parry}}
 #sub {hungry. feed me!} {warrior needs food, badly}
 #sub {The End of the Passage} {Lemuria ICE}
+#alias toplines {#split %1 3}
+#sub {shredded by shards of ice}{-> shredded by shards of Ice}
 #sub {The Chamber of Winter} {Lemuria WALL} 
 #sub {The Chamber of Autumn} {Lemuria WOOD} 
 #sub {The Chamber of Spring} {Lemuria PLATE} 
@@ -5613,6 +5633,9 @@ addlocates;
 #alias gomyth {puf stronghold; west; fsf; up; buy cheese}
 #alias folicupe {kas foliage; runto ese2s4e2sw4swsws2w2sw5sw3sws2ds; lcb; lcb}
 
+#alias dazzle1 {sph; mrun dazzlingwheel}
+#alias dazzle2 {mrun merclead}
+#alias dazzle3 mrun dazzlecross
 #alias brewsac dobrew sacred
 #alias brewfor dobrew fortify
 #alias brewher dobrew heroism
