@@ -130,7 +130,7 @@
 #alias dolog {#line log messages.txt}
 #alias nolog {#alias dolog donothing}
 #alias messlog {#alias dolog #line log messages.txt}
-#ACTION {^%w {tell|shout|yell|say|clanmate}{.?\s}}
+#ACTION {^%w {tell\s|tells\s|shout.? '|yell.? '|say.? '|clanmate}}
 {
   dolog;
 }
@@ -822,7 +822,7 @@ reseteye;
   cloudgone
 }
 #alias cloudgone donothing
-#action {^You utter the words, 'healing cloud'}{dolog --> cloud up}
+#action {^With a twinkle, a cloud of light appear}{dolog --> cloud up}
 #alias drucloudgone {
   dolog --> Cloud gone;
   #delay 1 #show --> Cloud gone;
@@ -2929,6 +2929,7 @@ reseteye;
 }
 
 #alias kist dru kistimpl
+#alias kls {boa; jd li st}
 #ALIAS {kistimpl}
 {
   boa;

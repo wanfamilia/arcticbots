@@ -488,6 +488,7 @@ stoneskin spire
 tocloud
 underbridge
 kingroad
+havennpp
 openbook
 palbank
 irdasignet
@@ -624,3 +625,4 @@ qualivelanos
 thiefcove
 shoalshop
 shoaloctopus
+amothus
