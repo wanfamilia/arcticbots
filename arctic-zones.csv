@@ -558,16 +558,16 @@ library arcana: spin carousel, u;read pedestal; ;w;e;u;s;s;listen gnome;enter po
 gigantic mass of green crystal: rot the crystal, then go w s, kill a slime, eat the ooze, then search glob over and over till yellow ooze dies, go n e s
 the Center of the universe: 'fly self', w, say yes, s, c 'cold snap', catch nixie, n, n, break orb, get robe, wear robe, e, ki demarax, c 'disp m' shard then c 'floating disc', rem all, put all disc....can bring them to next test
 "
-mage test 2,,"
+mage test 2a,,"
 a Forgotten conclave dungeon: rats n, get all skeleton; e; kill rat; get corpse; n; feed cat; s; w; n; o cat kill golem; o cat kill mage; listen mage
 
 in a messy courtyard: n; shake flower; fan bees golem; get key corpse; w; spellup; s; get beaker; n; quaff beaker; s; n; e; s; flee; w; frag rat; s; eat mushroom; squeeze hole
 
 before a Strange Structure of Rocks: search bookcase, get weapon, detect magic scrolls, throw away force bolt, recite stoneskin self
 
-Outside a Strange Hut: c 'light', op door n;north;take prism;c 'light' prism;take broom;ignite broom;wie broom;wear prism;c 'shi';c 'blur' self;c 'rep' self, check score to make sure prism is working, blur, shield, strength, improved invis, repose, e, ki beast
+Outside a Strange Hut: c 'light', op door n;north;take prism;c 'light' prism;take broom;ignite broom;wie broom;wear prism;c 'shi';c 'blur' self;c 'rep' self, check score to make sure prism is working, blur, shield, strength, improved invis, repose, e, ki beast"
 
-Brightly lit room: look flesh;break bones;wie bone;look n;pry ruby; n;e;c 'fireball' ice.golem;c 'gust';s;c 'cold snap' fire.golem;c 'gust';e;c 'gust' sand.golem;c 'gust', gust on sand vs. mage to disable his magic, n;e;s;e, flip bone is possible
+mage test 2b,,"Brightly lit room: look flesh;break bones;wie bone;look n;pry ruby; n;e;c 'fireball' ice.golem;c 'gust';s;c 'cold snap' fire.golem;c 'gust';e;c 'gust' sand.golem;c 'gust', gust on sand vs. mage to disable his magic, n;e;s;e, flip bone is possible
 
 Standing on a ledge: squeeze crack, l rubble;l pile;l refuse;l rocks;l bones, rummage pile;rummage refuse;search pile;search refuse; l boulder... roll boulder statue? roll boulder? c 'c l';lolook crack;look tree;look cliff;squeeze crack move stones;n;n;l crack;take all crack;wie hammer fight statue, flee, fight hands, go back fight statue
 

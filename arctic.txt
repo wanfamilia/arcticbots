@@ -111,7 +111,7 @@
 #alias kw {ll oe %1 %2 %3 %4; gt %1 %2 %3 %4; #all {%1 %2 %3 %4}}
 #alias kw2 {ll oe %1 %2;  gt %1 %2; #all {%1 %2}}
 #alias brst {sr me; air me; brsc stre}
-#alias oegc {oe get all.corpse; get all.corpse; oe give all.corpse %1}
+#alias oegc {oe get all.corpse; get all.corpse; oe give all.corpse %1; give corpse %1}
 #alias otl {m1 ota}
 #alias eject {gt eject; rr}
 #var inpat {^You feel up to using {\w+} again}
@@ -716,9 +716,6 @@ reseteye;
 
 #alias showclans {
   showclan evil;
-  showclan RISE;
-  showclan SHLD;
-
 }
 
 #var oldclans {}
@@ -737,12 +734,15 @@ reseteye;
 #alias repclan {ctell %1:$clans[%1][];}
 
 #alias inclan {
-  #var clans[%1][%2] 1
+  #var clans[%1][%2] 1;
+  #if {"$evils[%2]"=="1"} {
+    #var clans[evil][%2] 1;
+  };
 }
 
 #var evils {{Bo}{1}{Malice}{1}{Nguyen}{1}{Bespee}{1}{Mousasi}{1}{Abom}{1}{Tenten}{1}{Qwiz}{1}{Sano}{1}{Zor}{1}{Seagal}{1}
   {Dutch}{1}{Trautman}{1}{Schmendrick}{1}{Evelynn}{1}{Fueling}{1}{Pacific}{1}
-  {Balanar}{1}{Lizette}{1}{Derpenstein}{1}
+  {Balanar}{1}{Lizette}{1}{Derpenstein}{1}{Yazzi}{1}{Yaza}{1}{Rishi}{1}
 }
 
 #alias eachmin {#ticker e60 {%0} 63}
@@ -3124,9 +3124,11 @@ reseteye;
 	#session arc 72.14.183.147 2700
 }
 
-#ALIAS {logwin}
+#alias logwin logport $mainport
+#alias logdev logport $devport
+#ALIAS {logport}
 {
-	#session arc mud.arctic.org 2700;
+	#session arc mud.arctic.org %1;
 	#split $gsizep $bottomsize;
 	reload;
 	platformwin
@@ -3465,7 +3467,7 @@ myemail;	1;	1;	1;	1;
   #var vbuffover[bless] {js prayer};
   #alias lootcomp lootcompimpl;
  #alias sat dofood;
- #var hrec white.banner;
+ #var hrec diamond;
  #alias ligst lightrec;
  #alias hew hem;
  #alias asf assist;
@@ -4427,7 +4429,7 @@ cancel;
 #alias modewhite {
   #alias goway {goto wilma};
   #alias bfm {bot follow pryor; #delay 1 group form};
-  #var hrec fireball;
+  #var hrec ogre.spear;
   #var belt girdle;
   #alias ide {rec identify};
   #var held clear.sphere;
@@ -4603,7 +4605,7 @@ cancel;
 #alias modedruid {
   #var compouch plain.component.pouch;
   #alias gow jd co wi;
-  #var hrec banner;
+  #var hrec ogre.spear;
   #alias cloudgone drucloudgone;
   #alias sat sus;
   #alias kimasq {north; cast 'ice storm'};
@@ -5148,7 +5150,7 @@ cancel;
   #alias oegc {cancel; get corpse; give corpse %1};
   #var belt girdle;
   eng paleng;
-  #var hrec orb.justice;
+  #var hrec fireball;
   #action {^Your hands tingle as a feeling of goodness} {ll #show -->       LAY ready} {7};
   #action {^Warriors' Training Room} {lrn; smile};
   #alias assthis palassthis;
@@ -6102,7 +6104,7 @@ addlocates;
 
 #MACRO {\eOw}
 {
-	amac flee;
+	mac flee;
 	st; mlea;
 
 }

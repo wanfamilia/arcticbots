@@ -86,6 +86,10 @@ class GitHelp
     "cx ssh -s #{app} -e #{env} #{server}"
   end
 
+  def download(remote_path)
+    "cx download --stack #{app} -e #{env} --server #{server} #{remote_path}"
+  end
+
   def prod
     @env = 'production'
     self
