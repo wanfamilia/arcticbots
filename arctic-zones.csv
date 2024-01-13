@@ -566,7 +566,6 @@ in a messy courtyard: n; shake flower; fan bees golem; get key corpse; w; spellu
 before a Strange Structure of Rocks: search bookcase, get weapon, detect magic scrolls, throw away force bolt, recite stoneskin self
 
 Outside a Strange Hut: c 'light', op door n;north;take prism;c 'light' prism;take broom;ignite broom;wie broom;wear prism;c 'shi';c 'blur' self;c 'rep' self, check score to make sure prism is working, blur, shield, strength, improved invis, repose, e, ki beast"
-
 mage test 2b,,"Brightly lit room: look flesh;break bones;wie bone;look n;pry ruby; n;e;c 'fireball' ice.golem;c 'gust';s;c 'cold snap' fire.golem;c 'gust';e;c 'gust' sand.golem;c 'gust', gust on sand vs. mage to disable his magic, n;e;s;e, flip bone is possible
 
 Standing on a ledge: squeeze crack, l rubble;l pile;l refuse;l rocks;l bones, rummage pile;rummage refuse;search pile;search refuse; l boulder... roll boulder statue? roll boulder? c 'c l';lolook crack;look tree;look cliff;squeeze crack move stones;n;n;l crack;take all crack;wie hammer fight statue, flee, fight hands, go back fight statue
