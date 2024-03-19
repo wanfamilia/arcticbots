@@ -551,12 +551,19 @@ portal:
  - kill red bash death"
 mage test 1,,"
 Long lost forgotten library A Long Forgotten Laboratory: look chandelier/clean base/look base/peer base/look outline/walk door
+
 In the Middle of a Dense Forest: rub sticks, blow ember gently, kick log, north
+
 at the foot of a giant statue: climb tree, 4x pluck melon, shake branch, or snap branch, d;toss melon statue, climb tree, leap chasm, break arm, bridge ravine, climb statue, pry sphere, jump sphere, roll melon baby, throw melon baby, get all, enter portal
+
 a damp prison cell: c 'web' web; shake bars; unlock cell; c 'rot' trunk; get robes; get note robes; read note; c 'whis' man/prisoner Your name is (whatever on note)
+
 Over an Enchanted Isle: fireball, cold snap, gust, lightning bolt, touch cage, enter body?
+
 library arcana: spin carousel, u;read pedestal; ;w;e;u;s;s;listen gnome;enter portal
+
 gigantic mass of green crystal: rot the crystal, then go w s, kill a slime, eat the ooze, then search glob over and over till yellow ooze dies, go n e s
+
 the Center of the universe: 'fly self', w, say yes, s, c 'cold snap', catch nixie, n, n, break orb, get robe, wear robe, e, ki demarax, c 'disp m' shard then c 'floating disc', rem all, put all disc....can bring them to next test
 "
 mage test 2a,,"
@@ -565,6 +572,8 @@ a Forgotten conclave dungeon: rats n, get all skeleton; e; kill rat; get corpse;
 in a messy courtyard: n; shake flower; fan bees golem; get key corpse; w; spellup; s; get beaker; n; quaff beaker; s; n; e; s; flee; w; frag rat; s; eat mushroom; squeeze hole
 
 before a Strange Structure of Rocks: search bookcase, get weapon, detect magic scrolls, throw away force bolt, recite stoneskin self
+
+Lone tree in a magical garden: l mage; listen mage, l tree;l branch;break branch, l tree;l knotholes, exam tree, get all tree, wie cube, shape staff, display staff, get rod, hold rod, use rod minion
 
 Outside a Strange Hut: c 'light', op door n;north;take prism;c 'light' prism;take broom;ignite broom;wie broom;wear prism;c 'shi';c 'blur' self;c 'rep' self, check score to make sure prism is working, blur, shield, strength, improved invis, repose, e, ki beast"
 mage test 2b,,"Brightly lit room: look flesh;break bones;wie bone;look n;pry ruby; n;e;c 'fireball' ice.golem;c 'gust';s;c 'cold snap' fire.golem;c 'gust';e;c 'gust' sand.golem;c 'gust', gust on sand vs. mage to disable his magic, n;e;s;e, flip bone is possible

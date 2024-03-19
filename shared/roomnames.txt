@@ -212,7 +212,6 @@ kern
 startpigmy
 locrahn
 rahnkagi
-rhankagi
 gargath
 teiresias blind glasses
 solknow
@@ -346,6 +345,7 @@ tultuk
 phycliff
 startphysix
 balitrio
+kamithe
 bogmage
 solwraith
 solundead
@@ -516,6 +516,7 @@ nothing1
 tantnorth
 shardneck
 startvrykith
+startargand
 startboylein
 startwayreth
 startgalvari
@@ -626,3 +627,5 @@ thiefcove
 shoalshop
 shoaloctopus
 amothus
+havencrypt
+havenpriest

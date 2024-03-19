@@ -13,6 +13,7 @@
 }
 {5}
 
+#alias stopen {ll st; open %1 %2}
 #alias bstep {bot autostepthis}
 #alias autostepthis {
   groupc;
@@ -860,7 +861,7 @@ reseteye;
 #alias kb2 {c 'bli' 2.baaz}
 #alias lcmyst {lct; lc combat.sollerets; lc black.diamond; lc diamond.bracelet}
 #alias kdb {c 'harm' baaz}
-#alias dofaul {get staff corpse; n; n; n; get blue.crystal belt; attach blue.crystal staff; place blue.staff statue; ef bread; sit; study disks;}
+#alias dofaul {get staff ; n; n; n; get blue.crystal belt; attach blue.crystal staff; place blue.staff statue; ef bread; sit; study disks;}
 
 #alias kifaul {s; s; s; c 'harm' baaz; st; flee; flee; flee;flee; flee; n; n;}
 #alias kigoth {n; n; n; c 'harm' baaz; st; flee; flee; flee; flee; s; s;}
@@ -1726,6 +1727,7 @@ reseteye;
   #map flag static off;
   #map flag vtmap on;
   #action {^A violent vortex of wind forces your gaze skyward}{mac tempwind};
+  #action {^City View}{mgo startcloud};
   #action {^You summon the winds of Krynn}{mac tempwind};
   #action {^Alas, you cannot go that way} {#map undo};
   #action {^Center of the Celestial Temple} {mgoc};
@@ -1738,6 +1740,7 @@ reseteye;
   #action {^Approaching a Rise} {mgo 3268};
   #actio {^A View of Palanthas} {mgo 5812};
   #action {^The Inn of Myth} {mgo mythsh};
+  #action {^In Front of the Fireplace}{mgo 1884};
   #action {^Shore of the Mystic Island} {mgo 4008};
   #action {^A Dark Citadel Looms Overhead} {mgo citadel start};
   #action {^The End of River Shin} {mgo 10045};
@@ -3043,9 +3046,11 @@ reseteye;
 	mai jd soul leech
 }
 
+
+#alias rboth mai {inn $mypaladin; inn}
 #ALIAS {ksun}
 {
-	c 'sunbolt' %1; st
+	mai {c 'sunbolt' %1; st}
 }
 
 #alias mbn {js sunray}
@@ -3467,8 +3472,7 @@ myemail;	1;	1;	1;	1;
   #var vbuffover[bless] {js prayer};
   #alias lootcomp lootcompimpl;
  #alias sat dofood;
- #var hrec diamond;
- #alias ligst lightrec;
+ #var hrec dolphin.staff;
  #alias hew hem;
  #alias asf assist;
  #alias ccthis jd cu cr;
@@ -3572,6 +3576,7 @@ myemail;	1;	1;	1;	1;
 	js night
 }
 
+#alias rt notent
 #ALIAS {notent}
 {
 	jd neg pl
@@ -4371,7 +4376,8 @@ myemail;	1;	1;	1;	1;
 #alias cleancomp2 {get all.!web.!acorn component.pouch}
 #alias barr be $arrival
 
-#var compouch component.pouch.crafted;
+#var compouchalch component.pouch.crafted;
+#var compouch plain.component.pouch;
 #alias bhlp bhl $pet
 #alias glpe glance $pet
 #alias nocomp {#alias lootcomp donothing}
@@ -4556,7 +4562,7 @@ cancel;
 #alias plpd {present letter; present pendant}
 #alias ones {1; 1; }
 #alias logsky {newses sky {$skyscout; mypw; ones; modesky}}
-#alias leaveinn donothing
+#alias leaveinn leaveinnimpl
 #alias leaveinnimpl {d; d; n; e}
 #alias logpal {logbot {$mypaladin; mypw; ones; modepala; fly; leaveinn; jd rig ind}}
 #alias logwar {logbot {dawsen; mypw; 1; 1; modepala; modewar; fly}}
@@ -4574,7 +4580,7 @@ cancel;
 #alias newsky newchar sky $skyscout
 #alias newmage newchar mag $mymage
 #alias newpal newchar bot $mypaladin
-#alias logcler newses arc {$mycler; mypw; 1; 1; modecleric; fly; ligst}
+#alias logcler newses arc {$mycler; mypw; 1; 1; modecleric; fly; leaveinn; ligst}
 #alias logclero newses bot {$mycler; mypw; 1; 1; modecleric; fly; }
 #var mythief nikson
 #alias tust {turn; #bot #3 strike}
@@ -4886,6 +4892,7 @@ cancel;
   divinity;
 }
 
+#alias medist {rest; medi; st}
 #alias hdiv divinity
 #alias nbf {
   #var vafterbuff {%0};
@@ -5555,7 +5562,7 @@ cancel;
 }
 
 #alias ligst ligstimpl
-#alias ligstimpl {leaveinn; lightrec}
+#alias ligstimpl {lightrec}
 #alias ligwi {js light %1; wield %1;}
 #alias ligho {js light %1; hold %1;}
 #alias rlcrainsong {gosol; van me; runto e2sd25e2sw4sesese2s; lcharm; lct; lcb}
@@ -6174,9 +6181,10 @@ addlocates;
 #alias spamgroup #loop 1 4 f1loop {#delay $f1loop f5}
 #alias lookwhistle #loop 1 12 floop {look $floop.whistle}
 #MACRO {\e[20~} {f9}
-#alias f9 { amac boa } 
+#alias f9 { amac mainass } 
 #MACRO {\e[21~} {f10}
 
+#alias mainass mai {st; ass}
 #alias f10
 {
 	mac lrs $resctar
