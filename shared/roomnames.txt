@@ -89,7 +89,7 @@ werewolf
 gulfeast
 gulfport
 gulfgar
-glade whitestone
+gladewhitestone
 shayd
 deepfish
 irdalagoon
@@ -499,6 +499,7 @@ westthon
 eastthon
 footlocker
 kyle
+havpal
 jaero
 mazuz
 vestiv
@@ -562,6 +563,7 @@ maritta
 startelvan
 startgalazor
 mystictunnel
+startpyramid
 irdasphinx
 sancook
 shoaldome

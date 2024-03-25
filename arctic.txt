@@ -476,7 +476,9 @@ reseteye;
 {5}
 #alias ctl {ct i can lead celestial temple, lemuria, bog, forgotten temple, cloud kingdom, drac tower, sarson, lemuria, dko, bluff, theiwar, some largus, storms, shayds, nytes, spire, dargaard keep, glymmer, bmobs, mystic queen, cervos, celestial valley}
 
-#alias lootvaj {get key vaj; move rug; turn dial left 44 right 23 left 10; uog safe}
+#alias lootvaj get key vaj
+#alias lootvaj24 #show left 22
+#alias lootvaj23 {get key vaj; move rug; turn dial left 44 right 23 left 10; uog safe}
 #alias ctc {ct anyone want celestial temple, spider queen, nytes, storms, forgotten temple, largus, dargaard keep, cloud kingdom, bluff, spire, dargaard valley, celestial valley, glymmer, bmobs, mystic queen, cervos, dark knight outpost?}
 
 #ACTION {^{You are now sober|You throw away your bloody bandages|The rising sun|The clouds block|The cloud-veiled sky|The darkness marks the end of another day|The sun slowly sinks in the|The sun begins its ascent|Some meat decays in your hands|You are ready to|You feel more vigorous}}
@@ -538,7 +540,7 @@ reseteye;
 #alias autoass
 {
   #var autoassv 1;
-  #alias nospam nospamdo;
+  #alias nospam nospamalive;
   #action {^{[A-Z]\w+} {.+}{$tanksuffix}} {doas %%1} {8};
 } {6}
 
@@ -801,6 +803,7 @@ reseteye;
 #alias fshield {js fireshield}
 #alias recl {st; reclaim}
 #action {^You can pray to Zivilyn}{gtl --> Reclaim avaiable};
+#action {^Flare arrives from above, carrying Lord Ariakan.} {gtl --->  FLARE AND ARIAKAN HAVE ARRIVED! }
 #alias boo {jsm boon}
 #alias glob {js globe}
 #ACTION {{he begins to drool}}
@@ -1271,7 +1274,7 @@ reseteye;
 #alias asfok {asfo %1; kick %1}
 #alias asfob {asfo %1; bash %1}
 #alias tg {bot target}
-#alias kea {ke %1; assist}
+#alias kea {ke %1; st; assist}
 #alias kif {ki %1; #3 frenzy}
 #alias ket {ke %1; #3 taunt $aggrovar}
 #alias groupc {
@@ -1562,6 +1565,8 @@ reseteye;
   n;e;s;w;
 }
 
+#alias jbr ll jump bridge
+#alias clv ll climb vines
 
 #alias noisy {#bell; #delay 1 sysplay smb3_coin; }
 #alias ue3 {#unticker e3}
@@ -2397,6 +2402,14 @@ reseteye;
 	formshowgrouplin
 }
 
+#alias explainwindow {
+  gt thief get regenned, open window, sneak east (fade west, sneak east if u get engaged), pick door, fade south, pull lever, fade west
+}
+#alias foltank {
+  inac fol $mypaladin;
+  bg %1;
+  group form;
+}
 #ALIAS {fsf}
 {
 	fill all.skin fountain
@@ -3468,11 +3481,12 @@ myemail;	1;	1;	1;	1;
  #var circle1 {cu li};
  #var weapon mace;
  nopet;
+ #alias cleancomp cleancomp2;
  #alias knoc o aspasia pick;
   #var vbuffover[bless] {js prayer};
   #alias lootcomp lootcompimpl;
  #alias sat dofood;
- #var hrec dolphin.staff;
+ #var hrec scorched.banner;
  #alias hew hem;
  #alias asf assist;
  #alias ccthis jd cu cr;
@@ -4070,6 +4084,8 @@ myemail;	1;	1;	1;	1;
   #action {^{$capsham} tells your group '{ki|lift|leap|dive|hold|wear|rem|open|gflap|wield|target|say|flap|fade|gank|disengage|stand|enter|push|open|crawl|swim|climb|leave|follow|squeeze} {\w+}'} {st; mac %%2 %%3; group} {1};
   #action {^{$capsham} beckons you to follow} {follow %%1};
   eng ko;
+  #alias serthis donothing;
+  #alias bigrest donothing;
   #action {^{$capsham} tells your group '{st|lrn|eject|gflap|refade|skyfood|fade|stand|wildfire|rescue|volley|wingsweep|bolster}'} {st; %%2} {1};
   #var hrec bow;
   #alias othervoy {#show %1:%2};
@@ -4082,7 +4098,7 @@ myemail;	1;	1;	1;	1;
   #alias lootcomp donothing;
   #action {^Scouts' Training Room} {lrn; smile};
   #action {^Elrax the master scout is here,} {lrn; smile};
-  legarr;
+  donothing legarr;
   #delay 30 {group};
   fly;
 }
@@ -4186,6 +4202,7 @@ myemail;	1;	1;	1;	1;
   #alias vass vass2; #alias ota assd; #alias oag {mac ki %%2};
   #alias assthis assist;
   remb bow; wield $skyprime;  get $skyoff belt; hold $skyoff;
+  eng stki;
   put bow belt;
   #alias rs dorescue;
 }
@@ -4373,7 +4390,7 @@ myemail;	1;	1;	1;	1;
 #alias cleancomp1 {
   get all.!alteration.!healing.!protection.component.!web $compouch;
 }
-#alias cleancomp2 {get all.!web.!acorn component.pouch}
+#alias cleancomp2 {get all.!web.!acorn $compouch}
 #alias barr be $arrival
 
 #var compouchalch component.pouch.crafted;
@@ -4417,7 +4434,7 @@ cancel;
 #alias ksbt {tmpa ksb}
 #alias bqk {buy knowledge; quaff knowledge}
 #alias logred newses red {#alias mag red; gere; mypw; 1; 1; fly; modemage; modered;}
-#alias logwhi {newses white {$mymage; mypw; #var food food; ones; fly; leaveinn; modemage; modewhite; lightrec }}
+#alias logwhi {newses white {$mymage; mypw; #var food food; ones; fly; modemage; modewhite; lightrec }}
 #alias logmag {newses mag {wilbon; mypw; #var food food; 1; 1; fly; modemage; modewhite}}
 #alias mag {#white}
 #alias dru #dru
@@ -4435,15 +4452,15 @@ cancel;
 #alias modewhite {
   #alias goway {goto wilma};
   #alias bfm {bot follow pryor; #delay 1 group form};
-  #var hrec ogre.spear;
-  #var belt girdle;
+  norelo;
+  #var hrec blue.sceptre;
+  #var belt cloth.belt;
   #alias ide {rec identify};
-  #var held clear.sphere;
+  nocomp;
   #var compouch crafted.pouch;
   #alias remage {rewin; modemage; modewhite};
   #alias locatereport locatereportimpl;
-  #var food cheese;
-  #alias jsrelo js relo;
+  #var food turkey;
   nutr $food;
   #alias mloc {msw locate knock};
   #action {^{\w+} makes a mockery out of everyone} {nospamdo 30 jmoc %%1};
@@ -4451,13 +4468,14 @@ cancel;
 
 
 #alias beforearmy {
-  rem $clerbody; rem $clerarms; rem $clerlegs; rem mace; rem alabaster.boots;
+  rem $clerbody; rem $clerarms; rem $clerlegs; rem $clerweapon; rem alabaster.boots;
   wear all.dinged; wear leather.vest; wear leather.boots; wield beaten.sword
 }
 
 #var clerarms rose.vambraces;
-#var clerbody suit
-#var clerlegs leggings
+#var clerweapon dolphin
+#var clerbody succubus
+#var clerlegs baggy.pants
 #alias bcheckpriest {bot; checkpriest}
 #alias hts halone south
 #alias htw halone west
@@ -4470,7 +4488,7 @@ cancel;
 #alias halone mai {st; malo %1; tan hl}
 #alias afterarmy {
   rem all.dinged; rem leather.vest; rem leather.boots; rem sword;
-  wear $clerbody; wear $clerarms; wear $clerlegs; wield mace; wear alabaster.boots;
+  wear $clerbody; wear $clerarms; wear $clerlegs; wield $clerweapon; wear alabaster.boots;
   js heal me; fly;
 }
 #alias wser  {wake; stand; east; rest}
@@ -4586,6 +4604,7 @@ cancel;
 #alias tust {turn; #bot #3 strike}
 #alias newthi newchar thi $mythief
 #alias logthi newses thi {$mythief; mypw; 1; 1; fly; modethief}
+#alias logthin newses thi {branson; mypw; 1; 1; fly; modethief}
 #alias modethief {
   #action {^The master assassin looks at you from behind} {lrn; smile};
   #action {^Aldur A'Kul the master thief sits} {lrn; smile};
@@ -5106,7 +5125,6 @@ cancel;
   needbuff heal boost;
   needbuff holy arms;
   needbuff aura of glory;
-  needbuff bless;
   needbuff high prayer;
   needbuff holy vision;
   needbuff crusade;
@@ -5143,7 +5161,11 @@ cancel;
 #alias dokhita {stand; east; enter cave}
 #alias hemr {hem; mai rest}
 #alias paleng {strike %1; bpa}
+#alias showmobs {
+ #show Mrziffinicaliz, Daggoraath, egreckl, noom, nithalugh, mul, aurinite.lord, Tesiak, Thanas, dread.corpse, Nightlord, Tsu, Rhun, Mhar, Guerrin, Kinin, Shalzan, Kenny, Skyseeker, Galecourser,  ;
+}
 #action {disarms your weapon} {cancel; sysplay smb3_cannon; gw};
+#alias terzakcase { rem $hrec; hold rag; clean soot; uog safe; rem rag; hold $hrec}
 #alias modepala
 {
   #alias bigrest donothing;
@@ -5157,8 +5179,11 @@ cancel;
   #alias oegc {cancel; get corpse; give corpse %1};
   #var belt girdle;
   eng paleng;
-  #var hrec fireball;
-  #action {^Your hands tingle as a feeling of goodness} {ll #show -->       LAY ready} {7};
+  #var hrec idol;
+  #action {^Your hands tingle as a feeling of goodness} {
+   #show -->       LAY ready;
+   #line log messages.txt LAY ready;
+  } {7};
   #action {^Warriors' Training Room} {lrn; smile};
   #alias assthis palassthis;
   #var circle1 {det ev};
@@ -5838,7 +5863,7 @@ addlocates;
 
 #ALIAS {van}
 {
-	js inv
+	mag js inv
 }
 
 #alias gaim {$dkgaim}
@@ -6040,6 +6065,7 @@ addlocates;
 #HIGHLIGHT        {is stunned!}           {light yellow}               {5}
 #HIGHLIGHT        {looks distracted and fails}        {light yellow}               {5}
 #HIGHLIGHT        {is suddenly dislodged}  {light yellow}               {5}
+#HIGHLIGHT        {lodging it in the statue}  {light yellow}               {5}
 #HIGHLIGHT        {lose all feeling of your}  {red}                        {5}
 #HIGHLIGHT        {regain control}        {green}                      {5}
 #HIGHLIGHT        {sent sprawling}        {red}                        {5}
