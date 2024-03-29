@@ -56,6 +56,7 @@ toquali
 bognorth
 recuperate cabin
 recuperate thorb
+nomadnorth
 acorn
 tarsissquare
 darvinus
@@ -244,7 +245,7 @@ citadel window
 jito
 vaj
 citadel drake
-citadel vin
+citadelvin
 citadel tenlo
 silvigates
 darvmurk
@@ -307,6 +308,7 @@ ritkago
 kagoboulder
 hyuk
 nytecata
+nytesmith
 nytedebuff
 risolbelow
 nyterisol
@@ -631,3 +633,4 @@ shoaloctopus
 amothus
 havencrypt
 havenpriest
+moondancer

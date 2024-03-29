@@ -1782,7 +1782,7 @@ reseteye;
   #split 9 $bottomsize;
   #map flag vtmap on;
 }
-#alias mrun {ll st; #map run {%0} $runspeed}
+#alias mrun {ll st; ll fly; #map run {%0} $runspeed}
 #alias mrun1 {ll st; #map run {%1} $runspeed}
 #alias mstop {#undelay PATH %d}
 #alias mrun2 {ll st; #map run {%1 %2} $runspeed}
@@ -2024,7 +2024,6 @@ reseteye;
 #ALIAS {dofood}
 {
 	eat $food; drink water;
-        cw waterskin;
 	jd c f;
 	put 8*$food belt;
 	drop all.$food;
@@ -2402,8 +2401,14 @@ reseteye;
 	formshowgrouplin
 }
 
+#alias openpirates {
+ #4 {east; west};
+ listen sailor;
+ give 1000 coin sailor;
+ #4 {east; west}
+}
 #alias explainwindow {
-  gt thief get regenned, open window, sneak east (fade west, sneak east if u get engaged), pick door, fade south, pull lever, fade west
+  gt thief get regenned, open window, sneak east (fade west, sneak east if u get engaged), pick window, fade south, pull lever, fade west
 }
 #alias foltank {
   inac fol $mypaladin;
@@ -3485,8 +3490,8 @@ myemail;	1;	1;	1;	1;
  #alias knoc o aspasia pick;
   #var vbuffover[bless] {js prayer};
   #alias lootcomp lootcompimpl;
- #alias sat dofood;
- #var hrec scorched.banner;
+ #alias sat {cww; dofood};
+ #var hrec dolphin;
  #alias hew hem;
  #alias asf assist;
  #alias ccthis jd cu cr;
@@ -4098,6 +4103,7 @@ myemail;	1;	1;	1;	1;
   #alias lootcomp donothing;
   #action {^Scouts' Training Room} {lrn; smile};
   #action {^Elrax the master scout is here,} {lrn; smile};
+  modebow;
   donothing legarr;
   #delay 30 {group};
   fly;
@@ -4207,8 +4213,8 @@ myemail;	1;	1;	1;	1;
   #alias rs dorescue;
 }
 
-#var skyprime bardiche
-#var skyoff poinard
+#var skyprime axe
+#var skyoff axe
 #alias bepres {get %1 belt; present %1}
 #alias kylepres {bepres books; bepres sheaf; bepres code; bepres package; bepres parchment}
 #alias prepstone {
@@ -5162,10 +5168,11 @@ cancel;
 #alias hemr {hem; mai rest}
 #alias paleng {strike %1; bpa}
 #alias showmobs {
- #show Mrziffinicaliz, Daggoraath, egreckl, noom, nithalugh, mul, aurinite.lord, Tesiak, Thanas, dread.corpse, Nightlord, Tsu, Rhun, Mhar, Guerrin, Kinin, Shalzan, Kenny, Skyseeker, Galecourser,  ;
+ #show Mrziffinicaliz, Daggoraath, egreckl, noom, nithalugh, mul, aurinite.lord, Tesiak, Thanas, dread.corpse, Nightlord, Tsu, Rhun, Mhar, Guerrin, Kinin, Shalzan, Kenny, Skyseeker, Galecourser, Jargin, beautiful.singing.mockingbird ;
 }
 #action {disarms your weapon} {cancel; sysplay smb3_cannon; gw};
 #alias terzakcase { rem $hrec; hold rag; clean soot; uog safe; rem rag; hold $hrec}
+#var palheld clear.sceptre
 #alias modepala
 {
   #alias bigrest donothing;
@@ -5179,7 +5186,7 @@ cancel;
   #alias oegc {cancel; get corpse; give corpse %1};
   #var belt girdle;
   eng paleng;
-  #var hrec idol;
+  #var hrec $palheld;
   #action {^Your hands tingle as a feeling of goodness} {
    #show -->       LAY ready;
    #line log messages.txt LAY ready;
