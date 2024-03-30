@@ -4090,6 +4090,7 @@ myemail;	1;	1;	1;	1;
   #action {^{$capsham} beckons you to follow} {follow %%1};
   eng ko;
   #alias serthis donothing;
+  #alias bubl buy 4*blund.bundle;
   #alias bigrest donothing;
   #action {^{$capsham} tells your group '{st|lrn|eject|gflap|refade|skyfood|fade|stand|wildfire|rescue|volley|wingsweep|bolster}'} {st; %%2} {1};
   #var hrec bow;
