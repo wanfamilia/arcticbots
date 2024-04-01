@@ -3484,14 +3484,15 @@ myemail;	1;	1;	1;	1;
 {
 	#variable food $clerfood;
  #var circle1 {cu li};
+ #var clerheld dragon.vial;
  #var weapon mace;
  nopet;
- #alias cleancomp cleancomp2;
+ #alias cleancomp cleancomp3;
  #alias knoc o aspasia pick;
   #var vbuffover[bless] {js prayer};
   #alias lootcomp lootcompimpl;
  #alias sat {cww; dofood};
- #var hrec dolphin;
+ #var hrec $clerheld;
  #alias hew hem;
  #alias asf assist;
  #alias ccthis jd cu cr;
@@ -4090,7 +4091,7 @@ myemail;	1;	1;	1;	1;
   #action {^{$capsham} beckons you to follow} {follow %%1};
   eng ko;
   #alias serthis donothing;
-  #alias bubl buy 4*blund.bundle;
+  #alias bubl buy 4*blunt.bundle;
   #alias bigrest donothing;
   #action {^{$capsham} tells your group '{st|lrn|eject|gflap|refade|skyfood|fade|stand|wildfire|rescue|volley|wingsweep|bolster}'} {st; %%2} {1};
   #var hrec bow;
@@ -4398,10 +4399,11 @@ myemail;	1;	1;	1;	1;
   get all.!alteration.!healing.!protection.component.!web $compouch;
 }
 #alias cleancomp2 {get all.!web.!acorn $compouch}
+#alias cleancomp3 {get all.!web.!alteration $compouch}
 #alias barr be $arrival
 
 #var compouchalch component.pouch.crafted;
-#var compouch plain.component.pouch;
+#var compouch component.pouch.!vampire;
 #alias bhlp bhl $pet
 #alias glpe glance $pet
 #alias nocomp {#alias lootcomp donothing}
@@ -4464,7 +4466,6 @@ cancel;
   #var belt cloth.belt;
   #alias ide {rec identify};
   nocomp;
-  #var compouch crafted.pouch;
   #alias remage {rewin; modemage; modewhite};
   #alias locatereport locatereportimpl;
   #var food turkey;
@@ -4588,7 +4589,7 @@ cancel;
 #alias ones {1; 1; }
 #alias logsky {newses sky {$skyscout; mypw; ones; modesky}}
 #alias leaveinn leaveinnimpl
-#alias leaveinnimpl {d; d; n; e}
+#alias leaveinnimpl {d; d; e; s}
 #alias logpal {logbot {$mypaladin; mypw; ones; modepala; fly; leaveinn; jd rig ind}}
 #alias logwar {logbot {dawsen; mypw; 1; 1; modepala; modewar; fly}}
 #alias logbar {logbot {cunningham; mypw; 1; 1; modebarb; fly}}
@@ -4635,7 +4636,6 @@ cancel;
 #alias podderek {push shrub; east; exam derek; exam brian}
 #alias csus {commune; sus}
 #alias modedruid {
-  #var compouch plain.component.pouch;
   #alias gow jd co wi;
   #var hrec ogre.spear;
   #alias cloudgone drucloudgone;
@@ -5152,7 +5152,8 @@ cancel;
 #alias boas {boa; oct}
 #alias mshgi {cancel; mssh girl}
 #alias moa {mag otaa; mai ott}
-#alias asm {bot #alias rally {slam; rall} }
+#alias asm {bot #alias rally {rall; slam} }
+#alias rundagg {mrun overdaggoraath}
 #alias asma {asm; mai ass}
 #alias treein {ride cart; %1; ride ferry; %1}
 #alias treeout {%1; ride ferry; %1; ride cart}
@@ -5167,13 +5168,13 @@ cancel;
 #alias subl {mag js sublimation}
 #alias dokhita {stand; east; enter cave}
 #alias hemr {hem; mai rest}
-#alias paleng {strike %1; bpa}
+#alias paleng {cancel; strike %1; bpa}
 #alias showmobs {
  #show Mrziffinicaliz, Daggoraath, egreckl, noom, nithalugh, mul, aurinite.lord, Tesiak, Thanas, dread.corpse, Nightlord, Tsu, Rhun, Mhar, Guerrin, Kinin, Shalzan, Kenny, Skyseeker, Galecourser, Jargin, beautiful.singing.mockingbird ;
 }
 #action {disarms your weapon} {cancel; sysplay smb3_cannon; gw};
 #alias terzakcase { rem $hrec; hold rag; clean soot; uog safe; rem rag; hold $hrec}
-#var palheld clear.sceptre
+#var palheld clear.sphere
 #alias modepala
 {
   #alias bigrest donothing;
