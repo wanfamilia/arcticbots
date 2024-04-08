@@ -611,9 +611,11 @@ darvalevil
 paxashes
 vermithrone
 dragondock
+khisanth
 corsair
 boldskar
 lemusum
+nytelatrine
 xmas
 xmasladder
 kaldruid
@@ -633,4 +635,6 @@ shoaloctopus
 amothus
 havencrypt
 havenpriest
+pyramidmatilya
 moondancer
+uthcain

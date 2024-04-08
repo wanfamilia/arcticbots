@@ -103,6 +103,7 @@ Nsw south of quali fork in the road: w.. Checkpoint, kill, south
 s to "In the Vestibule", open door, darkness, w d w to "A Misty Corridor", killing any guards on the way
 open door, Xill will insta agro. Stabs, bashes, triple massacres. Hard fight. Kill him, get a long black iron key
 2s, unlock door e, open door e. e. Learn all if Freya Tamerley is present to learn the impunity spell.
+- uth nightfall: uth fort, darren steal orders or kill but he yells, orders let you into castle, run goodie summoner to below and few east cain, summon
 '
   align = %{
 Alignment Change

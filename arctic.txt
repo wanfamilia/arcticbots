@@ -91,6 +91,7 @@
 #action {^The stone giant shaman is dead} {get all giant.shaman}
 #action {^A succubus is dead! R.I.P.} {get wings succubus}
 #action {^The shade of Jar'mal, the Kinslayer is dead}{get charm}
+#action {^A large draconian stops following Lord Verminaard}{oegc lord}
 #action {^A demonic minion is dead} {oegc ombra}
 #action {^A spirit rises} {gts}
 #alias gts {donothing}
@@ -461,6 +462,7 @@ reseteye;
 #action {^{$linebegin}{\w+(\s\w+)?}: this spell isn't on your mem} {for '$circle1'}
 #alias pracwhi {
   presi; resi;
+  pgift;
   parc; arcane;
   ptran %1;
 }
@@ -476,9 +478,9 @@ reseteye;
 {5}
 #alias ctl {ct i can lead celestial temple, lemuria, bog, forgotten temple, cloud kingdom, drac tower, sarson, lemuria, dko, bluff, theiwar, some largus, storms, shayds, nytes, spire, dargaard keep, glymmer, bmobs, mystic queen, cervos, celestial valley}
 
-#alias lootvaj get key vaj
-#alias lootvaj24 #show left 22
+#alias lootvaj lootvaj24
 #alias lootvaj23 {get key vaj; move rug; turn dial left 44 right 23 left 10; uog safe}
+#alias lootvaj24 {get key vaj; move rug; turn dial left 30 right 11 left 22; uog safe}
 #alias ctc {ct anyone want celestial temple, spider queen, nytes, storms, forgotten temple, largus, dargaard keep, cloud kingdom, bluff, spire, dargaard valley, celestial valley, glymmer, bmobs, mystic queen, cervos, dark knight outpost?}
 
 #ACTION {^{You are now sober|You throw away your bloody bandages|The rising sun|The clouds block|The cloud-veiled sky|The darkness marks the end of another day|The sun slowly sinks in the|The sun begins its ascent|Some meat decays in your hands|You are ready to|You feel more vigorous}}
@@ -627,7 +629,8 @@ reseteye;
 #alias rlckith {gosol; runto e2sd10se4sw5se4sw3s6wd2s; lckith; lc dark.elven}
 #alias lcham {lc solamnic.battlehammer}
 #alias rlcspi {gosol; runto e2sd8n3e5n4e3n9e5s6es2ese; climb ladder; ee; lckith; lc domino}
-#alias 4 {#show unalias 4 if you are SURE}
+#alias 4 {#show reallywant4 if you are SURE}
+#alias reallywant4 #send 4
 #alias lowpal {bot {#alias strike kill; eng ki; #alias dorescue {cancel; st; assist; rescue %%1}}}
 #alias enfothis {enter arch; follo %1}
 #alias enfo {ll enfothis}
@@ -947,7 +950,7 @@ reseteye;
   st; magi; gift; arcane; brsc stre; #6 {sr me}; #3 {air me}; lrn; sk; exam pouch; rest;
 }
 
-#alias pacorn {st; #3 {dispel 'stren'; c 'stre' me}; #3 {dispel 'fly'; c 'fly' me}; lrn; rest}
+#alias pacorn {st; #5 {dispel 'stren'; c 'stre' me}; lrn; rest}
 
 #alias spamacorn {
   #ticker e1 {restick pacorn} 50;
@@ -1202,7 +1205,8 @@ reseteye;
 #alias runbung {gorec bung}
 #alias runblo {mrun blodesign}
 #alias {climb cliff} {#bell; #show if you really want to do this: notinkhur}
-#alias notinkhur {#unalias climb cliff; climb cliff}
+#alias notinkhur {#send climb cliff}
+#action {^4 Delete this character} {#line gag}
 #alias iaminmortigoth {clim cliff}
 #alias chief {%0 constantine}
 #alias oei {oe c 'i'}
@@ -1395,6 +1399,7 @@ reseteye;
 #alias conbo {#var pet Boanes; conj bone}
 #alias conir {#var pet Fereous; conj iron}
 #alias conlea {#var pet Plumbic; conj lead}
+#var irdakw Rezoul
 #alias conca {#var pet Montalban; conj cat; onepet}
 #alias conow {#var pet Ayoade; conj owl;
   oe for 'di ma' 'blur' 'shield' 'inv';
@@ -2046,6 +2051,7 @@ reseteye;
 
 #alias {gall} {#loop $groupindex 1 ii {%1 $groupmembers[$ii]}}
 #alias flapgroup {gall flap}
+#alias gwake ll gall wake
 #alias tbs {tbot $groupindex}
 #alias dograte {w;w;w;w;w;open grate s; s; open grate s; s; open wall; w; open wall; w}
 #ALIAS {dolater11}
@@ -3411,6 +3417,7 @@ myemail;	1;	1;	1;	1;
 #alias mfla {fo4 para; me4 flame}
 #alias voy4 {m s; me4 ri vo}
 #alias ha4 {m s; me4 harm}
+#alias sun4 {m s; me4 sunbolt}
 #alias hlr mai {js heal %1; rest}
 #ALIAS {me4}
 {
@@ -3989,7 +3996,7 @@ myemail;	1;	1;	1;	1;
 #alias gc {st; gore %1; ch %1}
 #alias stuntshore {stuntbush; w;d;n;d;e;d;n;e;e;n;e;e;}
 #alias jread {get saffron belt; put saffron pouch; js read}
-#alias jmoc {sysplay smb3_coin; spellcraft high; js moment %1; spellcraft low}
+#alias jmoc {sysplay smb3_coin; spellcraft mid; js moment %1; spellcraft low}
 #alias chalkghost {dochalk; accept soldier; mloa startraven}
 #alias playcoin {sysplay smb3_coin}
 #alias cubread {get metal.cube belt; rem $held; hold cube; say praise the gods; rem cube; put metal.cube belt; hold $held; ef; put 6*bread belt; drop all.food; get all.food belt}
@@ -4402,6 +4409,8 @@ myemail;	1;	1;	1;	1;
 #alias cleancomp3 {get all.!web.!alteration $compouch}
 #alias barr be $arrival
 
+#alias silvideathmem {m s; mem 'co li' 'de i' 'fly' 'tel' 'tel' 'tel' 'tel'; rest}
+#alias silvideathcast {coli; jd d i; air me}
 #var compouchalch component.pouch.crafted;
 #var compouch component.pouch.!vampire;
 #alias bhlp bhl $pet
@@ -4418,7 +4427,7 @@ myemail;	1;	1;	1;	1;
   #delay 30 tan rg; 
   #delay 50 restick manyreg;
 }
-#alias cleancomp cleancomp1
+#alias cleancomp cleancomp3
 #alias dropcomp {cleancomp; dropallcomp}
 #alias tepet tether $pet
 #alias btp bot tepet
@@ -4443,7 +4452,7 @@ cancel;
 #alias ksbt {tmpa ksb}
 #alias bqk {buy knowledge; quaff knowledge}
 #alias logred newses red {#alias mag red; gere; mypw; 1; 1; fly; modemage; modered;}
-#alias logwhi {newses white {$mymage; mypw; #var food food; ones; fly; modemage; modewhite; lightrec }}
+#alias logwhi {newses white {$mymage; mypw; #var food food; ones; fly; modemage; modewhite; }}
 #alias logmag {newses mag {wilbon; mypw; #var food food; 1; 1; fly; modemage; modewhite}}
 #alias mag {#white}
 #alias dru #dru
@@ -4461,11 +4470,9 @@ cancel;
 #alias modewhite {
   #alias goway {goto wilma};
   #alias bfm {bot follow pryor; #delay 1 group form};
-  norelo;
-  #var hrec blue.sceptre;
+  #var hrec sceptre;
   #var belt cloth.belt;
   #alias ide {rec identify};
-  nocomp;
   #alias remage {rewin; modemage; modewhite};
   #alias locatereport locatereportimpl;
   #var food turkey;
@@ -4476,14 +4483,14 @@ cancel;
 
 
 #alias beforearmy {
-  rem $clerbody; rem $clerarms; rem $clerlegs; rem $clerweapon; rem alabaster.boots;
+  rem $clerbody; rem $clerarms; rem $clerlegs; rem $clerweapon; rem boots;
   wear all.dinged; wear leather.vest; wear leather.boots; wield beaten.sword
 }
 
 #var clerarms rose.vambraces;
-#var clerweapon dolphin
+#var clerweapon hammer
 #var clerbody succubus
-#var clerlegs baggy.pants
+#var clerlegs greaves
 #alias bcheckpriest {bot; checkpriest}
 #alias hts halone south
 #alias htw halone west
@@ -4496,8 +4503,8 @@ cancel;
 #alias halone mai {st; malo %1; tan hl}
 #alias afterarmy {
   rem all.dinged; rem leather.vest; rem leather.boots; rem sword;
-  wear $clerbody; wear $clerarms; wear $clerlegs; wield $clerweapon; wear alabaster.boots;
-  js heal me; fly;
+  wear $clerbody; wear $clerarms; wear $clerlegs; wield $clerweapon; wear boots.!leather;
+  js heal me; fly; san me;
 }
 #alias wser  {wake; stand; east; rest}
 #alias norelo {
@@ -4606,7 +4613,7 @@ cancel;
 #alias newsky newchar sky $skyscout
 #alias newmage newchar mag $mymage
 #alias newpal newchar bot $mypaladin
-#alias logcler newses arc {$mycler; mypw; 1; 1; modecleric; fly; leaveinn; ligst}
+#alias logcler newses arc {$mycler; mypw; 1; 1; modecleric; fly; }
 #alias logclero newses bot {$mycler; mypw; 1; 1; modecleric; fly; }
 #var mythief nikson
 #alias tust {turn; #bot #3 strike}
@@ -5078,17 +5085,22 @@ cancel;
   buffcapture;
 }
 
-#alias onclerbuff
-{
-  needbuff fortify self;
+#alias onclerbuff onclerbuff1
+
+#alias onclerbuff1 {
   needbuff cloak of bravery;
+  needbuff fortify self;
+  needbuff protection from evil;
+  needbuff bless;
+}
+
+#alias onclerbuff2
+{
+  onclerbuff1;
   needbuff steelskin;
   needbuff heroism;
-  needbuff bless;
   needbuff strength of one;
-  needbuff protection from evil;
   needbuff sacred ward;
-  needbuff sanctuary;
 }
 #alias ondrubuff {
   needbuff iceshield;
@@ -5174,12 +5186,16 @@ cancel;
 }
 #action {disarms your weapon} {cancel; sysplay smb3_cannon; gw};
 #alias terzakcase { rem $hrec; hold rag; clean soot; uog safe; rem rag; hold $hrec}
-#var palheld clear.sphere
+#var palheld clear.sceptre
+#var palhead mask
+#var palweap cannabis
 #alias modepala
 {
   #alias bigrest donothing;
   #var pet Steamboat;
   #alias lootme {get all $mypaladin; wear star; wear shield; wield sword};
+  #alias nytehelm {rem $palhead; get helm corpse; wear helm};
+  #alias nytehelmoff {rem helm; wear $palhead};
   #alias checkphil {up alone; east; exam phil; exam scout; west; flee; st; #4 flee};
   #alias gts #all #show --> spirit;
   #alias checkpriest {up alone; east; east; open door south; south; exam priest};
@@ -5190,13 +5206,13 @@ cancel;
   eng paleng;
   #var hrec $palheld;
   #action {^Your hands tingle as a feeling of goodness} {
-   #show -->       LAY ready;
+   ll #show -->       LAY ready;
    #line log messages.txt LAY ready;
   } {7};
   #action {^Warriors' Training Room} {lrn; smile};
   #alias assthis palassthis;
   #var circle1 {det ev};
-  #var weapon bastard.sword;
+  #var weapon $palweap;
   #action {^You are ready to slam again} {slam};
   #action {^You are now the new leader} {march};
   #action {^A gleaming silver medal warms up} {ll #show -->    Medal};
@@ -5684,7 +5700,9 @@ addlocates;
 #alias brewfor dobrew fortify
 #alias brewher dobrew heroism
 #alias scriwhi doscribe white rune
+#alias aftrisol {roll carpet; get carpet; get key gavin; get parchment risol; put parchment $belt}
 #alias brewcrit dobrew {cure critical}
+#alias aftermatilya {get segment matilya; combine segment; get book matilya}
 #alias mythcrit {runto des; brewcrit; nwu; put brewed chest}
 #alias manycrit {#alias readybrew mythcrit; trigbrsh}
 #alias mtt mag {st; tan transfer} 
@@ -6501,6 +6519,7 @@ addlocates;
  {gold dragonscale battle armor}{bmobs}
  {open book with fluttering pages}{craft/dscry/sphinv}
  {golden orb}{storms}
+ {blood red cowl inscribed with black runes}{theiwar priest}
  {brilliant platinum prayerbook}{ward}
  {sky blue prayerbook with sapphire runes}{holy word}
  {small stone tablet}{STONESKIN}
@@ -6610,15 +6629,19 @@ addlocates;
     {silver and ruby ring}{kerns}
   {windswept sandstone tablet}{winds}
     {battlehammer inscribed with Solamnic runes}{pod}
+  {A shimmer and a shadow grow around}{impunity}
     {ring of finest silver}{bluff}
   {Stormbringer}{ck}
+  {92563123979864134928929596927}{24}
     {dark elven bracelet}{bog}
 }
 
 #alias dosilt {rem $weapon; wield coral.axe; dig silt; rem coral.axe; wield $weapon}
 
 #alias boomcrate {drop crate; light crate in room}
-#alias twss {ct thats what she said}
+#alias wssimpl {%1 thats what she said}
+#alias twss wssimpl ct
+#alias gwss wssimpl gt
 #alias lc5 {#5 {lc %1}; rest}
 #alias makesubs {
   #foreach *itemlocates[] vitem {
