@@ -151,7 +151,9 @@ startdwarfkeep
 citadel dwarfkeep
 citadel rockhorde
 ritgarret
+uthgates
 tolich
+underenbir
 enbir
 loccv
 startcv

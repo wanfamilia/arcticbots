@@ -4188,6 +4188,7 @@ myemail;	1;	1;	1;	1;
 #alias pokethem {#action {^%1 flies in} {poke %1}}
 
 #alias hidesolace {spamhide squarescout}
+#alias hideskill {spamhide skill}
 #alias hidenothing {spamhide donothing}
 #alias spamhide {
   #action {^You feel enligh} {gotenligh; %1};
