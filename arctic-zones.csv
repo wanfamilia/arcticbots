@@ -102,7 +102,7 @@ irda ams,,"
 "
 Sahuagin Center,,"nnddesnnsn to sea sponge"
 wyrmslayer,,"
-- ancient mithril necklace: verminaard, key, throne, (locatable)
+- ancient mithril necklace: verminaard, key, (select golden key) throne, (locatable)
 - ancient mithril oakleaf: kith mage, rot statue
 - ancient weathered gemstone: before pray statue, hidden west, sift ashes, sift ashes,
 - mithril cross: feisal, open north exit with yellow gem, affix mithril.leaf mithril.necklace, insert ancient.gemstone cross, unlock tomb
@@ -586,9 +586,13 @@ Sea of Gray: imagine weapon;imagine armor;imagine shard;imagine light;imagine he
 "
 mage test 3a,,"
 a small study: spellup, pull board (push board to get back); protect dwarf; twirl cross dwarf; s (no lightning); dance irda; sing woman; display metal; smash figurine; o gargoyle move rug; quaff potion; move rug; o gargoyle rescue;
+
 a magical corridor: touch runes, wait in color for golem, use runes lock mage in and mem, shield, lightning bold, shocking grasp
+
 Outside a Cabin: magic blast door, e, investigate floorboards, spear in boards, u, open hatch, u, dispel magic ropes, rot ropes, blow flute for spiders, dispel magic renegade (especially when his rune appears)
+
 At the Base of a Brown Spire: ee; get all crate; break crate; get chains; wn; search objects; frag golem; get chains; search poo; sw; kill kender, join chains, e, bind dragon, fireball, d, enter portal
+
 animated kitchen: get all ice, w, unlock open trapdoor, down, (wait), listen man, frags, place ring brooch
 "
 mage test 3b,,"

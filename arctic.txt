@@ -90,7 +90,7 @@
 #action {^The night golem is dead} {ll get bladeless night.golem}
 #action {^The stone giant shaman is dead} {get all giant.shaman}
 #action {^A succubus is dead! R.I.P.} {get wings succubus}
-#action {^The shade of Jar'mal, the Kinslayer is dead}{get charm}
+#action {^The shade of Jar'mal, the Kinslayer is dead}{exam charm}
 #action {^A large draconian stops following Lord Verminaard}{oegc lord}
 #action {^A demonic minion is dead} {oegc ombra}
 #action {^A spirit rises} {gts}
@@ -512,6 +512,7 @@ reseteye;
 }
 {5}
 
+#alias encr enter crevice
 #alias cvsong {ct come get rit to my side if u luv me, enter arch follow me when i say, just remember celestial valley, might load wings but they're all my decay}
 #ACTION {^{\w.+}{[A-Z]\w+}{$tanksuffix}}
 {
@@ -799,6 +800,7 @@ reseteye;
 #alias bufdar {bot buf dk}
 #alias rlcshark {gotar; js imp; van me; west; south; open gate; runto 3ws3wsw3sws4wundwsd4w4nw}
 
+#alias shoutbook shout paying 80k for codex of arcane lore
 #alias pracclaim {
  #action {^You can pray to Zivilyn}{st; reclaim; lrn};
  #show You can pray to Zivilyn;
@@ -1206,7 +1208,7 @@ reseteye;
 #alias runblo {mrun blodesign}
 #alias {climb cliff} {#bell; #show if you really want to do this: notinkhur}
 #alias notinkhur {#send climb cliff}
-#action {^4 Delete this character} {#line gag}
+#action {^4) Delete this character} {#line gag}
 #alias iaminmortigoth {clim cliff}
 #alias chief {%0 constantine}
 #alias oei {oe c 'i'}
@@ -1379,6 +1381,7 @@ reseteye;
 	st
 }
 
+#alias buyf buy 8*$food
 #ALIAS {bigrest}
 {
 	cancel; rest;
@@ -2247,7 +2250,7 @@ reseteye;
 #alias doxill {stabclose door west; otk xill}
 #alias dorhun {stabclose doors north; otk rhun}
 #alias doamb {stabclose door north}
-#alias refade {cancel; wingsweep; fade; reshoot}
+#alias refade {cancel; fade; reshoot}
 #ALIAS {dowater}
 {
 	wat bottle
@@ -3491,7 +3494,7 @@ myemail;	1;	1;	1;	1;
 {
 	#variable food $clerfood;
  #var circle1 {cu li};
- #var clerheld dragon.vial;
+ #var clerheld golden.orb;
  #var weapon mace;
  nopet;
  #alias cleancomp cleancomp3;
@@ -3996,7 +3999,7 @@ myemail;	1;	1;	1;	1;
 #alias gc {st; gore %1; ch %1}
 #alias stuntshore {stuntbush; w;d;n;d;e;d;n;e;e;n;e;e;}
 #alias jread {get saffron belt; put saffron pouch; js read}
-#alias jmoc {sysplay smb3_coin; spellcraft mid; js moment %1; spellcraft low}
+#alias jmoc {sysplay smb3_coin; spellcraft high; js moment %1; spellcraft low}
 #alias chalkghost {dochalk; accept soldier; mloa startraven}
 #alias playcoin {sysplay smb3_coin}
 #alias cubread {get metal.cube belt; rem $held; hold cube; say praise the gods; rem cube; put metal.cube belt; hold $held; ef; put 6*bread belt; drop all.food; get all.food belt}
@@ -4187,8 +4190,13 @@ myemail;	1;	1;	1;	1;
 #action {^The ghost of a long-dead {.+} materializes} {lrn}
 #alias pokethem {#action {^%1 flies in} {poke %1}}
 
+#alias enbirsolace {wearb crystal.shard; runto ws2wsws; open gate; south; runto 5sws4w; open gate; runto 10w2n2w2s6en7e4s6e6s2e7susue; sfl; camp; lrn}
+
+#alias solaceenbir {runto wdnd7n2w6n6w4n7ws6w2n2e2s14enen; open gate; 4n; open gate; runto 2nen2ene; remb crystal.shard; sfl; hide; hide}
 #alias hidesolace {spamhide squarescout}
 #alias hideskill {spamhide skill}
+
+#alias learnhideuth {cancel; unhide; enbirsolace; solaceenbir; #delay 60 hideskill}
 #alias hidenothing {spamhide donothing}
 #alias spamhide {
   #action {^You feel enligh} {gotenligh; %1};
@@ -4223,8 +4231,8 @@ myemail;	1;	1;	1;	1;
   #alias rs dorescue;
 }
 
-#var skyprime axe
-#var skyoff axe
+#var skyprime bardiche
+#var skyoff coral.sword
 #alias bepres {get %1 belt; present %1}
 #alias kylepres {bepres books; bepres sheaf; bepres code; bepres package; bepres parchment}
 #alias prepstone {
@@ -4245,7 +4253,7 @@ myemail;	1;	1;	1;	1;
   #alias assthis tan aimass;
   eng ko;
   #alias oag {mac ko %%2};
-  #alias refade {cancel; wingsweep; fade; reshoot};
+  #alias refade {cancel; fade; reshoot};
   #alias rs mac brs;
   #action {^You {barely hit|hit}} {nospam 3 refade};
   #action {^You {miss|bruise} {.+with your hit.$}} {nospam 3 refade};
@@ -4291,7 +4299,7 @@ myemail;	1;	1;	1;	1;
 		jsrelo %1
 	}
 	{
-		jsrelo zardonna; mgo zardonna;
+		jsrelo theobald; mgo theobald;
 	}
 }
 
@@ -4407,13 +4415,13 @@ myemail;	1;	1;	1;	1;
   get all.!alteration.!healing.!protection.component.!web $compouch;
 }
 #alias cleancomp2 {get all.!web.!acorn $compouch}
-#alias cleancomp3 {get all.!web.!alteration $compouch}
+#alias cleancomp3 {get all.!web.!abjuration.!alteration $compouch}
 #alias barr be $arrival
 
 #alias silvideathmem {m s; mem 'co li' 'de i' 'fly' 'tel' 'tel' 'tel' 'tel'; rest}
 #alias silvideathcast {coli; jd d i; air me}
 #var compouchalch component.pouch.crafted;
-#var compouch component.pouch.!vampire;
+#var compouch pouch.!vampire;
 #alias bhlp bhl $pet
 #alias glpe glance $pet
 #alias nocomp {#alias lootcomp donothing}
@@ -4453,7 +4461,7 @@ cancel;
 #alias ksbt {tmpa ksb}
 #alias bqk {buy knowledge; quaff knowledge}
 #alias logred newses red {#alias mag red; gere; mypw; 1; 1; fly; modemage; modered;}
-#alias logwhi {newses white {$mymage; mypw; #var food food; ones; fly; modemage; modewhite; }}
+#alias logwhi {newses white {$mymage; mypw; #var food food; ones; fly; modemage; modewhite; lightrec}}
 #alias logmag {newses mag {wilbon; mypw; #var food food; 1; 1; fly; modemage; modewhite}}
 #alias mag {#white}
 #alias dru #dru
@@ -4471,12 +4479,12 @@ cancel;
 #alias modewhite {
   #alias goway {goto wilma};
   #alias bfm {bot follow pryor; #delay 1 group form};
-  #var hrec sceptre;
+  #var hrec ogre.spear;
   #var belt cloth.belt;
   #alias ide {rec identify};
   #alias remage {rewin; modemage; modewhite};
   #alias locatereport locatereportimpl;
-  #var food turkey;
+  #var food cheese;
   nutr $food;
   #alias mloc {msw locate knock};
   #action {^{\w+} makes a mockery out of everyone} {nospamdo 30 jmoc %%1};
@@ -4488,7 +4496,7 @@ cancel;
   wear all.dinged; wear leather.vest; wear leather.boots; wield beaten.sword
 }
 
-#var clerarms rose.vambraces;
+#var clerarms braces
 #var clerweapon hammer
 #var clerbody succubus
 #var clerlegs greaves
@@ -4596,7 +4604,7 @@ cancel;
 #alias plpd {present letter; present pendant}
 #alias ones {1; 1; }
 #alias logsky {newses sky {$skyscout; mypw; ones; modesky}}
-#alias leaveinn leaveinnimpl
+#alias leaveinn donothing
 #alias leaveinnimpl {d; d; e; s}
 #alias logpal {logbot {$mypaladin; mypw; ones; modepala; fly; leaveinn; jd rig ind}}
 #alias logwar {logbot {dawsen; mypw; 1; 1; modepala; modewar; fly}}
@@ -5086,7 +5094,7 @@ cancel;
   buffcapture;
 }
 
-#alias onclerbuff onclerbuff1
+#alias onclerbuff onclerbuff2
 
 #alias onclerbuff1 {
   needbuff cloak of bravery;
@@ -5187,9 +5195,9 @@ cancel;
 }
 #action {disarms your weapon} {cancel; sysplay smb3_cannon; gw};
 #alias terzakcase { rem $hrec; hold rag; clean soot; uog safe; rem rag; hold $hrec}
-#var palheld clear.sceptre
+#var palheld fireball
 #var palhead mask
-#var palweap cannabis
+#var palweap halberd
 #alias modepala
 {
   #alias bigrest donothing;
@@ -5612,6 +5620,7 @@ cancel;
   2w2s2wn7w2seses2e2n;
 }
 
+#alias brewsong ct 99 bottles empty in my chest 99 bottles empty, acorns are great, brew satiate, 98 bottles empty in my chest
 #alias ligst ligstimpl
 #alias ligstimpl {lightrec}
 #alias ligwi {js light %1; wield %1;}
@@ -5702,10 +5711,10 @@ addlocates;
 #alias brewher dobrew heroism
 #alias scriwhi doscribe white rune
 #alias aftrisol {roll carpet; get carpet; get key gavin; get parchment risol; put parchment $belt}
-#alias brewcrit dobrew {cure critical}
+#alias brewcure dobrew {cure serious}
 #alias aftermatilya {get segment matilya; combine segment; get book matilya}
-#alias mythcrit {runto des; brewcrit; nwu; put brewed chest}
-#alias manycrit {#alias readybrew mythcrit; trigbrsh}
+#alias mythcure {runto des; brewcure; nwu; put brewed chest}
+#alias manycure {#alias readybrew mythcure; trigbrsh}
 #alias mtt mag {st; tan transfer} 
 #alias dobrew {rest; brew '%1'; st}
 #alias doscribe {rest; scribe '%1'; st}
@@ -6582,12 +6591,14 @@ addlocates;
     {sky blue prayerbook with sapphire runes}{holy word}
     {white leather book with golden hinges}{circle}
     {dragonrider's talisman}{pax}
+    {green dragon's spine}{chaos}
     {alabaster garlic clove charm}{LAST CHANCE}
     {charm covered in a sparkling silvery mist} {RITUAL VOYAGE}
   {thin wooden wand}{dread}
   {pair of succubus wings}{cv}
   {golden tinged broadsword}{raynes?}
   {pair of spiked mithril boots}{dtroll}
+  {glowing ankh}{chaos}
   {black book inscribed with silver runes}{chaos}
   {open book of fluttering pages}{graft/scry/spherei}
   {book scribed on brittle parchment}{barrage/masstel/cleanse}
