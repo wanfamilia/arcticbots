@@ -80,6 +80,7 @@
 }
 #alias boombag  {drop bag; light bag in room}
 #alias ridebelt {kw ride belt in room}
+#alias explainfeisal {gt feisal reflects, it will blind/silence you and it cannot be cured so dont ask us to fix that, flee is safe but if everyone flees it will track out and attack, so if fight going badly better to recall than to flee}
 #alias explainvermi {gt verminaard fight: all kill/bash draconian, thrust lord, absolution lord, dont use heals on people not tanking, let area heals take care of them. no warddancing without legend rank}
 #action {^Onyx is dead} { get all.charm onyx}
 #alias gotomb {#map move down; onlyinactive lie %1.tomb; gt if boone doesnt die, lie %1.tomb; #delay 5 lie %1.tomb}
@@ -137,7 +138,7 @@
   dolog;
 }
 {2}
-#var myshaman donnr
+#var myshaman branson
 #var mypaladin boone
 #action {^{\w+} tells your {clan} '$myshaman rit {\w+}'} {othervoy %1 %3} {1}
 #alias ptab {pta barbarian}
@@ -1751,7 +1752,7 @@ reseteye;
   #action {^{The Slimy Chute}} {mgo slimychute};
   #action {^Zardonna, the elven high sorceress}{mgo zardonna};
   #action {^Approaching a Rise} {mgo 3268};
-  #actio {^A View of Palanthas} {mgo 5812};
+  #action {^A View of Palanthas} {mgo 5812};
   #action {^The Inn of Myth} {mgo mythsh};
   #action {^In Front of the Fireplace}{mgo 1884};
   #action {^Shore of the Mystic Island} {mgo 4008};
@@ -1762,6 +1763,10 @@ reseteye;
   #action {^A Strange Hallway} {mgo 3179};
   #action {^The Top of the Keep} {mgo 3153};
   #action {^A Large Meeting Room} {mgo risolbelow};
+}
+
+#alias cloudrooms {
+  #action {^City View}{mgo startcloud};
 }
 
 #alias tempwind {
@@ -2914,7 +2919,7 @@ reseteye;
 
 #alias ide {js iden}
 
-#alias anb {jd anc bl; fly; wield bow; }
+#alias anb {jd anc bl; fly; }
 #alias ome {js omen}
 #alias ansh {jd anc shr}
 
@@ -3546,10 +3551,12 @@ myemail;	1;	1;	1;	1;
   #alias bigrest {rest; tan watch; #var resting 1};
   #alias othervoy #var vnextcommand {othervoyimpl %%1 %%2};
   #alias cleancomp cleancomp2;
+  #alias ccthis jd cu cr;
   #alias assthis ott;
   #var {circle1} {slow po};
   #unticker feedme;
   eng dotk;
+  #action {^A Strange Hut}{lrn; smile};
   #alias stabclose shamstabclose;
   #alias rs donothing;
   #var pet all.spirit;
@@ -3607,6 +3614,7 @@ myemail;	1;	1;	1;	1;
 }
 
 #alias rt notent
+#alias rdrain js restoration
 #ALIAS {notent}
 {
 	jd neg pl
@@ -4124,7 +4132,10 @@ myemail;	1;	1;	1;	1;
 #alias skyban {quell owl; #3 inst owl; rest; ban me; st; lrn}
 #action {^{\w+} steps near you and moves into a protective posture} {praise %1}
 #alias bdis {bot {ass; av prim}}
-#alias vom {voy $mymage; cc $mymage; mai rest}
+
+#alias vom vomgroup
+#alias vomgroup {ll gt -->  rit $mymage}
+#alias vomsham {voy $mymage; cc $mymage; mai rest}
 #alias ctt {ct tick in $tilltick}
 #alias blay {bot {cancel; st; lay %1}}
 #alias bhl blay
@@ -4278,7 +4289,8 @@ myemail;	1;	1;	1;	1;
 }
 
 #alias {doochre17} {say aemyn lis rinzik vopl}
-#alias {doochre} {say rinzik potu fus verai}
+#alias {doochre23} {say rinzik potu fus verai}
+#alias doochre {say povi lis fus rinzik}
 #ALIAS {ps}
 {
 	st;
@@ -4595,7 +4607,7 @@ cancel;
   #ticker e60 {who needs_title};
 }
 #action {^Mustakrakish, the ancient death troll glows a bright lunar white} {gt -->    TROLL CLEANSED  !!}
-#alias logsham {newses arc {$myshaman; mypw; ones; modeshaman; leaveinn; fly}  }
+#alias logsham {newses arc {$myshaman; mypw; ones; modeshaman; leaveinn; sgl; anb}  }
 #alias logshamo {newses bot {$myshaman; mypw; ones; modeshaman; fly}  }
 #var mydruid wagner
 #alias logdru newses dru {$mydruid; mypw; 1; 1; modedruid; fly}
@@ -5020,6 +5032,8 @@ cancel;
   dispel 'firesh';
 }
 
+#alias memverm {bot for 'r i' 'r i' 'crus' 'hi pr'; bot mem 'abso' 'abso' 'abso' 'abso'}
+#alias memri {bot fo4 abso; bot mem 'r i' 'hi pr' 'crus' 'r i'}
 #alias dfs dispel 'fireshi'
 #alias vbh {pot brewed.heal}
 #alias orb1 {
@@ -5032,6 +5046,7 @@ cancel;
 }
 #alias modemage {
   nutr $food;
+  #alias serthis donothing;
   #alias fastmem {deep};
   #alias ser inac jd cu ser;
   #var vbuffover[heal boost] {mac jdo heal boost $mymage};
