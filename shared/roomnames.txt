@@ -555,6 +555,7 @@ xanitha
 eyedroppers
 rainsong
 palthug
+jeleksouth
 ansabar
 hctmaze3
 egreckl
@@ -640,5 +641,6 @@ amothus
 havencrypt
 havenpriest
 pyramidmatilya
+heartspring
 moondancer
 uthcain

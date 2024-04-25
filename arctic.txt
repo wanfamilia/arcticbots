@@ -796,7 +796,7 @@ reseteye;
 #alias assno #alias assthis ott
 #alias palass bpa
 #alias haze {bot jd men ha}
-#alias palassthis {ass %1; rally; strike; av leg; strike}
+#alias palassthis {ass %1; rally; strike; av soul; strike}
 #alias kdr {st; drain}
 #alias bufdar {bot buf dk}
 #alias rlcshark {gotar; js imp; van me; west; south; open gate; runto 3ws3wsw3sws4wundwsd4w4nw}
@@ -971,7 +971,7 @@ reseteye;
 }
 
 #alias onrosebuff {
-  rem sword; wield lance; 
+  rem $palweap; wield lance; 
   #action {^Once again the time has come for righteous anger} {reck};
   #action {^Through the darkness, you find a connection} {right};
   #action {A massive cryohydra slowly descends from}{bdef};
@@ -981,7 +981,9 @@ reseteye;
   needbuff aura of glory;
   needbuff bless;
   needbuff high prayer;
+  #alias ota oe ass;
   needbuff holy vision;
+  #alias gothit donothing;
   needbuff crusade;  
 }
 #alias besimpl beseech majere
@@ -1509,8 +1511,10 @@ reseteye;
 
 #alias buch {buy 12*%1; put all.%1 chest}
 
-#alias kibard {south; west; %1 bard; #4 flee; e; e; n; e; w}
+#alias kibard {tan rgr; #delay 1 kibardmage kig}
+#alias kibardmage {south; west; %1 bard;}
 #alias vcr {poch brewed.critical}
+#alias vser poch brewed.serious
 #alias vchal poch chalice;
 
 #alias poch {
@@ -3062,16 +3066,18 @@ reseteye;
   spellcraft mid; jsa sil %1; spellcraft low;
 }
 
-#alias kling krose wyrmling
+#alias kling {strike wyrmling; krose wyrmling}
+#alias khead krose fourth
 
 #alias krose {
   ota;
   aven wing;
   strike %1;
-  aven tail;
+  aven torso;
   strike %1;
   aven soul;
   strike %1;
+  reck;
 }
 #ALIAS {kso}
 {
@@ -3553,6 +3559,8 @@ myemail;	1;	1;	1;	1;
   #alias cleancomp cleancomp2;
   #alias ccthis jd cu cr;
   #alias assthis ott;
+  #alias afterarmy afterarmysham;
+  #alias beforearmy beforearmysham;
   #var {circle1} {slow po};
   #unticker feedme;
   eng dotk;
@@ -3561,7 +3569,7 @@ myemail;	1;	1;	1;	1;
   #alias rs donothing;
   #var pet all.spirit;
   #VARIABLE {slot6} {regenerate|heal boost|zombify|ancestral spirit|ritual voyage|darkened soul};
-  #alias hl {ota %%1; rgc %%1;};
+  #alias hlthis {ota %%1; rgc %%1;};
   #action {^{\w+} makes preparations for} {classif ghostfor %%1};
   #ALIAS {someheals}
 	{
@@ -4133,9 +4141,10 @@ myemail;	1;	1;	1;	1;
 #action {^{\w+} steps near you and moves into a protective posture} {praise %1}
 #alias bdis {bot {ass; av prim}}
 
-#alias vom vomgroup
+#alias vom vomsham
 #alias vomgroup {ll gt -->  rit $mymage}
-#alias vomsham {voy $mymage; cc $mymage; mai rest}
+#alias vomsham {voy $mymage; mai rest}
+#action {^You stop following a priest of paladine}{noisy}
 #alias ctt {ct tick in $tilltick}
 #alias blay {bot {cancel; st; lay %1}}
 #alias bhl blay
@@ -4424,10 +4433,10 @@ myemail;	1;	1;	1;	1;
 #alias rgr mai {rg %1; rest}
 #alias mrg {mai rgr}
 #alias cleancomp1 {
-  get all.!alteration.!healing.!protection.component.!web $compouch;
+  get all.!alteration.!protection.component.!web $compouch;
 }
 #alias cleancomp2 {get all.!web.!acorn $compouch}
-#alias cleancomp3 {get all.!web.!abjuration.!alteration $compouch}
+#alias cleancomp3 {get all.!web.!abjuration.!alteration.!protection $compouch}
 #alias barr be $arrival
 
 #alias silvideathmem {m s; mem 'co li' 'de i' 'fly' 'tel' 'tel' 'tel' 'tel'; rest}
@@ -4448,7 +4457,7 @@ myemail;	1;	1;	1;	1;
   #delay 30 tan rg; 
   #delay 50 restick manyreg;
 }
-#alias cleancomp cleancomp3
+#alias cleancomp cleancomp1
 #alias dropcomp {cleancomp; dropallcomp}
 #alias tepet tether $pet
 #alias btp bot tepet
@@ -4491,7 +4500,8 @@ cancel;
 #alias modewhite {
   #alias goway {goto wilma};
   #alias bfm {bot follow pryor; #delay 1 group form};
-  #var hrec ogre.spear;
+  #var hrec fireball;
+  #alias lightrec donothing;
   #var belt cloth.belt;
   #alias ide {rec identify};
   #alias remage {rewin; modemage; modewhite};
@@ -4502,10 +4512,14 @@ cancel;
   #action {^{\w+} makes a mockery out of everyone} {nospamdo 30 jmoc %%1};
 }
 
+#alias beforearmy beforearmycler
 
-#alias beforearmy {
+#alias beforearmycler {
   rem $clerbody; rem $clerarms; rem $clerlegs; rem $clerweapon; rem boots;
   wear all.dinged; wear leather.vest; wear leather.boots; wield beaten.sword
+}
+#alias beforearmysham {
+  rem $clerbody; wear all.dinged; wear leather.vest;
 }
 
 #var clerarms braces
@@ -4522,10 +4536,17 @@ cancel;
 
 #alias scolord {west; south; ksc lord; #4 flee; east}
 #alias halone mai {st; malo %1; tan hl}
-#alias afterarmy {
+
+#alias afterarmy afterarmycler
+#alias afterarmycler {
   rem all.dinged; rem leather.vest; rem leather.boots; rem sword;
   wear $clerbody; wear $clerarms; wear $clerlegs; wield $clerweapon; wear boots.!leather;
   js heal me; fly; san me;
+}
+
+#alias afterarmysham {
+  rem all.dinged; rem leather.vest;
+  wear $clerbody; hb me; rg me; fly; san me
 }
 #alias wser  {wake; stand; east; rest}
 #alias norelo {
@@ -4613,7 +4634,7 @@ cancel;
 #alias logdru newses dru {$mydruid; mypw; 1; 1; modedruid; fly}
 #alias newchar {newses %1 {makechar %2 n}}
 #alias lcvoy {lc meteorite; lc veil; lc clove; lc effigy}
-#alias plpd {present letter; present pendant}
+#alias plpd {present letter; present gold.pendant}
 #alias ones {1; 1; }
 #alias logsky {newses sky {$skyscout; mypw; ones; modesky}}
 #alias leaveinn donothing
@@ -4653,13 +4674,14 @@ cancel;
   #alias bigrest donothing;
   eng be;
   #var food cheese;
-  #var belt girdle;
+  #var belt belt;
   #alias onerest donothing;
   #alias palassthis {assist %%1; kstthis};
   #var weapon curved.dagger;
   #alias vass vass2;
 }
 #alias thi {#thi}
+#alias browseshop {browse immune_fear; browse detect_astral}
 #alias stca jd storm call
 #alias podderek {push shrub; east; exam derek; exam brian}
 #alias csus {commune; sus}
@@ -5226,7 +5248,7 @@ cancel;
   #alia allnext donothing;
   #alias groupimpl group full;
   #alias oegc {cancel; get corpse; give corpse %1};
-  #var belt girdle;
+  #var belt belt;
   eng paleng;
   #var hrec $palheld;
   #action {^Your hands tingle as a feeling of goodness} {
@@ -5718,10 +5740,12 @@ addlocates;
 #alias gomyth {puf stronghold; west; fsf; up; buy cheese}
 #alias folicupe {kas foliage; runto ese2s4e2sw4swsws2w2sw5sw3sws2ds; lcb; lcb}
 
+#alias rundragontrain mrun vindragontrain
 #alias dazzle1 {sph; mrun dazzlingwheel}
 #alias dazzle2 {mrun merclead}
 #alias dazzle3 mrun dazzlecross
 #alias brewsac dobrew sacred
+#alias brewwat dobrew watchful
 #alias brewfor dobrew fortify
 #alias brewher dobrew heroism
 #alias scriwhi doscribe white rune
