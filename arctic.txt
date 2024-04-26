@@ -779,9 +779,9 @@ reseteye;
 #alias otks {otk %1; stup %1; oe st}
 
 #alias pracsean {sean; #action {^The faintest connection to the undead} {sean}}
-#alias pracamel {amel; #action {^The gods smile upon you} {amel}}
+#alias pracamel {amel; #action {^The gods smile upon you} {st; amel}}
 #alias praclegcler {pracamel; pracraptu; sat; e10 cww}
-#alias pracraptu {raptu; #action {^You sense the call of the gods will be coming soon}{raptu}}
+#alias pracraptu {raptu; #action {^You sense the call of the gods will be coming soon}{st; raptu}}
 #alias jba {js bone arrow; give arrows %1}
 #alias jbab {jba brakus}
 #alias jbas {jba $skyscout}
@@ -1642,6 +1642,7 @@ reseteye;
 	jd cu bl
 }
 
+#alias cblt {mai tan cbl}
 #ALIAS {cc}
 {
 	#variable casters {};
@@ -4145,6 +4146,8 @@ myemail;	1;	1;	1;	1;
 #alias vomgroup {ll gt -->  rit $mymage}
 #alias vomsham {voy $mymage; mai rest}
 #action {^You stop following a priest of paladine}{noisy}
+#action {^You stop following an off duty soldier}{noisy}
+#action {^You stop following Rahnkagi}{noisy}
 #alias ctt {ct tick in $tilltick}
 #alias blay {bot {cancel; st; lay %1}}
 #alias bhl blay
