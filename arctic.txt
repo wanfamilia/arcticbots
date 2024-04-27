@@ -781,6 +781,7 @@ reseteye;
 #alias pracsean {sean; #action {^The faintest connection to the undead} {sean}}
 #alias pracamel {amel; #action {^The gods smile upon you} {st; amel}}
 #alias praclegcler {pracamel; pracraptu; sat; e10 cww}
+#alias rap {st; rapture}
 #alias pracraptu {raptu; #action {^You sense the call of the gods will be coming soon}{st; raptu}}
 #alias jba {js bone arrow; give arrows %1}
 #alias jbab {jba brakus}
