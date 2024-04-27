@@ -5238,7 +5238,7 @@ cancel;
 #alias terzakcase { rem $hrec; hold rag; clean soot; uog safe; rem rag; hold $hrec}
 #var palheld fireball
 #var palhead mask
-#var palweap halberd
+#var palweap maul
 #alias modepala
 {
   #alias bigrest donothing;
