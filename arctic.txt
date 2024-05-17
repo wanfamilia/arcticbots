@@ -1412,6 +1412,8 @@ reseteye;
   oe for 'di ma' 'blur' 'shield' 'inv';
   oe mem 'li bo' 'ma mi' 'ma mi' 's g';
 }
+
+#alias alive5 {ll #var alivefor 300}
 #alias conew {conj newt; #var pet Ocasek; nopet}
 
 #alias palrep {
@@ -2322,6 +2324,7 @@ reseteye;
 }
 
 #tab chernobog
+#tab cyqieqaraqk
 #tab shmyaka
 #tab cunningham
 #tab nahuatlipochty
@@ -3510,7 +3513,7 @@ myemail;	1;	1;	1;	1;
  #var clerheld golden.orb;
  #var weapon mace;
  nopet;
- #alias cleancomp cleancomp3;
+ #alias cleancomp cleancomp1;
  #alias knoc o aspasia pick;
   #var vbuffover[bless] {js prayer};
   #alias lootcomp lootcompimpl;
@@ -4134,7 +4137,7 @@ myemail;	1;	1;	1;	1;
   #action {^Scouts' Training Room} {lrn; smile};
   #action {^Elrax the master scout is here,} {lrn; smile};
   modebow;
-  donothing legarr;
+  legarr;
   #delay 30 {group};
   fly;
 }
@@ -4210,7 +4213,7 @@ myemail;	1;	1;	1;	1;
   #action {^You feel enligh} {cancel; sk; #bell};
   #alias sneakit {dosneak 18};
 }
-#alias dosneak {#%1 {n; e; w; s;}}
+#alias dosneak {#%1 {w;n;s;e}}
 #action {^The ghost of a long-dead {.+} materializes} {lrn}
 #alias pokethem {#action {^%1 flies in} {poke %1}}
 
@@ -5077,7 +5080,7 @@ cancel;
   #alias ser inac jd cu ser;
   #var vbuffover[heal boost] {mac jdo heal boost $mymage};
   #alias rs donothing;
-  #var weapon heavy.mace;
+  #var weapon doublet;
   #alias lootcomp lootcompimpl;
   #alias assthis ott;
   #var {circle1} {infrav};
@@ -5237,7 +5240,7 @@ cancel;
 #action {disarms your weapon} {cancel; sysplay smb3_cannon; gw};
 #alias terzakcase { rem $hrec; hold rag; clean soot; uog safe; rem rag; hold $hrec}
 #var palheld fireball
-#var palhead mask
+#var palhead discolored.helmet
 #var palweap maul
 #alias modepala
 {
@@ -5752,6 +5755,7 @@ addlocates;
 #alias brewwat dobrew watchful
 #alias brewfor dobrew fortify
 #alias brewher dobrew heroism
+#alias scridoor doscribe dimension
 #alias scriwhi doscribe white rune
 #alias aftrisol {roll carpet; get carpet; get key gavin; get parchment risol; put parchment $belt}
 #alias brewcure dobrew {cure serious}
@@ -6650,7 +6654,7 @@ addlocates;
     {shrunken demon's horn charm}{NAP}
   {pristine book in a blue cover}{summon}
   {small charm of meteorite}{berries}
-  {skewered dragon's eyeball char}{amplify}
+  {skewered dragon's eyeball charm}{amplify}
   {moist charm of sea sponge}{tenacious heart}
     {charm covered in a lone gray flame}{HEALING WAVE}
     {grey stone bracelet}{bluff}
