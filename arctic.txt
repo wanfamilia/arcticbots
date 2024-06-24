@@ -3510,7 +3510,7 @@ myemail;	1;	1;	1;	1;
 {
 	#variable food $clerfood;
  #var circle1 {cu li};
- #var clerheld golden.orb;
+ #var clerheld rod;
  #var weapon mace;
  nopet;
  #alias cleancomp cleancomp1;
@@ -4635,7 +4635,7 @@ cancel;
   #ticker e60 {who needs_title};
 }
 #action {^Mustakrakish, the ancient death troll glows a bright lunar white} {gt -->    TROLL CLEANSED  !!}
-#alias logsham {newses arc {$myshaman; mypw; ones; modeshaman; leaveinn; sgl; anb}  }
+#alias logsham {newses arc {$myshaman; mypw; ones; modeshaman; leaveinn; }  }
 #alias logshamo {newses bot {$myshaman; mypw; ones; modeshaman; fly}  }
 #var mydruid wagner
 #alias logdru newses dru {$mydruid; mypw; 1; 1; modedruid; fly}
@@ -4662,7 +4662,7 @@ cancel;
 #alias newsky newchar sky $skyscout
 #alias newmage newchar mag $mymage
 #alias newpal newchar bot $mypaladin
-#alias logcler newses arc {$mycler; mypw; 1; 1; modecleric; fly; }
+#alias logcler newses arc {$mycler; mypw; 1; 1; modecleric; ligst; fly; }
 #alias logclero newses bot {$mycler; mypw; 1; 1; modecleric; fly; }
 #var mythief nikson
 #alias tust {turn; #bot #3 strike}
@@ -4688,7 +4688,7 @@ cancel;
   #alias vass vass2;
 }
 #alias thi {#thi}
-#alias browseshop {browse immune_fear; browse detect_astral}
+#alias browseshop {browse immune_fear !nopaladin; browse detect_astral; browse hit !nopaladin; browse con !nopaladin}
 #alias stca jd storm call
 #alias podderek {push shrub; east; exam derek; exam brian}
 #alias csus {commune; sus}
@@ -5241,7 +5241,7 @@ cancel;
 #alias terzakcase { rem $hrec; hold rag; clean soot; uog safe; rem rag; hold $hrec}
 #var palheld fireball
 #var palhead discolored.helmet
-#var palweap maul
+#var palweap cannabis
 #alias modepala
 {
   #alias bigrest donothing;
@@ -5582,6 +5582,10 @@ cancel;
 #alias rrs {rr; mgo solinn}
 #alias kpr {bot {punch %1; parry}}
 #sub {hungry. feed me!} {warrior needs food, badly}
+#sub {The glowing red walls hiss and sizzle as they cool}{--> WALLS COOL}
+#sub {Glowing, red-hot walls produce an unbearable heat}{--> WALLS HOT}
+#sub {The walls of the cave glow a deeper red as the heat intensifies}{--> WALLS WARMING}
+#alias hecor {hl corpse; vch corpse; twopets}
 #sub {The End of the Passage} {Lemuria ICE}
 #alias toplines {#split %1 3}
 #sub {shredded by shards of ice}{-> shredded by shards of Ice}
@@ -6561,6 +6565,7 @@ addlocates;
     {grey book with silk bindings} {tunnel/portal/mindaf}
  {sparkling crystal book}{HEALING MIST}
  {vermillion suit of dragonscale}{inferno}
+ {iridescent dragonscale gloves}{inferno}
  {bronze gas mask}{hylo}
  {skull-encased black steel pauldrons}{ft}
  {harbinger cape}{dread}

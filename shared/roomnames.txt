@@ -125,6 +125,7 @@ frostycave
 frostybottom
 overdaggoraath
 daggorathturtle
+tozmij
 zmij
 ixpathatan
 gleam
@@ -373,6 +374,7 @@ dkogates
 dkosayskull
 dkonightlord
 palscout
+tomortigoth
 morticliff
 mortivillage
 startbda
@@ -462,6 +464,7 @@ nerguards
 gownnocharm
 raynemansakr
 rayneselissa
+zon
 thcsmith
 paxspirit
 feisal
