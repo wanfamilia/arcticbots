@@ -3066,7 +3066,10 @@ reseteye;
 	jdm sh gr
 }
 
-#ALIAS {ksil}
+#alias ksil ksilcler
+
+#alias ksilcler js silence
+#ALIAS {ksilmage}
 {
   spellcraft mid; jsa sil %1; spellcraft low;
 }
@@ -4509,6 +4512,7 @@ cancel;
   #alias bfm {bot follow pryor; #delay 1 group form};
   #var hrec fireball;
   #alias lightrec donothing;
+  #alias ksil ksilmage;
   #var belt cloth.belt;
   #alias ide {rec identify};
   #alias remage {rewin; modemage; modewhite};
@@ -5239,6 +5243,7 @@ cancel;
 }
 #action {disarms your weapon} {cancel; sysplay smb3_cannon; gw};
 #alias terzakcase { rem $hrec; hold rag; clean soot; uog safe; rem rag; hold $hrec}
+#action {^You lay your hands on} {dolog lay used; ll #show --> lay used}
 #var palheld fireball
 #var palhead discolored.helmet
 #var palweap cannabis
@@ -5758,6 +5763,7 @@ addlocates;
 #alias brewsac dobrew sacred
 #alias brewwat dobrew watchful
 #alias brewfor dobrew fortify
+#alias brewmoc dobrew moment
 #alias brewher dobrew heroism
 #alias scridoor doscribe dimension
 #alias scriwhi doscribe white rune
