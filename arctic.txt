@@ -4692,7 +4692,7 @@ cancel;
   #alias vass vass2;
 }
 #alias thi {#thi}
-#alias browseshop {browse immune_fear !nopaladin; browse detect_astral; browse hit !nopaladin; browse con !nopaladin}
+#alias browseshop {browse immune_fear !nopaladin; browse detect_astral; browse hit !nopaladin; browse con !nopaladin; browse wis !nocleric}
 #alias stca jd storm call
 #alias podderek {push shrub; east; exam derek; exam brian}
 #alias csus {commune; sus}
@@ -5243,7 +5243,7 @@ cancel;
 }
 #action {disarms your weapon} {cancel; sysplay smb3_cannon; gw};
 #alias terzakcase { rem $hrec; hold rag; clean soot; uog safe; rem rag; hold $hrec}
-#action {^You lay your hands on} {dolog lay used; ll #show --> lay used}
+#action {^You lay your hands on} {ll dolog lay used; ll #show --> lay used}
 #var palheld fireball
 #var palhead discolored.helmet
 #var palweap cannabis
@@ -5322,6 +5322,12 @@ cancel;
   #alias allprompt allpromptimpl;
 }
 
+#action {^{$mymage|$mypaladin} {leaves|flies|swims} {north|south|east|west|up|down}} {tanklead %3}
+
+#alias draglead #alias tanklead donothing
+#alias tankleadimpl {#delay 1 %1}
+#alias steplead #alias tanklead tankleadimpl
+draglead
 #alias allpromptimpl {
   #format shortprompt {%sM%.80s} {%1} {%2};
   ifinactive #ats #show {$shortprompt} {-3};
