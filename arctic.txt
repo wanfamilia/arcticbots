@@ -4692,7 +4692,7 @@ cancel;
   #alias vass vass2;
 }
 #alias thi {#thi}
-#alias browseshop {browse immune_fear !nopaladin; browse detect_astral; browse hit !nopaladin; browse con !nopaladin; browse wis !nocleric}
+#alias brwm {browse immune_fear !nopaladin; browse detect_astral; browse hit !nopaladin; browse con !nopaladin; browse wis !nocleric}
 #alias stca jd storm call
 #alias podderek {push shrub; east; exam derek; exam brian}
 #alias csus {commune; sus}
@@ -5243,10 +5243,12 @@ cancel;
 }
 #action {disarms your weapon} {cancel; sysplay smb3_cannon; gw};
 #alias terzakcase { rem $hrec; hold rag; clean soot; uog safe; rem rag; hold $hrec}
-#action {^You lay your hands on} {ll dolog lay used; ll #show --> lay used}
+#action {^You lay your hands on} {alog --> lay used}
+#alias alog #ats {dolog %0; #show %0}
 #var palheld fireball
 #var palhead discolored.helmet
 #var palweap cannabis
+#action {^You fall down, your ears ringing}{ifinactive alog --> alt STUNNED}
 #alias modepala
 {
   #alias bigrest donothing;
@@ -5264,8 +5266,7 @@ cancel;
   eng paleng;
   #var hrec $palheld;
   #action {^Your hands tingle as a feeling of goodness} {
-   ll #show -->       LAY ready;
-   #line log messages.txt LAY ready;
+   alog --> LAY ready;
   } {7};
   #action {^Warriors' Training Room} {lrn; smile};
   #alias assthis palassthis;
