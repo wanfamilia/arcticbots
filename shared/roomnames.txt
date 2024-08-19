@@ -151,6 +151,7 @@ citadel thorbardin
 startdwarfkeep
 citadel dwarfkeep
 citadel rockhorde
+startgarret
 ritgarret
 uthgates
 tolich
