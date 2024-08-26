@@ -352,7 +352,6 @@ reseteye;
   needbuff sphere of invisibility;
   needbuff mental acuity;
   needbuff water breath;
-  needbuff repose;
   needbuff watchful eye;
   needbuff preservation;
   needbuff mind afire;
@@ -458,7 +457,7 @@ reseteye;
 #alias bpu {buy putrid}
 #alias cts {sleep; ct sleeping...}
 #alias ctw {ct woke up; wake; st; fly}
-
+#action {shield decays in you} {alog --> SHIELD DECAY}
 #alias indargo {mgo dargostart; wake}
 #action {^{$linebegin}{\w+(\s\w+)?}: this spell isn't on your mem} {for '$circle1'}
 #alias pracwhi {
@@ -4558,7 +4557,7 @@ cancel;
 }
 
 #alias afterarmysham {
-  rem all.dinged; rem leather.vest; wear $shamlegs;
+  rem all.dinged; 
   wear $clerbody; hb me; rg me; fly; san me
 }
 #alias wser  {wake; stand; east; rest}
@@ -5090,7 +5089,7 @@ cancel;
   #alias ser inac jd cu ser;
   #var vbuffover[heal boost] {mac jdo heal boost $mymage};
   #alias rs donothing;
-  #var weapon doublet;
+  #var weapon heavy.mace;
   #alias lootcomp lootcompimpl;
   #alias assthis ott;
   #var {circle1} {infrav};
