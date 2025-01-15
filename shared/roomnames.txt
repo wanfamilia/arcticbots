@@ -83,6 +83,7 @@ darval
 darkeep
 palwest
 palsquare
+tohylo
 hylosquare
 gulfambush
 werewolve
@@ -90,6 +91,7 @@ werewolf
 gulfeast
 gulfport
 gulfgar
+startgarret
 gladewhitestone
 shayd
 deepfish
@@ -441,6 +443,7 @@ alignec
 branchala
 branchguard
 alignen
+newport
 alignne
 aligncn
 alignnl
@@ -469,6 +472,7 @@ zon
 thcsmith
 paxspirit
 feisal
+vinthief
 palgrate
 palthief
 thorbtemple
@@ -649,3 +653,5 @@ pyramidmatilya
 heartspring
 moondancer
 uthcain
+startmoc
+kenro

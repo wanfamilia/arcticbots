@@ -3,7 +3,7 @@ services:
   wilbot:
     image: ruby:2.5
     container_name: wilbot
-    command: bash -c "gem install discordrb && ./runwil.sh"
+    command: bash -c "gem install discordrb -v 3.4.3 && ./runwil.sh"
     working_dir: /usr/app/
     stdin_open: true
     tty: true

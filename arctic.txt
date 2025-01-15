@@ -148,7 +148,7 @@
 #alias drn {js drain %1 in inventory}
 #alias bols {sky bolster}
 #alias bser {bot ser}
-
+#alias tfren {taunt %1; taunt %1; fren; taunt; fren}
 #alias frensponge {
   #action {^A red mist blurs} {oe rescue $myshaman};
   #action {^Your rage builds} {fren};
@@ -265,7 +265,7 @@
 #alias refly  {st; dispel 'fly'; air me}
 #alias restick {
   #var onestand %1;
-  rest; #delay 9 rest;
+  rest; 
   #alias dost {
     #alias dost dostmain;
     dostmain;
@@ -273,6 +273,10 @@
   }
 }
 
+#alias disablemyth {
+  runto d2e5n8e8nw2n3w3ne4ne2nw3n; qp;
+  disablevinpal;
+}
 #var resting 0
 #action {^You sigh and hastily abandon your studies} {#variable firstspell 1}
 
@@ -1514,6 +1518,7 @@ reseteye;
 #alias buch {buy 12*%1; put all.%1 chest}
 
 #alias kibard {tan rgr; #delay 1 kibardmage kig}
+#alias kinfer {u; w; ksd inferno; }
 #alias kibardmage {south; west; %1 bard;}
 #alias vcr {poch brewed.critical}
 #alias vser poch brewed.serious
@@ -1561,7 +1566,7 @@ reseteye;
 #alias recler {rewin; modecleric}
 #alias readybrew brewonly
 #alias brewonly {brsh; ghob; gmal}
-#alias medibar {st; ki barbarian; js clot me; #9 flee; w; s; rest; ban me; rg me; sat; sgl; gmal; }
+#alias medibar {st; ki barbarian; js clot me; #9 flee; w; s; rest; ban me; rg me; sat; sgl; ssh barbarian; gmal; }
 #alias sshbar {#4 ssh barbarian; sat; gmal; sgl;rest}
 #alias kicf {ki barbarian; js clot me; #4 flee}
 #alias medibarh {medibar; restick sshbar}
@@ -1750,6 +1755,8 @@ reseteye;
   #action {^A violent vortex of wind forces your gaze skyward}{mac tempwind};
   #action {^City View}{mgo startcloud};
   #action {^You summon the winds of Krynn}{mac tempwind};
+  #action {^A Distribution Preparation Facility}{mgo 14320};
+  #action {^A Present Collection Area}{mgo xmasladder};
   #action {^Alas, you cannot go that way} {#map undo};
   #action {^Center of the Celestial Temple} {mgoc};
   #action {^A Running Stream}{mgo shaydstream};
@@ -3512,7 +3519,7 @@ myemail;	1;	1;	1;	1;
 {
 	#variable food $clerfood;
  #var circle1 {cu li};
- #var clerheld fireball;
+ #var clerheld coral.branch;
  #alias ligst donothing;
  #var weapon mace;
  nopet;
@@ -3928,21 +3935,23 @@ myemail;	1;	1;	1;	1;
 
 #alias practaunt
 {
-  #var vtaunt %1;
-  #action {^{\w+} comes to your rescue} {cancel; skill; group; st; dotaunt $vtaunt};
-  #action {^You laugh and jeer {.+} ignores you} {st; dotaunt $vtaunt};
-  #ticker e4 {stoptaunt; gmal; ghob; restick retaunt} 240;
+  #action {^{\w+} comes to your rescue} {cancel; group; lrn; dotaunt $vtaunt};
+  #action {^You laugh and jeer {.+} ignores you} {st; taunt $vtaunt};
+  bot ki $vtaunt; #delay 1 freta
 }
 
+#var vtaunt barbarian
 #alias retaunt {
-  #alias dotaunt taunt;
+  sean;
+  gmal; ghob; 
+  rg barbarian; rg me; tan rg;
+  #alias dotaunt freta;
   dotaunt $vtaunt
 }
 #alias stoptaunt {
   #alias dotaunt donothing;
-  #unticker e4;
 }
-#alias dotaunt taunt
+#alias dotaunt freta
 #alias freta {asf; taunt %1}
 #ALIAS {pcs}
 {
@@ -4682,14 +4691,14 @@ cancel;
   #action {^Your coup works and you} {back};
   #alias assthis {assist %%1; coup};
   nopet;
-  #var hrec spine;
+  #var hrec dagger;
   #alias bigrest donothing;
   eng be;
   #var food cheese;
   #var belt belt;
   #alias onerest donothing;
   #alias palassthis {assist %%1; kstthis};
-  #var weapon curved.dagger;
+  #var weapon harpoon;
   #alias vass vass2;
 }
 #alias thi {#thi}
@@ -4741,7 +4750,7 @@ cancel;
   #delay 180 thi mac disablevinpal;
 }
 
-#alias disablevinpal {st; disablevin; thgrate; disablepalanthas; rest; sk}
+#alias disablevinpal {st; disablevin; thgrate; qp; disablepalanthas; rest; sk}
 #alias disablefull {
   logthi; disable3;
   #delay 420 {thiefout};
@@ -5778,6 +5787,7 @@ addlocates;
 #alias brewmoc dobrew moment
 #alias brewher dobrew heroism
 #alias scridoor doscribe dimension
+#alias scrienc doscribe {enchant item}
 #alias scriwhi doscribe white rune
 #alias aftrisol {roll carpet; get carpet; get key gavin; get parchment risol; put parchment $belt}
 #alias brewcure dobrew {cure serious}
@@ -6666,6 +6676,8 @@ addlocates;
     {green dragon's spine}{chaos}
     {alabaster garlic clove charm}{LAST CHANCE}
     {charm covered in a sparkling silvery mist} {RITUAL VOYAGE}
+  {twisted staff of rosewood}{uthstar}
+  {bronze dragon's tear}{sarson?}
   {thin wooden wand}{dread}
   {pair of succubus wings}{cv}
   {golden tinged broadsword}{raynes?}
