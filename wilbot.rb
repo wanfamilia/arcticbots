@@ -11,6 +11,11 @@ def secret(key)
   YAML::load_file(File.join(__dir__, 'secret.yml'))[key.to_s]
 end
 
+# ssh docker@wanforall.org
+# docker-compose up -d wilbot
+# docker attach wilbot
+# ctrl-p ctrl-q
+
 t2 = secret :disco_key
 
 class MagicWords

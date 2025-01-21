@@ -273,9 +273,11 @@
   }
 }
 
+#alias mythinit {ef; d; e; s; bpu; bpu; buy poison; brn;n; w; u}
 #alias disablemyth {
-  runto d2e5n8e8nw2n3w3ne4ne2nw3n; qp;
+  mythinit; runto d2e5n8e8nw2n3w3ne4ne2nw3n; qp;
   disablevinpal;
+  st; w2n5e; fsf; pot blue; gw;
 }
 #var resting 0
 #action {^You sigh and hastily abandon your studies} {#variable firstspell 1}
@@ -1368,7 +1370,7 @@ reseteye;
 #alias bk {aggone back}
 #alias bedir {
   thi enven $weapon;
-  thi #5 {sneak; %1; bk %2; fade $reverses[%1]};
+  thi #5 {sneak; %1; bk %2; #3 fade $reverses[%1]};
   #alias dolater5 {cancel; %%1}
 }
 #alias fadeback {
@@ -4116,7 +4118,7 @@ myemail;	1;	1;	1;	1;
 #alias dochalk {squeeze chalky}
 #alias msym {#map set roomsymbol [%1]}
 #alias wearb {get %1 $belt; wear %1}
-#action {^You feel up to using {gather|headbutt|forage|scrape|scavenge|dart}} {%1}
+#action {^You feel up to using {gather|headbutt|zap|forage|leap|bite|swarm|scrape|scavenge|dart}} {#delay 2 mac %1}
 #alias gather {gath; put all.!blunt.bundle quiver; drop all.arrow }
 #action {^You feel up to using volley} {upvolley}
 #alias upvolley amaze
@@ -4500,6 +4502,16 @@ cancel;
 #alias tmpa {%1 %2; ota; temp}
 #alias ksbt {tmpa ksb}
 #alias bqk {buy knowledge; quaff knowledge}
+#alias logsco {
+  #var port $devport;
+  newses sky {wilbon; newpw; ones; };
+  #gts #var port $mainport;
+}
+#alias logshad {
+  #var port $devport; 
+  newses arc {$myshaman; mypw; ones; };
+  #gts #var port $mainport;
+}
 #alias logred newses red {#alias mag red; gere; mypw; 1; 1; fly; modemage; modered;}
 #alias logwhi {newses white {$mymage; mypw; #var food food; ones; fly; modemage; modewhite; lightrec}}
 #alias logmag {newses mag {wilbon; mypw; #var food food; 1; 1; fly; modemage; modewhite}}
@@ -4691,14 +4703,14 @@ cancel;
   #action {^Your coup works and you} {back};
   #alias assthis {assist %%1; coup};
   nopet;
-  #var hrec dagger;
+  #var hrec pearl.knife;
   #alias bigrest donothing;
   eng be;
   #var food cheese;
   #var belt belt;
   #alias onerest donothing;
   #alias palassthis {assist %%1; kstthis};
-  #var weapon harpoon;
+  #var weapon sahuagin.spear;
   #alias vass vass2;
 }
 #alias thi {#thi}
@@ -4706,6 +4718,7 @@ cancel;
   browse immune_fear !nopaladin; browse detect_astral; 
   browse hit !nopaladin; browse con !nopaladin; browse wis !nocleric;
   browse spell_level_mod; 
+  list mask;
 }
 #alias stca jd storm call
 #alias podderek {push shrub; east; exam derek; exam brian}
@@ -4743,7 +4756,8 @@ cancel;
 #alias disablevino {sneak;3n6w5n;open door east;2e;open trapdoor;d;det;det chest in r;det 2.chest in r;det 3.chest in r;det 4.chest in r;disable chest in r;!;disable 2.chest in r;!;disable 3.chest in r;!;disable 4.chest in r;!;pick chest in r;pick 2.chest in r;pick 3.chest in r;pick 4.chest in r;op chest in r;op 2.chest in r;open 3.chest in r;open 4.chest in r;get all chest in r;get all 2.chest in r;get all 3.chest in r;get all 4.chest in r;learn all;open hatch; uw;open door w;w;sneak;5s6e3s;}
 #alias thgrate {4w2n2wd2wuw2n2e3n2w6n8w4n4wne}
 #alias grateth {runto ws4e4s8e6s2e3s2w2sed2eu2e2s4e}
-#alias disablepalanthas {gustoff; open grate;sneak;d;det pile;disable pile;disable pile;disable pile;e;det pile;disable pile;disable pile;disable pile;sneak;eeee;det pile;disable pile;disable pile;disable pile;een;det pile;disable pile;disable pile;disable pile;swwwwwwwss;det pile;disable pile;disable pile;disable pile;nnwn;det pile;disable pile;disable pile;disable pile;nnneen;det pile;disable pile;disable pile;disable pile;n;det pile;disable pile;disable pile;disable pile;sswwssssesswws;learn all;neenn;open grate;u}
+#alias dpile {det; det pile in room; #2 disable pile in room}
+#alias disablepalanthas {gustoff; open grate;sneak;d;dpile;e;dpile;sneak;eeee;dpile;een;dpile;swwwwwwwss;dpile;nnwn;dpile;nnneen;dpile;n;dpile;sswwssssesswws;learn all;neenn;open grate;u}
 #alias disable3 {
   kalinit;
   disablekal; kalth; rest;
@@ -6676,6 +6690,8 @@ addlocates;
     {green dragon's spine}{chaos}
     {alabaster garlic clove charm}{LAST CHANCE}
     {charm covered in a sparkling silvery mist} {RITUAL VOYAGE}
+  {an ebony hilted gleaming sword}{romis}
+  {A kindly dargonesti elf wanders}{listen elf}
   {twisted staff of rosewood}{uthstar}
   {bronze dragon's tear}{sarson?}
   {thin wooden wand}{dread}

@@ -11,6 +11,11 @@ class ParseArctic
     end.map{|me| me.last}
   end
 
+  def egreck
+    mob = 'Egreckl Steamus'
+    %Q[grep -o "^#{mob} is dead" logs/bot.txt | grep -c ""]
+  end
+
   def schema_info
     output_name = 'log/small-schema.rb'
     File.open(output_name, 'w') do |f|
