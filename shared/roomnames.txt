@@ -133,6 +133,7 @@ ixpathatan
 gleam
 sanport
 sansouth
+dreadstairs
 sankit
 sankit
 sanstudy
@@ -388,6 +389,7 @@ solwar
 tokruins
 kruinbush
 startkruin
+kruinsminer
 darvar
 startdractower
 locatedractower
@@ -655,3 +657,4 @@ moondancer
 uthcain
 startmoc
 kenro
+dreadwaiter

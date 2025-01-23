@@ -12,10 +12,13 @@ class ParseArctic
   end
 
   def egreck
-    mob = 'Egreckl Steamus'
-    %Q[grep -o "^#{mob} is dead" logs/bot.txt | grep -c ""]
+    count_mob('Egreckl Steamus')
   end
 
+  def rayne
+    count_mob 'Lady Rayne'
+  end
+  
   def schema_info
     output_name = 'log/small-schema.rb'
     File.open(output_name, 'w') do |f|
@@ -133,5 +136,11 @@ class ParseArctic
   def demo
 #     %Q[curl -H "Content-Type: application/json" -X POST -d '{"content": "hello"}' #{key}]
     'hello world'
+  end
+
+  private
+
+  def count_mob(mob)
+    %Q[grep -o "^#{mob} is dead" logs/bot.txt | grep -c ""]
   end
 end

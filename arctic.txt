@@ -81,6 +81,7 @@
 #alias boombag  {drop bag; light bag in room}
 #alias ridebelt {kw ride belt in room}
 #alias explainfeisal {gt feisal reflects, it will blind/silence you and it cannot be cured so dont ask us to fix that, flee is safe but if everyone flees it will track out and attack, so if fight going badly better to recall than to flee}
+#alias explainshys {gt kill/frag/target steam, if no steams left, kill/frag/target mage, silence/para feces, heal/regen blood if they getting low}
 #alias explainvermi {gt verminaard fight: all kill/bash draconian, thrust lord, absolution lord, dont use heals on people not tanking, let area heals take care of them. no warddancing without legend rank}
 #action {^Onyx is dead} { get all.charm onyx}
 #alias gotomb {#map move down; onlyinactive lie %1.tomb; gt if boone doesnt die, lie %1.tomb; #delay 5 lie %1.tomb}
@@ -4717,8 +4718,8 @@ cancel;
 #alias brwm {
   browse immune_fear !nopaladin; browse detect_astral; 
   browse hit !nopaladin; browse con !nopaladin; browse wis !nocleric;
-  browse spell_level_mod; 
   list mask;
+  browse spell_level_mod; 
 }
 #alias stca jd storm call
 #alias podderek {push shrub; east; exam derek; exam brian}
@@ -6690,6 +6691,7 @@ addlocates;
     {green dragon's spine}{chaos}
     {alabaster garlic clove charm}{LAST CHANCE}
     {charm covered in a sparkling silvery mist} {RITUAL VOYAGE}
+  {engraved emerald knife}{dread}
   {an ebony hilted gleaming sword}{romis}
   {A kindly dargonesti elf wanders}{listen elf}
   {twisted staff of rosewood}{uthstar}
