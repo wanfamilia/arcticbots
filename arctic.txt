@@ -146,7 +146,7 @@
 #alias oes {group own; oe smile $myshaman; oe st}
 #alias ctv {ct if you are confident i have made this trigger legal, ct $myshaman rit me}
 #alias oeb {oe bop}
-#alias drn {js drain %1 in inventory}
+#alias drn {spellcraft high; js drain %1 in inventory; spellcraft low}
 #alias bols {sky bolster}
 #alias bser {bot ser}
 #alias tfren {taunt %1; taunt %1; fren; taunt; fren}
@@ -796,6 +796,7 @@ reseteye;
 #alias vass3 {#delay 3 {nospam 2 palass %1}}
 #alias vass1 {nospam 6 ota }
 #alias vass2 {nospam 1 assthis}
+#alias assocean {assist; eagre; bite; swarm; zap}
 #alias otai {ota; imp}
 #alias asst {ass %1; st}
 #alias bpa {bot palassthis}
@@ -1792,7 +1793,8 @@ reseteye;
 }
 #alias gowind donothing
 #alias gowindimpl {mgo %1winds; #show %1;}
-#alias gst {plant bread %1; give bread %1; #3 steal bread %1; sk}
+#alias gst {case %1; plant $food %1; give $food %1; #3 steal $food %1; sk}
+#alias cpst {case %1; plant $food %1; steal $food %1; steal $food %1}
 #alias cvarch {gt follow me after enter arch; kw enter arch;
   #delay 4 group form;
   #delay 8 group form;
@@ -3338,6 +3340,7 @@ reseteye;
   #ticker feedme {taste %1; sip water} {99};
 }
 
+#alias bf #3 {be %1; fade; fade}
 #alias {study book} {#bell; #show Do you want to live forever?; subo}
 #alias {sell 1} {#bell; #show Trust me, I know what I'm doing}
 #alias subo {sit; study !dragonscale.book in inventory; donothing %1}
@@ -3522,7 +3525,7 @@ myemail;	1;	1;	1;	1;
 {
 	#variable food $clerfood;
  #var circle1 {cu li};
- #var clerheld coral.branch;
+ #var clerheld fireball;
  #alias ligst donothing;
  #var weapon mace;
  nopet;
@@ -4224,9 +4227,10 @@ myemail;	1;	1;	1;	1;
 #alias ps9 {psct %1 9}
 #alias psct {pscout2 %1 9}
 #alias psneak {w; sneak; sneak; sneak; e;
-  #action {pokes you in the ribs} {cancel; psneak};
+  #action {pokes you in the ribs} {#kill delay; cancel; psneak};
   #action {^You feel enligh} {cancel; sk; #bell};
   #alias sneakit {dosneak 18};
+  #delay 9 sneakit;
 }
 #alias dosneak {#%1 {w;n;s;e}}
 #action {^The ghost of a long-dead {.+} materializes} {lrn}
@@ -4237,7 +4241,7 @@ myemail;	1;	1;	1;	1;
 #alias solaceenbir {runto wdnd7n2w6n6w4n7ws6w2n2e2s14enen; open gate; 4n; open gate; runto 2nen2ene; remb crystal.shard; sfl; hide; hide}
 #alias hidesolace {spamhide squarescout}
 #alias hideskill {spamhide skill}
-
+#alias hidesolthief {spamhide squarethief}
 #alias learnhideuth {cancel; unhide; enbirsolace; solaceenbir; #delay 60 hideskill}
 #alias hidenothing {spamhide donothing}
 #alias spamhide {
@@ -4250,6 +4254,7 @@ myemail;	1;	1;	1;	1;
 }
 #alias acadsco {w; w; w; w; w; pscout4; pscout3; e; e; e; e; e;}
 #alias squarescout {u; s; u; e; camp; lrn; w; d; n; d; hide; hide}
+#alias squarethief {u; n; open door; e; lrn; w; s; d; fsf; hide; hide}
 #alias cfad {cancel; st; fade down; fade down; fade down; fade down; w; w; d; acadsco; u; e; e; u; #9 ptpw}
 #alias cfas {cancel; st; #4 {fade south}; s; e; e; n; u; acadsco; d; s; w; w; n; ; n; #9 ptms}
 #alias pscout3 {scav; n; w; open door; w; s; s; s; e; e; e;}
@@ -4695,14 +4700,29 @@ cancel;
 #alias tust {turn; #bot #3 strike}
 #alias newthi newchar thi $mythief
 #alias logthi newses thi {$mythief; mypw; 1; 1; fly; modethief}
+#alias stabarrival {
+  cancel; fade; back $arrival;
+}
 #alias logthin newses thi {branson; mypw; 1; 1; fly; modethief}
+#alias practhroat {
+  #action {^Your hand is strong, and ready}{%1};
+  skillbell;
+  %1;
+}
+
+#alias throatfadebar {throat barbarian; #4 fade; sk}
+#alias sleepcase {inac sleep; #delay 1 {case %1; wake %1}}
+
 #alias modethief {
   #action {^The master assassin looks at you from behind} {lrn; smile};
   #action {^Aldur A'Kul the master thief sits} {lrn; smile};
   #alias lootcomp donothing;
   #alias rethi {rewin; modethief};
-  #action {^Your coup works and you} {back};
-  #alias assthis {assist %%1; coup};
+  #action {^Your coup works and you} {mac back};
+  #action {^Your coup fails}{mac unbalance};
+  #var aggro stabarrival;
+  #action {^Get in there and coup some chumps}{mac coup};
+  #alias assthis {assist %%1; unbal; throat; coup};
   nopet;
   #var hrec pearl.knife;
   #alias bigrest donothing;
@@ -4711,7 +4731,7 @@ cancel;
   #var belt belt;
   #alias onerest donothing;
   #alias palassthis {assist %%1; kstthis};
-  #var weapon sahuagin.spear;
+  #var weapon knife;
   #alias vass vass2;
 }
 #alias thi {#thi}
@@ -5803,6 +5823,7 @@ addlocates;
 #alias brewher dobrew heroism
 #alias scridoor doscribe dimension
 #alias scrienc doscribe {enchant item}
+#alias scrifir doscribe fireball
 #alias scriwhi doscribe white rune
 #alias aftrisol {roll carpet; get carpet; get key gavin; get parchment risol; put parchment $belt}
 #alias brewcure dobrew {cure serious}
@@ -6004,8 +6025,9 @@ addlocates;
 #action {^Your eyes tingle} {setgaze}
 #action {^You weakly gaze}{imp; setimp}
 #action {^You gaze at {.+} you can muster.$} {setimp}
-#action {^Your connection to the spirit world is restored} {gt  --> Ghostmaster Available}
+#action {^Your connection to the spirit world is restored} {masterup}
 
+#alias masterup gt --> Ghostmaster Available
 #alias setgaze {#var dkgaim gaze}
 #alias setimp {#var dkgaim imp}
 #var classes {none}
@@ -6357,7 +6379,6 @@ addlocates;
 
 #MACRO {\e[24~}
 {
-	st;
 	mac $aggro
 }
 
@@ -6691,6 +6712,9 @@ addlocates;
     {green dragon's spine}{chaos}
     {alabaster garlic clove charm}{LAST CHANCE}
     {charm covered in a sparkling silvery mist} {RITUAL VOYAGE}
+  {crimson dragon eye}{inferno}
+  {some brushed steel gauntlets}{dracos}
+  {platinum shield inlaid with onyx}{shoal}
   {engraved emerald knife}{dread}
   {an ebony hilted gleaming sword}{romis}
   {A kindly dargonesti elf wanders}{listen elf}

@@ -266,6 +266,7 @@ instinct mountain 51
 reefdragon
 bonfair
 rabbitwand
+brasstent
 knifetent
 goodleaf
 tarsisbase
