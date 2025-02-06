@@ -4710,9 +4710,10 @@ cancel;
   %1;
 }
 
-#alias throatfadebar {throat barbarian; #4 fade; sk}
+#alias throatfadebar {case barbarian; throat barbarian; #4 fade; lrn}
 #alias sleepcase {inac sleep; #delay 1 {case %1; wake %1}}
-
+#alias casethroat {sleepcase %1; #delay 5 throatfadebar}
+#alias casebarb {#9 case barbarian}
 #alias modethief {
   #action {^The master assassin looks at you from behind} {lrn; smile};
   #action {^Aldur A'Kul the master thief sits} {lrn; smile};
@@ -4722,7 +4723,7 @@ cancel;
   #action {^Your coup fails}{mac unbalance};
   #var aggro stabarrival;
   #action {^Get in there and coup some chumps}{mac coup};
-  #alias assthis {assist %%1; unbal; throat; coup};
+  #alias assthis {assist %%1; #2 unbal; coup};
   nopet;
   #var hrec pearl.knife;
   #alias bigrest donothing;
@@ -6043,7 +6044,7 @@ addlocates;
 	setresc %1
 }
 
-#alias slum {js slumber}
+#alias slum {mag js slumber}
 #ALIAS {wagi}
 {
 	jd mass inv %1
@@ -6722,7 +6723,7 @@ addlocates;
   {bronze dragon's tear}{sarson?}
   {thin wooden wand}{dread}
   {pair of succubus wings}{cv}
-  {golden tinged broadsword}{raynes?}
+  {golden tinged broadsword}{raynes}
   {pair of spiked mithril boots}{dtroll}
   {glowing ankh}{chaos}
   {black book inscribed with silver runes}{chaos}
