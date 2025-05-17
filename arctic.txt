@@ -132,13 +132,36 @@
 #alias yas {#sky ass; ota Talinia}
 #action {^You disappear.} {mlea}
 #alias dolog {#line log messages.txt}
+#alias logimpl {#line log messages.txt}
 #alias nolog {#alias dolog donothing}
 #alias messlog {#alias dolog #line log messages.txt}
-#ACTION {^%w {tell\s|tells\s|shout.? '|yell.? '|say.? '|clanmate}}
+
+#alias onmessage
 {
-  dolog;
+  #alias onmessageimpl donothing;
+  #ats #alias onmessageimpl logimpl;
+  onmessageimpl
+}
+
+#alias seslog {
+  #var vmessage {%2};
+  logimpl ($sesname) %1: $vmessage;
+  ifinactive #ats #show ($sesname) %1: $vmessage;
+}
+#ACTION {^%w {tell your|tells your|shout.? '|yell.? '|say.? '|clanmate}}
+{
+  onmessage;
 }
 {2}
+
+#action {^{\w+ tells you} '{.+}'}{
+  seslog {%1} {%2};
+}{2}
+
+#action {^{You tell \w+} '{.+}'}{
+  seslog {%1} {%2};
+}{2}
+
 #var myshaman branson
 #var mypaladin Boone
 #action {^{\w+} tells your {clan} '$myshaman rit {\w+}'} {othervoy %1 %3} {1}
@@ -1366,7 +1389,7 @@ reseteye;
 #ALIAS {bethis}
 {
 	enven $weapon;
-	aggone back %1;
+	aggone back %1; fade;
 }
 
 #alias bk {aggone back}
@@ -2165,7 +2188,8 @@ reseteye;
 }}
 #alias lc4t {#4 lct}
 #alias lc4ch {lc4 charm}
-#alias lootcomp donothing
+#alias lootcomp lootpinch
+#alias lootpinch get golden.pinch corpse
 #alias lootcompimpl {
   get all.component.!pouch corpse;
   get golden.pinch corpse;
@@ -3340,7 +3364,7 @@ reseteye;
   #ticker feedme {taste %1; sip water} {99};
 }
 
-#alias bf #3 {be %1; fade; fade}
+#alias bf #3 {be %1;}
 #alias {study book} {#bell; #show Do you want to live forever?; subo}
 #alias {sell 1} {#bell; #show Trust me, I know what I'm doing}
 #alias subo {sit; study !dragonscale.book in inventory; donothing %1}
@@ -4717,19 +4741,20 @@ cancel;
 #alias modethief {
   #action {^The master assassin looks at you from behind} {lrn; smile};
   #action {^Aldur A'Kul the master thief sits} {lrn; smile};
-  #alias lootcomp donothing;
+  #alias lootcomp lootpinch;
   #alias rethi {rewin; modethief};
   #action {^Your coup works and you} {mac back};
   #action {^Your coup fails}{mac unbalance};
   #var aggro stabarrival;
   #action {^Get in there and coup some chumps}{mac coup};
-  #alias assthis {assist %%1; #2 unbal; coup};
+  #alias assthis {enven $weapon; assist %%1; #2 unbal; coup };
   nopet;
   #var hrec pearl.knife;
   #alias bigrest donothing;
   eng be;
   #var food cheese;
   #var belt belt;
+  skillbell; ef;
   #alias onerest donothing;
   #alias palassthis {assist %%1; kstthis};
   #var weapon knife;
@@ -5294,7 +5319,10 @@ cancel;
 #action {disarms your weapon} {cancel; sysplay smb3_cannon; gw};
 #alias terzakcase { rem $hrec; hold rag; clean soot; uog safe; rem rag; hold $hrec}
 #action {^You lay your hands on} {alog --> lay used}
-#alias alog #ats {dolog %0; #show %0}
+#alias alogold #ats {dolog %0; #show %0}
+#alias alog {
+  logimpl %0; #ats #show %0;
+}
 #var palheld fireball
 #var palhead discolored.helmet
 #var palweap cannabis
@@ -6713,6 +6741,7 @@ addlocates;
     {green dragon's spine}{chaos}
     {alabaster garlic clove charm}{LAST CHANCE}
     {charm covered in a sparkling silvery mist} {RITUAL VOYAGE}
+  {silver-fused steel legplates}{nytes}
   {crimson dragon eye}{inferno}
   {some brushed steel gauntlets}{dracos}
   {platinum shield inlaid with onyx}{shoal}
@@ -6720,7 +6749,8 @@ addlocates;
   {an ebony hilted gleaming sword}{romis}
   {A kindly dargonesti elf wanders}{listen elf}
   {twisted staff of rosewood}{uthstar}
-  {bronze dragon's tear}{sarson?}
+  {bronze dragon's tear}{qkfawn}
+  {brass dragonscale shield}{lunitari}
   {thin wooden wand}{dread}
   {pair of succubus wings}{cv}
   {golden tinged broadsword}{raynes}
