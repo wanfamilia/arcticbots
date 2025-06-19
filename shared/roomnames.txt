@@ -363,6 +363,7 @@ solcler
 startslig
 slig2
 brogdruid
+balipeg
 balibed
 havweap
 solscout
@@ -646,6 +647,7 @@ icentemple
 sancgates
 bwindl
 qualivelanos
+hylopirate
 thiefcove
 shoalshop
 shoaloctopus

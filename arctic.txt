@@ -10,9 +10,12 @@
 #ACTION {^%w {puts away|closes} {his|her} {tablets|spellbook|prayerbook|charms}}
 {
 	calibrate $ticklen;
+  othermemdone;
 }
 {5}
 
+#alias bref {bot gall ref}
+#alias othermemdone donothing;
 #alias stopen {ll st; open %1 %2}
 #alias bstep {bot autostepthis}
 #alias autostepthis {
@@ -40,17 +43,19 @@
     #var leader $groupmembers[1];
     #action {^{$leader} tells your group '{$leadercommands} {\w+}'} {#delay 1 mac %%2 %%3} {1};
   };
+  #alias othermemdone {mac stand};
   #alias onerest {
     #show RESTING: %%1;
-    #if {"$leader"=="%%1"} {folrest};
+    #if {"$leader"=="%%1"} {nospam 1 folrest};
   } ;
 }
 
 #alias folrest donothing
+#alias folrestimpl {#var resting 1; rest}
 #alias sase {sat; sean}
 #alias mapwhi mapto $mymage mag
 #alias mapthi mapto nikson thi
-#var mymage Pryor
+#var mymage Kaplan
 #alias magetank {bot #var tank $mymage}
 #alias gcomp {get all.component pouch; give all.component $mymage; #delay 1 mag put all.component pouch}
 #alias solcal {n; lrn; s alone; cal}
@@ -148,7 +153,7 @@
   logimpl ($sesname) %1: $vmessage;
   ifinactive #ats #show ($sesname) %1: $vmessage;
 }
-#ACTION {^%w {tell your|tells your|shout.? '|yell.? '|say.? '|clanmate}}
+#ACTION {^%w {tell your|tells the officers|tells your|shout.? '|yell.? '|say.? '|clanmate}}
 {
   onmessage;
 }
@@ -163,7 +168,8 @@
 }{2}
 
 #var myshaman branson
-#var mypaladin Boone
+#var mypaladin Kayna
+#VARIABLE         {tank}                  {$mypaladin}
 #action {^{\w+} tells your {clan} '$myshaman rit {\w+}'} {othervoy %1 %3} {1}
 #alias ptab {pta barbarian}
 #alias oes {group own; oe smile $myshaman; oe st}
@@ -591,7 +597,7 @@ reseteye;
 #alias rfe {jd re fe}
 #alias repet {release $pet}
 #alias reowl {conow; release ayoade}
-#var skyscout Grayson
+#var skyscout Evanki
 
 #alias donothing {#var nothing nothing:%1}
 
@@ -600,7 +606,7 @@ reseteye;
   onfight;
   #if {"$classes[%1]" != ""  && "%1" != "$tank"}
   {
-    #if {"$classes[%1]"=="SS" || "$classes[%1]"=="CL" || "$classes[%1]"=="DR" || "$classes[%1]"=="SH" || "$classes[%1]"=="WH" || "$classes[%1]"=="BL" || "$classes[%1]"=="RE"}
+    #if {"$classes[%1]"=="MA" || "$classes[%1]"=="CL" || "$classes[%1]"=="DR" || "$classes[%1]"=="SH" || "$classes[%1]"=="WH" || "$classes[%1]"=="BL" || "$classes[%1]"=="RE"}
     {setcasres %1}{trs %1};
   }
 }
@@ -618,7 +624,7 @@ reseteye;
 }
 #alias trs {
   #if {"$classes[%1]"=="TH" || "$classes[%1]" == "MS"} {thiefhit %1};
-  #if {"$classes[%1]"=="WA" || "$classes[%1]" == "DA" || "$classes[%1]"=="OS"} {warhit %1};
+  #if {"$classes[%1]"=="WA" || "$classes[%1]" == "DA" || "$classes[%1]"=="SC"} {warhit %1};
   #if {"$classes[%1]"=="BA" || "$classes[%1]" == "PA"} {tankhit %1};
 }
 
@@ -2080,9 +2086,9 @@ reseteye;
 {
 	eat $food; drink water;
 	jd c f;
-	put 8*$food belt;
+	put 8*$food $belt;
 	drop all.$food;
-	get all.$food belt;
+	get all.$food $belt;
   eat $food; drink water;
 }
 
@@ -2378,7 +2384,7 @@ reseteye;
 #alias bfdr bfg $mydruid
 #alias bfwh bfg $mymage
 #alias bfth bfg $mythief
-#var mythief nikson
+#var mythief Priya
 #alias tanksquare {maptank solsquare}
 #alias mythmarch {maptank mythsh}
 #alias rlore {recite lore %1 in inventory; hold $hrec}
@@ -3556,8 +3562,9 @@ myemail;	1;	1;	1;	1;
  #alias cleancomp cleancomp1;
  #alias knoc o aspasia pick;
   #var vbuffover[bless] {js prayer};
-  #alias lootcomp lootcompimpl;
+  #alias lootcomp donothing;
  #alias sat {cww; dofood};
+ #var belt cloth.belt;
  #var hrec $clerheld;
  #alias hew hem;
  #alias asf assist;
@@ -4532,7 +4539,7 @@ cancel;
 #alias tmpa {%1 %2; ota; temp}
 #alias ksbt {tmpa ksb}
 #alias bqk {buy knowledge; quaff knowledge}
-#alias logsco {
+#alias logscodev {
   #var port $devport;
   newses sky {wilbon; newpw; ones; };
   #gts #var port $mainport;
@@ -4566,6 +4573,7 @@ cancel;
   #alias ksil ksilmage;
   #var belt cloth.belt;
   #alias ide {rec identify};
+  #alias jsrelo jsport;
   #alias remage {rewin; modemage; modewhite};
   #alias locatereport locatereportimpl;
   #var food cheese;
@@ -4690,6 +4698,18 @@ cancel;
   #delay 1800 rentimm;
   #ticker e60 {who needs_title};
 }
+#alias modescout {
+  modepala;
+  #alias scouteng {zap %%1; ki %%1; };
+  eng scouteng;
+  #action {^{\w+} pants heavily} {classif ref %%1};
+  #action {^Elrax the master scout is here,} {lrn; smile};
+  #alias flap ref;
+  #alias rescout {rewin; modescout};
+  #alias ref surge;
+  #alias warhit donothing;
+  #alias assthis {assist %1; zap}
+}
 #action {^Mustakrakish, the ancient death troll glows a bright lunar white} {gt -->    TROLL CLEANSED  !!}
 #alias logsham {newses arc {$myshaman; mypw; ones; modeshaman; leaveinn; }  }
 #alias logshamo {newses bot {$myshaman; mypw; ones; modeshaman; fly}  }
@@ -4700,9 +4720,10 @@ cancel;
 #alias plpd {present letter; present gold.pendant}
 #alias ones {1; 1; }
 #alias logsky {newses sky {$skyscout; mypw; ones; modesky}}
+#alias logsco {newses bot {$skyscout; mypw; ones; modescout}}
 #alias leaveinn donothing
 #alias leaveinnimpl {d; d; e; s}
-#alias logpal {logbot {$mypaladin; mypw; ones; modepala; fly; leaveinn; jd rig ind}}
+#alias logpal {logbot {$mypaladin; mypw; ones; modepala; fly; leaveinn; }}
 #alias logwar {logbot {dawsen; mypw; 1; 1; modepala; modewar; fly}}
 #alias logbar {logbot {cunningham; mypw; 1; 1; modebarb; fly}}
 #alias logbaro {newses bar {cunningham; mypw; 1; 1; modebarb; fly}}
@@ -4710,7 +4731,7 @@ cancel;
 #alias logmou logbot {penniman; mypw; 1;1; modepala; fly}
 #alias logdar logbot {iyler; mypw; 1; 1; modepala; modedar; fly}
 #alias logwaro newses war {dawsen; mypw; 1; 1; modepala; modewar; fly; #alias bot #war;}
-#var mycler knaak
+#var mycler Afrika
 #alias mser mai ser
 #alias newcler newchar arc $mycler
 #alias newdru newchar dru $mydruid
@@ -5323,9 +5344,9 @@ cancel;
 #alias alog {
   logimpl %0; #ats #show %0;
 }
-#var palheld fireball
+#var palheld feather
 #var palhead discolored.helmet
-#var palweap cannabis
+#var palweap claymore
 #action {^You fall down, your ears ringing}{ifinactive alog --> alt STUNNED}
 #alias modepala
 {
@@ -5977,7 +5998,9 @@ addlocates;
 
 #ALIAS {tk}
 {
+ #unhigh $tank;
 	ll #variable tank %1;
+    #high {$tank} {magenta};
 	tan watch
 }
 
@@ -6623,7 +6646,7 @@ addlocates;
 #VARIABLE         {pktarg}                {nobody}
 #VARIABLE         {resctar}               {Co}
 #VARIABLE         {slot6}                 {heal|harm|animate dead|sunbolt|darkness|summon|restoration|ritual voyage}
-#VARIABLE         {tank}                  {Boone}
+#VARIABLE         {tank}                  {$mypaladin}
 #VARIABLE         {tanksuffix}            {(\swith|\svery hard|stakes aim at|\sstaggers and|\sextremely hard|\slaughs and jeers at.+red in the face|\shard|, but he|, but she|\ssteps aside|\sinstead|\sgives h|\splaces h|\sin a thun|\sa solid punch|'s face|'s flesh shield, sending|\sstaggers and|\scompletely missing|\sblocks)}
 #var {tankprefix} {fold in space, missing|piece of flesh circling|falls while trying to bash}
 #VARIABLE         {tempcondition}         {v.good}
@@ -6704,6 +6727,12 @@ addlocates;
     {sandy green tablet}{iceshield}
     {onyx tablet covered in flames}{firestorm}
     {volume of delicate crystalline pages}{chaos/read/moc}
+    {thick grimoire oozing black slime}{moc}
+  {crude oaken prayerbook}{gust}
+  {book of otherworldly prayers}{cloak}
+  {ruby studded silver prayerbook}{recall}
+  {runed brass prayer beads}{summon}
+  {mud-caked prayerbook}{npp}
     {leather tome pitted with rusty iron runes}{youth/identify/knock}
     {discolored helmet}{kern}
     {slender book bound with oily plates}{gate}
