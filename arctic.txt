@@ -153,7 +153,7 @@
   logimpl ($sesname) %1: $vmessage;
   ifinactive #ats #show ($sesname) %1: $vmessage;
 }
-#ACTION {^%w {tell your|tells the officers|tells your|shout.? '|yell.? '|say.? '|clanmate}}
+#ACTION {^%w {tell your|tell the officers|tells the officers|tells your|shout.? '|yell.? '|say.? '|clanmate}}
 {
   onmessage;
 }
@@ -5467,7 +5467,7 @@ draglead
   #ats #alias doit donothing;
   ll doit %0;
 }
-#alias sumothis {jd su mo; oe st; oe fly; }
+#alias sumothis {jd su mo; oe st; oe fly; oe rear}
 #alias divel {div; suel}
 #alias palpetmem {oe for 'bles'; oe mem 'cu se'}
 #alias buamthis {buy amulet; give amulet $pet; oe wear amulet}
