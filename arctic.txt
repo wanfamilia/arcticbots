@@ -4718,6 +4718,7 @@ cancel;
 #alias modescout {
   modepala;
   #alias scouteng {zap %%1; ki %%1; };
+  capturedonations;
   eng scouteng;
   #action {^{\w+} pants heavily} {classif ref %%1};
   #action {^Elrax the master scout is here,} {lrn; smile};
@@ -4727,7 +4728,13 @@ cancel;
   #alias warhit donothing;
   #alias assthis {assist %1; zap}
 }
+
+#alias capturedonations {
+  #action {^{\w+} gives you {\d+} steel coins} {dtell %%1: %%2 coins};
+}
+
 #action {^Mustakrakish, the ancient death troll glows a bright lunar white} {gt -->    TROLL CLEANSED  !!}
+
 #alias logsham {newses arc {$myshaman; mypw; ones; modeshaman; leaveinn; }  }
 #alias logshamo {newses bot {$myshaman; mypw; ones; modeshaman; fly}  }
 #var mydruid wagner
@@ -4736,7 +4743,7 @@ cancel;
 #alias lcvoy {lc meteorite; lc veil; lc clove; lc effigy}
 #alias plpd {present letter; present gold.pendant}
 #alias ones {1; 1; }
-#alias logsky {newses sky {$skyscout; mypw; ones; modesky}}
+#alias logsky {newses sky {$skyscout; mypw; ones; modescout}}
 #alias logsco {newses bot {$skyscout; mypw; ones; modescout}}
 #alias leaveinn donothing
 #alias leaveinnimpl {d; d; e; s}
