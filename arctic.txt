@@ -494,6 +494,7 @@ reseteye;
 #alias cts {sleep; ct sleeping...}
 #alias ctw {ct woke up; wake; st; fly}
 #action {shield decays in you} {alog --> SHIELD DECAY}
+#action {Your shield shatters} {alog --> SHIELD SHATTERED}
 #alias indargo {mgo dargostart; wake}
 #action {^{$linebegin}{\w+(\s\w+)?}: this spell isn't on your mem} {for '$circle1'}
 #alias pracwhi {
@@ -4563,12 +4564,18 @@ cancel;
   #var food ration;
 }
 
+#alias doloc {
+ rem $hrec;
+ hold locate;
+ invoke locate;
+ hold $hrec;
+}
 #alias beforexeg {get parchment $belt; analyze parchment; #delay 1 ke ball}
 #alias idter {recite identify silver.chest in room; hold $hrec}
 #alias modewhite {
   #alias goway {goto wilma};
   #alias bfm {bot follow pryor; #delay 1 group form};
-  #var hrec fireball;
+  #var hrec clear.sphere;
   #alias lightrec donothing;
   #alias ksil ksilmage;
   #var belt cloth.belt;
@@ -6697,6 +6704,7 @@ addlocates;
  {book scribed on brittle parchmeht}{barrage/mtel/cleanse}
  {poinard}{ck}
  {gold dragonscale battle armor}{bmobs}
+ {old, spiderweb encrusted book}{DEVASTATION/shockingblast/castigate}
  {open book with fluttering pages}{craft/dscry/sphinv}
  {golden orb}{storms}
  {blood red cowl inscribed with black runes}{theiwar priest}
@@ -6727,13 +6735,20 @@ addlocates;
     {sandy green tablet}{iceshield}
     {onyx tablet covered in flames}{firestorm}
     {volume of delicate crystalline pages}{chaos/read/moc}
-    {thick grimoire oozing black slime}{moc}
+    {thick grimoire oozing black slime}{wall/moc}
+  {book with flawless mirror covers}{susp/read/IGNITE}
+  {disgusting, worm-infested book}{MASSINV/lash}
+  {smoldering red book of sorcery}{displacement/preservation}
+  {gruesome tome scribed in blood}{mirror/?juke?}
+  {obsidian book encased in ice}{RELO/chain/??}
+  {green spellbook with wooden bindings}{//RELOCATE}
   {crude oaken prayerbook}{gust}
   {book of otherworldly prayers}{cloak}
   {ruby studded silver prayerbook}{recall}
   {runed brass prayer beads}{summon}
   {mud-caked prayerbook}{npp}
     {leather tome pitted with rusty iron runes}{youth/identify/knock}
+  {book stained with hypnotic patterns}{/feeble/knock}
     {discolored helmet}{kern}
     {slender book bound with oily plates}{gate}
   {ancient book with archaic runes}{rend/peek/slumber}
@@ -6770,6 +6785,7 @@ addlocates;
     {green dragon's spine}{chaos}
     {alabaster garlic clove charm}{LAST CHANCE}
     {charm covered in a sparkling silvery mist} {RITUAL VOYAGE}
+  {bronze dragonscale leggings}{dractower}
   {silver-fused steel legplates}{nytes}
   {crimson dragon eye}{inferno}
   {some brushed steel gauntlets}{dracos}

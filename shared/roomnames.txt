@@ -388,6 +388,7 @@ startbullywug
 startbully
 waterspanshop
 solwar
+solpalg
 tokruins
 kruinbush
 startkruin
