@@ -4729,7 +4729,9 @@ cancel;
   #alias assthis {assist %1; zap}
 }
 
+#alias elder {clan promote %1 elder}
 #alias capturedonations {
+  #sub {\d\d\dC} {kC};
   #action {^{\w+} gives you {\d+} steel coins} {dtell %%1: %%2 coins};
 }
 
