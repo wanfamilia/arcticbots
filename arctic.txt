@@ -140,12 +140,15 @@
 #alias logimpl {#line log messages.txt}
 #alias nolog {#alias dolog donothing}
 #alias messlog {#alias dolog #line log messages.txt}
+#alias inactivelog {
+  ifavailable 0 logimpl;
+}
 
 #alias onmessage
 {
-  #alias onmessageimpl donothing;
+  #alias onmessageimpl inactivelog;
   #ats #alias onmessageimpl logimpl;
-  onmessageimpl
+  logimpl
 }
 
 #alias seslog {
@@ -1293,6 +1296,13 @@ reseteye;
   };
 }
 
+#alias ifavailable {
+  #format nnow {%T};
+  #if {$nnow > $navailable} {
+    #math navailable {$nnow + %1};
+    mac %2 %3;
+  };
+}
 #var alivefor 60 
 #alias nospamalive {
   #format nnow {%T};
