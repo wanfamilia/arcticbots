@@ -4594,7 +4594,7 @@ cancel;
   #alias jsrelo jsport;
   #alias remage {rewin; modemage; modewhite};
   #alias locatereport locatereportimpl;
-  #var food cheese;
+  #var food turkey;
   nutr $food;
   #alias mloc {msw locate knock};
   #action {^{\w+} makes a mockery out of everyone} {nospamdo 30 jmoc %%1};
