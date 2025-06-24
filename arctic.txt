@@ -14,6 +14,7 @@
 }
 {5}
 
+#alias saypest {knock door; donothing %1; #delay 1 say Pestilence brings purity, embrace the rot!}
 #alias bref {bot gall ref}
 #alias othermemdone donothing;
 #alias stopen {ll st; open %1 %2}
