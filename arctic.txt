@@ -2398,6 +2398,7 @@ reseteye;
 #alias bfth bfg $mythief
 #var mythief Priya
 #alias tanksquare {maptank solsquare}
+#alias tankpal {maptank solpalg}
 #alias mythmarch {maptank mythsh}
 #alias rlore {recite lore %1 in inventory; hold $hrec}
 #alias {rec lore} {thwack me; rlore %1;}
@@ -6742,6 +6743,7 @@ addlocates;
     {compendium of ancient magic}{LOCATE}
   {gigantic whale bone spear}{shoal}
   {set of power cuisses}{sanction}
+  {massive diamond crown}{pyramids}
   {rosewood buckler clad with iron}{shadows}
   {spellbook with a bronze latch}{IGNITE}
     {wispy cloud tablet}{tornado}
@@ -6755,13 +6757,14 @@ addlocates;
     {sandy green tablet}{iceshield}
     {onyx tablet covered in flames}{firestorm}
     {volume of delicate crystalline pages}{chaos/read/moc}
-    {thick grimoire oozing black slime}{wall/moc}
+    {thick grimoire oozing black slime}{?/wall/moc}
   {book with flawless mirror covers}{susp/read/IGNITE}
   {disgusting, worm-infested book}{MASSINV/lash}
   {smoldering red book of sorcery}{displacement/preservation}
   {gruesome tome scribed in blood}{mirror/?juke?}
   {obsidian book encased in ice}{RELO/chain/??}
-  {green spellbook with wooden bindings}{//RELOCATE}
+  {green spellbook with wooden bindings}{/peek/RELOCATE}
+  {glittering book caked with fairy dust}{tent/portal/JUKE}
   {crude oaken prayerbook}{gust}
   {book of otherworldly prayers}{cloak}
   {ruby studded silver prayerbook}{recall}
@@ -6780,6 +6783,10 @@ addlocates;
     {small tattered prayerbook}{restoration}
   {set of power brassards}{sanction}
    {shimmering charm of ethereal energy}{ghostmaster}
+    {thin prayerbook with shredded pages}{GATE}
+    {tome of religious rituals}{CIRCLE}
+    {small ivory prayerbook}{HEALMIST}
+    {smooth ogre bone prayerbook}{STEELSKIN}
     {shimmering prayerbook with silver pages}{STEELSKIN}
     {pair of spiked sterling gauntlets}{cv}
     {black metal pike}{lemuria}
@@ -6791,8 +6798,10 @@ addlocates;
     {golden twined oak longbow}{enbir}
     {gold inlaid bone bracer}{lemuria}
     {holy talisman}{bluff}
+    {rubbery charm of human fat}{HEALING WAVE}
     {cape of shadows}{shadows}
     {blackened charm of defiled flesh}{ROTTING FLESH}
+    {dehydrated lion tongue charm}{ROTTING FLESH}
     {bladeless sword}{shadows}
     {suit of flexible red dragon scale armor}{cv}
     {ancient holy avenger}{??}
@@ -6804,6 +6813,7 @@ addlocates;
     {dragonrider's talisman}{pax}
     {green dragon's spine}{chaos}
     {alabaster garlic clove charm}{LAST CHANCE}
+    {string charm of sahuagin fins}{LAST CHANCE}
     {charm covered in a sparkling silvery mist} {RITUAL VOYAGE}
   {bronze dragonscale leggings}{dractower}
   {silver-fused steel legplates}{nytes}
