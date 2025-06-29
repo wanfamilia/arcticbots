@@ -4592,7 +4592,6 @@ cancel;
   #alias ksil ksilmage;
   #var belt cloth.belt;
   #alias ide {rec identify};
-  #alias jsrelo jsport;
   #alias remage {rewin; modemage; modewhite};
   #alias locatereport locatereportimpl;
   #var food turkey;
@@ -5329,7 +5328,6 @@ cancel;
   needbuff holy vision;
   needbuff crusade;
   reck;
-  divine;
   bes paladine;
 }
 
@@ -5372,7 +5370,10 @@ cancel;
 #alias alog {
   logimpl %0; #ats #show %0;
 }
-#var palheld feather
+#var palheld lyre
+#alias preprahn {
+  mloa; gokal; coli; js imp; conow; oei; rps me; rest;
+}
 #var palhead discolored.helmet
 #var palweap claymore
 #action {^You fall down, your ears ringing}{ifinactive alog --> alt STUNNED}
@@ -6026,7 +6027,6 @@ addlocates;
 
 #ALIAS {tk}
 {
- #unhigh $tank;
 	ll #variable tank %1;
     #high {$tank} {magenta};
 	tan watch
@@ -6169,7 +6169,7 @@ addlocates;
 }
 
 #HIGHLIGHT        {disarms your weapon}   {red}                        {4}
-#HIGHLIGHT        {$tank}                 {magenta}                    {5}
+#HIGHLIGHT        {$mypaladin}                 {magenta}                    {5}
 #highlight {Steamboat} {magenta}
 #highlight {Blackness grows above Lord Verminaard's head as a dark visage} {red}
 #highlight {Maritta peeks her head in the door} {green}
@@ -6724,6 +6724,9 @@ addlocates;
  {open book with fluttering pages}{graft/dscry/sph-inv}
  {book scribed on brittle parchmeht}{barrage/mtel/cleanse}
  {poinard}{ck}
+ {spellbook with black iron covers}{VITSH/forcem/WRUNE}
+ {translucent book of solidified mist}{brune/clair/FOLD}
+ {vibrating silver spellbook}{?/sphabs/FIRESHIELD}
  {gold dragonscale battle armor}{bmobs}
  {old, spiderweb encrusted book}{DEVASTATION/shockingblast/castigate}
  {open book with fluttering pages}{craft/dscry/sphinv}

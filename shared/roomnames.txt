@@ -466,6 +466,7 @@ balcledge
 balcserra
 serra
 lhex
+tokrovax
 balcombe
 malaak
 fyzian
@@ -662,3 +663,4 @@ uthcain
 startmoc
 kenro
 dreadwaiter
+tantloc
