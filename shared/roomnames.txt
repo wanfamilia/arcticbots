@@ -467,6 +467,7 @@ balcserra
 serra
 lhex
 tokrovax
+balcbeast
 balcombe
 malaak
 fyzian
@@ -551,6 +552,7 @@ khurilya
 khurhand
 cloudcomp
 dargomoon
+solarmor
 stingworm
 silvismith
 silvistable

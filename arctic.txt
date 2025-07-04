@@ -118,7 +118,7 @@
 #PATHDIR {up} {down} {16}
 #PATHDIR {west} {east} {8}
 
-#alias kw {ll oe %1 %2 %3 %4; gt %1 %2 %3 %4; #all {%1 %2 %3 %4}}
+#alias kw {ll oe %1 %2 %3; gt %1 %2 %3; #all {%1 %2 %3}}
 #alias kw2 {ll oe %1 %2;  gt %1 %2; #all {%1 %2}}
 #alias brst {sr me; air me; brsc stre}
 #alias oegc {oe get all.corpse; get all.corpse; oe give all.corpse %1; give corpse %1}
@@ -1359,7 +1359,7 @@ reseteye;
 
 #alias rentskill {#action {^You feel especially skillful} {rent; 0}}
 #alias magh {mag ki ghost}
-#alias {pgift} {gift; #action {^The lunar glimmer fades} {st; gift; resi; conow; release ayoade; lrn}}
+#alias {pgift} {gift; #action {^The lunar glimmer fades} {st; gift; resi; lrn}}
 #alias {kalrn} {ent space; lrn; ent space}
 #alias gocit {mrun2 citadel}
 #alias thim {thr %1; imp}
@@ -1613,6 +1613,15 @@ reseteye;
 #alias brewonly {brsh; ghob; gmal}
 #alias medibar {st; ki barbarian; js clot me; #9 flee; w; s; rest; ban me; rg me; sat; sgl; ssh barbarian; gmal; }
 #alias sshbar {#4 ssh barbarian; sat; gmal; sgl;rest}
+
+#alias guardson {
+ bot rescoff;
+ #alias ota {bfl; bot e; bot e; bot w; #delay 6 ki son; donothing %1};
+}
+#alias guardbar {
+  bot rescoff; 
+  #alias ota {bfl; bot w; bot s; #delay 3 ki barbarian};
+}
 #alias kicf {ki barbarian; js clot me; #4 flee}
 #alias medibarh {medibar; restick sshbar}
 #alias medicorn {st; n; ki unicorn; js clot me; #9 flee; rest; ban me; sk; rg me; sgl; ghob; gmal; rest}
@@ -1798,7 +1807,6 @@ reseteye;
   #map flag static off;
   #map flag vtmap on;
   #action {^A violent vortex of wind forces your gaze skyward}{mac tempwind};
-  #action {^City View}{mgo startcloud};
   #action {^You summon the winds of Krynn}{mac tempwind};
   #action {^A Distribution Preparation Facility}{mgo 14320};
   #action {^A Present Collection Area}{mgo xmasladder};
@@ -4576,21 +4584,28 @@ cancel;
   #var food ration;
 }
 
+#alias locprayer doloc prayerbook
+#alias loctablet doloc tablet
+#alias locharm doloc charm
+#alias locspell doloc spellbook
 #alias doloc {
+ #alias locatereport locatereportimpl;
  rem $hrec;
- hold locate;
- invoke locate;
+ hold %1;
+ invoke %1;
  hold $hrec;
 }
+#var magheld lyre
 #alias beforexeg {get parchment $belt; analyze parchment; #delay 1 ke ball}
 #alias idter {recite identify silver.chest in room; hold $hrec}
 #alias modewhite {
   #alias goway {goto wilma};
   #alias bfm {bot follow pryor; #delay 1 group form};
-  #var hrec clear.sphere;
+  #var hrec $magheld;
   #alias lightrec donothing;
   #alias ksil ksilmage;
   #var belt cloth.belt;
+  nocomp;
   #alias ide {rec identify};
   #alias remage {rewin; modemage; modewhite};
   #alias locatereport locatereportimpl;
@@ -5370,9 +5385,9 @@ cancel;
 #alias alog {
   logimpl %0; #ats #show %0;
 }
-#var palheld lyre
+#var palheld valiance
 #alias preprahn {
-  mloa; gokal; coli; js imp; conow; oei; rps me; rest;
+  mloa; gokal; coli; rd imp; conow; oei; rps me; jfold; rest;
 }
 #var palhead discolored.helmet
 #var palweap claymore
@@ -5387,6 +5402,7 @@ cancel;
   #alias checkphil {up alone; east; exam phil; exam scout; west; flee; st; #4 flee};
   #alias gts #all #show --> spirit;
   #alias checkpriest {up alone; east; east; open door south; south; exam priest};
+  #alias fsf donothing;
   #alia allnext donothing;
   #alias groupimpl group full;
   #alias oegc {cancel; get corpse; give corpse %1};
@@ -6025,9 +6041,12 @@ addlocates;
 
 #alias tbot {swap me %1; swap me $tank}
 
-#ALIAS {tk}
+#alias tk ll tkthis
+#ALIAS {tkthis}
 {
-	ll #variable tank %1;
+  #unhigh $tank;
+	#variable tank %1;
+   #high $mypaladin magenta;
     #high {$tank} {magenta};
 	tan watch
 }
@@ -6724,9 +6743,11 @@ addlocates;
  {open book with fluttering pages}{graft/dscry/sph-inv}
  {book scribed on brittle parchmeht}{barrage/mtel/cleanse}
  {poinard}{ck}
+ {moist soapstone tablet}{ICESHIELD}
  {spellbook with black iron covers}{VITSH/forcem/WRUNE}
  {translucent book of solidified mist}{brune/clair/FOLD}
- {vibrating silver spellbook}{?/sphabs/FIRESHIELD}
+ {vibrating silver spellbook}{?/SPHEREABS/FIRESHIELD}
+ {rune etched leather armbands}{balcombes}
  {gold dragonscale battle armor}{bmobs}
  {old, spiderweb encrusted book}{DEVASTATION/shockingblast/castigate}
  {open book with fluttering pages}{craft/dscry/sphinv}
@@ -6790,6 +6811,7 @@ addlocates;
     {tome of religious rituals}{CIRCLE}
     {small ivory prayerbook}{HEALMIST}
     {smooth ogre bone prayerbook}{STEELSKIN}
+    {bright tome of wisdom}{RESTORE}
     {shimmering prayerbook with silver pages}{STEELSKIN}
     {pair of spiked sterling gauntlets}{cv}
     {black metal pike}{lemuria}
@@ -6816,6 +6838,7 @@ addlocates;
     {dragonrider's talisman}{pax}
     {green dragon's spine}{chaos}
     {alabaster garlic clove charm}{LAST CHANCE}
+    {string charm of sahauagin fins}{LAST CHANCE}
     {string charm of sahuagin fins}{LAST CHANCE}
     {charm covered in a sparkling silvery mist} {RITUAL VOYAGE}
   {bronze dragonscale leggings}{dractower}
