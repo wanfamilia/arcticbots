@@ -600,7 +600,7 @@ reseteye;
 }
 
 #alias rfe {jd re fe}
-#alias repet {release $pet}
+#alias repet {release $pet; nopet}
 #alias reowl {conow; release ayoade}
 #var skyscout Evanki
 
@@ -851,6 +851,7 @@ reseteye;
 #alias fshield {js fireshield}
 #alias recl {st; reclaim}
 #action {^You can pray to Zivilyn}{gtl --> Reclaim avaiable};
+#action {^The mummy of Emperor Nephatek opens its decaying mouth}{gtl -->   Emperor INSECTS need a gust}
 #action {^Flare arrives from above, carrying Lord Ariakan.} {gtl --->  FLARE AND ARIAKAN HAVE ARRIVED! }
 #alias boo {jsm boon}
 #alias glob {js globe}
@@ -1029,6 +1030,7 @@ reseteye;
   needbuff crusade;  
 }
 #alias besimpl beseech majere
+#alias bcru bot js crusade
 #alias pracright {
   right;
    #action {^Through the darkness, you find a connection} {st; right; lrn};
@@ -2386,10 +2388,21 @@ reseteye;
 
 #tab chernobog
 #tab cyqieqaraqk
+#tab nithalugh
+#tab atriho
+#tab egreckl
+#tab rahnkagi
+#tab kenny
+#tab oracle
+#tab high.ogre.druid
+#tab leet
 #tab shmyaka
+#tab romis
+#tab one.treefolk
 #tab cunningham
 #tab nahuatlipochty
 #tab paijietng
+#tab thyrfing
 #tab jaqueline
 #tab mytzipixin
 #tab marchesa
@@ -3392,6 +3405,7 @@ reseteye;
 }
 
 #alias bf #3 {be %1;}
+#alias thiass {bdis; ass}
 #alias {study book} {#bell; #show Do you want to live forever?; subo}
 #alias {sell 1} {#bell; #show Trust me, I know what I'm doing}
 #alias subo {sit; study !dragonscale.book in inventory; donothing %1}
@@ -3400,6 +3414,14 @@ reseteye;
   mem 'so le' 'so le' 'so le' 'gate' 'steel' 'he mi';
 }
 #alias memsham {mnap; restick mdeath}
+#alias palnaked {
+  st; fly; for 'abs' 'abs' 'abs'; jd r i;
+  runto end3neu2w; with 600;
+  e; e; buy milky; quaff milky; bre;
+  runto dw3swsu; buy bronze.shield; wear bronze.shield; 
+  runto dne2se; buy iron.halberd; wield halberd;
+  runto w2nusw;
+}
 #alias mnap {m s; mem 'sat' 'nap' 'da so' 'sp gl' 'sp si'; rest}
 #alias mdeath
 {
@@ -3576,14 +3598,14 @@ myemail;	1;	1;	1;	1;
 {
 	#variable food $clerfood;
  #var circle1 {cu li};
- #var clerheld fireball;
+ #var clerheld golden.rose;
  #alias ligst donothing;
+ #alias lootcomp lootcompimpl;
  #var weapon mace;
  nopet;
  #alias cleancomp cleancomp1;
  #alias knoc o aspasia pick;
   #var vbuffover[bless] {js prayer};
-  #alias lootcomp donothing;
  #alias sat {cww; dofood};
  #var belt cloth.belt;
  #var hrec $clerheld;
@@ -4090,7 +4112,9 @@ myemail;	1;	1;	1;	1;
 #alias gc {st; gore %1; ch %1}
 #alias stuntshore {stuntbush; w;d;n;d;e;d;n;e;e;n;e;e;}
 #alias jread {get saffron belt; put saffron pouch; js read}
-#alias jmoc {sysplay smb3_coin; spellcraft high; js moment %1; spellcraft low}
+
+#alias jmoc mag mocthis
+#alias mocthis {sysplay smb3_coin; spellcraft high; js moment %1; spellcraft low}
 #alias chalkghost {dochalk; accept soldier; mloa startraven}
 #alias playcoin {sysplay smb3_coin}
 #alias cubread {get metal.cube belt; rem $held; hold cube; say praise the gods; rem cube; put metal.cube belt; hold $held; ef; put 6*bread belt; drop all.food; get all.food belt}
@@ -4222,6 +4246,8 @@ myemail;	1;	1;	1;	1;
 #action {^You stop following a priest of paladine}{noisy}
 #action {^You stop following an off duty soldier}{noisy}
 #action {^You stop following Rahnkagi}{noisy}
+#action {^You stop following the bard of the tower}{noisy}
+#action {^You stop following a minotaur mystic}{noisy}
 #alias ctt {ct tick in $tilltick}
 #alias blay {bot {cancel; st; lay %1}}
 #alias bhl blay
@@ -4512,7 +4538,8 @@ myemail;	1;	1;	1;	1;
 #alias rgr mai {rg %1; rest}
 #alias mrg {mai rgr}
 #alias cleancomp1 {
-  get all.!alteration.!protection.component.!web $compouch;
+  get all.!necromantic.!alteration.!protection.component.!web $compouch;
+  put all.exceptional $compouch;
 }
 #alias cleancomp2 {get all.!web.!acorn $compouch}
 #alias cleancomp3 {get all.!web.!abjuration.!alteration.!protection $compouch}
@@ -4595,7 +4622,7 @@ cancel;
  invoke %1;
  hold $hrec;
 }
-#var magheld lyre
+#var magheld valiance.eye
 #alias beforexeg {get parchment $belt; analyze parchment; #delay 1 ke ball}
 #alias idter {recite identify silver.chest in room; hold $hrec}
 #alias modewhite {
@@ -4605,7 +4632,6 @@ cancel;
   #alias lightrec donothing;
   #alias ksil ksilmage;
   #var belt cloth.belt;
-  nocomp;
   #alias ide {rec identify};
   #alias remage {rewin; modemage; modewhite};
   #alias locatereport locatereportimpl;
@@ -4625,11 +4651,11 @@ cancel;
   rem $clerbody; rem $shamlegs; wear all.dinged; wear leather.vest;
 }
 
-#var clerarms braces
+#var clerarms leather.armbands
 #var shamlegs pants
-#var clerweapon hammer
+#var clerweapon mace
 #var clerbody succubus
-#var clerlegs greaves
+#var clerlegs leggings
 #alias bcheckpriest {bot; checkpriest}
 #alias hts halone south
 #alias htw halone west
@@ -5385,12 +5411,12 @@ cancel;
 #alias alog {
   logimpl %0; #ats #show %0;
 }
-#var palheld valiance
+#var palheld papal.cross
 #alias preprahn {
-  mloa; gokal; coli; rd imp; conow; oei; rps me; jfold; rest;
+  mloa; gokal; coli; rd imp; conow; oei; rps me; js white; jfold; fsh; rest;
 }
 #var palhead discolored.helmet
-#var palweap claymore
+#var palweap rose.sword
 #action {^You fall down, your ears ringing}{ifinactive alog --> alt STUNNED}
 #alias modepala
 {
@@ -5416,6 +5442,7 @@ cancel;
   #alias assthis palassthis;
   #var circle1 {det ev};
   #var weapon $palweap;
+  asm;
   #action {^You are ready to slam again} {slam};
   #action {^You are now the new leader} {march};
   #action {^A gleaming silver medal warms up} {ll #show -->    Medal};
@@ -6190,6 +6217,7 @@ addlocates;
 #HIGHLIGHT        {disarms your weapon}   {red}                        {4}
 #HIGHLIGHT        {$mypaladin}                 {magenta}                    {5}
 #highlight {Steamboat} {magenta}
+#highlight {A huge swarm of biting, stinging insects fills the air} {yellow}
 #highlight {Blackness grows above Lord Verminaard's head as a dark visage} {red}
 #highlight {Maritta peeks her head in the door} {green}
 #highlight {the Dragon Emperor's magical shield absorbs the brunt}{yellow}
@@ -6720,6 +6748,7 @@ addlocates;
 
 #alias silvikey {combine key key}
 
+#alias dirbot ct directions are in the #bots channel
 #alias bfree {bot cancel; bot js free}
 #alias shadowcrack {enter crack; cut rope; restrain minotaur; open grate; up}
 #alias lc4 #4 lc
@@ -6741,8 +6770,17 @@ addlocates;
  {book with platinum-gilded pages}{mist/lorb/delayed}
  {amber book caked with dust}{constrict/thunder/shard}
  {open book with fluttering pages}{graft/dscry/sph-inv}
- {book scribed on brittle parchmeht}{barrage/mtel/cleanse}
+ {book scribed on brittle parchmeht}{barrage/mtel/Cleanse}
  {poinard}{ck}
+ {goblin skin armbands}{egreckl}
+ {zombie skin book with silver hinges}{Animate}
+ {blue dragonscale spellbook}{graft?/masstel/shards}
+ {dark spellbook wreathed in shadow}{barrage/thunderbolt/?sphereinvis?}
+ {acid-etched copper spellbook}{heart/scry/Cleanse}
+ {charm engulfed in wispy smoke}{NAP}
+ {pickled pigmy heart charm}{GHOSTSKIN}
+ {charm dipped in goblin blood}{Voyage}
+ {black hydra skull charm}{DARKSOUL}
  {moist soapstone tablet}{ICESHIELD}
  {spellbook with black iron covers}{VITSH/forcem/WRUNE}
  {translucent book of solidified mist}{brune/clair/FOLD}
@@ -6781,12 +6819,12 @@ addlocates;
     {sandy green tablet}{iceshield}
     {onyx tablet covered in flames}{firestorm}
     {volume of delicate crystalline pages}{chaos/read/moc}
-    {thick grimoire oozing black slime}{?/wall/moc}
+    {thick grimoire oozing black slime}{edrain/wall/Moc}
   {book with flawless mirror covers}{susp/read/IGNITE}
   {disgusting, worm-infested book}{MASSINV/lash}
   {smoldering red book of sorcery}{displacement/preservation}
-  {gruesome tome scribed in blood}{mirror/?juke?}
-  {obsidian book encased in ice}{RELO/chain/??}
+  {gruesome tome scribed in blood}{tunnel/mirror/?slumber?}
+  {obsidian book encased in ice}{RELO/chain/mindafire}
   {green spellbook with wooden bindings}{/peek/RELOCATE}
   {glittering book caked with fairy dust}{tent/portal/JUKE}
   {crude oaken prayerbook}{gust}
@@ -6812,6 +6850,7 @@ addlocates;
     {small ivory prayerbook}{HEALMIST}
     {smooth ogre bone prayerbook}{STEELSKIN}
     {bright tome of wisdom}{RESTORE}
+    {symbol-inscribed prayerbook}{soo}
     {shimmering prayerbook with silver pages}{STEELSKIN}
     {pair of spiked sterling gauntlets}{cv}
     {black metal pike}{lemuria}
