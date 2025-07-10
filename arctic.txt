@@ -2388,6 +2388,7 @@ reseteye;
 
 #tab chernobog
 #tab cyqieqaraqk
+#tab marantha
 #tab nithalugh
 #tab atriho
 #tab egreckl
@@ -3607,7 +3608,7 @@ myemail;	1;	1;	1;	1;
  #alias knoc o aspasia pick;
   #var vbuffover[bless] {js prayer};
  #alias sat {cww; dofood};
- #var belt cloth.belt;
+ #var belt beltpouch;
  #var hrec $clerheld;
  #alias hew hem;
  #alias asf assist;
@@ -4548,7 +4549,7 @@ myemail;	1;	1;	1;	1;
 #alias silvideathmem {m s; mem 'co li' 'de i' 'fly' 'tel' 'tel' 'tel' 'tel'; rest}
 #alias silvideathcast {coli; jd d i; air me}
 #var compouchalch component.pouch.crafted;
-#var compouch pouch.!vampire;
+#var compouch component.pouch.!vampire;
 #alias bhlp bhl $pet
 #alias glpe glance $pet
 #alias nocomp {#alias lootcomp donothing}
@@ -4741,7 +4742,7 @@ cancel;
 #alias kho {jd ho wo}
 #alias kwith js wither
 #alias saypal {bot say Paladine Protect Us}
-#alias hemtick {mai #alias dohem hem5; mai restick permahem}
+#alias hemtick {mai #alias dohem hem4; mai restick permahem}
 #alias dartick {mai #alias dohem hemdar; mai restick permahem}
 #alias sayoath {say Est Sularus Oth Mithas}
 #alias logimm {logwin; gnua; mypw; 1;1; modeimm; }
@@ -5411,7 +5412,7 @@ cancel;
 #alias alog {
   logimpl %0; #ats #show %0;
 }
-#var palheld papal.cross
+#var palheld valiance
 #alias preprahn {
   mloa; gokal; coli; rd imp; conow; oei; rps me; js white; jfold; fsh; rest;
 }
@@ -6772,6 +6773,10 @@ addlocates;
  {open book with fluttering pages}{graft/dscry/sph-inv}
  {book scribed on brittle parchmeht}{barrage/mtel/Cleanse}
  {poinard}{ck}
+ {gleaming dragonscale wristguard}{gleam}
+ {dark purple robes}{river}
+ {sparkling bejeweled miter}{spire}
+ {black leather beltpouch}{draadis}
  {goblin skin armbands}{egreckl}
  {zombie skin book with silver hinges}{Animate}
  {blue dragonscale spellbook}{graft?/masstel/shards}
