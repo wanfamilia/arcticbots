@@ -94,8 +94,9 @@
 #action {^Oracle, the Battle Cleric is dead} { get book oracle}
 #action {^Egreckl Steamus is dead} {get all.charm egreckl}
 #action {^Glymmer is dead} {get book glymmer}
+#action {^A massive wild elf scout is dead} {oegc phil}
 #action {^Flare is dead} {gac; get all.charm flare}
-#action {^The night golem is dead} {ll get bladeless night.golem}
+#action {^The night golem is dead} {get bladeless night.golem}
 #action {^The stone giant shaman is dead} {get all giant.shaman}
 #action {^A succubus is dead! R.I.P.} {get wings succubus}
 #action {^The shade of Jar'mal, the Kinslayer is dead}{exam charm}
@@ -171,7 +172,7 @@
   seslog {%1} {%2};
 }{2}
 
-#var myshaman branson
+#var myshaman Siya
 #var mypaladin Kayna
 #VARIABLE         {tank}                  {$mypaladin}
 #action {^{\w+} tells your {clan} '$myshaman rit {\w+}'} {othervoy %1 %3} {1}
@@ -820,7 +821,7 @@ reseteye;
 
 #alias pracsean {sean; #action {^The faintest connection to the undead} {sean}}
 #alias pracamel {amel; #action {^The gods smile upon you} {st; amel}}
-#alias praclegcler {pracamel; pracraptu; sat; e10 cww}
+#alias praclegcler {pracamel; pracraptu; dofood; e10 cww; e3 rap}
 #alias rap {st; rapture}
 #alias pracraptu {raptu; #action {^You sense the call of the gods will be coming soon}{st; raptu}}
 #alias jba {js bone arrow; give arrows %1}
@@ -838,7 +839,7 @@ reseteye;
 #alias assno #alias assthis ott
 #alias palass bpa
 #alias haze {bot jd men ha}
-#alias palassthis {ass %1; rally; strike; av leg; strike}
+#alias palassthis {ass %1; rally; strike; av soul; strike}
 #alias kdr {st; drain}
 #alias bufdar {bot buf dk}
 #alias rlcshark {gotar; js imp; van me; west; south; open gate; runto 3ws3wsw3sws4wundwsd4w4nw}
@@ -851,6 +852,7 @@ reseteye;
 #alias fshield {js fireshield}
 #alias recl {st; reclaim}
 #action {^You can pray to Zivilyn}{gtl --> Reclaim avaiable};
+#action {^The cryohydra's fourth head suddenly regrows}{#delay 1 alog -->   FOURTH HEAD REGROW};
 #action {^The mummy of Emperor Nephatek opens its decaying mouth}{gtl -->   Emperor INSECTS need a gust}
 #action {^Flare arrives from above, carrying Lord Ariakan.} {gtl --->  FLARE AND ARIAKAN HAVE ARRIVED! }
 #alias boo {jsm boon}
@@ -887,7 +889,7 @@ reseteye;
 #alias gtl {
   cancel; gt %0;
   #delay 1 #ats #show %0;
-  dolog %0;
+  alog %0;
 }
 #action {^You utter the words, 'freedom'}{gtl freedom used}
 #ALIAS {ach}
@@ -1013,6 +1015,9 @@ reseteye;
   lay me; div; reck; right; besimpl;
 }
 
+#alias firstwyrm {
+  vcr; av tail; bogegg; ota
+}
 #alias onrosebuff {
   rem $palweap; wield lance; 
   #action {^Once again the time has come for righteous anger} {reck};
@@ -1368,8 +1373,8 @@ reseteye;
 
 #alias mythbrsc {
   st; runto e2sd; fsf; 7n2w2nws;
-  rest; brew '%1'; scribe '%1'; drop satiate; drop all.strength;
-  st; runto ne2s2e7su2nw; lrn;
+  rest; brew '%1'; scribe '%1'; sell %1; sell %1; drop all.%1;
+  st; runto ne2s2e7su2nw; lrn; rest;
 }
 
 #alias ecp exam component.pouch
@@ -1567,7 +1572,7 @@ reseteye;
 #alias kibard {tan rgr; #delay 1 kibardmage kig}
 #alias kinfer {u; w; ksd inferno; }
 #alias kibardmage {south; west; %1 bard;}
-#alias vcr {poch brewed.critical}
+#alias vcr {cancel; poch brewed.critical}
 #alias vser poch brewed.serious
 #alias vchal poch chalice;
 
@@ -1604,7 +1609,7 @@ reseteye;
   brsc aid;
 }
 #alias trigbrmash {
-  #alias readybrew mythbrsc stren;
+  #alias readybrew mythbrsc strength;
   trigbrsh;
 }
 
@@ -1664,8 +1669,10 @@ reseteye;
 	#log append logs/%1.txt
 }
 
-#alias elri {#2 shatter elemental.ring; twopets; vch elemental}
+#alias elri {#2 shatter elemental.ring; twopets; vch elemental; #var pet all.griffon}
 #alias bogegg {#2 break egg; twopets; vch griffon}
+#alias kex js exor
+#alias pochal poch chalice
 #ALIAS {bws}
 {
 	breathe;
@@ -3157,9 +3164,9 @@ reseteye;
   ota;
   aven wing;
   strike %1;
-  aven torso;
-  strike %1;
   aven soul;
+  strike %1;
+  aven tail;
   strike %1;
   reck;
 }
@@ -3602,13 +3609,15 @@ myemail;	1;	1;	1;	1;
  #var clerheld golden.rose;
  #alias ligst donothing;
  #alias lootcomp lootcompimpl;
+ #alias remode recler;
  #var weapon mace;
+ #var mychar $mycler;
  nopet;
  #alias cleancomp cleancomp1;
  #alias knoc o aspasia pick;
   #var vbuffover[bless] {js prayer};
  #alias sat {cww; dofood};
- #var belt beltpouch;
+ #var belt cloth.belt;
  #var hrec $clerheld;
  #alias hew hem;
  #alias asf assist;
@@ -4115,7 +4124,8 @@ myemail;	1;	1;	1;	1;
 #alias jread {get saffron belt; put saffron pouch; js read}
 
 #alias jmoc mag mocthis
-#alias mocthis {sysplay smb3_coin; spellcraft high; js moment %1; spellcraft low}
+#alias mocthis {spellcraft high; js moment %1; spellcraft low}
+#action {^You utter the words, 'moment of clarity'} {sysplay smb3_coin}; 
 #alias chalkghost {dochalk; accept soldier; mloa startraven}
 #alias playcoin {sysplay smb3_coin}
 #alias cubread {get metal.cube belt; rem $held; hold cube; say praise the gods; rem cube; put metal.cube belt; hold $held; ef; put 6*bread belt; drop all.food; get all.food belt}
@@ -4152,8 +4162,8 @@ myemail;	1;	1;	1;	1;
   #action {^The wooden surface of the warhammer is in perfect condition.} {drop hammer; get hammer chest};
 }
 #alias pracamr {
-  #action {^The gods smile upon you} {amel; lrn};
-  #action {^You sense the call of the gods} {raptur; lrn};
+  #action {^The gods smile upon you} {st; amel; lrn};
+  #action {^You sense the call of the gods} {st; raptur; lrn};
   amel; rapt; lrn;
 }
 #alias amr {amel; rapt}
@@ -4538,12 +4548,17 @@ myemail;	1;	1;	1;	1;
 }
 #alias rgr mai {rg %1; rest}
 #alias mrg {mai rgr}
+#alias cleancomp4 {
+  get all.!alteration.!protection.component.!web.!healing $compouch;
+  put all.exceptional.enchantment $compouch;
+}
 #alias cleancomp1 {
-  get all.!necromantic.!alteration.!protection.component.!web $compouch;
-  put all.exceptional $compouch;
+  get all.!alteration.!protection.component.!web $compouch;
+  put all.exceptional.enchantment $compouch;
 }
 #alias cleancomp2 {get all.!web.!acorn $compouch}
 #alias cleancomp3 {get all.!web.!abjuration.!alteration.!protection $compouch}
+
 #alias barr be $arrival
 
 #alias silvideathmem {m s; mem 'co li' 'de i' 'fly' 'tel' 'tel' 'tel' 'tel'; rest}
@@ -4623,7 +4638,7 @@ cancel;
  invoke %1;
  hold $hrec;
 }
-#var magheld valiance.eye
+#var magheld papal.cross
 #alias beforexeg {get parchment $belt; analyze parchment; #delay 1 ke ball}
 #alias idter {recite identify silver.chest in room; hold $hrec}
 #alias modewhite {
@@ -4635,6 +4650,8 @@ cancel;
   #var belt cloth.belt;
   #alias ide {rec identify};
   #alias remage {rewin; modemage; modewhite};
+  #var mychar $mymage;
+  #alias remode remage;
   #alias locatereport locatereportimpl;
   #var food turkey;
   nutr $food;
@@ -4652,10 +4669,10 @@ cancel;
   rem $clerbody; rem $shamlegs; wear all.dinged; wear leather.vest;
 }
 
-#var clerarms leather.armbands
+#var clerarms braces
 #var shamlegs pants
 #var clerweapon mace
-#var clerbody succubus
+#var clerbody spider.tunic
 #var clerlegs leggings
 #alias bcheckpriest {bot; checkpriest}
 #alias hts halone south
@@ -4766,10 +4783,14 @@ cancel;
   #action {^{\w+} pants heavily} {classif ref %%1};
   #action {^Elrax the master scout is here,} {lrn; smile};
   #alias flap ref;
+  #var mychar $skyscout;
   #alias rescout {rewin; modescout};
+  #alias remode rescout;
+  #alias vass vass2;
+  #alias rs dorescue;
   #alias ref surge;
   #alias warhit donothing;
-  #alias assthis {assist %1; zap}
+  #alias assthis {assist %%1; zap}
 }
 
 #alias elder {clan promote %1 elder}
@@ -5422,6 +5443,8 @@ cancel;
 #alias modepala
 {
   #alias bigrest donothing;
+  #var mychar $mypaladin;
+  #alias remode repala;
   #var pet Steamboat;
   #alias lootme {get all $mypaladin; wear star; wear shield; wield sword};
   #alias nytehelm {rem $palhead; get helm corpse; wear helm};
@@ -5443,7 +5466,6 @@ cancel;
   #alias assthis palassthis;
   #var circle1 {det ev};
   #var weapon $palweap;
-  asm;
   #action {^You are ready to slam again} {slam};
   #action {^You are now the new leader} {march};
   #action {^A gleaming silver medal warms up} {ll #show -->    Medal};
@@ -5950,9 +5972,14 @@ addlocates;
 #alias scriwhi doscribe white rune
 #alias aftrisol {roll carpet; get carpet; get key gavin; get parchment risol; put parchment $belt}
 #alias brewcure dobrew {cure serious}
+#alias guildcrit {
+  dobrew {cure critical};
+  put brewed chest;
+}
 #alias aftermatilya {get segment matilya; combine segment; get book matilya}
 #alias mythcure {runto des; brewcure; nwu; put brewed chest}
 #alias manycure {#alias readybrew mythcure; trigbrsh}
+#alias manycrit {#alias readybrew guildcrit; trigbrsh}
 #alias mtt mag {st; tan transfer} 
 #alias dobrew {rest; brew '%1'; st}
 #alias doscribe {rest; scribe '%1'; st}
@@ -6214,10 +6241,11 @@ addlocates;
 {
 	#list window len result
 }
-
 #HIGHLIGHT        {disarms your weapon}   {red}                        {4}
 #HIGHLIGHT        {$mypaladin}                 {magenta}                    {5}
 #highlight {Steamboat} {magenta}
+#highlight {fourth head succumbs to the attack} {green}
+#highlight {The cryohydra's fourth head} {yellow}
 #highlight {A huge swarm of biting, stinging insects fills the air} {yellow}
 #highlight {Blackness grows above Lord Verminaard's head as a dark visage} {red}
 #highlight {Maritta peeks her head in the door} {green}
@@ -6773,6 +6801,24 @@ addlocates;
  {open book with fluttering pages}{graft/dscry/sph-inv}
  {book scribed on brittle parchmeht}{barrage/mtel/Cleanse}
  {poinard}{ck}
+ {charm of braided demon hairs}{ghostmaster}
+ {fossilized dragon bone tablet}{earthblood}
+ {enchanted ice tablet}{ENLARGE}
+ {tablet of crystallized ichor}{SWARM}
+ {crescent moon shaped tablet}{winds}
+ {wedding ring}{ck}
+ {frosted tin shield}{frosty}
+ {massive blue dragon wings}{darkeep-azul}
+ {dragon claw ring}{cv-velchoir}
+ {suit of red dragonscale plate}{mom}
+ {spider silk tunic}{spiderqueen}
+ {deep black hood stitched with gold thread}{finale}
+ {frosted tin bracer}{frosty}
+ {engraved moonstone book}{acid-mist/?/arcane-shell}
+ {flaming purple spellbook}{wrap/?/Globe?}
+ {spellbook covered with unblinking eyes}{siphon?/minor-globe/dbf}
+ {flowing satin robes}{spire?}
+ {cuisse of silver dragonscale}{vk-argentine-craft}
  {gleaming dragonscale wristguard}{gleam}
  {dark purple robes}{river}
  {sparkling bejeweled miter}{spire}
@@ -6780,7 +6826,7 @@ addlocates;
  {goblin skin armbands}{egreckl}
  {zombie skin book with silver hinges}{Animate}
  {blue dragonscale spellbook}{graft?/masstel/shards}
- {dark spellbook wreathed in shadow}{barrage/thunderbolt/?sphereinvis?}
+ {dark spellbook wreathed in shadow}{barrage/thunderbolt/sphereinvis}
  {acid-etched copper spellbook}{heart/scry/Cleanse}
  {charm engulfed in wispy smoke}{NAP}
  {pickled pigmy heart charm}{GHOSTSKIN}
@@ -6830,7 +6876,7 @@ addlocates;
   {smoldering red book of sorcery}{displacement/preservation}
   {gruesome tome scribed in blood}{tunnel/mirror/?slumber?}
   {obsidian book encased in ice}{RELO/chain/mindafire}
-  {green spellbook with wooden bindings}{/peek/RELOCATE}
+  {green spellbook with wooden bindings}{flesh/peek/RELOCATE}
   {glittering book caked with fairy dust}{tent/portal/JUKE}
   {crude oaken prayerbook}{gust}
   {book of otherworldly prayers}{cloak}
@@ -6852,7 +6898,7 @@ addlocates;
    {shimmering charm of ethereal energy}{ghostmaster}
     {thin prayerbook with shredded pages}{GATE}
     {tome of religious rituals}{CIRCLE}
-    {small ivory prayerbook}{HEALMIST}
+    {small ivory prayerbook}{HEAL MIST}
     {smooth ogre bone prayerbook}{STEELSKIN}
     {bright tome of wisdom}{RESTORE}
     {symbol-inscribed prayerbook}{soo}
