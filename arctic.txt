@@ -73,7 +73,7 @@
 #var {leadercommands} {lie|frolick|follow|op|swing|spin|en|ent|dance|swim|ent|flip|join|dive|pledge|run|ride|cut|lift|scale|crawl|search|scale|jump|trace|break|say|touch|push|pull|move|slide|stand|ent|enter|leave|squeeze|open|part|climb}
 #alias saylich {say amarazilac tomanaris tusun}
 #alias bst {bash %1; st; }
-#alias rtm {retrieve 1; wear medal}
+#alias rtm {retrieve %1; wear medal}
 #alias dohctvault {pull down; pull right; pull right; pull up; pull left; pull down; pull down ; pull handle}
 #alias onleader {nextcommand %1}
 #alias norally bot #alias rally donothing
@@ -476,6 +476,8 @@ reseteye;
 #sub {elongated leather quiver} {elongated leather quiver(2rhr 3inst)}
 #sub {nightmare's twisted tendril} {nightmare tendril(imm_fear)}
 #sub {Brab tells your clan 'Mahs Sucks!'} {Brab: Battle Cryer Online}
+#sub {The stronghold receptionist is here,} {Tika Waylan greets everyone with a warm smile, eagerly}
+
 #sub {Mahs tells your clan 'Brab Blows!'} {Mahs: Ritual Voyage good to go, sir}
 
 #sub {idol carved of green malachite} {green malachite idol(imm_poi imm_curse regas 16)}
@@ -676,6 +678,14 @@ reseteye;
 #alias reallywant4 #send 4
 #alias lowpal {bot {#alias strike kill; eng ki; #alias dorescue {cancel; st; assist; rescue %%1}}}
 #alias enfothis {enter arch; follo %1}
+#alias stass {st; ass}
+#alias lowresc {cancel; st; assist; rescue %1}
+#alias lowchars {
+ ll eng ki;
+ ll #alias assthis stass;
+ ll #alias dorescue lowresc;
+}
+#alias bent {bot oe enter %1; bot enter %1}
 #alias enfo {ll enfothis}
 #alias trigcure {
   #var {vcure} %1;
@@ -724,6 +734,7 @@ reseteye;
 }
 #alias okd {otk %2; %1 %2; }
 #alias doig {oe st; okd kig}
+#alias keig {ke %1; js ign}
 #alias dotk {oe st; otk}
 #alias otkt {otk %1; #3 taunt %1}
 #alias dtaun {st; #3 taunt %1}
@@ -839,7 +850,7 @@ reseteye;
 #alias assno #alias assthis ott
 #alias palass bpa
 #alias haze {bot jd men ha}
-#alias palassthis {ass %1; rally; strike; av soul; strike}
+#alias palassthis {ass %1; rally; strike; av leg; strike}
 #alias kdr {st; drain}
 #alias bufdar {bot buf dk}
 #alias rlcshark {gotar; js imp; van me; west; south; open gate; runto 3ws3wsw3sws4wundwsd4w4nw}
@@ -863,15 +874,20 @@ reseteye;
 }
 {3}
 
-#action {{[A-Z]\w+} is stunned!} {onstun %1} {3}
-#action {{[A-Z]\w+} succumbs to the nightmare} {onstun %1} {3}
-#action {{[A-Z]\w+} recovers and sits up} {unstun %1} {3}
-#action {{[A-Z]\w+} wakes up from} {unstun %1} {3}
+#action {^{[A-Z]\w+} is stunned!} {onstun %1} {3}
+#action {^{[A-Z]\w+} succumbs to the nightmare} {onstun %1} {3}
+#action {^{[A-Z]\w+} recovers and sits up} {unstun %1} {3}
+#action {^{[A-Z]\w+} wakes up from} {unstun %1} {3}
 #alias gkc {get key corpse}
-#alias onstun {
+
+#alias onstun mac onstunimpl
+#alias onstunimpl {
   guildif CL clerstun %1;
+  classif groupstun %1;
 }
 
+#alias groupstun {alog STUNNED: %1}
+#alias groupunstun {alog Cleansed: %1}
 
 #action {^The cloud of light blinks one last time}{
   cloudgone
@@ -882,7 +898,10 @@ reseteye;
   dolog --> Cloud gone;
   #delay 1 #show --> Cloud gone;
 }
-#alias unstun guildif CL clerunstun %1
+#alias unstun {
+  guildif CL clerunstun %1;
+  classif groupunstun %1;
+}
 #alias clerunstun gtl %1 healer cleansed
 #alias clerstun { gtl --> %1 healer STUNNED!; }
 
@@ -1838,8 +1857,10 @@ reseteye;
   #action {^Antechamber of the Ravenshadow Lord}{mgo lordraven};
   #action {^A Strange Hallway} {mgo 3179};
   #action {^The Top of the Keep} {mgo 3153};
-  #action {^A Large Meeting Room} {mgo risolbelow};
+  #action {^A Large Meeting Room} {nytego risolbelow};
 }
+
+#alias nytego donothing
 
 #alias cloudrooms {
   #action {^City View}{mgo startcloud};
@@ -2299,6 +2320,11 @@ reseteye;
   fly;
 }
 
+#alias palforge {
+  remove discolored; remove shield; remove jeweled.bracelet;
+  repair discolored; repair shield; repair jeweled.bracelet;
+  wear discolored; wear shield; wear jeweled.bracelet;
+}
 #ALIAS {dosel2}
 {
 	say Selur Ihdob; e; fol %1;
@@ -2394,8 +2420,11 @@ reseteye;
 }
 
 #tab chernobog
+#tab Opochtli
+#tab daggoraath
 #tab cyqieqaraqk
 #tab marantha
+#tab xiojade
 #tab nithalugh
 #tab atriho
 #tab egreckl
@@ -2418,6 +2447,10 @@ reseteye;
 
 #alias dmas {ll dm ariakas}
 
+#alias ftrose {
+  combine rod bud; get rose; place stone.rose pedestal; 
+  enter portal; say evil; enter portal; say will; enter portal; say win; enter portal; poke man
+}
 #alias gtfo {cancel; gt -->  GET OUT!!; gt --> GET OUT!! (barbarians can wild and recall); tan hlthis}
 #alias dofote {enter portal; say evil; enter portal; say will; enter portal; say win; enter portal}
 #alias bfsh bfg $myshaman
@@ -2469,10 +2502,8 @@ reseteye;
 	#variable engvar %1
 }
 
-#ALIAS {fac}
-{
-	js free
-}
+#alias fac argme facimpl
+#ALIAS {facimpl} { js free }
 
 #ALIAS {fo4}
 {
@@ -2940,7 +2971,7 @@ reseteye;
 }
 #alias kig {mag {
   ott;
-  jsa ignite %1; 
+  jsm ignite %1; 
   ota;
 }}
 #alias krot {jsa rot}
@@ -2977,7 +3008,7 @@ reseteye;
 #alias fsuit {bot {get phosphorus pouch; sprinkle phosphorus suit}}
 #alias noam {bot {north; ki ambassador}}
 #alias csn {mag ott; mag jd co sn}
-#alias clr {mag js color; mag ota; mag deep}
+#alias clr {mag js color; boa; mag deep}
 #alias cso {csn; mag ota; mai ott}
 #ALIAS {kcr}
 {
@@ -3176,7 +3207,7 @@ reseteye;
 }
 
 
-#alias rboth mai {inn $mypaladin; inn}
+#alias rboth mai {innoth; #delay 4 inn}
 #ALIAS {ksun}
 {
 	mai {c 'sunbolt' %1; st}
@@ -3409,7 +3440,7 @@ reseteye;
 
 #alias nutr {
   #var food %1;
-  #ticker feedme {taste %1; sip water} {99};
+  #ticker feedme {taste %1; sip water} {55};
 }
 
 #alias bf #3 {be %1;}
@@ -3424,8 +3455,8 @@ reseteye;
 #alias memsham {mnap; restick mdeath}
 #alias palnaked {
   st; fly; for 'abs' 'abs' 'abs'; jd r i;
-  runto end3neu2w; with 600;
-  e; e; buy milky; quaff milky; bre;
+  runto end3neu2w; with 900;
+  e; e; buy milky; quaff milky; buy creamy; quaff creamy; bre;
   runto dw3swsu; buy bronze.shield; wear bronze.shield; 
   runto dne2se; buy iron.halberd; wield halberd;
   runto w2nusw;
@@ -3665,6 +3696,9 @@ myemail;	1;	1;	1;	1;
   #alias ccthis jd cu cr;
   #alias assthis ott;
   #alias afterarmy afterarmysham;
+  capturedonations;
+  #var mychar $myshaman;
+  #alias remode resham;
   #alias beforearmy beforearmysham;
   #var {circle1} {slow po};
   #unticker feedme;
@@ -4059,6 +4093,9 @@ myemail;	1;	1;	1;	1;
 	jd protect from
 }
 
+#alias argmeold { #if {"%2"!=""} {%1 %2} {%1 $mychar} }
+#alias defarg { #if {"%3"!=""} {%2 %3} {%2 %1} }
+#alias argme defarg $mychar
 #ALIAS {pk}
 {
 	#if {"%1"!=""}
@@ -4500,7 +4537,9 @@ myemail;	1;	1;	1;	1;
 #alias rg {sha rgc}
 #alias ksa {bot strike %1; mai ass}
 #alias swapto {swap me %1; oth}
-#alias bfg {bot {follow %1; guard %1; rescon}; #delay 1 {group form}}
+#alias magefood {o $pet elixir; get all.silver.nectar; #4 sip silver.nectar}
+#alias bfg argme bfgimpl
+#alias bfgimpl {bot {follow %1; guard stop; guard %1; rescon}; #delay 1 {group form}}
 #alias rss {cancel; st; rescue %1; }
 #ALIAS {rgc}
 {
@@ -4638,7 +4677,7 @@ cancel;
  invoke %1;
  hold $hrec;
 }
-#var magheld papal.cross
+#var magheld fireball
 #alias beforexeg {get parchment $belt; analyze parchment; #delay 1 ke ball}
 #alias idter {recite identify silver.chest in room; hold $hrec}
 #alias modewhite {
@@ -4653,7 +4692,7 @@ cancel;
   #var mychar $mymage;
   #alias remode remage;
   #alias locatereport locatereportimpl;
-  #var food turkey;
+  #var food cheese;
   nutr $food;
   #alias mloc {msw locate knock};
   #action {^{\w+} makes a mockery out of everyone} {nospamdo 30 jmoc %%1};
@@ -4669,11 +4708,12 @@ cancel;
   rem $clerbody; rem $shamlegs; wear all.dinged; wear leather.vest;
 }
 
+#alias wsfl {cancel; wake; st; #4 flee}
 #var clerarms braces
 #var shamlegs pants
 #var clerweapon mace
-#var clerbody spider.tunic
-#var clerlegs leggings
+#var clerbody plate
+#var clerlegs cuisse
 #alias bcheckpriest {bot; checkpriest}
 #alias hts halone south
 #alias htw halone west
@@ -4777,7 +4817,7 @@ cancel;
 }
 #alias modescout {
   modepala;
-  #alias scouteng {zap %%1; ki %%1; };
+  #alias scouteng {bite %%1; swarm %%1; ki %%1; };
   capturedonations;
   eng scouteng;
   #action {^{\w+} pants heavily} {classif ref %%1};
@@ -4790,7 +4830,7 @@ cancel;
   #alias rs dorescue;
   #alias ref surge;
   #alias warhit donothing;
-  #alias assthis {assist %%1; zap}
+  #alias assthis {assist %%1; scouteng}
 }
 
 #alias elder {clan promote %1 elder}
@@ -4801,7 +4841,8 @@ cancel;
 
 #action {^Mustakrakish, the ancient death troll glows a bright lunar white} {gt -->    TROLL CLEANSED  !!}
 
-#alias logsham {newses arc {$myshaman; mypw; ones; modeshaman; leaveinn; }  }
+#alias logsham {newses arc {$myshaman; mypw; ones; modeshaman; leaveinn; fly}  }
+#alias het {hem; boa}
 #alias logshamo {newses bot {$myshaman; mypw; ones; modeshaman; fly}  }
 #var mydruid wagner
 #alias logdru newses dru {$mydruid; mypw; 1; 1; modedruid; fly}
@@ -4813,7 +4854,7 @@ cancel;
 #alias logsco {newses bot {$skyscout; mypw; ones; modescout}}
 #alias leaveinn donothing
 #alias leaveinnimpl {d; d; e; s}
-#alias logpal {logbot {$mypaladin; mypw; ones; modepala; fly; leaveinn; }}
+#alias logpal {logbot {$mypaladin; mypw; ones; modepala; fly; #delay 4 nri; }}
 #alias logwar {logbot {dawsen; mypw; 1; 1; modepala; modewar; fly}}
 #alias logbar {logbot {cunningham; mypw; 1; 1; modebarb; fly}}
 #alias logbaro {newses bar {cunningham; mypw; 1; 1; modebarb; fly}}
@@ -4876,8 +4917,8 @@ cancel;
   browse immune_fear !nopaladin; browse detect_astral; 
   browse hit !nopaladin; browse con !nopaladin; browse wis !nocleric;
   list mask;
-  browse spell_level_mod; 
 }
+#alias clwm browse spell_level_mod 
 #alias stca jd storm call
 #alias podderek {push shrub; east; exam derek; exam brian}
 #alias csus {commune; sus}
@@ -5519,6 +5560,12 @@ cancel;
 
 #action {^{$mymage|$mypaladin} {leaves|flies|swims} {north|south|east|west|up|down}} {tanklead %3}
 
+#alias declareself { #ats #var vinactive $mychar; }
+#alias toth {
+  onlyinactive declareself;
+  %0 $vinactive;
+}
+#alias innoth toth inn
 #alias draglead #alias tanklead donothing
 #alias tankleadimpl {amac #delay 1 %1}
 #alias steplead #alias tanklead tankleadimpl
@@ -5538,6 +5585,14 @@ draglead
   };
 }
 #alias onlyinactive ll ifinactive %0
+#alias ifol onlyinactive follow $mychar
+#alias icoin {
+  #var vkcoins %1;
+  igive ${vkcoins}000 coin;  
+}
+#alias ifg {ifol; #delay 1 group form}
+#alias ifbg {ifg; bg}
+#alias igive onlyinactive give %1 %2 $mychar
 #alias givecomp {
   get all.%1 $compouch;
   give all.component.%1 %2;
@@ -5968,6 +6023,7 @@ addlocates;
 #alias brewher dobrew heroism
 #alias scridoor doscribe dimension
 #alias scrienc doscribe {enchant item}
+#alias scrirel doscribe relocate
 #alias scrifir doscribe fireball
 #alias scriwhi doscribe white rune
 #alias aftrisol {roll carpet; get carpet; get key gavin; get parchment risol; put parchment $belt}
@@ -6767,6 +6823,7 @@ addlocates;
 #sub {granite golem}{granite golem(immheat)}
 #sub {granite watcher} {granite watcher(immheat)}
 #sub {loser clanmate} {heroically optimistic clanmate} 
+#sub {has lost a level} {firmly resolves to regain that level}
 #sub {a margle statue} {a marble statue(immheat)}
 #sub {a stone gargoyle} {a stone gargoyle(immheat)}
 #sub {The Kinslayer Wars} {2 Kinslayer}
@@ -6801,12 +6858,16 @@ addlocates;
  {open book with fluttering pages}{graft/dscry/sph-inv}
  {book scribed on brittle parchmeht}{barrage/mtel/Cleanse}
  {poinard}{ck}
+ {runed topaz bracelet}{cv}
+ {frosted tin plate}{frosty}
  {charm of braided demon hairs}{ghostmaster}
  {fossilized dragon bone tablet}{earthblood}
  {enchanted ice tablet}{ENLARGE}
  {tablet of crystallized ichor}{SWARM}
  {crescent moon shaped tablet}{winds}
  {wedding ring}{ck}
+ {charm of skewered centipedes}{soul}
+ {charm of yutugh tentacles}{etharm}
  {frosted tin shield}{frosty}
  {massive blue dragon wings}{darkeep-azul}
  {dragon claw ring}{cv-velchoir}
@@ -6879,6 +6940,7 @@ addlocates;
   {green spellbook with wooden bindings}{flesh/peek/RELOCATE}
   {glittering book caked with fairy dust}{tent/portal/JUKE}
   {crude oaken prayerbook}{gust}
+  {battle-scarred prayerbook}{haura}
   {book of otherworldly prayers}{cloak}
   {ruby studded silver prayerbook}{recall}
   {runed brass prayer beads}{summon}
@@ -7020,7 +7082,8 @@ addlocates;
 {
   locatereport {%1} {%2%3}
 }
-#alias bg {bot {guard stop; guard %1}}
+#alias bg argme bgimpl
+#alias bgimpl {bot {guard stop; guard %1}}
 #alias locatereport donothing;
 #alias locatereportimpl {
   #if {"$itemlocates[%1]" != ""} { alltell {%1($itemlocates[%1]): %2}; } {donothing %1} ;

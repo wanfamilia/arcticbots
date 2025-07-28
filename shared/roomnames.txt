@@ -233,6 +233,7 @@ kul
 trade
 stormspin
 noom
+beforeflare
 startluni
 dargkdoor
 azul
@@ -398,6 +399,7 @@ startdractower
 locatedractower
 mordrednomagic
 startcitdrac
+dracosafteragree
 abovecitdrac
 clouddruid
 ckpick
@@ -669,3 +671,4 @@ dreadwaiter
 tantloc
 flotloc
 vinputrid
+ocean instinct 42a
