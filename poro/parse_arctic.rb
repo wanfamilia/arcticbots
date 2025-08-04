@@ -11,8 +11,16 @@ class ParseArctic
     end.map{|me| me.last}
   end
 
-  def egreck
+  def egreckl
     count_mob('Egreckl Steamus')
+  end
+
+  def finale
+    count_mob('Finale, the Ancient')
+  end
+
+  def glymmer
+    count_mob('Glymmer')
   end
 
   def rayne

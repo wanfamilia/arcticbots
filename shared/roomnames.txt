@@ -672,3 +672,5 @@ tantloc
 flotloc
 vinputrid
 ocean instinct 42a
+blackendragon
+tantbank

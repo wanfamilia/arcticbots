@@ -90,7 +90,7 @@
 #alias explainshys {gt kill/frag/target steam, if no steams left, kill/frag/target mage, silence/para feces, heal/regen blood if they getting low}
 #alias explainvermi {gt verminaard fight: all kill/bash draconian, thrust lord, absolution lord, dont use heals on people not tanking, let area heals take care of them. no warddancing without legend rank}
 #action {^Onyx is dead} { get all.charm onyx}
-#alias gotomb {#map move down; onlyinactive lie %1.tomb; gt if boone doesnt die, lie %1.tomb; #delay 5 lie %1.tomb}
+#alias gotomb {#map move down; onlyinactive lie %1.tomb; gt if $mypaladin doesnt die, lie %1.tomb; #delay 5 lie %1.tomb}
 #action {^Oracle, the Battle Cleric is dead} { get book oracle}
 #action {^Egreckl Steamus is dead} {get all.charm egreckl}
 #action {^Glymmer is dead} {get book glymmer}
@@ -476,8 +476,7 @@ reseteye;
 #sub {elongated leather quiver} {elongated leather quiver(2rhr 3inst)}
 #sub {nightmare's twisted tendril} {nightmare tendril(imm_fear)}
 #sub {Brab tells your clan 'Mahs Sucks!'} {Brab: Battle Cryer Online}
-#sub {The stronghold receptionist is here,} {Tika Waylan greets everyone with a warm smile, eagerly}
-
+#sub {The stronghold receptionist}{Tika Waylan, the clan receptionist,} 
 #sub {Mahs tells your clan 'Brab Blows!'} {Mahs: Ritual Voyage good to go, sir}
 
 #sub {idol carved of green malachite} {green malachite idol(imm_poi imm_curse regas 16)}
@@ -850,7 +849,7 @@ reseteye;
 #alias assno #alias assthis ott
 #alias palass bpa
 #alias haze {bot jd men ha}
-#alias palassthis {ass %1; rally; strike; av leg; strike}
+#alias palassthis {ass %1; rally; strike; av soul; strike}
 #alias kdr {st; drain}
 #alias bufdar {bot buf dk}
 #alias rlcshark {gotar; js imp; van me; west; south; open gate; runto 3ws3wsw3sws4wundwsd4w4nw}
@@ -2054,6 +2053,7 @@ reseteye;
 #alias fsd {fly stop; down}
 #alias babs {bot js abso}
 #alias airm {air me; #6 sr me; lrn }
+#alias airp {air $pet}
 #alias aisr {air me; sr me; sr me;}
 #alias bdm {bot jd di ma}
 #action {^Your victim's tracks lead {\w+}} {ll #show track: %1}
@@ -2423,6 +2423,7 @@ reseteye;
 #tab Opochtli
 #tab daggoraath
 #tab cyqieqaraqk
+#tab galecourser
 #tab marantha
 #tab xiojade
 #tab nithalugh
@@ -4593,13 +4594,16 @@ myemail;	1;	1;	1;	1;
 }
 #alias cleancomp1 {
   get all.!alteration.!protection.component.!web $compouch;
-  put all.exceptional.enchantment $compouch;
+  put all.exceptional $compouch;
 }
 #alias cleancomp2 {get all.!web.!acorn $compouch}
 #alias cleancomp3 {get all.!web.!abjuration.!alteration.!protection $compouch}
 
 #alias barr be $arrival
 
+#alias needhero {
+  gt where have all the clerics gone and where are the old gods? where's the streetwise Paladine to fight the rising odds? i am a rose knight upon a dragon steed, late at night i toss and i turn and i dream of what i need..... i need a HERO!
+}
 #alias silvideathmem {m s; mem 'co li' 'de i' 'fly' 'tel' 'tel' 'tel' 'tel'; rest}
 #alias silvideathcast {coli; jd d i; air me}
 #var compouchalch component.pouch.crafted;
@@ -4677,14 +4681,13 @@ cancel;
  invoke %1;
  hold $hrec;
 }
-#var magheld fireball
+#var magheld jeweled.sceptre
 #alias beforexeg {get parchment $belt; analyze parchment; #delay 1 ke ball}
 #alias idter {recite identify silver.chest in room; hold $hrec}
 #alias modewhite {
   #alias goway {goto wilma};
   #alias bfm {bot follow pryor; #delay 1 group form};
   #var hrec $magheld;
-  #alias lightrec donothing;
   #alias ksil ksilmage;
   #var belt cloth.belt;
   #alias ide {rec identify};
@@ -4705,7 +4708,8 @@ cancel;
   wear all.dinged; wear leather.vest; wear leather.boots; wield beaten.sword
 }
 #alias beforearmysham {
-  rem $clerbody; rem $shamlegs; wear all.dinged; wear leather.vest;
+  rem $clerbody; rem $shamlegs; rem $shamweapon; 
+  wear all.dinged; wear leather.vest; wear leather.boots; wield beaten.sword
 }
 
 #alias wsfl {cancel; wake; st; #4 flee}
@@ -4842,7 +4846,7 @@ cancel;
 #action {^Mustakrakish, the ancient death troll glows a bright lunar white} {gt -->    TROLL CLEANSED  !!}
 
 #alias logsham {newses arc {$myshaman; mypw; ones; modeshaman; leaveinn; fly}  }
-#alias het {hem; boa}
+#alias het {boa; hem; }
 #alias logshamo {newses bot {$myshaman; mypw; ones; modeshaman; fly}  }
 #var mydruid wagner
 #alias logdru newses dru {$mydruid; mypw; 1; 1; modedruid; fly}
@@ -4870,7 +4874,7 @@ cancel;
 #alias newsky newchar sky $skyscout
 #alias newmage newchar mag $mymage
 #alias newpal newchar bot $mypaladin
-#alias logcler newses arc {$mycler; mypw; 1; 1; modecleric; ligst; fly; }
+#alias logcler newses arc {$mycler; mypw; 1; 1; modecleric; lightrec; fly; }
 #alias logclero newses bot {$mycler; mypw; 1; 1; modecleric; fly; }
 #var mythief nikson
 #alias tust {turn; #bot #3 strike}
@@ -4945,7 +4949,7 @@ cancel;
 }
 #alias ktor js torna
 #alias cls dru jd clear skie;
-#alias st4 #4 strike
+#alias st4 bot #4 strike
 #alias pc {thi pick}
 #alias thuc {throat; unbalance; coup}
 #alias disablekal {runto 4e2s2wd2n;det;det plate;disable plate;!;eene;det;det chest in r;det 2.chest in r;det 3.chest in r; #3 disable chest in r; #3 disable 2.chest in r; #3 disable 3.chest in r;pick chest in r;pick 2.chest in r;pick 3.chest in r;wsww3n;learn all;3sessu2enn4w}
@@ -5588,11 +5592,13 @@ draglead
 #alias ifol onlyinactive follow $mychar
 #alias icoin {
   #var vkcoins %1;
-  igive ${vkcoins}000 coin;  
+  itake ${vkcoins}000 coin;  
 }
 #alias ifg {ifol; #delay 1 group form}
+#alias bho bot hoar
+#alias givei toth give
 #alias ifbg {ifg; bg}
-#alias igive onlyinactive give %1 %2 $mychar
+#alias itake onlyinactive give %1 %2 $mychar
 #alias givecomp {
   get all.%1 $compouch;
   give all.component.%1 %2;
@@ -5845,7 +5851,9 @@ draglead
 #sub {hungry. feed me!} {warrior needs food, badly}
 #sub {The glowing red walls hiss and sizzle as they cool}{--> WALLS COOL}
 #sub {Glowing, red-hot walls produce an unbearable heat}{--> WALLS HOT}
+#action {^Glowing, red-hot walls produce an unbearable heat}{gt --> WALLS HOT, GETOUT if you are vulnerable to heat}
 #sub {The walls of the cave glow a deeper red as the heat intensifies}{--> WALLS WARMING}
+#action {^The walls of the cave glow a deeper red as the heat intensifies}{gt --> WALLS WARMING, get out if you vulnerable to heat}
 #alias hecor {hl corpse; vch corpse; twopets}
 #sub {The End of the Passage} {Lemuria ICE}
 #alias toplines {#split %1 3}
@@ -6858,6 +6866,7 @@ addlocates;
  {open book with fluttering pages}{graft/dscry/sph-inv}
  {book scribed on brittle parchmeht}{barrage/mtel/Cleanse}
  {poinard}{ck}
+ {shining blue lance}{raven-marshal}
  {runed topaz bracelet}{cv}
  {frosted tin plate}{frosty}
  {charm of braided demon hairs}{ghostmaster}
