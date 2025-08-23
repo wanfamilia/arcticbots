@@ -1480,7 +1480,8 @@ reseteye;
 #alias conir {#var pet Fereous; conj iron}
 #alias conlea {#var pet Plumbic; conj lead}
 #var irdakw Rezoul
-#alias conca {#var pet Montalban; conj cat; onepet}
+#alias conca mag concathis
+#alias concathis {#var pet Montalban; conj cat; onepet}
 #alias conow {#var pet Ayoade; conj owl;
   oe for 'di ma' 'blur' 'shield' 'inv';
   oe mem 'li bo' 'ma mi' 'ma mi' 's g';
@@ -1856,10 +1857,12 @@ reseteye;
   #action {^Antechamber of the Ravenshadow Lord}{mgo lordraven};
   #action {^A Strange Hallway} {mgo 3179};
   #action {^The Top of the Keep} {mgo 3153};
-  #action {^A Large Meeting Room} {nytego risolbelow};
+  #action {^A Large Meeting Room} {zonego risolbelow};
+  #action {^Before a Large Opening} {zonego merclead};
 }
 
-#alias nytego donothing
+#alias zonego donothing
+#alias zonegoes {#alias zonego mgo}
 
 #alias cloudrooms {
   #action {^City View}{mgo startcloud};
@@ -4247,6 +4250,8 @@ myemail;	1;	1;	1;	1;
 #alias dochalk {squeeze chalky}
 #alias msym {#map set roomsymbol [%1]}
 #alias wearb {get %1 $belt; wear %1}
+#alias getb {get %1 $belt}
+#alias putb {put %1 $belt}
 #action {^You feel up to using {gather|headbutt|zap|forage|leap|bite|swarm|scrape|scavenge|dart}} {#delay 2 mac %1}
 #alias gather {gath; put all.!blunt.bundle quiver; drop all.arrow }
 #action {^You feel up to using volley} {upvolley}
@@ -4593,12 +4598,13 @@ myemail;	1;	1;	1;	1;
   put all.exceptional.enchantment $compouch;
 }
 #alias cleancomp1 {
-  get all.!alteration.!protection.component.!web $compouch;
-  put all.exceptional $compouch;
+  get all.!alteration.!protection.component.!web.!exceptional $compouch;
+  get all.exceptional.!protection.!alteration.!enchantment.!elemental $compouch;
 }
 #alias cleancomp2 {get all.!web.!acorn $compouch}
 #alias cleancomp3 {get all.!web.!abjuration.!alteration.!protection $compouch}
 
+#alias sigil {rem gleaming.medal; inscribe sigil gleaming.medal; wear gleaming.medal}
 #alias barr be $arrival
 
 #alias needhero {
@@ -4689,7 +4695,7 @@ cancel;
   #alias bfm {bot follow pryor; #delay 1 group form};
   #var hrec $magheld;
   #alias ksil ksilmage;
-  #var belt cloth.belt;
+  #var belt girdle;
   #alias ide {rec identify};
   #alias remage {rewin; modemage; modewhite};
   #var mychar $mymage;
@@ -5436,7 +5442,7 @@ cancel;
   needbuff holy vision;
   needbuff crusade;
   reck;
-  bes paladine;
+  bes kiri;
 }
 
 #alias boaold {palass; mai ott}
@@ -5478,7 +5484,7 @@ cancel;
 #alias alog {
   logimpl %0; #ats #show %0;
 }
-#var palheld valiance
+#var palheld fireball
 #alias preprahn {
   mloa; gokal; coli; rd imp; conow; oei; rps me; js white; jfold; fsh; rest;
 }
@@ -5501,7 +5507,7 @@ cancel;
   #alia allnext donothing;
   #alias groupimpl group full;
   #alias oegc {cancel; get corpse; give corpse %1};
-  #var belt belt;
+  #var belt girdle;
   eng paleng;
   #var hrec $palheld;
   #action {^Your hands tingle as a feeling of goodness} {
@@ -5596,7 +5602,7 @@ draglead
 }
 #alias ifg {ifol; #delay 1 group form}
 #alias bho bot hoar
-#alias givei toth give
+#alias givi toth give
 #alias ifbg {ifg; bg}
 #alias itake onlyinactive give %1 %2 $mychar
 #alias givecomp {
@@ -6372,7 +6378,6 @@ addlocates;
 #HIGHLIGHT        {horrible looking vulture}         {green}                      {5}
 #highlight {brown swallow bobs and weaves} {green}
 #HIGHLIGHT        {wispy strands of twined hair}         {green}                      {5}
-#HIGHLIGHT        {blue phoenix}         {green}                      {5}
 #HIGHLIGHT        {feathered dreamcatcher}         {green}                      {5}
 #HIGHLIGHT        {satiny layer of ectoplasm}         {green}                      {5}
 #HIGHLIGHT        {rotting brains}         {green}                      {5}
@@ -6866,6 +6871,9 @@ addlocates;
  {open book with fluttering pages}{graft/dscry/sph-inv}
  {book scribed on brittle parchmeht}{barrage/mtel/Cleanse}
  {poinard}{ck}
+ {silver skull ring}{ft}
+ {platinum shield of the Blue Phoenix}{crownguard}
+ {crimson stained silver dragon scale cloak}{glymmer}
  {shining blue lance}{raven-marshal}
  {runed topaz bracelet}{cv}
  {frosted tin plate}{frosty}

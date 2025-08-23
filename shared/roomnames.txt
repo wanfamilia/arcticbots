@@ -672,5 +672,7 @@ tantloc
 flotloc
 vinputrid
 ocean instinct 42a
+ritdracos
 blackendragon
 tantbank
+frostchief
