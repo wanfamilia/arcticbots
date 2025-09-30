@@ -68,6 +68,14 @@
 #alias mapsham mapto $myshaman mai
 #alias mapcler mapto $mycler mai
 #alias mapdru mapto $mydruid dru
+#alias setinac {
+  ll #var inactivesesname $sesname;
+}
+#alias mapothersession {
+  inac setinac;
+  mapto %2 #$inactivesesname %1;
+}
+#alias mapi toth mapothersession
 #alias mainmage {ll #alias mai mag; #alias ser bser}
 #alias mser {mai ser}
 #var {leadercommands} {lie|frolick|follow|op|swing|spin|en|ent|dance|swim|ent|flip|join|dive|pledge|run|ride|cut|lift|scale|crawl|search|scale|jump|trace|break|say|touch|push|pull|move|slide|stand|ent|enter|leave|squeeze|open|part|climb}
@@ -3642,7 +3650,7 @@ myemail;	1;	1;	1;	1;
 {
 	#variable food $clerfood;
  #var circle1 {cu li};
- #var clerheld golden.rose;
+ #var clerheld orb;
  #alias ligst donothing;
  #alias lootcomp lootcompimpl;
  #alias remode recler;
@@ -4688,7 +4696,7 @@ cancel;
  invoke %1;
  hold $hrec;
 }
-#var magheld jeweled.sceptre
+#var magheld sceptre
 #alias beforexeg {get parchment $belt; analyze parchment; #delay 1 ke ball}
 #alias idter {recite identify silver.chest in room; hold $hrec}
 #alias modewhite {
@@ -5437,13 +5445,14 @@ cancel;
 {
   needbuff righteous indignation;
   needbuff heal boost;
+  needbuff heroism;
   needbuff holy arms;
   needbuff aura of glory;
   needbuff high prayer;
   needbuff holy vision;
   needbuff crusade;
   reck;
-  bes kiri;
+  bes paladine;
 }
 
 #alias boaold {palass; mai ott}
@@ -5526,6 +5535,7 @@ cancel;
   #action {^You have been blinded} {sysplay smb3_softthwomp; #all #show --> BOT BLIND};
   showprompt;
   #var vbuffover[heal boost] {gt no heal boost};
+  #var vbuffover[heroism] {needhero} ;
   #alias lootcomp donothing;
   nolog;
   skillbell;
