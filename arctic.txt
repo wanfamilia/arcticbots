@@ -295,7 +295,7 @@
 {5}
 
 #alias ew50 {#50 {e; w}}
-#alias dostmain {st; #var resting 0; #delay 1 allnext }
+#alias dostmain {st; #var resting 0; }
 #alias dost dostmain;
 #alias refly  {st; dispel 'fly'; air me}
 #alias restick {
@@ -5577,6 +5577,7 @@ cancel;
   %0 $vinactive;
 }
 #alias innoth toth inn
+#alias pufi toth puf
 #alias draglead #alias tanklead donothing
 #alias tankleadimpl {amac #delay 1 %1}
 #alias steplead #alias tanklead tankleadimpl
