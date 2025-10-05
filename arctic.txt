@@ -3650,7 +3650,7 @@ myemail;	1;	1;	1;	1;
 {
 	#variable food $clerfood;
  #var circle1 {cu li};
- #var clerheld orb;
+ #var clerheld black.diamond;
  #alias ligst donothing;
  #alias lootcomp lootcompimpl;
  #alias remode recler;
@@ -4314,6 +4314,8 @@ myemail;	1;	1;	1;	1;
 #alias ctt {ct tick in $tilltick}
 #alias blay {bot {cancel; st; lay %1}}
 #alias bhl blay
+#alias bhm bhl $mychar
+#alias brm brs $mychar
 #alias bfree {bot invoke reorx}
 #alias nyno {enter hole; n; n; s}
 #alias nyso {n; s; enter hatch; s}
