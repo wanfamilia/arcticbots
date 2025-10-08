@@ -3645,10 +3645,11 @@ myemail;	1;	1;	1;	1;
 	mount
 }
 
+#alias saychaos {ll #3 say chaos CHAOS chaos CHAOS CHAOS}
 #alias crookmob {say Winds of autumn's harvest, I summon thee; #var pet autumn.spirit; onepet}
 #ALIAS {modecleric}
 {
-	#variable food $clerfood;
+ nutr $clerfood;
  #var circle1 {cu li};
  #var clerheld black.diamond;
  #alias ligst donothing;
@@ -6907,9 +6908,9 @@ addlocates;
  {spider silk tunic}{spiderqueen}
  {deep black hood stitched with gold thread}{finale}
  {frosted tin bracer}{frosty}
- {engraved moonstone book}{acid-mist/?/arcane-shell}
- {flaming purple spellbook}{wrap/?/Globe?}
- {spellbook covered with unblinking eyes}{siphon?/minor-globe/dbf}
+ {engraved moonstone book}{acid-mist/trap/arcane-shell}
+ {flaming purple spellbook}{wrap/blast/Globe}
+ {spellbook covered with unblinking eyes}{siphon/minor-globe/dbf}
  {flowing satin robes}{spire?}
  {cuisse of silver dragonscale}{vk-argentine-craft}
  {gleaming dragonscale wristguard}{gleam}
