@@ -3651,7 +3651,7 @@ myemail;	1;	1;	1;	1;
 {
  nutr $clerfood;
  #var circle1 {cu li};
- #var clerheld black.diamond;
+ #var clerheld orb;
  #alias ligst donothing;
  #alias lootcomp lootcompimpl;
  #alias remode recler;
@@ -4707,7 +4707,7 @@ cancel;
   #alias bfm {bot follow pryor; #delay 1 group form};
   #var hrec $magheld;
   #alias ksil ksilmage;
-  #var belt girdle;
+  #var belt cloth.belt;
   #alias ide {rec identify};
   #alias remage {rewin; modemage; modewhite};
   #var mychar $mymage;
@@ -5591,6 +5591,7 @@ cancel;
 }
 #alias innoth toth inn
 #alias pufi toth puf
+#alias pufme argme puf
 #alias draglead #alias tanklead donothing
 #alias tankleadimpl {amac #delay 1 %1}
 #alias steplead #alias tanklead tankleadimpl
@@ -6886,6 +6887,7 @@ addlocates;
  {open book with fluttering pages}{graft/dscry/sph-inv}
  {book scribed on brittle parchmeht}{barrage/mtel/Cleanse}
  {poinard}{ck}
+ {burnished copper gladiator's pauldron}{khur}
  {pitch black obsidian ring}{cv}
  {silver skull ring}{ft}
  {platinum shield of the Blue Phoenix}{crownguard}
