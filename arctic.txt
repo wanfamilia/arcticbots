@@ -4699,7 +4699,7 @@ cancel;
  invoke %1;
  hold $hrec;
 }
-#var magheld sceptre
+#var magheld ogre.spear
 #alias beforexeg {get parchment $belt; analyze parchment; #delay 1 ke ball}
 #alias idter {recite identify silver.chest in room; hold $hrec}
 #alias modewhite {
@@ -7031,6 +7031,8 @@ addlocates;
   {bronze dragonscale leggings}{dractower}
   {silver-fused steel legplates}{nytes}
   {crimson dragon eye}{inferno}
+  {suit of gold chainmail}{tantkeep}
+  {sparkling golden necklace}{tantkeep}
   {some brushed steel gauntlets}{dracos}
   {platinum shield inlaid with onyx}{shoal}
   {engraved emerald knife}{dread}
