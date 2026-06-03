@@ -408,6 +408,7 @@ reseteye;
 }
 #alias kdc {kdel; fib; csn}
 #alias silvivines {n;e;n;e;n;e; climb vines}
+#alias explainvines {gt nenene, climb vines, drop coin, if you see coin ns all w}
 #alias cwh {clan who}
 #alias cww cw waterskin
 #alias jfold {mag js fold}
@@ -3652,7 +3653,7 @@ myemail;	1;	1;	1;	1;
 {
  nutr $clerfood;
  #var circle1 {cu li};
- #var clerheld fireball;
+ #var clerheld rose;
  #alias ligst donothing;
  #alias lootcomp lootcompimpl;
  #alias remode recler;
@@ -6888,6 +6889,9 @@ addlocates;
  {open book with fluttering pages}{graft/dscry/sph-inv}
  {book scribed on brittle parchmeht}{barrage/mtel/Cleanse}
  {poinard}{ck}
+ {carved rosewood ring}{mortigoth}
+ {the gem of the rose}{hct}
+ {a platinum etched lance}{caergoth}
  {thin white leather collar}{cv}
  {faded green robe}{pax}
  {platinum shield of Paladine}{crownguard?}
