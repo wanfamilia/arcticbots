@@ -5528,6 +5528,7 @@ cancel;
   #action {^Your hands tingle as a feeling of goodness} {
    alog --> LAY ready;
   } {7};
+  #action {^Your divine blessing subsides}{alog --> DIVINE}{7};
   #action {^Warriors' Training Room} {lrn; smile};
   #alias assthis palassthis;
   #var circle1 {det ev};
