@@ -87,9 +87,7 @@ tohylo
 hylosquare
 gulfambush
 werewolve
-werewolf
 gulfeast
-gulfport
 gulfgar
 startgarret
 gladewhitestone
@@ -676,3 +674,4 @@ ritdracos
 blackendragon
 tantbank
 frostchief
+gulfwest

@@ -5528,7 +5528,8 @@ cancel;
   #action {^Your hands tingle as a feeling of goodness} {
    alog --> LAY ready;
   } {7};
-  #action {^Your divine blessing subsides}{alog --> DIVINE}{7};
+  #action {^You may use your divine powers}{alog --> DIVINE}{7};
+  #action {^You may call upon your deity}{alog --> DIVINE}{7};
   #action {^Warriors' Training Room} {lrn; smile};
   #alias assthis palassthis;
   #var circle1 {det ev};
@@ -5615,6 +5616,10 @@ draglead
 }
 #alias onlyinactive ll ifinactive %0
 #alias ifol onlyinactive follow $mychar
+#alias gcoin {
+  #var vkcoins %1;
+  givi ${vkcoins}000 coin;  
+}
 #alias icoin {
   #var vkcoins %1;
   itake ${vkcoins}000 coin;  
@@ -6890,6 +6895,7 @@ addlocates;
  {open book with fluttering pages}{graft/dscry/sph-inv}
  {book scribed on brittle parchmeht}{barrage/mtel/Cleanse}
  {poinard}{ck}
+ {small circlet of bronze}{ck}
  {carved rosewood ring}{mortigoth}
  {the gem of the rose}{hct}
  {a platinum etched lance}{caergoth}
